@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  "Testpost"
+metaDescription: Lorem ipsum...
 categories: aktuelles
 ---
 

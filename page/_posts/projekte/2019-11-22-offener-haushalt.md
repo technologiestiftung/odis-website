@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  Offener Haushalt
+metaDescription: Lorem ipsum...
 categories: projekte
 permalink: /proejkte/offener-haushalt.html
 indexImage: placeholder.png

@@ -1,6 +1,7 @@
 ---
 layout: event
 title:  "Testveranstaltung 2019"
+metaDescription: Lorem ipsum...
 description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.
 categories: veranstaltungen
 time: 12:15 Uhr

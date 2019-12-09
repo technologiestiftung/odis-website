@@ -16,12 +16,13 @@ All page source data is stores in `/pages`folder. The pages/posts for the sectio
 ### Adding posts for "Aktuelles"
 All posts for section "Aktuelles" should be stored in `/_posts/aktuelles`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
-Specify the site `title` and `category` in the front matter section. The `categoy` needs to be set to `aktuelles`.
+Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `aktuelles`.
 
 ```
 ---
 layout: default
 title:  "Testpost"
+metaDescription: Lorem ipsum...
 categories: aktuelles
 ---
 
@@ -33,12 +34,13 @@ Lorem ipsum....
 ### Adding posts for "Projekte"
 All posts for section "Aktuelles" should be stored in `/_posts/projekte`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
-Specify the site `title` and `category` in the front matter section. The `categoy` needs to be set to `projekte`. In adition to that we also need to specify a `permalink` under which the page should be avialable and a `placeholderImage` that will appear in the "Projekte" overview page.
+Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `projekte`. In adition to that we also need to specify a `permalink` under which the page should be avialable and a `placeholderImage` that will appear in the "Projekte" overview page.
 
 ```
 ---
 layout: default
 title:  Kita-Suche in Berlin
+metaDescription: Lorem ipsum...
 categories: projekte
 permalink: /projekte/kita-suche-berlin.html
 indexImage: placeholder.png
@@ -51,13 +53,14 @@ Lorem ipsum....
 ### Adding posts for "Veranstaltungen"
 All posts for section "Aktuelles" should be stored in `/_posts/veranstaltungen`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
-Specify the site `title` and `category` in the front matter section. The `categoy` needs to be set to `projekte`. In adition to that we can add also need to specify a short `description` that will be shown in the "Veranstaltungen" overview page.
+Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `veranstaltungen`. In adition to that we can add also need to specify a short `description` that will be shown in the "Veranstaltungen" overview page.
 The fields `time`, `web`, `veranstalter`, `mail` and `adresse` are optional and appear in the summary section of the page.
 
 ```
 ---
 layout: event
 title:  "Testveranstaltung 2019"
+metaDescription: Lorem ipsum...
 description: Lorem ipsum dolor sit amet...
 categories: veranstaltungen
 time: 12:15 Uhr
