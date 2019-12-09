@@ -1,7 +1,7 @@
 # ODIS Website
 
 ## Setup
-This site is build with jekyll. Make sure to install jekyll on your system. [jekyll quickstart instructions] (https://jekyllrb.com/docs/)
+This site is build with jekyll. Make sure jekyll is installed on your system. [jekyll quickstart instructions] (https://jekyllrb.com/docs/)
 
 ## Command Line Usage
 Development:
@@ -11,7 +11,7 @@ Building site:
 `jekyll build`
 
 ## Editing content
-All page source data is stores in `/pages`folder. The pages/posts for the sections `Aktuelles`, `Projekte` and `Veranstaltungen` are stored as posts in the folder `page/_posts` and filtered via the category variable in front matter. The links in the section `Ressourcen` are stored as a yml data file in the folder `/page/data`.
+All page source data is stores in `/pages`folder. The pages/posts for the sections `Aktuelles`, `Projekte` and `Veranstaltungen` are stored as posts in the folder `page/_posts` and filtered via the category variable in front matter. The links in the section `Ressourcen` are stored as a yml data file in the folder `/page/_data`.
 
 ### Adding posts for "Aktuelles"
 All posts for section "Aktuelles" should be stored in `/_posts/aktuelles`. To add a new post simple create a new markdown file (`.md`) in this folder.
