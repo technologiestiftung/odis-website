@@ -13,6 +13,24 @@ Building site:
 ## Editing content
 All page source data is stores in `/pages`folder. The pages/posts for the sections `Aktuelles`, `Projekte` and `Veranstaltungen` are stored as posts in the folder `page/_posts` and filtered via the category variable in front matter. The links in the section `Ressourcen` are stored as a yml data file in the folder `/page/_data`.
 
+#### Adding images
+To add images to a post use this markup:
+
+`![My helpful screenshot](/assets/images/example-image.jpg)`
+
+If a caption below an image is needed we can use a line of simple html:
+```
+![My helpful screenshot](/assets/images/example-image.jpg)
+<small>Test</small>
+```
+
+or for a right aligned caption
+
+```
+![My helpful screenshot](/assets/images/example-image.jpg)
+<small class="text-right d-block">Test</small>
+```
+
 ### Adding posts for "Aktuelles"
 All posts for section "Aktuelles" should be stored in `/_posts/aktuelles`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
