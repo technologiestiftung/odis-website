@@ -1,0 +1,12 @@
+nav{
+    .navbar{
+        a.active{
+            text-decoration: underline;
+        }
+        &.red{
+            a{
+                color: $color-secondary;
+            }
+        }
+    }
+}

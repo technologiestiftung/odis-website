@@ -1,0 +1,173 @@
+canvas {
+	margin: auto;
+}
+
+.grid {
+	max-width: 1280px;
+	min-width: 320px;
+	border: 2px solid var(--border-color);
+	border-radius: 0.5em;
+	margin: 0 auto;
+	display: grid;
+	/*grid-template-columns: 500px;
+	grid-template-rows: 1em 2fr 2fr;
+	*/
+	grid-gap: 0.5em;
+	grid-template-areas: 
+	"a b c"
+	"a d e";
+}
+
+.grid > * {
+	background-color: $color-primary;
+	color: var(--border-color);
+	padding: 1.5rem;
+	border: 2px solid;
+	border-radius: 10px;
+	overflow: hidden;
+
+}
+
+.chart-container {
+	position: relative;
+	margin: auto;
+
+	height: 30vh;
+	display: flex;	
+}
+
+.grid .a {
+	grid-area: a;
+}
+
+.grid .b {
+	grid-area: b;
+}
+
+.grid .c {
+	grid-area: c;
+}
+
+.grid .c canvas {
+	padding-top: 1em;
+}
+
+.grid .d {
+	grid-area: d;
+}
+
+.grid .e {
+	grid-area: e;
+}
+
+.chart-container .activity canvas{
+	width: 300px;
+}
+
+
+.content h2{
+	color: white;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.flex {
+	display: flex;
+}
+
+.col {
+	flex-direction: column;
+}
+
+.row {
+	flex-direction: row;
+}
+
+h2.top-pad {
+	margin-top: 3em;
+}
+.content p {
+	color: white;
+	font-size: 0.8em;
+	padding-top: 0.5em
+}
+
+.transp {
+	margin-top: .25rem;
+	opacity: .5;
+}
+
+.dataset {
+	display: flex;
+	margin-bottom: 1rem;
+	line-height: 125%;
+	width: 100%;
+	position: relative;
+
+	span {
+		width: 90%;
+	}
+}
+
+.content a {
+	text-decoration: none;
+}
+
+.alt-1 {
+	font-size: 3.5rem;
+	font-family: 'Clan Medium', sans-serif;
+}
+
+#tagCanvas {
+	transform: translateX(-1rem);
+}
+
+.alt-2 {
+    color: #ffcc00;
+}
+
+.alt-3 {
+	font-size: 1rem;
+}
+
+.right {
+	float: right;
+	text-align: right;
+}
+
+
+@media screen and (max-width: 1180px)   {  
+	.grid {
+		grid-template-columns: auto auto;
+		grid-template-areas: 
+		"a b"
+		"a c"
+		"d e"
+	}
+}
+
+
+@media screen and (max-width: 750px)   {  
+	.grid {
+		grid-template-columns: auto auto;
+		grid-template-areas: 
+		"a"
+		"b"
+		"c"
+		"d"
+		"e";
+	}
+}
+
+@media screen and (max-width: 600px)   {  
+
+    .chart-container .activiy {
+    	width: 600px;
+    }
+}
+
+@media (min-width: 900px)   { 
+	.chart-container .activity canvas {
+		width: 300px;
+	}
+}

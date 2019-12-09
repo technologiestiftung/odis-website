@@ -1,0 +1,42 @@
+ressources: 
+  - title: ODIS-Ressourcen
+    groups:
+      - title: Open Data Readiness
+        sublinks:
+          - title: Example internal ressource with subpage
+            url: /ressourcen/example.html
+          - title: Testlink zu Google 2 as an example for external link
+            url: https://google.com
+      - title: Data Quality
+        sublinks:
+          - title: Testlink zu Google
+            url: https://google.com
+          - title: Testlink zu Google 2
+            url: https://google.com
+      - title: Data Visualization
+        sublinks:
+          - title: Testlink zu Google
+            url: https://google.com
+          - title: Testlink zu Google 2
+            url: https://google.com
+  
+  - title: Externe Ressourcen
+    groups:
+      - title: Ressourcen Group 1
+        sublinks:
+          - title: Testlink zu Google
+            url: https://google.com
+          - title: Testlink zu Google 2
+            url: https://google.com
+      - title: Ressourcen Group 2
+        sublinks:
+          - title: Testlink zu Google
+            url: https://google.com
+          - title: Testlink zu Google 2
+            url: https://google.com
+      - title: Ressourcen Group 3
+        sublinks:
+          - title: Testlink zu Google
+            url: https://google.com
+          - title: Testlink zu Google 2
+            url: https://google.com

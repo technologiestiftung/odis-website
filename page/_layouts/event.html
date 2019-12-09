@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+	<title>{{ page.title }}</title>
+
+	{% include meta.html %}
+
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+	<div id="barba-wrapper">
+		<div class="barba-container">
+			{% include js.html %}
+
+			{% include topnav.html %}
+
+			{% if page.url== '/' %}
+			{{ content }}
+			{% else %}
+			<div class="section mt-6 mb-6">
+                {{ content }}
+                
+                <div class="mt-5 card border-0 event-resume" >
+                        <div class="card-body">
+                                <h5 class="card-title pb-3">Zusammenfassung</h5>
+                                <div class="row">
+                                    <div class="col-md-4 pb-2">
+                                        <strong class="d-block">Webseite:</strong> <a class="white" href="{{page.web}}">{{page.web}}</a>
+                                    </div>
+                                    <div class="col-md-4 pb-2">
+                                        <strong class="d-block">Veranstalter:</strong> {{page.veranstalter}}
+                                    </div>
+                                    <div class="col-md-4 pb-2">
+                                        <strong class="d-block">Datum:</strong> {{page.date | date: "%d.%m.%Y" }} {{page.time}}
+                                    </div>
+                                    <div class="col-md-4 pb-2">
+                                        <strong class="d-block">Email:</strong> {{page.mail }}
+                                    </div>
+                                    <div class="col-md-4 pb-2">
+                                        <strong class="d-block">Adresse:</strong> {{page.adresse }}
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+			</div>
+			{% endif %}
+
+			{% include footer.html %}
+			{% include matomo.html %}
+		</div>
+	</div>
+</body>
+
+</html>

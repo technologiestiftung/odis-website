@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Clan Medium";
+    src: url('/assets/fonts/clan-medium.woff') format("woff");
+}
+
+@font-face {
+    font-family: "Clan Book";
+    src: url('/assets/fonts/clan-book.woff') format("woff");
+}
+
+$color-primary: #213A8F;
+$color-quattro: #2e91d2;
+$color-duo: #909CC6;
+$color-quattro-light: lighten($color-quattro, 40%);
+$color-primary-light: lighten($color-primary, 63%);
+$color-primary-medium: lighten($color-primary, 40%);
+$color-primary-minimum: lighten($color-primary, 20%);
+$color-secondary: #E60032;
+$color-secondary-hover: rgb(177, 0, 38);
+$color-tertiary: #FFFFFF;
+$color-grey: rgb(236, 236, 236);
+$color-black: #000000;
+$color-petrol: #00ACCF;
+
+$font-size-xxl: 57px;
+$font-size-xxl-2: 48px;
+$font-size-xxl-3: 30px;
+$font-size-xl: 36px;
+$font-size-xl-3: 28px;
+$font-size-l: 24px;
+$font-size-l-2: 20px;
+$font-size-l-3: 18px;
+$font-size-m: 16px;
+$font-size-m2: 20px;
+
+$line-height-m: 120%;
+$line-height-l: 140%;
+$line-height-xl: 160%;
+
+$transition-short: .1s;
+
+$spacing: .5px;

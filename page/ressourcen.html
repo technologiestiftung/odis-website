@@ -1,0 +1,41 @@
+---
+layout: default
+title: Ressourcen
+---
+
+
+<h1>Ressourcen</h1>
+
+{% assign accordionCounter= 0 %}
+{% for r in site.data.ressourcen.ressources %}
+{% assign accordionCounter = accordionCounter | plus: 1 %}
+<div class="row mt-4">
+    <div class="col-md-8">
+            <h4>{{r.title}}</h4>
+        <div class="accordion" id="accordion-{{accordionCounter}}">
+            {% assign counter = 0 %}
+            {% for group in r.groups %}
+            {% assign counter = counter | plus: 1 %}
+            <div class="card">
+                <div class="card-header" id="heading-{{accordionCounter}}-{{counter}}">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-{{accordionCounter}}-{{counter}}"
+                            aria-expanded="true" aria-controls="collapse-{{accordionCounter}}-{{counter}}">
+                            {{group.title}}
+                        </button>
+                    </h5>
+                </div>
+        
+                <div id="collapse-{{accordionCounter}}-{{counter}}" class="collapse" aria-labelledby="heading-{{accordionCounter}}-{{counter}}" data-parent="#accordion-{{accordionCounter}}">
+                    <div class="card-body">
+                            {% for link in group.sublinks %}
+                            <a class="d-block pb-2" href="{{link.url}}">{{link.title}}</a>
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}

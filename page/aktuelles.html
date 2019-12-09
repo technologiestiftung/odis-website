@@ -1,0 +1,47 @@
+---
+layout: default
+title: Aktuelles
+---
+
+
+
+<div class="blog-posts-wrapper">
+    <div class="blog-posts-intro">
+        <h3 class="headline-02 primary mb-1 mt-4">
+            Aktuelle Blog Posts
+        </h3>
+
+        <span class="headline-04 mb-12">
+            Hier finden Sie die neusten Blog Posts zur Open Data Informationsstelle
+        </span>
+    </div>
+
+
+        {% for post in site.categories.aktuelles %}
+        <div class="blog-post">
+            <span class="date-small">{{post.date | date: "%d.%m.%Y"}}</span>
+            <h3 class="headline-03">{{ post.title }}</h3>
+    
+            <a class="blog-link"
+                href="{{post.url}}">Zum
+                Artikel</a>
+        </div>
+        {% endfor %}
+</div>
+
+<h3 class="headline-03 primary mb-1 mt-4">
+    Immer auf dem neusten Stand.
+</h3>
+
+<span class="headline-04 mb-12">
+    Sie möchten über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden?
+    <br class="conditional-break">
+    Hinterlassen Sie uns ihre Kontaktdaten.
+</span>
+
+<br>
+
+<a href="mailto:odis@technologiestiftung-berlin.de">
+    <button class="button-primary mt-2">Jetzt kontaktieren</button>
+</a>
+

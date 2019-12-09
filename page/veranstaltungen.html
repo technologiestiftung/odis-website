@@ -1,0 +1,42 @@
+---
+layout: default
+title: Veranstaltungen
+---
+
+        <h2 class="headline-02 mb-4">
+            Aktuelles und Veranstaltungen
+        </h2>
+
+        {% assign year = 0 %}
+        {% assign yearPrev = 1 %}
+        <div class="schedule-wrapper mb-6">
+            {% for post in site.categories.veranstaltungen %}
+            {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+            
+            
+            <div class="schedule-event full-width pt-3">
+                    {% assign year = year %}
+                    {% if year != yearPrev %}
+                    <h4 class="ml-3 mt-3 mb-0">{{ year }}</h4>
+                    {% endif %}
+                    {% assign yearPrev = year %}
+                <div class="schedule-event-block pt-1 pb-1">
+                    <div class="schedule-date mr-3 white">
+                        <div>
+                            <span class="headline-02 white">{{post.date | date: "%d"}}.</span> <br> 
+                            <span class="schedule-date-month">{{post.date | date: "%b"}}</span>
+                        </div>    
+                    </div>
+                    <div class="schedule-time mr-3">{{post.time}}</div>
+
+                    <div class="schedule-desc-wrapper">
+                        <a href="{{post.url}}">
+                            <h3 class="headline-03 primary">{{post.title}}</h3>
+                            <p class="copy black">{{post.description}}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
