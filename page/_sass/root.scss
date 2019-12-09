@@ -79,3 +79,14 @@ a.project{
     background-color: $color-secondary;
     color: #fff;
 }
+
+
+.event-overview-link{
+    &:hover{
+        h3{
+            color: $color-secondary;
+        }
+
+        text-decoration: none;
+    }
+}
