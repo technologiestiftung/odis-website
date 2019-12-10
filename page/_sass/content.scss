@@ -111,35 +111,13 @@ svg.logo-ibb:hover  {
     border: 0px solid;
 }
 
-.navbar.primary > * {
-    color: $color-black;
-}
+
 
 .black {
     color: $color-black;
 }
 
-.navbar {
-    position: fixed;
-    z-index: 1000;
-    font-family: 'Clan Medium', sans-serif;
-    .nav-item {
-        cursor: pointer;
-        margin-right: 3rem;
-        transition: color .1s
-    }
 
-    .nav-item:hover {
-        color: $color-secondary;
-        transition: color .1s
-    }
-
-    
-    a {
-        color: white;
-        text-decoration: none;
-    }
-}
 
 // a[ id= "schedule" ]:target ~ #schedule div {
 //     transform: translateY( -1000px );
@@ -910,14 +888,6 @@ p.copy {
         width: 80%;
     }
 
-    .navbar {
-        font-size: 12px;
-        .nav-item {
-            cursor: pointer;
-            margin-right: .75rem;
-        }
-    }
-
 
     .copy-funding {
         width: 100%;
@@ -1046,14 +1016,6 @@ p.copy {
         line-height: $line-height-l;
     }
 
-    .navbar {
-        font-size: 10px;
-        font-weight: bold;
-        .nav-item {
-            cursor: pointer;
-            margin-right: .75rem;
-        }
-    }
 
     .pt-18 {
         padding-top: 9rem;
