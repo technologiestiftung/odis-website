@@ -55,7 +55,7 @@ Lorem ipsum....
 
 
 ### Adding posts for "Projekte"
-All posts for section "Aktuelles" should be stored in `/_posts/projekte`. To add a new post simple create a new markdown file (`.md`) in this folder.
+All posts for section "Projekte" should be stored in `/_posts/projekte`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
 Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `projekte`. In adition to that we also need to specify a `permalink` under which the page should be avialable and a `placeholderImage` that will appear in the "Projekte" overview page.
 
@@ -74,7 +74,7 @@ Lorem ipsum....
 ```
 
 ### Adding posts for "Veranstaltungen"
-All posts for section "Aktuelles" should be stored in `/_posts/veranstaltungen`. To add a new post simple create a new markdown file (`.md`) in this folder.
+All posts for section "Veranstaltungen" should be stored in `/_posts/veranstaltungen`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
 Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `veranstaltungen`. In adition to that we can add also need to specify a short `description` that will be shown in the "Veranstaltungen" overview page.
 The fields `time`, `web`, `veranstalter`, `mail` and `adresse` are optional and appear in the summary section of the page.
