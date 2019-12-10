@@ -1,10 +1,11 @@
 ---
-layout: default
+layout: project
 title:  Berliner Badestellen
 metaDescription: Lorem ipsum...
 categories: projekte
 permalink: /projekte/berliner-badestellen.html
 indexImage: placeholder.png
+headerImage: placeholderHeader.jpg
 ---
 
 # Berliner Badestellen

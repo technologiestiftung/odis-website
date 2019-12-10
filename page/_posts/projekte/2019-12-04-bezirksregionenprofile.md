@@ -1,10 +1,11 @@
 ---
-layout: default
+layout: project
 title:  "Digitale Bezirksregionenprofile"
 metaDescription: Lorem ipsum...
 categories: projekte
 permalink: /projekte/bzr.html
 indexImage: placeholder.png
+headerImage: placeholderHeader.jpg
 ---
 
 # Digitale Bezirksregionenprofile

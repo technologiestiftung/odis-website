@@ -98,3 +98,26 @@ a.project{
 .logo{
     bottom: 150px;
 }
+
+
+.project-header{
+    position: relative;
+    > div{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        align-content: flex-end;
+        width: 100%;
+        height: 100%;
+
+        .section{
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            h1{
+                padding-bottom: 7%;
+            }
+        }
+    }
+}
