@@ -6,6 +6,7 @@ This site is build with jekyll. Make sure jekyll is installed on your system. [j
 ## Command Line Usage
 
 Install dependencies
+
     bundle install
 
 Development:
