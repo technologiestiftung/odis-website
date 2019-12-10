@@ -1,28 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="UTF-8" />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-
-	<title>{{ page.title }} - {{site.title}}</title>
-
-	{% include meta.html %}
-
-	<link rel="stylesheet" href="/assets/css/main.css">
-</head>
+    {% include head.html %}
 
 <body>
 	<div id="barba-wrapper">
 		<div class="barba-container">
-			{% include js.html %}
 
 			{% include topnav.html %}
 
-			{% if page.url== '/' %}
-			{{ content }}
-			{% else %}
 			<div class="section mt-6 mb-6">
                 {{ content }}
                 
@@ -49,7 +35,6 @@
                         </div>
                 </div>
 			</div>
-			{% endif %}
 
 			{% include footer.html %}
 			{% include matomo.html %}

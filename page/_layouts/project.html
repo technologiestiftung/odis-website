@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html %}
+
+<body>
+	<div id="barba-wrapper">
+		<div class="barba-container">
+			
+			{% include topnav.html %}
+
+            {% if page.headerImage %}
+            <div class="project-header">
+                <img class=" w-100 img-fluid" src="/assets/images/{{page.headerImage}}" alt="{{page.title}}">
+                <div>
+                    <div class="section">
+                        <h1>{{ page.title }}</h1>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+			<div class="section mt-5 mb-6">
+				{{ content }}
+			</div>
+
+
+			{% include footer.html %}
+			{% include matomo.html %}
+		</div>
+	</div>
+</body>
+
+</html>
