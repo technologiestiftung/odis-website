@@ -57,16 +57,17 @@ Lorem ipsum....
 ### Adding posts for "Projekte"
 All posts for section "Projekte" should be stored in `/_posts/projekte`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
-Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `projekte`. In adition to that we also need to specify a `permalink` under which the page should be avialable and a `placeholderImage` that will appear in the "Projekte" overview page.
+Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `projekte`. In adition to that we also need to specify a `permalink` under which the page should be avialable and a `placeholderImage` that will appear in the "Projekte" overview page. Optionally you can add a `headerImage` that will be on the top of the page.
 
 ```
 ---
-layout: default
+layout: project
 title:  Kita-Suche in Berlin
 metaDescription: Lorem ipsum...
 categories: projekte
 permalink: /projekte/kita-suche-berlin.html
 indexImage: placeholder.png
+headerImage: placeholderHeader.jpg
 ---
 
 # Headline
