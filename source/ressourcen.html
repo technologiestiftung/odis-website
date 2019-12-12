@@ -10,7 +10,7 @@ title: Ressourcen
 {% for r in site.data.ressourcen.ressources %}
 {% assign accordionCounter = accordionCounter | plus: 1 %}
 <div class="row mt-5">
-    <div class="col-md-8">
+    <div class="col-md-9">
             <h4 class="mb-3">{{r.title}}</h4>
         <div class="accordion" id="accordion-{{accordionCounter}}">
             {% assign counter = 0 %}
@@ -30,12 +30,19 @@ title: Ressourcen
                     <div class="card-body">
                             {% for link in group.sublinks %}
                             <div class="pb-3">
-                                {% if link.text %}
-                                <div>
-                                    <small>{{ link.text }}</small>
-                                </div>
-                                {% endif %}
-                                <a href="{{link.url}}">{{link.title}}</a>
+                                <a href="{{link.url}}">
+                                    <div class="row">
+                                        {% if link.image%}
+                                        <div class="col-3">
+                                            <img class="img-fluid" alt="{{link.title}}" src="/assets/images/{{link.image}}">
+                                        </div>
+                                        {% endif %}
+                                        <div class="col">
+                                            <h5>{{link.title}}</h5>
+                                            {{ link.text }}
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                             {% endfor %}
                     </div>

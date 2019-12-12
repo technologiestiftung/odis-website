@@ -10,6 +10,7 @@
 h1{
     font-family: 'Clan Medium', sans-serif;
     font-size: 36px;
+    margin-bottom: 10px;;
 }
 
 h4{
@@ -50,6 +51,15 @@ a.project{
     }
 }
 
+a{
+    color: #000;
+    font-family: 'Clan Medium', sans-serif;
+    text-decoration: none;
+    &:hover{
+        color: $color-secondary;
+        text-decoration: none;
+    }
+}
 
 .img-square-container{
     height: 0;

@@ -6,9 +6,11 @@ ressources:
           - title: Example internal ressource with subpage
             url: /ressourcen/example.html
             text: Lorem ipsum....
+            image: placeholder.png
           - title: Testlink zu Google 2 as an example for external link
             url: https://google.com
             text: Lorem ipsum....
+            image: placeholder.png
       - title: Data Quality
         sublinks:
           - title: Testlink zu Google
