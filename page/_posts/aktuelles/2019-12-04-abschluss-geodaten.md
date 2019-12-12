@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: news
 title:  "Bezirkliche Geodaten"
 metaDescription: Lorem ipsum...
 categories: aktuelles

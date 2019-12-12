@@ -12,6 +12,9 @@ title: Veranstaltungen
         <div class="schedule-wrapper mb-6">
             {% assign items = site.categories.veranstaltungen | where: "visible", "true" %}
             {% for post in items %}
+            
+            {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+            {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
             {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
             
             
@@ -21,8 +24,8 @@ title: Veranstaltungen
                     <h4 class="ml-3 mt-3 mb-0">{{ year }}</h4>
                     {% endif %}
                     {% assign yearPrev = year %}
-                <div class="schedule-event-block pt-1 pb-1">
-                    <div class="schedule-date mr-3 white">
+                <div class="schedule-event-block pt-1 pb-1 {% if posttime < nowunix %}has-passed{% endif %}">
+                    <div class="schedule-date mr-3 white ">
                         <div>
                             <span class="headline-02 white">{{post.date | date: "%d"}}.</span> <br> 
                             <span class="schedule-date-month">{{post.date | date: "%b"}}</span>

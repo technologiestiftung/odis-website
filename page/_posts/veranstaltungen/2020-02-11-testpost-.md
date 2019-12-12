@@ -6,7 +6,6 @@ description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam 
 categories: veranstaltungen
 time: 12:15 Uhr
 web: https://google.de
-veranstalter: XYZ Events
 mail: info@event.com
 adresse: Platz der Luftbrücke 4, Gebäude H2rund, 12101 Berlin
 ---

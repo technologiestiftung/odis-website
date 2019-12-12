@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: news
 title:  "Testpost"
 metaDescription: Lorem ipsum...
 categories: aktuelles

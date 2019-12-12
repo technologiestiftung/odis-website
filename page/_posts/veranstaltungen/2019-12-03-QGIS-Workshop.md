@@ -7,7 +7,6 @@ categories: veranstaltungen
 visible: true
 time: 9:30 - 15:30 Uhr
 web: 
-veranstalter: ODIS, Amt für Statistik, SennInn
 mail: odis@technologiestiftung-berlin.de
 adresse: Amt für Statistik
 ---
