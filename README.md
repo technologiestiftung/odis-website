@@ -16,7 +16,7 @@ Building site:
 `jekyll build`
 
 ## Editing content
-All page source data is stores in `/pages`folder. The pages/posts for the sections `Aktuelles`, `Projekte` and `Veranstaltungen` are stored as posts in the folder `page/_posts` and filtered via the category variable in front matter. The links in the section `Ressourcen` are stored as a yml data file in the folder `/page/_data`.
+All page source data is stores in `/sources`folder. The pages/posts for the sections `Aktuelles`, `Projekte` and `Veranstaltungen` are stored as posts in the folder `page/_posts` and filtered via the category variable in front matter. Posts need to have to flag `visible: true` to be rendered on the page. The links in the section `Ressourcen` are stored as a yml data file in the folder `/source/_data`.
 
 #### Adding images
 To add images to a post use this markup:
@@ -80,7 +80,7 @@ Lorem ipsum....
 All posts for section "Veranstaltungen" should be stored in `/_posts/veranstaltungen`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
 Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `veranstaltungen`. In adition to that we can add also need to specify a short `description` that will be shown in the "Veranstaltungen" overview page.
-The fields `time`, `web`, `veranstalter`, `mail` and `adresse` are optional and appear in the summary section of the page.
+The fields `time`, `web`, `mail` and `adresse` are optional and appear in the summary section of the page.
 
 ```
 ---
@@ -91,8 +91,7 @@ description: Lorem ipsum dolor sit amet...
 categories: veranstaltungen
 visible: true/false
 time: 12:15 Uhr
-web: https://google.de
-veranstalter: XYZ Events
+web: https://example.de
 mail: info@event.com
 adresse: Platz der Luftbrücke 4, Gebäude H2rund, 12101 Berlin
 ---
