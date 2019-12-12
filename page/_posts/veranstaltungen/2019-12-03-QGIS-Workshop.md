@@ -4,6 +4,7 @@ title:  "QGIS Workshop"
 metaDescription: Lorem ipsum...
 description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.
 categories: veranstaltungen
+visible: true
 time: 9:30 - 15:30 Uhr
 web: 
 veranstalter: ODIS, Amt für Statistik, SennInn

@@ -4,6 +4,7 @@ title:  "Digitale Bezirksregionenprofile"
 metaDescription: Lorem ipsum...
 categories: projekte
 permalink: /projekte/bzr.html
+visible: true
 indexImage: placeholder.png
 headerImage: placeholderHeader.jpg
 ---

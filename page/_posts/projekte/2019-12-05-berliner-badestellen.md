@@ -4,6 +4,7 @@ title:  Berliner Badestellen
 metaDescription: Lorem ipsum...
 categories: projekte
 permalink: /projekte/berliner-badestellen.html
+visible: true
 indexImage: placeholder.png
 headerImage: placeholderHeader.jpg
 ---

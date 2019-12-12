@@ -3,6 +3,7 @@ layout: project
 title:  Kita-Suche in Berlin
 metaDescription: Lorem ipsum...
 categories: projekte
+visible: true
 permalink: /projekte/kita-suche-berlin.html
 indexImage: placeholder.png
 headerImage: placeholderHeader.jpg

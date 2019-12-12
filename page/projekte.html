@@ -16,7 +16,8 @@ title: Projekte
         </h4>
 
         <div class="row">
-            {% for post in site.categories.projekte %}
+            {% assign items = site.categories.projekte | where: "visible", "true" %}
+            {% for post in items %}
             <div class="col-12 col-sm-6 col-md-4 pb-5">
                     <a class="project" href="{{post.url}}" title="{{ post.title }}">
                     <div class="mb-3 img-square-container"><img class="img-fluid" src="/assets/images/{{post.indexImage}}" alt="{{ post.title }}"></div>

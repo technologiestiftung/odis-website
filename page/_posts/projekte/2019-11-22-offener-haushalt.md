@@ -4,6 +4,7 @@ title:  Offener Haushalt
 metaDescription: Lorem ipsum...
 categories: projekte
 permalink: /proejkte/offener-haushalt.html
+visible: true
 indexImage: placeholder.png
 headerImage: placeholderHeader.jpg
 ---

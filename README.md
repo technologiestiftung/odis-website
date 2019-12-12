@@ -47,6 +47,7 @@ layout: default
 title:  "Testpost"
 metaDescription: Lorem ipsum...
 categories: aktuelles
+visible: true/false
 ---
 
 # Headline
@@ -65,6 +66,7 @@ layout: project
 title:  Kita-Suche in Berlin
 metaDescription: Lorem ipsum...
 categories: projekte
+visible: true/false
 permalink: /projekte/kita-suche-berlin.html
 indexImage: placeholder.png
 headerImage: placeholderHeader.jpg
@@ -87,6 +89,7 @@ title:  "Testveranstaltung 2019"
 metaDescription: Lorem ipsum...
 description: Lorem ipsum dolor sit amet...
 categories: veranstaltungen
+visible: true/false
 time: 12:15 Uhr
 web: https://google.de
 veranstalter: XYZ Events

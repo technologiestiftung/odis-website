@@ -16,8 +16,8 @@ title: Aktuelles
         </span>
     </div>
 
-
-        {% for post in site.categories.aktuelles %}
+        {% assign items = site.categories.aktuelles | where: "visible", "true" %}
+        {% for post in items %}
         <div class="blog-post">
             <span class="date-small">{{post.date | date: "%d.%m.%Y"}}</span>
             <h3 class="headline-03">{{ post.title }}</h3>
