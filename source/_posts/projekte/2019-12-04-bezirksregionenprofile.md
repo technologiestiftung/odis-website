@@ -9,7 +9,6 @@ indexImage: placeholder.png
 headerImage: placeholderHeader.jpg
 ---
 
-# Digitale Bezirksregionenprofile
 
 Die Bezirksregionenprofile dienen der Verwaltung als wichtiges Instrument zur Planung, Verwaltung und Steuerung einzelner Bezirksregionen eines Stadtbezirks. Bis dato werden die jährlich erscheinenden Profile lediglich als mehrseitiges PDF-Dokument zur Ansicht bereitgestellt und deren Publikation kaum der Öffentlichkeit kommuniziert. Um das daraus resultierende „verstaubte“ Image aufzupolieren und die Profile als essenzielle Steuerungs- und Planungsinstrumente der Sozialraumorientierten Planungskoordination besser zugänglich zu machen, erarbeitet das Team der Open Data Informationsstelle (ODIS) der Technologiestiftung Berlin (TSB) seit Anfang des Jahres 2019 eine Plattform, auf welcher die Inhalte der Bezirksregionenprofile sowie die Datensätze der Kernindikatoren je Bezirk(-sregion) dargestellt und interaktiv erlebbar gemacht werden sollen.
 
