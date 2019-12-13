@@ -1,17 +1,33 @@
 ---
 layout: event
 title:  "QGIS Workshop"
-metaDescription: Lorem ipsum...
-description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.
+metaDescription: Eintägiger Workshopo zur Datenvisualisierung von Geodaten mit der Open Source Software QGIS.
+description: Eintägiger Workshopo zur Datenvisualisierung von Geodaten mit der Open Source Software QGIS.
 categories: veranstaltungen
 visible: true
 time: 9:30 - 15:30 Uhr
 web: 
 mail: odis@technologiestiftung-berlin.de
-adresse: Amt für Statistik
+adresse: Amt für Statistik, Alt-Friedrichsfelde 60, 10315 Berlin
 ---
 
 # QGIS Workshop
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+In diesem initialen Workshop zur Datenvisualisierung wollen wir uns auf räumliche Daten konzentrieren. Grundlegende Computerkenntnisse sind erforderlich. Darüber hinaus müssen Sie aber keine tiefgehenden Daten- oder Programmierkenntnisse mitbringen. Der Ablauf des Workshops setzt sich wie folgt zusammen:
 
+1. Grundlagen räumlicher Daten (Formate, Projektionen, Standards)
+2. Datenquellen
+3. Einführung in QGIS
+    a. Datenimport
+    b. Visualisierung
+    c. Export
+4. Erstellung einer statischen Karte für Web und Druck
+5. Erstellung einer interaktiven Karte fürs Internet
+
+Im Rahmen des Workshops werden nur kostenlose, quelloffene Anwendungen genutzt. Primär wird dies QGIS sein. QGIS ist die weltweit meist genutzte OpenSource-Software für die Verarbeitung räumlicher Informationen. Die Software kann von Ihnen einfach auf dem eigenen Rechner installiert werden und so über den Workshop hinaus genutzt werden.
+
+Der Workshop richtet sich an Personen, die (interaktive) Karten für Berlin mit Daten der Verwaltung erstellen wollen. Er richtet sich an QGIS Einsteiger*innen ohne GIS Vorerfahrung. 
+Dabei richtet sich der Kurs in erster Linie an Mitarbeiterinnen und Mitarbeiter der Berliner Verwaltung. Wir bitten um Verständnis dafür, dass die Anzahl der Plätze begrenzt ist.
+Der Workshop ist kostenfrei.
+
+*Das Workshop Angebot ist eine Kooperation zwischen der Technologiestiftung Berlin und dem Amt für Statistik Berlin Brandenburg. Die Technologiestiftung Berlin unterstützt dieses Vorhaben im Rahmen der Open Data Informationsstelle (ODIS), welche durch die Senatsverwaltung für Wirtschaft, Energie und Betriebe (SenWEB) gefördert wird.*

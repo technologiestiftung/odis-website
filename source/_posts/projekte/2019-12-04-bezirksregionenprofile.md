@@ -1,12 +1,12 @@
 ---
 layout: project
 title:  "Digitale Bezirksregionenprofile"
-metaDescription: Lorem ipsum...
+metaDescription: Digitale Aufbereitung der Bezirksregionenprofile in einer Webanwendung.
 categories: projekte
 permalink: /projekte/bzr.html
 visible: true
-indexImage: placeholder.png
-headerImage: placeholderHeader.jpg
+indexImage: bzr-thumbnail.png
+headerImage: bzr-hero.png
 ---
 
 

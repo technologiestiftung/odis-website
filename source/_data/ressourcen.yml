@@ -1,6 +1,12 @@
 ressources: 
   - title: ODIS-Ressourcen
     groups:
+      - title: Dateninventur
+        sublinks:
+          - title: Vorlage einer Dateninventur
+            url: /ressourcen/dateninventur.html
+            text: Zur strukturierten Erfassung einer Dateninventur hat ODIS eine Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann.
+            image: dateninventur-thumbnail.png
       - title: Open Data Readiness
         sublinks:
           - title: Example internal ressource with subpage
@@ -17,6 +23,7 @@ ressources:
             url: https://google.com
           - title: Testlink zu Google 2
             url: https://google.com
+    
       - title: Data Visualization
         sublinks:
           - title: Testlink zu Google

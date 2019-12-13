@@ -1,0 +1,20 @@
+﻿Dateninventur;;
+;;
+Inhaltliche Felder;Thema;Das übergeordnete Thema des Datensatzes.
+;Datensatz Titel;Der Titel des Datensatzes. (Entspricht ggf. dem standardisierten Datensatztitel)
+;Beschreibung;Eine kurze Beschreibung des Datensatzes.
+;Räumlicher Bezug;Der Bezug des Datensatzes – z.B. PLR, Adresse.
+Verantwortlichkeit;Verantwortlichkeit - Bezirksebene;Verantwortliche Stelle auf bezirklicher Ebene.
+;Ansprechperson - Bezirksebene;Konkrete Ansprechperson auf bezirklicher Ebene.
+;Verantwortlichkeit - Landesebene;Verantwortliche Stelle auf Landesebene.
+;Ansprechperson - Landesebene;Konkrete Ansprechperson auf Landesebene.
+;Datenhoheit bei;Die Abteilung / Institution die diese Daten bereitstellt.
+Technische Details;IT-Fachverfahren;Falls vorhanden: für diesen Datensatz verwendetes Fachverfahren oder Datenplattform.
+;Dateiformat;Dateiformat, in dem der Datensatz vorliegt.
+;Verfügbarkeit (intern / veröffentlicht);Ist der Datensatz nur intern verfügbar oder öffentlich zugänglich?
+;Aktualisierungsprozess (manuell / automatisiert);Wird der Datensatz automatisch (z.B. automatischer Datenbankexport) oder manuell aktualisiert?
+;Zuletzt aktualisiert;Wann wurde der Datensatz zuletzt aktualisiert?
+;Aktualisierungsfrequenz;Wie häufig wird der Datensatz aktualisiert?
+;Ressource Link;Falls vorhanden: Link zur Ressource (externe URL oder lokaler Dateipfad)
+Sonstiges;Kommentar;weitere Anmerkungen
+;Datum zuletzt bearbeitet;letzte Bearbeitung dieser Metadatenzeile
