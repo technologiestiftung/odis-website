@@ -107,7 +107,7 @@ Below is a table of all the parameters you can give to them.
 | name                                   | parm1 | parm2   | parm3  | param4   |
 | :------------------------------------- | :---- | :------ | :----- | :------- |
 | macro-image-section.html               | src   | caption | --     | --       |
-| macro-image-section-small.html               | src   | caption | --     | --       |
+| macro-image-section-small.html         | src   | caption | --     | --       |
 
 
 
