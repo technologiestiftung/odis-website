@@ -10,16 +10,13 @@ visible: true
 
 In diesem Jahr hat ODIS die Senatsverwaltung für Stadtentwicklung und Wohnen bei dem Projekt zur Integration bezirklicher Geodaten in die Geodateninfrastruktur (GDI) des Landes Berlin unterstützt.
 
-Geodaten werden als Open Data über den [FIS-Broker](https://fbinter.stadt-berlin.de/fb/index.jsp) bereitgestellt. Datenlieferanten können hierbei alle Haupt- und Bezirksverwaltungen sein, die Geodaten verwalten.
+In der Berliner Verwaltung werden Geodaten über den [FIS-Broker](https://fbinter.stadt-berlin.de/fb/index.jsp) als Open Data bereitgestellt. Datenlieferanten können dabei alle Haupt- und Bezirksverwaltungen sein, die Geodaten verwalten.
+Neben vielen Geodatensätzen, die für ganz Berlin gebündelt vorliegen, gibt es zusätzlich Datensätze, die dezentral in der Verantwortlichkeit der Bezirke liegen. Dieses Projekt hat sich der Aufgabe angenommen, Prozesse zu entwickeln, um Geodatensätze aller Bezirke einheitlich bereitzustellen. Dies umfasst:
 
-Neben vielen Geodatensätzen, die für ganz Berlin gebündelt vorliegen, gibt es zusätzlich Datensätze, die dezentral in der Verantwortlichkeit der Bezirke liegen.
+- Die Erstellung von Datenschemata für einzelne Datensätze
+- Einholen der Datensätze über die Fachabteilungen
+- Aufbereitung der Datensätze entsprechend dem Datenschema
+- Zusammenführung der bezirklichen Datensätze zu einem gemeinsamen, berlinweiten Datensatz
+- Testweise Veröffentlichung des Datensatzes über den FIS-Broker
 
-Dieses Projekt hat sich der Aufgabe angenommen, Prozesse zu entwickeln, um Geodatensätze aller Bezirke einheitlich bereitzustellen. Dies umfasst:
-
-- Die Erstellung eines Datenschemas
-- Einholen der Datensätze in den Fachabteilungen
-- Aufbereitung im Datenschema
-- Zusammenführung der Datensätze zu einem gemeinsamen berlinweiten Datensatz
-- Veröffentlichung des Datensatzes
-
-In mehereren Workshops fand über das Jahr hinweg ein reger Austausch zwischen der Hauptverwaltung und den Vermessungsfachbereichen, sowie der Datenkoordination der Bezirke statt. Es wurden Datenschemata entwickelt und mögliche Prozesse diskutiert und getestet.
+In mehereren Workshops fand über das Jahr hinweg ein Austausch zwischen der Hauptverwaltung, den Vermessungsfachbereichen, sowie der Datenkoordination der Bezirke statt. Es wurden Datenschemata entwickelt, sowie mögliche Prozessabläufe diskutiert und getestet.

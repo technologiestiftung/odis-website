@@ -15,14 +15,14 @@ adresse: Amt für Statistik, Alt-Friedrichsfelde 60, 10315 Berlin
 
 In diesem initialen Workshop zur Datenvisualisierung wollen wir uns auf räumliche Daten konzentrieren. Grundlegende Computerkenntnisse sind erforderlich. Darüber hinaus müssen Sie aber keine tiefgehenden Daten- oder Programmierkenntnisse mitbringen. Der Ablauf des Workshops setzt sich wie folgt zusammen:
 
-1. Grundlagen räumlicher Daten (Formate, Projektionen, Standards)
-2. Datenquellen
-3. Einführung in QGIS
-    a. Datenimport
-    b. Visualisierung
-    c. Export
-4. Erstellung einer statischen Karte für Web und Druck
-5. Erstellung einer interaktiven Karte fürs Internet
+- Grundlagen räumlicher Daten (Formate, Projektionen, Standards)
+- Datenquellen
+- Einführung in QGIS
+    - Datenimport
+    - Visualisierung
+    - Export
+- Erstellung einer statischen Karte für Web und Druck
+- Erstellung einer interaktiven Karte fürs Internet
 
 Im Rahmen des Workshops werden nur kostenlose, quelloffene Anwendungen genutzt. Primär wird dies QGIS sein. QGIS ist die weltweit meist genutzte OpenSource-Software für die Verarbeitung räumlicher Informationen. Die Software kann von Ihnen einfach auf dem eigenen Rechner installiert werden und so über den Workshop hinaus genutzt werden.
 

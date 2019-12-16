@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  Kita-Suche in Berlin
-metaDescription: Lorem ipsum...
+metaDescription: Das Berliner Kita-Angebot in einer interaktiven Suche mit Filter und Routing-Funktion
 categories: projekte
 visible: true
 permalink: /projekte/kita-suche-berlin.html

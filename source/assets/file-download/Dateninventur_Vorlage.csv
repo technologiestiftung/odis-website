@@ -1,1 +1,20 @@
-﻿Thema;Datensatz;Datensatz Titel - STANDARDISIERT;Beschreibung;Räumlicher Bezug;Verantworlichkeit - Bezirksebene;Ansprechperson - Bezirksebene;Verantworlichkeit - Landesebene;Ansprechperson - Landesebene;Datenhoheit bei;IT-Fachverfahren;Dateiformat;Verfügbarkeit (intern / veröffentlicht);Aktualisierungsprozess (Manuell / Automatisiert);Zuletzt aktualisiert;Aktualisierungsfrequenz;Ressource Link;Kommentar;Datum zuletzt bearbeitet
+﻿Dateninventur;;
+;;
+Inhaltliche Felder;Thema;Das übergeordnete Thema des Datensatzes.
+;Datensatz Titel;Der Titel des Datensatzes.
+;Beschreibung;Eine kurze Beschreibung des Datensatzes.
+;Räumlicher Bezug;Der Bezug des Datensatzes – z.B. PLR, Adresse.
+Verantwortlichkeit;Verantwortlichkeit - Bezirksebene;Falls Inventur auf Bezirksebene: Verantwortliche Stelle auf bezirklicher Ebene.
+;Ansprechperson - Bezirksebene;Falls Inventur auf Bezirksebene: Konkrete Ansprechperson auf bezirklicher Ebene mit Kontaktinformation.
+;Verantwortlichkeit - Landesebene;Verantwortliche Stelle auf Landesebene.
+;Ansprechperson - Landesebene;Konkrete Ansprechperson auf Landesebene mit Kontaktinformation.
+;Datenhoheit bei;Die Abteilung / Institution die diese Daten bereitstellt.
+Technische Details;IT-Fachverfahren;Falls vorhanden: für diesen Datensatz verwendetes Fachverfahren oder Datenplattform.
+;Dateiformat;Dateiformat, in dem der Datensatz vorliegt. (z.B. Excel, CSV, Shape-File, Access Datenbank, PostgreSQL Datenbank, etc.)
+;Verfügbarkeit (intern / veröffentlicht);Ist der Datensatz nur intern verfügbar oder öffentlich zugänglich?
+;Aktualisierungsprozess (manuell / automatisiert);Wird der Datensatz automatisch (z.B. automatischer Datenbankexport) oder manuell aktualisiert?
+;Zuletzt aktualisiert;Datum der letzten Aktualisierung
+;Aktualisierungsfrequenz;Wie häufig wird der Datensatz aktualisiert?
+;Ressource Link;Falls vorhanden: Link zur Ressource (externe URL oder lokaler Dateipfad)
+Sonstiges;Kommentar;weitere Anmerkungen
+;Datum zuletzt bearbeitet;Datum der letzten Bearbeitung dieser Metadatenzeile
