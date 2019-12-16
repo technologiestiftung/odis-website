@@ -8,25 +8,25 @@
             <li class="nav-item {% if page.url ==  '/' %} active {% endif %}">
                 <a class="nav-link " href="/">Start</a>
             </li>
-            <li class="nav-item {% if page.url == '/ueber-odis.html' %} active {% endif %}">
+            <li class="nav-item {% if page.url contains '/ueber-odis' %} active {% endif %}">
                 <a class="nav-link "
-                    href="/ueber-odis.html">Über ODIS</a>
+                    href="/ueber-odis/">Über ODIS</a>
             </li>
             <li class="nav-item {% if page.url contains '/projekte' %} active {% endif %}">
                 <a class="nav-link "
-                    href="/projekte.html">Projekte</a>
+                    href="/projekte/">Projekte</a>
             </li>
             <li class="nav-item {% if page.url contains '/ressourcen' %} active {% endif %}">
                 <a class="nav-link "
-                    href="/ressourcen.html">Ressourcen</a>
+                    href="/ressourcen/">Ressourcen</a>
             </li>
             <li class="nav-item {% if page.url contains '/aktuelles' %} active {% endif %}">
                 <a class="nav-link "
-                    href="/aktuelles.html">Aktuelles</a>
+                    href="/aktuelles/">Aktuelles</a>
             </li>
             <li class="nav-item {% if page.url contains '/veranstaltungen' %} active {% endif %}">
                 <a class="nav-link "
-                    href="/veranstaltungen.html">Veranstaltungen</a>
+                    href="/veranstaltungen/">Veranstaltungen</a>
             </li>
         </ul>
     </div>

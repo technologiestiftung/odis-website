@@ -15,26 +15,9 @@ Development:
 Building site: 
 `jekyll build`
 
-## Editing content
-All page source data is stores in `/sources`folder. The pages/posts for the sections `Aktuelles`, `Projekte` and `Veranstaltungen` are stored as posts in the folder `page/_posts` and filtered via the category variable in front matter. Posts need to have to flag `visible: true` to be rendered on the page. The links in the section `Ressourcen` are stored as a yml data file in the folder `/source/_data`.
+## Content
+All page source data is stores in `/sources`folder. The posts for the sections `Aktuelles` and `Veranstaltungen` are stored as posts in the folder `page/_posts` and filtered via the category variable in front matter. All pages for the projects section are stored in the folder `/source/projekte`. Posts and pages need to have to flag `visible: true` to be rendered on the page. The links in the section `Ressourcen` are stored as a yml data file in the folder `/source/_data`.
 
-#### Adding images
-To add images to a post use this markup:
-
-`![My helpful screenshot](/assets/images/example-image.jpg)`
-
-If a caption below an image is needed we can use a line of simple html:
-```
-![My helpful screenshot](/assets/images/example-image.jpg)
-<small>Test</small>
-```
-
-or for a right aligned caption
-
-```
-![My helpful screenshot](/assets/images/example-image.jpg)
-<small class="text-right d-block">Test</small>
-```
 
 ### Adding posts for "Aktuelles"
 All posts for section "Aktuelles" should be stored in `/_posts/aktuelles`. To add a new post simple create a new markdown file (`.md`) in this folder.
@@ -48,28 +31,6 @@ title:  "Testpost"
 metaDescription: Lorem ipsum...
 categories: aktuelles
 visible: true/false
----
-
-# Headline
-Lorem ipsum....
-```
-
-
-### Adding posts for "Projekte"
-All posts for section "Projekte" should be stored in `/_posts/projekte`. To add a new post simple create a new markdown file (`.md`) in this folder.
-
-Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `projekte`. In adition to that we also need to specify a `permalink` under which the page should be avialable and a `placeholderImage` that will appear in the "Projekte" overview page. Optionally you can add a `headerImage` that will be on the top of the page.
-
-```
----
-layout: project
-title:  Kita-Suche in Berlin
-metaDescription: Lorem ipsum...
-categories: projekte
-visible: true/false
-permalink: /projekte/kita-suche-berlin.html
-indexImage: placeholder.png
-headerImage: placeholderHeader.jpg
 ---
 
 # Headline
@@ -99,3 +60,70 @@ adresse: Platz der Luftbrücke 4, Gebäude H2rund, 12101 Berlin
 # Headline
 Lorem ipsum....
 ```
+
+### Adding posts for "Projekte"
+All pages for section "Projekte" should be stored in `/source/projekte`. To add a new project simple create a new folder with a index.md markdown file (`.md`) in it.
+
+Specify the site `title`, `metaDescription` in the front matter section. In adition to that we also need to specify a `indexImage` and  `heroImage`.
+
+```
+---
+layout: project
+title:  Kita-Suche in Berlin
+metaDescription: Lorem ipsum...
+date: 2019-12-24
+visible: true/false
+indexImage: placeholder.png
+headerImage: placeholderHeader.jpg
+---
+
+# Headline
+Lorem ipsum....
+```
+
+### Editing Content
+
+When writing simple markdown all the text will be
+
+- in one single column
+- images will have no caption
+- images will span the column
+
+If you want a specialized layout you can use the macros included in `source/_includes`
+
+- macro-image-section-small.html
+- macro-image-section.html
+
+
+
+```html
+{% include macro-image-section.html src="cat.png" caption="Here is a picture of a cat" %}
+```
+
+---
+
+Below is a table of all the parameters you can give to them.
+
+| name                                   | parm1 | parm2   | parm3  | param4   |
+| :------------------------------------- | :---- | :------ | :----- | :------- |
+| macro-image-section.html               | src   | caption | --     | --       |
+| macro-image-section-small.html               | src   | caption | --     | --       |
+
+
+
+#### HTML in [M⬇︎]
+
+You can mix **[M⬇︎]** with HTML, just make sure you don't mix block level markup. E.g. This wont work!
+
+```html
+Dies ist ein Typoblindtext.<div>someHTML</div>
+```
+
+This will work:
+
+```html
+Dies ist ein Typoblindtext.
+
+<div>someHTML</div>
+```
+

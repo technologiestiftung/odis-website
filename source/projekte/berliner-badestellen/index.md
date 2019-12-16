@@ -2,11 +2,10 @@
 layout: project
 title:  Berliner Badestellen
 metaDescription: Lorem ipsum...
-categories: projekte
-permalink: /projekte/berliner-badestellen.html
+date: 2019-11-09
 visible: true
 indexImage: placeholder.png
-headerImage: placeholderHeader.jpg
+heroImage: placeholderHeader.jpg
 ---
 
 
@@ -14,3 +13,5 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 
 - punkt 
 - punkt 2
+
+{% include macro-image-section-small.html src="/assets/images/placeholderHeader.jpg" caption="Screenshot von <a href='http://www.govdata.de'>www.govdata.de</a>, die bereits DCAT-AP.de nutzen." %}

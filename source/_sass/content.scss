@@ -213,7 +213,7 @@ svg.logo-ibb:hover  {
 
 @-moz-document url-prefix() {
     h1 {
-      color: red;
+      color: $color-secondary;
     }
   }
 
@@ -371,6 +371,13 @@ svg.logo-ibb:hover  {
         width: 100px;
         height: 100px;
         background: url('/assets/images/page/profile-2_2x.jpg') no-repeat center/100%;
+        border-radius: 100%;
+    }
+    
+    .profile-image-3 {
+        width: 100px;
+        height: 100px;
+        background: url('/assets/images/page/profile-3_2x.jpg') no-repeat center/100%;
         border-radius: 100%;
     }
 

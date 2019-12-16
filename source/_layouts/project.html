@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 	{% include head.html %}
-
 <body>
 	<div id="barba-wrapper">
 		<div class="barba-container">
 			
 			{% include topnav.html %}
 
-            {% if page.headerImage %}
-            <div class="project-header">
-                <img class=" w-100 img-fluid" src="/assets/images/{{page.headerImage}}" alt="{{page.title}}">
+            {% if page.heroImage %}
+            <div class="project-header bright">
+				<img class=" w-100 img-fluid" src="{{page.heroImage}}" alt="{{page.title}}">
+				<div class="gradient-overlay"></div>
                 <div>
                     <div class="section">
                         <h1>{{ page.title }}</h1>
