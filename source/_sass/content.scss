@@ -48,10 +48,6 @@ body {
             line-height: $line-height-xl;
         }
 
-svg:hover path {
-    fill: $color-primary-minimum;
-}
-
 svg:hover polygon {
     fill: $color-primary-minimum;
 }
