@@ -1,17 +1,16 @@
 ---
 layout: project
 title:  Berliner Badestellen
-metaDescription: Lorem ipsum...
+metaDescription: Eine Anwendung die Zeigt, wo in Berlin man baden gehen kann, und was die Wasserqualität dort ist.
 date: 2019-11-09
 visible: true
 indexImage: placeholder.png
-heroImage: placeholderHeader.jpg
+heroImage: badestellen_hero.png
 ---
+**Besuche diese Anwendung: [http://badegewaesser-berlin.de/](http://badegewaesser-berlin.de/)**
 
+Wo kann man in Berlin überhaupt baden gehen – und, hinsichtlich der Wasserqualität, wo *sollte* man in Berlin baden gehen? Um solche Fragen zu beantworten, bringt die Webseite "Berliner Badestellen" bringt verschiedene Datenströme aus der Verwaltung zusammen und stellt die bürgerfreundlich dar.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+Die Seite ist aus einer Zusammenarbeit zwischen der Technologiestiftung Berlin, dem Landesamt für Gesundheit und Soziales (LaGeSo), dem Kompetenzzentrum Wasser, und den Berliner Wasserbetrieben entstanden. Die Seite informiert darüber, welche Badestellen es gibt in Berlinn, wann die Letzte Messung die Wasserqualität war (und ihre Ergebnisse), und Merkmale der Badestelle (z.B., ob Hunden erlaubt sind oder ob WCs vor Ort sind). Besonders an dieser Seite ist, dass eine Vorhersagemodell für einige Badestellen benutzt wird, um tagesaktuelle Auskünfte zur Wasserqualität zu liefern. 
 
-- punkt 
-- punkt 2
-
-{% include macro-image-section-small.html src="/assets/images/placeholderHeader.jpg" caption="Screenshot von <a href='http://www.govdata.de'>www.govdata.de</a>, die bereits DCAT-AP.de nutzen." %}
+Ein Datensatz mit allen Badestellen und ihren letzten Messungen ist [hier](https://daten.berlin.de/datensaetze/liste-der-badestellen) im Berliner Datenportal verfügbar (der Datensatz wird nur während des Badesaisons aktualisiert). Für mehr Informationen zu dem Datenmodell hinter der Anwendung, siehe diesen Blogpost [hier](https://lab.technologiestiftung-berlin.de/projects/bathing-water/de/).

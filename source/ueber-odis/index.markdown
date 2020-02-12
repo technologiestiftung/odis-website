@@ -1,17 +1,29 @@
 ---
 layout: page
-title: About
+title: Über ODIS
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Die Open Data Informationsstelle (ODIS) wurde Mai 2018 gegründet als ein Unterstützungsangebot für Mitarbeiter\*innen der Berliner Verwaltung rund um Open Data. In dieser Kapazität dient ODIS als Ansprechpartner für Fragen zu Open Data aus der Verwaltung, organisiert Veranstaltungen mit Verwaltungsbeschäftigten sowie Mitglieder der Berliner Open Data-Community, und entwickelt eigene Anwendungen und Visualisierungen basierend auf offene Daten. ODIS wird von der Berliner Senatsverwaltung für Wirtschaft, Energie und Betriebe finanziert und von der Technologiestiftung Berlin betrieben.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Das ODIS-Team ist aktuell: 
 
 
-[jekyll-organization]: https://github.com/jekyll
+<div class="profiles-wrapper">
+					<div class="profile-wrapper mt-2">
+						<div class="profile-image-2"></div>
+						<div class="profile-desc-wrapper-2">
+							<span><b>Victoria Boeck</b></span>
+							<span>Boeck@technologiestiftung-berlin.de</span>
+							<span>030 209 69 99 41</span>
+						</div>
+					</div>
+                    <div class="profile-wrapper mt-2">
+						<div class="profile-image"></div>
+						<div class="profile-desc-wrapper-2">
+							<span><b>Dr. Benjamin Seibel</b></span>
+							<span>Seibel@technologiestiftung-berlin.de</span>
+							<span>030 209 69 99 40</span>
+						</div>
+					</div>
+				</div>
+					
