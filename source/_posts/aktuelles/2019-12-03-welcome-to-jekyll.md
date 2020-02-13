@@ -3,7 +3,7 @@ layout: news
 title:  "Testpost"
 metaDescription: Lorem ipsum...
 categories: aktuelles
-visible: true
+visible: false
 ---
 
 # Testpost

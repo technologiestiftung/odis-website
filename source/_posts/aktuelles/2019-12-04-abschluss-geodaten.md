@@ -3,7 +3,7 @@ layout: news
 title:  "Ein Jahr Begleitung des Projekts zur bezirklichen Geodatenkoordination"
 metaDescription: In diesem Jahr hat ODIS die Senatsverwaltung für Stadtentwicklung und Wohnen bei dem Projekt zur Integration bezirklicher Geodaten in die Geodateninfrastruktur (GDI) des Landes Berlin unterstützt.
 categories: aktuelles
-visible: true
+visible: false
 ---
 
 # Ein Jahr Begleitung des Projekts zur bezirklichen Geodatenkoordination
