@@ -13,7 +13,7 @@ Um Verwaltungsdaten offen als Open Data bereitstellen zu können, muss in einem 
 
 Damit Verwaltungen einen Überblick über vorhandene Datensätze und zuständige Stellen erhalten, sollte eine Dateninventur durchgeführt werden.
 
-Informationen, zu den notwendigen Schritten finden Sie hier LINK ZU RESSOURCE.
+Ein Leitfaden zu den notwendigen Schritten für die Durchführung einer Dateninventur ist aktuell in der Bearbeitung.
 
 Zur strukturierten Erfassung einer Dateninventur hat ODIS anhand bestehender Beispiele verschiedener Verwaltungen und anderer Städte eine Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann.
 
@@ -22,7 +22,7 @@ Die Informationen, die über einen Datensatz geführt werden sollten, lassen sic
 - Verantwortlichkeit: zuständige Stellen und Personen auf Hauptverwaltungs- und Bezirksebene
 - Technische Details: Informationen zu Datenbereitstellung und Aktualisierung
 
-In der folgenden Tabelle sind die Felder im Detail beschrieben. Das Beispiel zum Kleingartenbestand dient der Veranschaulichung und ist ein fiktives Beispiel.
+In der folgenden Tabelle sind die Felder im Detail beschrieben. Das Beispiel zum Kleingartenbestand dient der Veranschaulichung und ist ein fiktives Beispiel. Die entsprechende Dateien für die Vorlage (CSV und Excel) sind am Ende dieser Seite verlinkt.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 25px}
