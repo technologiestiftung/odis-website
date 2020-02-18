@@ -10,10 +10,10 @@ Install dependencies
     bundle install
 
 Development:
-`jekyll serve --livereload` or `jekyll serve`
+`bundle exec jekyll serve --livereload` or `bundle exec jekyll serve`
 
 Building site: 
-`jekyll build`
+`bundle exec jekyll build`
 
 ## Content
 All page source data is stores in `/sources`folder. The posts for the sections `Aktuelles` and `Veranstaltungen` are stored as posts in the folder `page/_posts` and filtered via the category variable in front matter. All pages for the projects section are stored in the folder `/source/projekte`. Posts and pages need to have to flag `visible: true` to be rendered on the page. The links in the section `Ressourcen` are stored as a yml data file in the folder `/source/_data`.
