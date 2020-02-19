@@ -26,8 +26,8 @@ In diesem initialen Workshop zur Datenvisualisierung wollen wir uns auf räumlic
 
 Im Rahmen des Workshops werden nur kostenlose, quelloffene Anwendungen genutzt. Primär wird dies QGIS sein. QGIS ist die weltweit meist genutzte OpenSource-Software für die Verarbeitung räumlicher Informationen. Die Software kann von Ihnen einfach auf dem eigenen Rechner installiert werden und so über den Workshop hinaus genutzt werden.
 
-Der Workshop richtet sich an Personen, die (interaktive) Karten für Berlin mit Daten der Verwaltung erstellen wollen. Er richtet sich an QGIS Einsteiger*innen ohne GIS Vorerfahrung. 
+Der Workshop richtet sich an Personen, die (interaktive) Karten für Berlin mit Daten der Verwaltung erstellen wollen und QGIS Einsteiger*innen ohne GIS Vorerfahrung. 
 Dabei richtet sich der Kurs in erster Linie an Mitarbeiterinnen und Mitarbeiter der Berliner Verwaltung. Wir bitten um Verständnis dafür, dass die Anzahl der Plätze begrenzt ist.
 Der Workshop ist kostenfrei.
 
-*Das Workshop Angebot ist eine Kooperation zwischen der Technologiestiftung Berlin und dem Amt für Statistik Berlin Brandenburg. Die Technologiestiftung Berlin unterstützt dieses Vorhaben im Rahmen der Open Data Informationsstelle (ODIS), welche durch die Senatsverwaltung für Wirtschaft, Energie und Betriebe (SenWEB) gefördert wird.*
+*Das Workshop-Angebot ist eine Kooperation zwischen der Technologiestiftung Berlin und dem Amt für Statistik Berlin Brandenburg. Die Technologiestiftung Berlin unterstützt dieses Vorhaben im Rahmen der Open Data Informationsstelle (ODIS), welche durch die Senatsverwaltung für Wirtschaft, Energie und Betriebe (SenWEB) gefördert wird.*

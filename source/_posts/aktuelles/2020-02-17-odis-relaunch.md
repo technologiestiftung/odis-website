@@ -8,14 +8,14 @@ visible: true
 
 # Willkommen auf der neuen ODIS-Seite!
 
-Wir freuen uns sehr, unsere neue Webpräsenz vorzustellen. Wir haben die ODIS-Seite überarbeitet, mit dem Ziel, mehr relevante Inhalte zu Open Data bereitzustellen und unsere Projekte sichtbarer zu machen.
+Wir freuen uns sehr, unsere neue Webpräsenz vorzustellen. Wir haben die ODIS-Seite mit dem Ziel überarbeitet, Inhalte zu offenen Daten bereitzustellen und unsere Open Data Projekte sichtbarer zu machen.
 
-Unter dem Reiter **Projekte**, gibt es eine Übersicht von unseren Hauptprojekten, inklusive diverse Visualisierungen und Anwendungen. 
+Unter dem Reiter **Projekte**, gibt es einen Einblick in unsere Hauptprojekte. Darunter sind diverse Visualisierungen und Anwendungen mit Open Data zu finden. 
 
-Unter **Ressourcen** gibt es eine Auswahl an Dokumente wie Leitfäden, FAQs und Checklists zu Themen wie Dateninventuren und Metadaten, die von ODIS explizit für Mitarbeiter*innen der Berliner Verwaltung entwickelt wurden. Hier sammeln wir auch Links zu externen Ressourcen, die wir als besonders empfehlenswert finden.
+Unter **Ressourcen** gibt es eine Auswahl an relevanten Dokumenten, wie Leitfäden, FAQs und Checklisten zu Themen wie Dateninventuren und Metadaten, die von ODIS insbesondere für Mitarbeiter*innen der Berliner Verwaltung entwickelt wurden. Hier haben wir auch eine Sammlung an Links zu externen Ressourcen zusammengestellt, die wir als besonders empfehlenswert erachten.
 
-Unter **Aktuelles** werden wir periodisch über Neuigkeiten bei ODIS und in der Berliner Verwaltung berichten.
+Unter **Aktuelles** werden wir regelmäßig über Neuigkeiten bei ODIS und in der Berliner Verwaltung berichten.
 
-Und unter **Veranstaltungen** gibt es eine Liste von kommenden und vergangenen ODIS-Veranstaltungen (wie Workshops, Schulungen und Infoveranstaltungen), inklusive Links zu den dazugehörigen Materialien, falls relevant.
+Und unter **Veranstaltungen** ist eine Übersicht der kommenden und vergangenen ODIS-Veranstaltungen (wie Workshops, Schulungen und Infoveranstaltungen) zu finden, inklusive eventueller Links zu zugehörigen Materialien.
 
-Diese Seite wird stets mit neuem Inhalt aktualisiert. Um über Neuigkeiten informiert zu bleiben, haben wir ein ODIS-Verteiler für Interessierten. Um in den Verteiler aufgenommen zu werden, bitten wir um eine kurze Mail an <a href="mailto:odis@technologiestiftung-berlin.de">odis@technologiestiftung-berlin.de.</a> 
+Diese Seite wird stets mit neuem Inhalt aktualisiert. Für Interessierte haben wir aber auch einen ODIS-Verteiler, mit dem Sie automatisch über Neuigkeiten informiert werden. Um in den Verteiler aufgenommen zu werden, senden Sie bitte eine kurze Mail an <a href="mailto:odis@technologiestiftung-berlin.de">odis@technologiestiftung-berlin.de.</a> 

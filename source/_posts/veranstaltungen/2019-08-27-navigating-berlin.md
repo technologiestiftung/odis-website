@@ -13,4 +13,4 @@ adresse: Platz der Luftbrücke 4, Gebäude H2rund, 12101 Berlin
 
 # Navigating Berlin's Open Data Landscape
 
-Diese Veranstaltung informiert Teilnehmenden über offizielle Quellen für offene Daten aus und über Berlin, wie beispielsweise statistische Daten oder räumliche Daten. Wir zeigen, wie die verschiedene Portale zu nutzen sind, und zeigen einige interessante Datensätze auf. Am Ende werden wir die Diskussion für alle anwesende öffnen, um zu verstehen, was die aktuelle Datenbedarfe in Berlin sind und wie die Verwaltung diese Bedarfe besser angehen kann.
+Diese Veranstaltung informiert die Teilnehmer*innen über offizielle Quellen für offene Daten aus und über Berlin. Dazu zählen beispielsweise statistische und räumliche Daten. Wir erklären wie die verschiedenen Portale genutzt werden können und zeigen einige interessante Datensätze auf. Am Ende werden wir die Diskussion für alle Anwesenden öffnen, um zu verstehen, was die aktuellen Nachfragen und Anforderungen an offene Daten in Berlin sind und wie die Verwaltung diesem Bedarf nachkommen kann.
