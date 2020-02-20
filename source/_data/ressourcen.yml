@@ -3,7 +3,7 @@ ressources:
     groups:
       - title: Dateninventur
         sublinks:
-          - title: Vorlage einer Dateninventur
+          - title: Vorlage zur Durchführung einer Dateninventur
             url: /ressourcen/dateninventur.html
             text: Zur strukturierten Erfassung einer Dateninventur hat ODIS eine Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann.
             image: dateninventur-thumbnail.png
@@ -17,14 +17,14 @@ ressources:
             url: https://google.com
             text: Lorem ipsum....
             image: placeholder.png
-      - title: Data Quality
+      - title: Datenqualität
         sublinks:
           - title: Testlink zu Google
             url: https://google.com
           - title: Testlink zu Google 2
             url: https://google.com
     
-      - title: Data Visualization
+      - title: Datenvisualisierung
         sublinks:
           - title: Testlink zu Google
             url: https://google.com
@@ -49,6 +49,7 @@ ressources:
             text: (Kompetenzzentrum Öffentliche IT)
       - title: Datenqualität
         sublinks:
-          - title: Leitfaden für qualitativ hochwertige Daten und Metadaten
-            url: https://cdn0.scrvt.com/fokus/e472f1bf447f370f/32c99a36d8b3/NQDM_Leitfaden-f-r-qualitativ-hochwertige-Daten-und-Metadaten_2019.pdf
-            text: (Fraunhofer FOKUS)
+          - title: Leitfaden für qualitativ hochwertige Daten und Metadaten 
+            url: https://cdn0.scrvt.com/fokus/e472f1bf447f370f/32c99a36d8b3/NQDM_Leitfaden-f-r-qualitativ-hochwertige-Daten-und-Metadaten_2019.pdf 
+            text: Der Leitfaden beschäftigt sich mit unterschiedlichen Qualitätsdimensionen, Datenstrukturtypen und Bewertungsschemata 
+            source: (Fraunhofer FOKUS)

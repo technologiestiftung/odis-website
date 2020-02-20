@@ -7,10 +7,12 @@ visible: true
 indexImage: placeholder.png
 heroImage: foerdergeld_hero.png
 ---
-**[Besuche diese Anwendung](http://zuwendungsdatenbank.lab.technologiestiftung-berlin.de/)**
 
-Jedes Jahr in Berlin werden mehr als 1 Milliarde EUR in Zuwendungen vom Land Berlin an Organisationen und Unternehmen ausgegeben. Diese Daten werden von der Senatsverwaltung für Finanzen als Open Data [veröffentlicht](https://daten.berlin.de/datensaetze/zuwendungsdatenbank). Im Datensatz dargestellt sind Angaben zu Geldempfänger, Geldgeber, Zweck der Zuwendung, thematischer Bereich der Zuwendung, und Höhe der Zuwendung verfügbar.
 
-Wir habe ein interaktives Tool entwickelt, mit dem es möglich ist, diese Daten zu erkunden und analysieren, ohne die Rohdaten anfassen zu müssen. Mit dem Tool ist es beispielsweise möglich, alle Zuwendungen von einer bestimmten Behörde (wie ein Bezirksamt oder eine Senatsverwaltung), in einem bestimmten Jahr, oder aus einem bestimmten Themenbereich anzuschauen – und diese Angaben miteinander zu kombinieren. Damit kann man solche Frage stellen wie, "wie viel Projekte im Themenbereich Bildung hat das Bezirksamt Mitte zwischen 2009 und 2017 gefördert?" und direkt eine Antwort bekommen.
+Jahr für Jahr werden werden mehr als 1 Milliarde Euro Fördergelder in Berlin an Organisationen und Unternehmen ausgegeben. Ein [interaktives Recherchetool](http://zuwendungsdatenbank.lab.technologiestiftung-berlin.de/) wurde entwickelt, um eben diese Ausgaben des Landes Berlin unter die Lupe zu nehmen. Durch wenige Klicks und ohne in den Kontakt mit den Rohdaten zukommen, wird es dadurch möglich genaue Details der Zuwendungen anzuzeigen und zu analysieren. Mit dem Tool können beispielsweise alle Fördergelder die von einer bestimmten Behörde (zum Beispiel von einem Bezirksamt oder einer Senatsverwaltung) in einem ausgewählten Jahr oder zu einem spezifischen Themenbereich ausgegeben wurden, gefiltert, visualisiert und ausgewertet werden. Ziel ist es Antworten auf konkrete Fragestellungen zu bekommen, wie beispielsweise "wie viele Projekte hat das Bezirksamt Mitte im Themenbereich Bildung zwischen 2009 und 2017 gefördert".
 
-{% include macro-image-section-small.html src="foerdergeld_screenshot.png" caption="Das Recherchetool für Förderdaten" %}
+Das Tool nutzt die [offenen Daten der Senatsverwaltung für Finanzen](https://daten.berlin.de/datensaetze/zuwendungsdatenbank). Im Datensatz enthalten sind Angaben zu Geldempfängern, Geldgebern, dem Zweck der Zuwendung, dem thematischen Bereich der Zuwendung und der Höhe der Zuwendung.
+
+
+
+<center>{% include macro-image-section-small.html src="foerdergeld_screenshot.png" caption="Das Recherchetool für Förderdaten" %}</center>

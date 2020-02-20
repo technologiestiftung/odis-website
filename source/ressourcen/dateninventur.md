@@ -3,15 +3,15 @@ layout: default
 title: Vorlage einer Dateninventur
 ---
 
-# Vorlage einer Dateninventur
+# Vorlage zur Durchführung einer Dateninventur
 
-Um Verwaltungsdaten offen als Open Data bereitstellen zu können, muss in einem ersten Schritt erfasst werden welche Daten existieren und in wessen Zuständigkeit diese liegen. Dies ist häufig eine komplexe Aufgabe:
+Um Verwaltungsdaten als Open Data bereitstellen zu können, muss in einem ersten Schritt erfasst werden welche Daten existieren und in wessen Zuständigkeit diese liegen. Dies ist häufig eine komplexe Aufgabe:
 - Zuständigkeiten zwischen einzelnen Fachabteilungen sind nicht immer eindeutig oder einheitlich in allen Bezirken. 
 - Zuständigkeiten zwischen Haupt- und Bezirksverwaltung sind teilweise nicht klar. 
 - Daten werden über diverse Wege generiert und gespeichert. Diese können in Fachverfahren, lokalen Datenbanken oder Excel-Listen vorliegen.
-- Die Stelle, die Daten erhebt ist nicht zwangsläufig die Stelle, die Zugriff auf die Daten hat. So werden beispielsweise viele Daten beim Bürgeramt erfasst (z.B. wenn Bürger*innen ihren Wohnsitz ummelden), der Zugriff auf die gesammelten Daten (z.B. wieviele Ummeldungen gab es je Bezirk) liegt woanders.
+- Diejenigen Stellen die Daten erheben sind nicht zwangsläufig die Stellen, die Zugriff auf die Daten haben. So werden beispielsweise Daten beim Bürgeramt erfasst (z.B. wenn Bürger*innen ihren Wohnsitz ummelden), der Zugriff auf die gesammelten Daten (z.B. wieviele Ummeldungen gab es je Bezirk) wird jedoch an einer anderen Stelle vorgenommen.
 
-Damit Verwaltungen einen Überblick über vorhandene Datensätze und zuständige Stellen erhalten, sollte eine Dateninventur durchgeführt werden.
+Damit Verwaltungen einen Überblick über vorhandene Datensätze und die zuständigen Stellen erhalten und bewahren, sollte eine Dateninventur durchgeführt werden.
 
 Ein Leitfaden zu den notwendigen Schritten für die Durchführung einer Dateninventur ist aktuell in der Bearbeitung.
 
@@ -19,10 +19,10 @@ Zur strukturierten Erfassung einer Dateninventur hat ODIS anhand bestehender Bei
 
 Die Informationen, die über einen Datensatz geführt werden sollten, lassen sich in drei Hauptblöcke einteilen:
 - Inhaltliche Felder: Metadaten über den Inhalt der Daten
-- Verantwortlichkeit: zuständige Stellen und Personen auf Hauptverwaltungs- und Bezirksebene
+- Verantwortlichkeit: Zuständige Stellen und Personen auf Hauptverwaltungs- und Bezirksebene
 - Technische Details: Informationen zu Datenbereitstellung und Aktualisierung
 
-In der folgenden Tabelle sind die Felder im Detail beschrieben. Das Beispiel zum Kleingartenbestand dient der Veranschaulichung und ist ein fiktives Beispiel. Die entsprechende Dateien für die Vorlage (CSV und Excel) sind am Ende dieser Seite verlinkt.
+In der folgenden Tabelle sind alle Felder im Detail beschrieben. Die hier gezeigten Eintragungen zum Kleingartenbestand in Tempelhof-Schöneberg dienen der Veranschaulichung und stellen ein fiktives Beispiel dar. Die entsprechenden Dateien dieser Vorlage (CSV und Excel) sind am Ende dieser Seite verlinkt.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 25px}
@@ -159,9 +159,7 @@ In der folgenden Tabelle sind die Felder im Detail beschrieben. Das Beispiel zum
 
 ## Download
 
-[Download Excel-File](/assets/file-download/Dateninventur_Vorlage.xlsx)
+[Download Dateninventurvorlage als Excel-Tabelle](/assets/file-download/Dateninventur_Vorlage.xlsx)
 
-[Download Metadatenbeschreibung als csv](/assets/file-download/Dateninventur_Metadaten.csv)
-
-[Download Tabellenvorlage als csv](/assets/file-download/Dateninventur_Vorlage.csv)
+[Download Dateninventurvorlage als csv](/assets/file-download/Dateninventur_Vorlage.csv)
 
