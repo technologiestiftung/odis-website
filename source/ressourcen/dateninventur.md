@@ -78,7 +78,7 @@ In der folgenden Tabelle sind alle Felder im Detail beschrieben. Die hier gezeig
     <td class="tg-54w3">In der Karte sind alle Kleingartenanlagen auf privaten und landeseigenen Flächen in ihrer Gesamtfläche dargestellt, für die die Bestimmungen des Bundeskleingartengesetzes Anwendung finden.</td>
   </tr>
   <tr>
-    <td class="tg-16zm">Räumlicher Bezug</td>
+    <td class="tg-16zm">Räumliche Auflösung</td>
     <td class="tg-tng1">Der Bezug des Datensatzes – z.B. PLR, Adresse.</td>
     <td class="tg-54w3">Flächengeometrie</td>
   </tr>
