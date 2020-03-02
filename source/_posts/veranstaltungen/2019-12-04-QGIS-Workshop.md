@@ -5,7 +5,7 @@ metaDescription: Eintägiger Workshop zur Datenvisualisierung von Geodaten mit d
 description: Eintägiger Workshop zur Datenvisualisierung von Geodaten mit der Open Source Software QGIS.
 categories: veranstaltungen
 visible: true
-time: 9:30 - 15:30 Uhr
+time:  09:30-15:30 Uhr
 web: 
 mail: odis@technologiestiftung-berlin.de
 adresse: Amt für Statistik, Alt-Friedrichsfelde 60, 10315 Berlin

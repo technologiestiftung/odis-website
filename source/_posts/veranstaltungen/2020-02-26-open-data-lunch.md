@@ -5,7 +5,7 @@ metaDescription: Das 3. Open Data Lunch für Verwaltungsmitarbeiter*innen
 description: Das 3. Open Data Lunch für Verwaltungsmitarbeiter*innen
 categories: veranstaltungen
 visible: true
-time: 12:00 - 14.00 Uhr
+time: 12:00-14:00 Uhr
 web: 
 mail: betuel.oezdemir@senweb.berlin.de
 adresse: Platz der Luftbrücke 4, Gebäude H2rund, 12101 Berlin

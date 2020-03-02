@@ -5,7 +5,7 @@ metaDescription: Eine Infoveranstaltung für Berliner, die sich über die Open D
 description: Eine Infoveranstaltung für Berliner, die sich über die Open Data-Angebote des Land Berlins informieren möchten.
 categories: veranstaltungen
 visible: true
-time: 18:30 - 20:30 Uhr
+time: 18:30-20:30 Uhr 
 web: 
 mail: odis@technologiestiftung-berlin.de
 adresse: Platz der Luftbrücke 4, Gebäude H2rund, 12101 Berlin
