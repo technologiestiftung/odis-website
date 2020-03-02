@@ -68,7 +68,7 @@ In der folgenden Tabelle sind alle Felder im Detail beschrieben. Die hier gezeig
     <td class="tg-54w3">Geographie und Stadtplanung</td>
   </tr>
   <tr>
-    <td class="tg-16zm">Datensatz Titel</td>
+    <td class="tg-16zm">Datensatztitel</td>
     <td class="tg-tng1">Der Titel des Datensatzes.</td>
     <td class="tg-54w3">Kleingartenbestand</td>
   </tr>
