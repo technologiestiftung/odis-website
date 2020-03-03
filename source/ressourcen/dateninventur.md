@@ -11,11 +11,8 @@ Um Verwaltungsdaten als Open Data bereitstellen zu können, muss in einem ersten
 - Daten werden über diverse Wege generiert und gespeichert. Diese können in Fachverfahren, lokalen Datenbanken oder Excel-Listen vorliegen.
 - Diejenigen Stellen die Daten erheben sind nicht zwangsläufig die Stellen, die Zugriff auf die Daten haben. So werden beispielsweise Daten beim Bürgeramt erfasst (z.B. wenn Bürger*innen ihren Wohnsitz ummelden), der Zugriff auf die gesammelten Daten (z.B. wieviele Ummeldungen gab es je Bezirk) wird jedoch an einer anderen Stelle vorgenommen.
 
-Damit Verwaltungen einen Überblick über vorhandene Datensätze und die zuständigen Stellen erhalten und bewahren, sollte eine Dateninventur durchgeführt werden.
-
-Ein Leitfaden zu den notwendigen Schritten für die Durchführung einer Dateninventur ist aktuell in der Bearbeitung.
-
-Zur strukturierten Erfassung einer Dateninventur hat ODIS anhand bestehender Beispiele verschiedener Verwaltungen und anderer Städte eine Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann.
+<!-- Ein Leitfaden zu den notwendigen Schritten für die Durchführung einer Dateninventur ist aktuell in der Bearbeitung. -->
+Damit Verwaltungen einen Überblick über vorhandene Datensätze und die zuständigen Stellen erhalten und bewahren, sollte eine Dateninventur durchgeführt werden. Zur strukturierten Erfassung einer Dateninventur hat ODIS anhand bestehender Beispiele verschiedener Verwaltungen und anderer Städte eine Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann.
 
 Die Informationen, die über einen Datensatz geführt werden sollten, lassen sich in drei Hauptblöcke einteilen:
 - Inhaltliche Felder: Metadaten über den Inhalt der Daten
