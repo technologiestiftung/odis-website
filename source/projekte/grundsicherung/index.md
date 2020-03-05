@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  "Grundsicherung"
-blogLinkTitle: "Hier geht's zum Projekt"
+blogLinkTitle: "Hier geht't zu den HG Infos"
 #blogLink: /aktuelles
 metaDescription: Darstellung der Sozialstatistikdaten zu Grundsicherung.
 date: 2019-12-17
