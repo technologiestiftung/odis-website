@@ -4,8 +4,12 @@ title: Ressourcen
 ---
 
 <h1>Ressourcen</h1>
-
-Der Einstieg auf dem Weg zu einer Open Data Veröffentlichung kann auf den ersten Blick schwer zu finden sein. Durch ein strukturiertes Vorgehen können Sie jedoch leicht sicherstellen, dass Ihrer Veröffentlichung nichts im Weg steht und Ihre Daten nachhaltig genutzt werden können. Hierfür hat ODIS insbesondere für Mitarbeiter*innen der Berliner Verwaltung eine Auswahl an Leitfäden und Checklisten entwickelt. Für eine tiefergehende Auseinandersetzung mit den einzelnen Themenbereichen, finden Sie hier außerdem eine Sammlung von Links zu externen Ressourcen, die wir als besonders empfehlenswert erachten.
+<p>
+    Der Einstieg auf dem Weg zu einer Open Data Veröffentlichung kann auf den ersten Blick schwer zu finden sein.
+    Durch ein strukturiertes Vorgehen können Sie jedoch leicht sicherstellen, dass Ihrer Veröffentlichung nichts im Weg steht und Ihre Daten nachhaltig genutzt werden können.
+    Hierfür hat ODIS insbesondere für Mitarbeiter*innen der Berliner Verwaltung eine Auswahl an Leitfäden und Checklisten entwickelt.
+    Für eine tiefergehende Auseinandersetzung mit den einzelnen Themenbereichen, finden Sie hier außerdem eine Sammlung von Links zu externen Ressourcen, die wir als besonders empfehlenswert erachten.
+</p>
 
 {% assign accordionCounter= 0 %}
 {% for r in site.data.ressourcen.ressources %}
@@ -22,7 +26,7 @@ Der Einstieg auf dem Weg zu einer Open Data Veröffentlichung kann auf den erste
                     <h5 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-{{accordionCounter}}-{{counter}}"
                             aria-expanded="true" aria-controls="collapse-{{accordionCounter}}-{{counter}}">
-                            {{group.title}}
+                            {{group.question}}
                         </button>
                     </h5>
                 </div>
@@ -31,7 +35,7 @@ Der Einstieg auf dem Weg zu einer Open Data Veröffentlichung kann auf den erste
                     <div class="card-body">
                             {% for link in group.sublinks %}
                             <div class="pb-3">
-                                <a href="{{link.url}}">
+
                                     <div class="row">
                                         {% if link.image%}
                                         <div class="col-3">
@@ -39,9 +43,8 @@ Der Einstieg auf dem Weg zu einer Open Data Veröffentlichung kann auf den erste
                                         </div>
                                         {% endif %}
                                         <div class="col">
-                                            <h5>{{link.title}}</h5>
-                                            <h6>{{ link.source }}</h6>
-                                            {{ link.text }}
+                                            <h6>{{ link.text }}</h6>
+                                            <a href="{{link.url}}">{{link.title}}</a>
                                         </div>
                                     </div>
                                 </a>

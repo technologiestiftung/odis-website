@@ -1,39 +1,37 @@
 ressources: 
   - title: ODIS-Ressourcen
     groups:
-      - title: Dateninventur
+      - question: Welche Daten kann ich veröffentlichen?
         sublinks:
           - title: Vorlage zur Durchführung einer Dateninventur
             url: /ressourcen/dateninventur.html
-            text: Zur strukturierten Erfassung einer Dateninventur hat ODIS eine Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann.
+            text: Um zu entscheiden welche Daten für eine Bereitstellung als Open Data geeignet sind, kann es sinnvoll sein sich erst einmal eine Übersicht über alle vorhandenen Datensätze zu verschaffen und eine Dateninventur zu machen. Zur strukturierten Erfassung eines Datenbestands hat ODIS eine Vorlage entwickelt, die Sie als Grundlage für Ihre eigene Dateninventur verwenden können.
             image: dateninventur-thumbnail.png
-      - title: Open Data Readiness
+
+      - question: Welche Aspekte muss ich für eine Veröffentlichung beachten?
         sublinks:
-          - title: Example internal ressource with subpage
-            url: /ressourcen/example.html
-            text: Lorem ipsum....
+          - title: Link zur Ressource is coming soon...
+            #url: /ressourcen/example.html
+            text: Um Daten als Open Data effektiv und nachhaltig zur Verfügung zustellen, sollten einige Aspekte vorangehend sichergestellt werden. Mit unserer Checkliste können Sie für jeden Datensatz überprüfen, ob dieser zur Veröffentlichung bereit ist, oder weitere Schritte notwendig sind. 
             image: placeholder.png
-          - title: Testlink zu Google 2 as an example for external link
-            url: https://google.com
-            text: Lorem ipsum....
-            image: placeholder.png
-      - title: Datenqualität
+
+      - question: Wie kann ich sicherstellen, dass meine Daten leicht von anderen genutzt werden können?
         sublinks:
-          - title: Testlink zu Google
-            url: https://google.com
-          - title: Testlink zu Google 2
-            url: https://google.com
+          - title: Link zur Ressource is coming soon...
+            #url: /ressourcen/example.html
+            text: Der wichtigste Anspruch der an Open Data gestellt wird, ist das die Daten in einem offenen und maschinenlesbaren Format zugänglich sind. Es gibt aber noch viele andere Aspekte, die darüber entscheiden ob Anwender*innen leicht mit den Daten weiterarbeiten können. Welche Qualitätsmerkmale für die Beurteilung offener Daten und Metadaten herangezogen werden können, lesen Sie in unserem Leitfaden.
+            image: placeholder.png
     
-      - title: Datenvisualisierung
+      - question: Wie kann ich Open Data selber anwendungsbezogen darstellen?
         sublinks:
           - title: Testlink zu Google
             url: https://google.com
-          - title: Testlink zu Google 2
-            url: https://google.com
-  
+            text: Stehen die Daten erst einmal als Open Data bereit, eröffnen sich dadurch weitreichende Anwendungsmöglichkeiten. Hier zeigen wir, wie Sie Open Data zweckgerecht visualisieren können, um Analysen zu ermöglichen und die Weiternutzung Ihrer Daten durch Anwender zu fördern.
+            image: placeholder.png
+            
   - title: Externe Ressourcen
     groups:
-      - title: Datenprüfung für die Veröffentlichung
+      - question: Datenprüfung für die Veröffentlichung
         sublinks:
           - title: Leitfaden zur Bestandsdatenprüfung
             url: https://www.bmvi.de/SharedDocs/DE/Anlage/DG/leitfaden-bestandsdatenpruefung.pdf?__blob=publicationFile
@@ -47,7 +45,7 @@ ressources:
           - title: Strategische Bereitstellung offener Verwaltungsdaten
             url: https://www.oeffentliche-it.de/documents/10181/14412/Strategische+Bereitstellung+offener+Verwaltungsdaten
             text: (Kompetenzzentrum Öffentliche IT)
-      - title: Datenqualität
+      - question: Datenqualität
         sublinks:
           - title: Leitfaden für qualitativ hochwertige Daten und Metadaten 
             url: https://cdn0.scrvt.com/fokus/e472f1bf447f370f/32c99a36d8b3/NQDM_Leitfaden-f-r-qualitativ-hochwertige-Daten-und-Metadaten_2019.pdf 
