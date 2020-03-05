@@ -491,8 +491,8 @@ svg.logo-ibb:hover  {
     width: 100%;
 
     .tile {
-        width: 22%;
-        margin-right: 20px;
+        width: 20%;
+        margin-right: 3em;
         position: relative;
     }
 
@@ -575,7 +575,8 @@ svg.logo-ibb:hover  {
 
         .process-step {
             position: absolute;
-            transform: translateY(32px) translateX(-28px);
+            transform: translateY(0px) translateX(-40px);
+            line-height: $line-height-l;
             font-size: $font-size-xl;
             color: $color-primary;
         }
