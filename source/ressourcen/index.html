@@ -43,9 +43,13 @@ title: Ressourcen
                                         </div>
                                         {% endif %}
                                         <div class="col">
+                                            {% if link.source%}
+                                            <h5 style="color: #213A8F;">{{link.source}}</h5>
+                                            {% endif %}
                                             <h6>{{ link.text }}</h6>
                                             <a href="{{link.url}}">{{link.title}}</a>
                                         </div>
+
                                     </div>
                                 </a>
                             </div>
