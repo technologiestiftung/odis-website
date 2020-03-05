@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl request
-        run: curl -X POST -d {} {{ secrets.BUILD_HOOK_URL }}
+        run: curl -X POST -d {} ${{ secrets.BUILD_HOOK_URL }}
