@@ -1,6 +1,8 @@
 ---
 layout: project
 title:  Förderdaten Recherchetool
+blogLinkTitle: "Hier geht's zum interaktiven Recherchetool"
+blogLink: http://zuwendungsdatenbank.lab.technologiestiftung-berlin.de/
 metaDescription: Eine Anwendung, die die Höhe und Zwecke von Zuwendungen vom Land Berlin visualisiert.
 date: 2018-10-01
 visible: true

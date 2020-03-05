@@ -144,8 +144,10 @@ a{
             position: relative;
             display: flex;
             align-items: flex-end;
+            flex-direction: row;
             h1{
-                padding-bottom: 6%;
+                position: absolute;
+                padding-bottom: 8%;
             }
         }
     }

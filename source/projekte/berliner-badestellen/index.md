@@ -1,6 +1,8 @@
 ---
 layout: project
 title:  Berliner Badestellen
+blogLinkTitle: "Hier geht's zum Projekt"
+blogLink: https://www.badegewaesser-berlin.de/
 metaDescription: Eine Anwendung die Zeigt, wo in Berlin man baden gehen kann, und was die Wasserqualität dort ist.
 date: 2019-11-09
 visible: true
