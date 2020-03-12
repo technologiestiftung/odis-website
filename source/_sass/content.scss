@@ -250,10 +250,9 @@ svg.logo-ibb:hover  {
     img{
         width: 100%;
         top: 0px;
-        height: 0px;
-        height: 100vh;
+        height: 100%;
         position: absolute;
-        object-fit: fill;
+        object-fit: cover;
     }
     .section{
         z-index: 2;
