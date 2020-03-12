@@ -7,7 +7,7 @@ ressources:
             source: Dateninventur
             url: /ressourcen/dateninventur.html
             text: Um zu entscheiden welche Daten für eine Bereitstellung als Open Data geeignet sind, kann es sinnvoll sein sich eine Übersicht über alle vorhandenen Datensätze zu verschaffen und eine Dateninventur durchzuführen. Zur strukturierten Erfassung eines Datenbestands hat ODIS eine Vorlage entwickelt, die Sie als Grundlage für Ihre eigene Dateninventur verwenden können.
-            image: ressourcenPlaceholder.svg
+            image: page/process-02.svg
 
       - question: Sind meine Daten für eine Veröffentlichung geeignet?
         sublinks:
@@ -15,23 +15,24 @@ ressources:
             source: Open Data Check
             #url: /ressourcen/example.html
             text: Um Daten als Open Data effektiv und nachhaltig zur Verfügung zustellen, sollten einige Aspekte vorangehend sichergestellt werden. Mit unserer Checkliste können Sie für jeden Datensatz überprüfen, ob dieser zur Veröffentlichung bereit ist, oder weitere Schritte notwendig sind. 
-            image: ressourcenPlaceholder.svg
+            image: ressourcenPlaceholder2.svg
 
-      - question: Wie kann ich sicherstellen, dass meine Daten leicht von anderen genutzt werden können?
+      - question: Wie sieht ein gut strukturierter Datensatz aus?
         sublinks:
           - title: Link zur Ressource is coming soon...
             source: Datenqualität
             #url: /ressourcen/example.html
-            text: Der wichtigste Anspruch der an Open Data gestellt wird, ist das die Daten in einem offenen und maschinenlesbaren Format zugänglich sind. Es gibt aber noch viele andere Aspekte, die darüber entscheiden ob Anwender*innen leicht mit den Daten weiterarbeiten können. Welche Qualitätsmerkmale für die Beurteilung offener Daten und Metadaten herangezogen werden können, lesen Sie in unserem Leitfaden.
-            image: ressourcenPlaceholder.svg
+            text: Ein wichtiger Anspruch der an Open Data gestellt wird, ist das die Daten in einem offenen und maschinenlesbaren Format zugänglich sind. Es gibt aber noch viele andere Aspekte, die darüber entscheiden ob Anwender*innen leicht mit den Daten weiterarbeiten können. Welche Qualitätsmerkmale für die Beurteilung offener Daten herangezogen werden können, lesen Sie in unserem Leitfaden.
+            image: page/process-04.svg
     
-      - question: Wie kann ich Open Data selber anwendungsbezogen darstellen?
-        sublinks:
-          - title: Link zur Ressource is coming soon...
-            source: Datenvisualisierung
-            #url: /ressourcen/example.html
-            text: Stehen die Daten erst einmal als Open Data bereit, eröffnen sich dadurch weitreichende Anwendungsmöglichkeiten. Hier zeigen wir, wie Sie Open Data zweckgerecht visualisieren können, um Analysen zu ermöglichen und die Weiternutzung Ihrer Daten durch Anwender zu fördern.
-            image: ressourcenPlaceholder.svg
+      # Datenvisualisierung wird erst sichtbar gemacht, wenn der entsprechende Post/Guide dazu fertig ist
+      # - question: Wie kann ich Open Data selber anwendungsbezogen darstellen?
+      #   sublinks:
+      #     - title: Link zur Ressource is coming soon...
+      #       source: Datenvisualisierung
+      #       #url: /ressourcen/example.html
+      #       text: Stehen die Daten erst einmal als Open Data bereit, eröffnen sich dadurch weitreichende Anwendungsmöglichkeiten. Hier zeigen wir, wie Sie Open Data zweckgerecht visualisieren können, um Analysen zu ermöglichen und die Weiternutzung Ihrer Daten durch Anwender zu fördern.
+      #       image: ressourcenPlaceholder.svg
 
   - title: Externe Ressourcen
     groups:

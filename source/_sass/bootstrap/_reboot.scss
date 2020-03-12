@@ -484,6 +484,10 @@ template {
 
 /* ADD this section to let blog-link appear*/
 
+a.blog-link {
+  display: flex;
+}
+
 .blog-link {
   font-weight: 700;
   margin-left: 60px;
