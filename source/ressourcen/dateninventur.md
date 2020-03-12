@@ -12,14 +12,14 @@ Um Verwaltungsdaten als Open Data bereitstellen zu können, muss in einem ersten
 - Diejenigen Stellen die Daten erheben sind nicht zwangsläufig die Stellen, die Zugriff auf die Daten haben. So werden beispielsweise Daten beim Bürgeramt erfasst (z.B. wenn Bürger*innen ihren Wohnsitz ummelden), der Zugriff auf die gesammelten Daten (z.B. wieviele Ummeldungen gab es je Bezirk) wird jedoch an einer anderen Stelle vorgenommen.
 
 <!-- Ein Leitfaden zu den notwendigen Schritten für die Durchführung einer Dateninventur ist aktuell in der Bearbeitung. -->
-Damit Verwaltungen einen Überblick über vorhandene Datensätze und die zuständigen Stellen erhalten und bewahren, sollte eine Dateninventur durchgeführt werden. Zur strukturierten Erfassung einer Dateninventur hat ODIS anhand bestehender Beispiele verschiedener Verwaltungen und anderer Städte eine Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann.
+Damit Verwaltungen einen Überblick über vorhandene Datensätze und die zuständigen Stellen erhalten und bewahren, **sollte eine Dateninventur durchgeführt werden**. Zur strukturierten Erfassung einer Dateninventur hat ODIS anhand bestehender Beispiele verschiedener Verwaltungen und anderer Städte eine Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann.
 
 Die Informationen, die über einen Datensatz geführt werden sollten, lassen sich in drei Hauptblöcke einteilen:
 - Inhaltliche Felder: Metadaten über den Inhalt der Daten
 - Verantwortlichkeit: Zuständige Stellen und Personen auf Hauptverwaltungs- und Bezirksebene
 - Technische Details: Informationen zu Datenbereitstellung und Aktualisierung
 
-In der folgenden Tabelle sind alle Felder im Detail beschrieben. Die hier gezeigten Eintragungen zum Kleingartenbestand in Tempelhof-Schöneberg dienen der Veranschaulichung und stellen ein fiktives Beispiel dar. Die entsprechenden Dateien dieser Vorlage (CSV und Excel) sind am Ende dieser Seite verlinkt.
+In der folgenden Tabelle sind alle Felder im Detail beschrieben. Diese Vorlage kann für räumliche sowie nicht-räumliche Daten benutzt werden. Die hier gezeigten Eintragungen zum Kleingartenbestand in Tempelhof-Schöneberg dienen der Veranschaulichung und stellen ein fiktives Beispiel dar. Die entsprechenden Dateien dieser Vorlage (CSV und Excel) sind am Ende dieser Seite verlinkt.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 25px}
@@ -75,8 +75,8 @@ In der folgenden Tabelle sind alle Felder im Detail beschrieben. Die hier gezeig
     <td class="tg-54w3">In der Karte sind alle Kleingartenanlagen auf privaten und landeseigenen Flächen in ihrer Gesamtfläche dargestellt, für die die Bestimmungen des Bundeskleingartengesetzes Anwendung finden.</td>
   </tr>
   <tr>
-    <td class="tg-16zm">Räumliche Auflösung</td>
-    <td class="tg-tng1">Der Bezug des Datensatzes – z.B. PLR, Adresse.</td>
+    <td class="tg-16zm">Räumliche Auflösung (ggf.)</td>
+    <td class="tg-tng1">Der Bezug des Datensatzes – z.B. PLR, Adresse. Nur für räumlich bezogene Datensätze relevant.</td>
     <td class="tg-54w3">Flächengeometrie</td>
   </tr>
   <tr>
