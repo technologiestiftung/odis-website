@@ -98,7 +98,7 @@ In der folgenden Tabelle sind alle Felder im Detail beschrieben. Diese Vorlage k
   <tr>
     <td class="tg-lu18">Ansprechperson - Landesebene</td>
     <td class="tg-eahn">Konkrete Ansprechperson auf Landesebene mit Kontaktinformation.</td>
-    <td class="tg-o9w4">Frau Maria Mustermann, maria.mustermann@email.d, 030 - 111 111</td>
+    <td class="tg-o9w4">Frau Maria Mustermann, maria.mustermann@email.de, 030 - 111 111</td>
   </tr>
   <tr>
     <td class="tg-lu18">Datenhoheit bei</td>
