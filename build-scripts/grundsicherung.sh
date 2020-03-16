@@ -28,6 +28,7 @@ function main() {
   echo "adding yml frontmatter to new index.html"
   cat build-scripts/grundsicherung.yml > tmp/index.html
   echo "adding content of old index.html again to new index.html"
+  echo "" >> tmp/index.html
   cat tmp/tmp_index.html >> tmp/index.html
   echo "copy index to destination"
   cp tmp/index.html "source/projekte/${TARGET}/index.html"
