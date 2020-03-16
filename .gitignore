@@ -1,3 +1,6 @@
+source/projekte/
+!source/projekte/index.html
+!source/projekte/img
 _site/
 .sass-cache/
 .jekyll-cache/
