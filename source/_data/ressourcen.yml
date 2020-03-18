@@ -38,25 +38,25 @@ ressources:
     groups:
       - question: Datenprüfung für die Veröffentlichung
         sublinks:
-          - title: Leitfaden zur Bestandsdatenprüfung
+          - title: Hier geht's zum Leitfaden
             url: https://www.bmvi.de/SharedDocs/DE/Anlage/DG/leitfaden-bestandsdatenpruefung.pdf?__blob=publicationFile
-            text: lorem ipsum...
-            source: BMVI
-          - title: Leitfaden zur Anforderungen an die Daten
+            text: Leitfaden des Bundesministeriums für Verkehr und Infrastruktur (BMVI) zu den grundsätzlichen Schritte zur Prüfung der Veröffentlichungspflichten.
+            source: Leitfaden für die Bestandsdatenprüfung
+          - title: Hier geht's zum Leitfaden
             url: https://www.bva.bund.de/SharedDocs/Downloads/DE/Behoerden/Beratung/Methoden/open_data_anforderungen_daten.pdf?__blob=publicationFile&v=1
-            text: lorem ipsum...
-            source: BVA
-          - title: Open Government Vorgehensmodell
+            text: Leitfaden des Bundesverwaltungsamts (BVA) zu formalen, rechtlichen und technischen Anforderungen an die Daten.
+            source: Leitfaden zur Anforderung an die Daten
+          - title: Hier geht's zum Vorgehensmodell
             url: https://www.kdz.eu/de/open-government-vorgehensmodell
-            text: lorem ipsum...
-            source: KDZ – Zentrum für Verwaltungsforschung
-          - title: Strategische Bereitstellung offener Verwaltungsdaten
+            text: Leitfaden des Zentrums für Verwaltungsforschung (KDZ) zum Vorgehen der öffentlichen Verwaltungen zur Implementierung von Open Government.
+            source: Open Government Vorgehensmodell
+          - title: Hier geht's zum Whitepaper
             url: https://www.oeffentliche-it.de/documents/10181/14412/Strategische+Bereitstellung+offener+Verwaltungsdaten
-            text: lorem ipsum...
-            source: Kompetenzzentrum Öffentliche IT
+            text: Whitepaper für die Etablierung von Open Data in Organisationen und Behörden vom Kompetenzzentrum Öffentliche Informationstechnologie.
+            source: Strategische Bereitstellung offener Verwaltungsdaten
       - question: Datenqualität
         sublinks:
-          - title: Leitfaden für qualitativ hochwertige Daten und Metadaten 
+          - title: Hier geht's zum Leitfaden
             url: https://cdn0.scrvt.com/fokus/e472f1bf447f370f/32c99a36d8b3/NQDM_Leitfaden-f-r-qualitativ-hochwertige-Daten-und-Metadaten_2019.pdf 
-            text: Ein Leitfaden vom Fraunhofer-Institut für offene Kommunikationssysteme (FOKUS) zu unterschiedlichen Qualitätsdimensionen, Datenstrukturtypen und Bewertungsschemata 
-            source: Fraunhofer FOKUS
+            text: Ein Leitfaden vom Fraunhofer-Institut für offene Kommunikationssysteme (FOKUS) zu unterschiedlichen Qualitätsdimensionen, Datenstrukturtypen und Bewertungsschemata.
+            source: Leitfaden für qualitativ hochwertige Daten und Metadaten
