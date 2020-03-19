@@ -1,5 +1,6 @@
 "use strict";
 
+// Eventlistener crucial to display dashboard
 document.addEventListener("DOMContentLoaded", function(url) {
   function jsonp(url) {
     return new Promise(function(resolve, reject) {
