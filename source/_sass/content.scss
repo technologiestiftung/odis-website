@@ -56,6 +56,14 @@ svg.logo-berlin:hover path {
     fill: $color-secondary;
 }
 
+svg.logo-stiftung:hover path {
+    fill: $color-secondary;
+}
+
+svg.logo-opendata:hover path {
+    fill: $color-secondary2;
+} 
+
 svg.logo-ibb:hover  {
     path#letter {
         fill: $color-black;
