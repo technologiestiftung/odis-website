@@ -174,7 +174,8 @@ function getHighscores(data, item, amount){
 
 function makeChart(value) {
 	var ctx = document.getElementById("chartOne").getContext('2d');
-	ctx.canvas.height = 300;
+	ctx.canvas.height = 200;
+	ctx.canvas.weight = 250;
 	var authorDict = {
 		"Senatsverwaltung für Stadtentwicklung und Wohnen Berlin": "SenSW",
 		"Senatsverwaltung für Gesundheit und Soziales Berlin": "SenGeSoz",
