@@ -408,7 +408,9 @@ svg.logo-ibb:hover  {
         display: flex;
         flex-direction: column;
         color: black;
-
+        @media screen and (max-width: 864px)   { 
+            margin-left: .5rem;
+        }
         span {
             margin-top: .5rem;
         }
