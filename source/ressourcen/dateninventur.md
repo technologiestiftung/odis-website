@@ -46,6 +46,7 @@ In der folgenden Tabelle sind alle Felder im Detail beschrieben. Diese Vorlage k
 .tg .tg-hvao{background-color:#c0c0c0;border-color:#ffffff;text-align:left;vertical-align:top}
 </style>
 
+<div style="overflow-x:auto;">
 <table class="tg">
   <tr>
     <th class="tg-xm73" colspan="2">Dateninventur</th>
@@ -153,6 +154,7 @@ In der folgenden Tabelle sind alle Felder im Detail beschrieben. Diese Vorlage k
     <td class="tg-54w3">2019-12-16</td>
   </tr>
 </table>
+</div>
 
 ## Download
 
