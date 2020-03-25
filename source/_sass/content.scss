@@ -56,6 +56,14 @@ svg.logo-berlin:hover path {
     fill: $color-secondary;
 }
 
+svg.logo-stiftung:hover path {
+    fill: $color-secondary;
+}
+
+svg.logo-opendata:hover path {
+    fill: $color-secondary2;
+} 
+
 svg.logo-ibb:hover  {
     path#letter {
         fill: $color-black;
@@ -232,7 +240,7 @@ svg.logo-ibb:hover  {
 }
 
 .logo {
-    position: absolute;
+    //position: absolute;
     color: white;
     text-transform: uppercase;
     font-family: 'Clan Medium',sans-serif;
@@ -400,7 +408,9 @@ svg.logo-ibb:hover  {
         display: flex;
         flex-direction: column;
         color: black;
-
+        @media screen and (max-width: 864px)   { 
+            margin-left: .5rem;
+        }
         span {
             margin-top: .5rem;
         }
@@ -842,6 +852,7 @@ p.copy {
 
     .schedule-desc-wrapper {
         width: 380px;
+        padding-top: 0.0rem;
     }
 
     .copy-funding {
@@ -949,42 +960,49 @@ p.copy {
                 padding-top: 2rem;
             }
             .schedule-date {
-                background: none;
-                flex-direction: row;
-                justify-content: flex-start;
-                height: 20px;
-
-                .headline-02 {
-                    font-family: 'Clan Medium', sans-serif;
+                    background: $color-secondary;
+                    border-radius: 100%;
+                    text-align: center;
+                    width: 8rem;
+                    height: 6rem;
+                   // display: flex;
+                   // flex-direction: column;
+                    justify-content: center;
+                    @media screen and (max-width: 40rem) {
+                        width: 8rem;
+                    }
+                   
+                //.headline-02 {
+                  //  font-family: 'Clan Medium', sans-serif;
                     // transform: translateY(-16px);
                     
-                    font-size: $font-size-m;
-                    color: $color-black;
-                }
+                    //font-size: $font-size-m;
+                    //color: $color-black;
+                //}
                 
-                .schedule-date-month {
-                    color: $color-black;
-                    transform: translateY(2px) translateX(4px);
-                }
+                //.schedule-date-month {
+                  //  color: $color-black;
+                    //transform: translateY(2px) translateX(4px);
+                //}
 
                 .headline-03 {
                     font-size: $font-size-m;
                     letter-spacing: $spacing;
                 }
-                text-align: left;
+                //text-align: left;
                 // width: 60%;
                 // transform: translateX(0px);
             }
             .schedule-event-block {
-                flex-wrap: wrap;
+                //flex-wrap: wrap;
                 .schedule-time {
                     margin-right: 0;
-                    padding-top: 0rem;
-                    text-align: right;
+                    padding-top: 1.5rem;
+                    text-align: center;
                 }
 
                 .schedule-desc-wrapper {
-                    padding-top: 0.5rem;
+                    padding-top: 0.0rem;
                 }
             }
         }
@@ -1062,6 +1080,7 @@ p.copy {
                 flex-direction: row;
                 justify-content: flex-start;
                 height: 20px;
+                padding-top: .5rem;
                 .headline-02 {
                     font-size: $font-size-m;
                     color: $color-black;
@@ -1080,16 +1099,16 @@ p.copy {
                 transform: translateX(0px);
             }
             .schedule-event-block {
-                flex-wrap: wrap;
+                //flex-wrap: wrap;
                 .schedule-time {
                     margin-right: 0;
-                    padding-top: 0rem;
+                    padding-top: .5rem;
                     color: $color-black;
-                    text-align: right;
+                    text-align: center;
                 }
 
                 .schedule-desc-wrapper {
-                    padding-top: 0.5rem;
+                    padding-top: 0.0rem;
                 }
             }
         }
