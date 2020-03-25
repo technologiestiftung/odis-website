@@ -963,7 +963,7 @@ p.copy {
                     background: $color-secondary;
                     border-radius: 100%;
                     text-align: center;
-                    width: 7rem;
+                    width: 8rem;
                     height: 6rem;
                    // display: flex;
                    // flex-direction: column;
@@ -997,7 +997,7 @@ p.copy {
                 //flex-wrap: wrap;
                 .schedule-time {
                     margin-right: 0;
-                    padding-top: 0rem;
+                    padding-top: 1.5rem;
                     text-align: center;
                 }
 
@@ -1080,7 +1080,7 @@ p.copy {
                 flex-direction: row;
                 justify-content: flex-start;
                 height: 20px;
-                padding-top: 1.5rem;
+                padding-top: .5rem;
                 .headline-02 {
                     font-size: $font-size-m;
                     color: $color-black;
@@ -1102,7 +1102,7 @@ p.copy {
                 //flex-wrap: wrap;
                 .schedule-time {
                     margin-right: 0;
-                    padding-top: 1.5rem;
+                    padding-top: .5rem;
                     color: $color-black;
                     text-align: center;
                 }

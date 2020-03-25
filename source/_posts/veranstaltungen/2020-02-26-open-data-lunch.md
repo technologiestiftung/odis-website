@@ -1,8 +1,8 @@
 ---
 layout: event
 title:  "Open Data Lunch"
-metaDescription: Das 3. Open Data Lunch für Verwaltungsmitarbeiter*innen
-description: Das 3. Open Data Lunch für Verwaltungsmitarbeiter*innen
+metaDescription: Das 3. Open Data Lunch für Verwaltungs&shy;mitarbeiter&shy;*innen
+description: Das 3. Open Data Lunch für Verwaltungs&shy;mitarbeiter&shy;*innen
 categories: veranstaltungen
 visible: true
 time: 12:00-14:00 Uhr
