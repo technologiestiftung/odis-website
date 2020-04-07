@@ -1242,4 +1242,15 @@ p.copy {
     .pt-12 { padding-top: 7rem; }
 }
 
+.pdf {
+    width: 700px;
+    height: 700px;
+}
 
+@media screen and (min-width: 0rem) and (max-width: 56rem) {
+.pdf {
+    width: 400px;
+    height: 400px;
+}
+
+}
