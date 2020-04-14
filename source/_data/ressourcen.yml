@@ -19,7 +19,7 @@ ressources:
 
       - question: Wie sieht ein gut strukturierter Datensatz aus?
         sublinks:
-          - title: Link zur Ressource is coming soon...
+          - title: Diese Ressource kommt bald ...
             source: Datenqualität
             #url: /ressourcen/example.html
             text: Ein wichtiger Anspruch der an Open Data gestellt wird, ist das die Daten in einem offenen und maschinenlesbaren Format zugänglich sind. Es gibt aber noch viele andere Aspekte, die darüber entscheiden ob Anwender*innen leicht mit den Daten weiterarbeiten können. Welche Qualitätsmerkmale für die Beurteilung offener Daten herangezogen werden können, lesen Sie in unserem Leitfaden.
