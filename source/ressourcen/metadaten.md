@@ -60,7 +60,7 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
   </tr>
   <tr>
     <td class="tg-16zm">Art</td>
-    <td class="tg-tng1">Angabe ob es sich um einen Datensatz (strukturiert) oder ein Dokument (unstrukturiert) handelt.</td>
+    <td class="tg-tng1">Angabe ob es sich um einen Datensatz (strukturiert, z.B. eine csv-Datei) oder ein Dokument (z.B. eine pdf-Datei) handelt.</td>
     <td class="tg-54w3">Datensatz</td>
   </tr>
   <tr>
