@@ -17,6 +17,14 @@ ressources:
             text: Um Daten als Open Data effektiv und nachhaltig zur Verfügung zustellen, sollten einige Aspekte vorangehend sichergestellt werden. Mit unserer Checkliste können Sie für jeden Datensatz überprüfen, ob dieser zur Veröffentlichung bereit ist, oder weitere Schritte notwendig sind. 
             image: ressourcenPlaceholder2.svg
 
+      - question: Was sind Metadaten?
+        sublinks:
+          - title: Metadaten-Leitfaden und Vorlage
+            source: Metadaten-Leitfaden
+            url: /ressourcen/metadaten.html
+            text: Die Metadaten eines Datensatzes beschreiben die eigentlichen Daten. Sie sind ein wichtiger Bestandteil jeder Open Data Veröffentlichung, denn ohne qualitative Metadaten kann weder die Transparenz noch eine nachhaltige Verwendbarkeit der Daten garantiert werden. Erfahren Sie hier was sie für die Angabe von Metadaten wissen sollten.
+            image: ressourcenPlaceholder2.svg
+
       - question: Wie sieht ein gut strukturierter Datensatz aus?
         sublinks:
           - title: Diese Ressource kommt bald ...
@@ -40,7 +48,6 @@ ressources:
             text: Untersuchung zur Abschätzung des quantifizierbaren Wertes und volkswirtschaftlichen Nutzens von Open Data für Berlin.
             source: Digitales Gold
 
-    
       # Datenvisualisierung wird erst sichtbar gemacht, wenn der entsprechende Post/Guide dazu fertig ist
       # - question: Wie kann ich Open Data selber anwendungsbezogen darstellen?
       #   sublinks:
