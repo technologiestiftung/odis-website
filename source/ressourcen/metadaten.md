@@ -6,6 +6,7 @@ title: Metadaten-Leitfaden
 # Was sind Metadaten?
 
 Daten im Open Data Portal zu veröffentlichen, ist ein wichtiger Schritt zur Umsetzung der Open Data Richtlinie. Wichtig zu wissen ist allerdings, dass ein vollständiger Datensatz nicht nur aus den Daten(-werten) allein besteht, sondern ebenfalls die Angaben der sogenannten Metadaten umfasst. Ohne Metadaten können die Daten eventuell nicht optimal gefunden und genutzt werden oder sind im schlimmsten Fall sogar unbrauchbar, da die Anwender\*innen sie nicht in den richtigen Kontext setzen können. Doch was sind Metadaten eigentlich und warum sind sie so wichtig? 
+
 Metadaten be- und umschreiben die eigentlichen Daten, es sind **„Daten über Daten“**. Sie sind nicht nur für Open Data relevant, sondern finden sich auch in vielen anderen Bereichen. Eine Musikdatei beispielsweise, enthält nicht nur die Musik an sich, sondern auch eingebettete Informationen, wie den Interpreten, das Musikgenre oder das Erscheinungsjahr des Musikstückes. Ohne diese Angaben wäre es nicht möglich die Musik in einer entsprechenden Bibliothek oder Anwendungen zu suchen oder zu sortieren.
 Im Falle von Verwaltungsdaten sieht das ähnlich aus. Nur durch den Datensatz ergänzende Angaben, wie dem Namen der veröffentlichenden Stelle, Kategoriezugehörigkeit und das Veröffentlichungsdatum können die Daten von den Nutzer\*innen schnell gefunden und richtig eingeordnet werden.
  
@@ -54,98 +55,102 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
     <td class="tg-eo4b">Beispiel</td>
   </tr>
   <tr>
-    <td class="tg-16zm">Titel</td>
-    <td class="tg-tng1">Kurzer, prägnanter Titel mit zeitlichem und ggf. geografischem Bezug.</td>
+    <td class="tg-dydg">Titel</td>
+    <td class="tg-o9w4">Kurzer, prägnanter Titel mit zeitlichem und ggf. geografischem Bezug.</td>
     <td class="tg-54w3">Gastronomien mit Liefer- oder Abholservice</td>
   </tr>
   <tr>
-    <td class="tg-16zm">Art</td>
-    <td class="tg-tng1">Angabe ob es sich um einen Datensatz (strukturiert, z.B. eine csv-Datei) oder ein Dokument (z.B. eine pdf-Datei) handelt.</td>
+    <td class="tg-dydg">Art</td>
+    <td class="tg-o9w4">Angabe ob es sich um einen Datensatz (strukturiert, z.B. eine csv-Datei) oder ein Dokument (z.B. eine pdf-Datei) handelt.</td>
     <td class="tg-54w3">Datensatz</td>
   </tr>
   <tr>
-    <td class="tg-16zm">Kategorie</td>
-    <td class="tg-tng1">Zugehörigkeit zu einer Kategorien nach DCAT-AP.de, durch ein Drop-Down-Menü auswählbar.</td>
+    <td class="tg-dydg">Kategorie</td>
+    <td class="tg-o9w4">Zugehörigkeit zu einer Kategorien nach DCAT-AP.de, durch ein Drop-Down-Menü auswählbar.</td>
     <td class="tg-54w3">Wirtschaft</td>
   </tr>
   <tr>
-    <td class="tg-16zm">Beschreibung</td>
-    <td class="tg-tng1">Kurzer Fließtext der erklärt welche Informationen im Datensatz vorhanden sind, auf welchen Ort und Zeitraum er sich bezieht und wer die Daten zur Verfügungs stellt.</td>
-    <td class="tg-54w3">Standorte, Angebot, Öffnungszeiten und Kontaktinformationen der Gastronomien in Berlin, die derzeit (während laufender Ausgangsbeschränkungen und Kontaktverbote durch Corona) einen Liefer- und/oder Abholdienst für ihre Speisen anbieten. Alle Daten stammen aus einer laufenden Umfrage. Die Daten werden nach Möglichkeit täglich aktualisiert.</td>
+    <td class="tg-dydg">Beschreibung</td>
+    <td class="tg-o9w4">Kurzer Fließtext der erklärt welche Informationen im Datensatz vorhanden sind, auf welchen Ort und Zeitraum er sich bezieht und wer die Daten zur Verfügungs stellt. Diese Beschreibung dient einem schnellen Überblick über die bereitgestellten Daten. Sie kann auch weitere Aspekte enthalten, zum Beispiel Informationen die notwendig sind, um den Datensatz zu verstehen.</td>
+    <td class="tg-54w3">Standorte, Angebot, Öffnungszeiten und Kontaktinformationen der Gastronomien in Berlin, die einen Liefer- und/oder Abholdienst für ihre Speisen anbieten. Alle Daten stammen aus einer laufenden Umfrage im Auftrag von SenWEB. Die Daten werden nach Möglichkeit täglich aktualisiert.</td>
   </tr>
   <tr>
-    <td class="tg-lu18">Veröffentlichende Stelle</td>
-    <td class="tg-eahn">Name der Stelle die die Daten zur Verfügung stellt.</td>
-    <td class="tg-o9w4">Senatsverwaltung für Wirtschaft, Energie und Betriebe</td>
+    <td class="tg-dydg">Veröffentlichende Stelle</td>
+    <td class="tg-o9w4">Name der Stelle die die Daten zur Verfügung stellt.</td>
+    <td class="tg-54w3">Senatsverwaltung für Wirtschaft, Energie und Betriebe</td>
   </tr>
   <tr>
-    <td class="tg-lu18">Kontaktperson</td>
-    <td class="tg-eahn">Name der Person, die aktuell bei der veröffentlichenden Stelle tätig ist und inhaltliche Fragen zum Datensatz beantworten kann.</td>
-    <td class="tg-o9w4">Max Muster</td>
+    <td class="tg-dydg">Kontaktperson</td>
+    <td class="tg-o9w4">Name der Person, die aktuell bei der veröffentlichenden Stelle tätig ist und inhaltliche Fragen zum Datensatz beantworten kann.</td>
+    <td class="tg-54w3">Max Muster</td>
   </tr>
   <tr>
-    <td class="tg-lu18">Verantwortlichkeit - Landesebene</td>
-    <td class="tg-eahn">Verantwortliche Stelle auf Landesebene.</td>
-    <td class="tg-o9w4">Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin</td>
+    <td class="tg-dydg">Kontakt-E-Mail*</td>
+    <td class="tg-o9w4">E-Mail-Adresse über die die Kontaktperson (idealerweise über ein Funktionspostfach) zu erreichen ist oder Link zu einem Kontaktformular.</td>
+    <td class="tg-54w3">info.betriebe@senweb.berlin.de</td>
   </tr>
   <tr>
-    <td class="tg-lu18">Ansprechperson - Landesebene</td>
-    <td class="tg-eahn">Konkrete Ansprechperson auf Landesebene mit Kontaktinformation.</td>
-    <td class="tg-o9w4">Frau Maria Mustermann, maria.mustermann@email.de, 030 - 111 111</td>
+    <td class="tg-dydg">Webadresse</td>
+    <td class="tg-o9w4">Fall vorhanden Angabe einer Website, auf der die Daten näher beschrieben werden.</td>
+    <td class="tg-54w3">https://www.berlin.de/sen/web/service/liefer-und-abholdienste/</td>
   </tr>
   <tr>
-    <td class="tg-lu18">Datenhoheit bei</td>
-    <td class="tg-eahn">Die Abteilung / Institution die diese Daten bereitstellt.</td>
-    <td class="tg-o9w4">Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin</td>
+    <td class="tg-dydg">Lizenz*</td>
+    <td class="tg-o9w4">Auswahl einer offenen, eindeutigen Lizenz.</td>
+    <td class="tg-54w3">Creative Commons Attribution CC BY 3.0</td>
   </tr>
   <tr>
-    <td class="tg-dydg">IT-Fachverfahren</td>
-    <td class="tg-lhx1">Falls vorhanden: für diesen Datensatz verwendetes Fachverfahren oder Datenplattform.</td>
-    <td class="tg-zj9c">GRIS (Grünflächeninformationssystem)</td>
+    <td class="tg-dydg">Text für Namensnennung</td>
+    <td class="tg-o9w4">Exakter Text der von Nutzer*innen angegeben werden muss, wenn sie die Daten verwenden und die Lizenz eine Namensnennung vorsieht. Falls nicht ausgefüllt, wird für gewöhnlich die veröffentlichte Stelle genannt.</td>
+    <td class="tg-54w3">Die Daten wurden von der Senatsverwaltung für Wirtschaft, Energie und Betriebe und ODIS erhoben.</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Dateiformat</td>
-    <td class="tg-lhx1">Dateiformat, in dem der Datensatz vorliegt. (z.B. Excel, CSV, Shape-File, Access Datenbank, PostgreSQL Datenbank, etc.)</td>
-    <td class="tg-zj9c">WFS, WMS</td>
+    <td class="tg-dydg">Veröffentlichungsdatum*</td>
+    <td class="tg-o9w4">Datum der ersten Veröffentlichung der Daten (entspricht nicht dem Veröffentlichungsdatum im Open Data Portal, wenn die Daten bereits vorher an anderer Stelle Veröffentlichung wurden).</td>
+    <td class="tg-54w3">01.02.2020</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Verfügbarkeit (intern / veröffentlicht)</td>
-    <td class="tg-lhx1">Ist der Datensatz nur intern verfügbar oder öffentlich zugänglich?</td>
-    <td class="tg-zj9c">veröffentlicht</td>
+    <td class="tg-dydg">Aktualisierungsdatum</td>
+    <td class="tg-o9w4">Datum der letzten Änderung am Datensatz.</td>
+    <td class="tg-54w3">01.05.2020</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Aktualisierungsprozess (manuell / automatisiert)</td>
-    <td class="tg-lhx1">Wird der Datensatz automatisch (z.B. automatischer Datenbankexport) oder manuell aktualisiert?</td>
-    <td class="tg-zj9c">manuell</td>
+    <td class="tg-dydg">Zeitliche Auflösung</td>
+    <td class="tg-o9w4">Falls vorhanden, Zeitabschnitte auf die sich die einzelnen Daten beziehen. Das können zum Beispiel Jahre, Monate, Tage oder Stunden sein.</td>
+    <td class="tg-54w3">-</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Zuletzt aktualisiert</td>
-    <td class="tg-lhx1">Datum der letzten Aktualisierung</td>
-    <td class="tg-zj9c">2018-05-23</td>
+    <td class="tg-dydg">Zeitperiode</td>
+    <td class="tg-o9w4">Anfangs- und Enddatum des Zeitraums auf den sich der gesamte Datensatz bezieht. Beziehen sich die Daten auf einen Stichtag, identisches Anfangs- und Enddatum angeben.</td>
+    <td class="tg-54w3">01.05.2020 - 01.05.2020</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Aktualisierungsfrequenz</td>
-    <td class="tg-lhx1">Wie häufig wird der Datensatz aktualisiert?</td>
-    <td class="tg-zj9c">jährlich</td>
+    <td class="tg-dydg">Geographische Auflösung</td>
+    <td class="tg-o9w4">Angabe zum geografischen Bezug der Daten. Die Daten können sich z.B. auf ganz Berlin, Bezirke, GPS-Koordinaten oder Hausadressen beziehen.</td>
+    <td class="tg-54w3">Hausadressen</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Ressource Link</td>
-    <td class="tg-lhx1">Falls vorhanden: Link zur Ressource (externe URL oder lokaler Dateipfad)</td>
-    <td class="tg-zj9c">https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=showMap&amp;mapId=kleing@senstadt</td>
+    <td class="tg-dydg">Geographische Abdeckung</td>
+    <td class="tg-o9w4">Angabe welche Raum vom gesamten Datensatz abgedeckt wird. Das kann z.B. ganz Berlin sein oder ein bestimmter Bezirk.</td>
+    <td class="tg-54w3">Berlin</td>
   </tr>
   <tr>
-    <td class="tg-u6gx">Kommentar</td>
-    <td class="tg-hvao">weitere Anmerkungen</td>
-    <td class="tg-54w3"></td>
+    <td class="tg-dydg">Tags</td>
+    <td class="tg-o9w4">Aufzählung von Schlüsselwörtern, die nicht bereits durch den Titel oder Beschreibung abgedeckt sind.</td>
+    <td class="tg-54w3">Covid-19, Lieferung, Abholung, Essen, Restaurants, Kontaktbeschränkung, Kontaktlos, lunch, takeaway, takeout, delivery</td>
   </tr>
   <tr>
-    <td class="tg-u6gx">Datum zuletzt bearbeitet</td>
-    <td class="tg-hvao">Datum der letzten Bearbeitung dieser Metadatenzeile</td>
-    <td class="tg-54w3">2019-12-16</td>
+    <td class="tg-dydg">Sichtbarkeit*</td>
+    <td class="tg-o9w4">Wahl zwischen privat (noch nicht für die Öffentlichkeit sichtbar) oder öffentlich (Eintragung erscheint auf dem Open Data Portal).</td>
+    <td class="tg-54w3">öffentlich</td>
   </tr>
 </table>
 </div>
 
+
+Noch mehr Informationen zum Thema Metadaten im Berliner Open Data Portal finden Sie auch im [Open Data Handbuch](https://berlinonline.github.io/open-data-handbuch/#metadaten-des-datensatzes).
+
+<br>
 
 ## Download
 
