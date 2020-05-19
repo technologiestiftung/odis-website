@@ -23,7 +23,7 @@ ressources:
             source: Metadaten-Leitfaden
             url: /ressourcen/metadaten.html
             text: Die Metadaten eines Datensatzes beschreiben die eigentlichen Daten. Sie sind ein wichtiger Bestandteil jeder Open Data Veröffentlichung, denn ohne qualitative Metadaten kann weder die Transparenz noch eine nachhaltige Verwendbarkeit der Daten garantiert werden. Erfahren Sie hier was sie für die Angabe von Metadaten wissen sollten.
-            image: ressourcenPlaceholder2.svg
+            image: page/process-05.svg
 
       - question: Wie sieht ein gut strukturierter Datensatz aus?
         sublinks:
