@@ -15,7 +15,7 @@ Solch fehlende Informationen zur Herkunft von Daten mindern die Transparenz und 
  
 Um die Metadaten offener Verwaltungsdaten von ganz Deutschland möglichst einheitlich zur Verfügung zu stellen, wurde vom IT-Planungsrat ein Datenstandard für Metadaten entwickelt, der sogenannte **DCAT-AP.de** (die deutsche Umsetzung des EU-weiten Standards DCAT-AP). Durch Einhalten des dort festgelegten Datenschemas, kann sichergestellt werden, dass Metadaten leicht zwischen Portalen und Anwendungen ausgetauscht und analysiert werden können. Der Standard legt sowohl die notwendigen Inhalte der Metadaten fest (z.B. Angabe der Lizenz, Angabe des Veröffentlichungsdatums), als auch ein kontrolliertes Vokabular, dass verwendet werden kann um diese Angaben zu tätigen. Wenn Sie mehr über DCAT-AP.de erfahren möchten, empfehlen wir Ihnen unsere [Einführung auf der Seite der Technologiestiftung Berlin](https://lab.technologiestiftung-berlin.de/projects/opendata-metadata-dcat-ap/de/).
  
-Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metadaten über ein **Eingabeformular** eingetragen werden. Dieses orientiert sich an DCAT-AP.de, überführt die Eingaben in ein entsprechendes Schema und leitet sie für weitere Nutzung auch an das Metadaten-Portal für Deutschland [govdata.de](https://www.govdata.de) weiter. Alles worum Sie sich kümmern müssen, ist also alle geforderten Felder des Formulars möglichst akkurat auszufüllen. Die untenstehende Tabelle zeigt alle möglichen Felder zur Eintragung von Metadaten über das Datenregister des Open Data Portal Berlins, jeweilige Erläuterungen und Beispiele. Die Informationen zu denen auf jeden Fall Metadaten erforderlich sind, unabhängig davon um welche Art Datensatz es sich handelt, sind mit einem \* markiert. Die restlichen Felder kommen nur bei bestimmten Datensätzen zum Einsatz. Beim Einstellen von Daten in das Open Data Portal mittels Imperia, tragen die einzelnen Metadaten-Felder leicht andere Bezeichnungen (z.B. heißen die Tags dort Schlüsselwörter). Der erwartete Inhalt ist aber der Gleiche.
+Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metadaten über ein **Eingabeformular** eingetragen werden. Dieses orientiert sich an DCAT-AP.de, überführt die Eingaben in ein entsprechendes Schema und leitet sie für weitere Nutzung auch an das Metadaten-Portal für Deutschland [govdata.de](https://www.govdata.de) weiter. Alles worum Sie sich kümmern müssen, ist also alle geforderten Felder des Formulars möglichst akkurat auszufüllen. Die untenstehende Tabelle zeigt alle möglichen Felder zur Eintragung von Metadaten über das Datenregister des Open Data Portal Berlins, jeweilige Erläuterungen und Beispiele. Die Informationen zu denen auf jeden Fall Metadaten erforderlich sind, unabhängig davon um welche Art Datensatz es sich handelt, sind mit einem <span class="rot">*</span> markiert. Die restlichen Felder kommen nur bei bestimmten Datensätzen zum Einsatz. Beim Einstellen von Daten in das Open Data Portal mittels Imperia, tragen die einzelnen Metadaten-Felder leicht andere Bezeichnungen (z.B. heißen die Tags dort Schlüsselwörter). Der erwartete Inhalt ist aber der Gleiche.
 
 
 <style type="text/css">
@@ -40,6 +40,7 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
 .tg .tg-dydg{font-weight:bold;background-color:#213a8f;color:#efefef;border-color:#ffffff;text-align:left;vertical-align:top}
 .tg .tg-lhx1{background-color:#213a8f;color:#efefef;border-color:#ffffff;text-align:left;vertical-align:top}
 .tg .tg-hvao{background-color:#c0c0c0;border-color:#ffffff;text-align:left;vertical-align:top}
+.rot {color: #f00;}
 </style>
 
 <div style="overflow-x:auto;">
@@ -55,37 +56,37 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
     <td class="tg-eo4b">Beispiel</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Titel</td>
+    <td class="tg-dydg">Titel<span class="rot">*</span></td>
     <td class="tg-o9w4">Kurzer, prägnanter Titel mit zeitlichem und ggf. geografischem Bezug.</td>
     <td class="tg-54w3">Gastronomien mit Liefer- oder Abholservice</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Art</td>
+    <td class="tg-dydg">Art<span class="rot">*</span></td>
     <td class="tg-o9w4">Angabe ob es sich um einen Datensatz (strukturiert, z.B. eine csv-Datei) oder ein Dokument (z.B. eine pdf-Datei) handelt.</td>
     <td class="tg-54w3">Datensatz</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Kategorie</td>
+    <td class="tg-dydg">Kategorie<span class="rot">*</span></td>
     <td class="tg-o9w4">Zugehörigkeit zu einer Kategorien nach DCAT-AP.de, durch ein Drop-Down-Menü auswählbar.</td>
     <td class="tg-54w3">Wirtschaft</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Beschreibung</td>
+    <td class="tg-dydg">Beschreibung<span class="rot">*</span></td>
     <td class="tg-o9w4">Kurzer Fließtext der erklärt welche Informationen im Datensatz vorhanden sind, auf welchen Ort und Zeitraum er sich bezieht und wer die Daten zur Verfügungs stellt. Diese Beschreibung dient einem schnellen Überblick über die bereitgestellten Daten. Sie kann auch weitere Aspekte enthalten, zum Beispiel Informationen die notwendig sind, um den Datensatz zu verstehen.</td>
     <td class="tg-54w3">Standorte, Angebot, Öffnungszeiten und Kontaktinformationen der Gastronomien in Berlin, die einen Liefer- und/oder Abholdienst für ihre Speisen anbieten. Alle Daten stammen aus einer laufenden Umfrage im Auftrag von SenWEB. Die Daten werden nach Möglichkeit täglich aktualisiert.</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Veröffentlichende Stelle</td>
+    <td class="tg-dydg">Veröffentlichende Stelle<span class="rot">*</span></td>
     <td class="tg-o9w4">Name der Stelle die die Daten zur Verfügung stellt.</td>
     <td class="tg-54w3">Senatsverwaltung für Wirtschaft, Energie und Betriebe</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Kontaktperson</td>
+    <td class="tg-dydg">Kontaktperson<span class="rot">*</span></td>
     <td class="tg-o9w4">Name der Person, die aktuell bei der veröffentlichenden Stelle tätig ist und inhaltliche Fragen zum Datensatz beantworten kann.</td>
     <td class="tg-54w3">Max Muster</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Kontakt-E-Mail*</td>
+    <td class="tg-dydg">Kontakt-E-Mail<span class="rot">*</span></td>
     <td class="tg-o9w4">E-Mail-Adresse über die die Kontaktperson (idealerweise über ein Funktionspostfach) zu erreichen ist oder Link zu einem Kontaktformular.</td>
     <td class="tg-54w3">info.betriebe@senweb.berlin.de</td>
   </tr>
@@ -95,7 +96,7 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
     <td class="tg-54w3">https://www.berlin.de/sen/web/service/liefer-und-abholdienste/</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Lizenz*</td>
+    <td class="tg-dydg">Lizenz<span class="rot">*</span></td>
     <td class="tg-o9w4">Auswahl einer offenen, eindeutigen Lizenz.</td>
     <td class="tg-54w3">Creative Commons Attribution CC BY 3.0</td>
   </tr>
@@ -105,7 +106,7 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
     <td class="tg-54w3">Die Daten wurden von der Senatsverwaltung für Wirtschaft, Energie und Betriebe und ODIS erhoben.</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Veröffentlichungsdatum*</td>
+    <td class="tg-dydg">Veröffentlichungsdatum<span class="rot">*</span></td>
     <td class="tg-o9w4">Datum der ersten Veröffentlichung der Daten (entspricht nicht dem Veröffentlichungsdatum im Open Data Portal, wenn die Daten bereits vorher an anderer Stelle Veröffentlichung wurden).</td>
     <td class="tg-54w3">01.02.2020</td>
   </tr>
@@ -140,7 +141,7 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
     <td class="tg-54w3">Covid-19, Lieferung, Abholung, Essen, Restaurants, Kontaktbeschränkung, Kontaktlos, lunch, takeaway, takeout, delivery</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Sichtbarkeit*</td>
+    <td class="tg-dydg">Sichtbarkeit<span class="rot">*</span></td>
     <td class="tg-o9w4">Wahl zwischen privat (noch nicht für die Öffentlichkeit sichtbar) oder öffentlich (Eintragung erscheint auf dem Open Data Portal).</td>
     <td class="tg-54w3">öffentlich</td>
   </tr>
