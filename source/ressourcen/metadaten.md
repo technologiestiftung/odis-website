@@ -5,7 +5,7 @@ title: Metadaten-Leitfaden
 
 # Was sind Metadaten?
 
-Daten im Open Data Portal zu veröffentlichen, ist ein wichtiger Schritt zur Umsetzung der Open Data Richtlinie. Wichtig zu wissen ist allerdings, dass ein vollständiger Datensatz nicht nur aus den Daten(-werten) allein besteht, sondern ebenfalls die Angaben der sogenannten Metadaten umfasst. Ohne Metadaten können die Daten eventuell nicht optimal gefunden und genutzt werden oder sind im schlimmsten Fall sogar unbrauchbar, da die Anwender\*innen sie nicht in den richtigen Kontext setzen können. Doch was sind Metadaten eigentlich und warum sind sie so wichtig? 
+Daten im Open-Data-Portal zu veröffentlichen, ist ein wichtiger Schritt zur Umsetzung der Open-Data-Richtlinie. Wichtig zu wissen ist allerdings, dass ein vollständiger Datensatz nicht nur aus den Daten(-werten) allein besteht, sondern ebenfalls die Angaben der sogenannten Metadaten umfasst. Ohne Metadaten können die Daten eventuell nicht optimal gefunden und genutzt werden oder sind im schlimmsten Fall sogar unbrauchbar, da die Anwender\*innen sie nicht in den richtigen Kontext setzen können. Doch was sind Metadaten eigentlich und warum sind sie so wichtig? 
 
 
 #### "Daten über Daten"
@@ -13,13 +13,13 @@ Metadaten be- und umschreiben die eigentlichen Daten, es sind „Daten über Dat
 Im Falle von Verwaltungsdaten sieht das ähnlich aus. Nur durch den Datensatz ergänzende Angaben, wie dem Namen der veröffentlichenden Stelle, Kategoriezugehörigkeit und das Veröffentlichungsdatum können die Daten von den Nutzer\*innen schnell gefunden und richtig eingeordnet werden.
 
 #### Metadatenqualität
-So trivial es auch erst einmal klingen mag, in der Praxis zeigt sich, dass viele Datensätze keine akkuraten, anwenderfreundlichen Metadaten besitzen. Für eine Studie aus dem Jahr 2016 \[1\] wurde im Rahmen einer Qualitätsbewertung von Open Data Metadaten auf verschiedene Qualitätskriterien überprüft. Insgesamt wurden die Metadaten von über 1,1 Millionen Datensätzen auf 261 verschiedenen Open Data Portalen der ganzen Welt aus dem Bereich Verwaltung, aber auch aus dem privaten Sektor, analysiert. Laut den Ergebnissen konnten hierbei einige Defizite festgestellt werden. So verfügte zum Beispiel der überwiegende Anteil offener Datensätze über keine maschinenlesbare E-Mail oder URL-Adresse zu einem Ansprechpartner. Solch fehlende Informationen zur Herkunft von Daten mindern die Transparenz und nachhaltige Nutzbarkeit von Open Data ungemein. Ein weiteres bekanntes Problem sind nicht vorhandene oder ungenaue Angaben zu zeitlichen Auflösungen und Aktualisierungsrhythmen. Hier wird es Nutzer\*innen erschwert, zu erkennen ob sie den aktuellsten Datensatz zur Verfügung stehen haben oder mit veralteten Daten handhaben. Ein anderes Beispiel sind Defizite bei der Auffindbarkeit von Daten. Diese können sich unter anderem dann ergeben, wenn wenige oder schlechte Tags in den Metadaten festgelegt sind. Die Tags fungieren als eine Art Suchbegriff. Der Datensatz kann über seinen Titel und die festgelegten Tags durch die Suchfunktion im Open Data Portal gefunden werden. Dies wird besonders dann wichtig, wenn potentielle Datennutzer nicht nach einem speziellen Datensatz suchen, sondern die Datenverfügbarkeit zu einem übergeordneten Thema ausloten, oder wenn ein Datensatz sehr viele verschiedene Informationen enthält. Ein Datensatz der das gesamte Streckennetz und die Fahrpläne des ÖPNV enthält beispielsweise, sollte auch durch Tags wie *U-Bahn*, *Tram* usw. auffindbar sein.
+So trivial es auch erst einmal klingen mag, in der Praxis zeigt sich, dass viele Datensätze keine akkuraten, anwenderfreundlichen Metadaten besitzen. Für eine Studie aus dem Jahr 2016 \[1\] wurde im Rahmen einer Qualitätsbewertung von Open-Data-Metadaten auf verschiedene Qualitätskriterien überprüft. Insgesamt wurden die Metadaten von über 1,1 Millionen Datensätzen auf 261 verschiedenen Open-Data-Portalen der ganzen Welt aus dem Bereich Verwaltung, aber auch aus dem privaten Sektor, analysiert. Laut den Ergebnissen konnten hierbei einige Defizite festgestellt werden. So verfügte zum Beispiel der überwiegende Anteil offener Datensätze über keine maschinenlesbare E-Mail oder URL-Adresse zu einem Ansprechpartner. Solch fehlende Informationen zur Herkunft von Daten mindern die Transparenz und nachhaltige Nutzbarkeit von Open Data ungemein. Ein weiteres bekanntes Problem sind nicht vorhandene oder ungenaue Angaben zu zeitlichen Auflösungen und Aktualisierungsrhythmen. Hier wird es Nutzer\*innen erschwert, zu erkennen ob sie den aktuellsten Datensatz zur Verfügung stehen haben oder mit veralteten Daten handhaben. Ein anderes Beispiel sind Defizite bei der Auffindbarkeit von Daten. Diese können sich unter anderem dann ergeben, wenn wenige oder schlechte Tags in den Metadaten festgelegt sind. Die Tags fungieren als eine Art Suchbegriff. Der Datensatz kann über seinen Titel und die festgelegten Tags durch die Suchfunktion im Open-Data-Portal gefunden werden. Dies wird besonders dann wichtig, wenn potentielle Datennutzer nicht nach einem speziellen Datensatz suchen, sondern die Datenverfügbarkeit zu einem übergeordneten Thema ausloten, oder wenn ein Datensatz sehr viele verschiedene Informationen enthält. Ein Datensatz der das gesamte Streckennetz und die Fahrpläne des ÖPNV enthält beispielsweise, sollte auch durch Tags wie *U-Bahn*, *Tram* usw. auffindbar sein.
 
 #### Metadatenstandards 
 Um die Metadaten offener Verwaltungsdaten von ganz Deutschland möglichst einheitlich zur Verfügung zu stellen, wurde vom IT-Planungsrat ein Datenstandard für Metadaten entwickelt, der sogenannte DCAT-AP.de (die deutsche Umsetzung des EU-weiten Standards DCAT-AP). Durch Einhalten des dort festgelegten Datenschemas, kann sichergestellt werden, dass Metadaten leicht zwischen Portalen und Anwendungen ausgetauscht und analysiert werden können. Der Standard legt sowohl die notwendigen Inhalte der Metadaten fest (z.B. Angabe der Lizenz, Angabe des Veröffentlichungsdatums), als auch ein kontrolliertes Vokabular, dass verwendet werden kann um diese Angaben zu tätigen. Wenn Sie mehr über DCAT-AP.de erfahren möchten, empfehlen wir Ihnen unsere [Einführung](https://lab.technologiestiftung-berlin.de/projects/opendata-metadata-dcat-ap/de/) auf der Seite der Technologiestiftung Berlin.
 
-#### Metadaten im Open Data Portal Berlin 
-Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metadaten über ein Eingabeformular eingetragen werden. Dieses orientiert sich an DCAT-AP.de, überführt die Eingaben in ein entsprechendes Schema und leitet sie für weitere Nutzung auch an das Metadaten-Portal für Deutschland [govdata.de](https://www.govdata.de) weiter. Alles worum Sie sich kümmern müssen, ist also alle geforderten Felder des Formulars möglichst akkurat auszufüllen. Die untenstehende Tabelle zeigt alle möglichen Felder zur Eintragung von Metadaten über das Datenregister des Open Data Portal Berlins, jeweilige Erläuterungen und Beispiele. 
+#### Metadaten im Open-Data-Portal Berlin 
+Bei der Veröffentlichung von Daten im Open-Data-Portal Berlin müssen die Metadaten über ein Eingabeformular eingetragen werden. Dieses orientiert sich an DCAT-AP.de und stellt sie auch für die weitere Nutzung durch das Metadaten-Portal für Deutschland [govdata.de](https://www.govdata.de) bereit. Alles worum Sie sich kümmern müssen, ist also alle geforderten Felder des Formulars möglichst akkurat auszufüllen. Die untenstehende Tabelle zeigt alle möglichen Felder zur Eintragung von Metadaten über das Datenregister des Open-Data-Portal Berlins, jeweilige Erläuterungen und Beispiele. 
 
 
 <style type="text/css">
@@ -56,7 +56,7 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
     <th class="tg-eo4b"></th>
   </tr>
   <tr>
-  <th class="tg-xm74" colspan="3">Die Felder zu denen auf jeden Fall Metadaten erforderlich sind, unabhängig davon um welche Art Datensatz es sich handelt, sind mit einem <span class="rot">*</span> markiert. Die restlichen Felder kommen nur bei bestimmten Datensätzen zum Einsatz. Beim Einstellen von Daten in das Open Data Portal mittels Imperia, tragen die einzelnen Metadaten-Felder leicht andere Bezeichnungen (z.B. heißen die Tags dort Schlüsselwörter). Der erwartete Inhalt ist aber der Gleiche.</th>
+  <th class="tg-xm74" colspan="3">Die Felder zu denen auf jeden Fall Metadaten erforderlich sind, unabhängig davon um welche Art Datensatz es sich handelt, sind mit einem <span class="rot">*</span> markiert. Die restlichen Felder kommen nur bei bestimmten Datensätzen zum Einsatz. Beim Einstellen von Daten in das Open-Data-Portal mittels Imperia, tragen die einzelnen Metadaten-Felder leicht andere Bezeichnungen (z.B. heißen die Tags dort Schlüsselwörter). Der erwartete Inhalt ist aber der Gleiche.</th>
   <th class="tg-zv4m"></th>
   <th class="tg-eo4b"></th>
   </tr>
@@ -77,12 +77,12 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
   </tr>
   <tr>
     <td class="tg-dydg">Kategorie<span class="rot">*</span></td>
-    <td class="tg-o9w4">Zugehörigkeit zu einer Kategorien nach DCAT-AP.de, durch ein Drop-Down-Menü auswählbar. Durch ihre Kategoriezugehörigkeit können die Daten besser im Portal gefunden werden.</td>
+    <td class="tg-o9w4">Zugehörigkeit zu einer Kategorien, durch ein Drop-Down-Menü auswählbar. Durch ihre Kategoriezugehörigkeit können die Daten besser im Portal gefunden werden.</td>
     <td class="tg-54w3">Wirtschaft</td>
   </tr>
   <tr>
     <td class="tg-dydg">Beschreibung<span class="rot">*</span></td>
-    <td class="tg-o9w4">Kurzer Fließtext der erklärt welche Informationen im Datensatz vorhanden sind, auf welchen Ort und Zeitraum er sich bezieht und wer die Daten zur Verfügungs stellt. Diese Beschreibung dient einem schnellen Überblick über die bereitgestellten Daten. Sie kann auch weitere Aspekte enthalten, zum Beispiel Informationen die notwendig sind, um den Datensatz zu verstehen.</td>
+    <td class="tg-o9w4">Kurzer Fließtext, der erklärt welche Informationen im Datensatz vorhanden sind, auf welchen Ort und Zeitraum er sich bezieht und wer die Daten zur Verfügungs stellt. Hier sollte ggf. auch angegeben werden, in welchem Rhythmus die Daten aktualisiert werden. Diese Beschreibung dient einem schnellen Überblick über die bereitgestellten Daten. Sie kann auch weitere Aspekte enthalten, zum Beispiel Informationen die notwendig sind, um den Datensatz zu verstehen.</td>
     <td class="tg-54w3">Standorte, Angebot, Öffnungszeiten und Kontaktinformationen der Gastronomien in Berlin, die einen Liefer- und/oder Abholdienst für ihre Speisen anbieten. Alle Daten stammen aus einer laufenden Umfrage im Auftrag von SenWEB. Die Daten werden nach Möglichkeit täglich aktualisiert.</td>
   </tr>
   <tr>
@@ -117,12 +117,12 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
   </tr>
   <tr>
     <td class="tg-dydg">Veröffentlichungsdatum<span class="rot">*</span></td>
-    <td class="tg-o9w4">Datum der ersten Veröffentlichung der Daten (entspricht nicht dem Veröffentlichungsdatum im Open Data Portal, wenn die Daten bereits vorher an anderer Stelle veröffentlicht wurden).</td>
+    <td class="tg-o9w4">Datum der ersten Veröffentlichung der Daten (entspricht nicht dem Veröffentlichungsdatum im Open-Data-Portal, wenn die Daten bereits vorher an anderer Stelle veröffentlicht wurden).</td>
     <td class="tg-54w3">01.02.2020</td>
   </tr>
   <tr>
     <td class="tg-dydg">Aktualisierungsdatum</td>
-    <td class="tg-o9w4">Datum der letzten Änderung am Datensatz. Wie beim Veröffentlichungsdatum entspricht dieses Datum nicht zwangsweise dem Tag der Veröffentlichung im Datenportal, sondern dem Tag an dem die aktualisierten Daten zum ersten Mal veröffentlicht wurden.</td>
+    <td class="tg-o9w4">Datum der letzten Änderung am Datensatz. Wie beim Veröffentlichungsdatum entspricht dieses Datum nicht zwangsweise dem Tag der Aktualisierung im Datenportal, sondern dem Tag an dem die aktualisierten Daten zum ersten Mal veröffentlicht wurden.</td>
     <td class="tg-54w3">01.05.2020</td>
   </tr>
   <tr>
@@ -152,14 +152,14 @@ Bei der Veröffentlichung von Daten im Open Data Portal Berlin müssen die Metad
   </tr>
   <tr>
     <td class="tg-dydg">Sichtbarkeit<span class="rot">*</span></td>
-    <td class="tg-o9w4">Wahl zwischen privat (noch nicht für die Öffentlichkeit sichtbar) oder öffentlich (Eintragung erscheint auf dem Open Data Portal).</td>
+    <td class="tg-o9w4">Wahl zwischen privat (noch nicht für die Öffentlichkeit sichtbar) oder öffentlich (Eintragung erscheint auf dem Open-Data-Portal).</td>
     <td class="tg-54w3">öffentlich</td>
   </tr>
 </table>
 </div>
 
 
-Noch mehr Informationen zum Thema Metadaten im Berliner Open Data Portal finden Sie auch im [Open Data Handbuch](https://berlinonline.github.io/open-data-handbuch/#metadaten-des-datensatzes).
+Noch mehr Informationen zum Thema Metadaten im Berliner Open Data Portal finden Sie auch im [Open-Data-Handbuch](https://berlinonline.github.io/open-data-handbuch/#metadaten-des-datensatzes).
 
 <br>
 
