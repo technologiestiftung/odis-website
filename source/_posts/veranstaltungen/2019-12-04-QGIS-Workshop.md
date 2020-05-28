@@ -24,7 +24,7 @@ In diesem initialen Workshop zur Datenvisualisierung wollen wir uns auf räumlic
 - Erstellung einer statischen Karte für Web und Druck
 - Erstellung einer interaktiven Karte fürs Internet
 
-Im Rahmen des Workshops werden nur kostenlose, quelloffene Anwendungen genutzt. Primär wird dies QGIS sein. QGIS ist die weltweit meist genutzte OpenSource-Software für die Verarbeitung räumlicher Informationen. Die Software kann von Ihnen einfach auf dem eigenen Rechner installiert werden und so über den Workshop hinaus genutzt werden.
+Im Rahmen des Workshops werden nur kostenlose, quelloffene Anwendungen genutzt. Primär wird dies QGIS sein. QGIS ist die weltweit meist genutzte Open Source Software für die Verarbeitung räumlicher Informationen. Die Software kann von Ihnen einfach auf dem eigenen Rechner installiert werden und so über den Workshop hinaus genutzt werden.
 
 Der Workshop richtet sich an Personen, die (interaktive) Karten für Berlin mit Daten der Verwaltung erstellen wollen und QGIS Einsteiger*innen ohne GIS Vorerfahrung. 
 Dabei richtet sich der Kurs in erster Linie an Mitarbeiterinnen und Mitarbeiter der Berliner Verwaltung. Wir bitten um Verständnis dafür, dass die Anzahl der Plätze begrenzt ist.

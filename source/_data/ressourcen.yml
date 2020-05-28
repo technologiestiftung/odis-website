@@ -11,7 +11,7 @@ ressources:
 
       - question: Sind meine Daten für eine Veröffentlichung geeignet?
         sublinks:
-          - title: Die Open Data Checkliste
+          - title: Die Open-Data-Checkliste
             source: Open Data Check
             url: /ressourcen/checkliste.html
             text: Um Daten als Open Data effektiv und nachhaltig zur Verfügung zustellen, sollten einige Aspekte vorangehend sichergestellt werden. Mit unserer Checkliste können Sie für jeden Datensatz überprüfen, ob dieser zur Veröffentlichung bereit ist, oder weitere Schritte notwendig sind. 
@@ -22,7 +22,7 @@ ressources:
           - title: Metadaten-Leitfaden und Vorlage
             source: Metadaten-Leitfaden
             url: /ressourcen/metadaten.html
-            text: Die Metadaten eines Datensatzes beschreiben die eigentlichen Daten. Sie sind ein wichtiger Bestandteil jeder Open Data Veröffentlichung, denn ohne qualitative Metadaten kann weder die Transparenz noch eine nachhaltige Verwendbarkeit der Daten garantiert werden. Erfahren Sie hier was sie für die Angabe von Metadaten wissen sollten.
+            text: Die Metadaten eines Datensatzes beschreiben die eigentlichen Daten. Sie sind ein wichtiger Bestandteil jeder Open-Data-Veröffentlichung, denn ohne qualitative Metadaten kann weder die Transparenz noch eine nachhaltige Verwendbarkeit der Daten garantiert werden. Erfahren Sie hier was sie für die Angabe von Metadaten wissen sollten.
             image: page/process-05.svg
 
       - question: Wie sieht ein gut strukturierter Datensatz aus?
@@ -42,7 +42,7 @@ ressources:
           - title: Hier geht's zur Publikation
             source: Open Data in der Praxis
             url: https://www.technologiestiftung-berlin.de/fileadmin/daten/media/publikationen/160128_TSB_OpenDataBerlin.pdf
-            text: Umfrage mit Open Data-Akteuren in Berlin zu Empfehlungen und Bedarfen bei der Open Data Bereitstellung und Anwendung.
+            text: Umfrage mit Open-Data-Akteuren in Berlin zu Empfehlungen und Bedarfen bei der Bereitstellung und Anwendung von Open Data.
           - title: Hier geht's zur Publikation
             url: https://www.technologiestiftung-berlin.de/fileadmin/daten/media/publikationen/140201_Studie_Digitales_Gold_Open_Data.pdf
             text: Untersuchung zur Abschätzung des quantifizierbaren Wertes und volkswirtschaftlichen Nutzens von Open Data für Berlin.
