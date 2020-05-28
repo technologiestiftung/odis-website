@@ -172,7 +172,7 @@ Sie können diese Tabelle als Excel- oder Word-Dokument herunterladen, um Metada
 
 [Download der Metadaten-Vorlage als .xlsx](/assets/file-download/Vorlage_Metadaten.xlsx)
 
-[Download der Metadaten-Vorlage als .docx](/assets/file-download/Vorlage_Metadaten.doc)
+[Download der Metadaten-Vorlage als .docx](/assets/file-download/Vorlage_Metadaten.docx)
 
 <br>
 
