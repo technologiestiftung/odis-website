@@ -170,9 +170,9 @@ Noch mehr Informationen zum Thema Metadaten im Berliner Open-Data-Portal finden 
 Sie können diese Tabelle als Excel- oder Word-Dokument herunterladen, um Metadaten für die Veröffentlichung vorzubereiten, weiterzureichen oder als Vorlage für eine spätere Veröffentlichung abzuspeichern.
 
 
-[Download der Metadaten-Vorlage als .xls](/assets/file-download/metadaten.pdf)
+[Download der Metadaten-Vorlage als .xlsx](/assets/file-download/Vorlage_Metadaten.xlsx)
 
-[Download der Metadaten-Vorlage als .doc](/assets/file-download/metadaten.pdf)
+[Download der Metadaten-Vorlage als .docx](/assets/file-download/Vorlage_Metadaten.doc)
 
 <br>
 
