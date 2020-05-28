@@ -1,8 +1,8 @@
 ---
 layout: event
 title:  "Navigating Berlin's Open Data Landscape"
-metaDescription: Eine Infoveranstaltung für Berliner, die sich über die Open Data Angebote des Land Berlins informieren möchten.
-description: Eine Infoveranstaltung für Berliner, die sich über die Open Data Angebote des Land Berlins informieren möchten.
+metaDescription: Eine Infoveranstaltung für Berliner, die sich über die Open-Data-Angebote des Land Berlins informieren möchten.
+description: Eine Infoveranstaltung für Berliner, die sich über die Open-Data-Angebote des Land Berlins informieren möchten.
 categories: veranstaltungen
 visible: true
 time: 18:30-20:30 Uhr 

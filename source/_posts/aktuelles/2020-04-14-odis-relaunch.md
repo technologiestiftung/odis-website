@@ -8,7 +8,7 @@ visible: true
 
 # Willkommen auf der neuen ODIS-Seite!
 
-Wir freuen uns sehr, unsere neue Webpräsenz vorzustellen. Wir haben die ODIS-Seite mit dem Ziel überarbeitet, Inhalte zu offenen Daten bereitzustellen und unsere Open Data Projekte sichtbarer zu machen.
+Wir freuen uns sehr, unsere neue Webpräsenz vorzustellen. Wir haben die ODIS-Seite mit dem Ziel überarbeitet, Inhalte zu offenen Daten bereitzustellen und unsere Open-Data-Projekte sichtbarer zu machen.
 
 Unter dem Reiter **Projekte**, gibt es einen Einblick in unsere Hauptprojekte. Darunter sind diverse Visualisierungen und Anwendungen mit Open Data zu finden. 
 
