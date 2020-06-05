@@ -104,8 +104,10 @@ svg.logo-ibb:hover  {
     &:hover {
         background: $color-secondary-hover;
         transition: background $transition-short;
+    
     }
 
+    cursor: pointer;
     background: $color-secondary;
     font-family: 'Clan Book', sans-serif;
     font-size: $font-size-m;
