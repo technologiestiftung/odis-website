@@ -116,6 +116,29 @@ svg.logo-ibb:hover  {
     color: white;
     border: 0px solid;
 }
+.button-primary_lp {
+
+    transition: background $transition-short;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        background: rgb(14, 40, 125);
+        transition: background $transition-short;
+    
+    }
+
+    cursor: pointer;
+    background: #213A8F;
+    font-family: 'Clan Book', sans-serif;
+    font-size: $font-size-m;
+    padding: .75rem 1.5rem;
+    border-radius: 5px;
+    color: white;
+    border: 0px solid;
+}
 
 
 
