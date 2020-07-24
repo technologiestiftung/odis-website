@@ -1,0 +1,21 @@
+---
+layout: news
+title:  "Vortrag \"Open Data und Resilient Cities\" beim Sommerfest des CityLAB Berlin"
+metaDescription: Link zur Videoaufzeichnung des Sommerfest-Talks
+categories: aktuelles
+visible: true
+---
+
+# Vortrag "Open Data und Resilient Cities" beim Sommerfest des CityLAB Berlin
+
+Anlässlich seines einjährigen Jubiläums hat das Innovationslabor [CityLAB Berlin](https://www.citylab-berlin.org) am 19. Juni Verwaltungsmitarbeiter\*innen und Interessierte der Zivilgesellschaft zum digitalen Sommerfest eingeladen. In verschiedenen Keynotes und Workshops mit insgesamt 24 Speaker\*innen wurde zu Themen wie Verwaltungsinnovation, Data Science, zivilgesellschaftliches Engagement und nachhaltige Städte informiert und diskutiert. 
+
+Victoria Boeck von der Open Data Informationsstelle und Claudia Jach von [Code for Germany](https://www.codefor.de) sprachen in ihrem Vortrag zu **“Open Data und Resilient Cities”** über die kritische Rolle offener Daten bei der Gestaltung von zukunftsfähigen Städten. Pandemien, Klimawandel und wirtschaftliche Umbrüche sind nur einige Beispiele, die unsere Städte heute vor weitreichende Herausforderungen stellen. Um diese effektiv anzugehen, braucht es kompetente Führung, moderne Infrastruktur, robuste Systeme – und Daten, am besten offene Daten. Der ganze Talk ist jetzt als Videoaufzeichnung verfügbar.
+
+<br>
+<p style="text-align: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MBV6ASWoY3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+
+Empfehlenswert sind auch [die weiteren spannenden Sessions](https://www.youtube.com/results?search_query=CityLAB+Berlin&sp=EiG4AQHCARtDaElKWXlYU21kTlBxRWNSSng4SkNOVmxaZjA%253D) des Sommerfests auf dem YouTube-Kanal der Technologiestiftung Berlin, darunter ein Keynote von Bianca Wylie, bekannt als Aktivistin, Vordenkerin der Open-Government-Bewegung und prominente Kritikerin des kürzlich gescheiterten Sidewalk Labs-Projekts in Toronto. 
