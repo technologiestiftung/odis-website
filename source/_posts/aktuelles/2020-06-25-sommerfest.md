@@ -18,4 +18,4 @@ Victoria Boeck von der Open Data Informationsstelle und Claudia Jach von [Code f
 </p>
 <br>
 
-Empfehlenswert sind auch [die weiteren spannenden Sessions](https://www.youtube.com/results?search_query=CityLAB+Berlin&sp=EiG4AQHCARtDaElKWXlYU21kTlBxRWNSSng4SkNOVmxaZjA%253D) des Sommerfests auf dem YouTube-Kanal der Technologiestiftung Berlin, darunter ein Keynote von Bianca Wylie, bekannt als Aktivistin, Vordenkerin der Open Government-Bewegung und prominente Kritikerin des kürzlich gescheiterten Sidewalk Labs-Projekts in Toronto. 
+Empfehlenswert sind auch [die weiteren spannenden Sessions](https://www.youtube.com/results?search_query=CityLAB+Berlin&sp=EiG4AQHCARtDaElKWXlYU21kTlBxRWNSSng4SkNOVmxaZjA%253D) des Sommerfests auf dem YouTube-Kanal der Technologiestiftung Berlin, darunter ein Keynote von Bianca Wylie, bekannt als Aktivistin, Vordenkerin der Open-Government-Bewegung und prominente Kritikerin des kürzlich gescheiterten Sidewalk Labs-Projekts in Toronto. 
