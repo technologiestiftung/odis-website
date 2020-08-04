@@ -2,7 +2,7 @@
 
 ## Setup
 This site is build with jekyll. Make sure jekyll is installed on your system. [jekyll quickstart instructions] (https://jekyllrb.com/docs/)
-
+ 
 ## Command Line Usage
 
 Install dependencies
