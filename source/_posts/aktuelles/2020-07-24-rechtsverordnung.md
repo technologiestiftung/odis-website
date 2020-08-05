@@ -35,9 +35,9 @@ Themenfelder zu denen Daten bereitgestellt werden sollen, insofern die Daten sch
 * Stadtplanung (Bauvorhaben, Flächennutzungsplan usw.)
 * Umwelt (Luftgütemessungen, Lärmpegel, Gewässer usw.)
 
-Weitere veröffentlichungspflichtige Daten sind:
+Weiterhin veröffentlichungspflichtig sind:
 * Daten, die im Rahmen der Beantwortung einer Anfrage ohnehin erstellt wurden
-* zugrundeliegende Daten für Informationen, die seit Inkrafttreten des E-Government-Gesetzes Berlin in elektronischer aber nicht-maschinenlesbarer Form veröffentlicht wurden 
+* zugrundeliegende Daten für Informationen, die seit Inkrafttreten des E-Government-Gesetzes Berlin in elektronischer aber nicht-maschinenlesbarer Form veröffentlicht wurden, obwohl sie maschinenlesbar vorliegen 
 
 Ausgenommen von diesen Verpflichtungen sind natürlich weiterhin personenbezogene Daten, sowie Daten die urheberrechtlich geschützt sind oder die zum Beispiel aus Sicherheitsgründen nicht veröffentlicht werden sollen.
 
