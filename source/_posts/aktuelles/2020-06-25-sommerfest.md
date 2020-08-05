@@ -18,4 +18,6 @@ Victoria Boeck von der Open Data Informationsstelle und Claudia Jach von [Code f
 </p>
 <br>
 
-Empfehlenswert sind auch [die weiteren spannenden Sessions](https://www.youtube.com/results?search_query=CityLAB+Berlin&sp=EiG4AQHCARtDaElKWXlYU21kTlBxRWNSSng4SkNOVmxaZjA%253D) des Sommerfests auf dem YouTube-Kanal der Technologiestiftung Berlin, darunter ein Keynote von Bianca Wylie, bekannt als Aktivistin, Vordenkerin der Open-Government-Bewegung und prominente Kritikerin des kürzlich gescheiterten Sidewalk Labs-Projekts in Toronto. 
+Weitere Informationen zum Thema gibt es in der Publikationen ["Krisenresilienz von Verwaltungen"](https://codefor.de/documents/Handbuch-Krisenresilienz.pdf) von Code for Germany. Das Handbuch richtet sich an Verwaltungsmitarbeiter\*innen und die digitale Zivilgesellschaft, um gemeinsam an krisenresilienten Verwaltungsstrukturen zu arbeiten und die dafür erforderlichen Maßnahmen in den Bereichen Offene Daten, Freie und Offene Software und Schnittstellen, Offene Lizenzen hin zu Open Government umzusetzen.
+
+Empfehlenswert sind auch [die anderen spannenden Sessions](https://www.youtube.com/results?search_query=CityLAB+Berlin&sp=EiG4AQHCARtDaElKWXlYU21kTlBxRWNSSng4SkNOVmxaZjA%253D) des Sommerfests auf dem YouTube-Kanal der Technologiestiftung Berlin, darunter ein Keynote von Bianca Wylie, bekannt als Aktivistin, Vordenkerin der Open-Government-Bewegung und prominente Kritikerin des kürzlich gescheiterten Sidewalk Labs-Projekts in Toronto. 
