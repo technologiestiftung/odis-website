@@ -143,7 +143,17 @@ In der folgenden Tabelle sind alle Felder im Detail beschrieben. Diese Vorlage k
     <td class="tg-zj9c">https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=showMap&amp;mapId=kleing@senstadt</td>
   </tr>
   <tr>
-    <td class="tg-0x0e" rowspan="2">Sonstiges</td>
+    <td class="tg-0x0e" rowspan="4">Sonstiges</td>
+    <td class="tg-u6gx">Personenbezug</td>
+    <td class="tg-hvao">Ist der Datensatz personenbezogen?</td>
+    <td class="tg-54w3">Nein</td>
+  </tr>
+    <tr>
+    <td class="tg-u6gx">Anonymisierbarkeit</td>
+    <td class="tg-hvao">Falls ein Personenbezug besteht, können die Daten ohne Personenbezug sinnvoll veröffentlicht werden?</td>
+    <td class="tg-54w3"></td>
+  </tr>
+  <tr>
     <td class="tg-u6gx">Kommentar</td>
     <td class="tg-hvao">weitere Anmerkungen</td>
     <td class="tg-54w3"></td>
@@ -153,12 +163,13 @@ In der folgenden Tabelle sind alle Felder im Detail beschrieben. Diese Vorlage k
     <td class="tg-hvao">Datum der letzten Bearbeitung dieser Metadatenzeile</td>
     <td class="tg-54w3">2019-12-16</td>
   </tr>
+  <td class="tg-eo4b">Version 1.1</td>
 </table>
 </div>
 
 ## Download
 
-[Download Dateninventurvorlage als Excel-Tabelle](/assets/file-download/Dateninventur_Vorlage.xlsx)
+[Download Dateninventurvorlage als Excel-Tabelle](/assets/file-download/Dateninventur_Vorlage_Version1.1.xlsx)
 
-[Download Dateninventurvorlage als csv](/assets/file-download/Dateninventur_Vorlage.csv)
+[Download Dateninventurvorlage als csv](/assets/file-download/Dateninventur_Vorlage_Version1.1.csv)
 
