@@ -116,7 +116,7 @@
   <div class="map-content grey-bg pb-6" id="timelapse-map-wrapper">
     <div class="section pb-6 pt-6">
       <div class="flex-wrapper col">
-        <form action="https://xml-schema-validator-for-berlins-geodata.vercel.app/" method="post" enctype="multipart/form-data" target="formDestination" id="form" class="form__validate">
+        <form action="https://xml-schema-validator-for-berlins-geodata.vercel.app/api" method="post" enctype="multipart/form-data" target="formDestination" id="form" class="form__validate">
           <h4 class="bold headline-04">Schritt 1:</h4>
           <br>
           <label class="headline-04" for="schemas">Wählen Sie eines der hinterlegten Schemata gegen das validiert werden soll:</label>
@@ -631,7 +631,8 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(form.action, {
         method: "POST",
         body: formData,
-        mode: "cors",
+        //mode: "cors",
+
       })
         .then((response) => {
           if (!response.ok) {
