@@ -23,7 +23,7 @@ ressources:
             source: Datenschutzprüfung
             url: /ressourcen/datenschutz.html
             text: Die Veröffentlichung von Daten setzt voraus, dass die Offenlegung nach dem geltenden (Datenschutz-)Recht zulässig ist. Mit dieser Checkliste können Sie prüfen, ob Ihre Daten unter Einhaltung des Datenschutzes veröffentlicht werden können.
-            image: page/process-04.svg
+            image: page/process-07.svg
 
       - question: Was sind Metadaten?
         sublinks:
