@@ -9,6 +9,14 @@ ressources:
             text: Um zu entscheiden welche Daten für eine Bereitstellung als Open Data geeignet sind, kann es sinnvoll sein sich eine Übersicht über alle vorhandenen Datensätze zu verschaffen und eine Dateninventur durchzuführen. Zur strukturierten Erfassung eines Datenbestands hat ODIS eine Vorlage entwickelt, die Sie als Grundlage für Ihre eigene Dateninventur verwenden können.
             image: page/process-02.svg
 
+      - question: Was sind Metadaten?
+        sublinks:
+          - title: Metadaten-Leitfaden und Vorlage
+            source: Metadaten-Leitfaden
+            url: /ressourcen/metadaten.html
+            text: Die Metadaten eines Datensatzes beschreiben die eigentlichen Daten. Sie sind ein wichtiger Bestandteil jeder Open-Data-Veröffentlichung, denn ohne qualitative Metadaten kann weder die Transparenz noch eine nachhaltige Verwendbarkeit der Daten garantiert werden. Erfahren Sie hier was sie für die Angabe von Metadaten wissen sollten.
+            image: page/process-06.svg
+
       - question: Sind meine Daten Open-Data-tauglich?
         sublinks:
           - title: Die Open-Data-Checkliste
@@ -21,14 +29,6 @@ ressources:
             url: /ressourcen/datenschutz.html
             text: Die Veröffentlichung von Daten setzt voraus, dass die Offenlegung nach dem geltenden (Datenschutz-)Recht zulässig ist. Mit dieser Checkliste können Sie prüfen, ob Ihre Daten unter Einhaltung des Datenschutzes veröffentlicht werden können.
             image: page/process-07.svg
-
-      - question: Was sind Metadaten?
-        sublinks:
-          - title: Metadaten-Leitfaden und Vorlage
-            source: Metadaten-Leitfaden
-            url: /ressourcen/metadaten.html
-            text: Die Metadaten eines Datensatzes beschreiben die eigentlichen Daten. Sie sind ein wichtiger Bestandteil jeder Open-Data-Veröffentlichung, denn ohne qualitative Metadaten kann weder die Transparenz noch eine nachhaltige Verwendbarkeit der Daten garantiert werden. Erfahren Sie hier was sie für die Angabe von Metadaten wissen sollten.
-            image: page/process-06.svg
 
       - question: Wie sieht ein gut strukturierter Datensatz aus?
         sublinks:
