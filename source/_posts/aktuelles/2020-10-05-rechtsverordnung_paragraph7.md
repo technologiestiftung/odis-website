@@ -28,7 +28,7 @@ Verwaltungsmitarbeiter\*innen, die gerade an der Digitalisierung eines Verwaltun
 **2) Beim Abschluss oder Anpassung von Verträgen mit Dritten, die für die Generierung oder Verarbeitung von Daten relevant sind**
 
 <span style="color:#213A8F">
-*“(2) Bei Abschluss oder Anpassung von vertraglichen Regelungen mit Dritten, welche die Erhebung, Erstellung, Verarbeitung oder Nutzung von Informationen betreffen, soll darauf hingewirkt werden, dass das Recht der betroffenen Behörde auf die uneingeschränkte öffentliche Bereitstellung dieser Informationen zur freien Weiterverwendung im Sinne des § 9 Absatz 1 aufgenommen wird.” (Absatz 2 aus § 7 der Open-Data-Rechtsverordnung)*</span>
+*“(2) Bei Abschluss oder Anpassung von vertraglichen Regelungen mit Dritten, welche die Erhebung, Erstellung, Verarbeitung oder Nutzung von Informationen betreffen, soll darauf hingewirkt werden, dass das Recht der betroffenen Behörde auf die uneingeschränkte öffentliche Bereitstellung dieser Informationen zur freien Weiterverwendung im Sinne des § 9 Absatz 1 aufgenommen wird.” (Absatz 2 aus § 7 der Open-Data-Rechtsverordnung)*</span>
 
 Viele Verwaltungsbehörden schließen Verträge mit Drittanbietern ab, bei denen der Drittanbieter beauftragt wird Daten zu erheben, aufzubereiten, und/oder zu verwalten. In solchen Situationen kommt es manchmal vor, dass die beauftragende Behörde nur bedingten Zugriff auf die Daten hat (zum Beispiel, dass die Daten nur für interne Zwecke genutzt werden können, oder dass die Behörde nur hochaggregierte Daten veröffentlichen darf). Das kann dazu führen, dass eine Verwaltungsbehörde nicht mehr die komplette Kontrolle über ihre Daten hat, obwohl deren Erhebung und/oder Verarbeitung aus Behördenmitteln finanziert wurden. 
 
