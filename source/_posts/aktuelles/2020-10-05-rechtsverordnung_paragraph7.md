@@ -37,7 +37,7 @@ Um solche Situationen zu vermeiden, sind die Behörden dazu angehalten bei Neuab
 <span style="color:#213A8F">
 *"Die zur Umsetzung von allgemein zugänglichen Datenbeständen (Open Data) notwendigen Anforderungen sind in der zentralen IKT-Architektur geregelt." <br>(Absatz 3 aus § 7 der Open-Data-Rechtsverordnung)*</span>
 
-Wo Software-Systeme neu beschaffen werden, muss das Thema Open Data von Anfang an mitbedacht werden. Alle Open Data-relevanten Anforderungen sind in der [IKT-Architektur des Landes Berlin](https://docplayer.org/149408374-Ikt-architektur-fuer-das-land-berlin-version-1-5.html) festgelegt. In Kapitel 7, werden die relevanten Anforderungen für die Bereitstellung von Open Data benannt. Für die reibungslose Bereitstellung von offenen Daten aus einem IT-Fachverfahren gibt es zwei technsiche Funktionen, über die es verfügen muss:
+Wo Software-Systeme neu beschaffen werden, muss das Thema Open Data von Anfang an mitbedacht werden. Alle Open Data-relevanten Anforderungen sind in der [IKT-Architektur des Landes Berlin](https://docplayer.org/149408374-Ikt-architektur-fuer-das-land-berlin-version-1-5.html) festgelegt. In Kapitel 7, werden die relevanten Anforderungen für die Bereitstellung von Open Data benannt. Für die reibungslose Bereitstellung von offenen Daten aus einem IT-Fachverfahren gibt es zwei technische Funktionen, über die es verfügen muss:
 
 **Funktion 1: Automatisierte Veröffentlichung von strukturierten Daten über das Datenportal**
 
