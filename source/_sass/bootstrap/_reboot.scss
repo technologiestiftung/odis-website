@@ -552,3 +552,12 @@ a.blog-link:hover {
   color: black;
 }
 
+a.blog-link-back::after {
+  transform: translateY(2px) translateX(-1px) rotate(180deg);
+}
+
+a.blog-link-back:hover::after {
+  transform: translateY(2px) translateX(-1px) rotate(180deg);
+
+}
+
