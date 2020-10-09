@@ -211,6 +211,20 @@ svg.logo-ibb:hover  {
     color: $color-black;
     // letter-spacing: .5px;
 }
+.headline-02b {
+    font-family: 'Clan Medium', sans-serif;
+    font-size: 24px;
+    line-height: 140%;
+    margin-bottom: 2rem;
+    color: #000000; 
+  }
+.headline-05 {
+font-size: 14px;
+font-style: italic;
+line-height: 160%;
+color: #000000;
+padding-bottom: 2rem;
+}
 
 .headline-03.white {
     font-family: 'Clan Medium', sans-serif;
@@ -1271,6 +1285,10 @@ p.copy {
     width: 700px;
     height: 700px;
 }
+.fileinput {
+    width: 400px;
+    cursor: pointer;
+  }
 
 @media screen and (min-width: 0rem) and (max-width: 56rem) {
 .pdf {
@@ -1278,4 +1296,88 @@ p.copy {
     height: 400px;
 }
 
+}
+
+.grey-bg {
+    background: #efefef;
+  }
+.pb-6 {
+padding-bottom: 1.5rem; 
+}
+.pt-6 {
+    padding-top: 2rem; }
+.bl {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+} 
+.flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+.col-b {
+    flex-direction: column; }
+.footer-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+    width: 75%;
+    }
+.footer-links{
+color: white;
+text-decoration: none;
+font-size: 12px !important;
+align-items: center;
+    }   
+.footer-links:hover{
+cursor: pointer;
+font-weight: bold !important;
+color: white;
+    }
+.footer {
+    display: flex;  
+    justify-content: center;
+    height: 5em;
+    background: #213A8F;
+    }
+
+@media screen and (max-width: 600px) {
+.pb-6 {
+    padding-bottom: 1.5rem; 
+}
+.pt-6 {
+    padding-top: 2rem; 
+    }
+.bl {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    } 
+}
+
+@media screen and (min-width: 54rem) and (max-width: 64rem) {
+    .footer-wrapper {
+      left: 0;
+      position: relative;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .flex-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+@media screen and (min-width: 28rem) and (max-width: 54rem) {
+.footer-wrapper {
+    left: 0;
+    position: relative;}
+}
+
+@media screen and (min-width: 0rem) and (max-width: 28rem) {
+    .footer-wrapper {
+        left: 0;
+        flex-direction: column;
+        position: relative;
+    }
 }

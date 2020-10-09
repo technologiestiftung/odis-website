@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -24,7 +24,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Sie haben die Daten. Wir haben die Antworten. Gemeinsam mit ihnen optimieren wir Daten & Prozesse
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
 
 # Build settings
 theme: minima
@@ -53,3 +52,6 @@ exclude:
   # - vendor/gems/
   # - vendor/ruby/
   - test.md
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
