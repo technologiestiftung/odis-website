@@ -561,3 +561,12 @@ a.blog-link-back:hover::after {
 
 }
 
+.ressource-blog-link::after {
+  transform: translateY(2px) translateX(15px);
+  height: 14px;
+}
+
+.ressource-blog-link:hover::after {
+  transform: translateY(2px) translateX(15px);
+  height: 14px;
+}

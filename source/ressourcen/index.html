@@ -12,22 +12,18 @@ title: Ressourcen
     Für eine tiefergehende Auseinandersetzung mit den einzelnen Themenbereichen, finden Sie hier außerdem 
     eine Sammlung von Links zu externen Ressourcen, die wir als besonders empfehlenswert erachten.
 </p>
-<p>
-    Eine umfangreichen Überblick zu Open Data und alles Wissenswerte über die Bereitstellung im 
-    Berliner Datenportal bietet das <b>Berliner Open-Data-Handbuch</b>, herausgegeben von der Senatsverwaltung 
-    für Wirtschaft, Energie und Betriebe vom Land Berlin. Neben Informationen zu Themen wie Lizenzen, Datenformaten
-    und Metadaten enthält diese Handreichung auch detaillierte Anleitungen zum Einstellen von Daten in das Datenportal.
-</p>
-
-
-<a class="blog-link" href="https://daten.berlin.de/interaktion/artikel/das-berliner-open-data-handbuch" target="_blank">Berliner Open-Data-Handbuch</a>
 
 {% assign accordionCounter= 0 %}
-{% for r in site.data.ressourcen.ressources %}
+{% for r in site.data.ressourcen_odis.ressources %}
 {% assign accordionCounter = accordionCounter | plus: 1 %}
-<div class="row mt-5">
+<div class="row mt-5 mb-5">
     <div class="col-md-9">
             <h4 class="mb-3">{{r.title}}</h4>
+            <p>
+                ODIS stellt in einem eigenen Datenportal speziell aufbereitete, veredelte und kombinierte Datensätze zur Verfügung. Diese Datensätze wurden aufgrund ihres besonders hohen Nutzungspotenzials ausgewählt und in gängigen, leicht nutzbaren Formaten bereitgestellt.
+            </p>  
+            <a class="blog-link ressource-blog-link" href="https://daten.odis-berlin.de" target="_blank">Basisdatensätze im ODIS-Datenportal</a>
+            <p>Weitere ODIS-Ressourcen:</p>
         <div class="accordion" id="accordion-{{accordionCounter}}">
             {% assign counter = 0 %}
             {% for group in r.groups %}
@@ -41,12 +37,11 @@ title: Ressourcen
                         </button>
                     </h5>
                 </div>
-        
+
                 <div id="collapse-{{accordionCounter}}-{{counter}}" class="collapse" aria-labelledby="heading-{{accordionCounter}}-{{counter}}" data-parent="#accordion-{{accordionCounter}}">
                     <div class="card-body">
                             {% for link in group.sublinks %}
                             <div class="pb-3">
-
                                     <div class="row">
                                         {% if link.image%}
                                         <div class="col-3">
@@ -60,7 +55,64 @@ title: Ressourcen
                                             <h6>{{ link.text }}</h6>
                                             <a href="{{link.url}}">{{link.title}}</a>
                                         </div>
+                                    </div>
+                                </a>
+                            </div>
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
 
+{% assign accordionCounter2= 0 %}
+{% for r in site.data.ressourcen_extern.ressources %}
+{% assign accordionCounter2 = accordionCounter2 | plus: 1 %}
+<div class="row">
+    <div class="col-md-9">
+            <h4 class="mb-3">{{r.title}}</h4>
+            <p>
+                Eine umfangreichen Überblick zu Open Data und alles Wissenswerte über die Bereitstellung im 
+                Berliner Datenportal bietet das <b>Berliner Open-Data-Handbuch</b>, herausgegeben von der Senatsverwaltung 
+                für Wirtschaft, Energie und Betriebe vom Land Berlin. Neben Informationen zu Themen wie Lizenzen, Datenformaten
+                und Metadaten enthält diese Handreichung auch detaillierte Anleitungen zum Einstellen von Daten in das Datenportal.
+            </p>
+            <a class="blog-link ressource-blog-link" href="https://daten.berlin.de/interaktion/artikel/das-berliner-open-data-handbuch" target="_blank">Berliner Open-Data-Handbuch</a>
+            <p>Weitere externe Ressourcen:</p>
+            <div class="accordion" id="accordion2-{{accordionCounter2}}">
+            {% assign counter2 = 0 %}
+            {% for group in r.groups %}
+            {% assign counter2 = counter2 | plus: 1 %}
+            <div class="card">
+                <div class="card-header" id="heading2-{{accordionCounter2}}-{{counter2}}">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2-{{accordionCounter2}}-{{counter2}}"
+                            aria-expanded="true" aria-controls="collapse2-{{accordionCounter2}}-{{counter2}}">
+                            {{group.question}}
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse2-{{accordionCounter2}}-{{counter2}}" class="collapse" aria-labelledby="heading2-{{accordionCounter2}}-{{counter2}}" data-parent="#accordion2-{{accordionCounter2}}">
+                    <div class="card-body">
+                            {% for link in group.sublinks %}
+                            <div class="pb-3">
+                                    <div class="row">
+                                        {% if link.image%}
+                                        <div class="col-3">
+                                            <img class="img-fluid" alt="{{link.title}}" src="/assets/images/{{link.image}}">
+                                        </div>
+                                        {% endif %}
+                                        <div class="col">
+                                            {% if link.source%}
+                                            <h5 style="color: #213A8F;">{{link.source}}</h5>
+                                            {% endif %}
+                                            <h6>{{ link.text }}</h6>
+                                            <a href="{{link.url}}">{{link.title}}</a>
+                                        </div>
                                     </div>
                                 </a>
                             </div>
