@@ -15,7 +15,7 @@ ressources:
             source: Metadaten-Leitfaden
             url: /ressourcen/metadaten.html
             text: Die Metadaten eines Datensatzes beschreiben die eigentlichen Daten. Sie sind ein wichtiger Bestandteil jeder Open-Data-Veröffentlichung, denn ohne qualitative Metadaten kann weder die Transparenz noch eine nachhaltige Verwendbarkeit der Daten garantiert werden. Erfahren Sie hier was sie für die Angabe von Metadaten wissen sollten.
-            image: page/process-06.svg
+            image: page/process-06.png
 
       - question: Sind meine Daten Open-Data-tauglich?
         sublinks:
@@ -37,7 +37,7 @@ ressources:
             #url: /ressourcen/example.html
             text: Ein wichtiger Anspruch der an Open Data gestellt wird, ist das die Daten in einem offenen und maschinenlesbaren Format zugänglich sind. Es gibt aber noch viele andere Aspekte, die darüber entscheiden ob Anwender*innen leicht mit den Daten weiterarbeiten können. Welche Qualitätsmerkmale für die Beurteilung offener Daten herangezogen werden können, lesen Sie in unserem Leitfaden.
             image: page/process-04.svg
-
+            
       - question: Studien der Technologiestiftung zu Open Data
         sublinks:
           - title: Hier geht's zur Publikation
@@ -61,30 +61,3 @@ ressources:
       #       #url: /ressourcen/example.html
       #       text: Stehen die Daten erst einmal als Open Data bereit, eröffnen sich dadurch weitreichende Anwendungsmöglichkeiten. Hier zeigen wir, wie Sie Open Data zweckgerecht visualisieren können, um Analysen zu ermöglichen und die Weiternutzung Ihrer Daten durch Anwender zu fördern.
       #       image: ressourcenPlaceholder.svg
-
-  - title: Externe Ressourcen
-    groups:
-      - question: Datenprüfung für die Veröffentlichung
-        sublinks:
-          - title: Hier geht's zum Leitfaden
-            url: https://www.bmvi.de/SharedDocs/DE/Anlage/DG/leitfaden-bestandsdatenpruefung.pdf?__blob=publicationFile
-            text: Leitfaden des Bundesministeriums für Verkehr und Infrastruktur (BMVI) zu den grundsätzlichen Schritte zur Prüfung der Veröffentlichungspflichten.
-            source: Leitfaden für die Bestandsdatenprüfung
-          - title: Hier geht's zum Leitfaden
-            url: https://www.bva.bund.de/SharedDocs/Downloads/DE/Behoerden/Beratung/Methoden/open_data_anforderungen_daten.pdf?__blob=publicationFile&v=1
-            text: Leitfaden des Bundesverwaltungsamts (BVA) zu formalen, rechtlichen und technischen Anforderungen an die Daten.
-            source: Leitfaden zur Anforderung an die Daten
-          - title: Hier geht's zum Vorgehensmodell
-            url: https://www.kdz.eu/de/open-government-vorgehensmodell
-            text: Leitfaden des Zentrums für Verwaltungsforschung (KDZ) zum Vorgehen der öffentlichen Verwaltungen zur Implementierung von Open Government.
-            source: Open Government Vorgehensmodell
-          - title: Hier geht's zum Whitepaper
-            url: https://www.oeffentliche-it.de/documents/10181/14412/Strategische+Bereitstellung+offener+Verwaltungsdaten
-            text: Whitepaper für die Etablierung von Open Data in Organisationen und Behörden vom Kompetenzzentrum Öffentliche Informationstechnologie.
-            source: Strategische Bereitstellung offener Verwaltungsdaten
-      - question: Datenqualität
-        sublinks:
-          - title: Hier geht's zum Leitfaden
-            url: https://cdn0.scrvt.com/fokus/e472f1bf447f370f/32c99a36d8b3/NQDM_Leitfaden-f-r-qualitativ-hochwertige-Daten-und-Metadaten_2019.pdf 
-            text: Ein Leitfaden vom Fraunhofer-Institut für offene Kommunikationssysteme (FOKUS) zu unterschiedlichen Qualitätsdimensionen, Datenstrukturtypen und Bewertungsschemata.
-            source: Leitfaden für qualitativ hochwertige Daten und Metadaten
