@@ -3,10 +3,15 @@ ressources:
     groups:
       - question: Welche Daten besitze ich?
         sublinks:
-          - title: Vorlage zur Durchführung einer Dateninventur
+          - title: Handout zum Thema Dateninventur
             source: Dateninventur
             url: /ressourcen/dateninventur.html
-            text: Um zu entscheiden welche Daten für eine Bereitstellung als Open Data geeignet sind, kann es sinnvoll sein sich eine Übersicht über alle vorhandenen Datensätze zu verschaffen und eine Dateninventur durchzuführen. Zur strukturierten Erfassung eines Datenbestands hat ODIS eine Vorlage entwickelt, die Sie als Grundlage für Ihre eigene Dateninventur verwenden können.
+            text: Um zu entscheiden welche Daten für eine Bereitstellung als Open Data geeignet sind, kann es sinnvoll sein sich eine Übersicht über alle vorhandenen Datensätze zu verschaffen und eine Dateninventur durchzuführen. Doch was genau ist eigentlich eine Dateninventur und wie wird sie durchgeführt? ODIS hat alle wichtigen Infos in einem Handout zusammengestellt.
+            image: page/process-01.svg
+          - title: Vorlage für ein Dateninformationsblatt
+            source: Dateninformationsblatt
+            url: /ressourcen/dateninformationsblatt.html
+            text: Im Zuge der Dateninventur wird erfasst, welche Daten innerhalb einer Behörde, Abteilung oder Fachgruppe vorliegen. Die dabei gewonnen Informationen müssen strukturiert erfasst werden, um sie später leicht zusammenführen und austauschen zu können. ODIS hat deshalb eine Vorlage zur Dokumentation der Datenbestände entwickelt, die Sie als Grundlage für Ihre eigene Dateninventur verwenden können.
             image: page/process-02.svg
 
       - question: Was sind Metadaten?
