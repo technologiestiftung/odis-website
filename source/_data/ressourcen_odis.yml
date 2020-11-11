@@ -24,8 +24,8 @@ ressources:
 
       - question: Sind meine Daten Open-Data-tauglich?
         sublinks:
-          - title: Die Open-Data-Checkliste
-            source: Open Data Check
+          - title: Veröffentlichungs-Checkliste
+            source: Veröffentlichungs-Check
             url: /ressourcen/checkliste.html
             text: Um Daten als Open Data effektiv und nachhaltig zur Verfügung zustellen, sollten einige Aspekte vorangehend sichergestellt werden. Mit unserer Checkliste können Sie für jeden Datensatz überprüfen, ob dieser zur Veröffentlichung bereit ist, oder weitere Schritte notwendig sind. 
             image: ressourcenPlaceholder2.svg
