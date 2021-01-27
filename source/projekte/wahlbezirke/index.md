@@ -1,8 +1,8 @@
 ---
 layout: project
-title:  Wahlbezirks Editor
-blogLinkTitle: "Hier geht's zum vollständigen Blogpost und zum Tool"
-blogLink: https://lab.technologiestiftung-berlin.de/projects/wahlbezirke/de/
+title:  Wahlbezirke Editor
+blogLinkTitle: "Hier geht's zum Tool"
+blogLink: https://wahlbezirke.odis-berlin.de/
 metaDescription: Ein digitaler Prototyp für die Editierung von Wahlbezirken
 date: 2021-01-05
 visible: true
