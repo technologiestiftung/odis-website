@@ -42,6 +42,14 @@ ressources:
             #url: /ressourcen/example.html
             text: Ein wichtiger Anspruch der an Open Data gestellt wird, ist das die Daten in einem offenen und maschinenlesbaren Format zugänglich sind. Es gibt aber noch viele andere Aspekte, die darüber entscheiden ob Anwender*innen leicht mit den Daten weiterarbeiten können. Welche Qualitätsmerkmale für die Beurteilung offener Daten herangezogen werden können, lesen Sie in unserem Leitfaden.
             image: page/process-04.svg
+
+      - question: Wie visualisiere ich offene Daten für Bürger*innen?
+        sublinks:
+          - title: Data-Wrapper Tutorial
+            source: Datenvisualisierung
+            url: /ressourcen/datenvisualisierung.html
+            text: Kurze Beschreibung zur Ressource
+            image: page/process-03.svg
             
       - question: Studien der Technologiestiftung zu Open Data
         sublinks:
