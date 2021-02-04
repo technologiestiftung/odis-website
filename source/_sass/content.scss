@@ -34,8 +34,8 @@ body {
     margin-right: 3rem;
 }
 
-.logo-berlin {
-    margin-right: 3rem;
+svg.logo-berlin path{
+    fill: #213A8F;
 }
 
 .project-desc-title {
@@ -52,12 +52,17 @@ svg:hover polygon {
     fill: $color-primary-minimum;
 }
 
-svg.logo-berlin:hover path {
-    fill: $color-secondary;
+svg.logo-berlin:hover {
+    path#cls-1  {
+        fill: #e40422;
+    }
+    path {
+        fill: rgb(0, 0, 0);
+    }
 }
 
-svg.logo-stiftung:hover path {
-    fill: $color-secondary;
+svg.logo-stiftung:hover path{
+    fill: $color-secondary
 }
 
 svg.logo-opendata:hover path {
