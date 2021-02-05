@@ -22,7 +22,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <br><br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://youtu.be/4bQ2DniKfHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4bQ2DniKfHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
@@ -33,7 +33,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <br><br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://youtu.be/TfzW-NDqhZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TfzW-NDqhZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
@@ -44,7 +44,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <br><br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://youtu.be/Mo6sVxdxU6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mo6sVxdxU6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
@@ -57,7 +57,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <br><br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://youtu.be/4bQ2DniKfHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4bQ2DniKfHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
