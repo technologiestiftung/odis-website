@@ -22,7 +22,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <br><br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MBV6ASWoY3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/4bQ2DniKfHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
@@ -33,18 +33,18 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <br><br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MBV6ASWoY3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/TfzW-NDqhZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
 
 <details open="open">
     <summary class="h4">Teil 3: Worte</summary>
-    Eine gute Visualisierung spricht für sich selbst und braucht keine Textelemente – im Gegenteil! Textelemente sollten gezielt benutzt werden, um die Verständlichkeit einer Visualisierung zu verstärken. In diesem Teil wird erläutert, wo and wie Textelemente bei guten Datenvisualisierungen Verwendung finden und was es zu beachen gibt.  
+    Eine gute Visualisierung spricht für sich selbst und braucht keine Textelemente – im Gegenteil! Textelemente sollten gezielt benutzt werden, um die Verständlichkeit einer Visualisierung zu verstärken. In diesem Teil wird erläutert, wo and wie Textelemente bei guten Datenvisualisierungen Verwendung finden und was es zu beachten gibt.  
 
 <br><br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MBV6ASWoY3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/Mo6sVxdxU6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
@@ -57,7 +57,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <br><br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MBV6ASWoY3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/4bQ2DniKfHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
