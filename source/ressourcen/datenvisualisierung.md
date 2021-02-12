@@ -50,14 +50,22 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 </details>
 
 <details open="open">
-    <summary class="h4">Teil 4 und 5: Farben und Wahrheit</summary>
+    <summary class="h4">Teil 4: Farben</summary>
     Der vierte Teil der Videoreihe widmet sich ganz dem Thema Farben. Die Auswahl der richtigen Farben und Farbpaletten leistet einen wichtigen Beitrag zur Verständlichkeit – oder zur Fehlinterpretation – einer Visualisierung.
-
-    Im fünften und letzten Teil der Videoreihe wird diskutiert, was eigentlich eine vertrauenswürdige Visualisierung ausmacht und wie man irreführende oder falsch interpretierbare Abbildungen vermeiden kann.
 
 <br><br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/D5W8asLf1TY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/29BoZh5200Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
+</details>
+
+<details open="open">
+    <summary class="h4">Teil 5: Wahrheit</summary>
+ Im fünften und letzten Teil der Videoreihe wird diskutiert, was eigentlich eine vertrauenswürdige Visualisierung ausmacht und wie man irreführende oder falsch interpretierbare Abbildungen vermeiden kann.
+
+<br><br>
+<p style="text-align: center;">
+<iframe width="560" height="315" src="https://youtube.com/embed/tSyVYAolJog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 </details>
