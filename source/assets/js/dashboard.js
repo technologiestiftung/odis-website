@@ -19,18 +19,21 @@ document.addEventListener("DOMContentLoaded", function(url) {
       document.body.appendChild(script);
     });
   }
-  var data = jsonp(
-    "https://datenregister.berlin.de/api/3/action/package_search?rows=1000"
-  );
-  var data2 = jsonp(
-    "https://datenregister.berlin.de/api/3/action/package_search?rows=1000&start=1000"
-  );
+  function getData(){
+    let data = []
+    for (const start of ["0", "1000", "2000","3000"]){
+      data.push(jsonp("https://datenregister.berlin.de/api/3/action/package_search?rows=1000&start=" + start));
+    }
+    return data
+  };
 
-  Promise.all([data, data2])
+  Promise.all(getData())
     .then(values => {
-      var resultsArray = values["0"].result.results.concat(
-        values["1"].result.results
-      );
+      let resultsArray = []
+      for (const id in values){
+        resultsArray = resultsArray.concat(values[id].result.results
+          );
+    }
       return resultsArray;
     })
     .then(data => {
