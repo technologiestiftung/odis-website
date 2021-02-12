@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function(url) {
     });
 });
 
-
 // var data = jsonp("https://datenregister.berlin.de/api/action/package_search&rows=1000&callback=initOne");
 // var data2 = jsonp("https://datenregister.berlin.de/api/action/package_search");
 // // var data2 = jsonp("https://datenregister.berlin.de/api/action/package_search&rows=1000&start=1000&callback=initTwo")
@@ -54,7 +53,6 @@ function initialize(results) {
   var formats = getHighscores(results, "formats", 7);
   var activity = getTimestamps(results);
   var newest5 = findNewest(results);
-  var count = getTotalNumber(results,"count");
 
   makeChart(getHighscores(results, "author", 7));
   makeDonut(category);
