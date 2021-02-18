@@ -42,6 +42,14 @@ ressources:
             #url: /ressourcen/example.html
             text: Ein wichtiger Anspruch der an Open Data gestellt wird, ist das die Daten in einem offenen und maschinenlesbaren Format zugänglich sind. Es gibt aber noch viele andere Aspekte, die darüber entscheiden ob Anwender*innen leicht mit den Daten weiterarbeiten können. Welche Qualitätsmerkmale für die Beurteilung offener Daten herangezogen werden können, lesen Sie in unserem Leitfaden.
             image: page/process-04.svg
+
+      - question: Wie visualisiere ich offene Daten für Bürger*innen?
+        sublinks:
+          - title: Video-Tutorials zur Datenvisualisierung
+            source: Datenvisualisierung
+            url: /ressourcen/datenvisualisierung.html
+            text: Open-Data ist kein Selbstzweck an sich, sondern dient in erster Linie dazu, Informationen einer breiten Masse zugänglich zu machen. Gut gemachte Datenvisualisierungen sind ein wichtiges Mittel, um Beobachtungen, Analysen und Erkentnisse aus Daten auf einfache Art und Weise zu präsentieren. Sehen Sie hier was es dabei zu beachten gibt und wie sie mittels des kostenlosen Visualisierungs-Tools Datawrapper eigene Graphen und Karten erstellen können.
+            image: page/process-03.svg
             
       - question: Studien der Technologiestiftung zu Open Data
         sublinks:
