@@ -21,6 +21,11 @@ ressources:
             url: /ressourcen/metadaten.html
             text: Die Metadaten eines Datensatzes beschreiben die eigentlichen Daten. Sie sind ein wichtiger Bestandteil jeder Open-Data-Veröffentlichung, denn ohne qualitative Metadaten kann weder die Transparenz noch eine nachhaltige Verwendbarkeit der Daten garantiert werden. Erfahren Sie hier was sie für die Angabe von Metadaten wissen sollten.
             image: page/process-06.png
+          - title: Analyse und Erläuterung zum Thema Tags
+            source: Datensatz-Tags
+            url: /ressourcen/tag_analyse.html
+            text: hier fehlt noch Text
+            image: page/process-06.png
 
       - question: Sind meine Daten Open-Data-tauglich?
         sublinks:
