@@ -25,7 +25,7 @@ ressources:
             source: Datensatz-Tags
             url: /ressourcen/tag_analyse.html
             text: hier fehlt noch Text
-            image: page/process-06.png
+            image: page/graph.svg
 
       - question: Sind meine Daten Open-Data-tauglich?
         sublinks:
