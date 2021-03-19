@@ -11,7 +11,7 @@ heroImage: hero.png
 ---
 
 Was sagen uns die Tags im [Berliner Datenportal](https://daten.berlin.de) über den Stand von Open Data in Berlin? Es gibt verschiedene Möglichkeiten, die Tags des Portals zu analysieren. Eine davon ist zu schauen, welche Tags oft in Zusammenhang miteinander benutzt werden, um Themencluster aus dem Datenportal zu erkennen.
-In dieser kleinen Visualisierung ist zu sehen wie oft bestimmte Tags im Zusammenhang stehen (also wie oft jeweils zwei Tags in den Metadaten des gleichen Datensatzes auftauchen). Nur Tags, die mindestens 20 Mal mit einem anderen Tag in Verbindung gebracht wurden, werden in der Visualisierung angezeigt. Diese Visualisierung zeigt demzufolge nicht alle Tags, die im Datenportal benutzt werden. 
+In dieser kleinen Visualisierung ist zu sehen wie oft bestimmte Tags im Zusammenhang stehen (also wie oft jeweils zwei Tags in den Metadaten des gleichen Datensatzes auftauchen). Nur Tags, die mindestens 20 mal mit einem anderen Tag in Verbindung gebracht wurden, werden in der Visualisierung angezeigt. Diese Visualisierung zeigt demzufolge nicht alle Tags, die im Datenportal benutzt werden. 
 
 Die Größe eines Node, also eines Knotenpunktes, entspricht der Häufigkeit der Verwendung dieses Tags. Die Stärke der Linie zwischen zwei Nodes entspricht der Anzahl mit der diese zwei Tags zusammen benutzt werden. Die Farben der Nodes werden durch die zugehörige Kategorie zu einem Cluster bestimmt. Diese Cluster wurden automatisiert durch eine Netzwerkanalyse identifiziert. 
 
