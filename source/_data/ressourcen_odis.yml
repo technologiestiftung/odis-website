@@ -21,10 +21,10 @@ ressources:
             url: /ressourcen/metadaten.html
             text: Die Metadaten eines Datensatzes beschreiben die eigentlichen Daten. Sie sind ein wichtiger Bestandteil jeder Open-Data-Veröffentlichung, denn ohne qualitative Metadaten kann weder die Transparenz noch eine nachhaltige Verwendbarkeit der Daten garantiert werden. Erfahren Sie hier was sie für die Angabe von Metadaten wissen sollten.
             image: page/process-06.png
-          - title: Analyse und Erläuterung zum Thema Tags
+          - title: Tipps zum Thema Tags
             source: Datensatz-Tags
             url: /ressourcen/tag_analyse.html
-            text: hier fehlt noch Text
+            text: Damit Daten im Open Data Portal gezielt gefunden werden können, wird jeder Datensatz durch Schlüsselworte, die sogenannten Tags, beschrieben. Die Tags dienen außerdem dazu, thematisch zusammenhängende Datensätze miteinander zu vernetzen. Lesen Sie hier weshalb es wichtig ist "gute" Tags zu vergeben und was es dabei zu beachten gibt.
             image: page/graph.svg
 
       - question: Sind meine Daten Open-Data-tauglich?
