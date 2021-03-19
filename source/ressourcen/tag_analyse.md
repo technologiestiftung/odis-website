@@ -3,7 +3,7 @@ layout: default
 title: tags
 ---
 
-# Datensatz-Tags
+# Metadaten-Tags
 
 Wie in unserem [Leitfaden](http://127.0.0.1:4000/ressourcen/metadaten.html) erklärt, spielen Metadaten u.a. eine wichtige Rolle bei der Nutzbarkeit und Auffindbarkeit von offenen Daten. Im Falle der Auffindbarkeit, sind die sogenannten Tags (auch als Schlüsselwörter bekannt) besonders kritisch.
 
