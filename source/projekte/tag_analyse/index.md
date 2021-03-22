@@ -29,5 +29,7 @@ Es gibt in unserer Berechnung einige entstandene Kategorien, die nur sehr wenige
 
 Zusammenfassend lässt sich sagen, dass unsere Taganalyse einen interessanten Einblick in die Vielfalt, Häufigkeit und Zusammenhänge der durch die Datensätze abgedeckten Themen gibt. Tags sind und bleiben ein wichtiges Tool, um Daten zu beschreiben und besser auffindbar zu machen. Natürlich kann der Graph aber nicht alle Zusammenhänge darstellen, da nur die häufigsten Tags bzw. Verbindungen mit eingeflossen sind.
 
+Falls Sie mehr zum Thema Tags wissen wollen (zum Beispiel warum Tags wichtig sind und wie man effektive Tags erfasst), schauen Sie gerne [unseren Leitfaden](https://odis-berlin.de/ressourcen/tag_analyse.html) zu Tags an.
+
 ## Datenquelle und technische Umsetzung
 Mehr darüber, wie die Daten verarbeitet und analysiert wurden erfahren Sie in einem [Blogpost](https://lab.technologiestiftung-berlin.de/projects/tag-analysis/de/) des Ideation & Prototyping Lab der Technologiestiftung. Dort finden Sie auch den Link zum offenem Quellcode der Netzwerkanalyse.
