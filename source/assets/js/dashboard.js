@@ -296,15 +296,25 @@ function makeActivity(value) {
       dateObj[myDate] = 1;
     }
   });
+  var dateArr = dateArr.filter(function (el) {
+    return dateObj[el]<= 500
+  });
 
   dateArr.forEach(function(el) {
     valueArr.push(dateObj[el]);
+    //console.log(dateObj[el])
+   // if (dateObj[el] < 50) {
+     // valueArr.push(dateObj[el]);
+      //console.log("True")
+    // }
   });
 
   var ctx = document.getElementById("activity").getContext("2d");
-
+  console.log(valueArr )
   valueArr = valueArr.reverse().slice(2);
   dateArr = dateArr.reverse().slice(2);
+  console.log(valueArr)
+  
 
   var myChart = new Chart(ctx, {
     type: "line",
