@@ -744,14 +744,14 @@ d3.csv('/charts/all.csv').then(data=>{
       title:'Zugriffszahlen',
       copy:'Die Kurve links zeigt die Zugriffszahlen seid April 2013. Nach gutem Beginn stagnierte die Entwicklung über einen längeren Zeitraum. Seit 2017 ist wieder ein deutlicher Anstieg zu verzeichnen. <br /><br />Klicke auf weiter um mehr zu erfahren.'
     },
-    {
-      title:'Verschwundene Daten',
-      copy:'Einige der in der Statistik aufgeführten Datensätze sind inzwischen nicht mehr auf dem Portal abrufbar. Für die weitere Analyse nutzen wir nur Daten, die nach wie vor offen verfügbar sind.'
-    },
-    {
-      title:'Tests',
-      copy:'Regelmäßig gibt es eine geringe Zahl an Downloads, die vor dem Veröffentlichungsdatum liegen. Vermutlich handelt es sich um interne Tests.'
-    },
+    // {
+    //   title:'Verschwundene Daten',
+    //   copy:'Einige der in der Statistik aufgeführten Datensätze sind inzwischen nicht mehr auf dem Portal abrufbar. Für die weitere Analyse nutzen wir nur Daten, die nach wie vor offen verfügbar sind.'
+    // },
+    // {
+    //   title:'Tests',
+    //   copy:'Regelmäßig gibt es eine geringe Zahl an Downloads, die vor dem Veröffentlichungsdatum liegen. Vermutlich handelt es sich um interne Tests.'
+    // },
     {
       title:'Ausreißer',
       copy:'Bei Betrachtung der Kurve fallen einige Ausreißer auf...'
@@ -788,32 +788,32 @@ d3.csv('/charts/all.csv').then(data=>{
       case 0:
         peakLines.style('display','none')
       break;
+      // case 1:
+      //   show = ['pv','a_pv']
+      // break;
+      // case 2:
+      //   peakLines.style('display','none')
+      //   show = ['pv','a_pv','ra_pv']
+      // break;
       case 1:
-        show = ['pv','a_pv']
+        peakLines.style('display','block')
+        show = ['pv']
       break;
       case 2:
-        peakLines.style('display','none')
-        show = ['pv','a_pv','ra_pv']
-      break;
-      case 3:
-        peakLines.style('display','block')
-        show = ['pv','a_pv','ra_pv']
-      break;
-      case 4:
-        show = ['pv','a_pv','ra_pv']
+        show = ['pv']
         peakData[0].annotation.style('display','block')
       break;
-      case 5:
-        show = ['pv','a_pv','ra_pv']
+      case 3:
+        show = ['pv']
         peakData[1].annotation.style('display','block')
         peakData[3].annotation.style('display','block')
       break;
-      case 6:
-        show = ['pv','a_pv','ra_pv']
+      case 4:
+        show = ['pv']
         peakData[2].annotation.style('display','block')
       break;
-      case 7:
-        show = ['pv','a_pv','ra_pv','ora_pv']
+      case 5:
+        show = ['pv','ora_pv']
       break;
     }
 
