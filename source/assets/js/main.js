@@ -696,21 +696,28 @@ d3.csv('/charts/all.csv').then(data=>{
     group_column:'type',
     width:700,
     height:325,
-    group_sort:['pv','a_pv','r_pv','ra_pv','ora_pv'],
+    group_sort:['pv','a_pv','r_pv','ra_pv','ora_pv','all','trend'],
     colors:{
       pv:'#4dbdf0',
       a_pv:'#213A8F',
       r_pv:'rgba(0,0,0,0.75)',
       ra_pv:'rgba(0,0,0,1)',
-      ora_pv:'#E60032'
+      ora_pv:'#E60032',
+      all:'#213A8F',
+      trend:'#E60032'
     }
   })
 
   let peakData = [
         {y:30,dy:20,date:'2013-04-01',note:{title:'VBB Daten'}},
-        {y:30,dy:20,date:'2013-09-01',note:{title:'Wahl 2013'}},
-        {y:30,dy:20,date:'2017-03-01',note:{title:'Beliebte Vornamen'}},
-        {y:30,dy:20,date:'2017-09-01',note:{title:'Wahl 2017'}}
+        {y:170,dy:20,date:'2013-09-01',note:{title:'Wahl 2013'}},
+        {y:120,dy:20,date:'2017-03-01',note:{title:'Beliebte Vornamen 2016'}},
+        {y:180,dy:10,date:'2017-09-01',note:{title:'Wahl 2017'}},
+        {y:85,dy:20,date:'2019-05-01',note:{title:'Wahl 2019'}},
+        {y:85,dy:15,date:'2019-05-01',note:{title:'Beliebte Vornamen 2018'}},
+        {y:140,dy:20,date:'2020-01-01',note:{title:'Beliebte Vornamen 2019'}},
+        {y:90,dy:-20,date:'2020-10-01',note:{title:'COVID-19 Fallzahlen'}},
+        {y:155,dy:50,date:'2021-01-01',note:{title:'Beliebte Vornamen 2020'}}
       ]
 
   peakData.forEach(p=>{ 
@@ -719,6 +726,10 @@ d3.csv('/charts/all.csv').then(data=>{
       p['dx'] = -50
     }else{
       p['dx'] = 50
+    }
+    console.log(p['note']['title'])
+    if (p['note']['title']== 'Beliebte Vornamen 2016'){
+      p['dx'] = -50
     }
     p['annotation'] = chart.g()
       .append("g")
@@ -741,9 +752,13 @@ d3.csv('/charts/all.csv').then(data=>{
 
   let story = [
     {
-      title:'Zugriffszahlen',
-      copy:'Die Kurve links zeigt die Zugriffszahlen seid April 2013. Nach gutem Beginn stagnierte die Entwicklung über einen längeren Zeitraum. Seit 2017 ist wieder ein deutlicher Anstieg zu verzeichnen. <br /><br />Klicke auf weiter um mehr zu erfahren.'
+      title:'Zugriffe auf Datensätze',
+      copy:'Die Kurve zeigt die Zugriffszahlen auf die Unterseiten zu den Datensätzen im Berliner Open Data Portal seid April 2013. <br /><br />Klicke auf weiter um mehr zu erfahren.'
     },
+    {
+      title:'Trend',
+      copy:'Nach gutem Beginn stagnierte die Entwicklung über einen längeren Zeitraum. Seit 2017 ist wieder ein deutlicher Anstieg zu verzeichnen. Insgesamt ergibt sich dadurch ein positver Trend.'
+  },
     // {
     //   title:'Verschwundene Daten',
     //   copy:'Einige der in der Statistik aufgeführten Datensätze sind inzwischen nicht mehr auf dem Portal abrufbar. Für die weitere Analyse nutzen wir nur Daten, die nach wie vor offen verfügbar sind.'
@@ -754,23 +769,27 @@ d3.csv('/charts/all.csv').then(data=>{
     // },
     {
       title:'Ausreißer',
-      copy:'Bei Betrachtung der Kurve fallen einige Ausreißer auf...'
+      copy:'Bei Betrachtung der Kurve fallen einige Ausreißer auf. Zu diesen Zeitpunkten sind die Zugriffszahlen durch Datensätze die auf besonders viel Interesse gestoßen sind in die Höhe geschossen.'
     },
-    {
-      title:'VBB Daten',
-      copy:'Im April 2013 stellte der Verkehrsverbund Berlin Brandenburg (VBB) seine Fahrplandaten unter freie Lizenz. Die Daten erfreuten sich in den ersten Monaten großer Beliebtheit. Da der VBB mittlerweile eine eigene API anbietet, sind die Zugriffe über das Portal inzwischen niedriger.'
-    },
+    // {
+    //   title:'VBB Daten',
+    //   copy:'Im April 2013 stellte der Verkehrsverbund Berlin Brandenburg (VBB) seine Fahrplandaten unter freie Lizenz. Die Daten erfreuten sich in den ersten Monaten großer Beliebtheit. Da der VBB mittlerweile eine eigene API anbietet, sind die Zugriffe über das Portal inzwischen niedriger.'
+    // },
     {
       title:'Wahlen',
-      copy:'Die Bundestagswahlen von 2013 und 2017 sind ebenfalls deutlich sichtbar. Speziell die Datensätze, die Wahlbezirke definieren, werden in diesen Zeiträumen häufig heruntergeladen.'
+      copy:'Die Bundestagswahlen von 2013 und 2017, sowie die Europawahl 2019 sind deutlich sichtbar. Speziell die Datensätze, die Wahlbezirke definieren, werden in diesen Zeiträumen häufig heruntergeladen.'
     },
     {
       title:'Beliebte Vornamen',
-      copy:'Alle Jahre wieder ein Lieblingsthema der Medien: Die beliebtesten Vornamen in Berlin. Dieser Datensatz wird im Frühjahr des Folgejahrs veröffentlicht und führt zu einer Vielzahl an Karten und Visualisierungen in der Berliner Presse.'
+      copy:'Alle Jahre wieder ein Lieblingsthema der Medien: Die beliebtesten Baby-Vornamen in Berlin. Dieser Datensatz wird im Frühjahr des Folgejahrs veröffentlicht und führt zu einer Vielzahl an Karten und Visualisierungen in der Berliner Presse.'
     },
     {
-      title:'Bereinigte Daten',
-      copy:'Da eine weitere Analyse mit den extremen Ausschlägen sehr schwierig ist, wurden die Daten für die folgenden Analysen angeglichen.'
+      title:'COVID-19-Fallzahlen',
+      copy:'Nahezu tagesaktuelle Fahlzahlen zu COVID-19-Erkrankungen für Berlin wurden erstmals im April 2020 im Portal veröffentlicht. Während das Interesse und die Zahl der Zugriffe über den Sommer moderat blieben, stiegen diese dann aber mit Beginn der 2. Welle im Oktober 2020 stark an.'
+    },
+    {
+      title:'Zugriffszahlen gesamt',
+      copy:'Nicht jeder Besucher des Open Data Portals findet was er sucht. Die Zugriffszahlen auf alle Seiten des Portals, also nicht nur auf die Unterseiten zu den Datensätzen sondern zum Beispiel nur auf die Titelseite, sind dadurch höher. Auffällig ist, dass der Trend ansteigender Zugriffszahlen hier nicht so deutlich wird.'
     }
   ], currentStory = 0
 
@@ -797,23 +816,40 @@ d3.csv('/charts/all.csv').then(data=>{
       // break;
       case 1:
         peakLines.style('display','block')
-        show = ['pv']
+        peakLines.style('opacity','0')
+        show = ['pv','trend']
       break;
       case 2:
+        peakLines.style('display','block')
+        peakLines.style('opacity','1')
         show = ['pv']
-        peakData[0].annotation.style('display','block')
       break;
+      // case 2:
+      //   show = ['pv']
+      //   peakData[0].annotation.style('display','block')
+      // break;
       case 3:
         show = ['pv']
+        peakLines.style('opacity','0.3')
         peakData[1].annotation.style('display','block')
         peakData[3].annotation.style('display','block')
+        peakData[4].annotation.style('display','block')
       break;
       case 4:
         show = ['pv']
         peakData[2].annotation.style('display','block')
+        peakData[5].annotation.style('display','block')
+        peakData[6].annotation.style('display','block')
+        peakData[8].annotation.style('display','block')
       break;
       case 5:
-        show = ['pv','ora_pv']
+        show = ['pv']
+        peakLines.style('opacity','0.3')
+        peakData[7].annotation.style('display','block')
+      break;
+      case 6:
+        peakLines.style('opacity','0')
+        show = ['pv','all']
       break;
     }
 
