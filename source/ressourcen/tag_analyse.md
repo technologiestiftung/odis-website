@@ -5,7 +5,7 @@ title: tags
 
 # Metadaten-Tags
 
-Wie in unserem [Leitfaden](http://127.0.0.1:4000/ressourcen/metadaten.html) erklärt, spielen Metadaten u.a. eine wichtige Rolle bei der Nutzbarkeit und Auffindbarkeit von offenen Daten. Im Falle der Auffindbarkeit, sind die sogenannten Tags (auch als Schlüsselwörter bekannt) besonders kritisch.
+Wie in unserem [Leitfaden](metadaten.html) erklärt, spielen Metadaten u.a. eine wichtige Rolle bei der Nutzbarkeit und Auffindbarkeit von offenen Daten. Im Falle der Auffindbarkeit, sind die sogenannten Tags (auch als Schlüsselwörter bekannt) besonders kritisch.
 
 Ein Tag ist ein Wort oder ein Begriff, der einen Datensatz beschreibt. Ein Tag kann die thematischen Inhalte eines Datensatzes beschreiben („Fahrrad“ oder „Krankenhaus“) oder auch den Kontext rund um den Datensatz (z.B. den Zusammenhang zwischen dem Datensatz und einem bestimmten Gesetz oder Ereignis).
 
