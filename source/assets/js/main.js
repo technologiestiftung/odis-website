@@ -17,7 +17,7 @@ const lineChart = (params) => {
     data_column = params.data_column || 'value',
     zero_based = params.zero_based || false,
     group_column = params.group_column || false,
-    colors = params.colors || '#000',
+    colors = params.colors || '#4dbdf0',
     svg = container.append('svg').attr('width', width).attr('height', height).attr('viewBox',`0 0 ${width} ${height}`).attr('preserveAspectRatio','xMidYMid meet'),
     margin = params.margin || {top: 20, right: 20, bottom: 30, left: 50},
     dWidth = width - margin.left - margin.right,
@@ -279,7 +279,7 @@ const histodots = (params) => {
   let module = {},
     container = params.container || d3.select('body'),
     height = params.height || 250,
-    width = params.width || 500,
+    width = params.width || 700,
     data = params.data,
     data_column = params.data_column || 'value',
     zero_based = params.zero_based || false,
@@ -314,6 +314,7 @@ const histodots = (params) => {
   let bin_count = params.bins || d3.thresholdSturges(values, d3.min(values), maxValue)
 
   let bins = d3.histogram()
+    console.log(bin_count)
     .thresholds(bin_count)
     (values)
 
@@ -332,7 +333,7 @@ const histodots = (params) => {
     }
   })
 
-  let dotSize = 3, dotPadding = 1, dotPlus = 0, binPadding = 10
+  let dotSize = 2, dotPadding = 1, dotPlus = 0, binPadding = 10
 
   bin_values.forEach((b,bi)=>{
     if(b.count>0){
@@ -924,29 +925,59 @@ d3.csv('/charts/bots.csv').then(data=>{
   })
 }).catch(err=>{ throw err; })
 
-d3.csv('/charts/releases.csv').then(data=>{
+d3.csv('/charts/dataset_count.csv').then(data=>{
   let chart = lineChart({
-    container:d3.select('#newdata'),
+    container:d3.select('#count'),
     data:data,
-    yLabel:'Neue Datensätze',
+    yLabel:'Anzahl Datensätze',
     yGrid:true,
     width:700,
     isTime:true,
     zero_based:true,
-    y:d3.scaleLinear().rangeRound([200, 0]).domain([0,100])
+    colors: '#213A8F',
+    y:d3.scaleLinear().rangeRound([200, 0]).domain([0,3000])
   })
 
   chart.g()
     .append("g")
-      .attr("class", "annotation-group black")
+      .attr("class", "annotation-group")
       .call(d3.annotation()
         .notePadding(5)
         .type(d3.annotationCalloutElbow)
         .annotations([{
-          note:{title:'19.2.2014',label:'403 neue Datensätze'},
-          x:chart.x(chart.parseTime('2014-02-19')),
-          y:20,
-          dx:20,
+          note:{title:'2665 Datensätze',label:'Stand 16.04.2021'},
+          x:chart.x(chart.parseTime('2021-04-16')),
+          y:22,
+          dx:-20,
+          dy:50
+        }])
+      )
+}).catch(err=>{ throw err; })
+
+d3.csv('/charts/dataset_author.csv').then(data=>{
+  let chart2 = lineChart({
+    container:d3.select('#author'),
+    data:data,
+    yLabel:'Anzahl Bereitsteller',
+    yGrid:true,
+    width:700,
+    isTime:true,
+    zero_based:true,
+    colors: '#213A8F',
+    y:d3.scaleLinear().rangeRound([200, 0]).domain([0,140])
+  })
+
+  chart2.g()
+    .append("g")
+      .attr("class", "annotation-group")
+      .call(d3.annotation()
+        .notePadding(5)
+        .type(d3.annotationCalloutElbow)
+        .annotations([{
+          note:{title:'112 Bereitsteller',label:'Stand 16.04.2021'},
+          x:chart2.x(chart2.parseTime('2021-04-16')),
+          y:40,
+          dx:-20,
           dy:50
         }])
       )
@@ -1172,8 +1203,28 @@ const buildTable = (data,id) => {
   thead.append('th').text('Datensatz')
   thead.append('th').text('Zugriffe')
 
-  tr.append('td').html(d=> ('group' in d) ? `<strong><a href="https://daten.berlin.de/datensaetze/${d.page}">${d.page}</a></strong><br /><span class="small">${d.group}</span>` : `<a href="https://daten.berlin.de/datensaetze/${d.page}">${d.page}</a>`)
-  tr.append('td').html(d=>`<strong>${Math.round(d.count)}</strong>`)
+  tr.append('td').html(d=> ('group' in d) ? `<a href="https://daten.berlin.de/datensaetze/${d.page}">${d.page}</a><br /><span class="small">${d.group}</span>` : `<a href="https://daten.berlin.de/datensaetze/${d.page}">${d.page}</a>`)
+  tr.append('td').html(d=>`${Math.round(d.count)}`)
+}
+
+const buildTableExtended = (data,id) => {
+
+  let table = d3.select('#'+id).append('table'),
+      thead = table.append('thead').append('tr'),
+      tbody = table.append('tbody'),
+      tr = tbody.selectAll('tr').data(data).enter().append('tr')
+
+  thead.append('th').text('Datensatz')
+  //thead.append('th').text('Zugriffe')
+  thead.append('th').text('Mittelwert')
+  thead.append('th').text('Relative Std.')
+  thead.append('th').text('Monate seit Veröffentlichung')
+
+  tr.append('td').html(d=> ('group' in d) ? `<a href="https://daten.berlin.de/datensaetze/${d.page}">${d.page}</a><br /><span class="small">${d.group}</span>` : `<a href="https://daten.berlin.de/datensaetze/${d.page}">${d.page}</a>`)
+  //tr.append('td').html(d=>`${Math.round(d.count)}`)
+  tr.append('td').html(d=>`${Math.round(d.mean)}`)
+  tr.append('td').html(d=>`${Math.round(d.std_norm*100)}%`)
+  tr.append('td').html(d=>`${d.month_count}`)
 }
 
 
@@ -1183,7 +1234,7 @@ d3.csv('/charts/top_abs.csv').then(data=>{
 }).catch(err=>{ throw err; })
 
 d3.csv('/charts/top_month.csv').then(data=>{
-  buildTable(data,'top_month')
+  buildTableExtended(data,'top_month')
 }).catch(err=>{ throw err; })
 
 d3.csv('/charts/top_group_abs.csv').then(data=>{

@@ -777,7 +777,7 @@ d3.csv("/charts/top_abs.csv").then(function (t) {
 }).catch(function (t) {
     throw t
 }), d3.csv("/charts/top_month.csv").then(function (t) {
-    buildTable(t, "top_month")
+    buildTableExtended(t, "top_month")
 }).catch(function (t) {
     throw t
 }), d3.csv("/charts/top_group_abs.csv").then(function (t) {

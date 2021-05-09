@@ -115,7 +115,7 @@
 #stacked_groups_1, 
 #stacked_groups_2,
 #stacked_groups_3, 
-#outliers, #newdata, #timepatterns, #seasonal{
+#outliers, #count, #timepatterns, #seasonal, #author{
 	max-width:700px;
 	width:100%;
 	margin:0 auto;
