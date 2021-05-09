@@ -3,7 +3,8 @@
 <script src="/assets/js/main.js"></script>
 <link rel="stylesheet" href="/assets/css/charts.css">
 
-<h4>Wie haben sich die Zugriffe seit dem Launch des Portals entwickelt?</h4> 
+<h4>Wie haben sich die Zugriffe auf das Datenportal entwickelt?</h4> 
+In den Zugriffszahlen tauchen all jene Webseitenaufrufe auf, die über das Open-Data-Portal erfolgen. Unterschieden wird dabei in domain-basierte Zugriffe und Zugriffe pro einzelnem Datensatz. Falls User*innen ihre Daten direkt aus anderen Berliner Portalangeboten des Landes (zum Beispiel FIS-Broker, GSI und AfS) beziehen, erscheinen diese nicht in den Statistiken, weshalb die eigentlichen Zugriffe auf Berlins offene Daten also noch deutlich höher sein dürften. Die Zugriffsstatistiken erlauben uns aber zahlreiche interessante Einsichten:
 <div class="special-section" id="intro-section">
     <div id="introviscontainer">
         <div id="introvis"></div>
@@ -21,10 +22,22 @@
 </div>
 <br>
 <h4>Welche Datensätze wurden am häufigsten aufgerufen?</h4> 
-Wie im Storygraph oben zu sehen ist, finden sich immer wieder Peaks in den Zugriffszahlen, die sich durch Datensätze erklären lassen, die von besonders hohem Interesse sind. Beim Vergleich der Zugriffe für jeden einzelnen Datensatz, zeigt sich, welche Datensätze nicht nur temporär die Zahlen nach oben schießen lassen, sondern auch die meisten Zugriffe insgesamt verzeichnen können. Die folgende Tabelle zeigt die Top 5 besuchten Datensätze bis zum heutigen Tag.Gruppe?
+Wie im Graph oben zu sehen ist, finden sich immer wieder Peaks in den Zugriffszahlen, die sich durch Datensätze erklären lassen, die von besonders hohem Interesse sind und deswegen sehr häufig abgefragt wurden. Wir haben für alle im Datenportal vorhandenen Datensätze die jeweiligen Zugriffe von ihrer Veröffentlichungen bis zum März 2021 aufsummiert. Das folgende Histogramm zeigt, wie massiv diese Ausreißer ins Gewicht fallen: Jeder Punkt steht für einen Datensatz. Der überwiegende Anteil davon, hat insgesamt weniger als 1000 Zugriffe. Eine sehr kleine Gruppe von Datensätzen macht dagegen einen sehr großen Teil der Zugriffe aus.
+<div id="histograms">
+    <h4 class="p-top" style="text-align: center;">Gesamtzahl der Zugriffe auf einen Datensatz</h4>
+    <div id="histograms-1"></div>
+</div>
+Dieser Vergleich der Zugriffe auf jeden einzelnen Datensatz zeigt, das wenige Datensätze die Zahlen nicht nur temporär nach oben schießen lassen, sondern auch mit großem Vorsprung die meisten Zugriffe insgesamt verzeichnen. Doch welche Datensätze führen die Spitze an? Die folgende Tabelle zeigt die Top 5 besuchten Datensätze bis zum heutigen Tag.
+<br>
 <div id="toptables">
-    <h4 class="p-top" style="text-align:center;">Ranking der Datensätze (gruppiert) mit den höchsten Zugriffszahlen</h4>
-    <div id="top_group_abs"></div>
+    <h4 class="p-top" style="text-align:center;">Ranking der Datensätze mit den höchsten Zugriffszahlen insgesamt</h4>
+    <div id="top_abs"></div>
+</div>
+<br>
+Es gibt aber auch Datensätze, die insgesamt zwar weniger häufig, dafür aber sehr konstante Zugriffszahlen über einen langen Zeitraum zeigen. Dabei handelt es sich vermutlich um Daten, die häufig und regelmäßig von Verwaltung, Wissenschaft und/oder Zivilgesellschaft für spezielle wiederkehrende Aufgaben und Fragestellungen verwendet werden. Um diese Datensätze zu finden, haben wir die Zugriffsstatistik nach Datensätzen gefiltert, die mindestens 15 Zugriffe im Durschnitt pro Monat verzeichnen, also statistisch gesehen mindestens jeden zweiten Tag von jemandem besucht werden, und die relative Standardabweichung berechnet. Je kleiner die Abweichung, umso gleichbleibender sind die Zugriffszahlen. Die folgende Tabelle zeigt die Top 10 dieser Datensätze. Einbezogen wurden dabei nur Datensätze, die seit mindestens 12 Monaten im Portal sind, da nur bei neuen Einträgen noch keine Aussage über die langfristigen Zugriffszahlen getroffen werden kann.
+<!-- Wie der zeitliche Verlauf der Zugriffe auf den ... zeigt, ist dieser deutlich kontinuierlicher, dafür aber mit deutlich weniger Zugriffen insgesamt. -->
+<br>
+<div id="toptables">
     <h4 class="p-top" style="text-align:center;">Ranking der Datensätze mit konstant hohen Zugriffszahlen</h4>
     <div id="top_month"></div>
 </div>
@@ -33,14 +46,9 @@ Wie im Storygraph oben zu sehen ist, finden sich immer wieder Peaks in den Zugri
 Der positive Trend der Zugriffszahlen über die letzten Jahre, kann unter anderem durch den wachsenden Datenbestand des Portals erklärt werden. Wie der folgende Graph zeigt, lässt sich in der <strong>Anzahl verfügbarer Datensätze</strong> nämlich ein überwiegend kontinuierlicher Anstieg verzeichnen. Die naheliegende Annahme, dass ein erhöhtes Angebot an Daten auch zu mehr Interessent\*innen und Anwender\*innen führt, scheint sich damit zu bestätigen. Weitere Gründe für steigende Zugriffe könnten zum Beispiel ein über die Jahre höher werdender Bekanntheitsgrad sein, aber auch die größer werdende Aufmerksamkeit für das Thema Open Data.
 <div id="count"></div>
 <br>
-Durch Projekte, rechtliche Rahmenbedingungen und Maßnahmen wie die Beauftragung von Open-Data-Verantwortlichen wird die Kontaktfläche und der Personenkreis in der Berliner Verwaltung die sich mit offenen Daten auseinandersetzen immer größer. So stiegen nicht nur der Datenbestand und die Zugriffszahlen über die letzten Jahre an, sondern auch die <strong>Anzahl datenbereitstellender Institutionen</strong>. Daten im Datenportal bereitstellen, können prinzipiell alle Berliner Ämter, Senatsverwaltungen und untergestellte Behörden, aber auch externe wie ...
+Durch Projekte, rechtliche Rahmenbedingungen und Maßnahmen wie die Beauftragung von Open-Data-Verantwortlichen wird die Kontaktfläche und der Personenkreis in der Berliner Verwaltung die sich mit offenen Daten auseinandersetzen immer größer. So stiegen nicht nur der Datenbestand und die Zugriffszahlen über die letzten Jahre an, sondern auch die <strong>Anzahl datenbereitstellender Institutionen</strong>. Daten im Datenportal bereitstellen, können prinzipiell alle Berliner Ämter, Senatsverwaltungen und untergestellte Behörden, aber auch externe verwaltungsnahe Akteure, wie zum Beispiel die BSR oder die Stromnetz Berlin GmbH.
 Der folgende Graph zeigt, dass es neben Phasen mit stagnierenden Bereistellerzahlen immer wieder Abschnitte gibt, in denen Schubweise eine recht hohe Zahl Bereitsteller*innen hinzukommen. Die realen Zahlen der Datenbereistellenden sind etwas geringer, als hier im Graph abzulesen, da manche Bereisteller (vermutlich unabsichtlich) unter verschiedenen Schreibweisen im Portal existieren und daher mehrfach gezählt werden, obwohl es sich um ein und die selbe Institution handelt.
 <div id="author"></div>
 <br>
-Zusammenfassend können wir sagen, dass die positive Tendenz zeigt, dass Bedarf an offenen Verwaltungsdaten besteht und diese kontinuierlich nachgefragt werden. Festzustellen ist außerdem, dass es Datensätze mit vergleichsweise wenigen, aber regelmäßigen Zugriffen gibt und Datensätze die temporär auf großes Interesse stoßen und deren Zugriffszahlen teilweise von äußeren Faktoren abhängen. Diese Analysen beruht übrigens beruhen übrigens auf einem Blogpost von uns aus dem Jahr 2018, in dem wer noch ein paar weitere Auswertungen vorgenommen haben. Wir freuen uns auf jedenfall auf die nächsten Jahre mit dem Datenportal und Open Data in Berlin und sind gespannt welche spannenden Trends und Datensätze die Zukunft mit sich bringt.
+Zusammenfassend können wir sagen, dass die positive Tendenz zeigt, dass Bedarf an offenen Verwaltungsdaten besteht und diese kontinuierlich nachgefragt werden. Festzustellen ist außerdem, dass es Datensätze mit vergleichsweise wenigen, aber regelmäßigen Zugriffen gibt und Datensätze die temporär auf großes Interesse stoßen und deren Zugriffszahlen teilweise von äußeren Faktoren abhängen. Diese Analysen beruht übrigens beruhen übrigens auf einem <a href="https://lab.technologiestiftung-berlin.de/projects/open-data-stats/de/">Blogpost aus dem Jahr 2018</a>, in dem wir noch ein paar weitere Auswertungen vorgenommen haben. Wir freuen uns auf jedenfall auf die nächsten Jahre mit dem Datenportal und Open Data in Berlin und sind gespannt welche spannenden Trends und Datensätze die Zukunft mit sich bringt.
 
-<div id="histograms">
-    <h3 class="p-top" style="text-align: center;">Gesamtzahl der Zugriffe auf einen Datensatz</h3>
-    <div id="histograms-1"></div>
-
-</div>

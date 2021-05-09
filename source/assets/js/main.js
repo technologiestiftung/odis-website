@@ -283,7 +283,7 @@ const histodots = (params) => {
     data = params.data,
     data_column = params.data_column || 'value',
     zero_based = params.zero_based || false,
-    colors = params.colors || ['#2e91d2','#E60032'],
+    colors = params.colors || ['#4dbdf0','#E60032'],
     svg = container.append('svg').attr('width', width).attr('height', height).attr('viewBox',`0 0 ${width} ${height}`).attr('preserveAspectRatio','xMidYMid meet'),
     margin = params.margin || {top: 20, right: 20, bottom: 30, left: 50},
     dWidth = width - margin.left - margin.right,
@@ -313,14 +313,15 @@ const histodots = (params) => {
   //thresholdScott,thresholdFreedmanDiaconis,thresholdSturges
   let bin_count = params.bins || d3.thresholdSturges(values, d3.min(values), maxValue)
 
+  
   let bins = d3.histogram()
-    console.log(bin_count)
-    .thresholds(bin_count)
+    .thresholds(8)
     (values)
 
   let bin_values = []
 
   bins.forEach(b=>{
+    console.log(bin_count)
     let e = d3.extent(b)
     if(isNaN(e[0])||isNaN(e[1])){
       bin_values.push({count:b.length, label:'-'})
@@ -340,7 +341,7 @@ const histodots = (params) => {
       let plusSize = (dotSize+dotPadding)*2,
           perLine = Math.floor(dWidth/plusSize),
           bin = g.append('g').attr('transform',`translate(0,${dotPlus})`),
-          bb = bin.append('text').text(b.label).style('font-size',10).node().getBoundingClientRect()
+          bb = bin.append('text').text(b.label).style('font-size',14).node().getBoundingClientRect()
 
       bins[bi] = bins[bi].sort()
 
@@ -728,7 +729,7 @@ d3.csv('/charts/all.csv').then(data=>{
     }else{
       p['dx'] = 50
     }
-    console.log(p['note']['title'])
+    //console.log(p['note']['title'])
     if (p['note']['title']== 'Beliebte Vornamen 2016'){
       p['dx'] = -50
     }
@@ -957,6 +958,35 @@ d3.csv('/charts/dataset_count.csv').then(data=>{
 d3.csv('/charts/dataset_author.csv').then(data=>{
   let chart2 = lineChart({
     container:d3.select('#author'),
+    data:data,
+    yLabel:'Anzahl Bereitsteller',
+    yGrid:true,
+    width:700,
+    isTime:true,
+    zero_based:true,
+    colors: '#213A8F',
+    y:d3.scaleLinear().rangeRound([200, 0]).domain([0,140])
+  })
+
+  chart2.g()
+    .append("g")
+      .attr("class", "annotation-group")
+      .call(d3.annotation()
+        .notePadding(5)
+        .type(d3.annotationCalloutElbow)
+        .annotations([{
+          note:{title:'112 Bereitsteller',label:'Stand 16.04.2021'},
+          x:chart2.x(chart2.parseTime('2021-04-16')),
+          y:40,
+          dx:-20,
+          dy:50
+        }])
+      )
+}).catch(err=>{ throw err; })
+
+d3.csv('/charts/dataset_author.csv').then(data=>{
+  let chart2 = lineChart({
+    container:d3.select('#top1'),
     data:data,
     yLabel:'Anzahl Bereitsteller',
     yGrid:true,
@@ -1216,14 +1246,16 @@ const buildTableExtended = (data,id) => {
 
   thead.append('th').text('Datensatz')
   //thead.append('th').text('Zugriffe')
+  thead.append('th').text('Rel.Std.')
   thead.append('th').text('Mittelwert')
-  thead.append('th').text('Relative Std.')
-  thead.append('th').text('Monate seit Veröffentlichung')
+  thead.append('th').text('Zugriffe')
+  thead.append('th').text('Monate')
 
   tr.append('td').html(d=> ('group' in d) ? `<a href="https://daten.berlin.de/datensaetze/${d.page}">${d.page}</a><br /><span class="small">${d.group}</span>` : `<a href="https://daten.berlin.de/datensaetze/${d.page}">${d.page}</a>`)
   //tr.append('td').html(d=>`${Math.round(d.count)}`)
-  tr.append('td').html(d=>`${Math.round(d.mean)}`)
   tr.append('td').html(d=>`${Math.round(d.std_norm*100)}%`)
+  tr.append('td').html(d=>`${Math.round(d.mean)}`)
+  tr.append('td').html(d=>`${Math.round(d.count)}`)
   tr.append('td').html(d=>`${d.month_count}`)
 }
 
