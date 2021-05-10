@@ -984,33 +984,34 @@ d3.csv('/charts/dataset_author.csv').then(data=>{
       )
 }).catch(err=>{ throw err; })
 
-d3.csv('/charts/dataset_author.csv').then(data=>{
+d3.csv('/charts/dataset_top1_sum.csv').then(data=>{
   let chart2 = lineChart({
-    container:d3.select('#top1'),
+    container:d3.select('#top1_sum'),
     data:data,
-    yLabel:'Anzahl Bereitsteller',
-    yGrid:true,
-    width:700,
+    yLabel:'Anzahl Zugriffe',
+    yGrid:false,
+    width:600,
     isTime:true,
     zero_based:true,
-    colors: '#213A8F',
-    y:d3.scaleLinear().rangeRound([200, 0]).domain([0,140])
+    colors: '#E60032',
+    y:d3.scaleLinear().rangeRound([200, 0]).domain([0,5000])
   })
 
-  chart2.g()
-    .append("g")
-      .attr("class", "annotation-group")
-      .call(d3.annotation()
-        .notePadding(5)
-        .type(d3.annotationCalloutElbow)
-        .annotations([{
-          note:{title:'112 Bereitsteller',label:'Stand 16.04.2021'},
-          x:chart2.x(chart2.parseTime('2021-04-16')),
-          y:40,
-          dx:-20,
-          dy:50
-        }])
-      )
+}).catch(err=>{ throw err; })
+
+d3.csv('/charts/dataset_top1_std.csv').then(data=>{
+  let chart2 = lineChart({
+    container:d3.select('#top1_std'),
+    data:data,
+    yLabel:'Anzahl Zugriffe',
+    yGrid:false,
+    width:600,
+    isTime:true,
+    zero_based:true,
+    colors: '#E60032',
+    y:d3.scaleLinear().rangeRound([200, 0]).domain([0,50])
+  })
+
 }).catch(err=>{ throw err; })
 
 d3.csv('/charts/seasonal.csv').then(data=>{
