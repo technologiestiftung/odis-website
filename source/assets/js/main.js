@@ -771,7 +771,7 @@ d3.csv('/charts/all.csv').then(data=>{
     // },
     {
       title:'Ausreißer',
-      copy:'Bei Betrachtung der Kurve fallen einige Ausreißer auf. Zu diesen Zeitpunkten sind die Zugriffszahlen durch Datensätze die auf besonders viel Interesse gestoßen sind in die Höhe geschossen.'
+      copy:'Bei Betrachtung der Kurve fallen einige Ausreißer auf. Zu diesen Zeitpunkten sind die Zugriffszahlen durch Datensätze, die auf besonders viel Interesse gestoßen sind, in die Höhe geschossen.'
     },
     // {
     //   title:'VBB Daten',
