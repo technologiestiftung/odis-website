@@ -755,7 +755,7 @@ d3.csv('/charts/all.csv').then(data=>{
   let story = [
     {
       title:'Zugriffe auf Datensätze',
-      copy:'Die Kurve zeigt die Zugriffszahlen auf die Unterseiten zu den Datensätzen im Berliner Open Data Portal seid April 2013. <br /><br />Klicke auf weiter um mehr zu erfahren.'
+      copy:'Die Kurve zeigt die Zugriffszahlen auf die Unterseiten zu den Datensätzen im Berliner Open-Data-Portal seid April 2013. <br /><br />Klicke auf weiter um mehr zu erfahren.'
     },
     {
       title:'Trend',
@@ -791,7 +791,7 @@ d3.csv('/charts/all.csv').then(data=>{
     },
     {
       title:'Zugriffszahlen gesamt',
-      copy:'Nicht jeder Besucher des Open Data Portals findet was er sucht. Die Zugriffszahlen auf alle Seiten des Portals, also nicht nur auf die Unterseiten zu den Datensätzen sondern zum Beispiel nur auf die Titelseite, sind dadurch höher. Auffällig ist, dass der Trend ansteigender Zugriffszahlen hier nicht so deutlich wird.'
+      copy:'Nicht jeder Besucher des Open-Data-Portals findet was er sucht. Die Zugriffszahlen auf alle Seiten des Portals, also nicht nur auf die Unterseiten zu den Datensätzen sondern zum Beispiel nur auf die Titelseite, sind dadurch höher. Auffällig ist, dass der Trend ansteigender Zugriffszahlen hier nicht so deutlich wird. Das könnte bedeuten, dass der Datensatz-Anteil der Zugriffe steigt.'
     }
   ], currentStory = 0
 
