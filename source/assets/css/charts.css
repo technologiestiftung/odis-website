@@ -198,3 +198,7 @@ p.copy.small-copy{
 button{
 	outline:none;
 }
+
+.button-primary:disabled {
+	background: #949292;
+  }
