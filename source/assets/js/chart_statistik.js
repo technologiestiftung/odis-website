@@ -688,7 +688,7 @@ const stackedArea = (params) => {
 
 /*------------ CHART BUILDING ------------*/
 
-d3.csv('/charts/all.csv').then(data=>{
+d3.csv('/assets/charts/all.csv').then(data=>{
   let chart = lineChart({
     container:d3.select('#introvis'),
     data:data,
@@ -926,7 +926,7 @@ d3.csv('/charts/all.csv').then(data=>{
 //   })
 // }).catch(err=>{ throw err; })
 
-d3.csv('/charts/dataset_count.csv').then(data=>{
+d3.csv('/assets/charts/dataset_count.csv').then(data=>{
   let chart = lineChart({
     container:d3.select('#count'),
     data:data,
@@ -955,7 +955,7 @@ d3.csv('/charts/dataset_count.csv').then(data=>{
       )
 }).catch(err=>{ throw err; })
 
-d3.csv('/charts/dataset_author.csv').then(data=>{
+d3.csv('/assets/charts/dataset_author.csv').then(data=>{
   let chart2 = lineChart({
     container:d3.select('#author'),
     data:data,
@@ -984,7 +984,7 @@ d3.csv('/charts/dataset_author.csv').then(data=>{
       )
 }).catch(err=>{ throw err; })
 
-d3.csv('/charts/dataset_top1_sum.csv').then(data=>{
+d3.csv('/assets/charts/dataset_top1_sum.csv').then(data=>{
   let chart2 = lineChart({
     container:d3.select('#top1_sum'),
     data:data,
@@ -999,7 +999,7 @@ d3.csv('/charts/dataset_top1_sum.csv').then(data=>{
 
 }).catch(err=>{ throw err; })
 
-d3.csv('/charts/dataset_top1_std.csv').then(data=>{
+d3.csv('/assets/charts/dataset_top1_std.csv').then(data=>{
   let chart2 = lineChart({
     container:d3.select('#top1_std'),
     data:data,
@@ -1055,7 +1055,7 @@ d3.csv('/charts/dataset_top1_std.csv').then(data=>{
 //   })
 // }).catch(err=>{ throw err; })
 
-d3.csv('/charts/histofull_smoothed.csv').then(data=>{
+d3.csv('/assets/charts/histofull_smoothed.csv').then(data=>{
   histodots({
     container:d3.select('#histograms-1'),
     data:data,
@@ -1262,11 +1262,11 @@ const buildTableExtended = (data,id) => {
 
 
 
-d3.csv('/charts/top_abs.csv').then(data=>{
+d3.csv('/assets/charts/top_abs.csv').then(data=>{
   buildTable(data, 'top_abs')
 }).catch(err=>{ throw err; })
 
-d3.csv('/charts/top_month.csv').then(data=>{
+d3.csv('/assets/charts/top_month.csv').then(data=>{
   buildTableExtended(data,'top_month')
 }).catch(err=>{ throw err; })
 
