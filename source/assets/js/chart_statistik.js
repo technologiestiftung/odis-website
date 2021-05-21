@@ -516,173 +516,173 @@ const stackedArea = (params) => {
 
 }
 
-const histoline = (params) => {
+// const histoline = (params) => {
 
-  let module = {},
-    container = params.container || d3.select('body'),
-    height = params.height || 250,
-    width = params.width || 500,
-    data = params.data,
-    data_column = params.data_column || 'value',
-    zero_based = params.zero_based || false,
-    colors = params.colors || '#000',
-    svg = container.append('svg').attr('width', width).attr('height', height).attr('viewBox',`0 0 ${width} ${height}`).attr('preserveAspectRatio','xMidYMid meet'),
-    margin = params.margin || {top: 20, right: 20, bottom: 30, left: 50},
-    dWidth = width - margin.left - margin.right,
-    dHeight = height - margin.top - margin.bottom,
-    g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`),
-    parseTime = params.parseTime || d3.timeParse("%Y-%m-%d"),
-    isTime = params.isTime || false,
-    values = []
+//   let module = {},
+//     container = params.container || d3.select('body'),
+//     height = params.height || 250,
+//     width = params.width || 500,
+//     data = params.data,
+//     data_column = params.data_column || 'value',
+//     zero_based = params.zero_based || false,
+//     colors = params.colors || '#000',
+//     svg = container.append('svg').attr('width', width).attr('height', height).attr('viewBox',`0 0 ${width} ${height}`).attr('preserveAspectRatio','xMidYMid meet'),
+//     margin = params.margin || {top: 20, right: 20, bottom: 30, left: 50},
+//     dWidth = width - margin.left - margin.right,
+//     dHeight = height - margin.top - margin.bottom,
+//     g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`),
+//     parseTime = params.parseTime || d3.timeParse("%Y-%m-%d"),
+//     isTime = params.isTime || false,
+//     values = []
 
-  data.forEach(d=>{
-    if(d[data_column]!='NaN'){
-      if(isTime){
-        values.push(parseTime(d[data_column]))
-      }else{
-        values.push(+d[data_column])
-      }
-    }
-  })
+//   data.forEach(d=>{
+//     if(d[data_column]!='NaN'){
+//       if(isTime){
+//         values.push(parseTime(d[data_column]))
+//       }else{
+//         values.push(+d[data_column])
+//       }
+//     }
+//   })
 
-  let x = d3.scaleLinear()
-    .domain(d3.extent(values)).nice()
-    .range([0, dWidth])
+//   let x = d3.scaleLinear()
+//     .domain(d3.extent(values)).nice()
+//     .range([0, dWidth])
 
-  let lineLimit = (d3.max(values)-d3.min(values))
+//   let lineLimit = (d3.max(values)-d3.min(values))
 
-  let lineBins = d3.histogram()
-    .thresholds(lineLimit)
-    (values)
+//   let lineBins = d3.histogram()
+//     .thresholds(lineLimit)
+//     (values)
 
-  let min = d3.min(values)
+//   let min = d3.min(values)
 
-  lineBins.forEach((l,li)=>{
-    l.v = li+min
-  })
+//   lineBins.forEach((l,li)=>{
+//     l.v = li+min
+//   })
 
-  lineBins.slice(lineLimit, lineBins.length-lineLimit)
-  lineBins = lineBins.filter(d=>(d.length>0)?true:false)
+//   lineBins.slice(lineLimit, lineBins.length-lineLimit)
+//   lineBins = lineBins.filter(d=>(d.length>0)?true:false)
 
-  let line = d3.line()
-    .x(d => x(d.v))
-    .y((d,i) => y(d.length))
+//   let line = d3.line()
+//     .x(d => x(d.v))
+//     .y((d,i) => y(d.length))
 
-  let y = d3.scaleLinear()
-    .domain([0, d3.max(lineBins, d => d.length)]).nice()
-    .range([dHeight, 0  ])
+//   let y = d3.scaleLinear()
+//     .domain([0, d3.max(lineBins, d => d.length)]).nice()
+//     .range([dHeight, 0  ])
 
-    //Let's get drawing
+//     //Let's get drawing
 
-  g.append('g')
-    .call(d3.axisLeft(y))
-    .call(g => g.select(".domain").remove())
-    .call(g => g.selectAll(".tick line").attr('x1', dWidth).style('stroke','rgba(0,0,0,0.1)'))
-    .call(g => g.select(".tick:last-of-type text").clone()
-        .attr("x", 4)
-        .attr("text-anchor", "start")
-        .attr("font-weight", "bold")
-        .text(data.y))
+//   g.append('g')
+//     .call(d3.axisLeft(y))
+//     .call(g => g.select(".domain").remove())
+//     .call(g => g.selectAll(".tick line").attr('x1', dWidth).style('stroke','rgba(0,0,0,0.1)'))
+//     .call(g => g.select(".tick:last-of-type text").clone()
+//         .attr("x", 4)
+//         .attr("text-anchor", "start")
+//         .attr("font-weight", "bold")
+//         .text(data.y))
 
-  g.append('g')
-    .attr("transform", `translate(0,${dHeight})`)
-    .call(d3.axisBottom(x))
+//   g.append('g')
+//     .attr("transform", `translate(0,${dHeight})`)
+//     .call(d3.axisBottom(x))
    
-  g.append('g')
-    .append('path')
-    .attr('fill','transparent')
-    .attr('stroke', 'red')
-    .attr('d', line(lineBins))
+//   g.append('g')
+//     .append('path')
+//     .attr('fill','transparent')
+//     .attr('stroke', 'red')
+//     .attr('d', line(lineBins))
 
-  return module
+//   return module
 
-}
+// }
 
-const heatgrid = (params) => {
-  let module = {},
-    container = params.container || d3.select('body'),
-    height = params.height || 250,
-    width = params.width || 500,
-    data = params.data,
-    date_column = params.date_column || 'date',
-    data_column = params.data_column || 'value',
-    zero_based = params.zero_based || false,
-    group_column = params.group_column || false,
-    colors = params.colors || ['rgba(255,255,255,1)','rgba(0,0,0,1)'],
-    svg = container.append('svg').attr('width', width).attr('height', height).attr('viewBox',`0 0 ${width} ${height}`).attr('preserveAspectRatio','xMidYMid meet'),
-    margin = params.margin || {top: 20, right: 20, bottom: 30, left: 50},
-    dWidth = width - margin.left - margin.right,
-    dHeight = height - margin.top - margin.bottom,
-    g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`),
-    parseTime = params.parseTime || d3.timeParse("%Y-%m-%d"),
-    isTime = params.isTime || false
+// const heatgrid = (params) => {
+//   let module = {},
+//     container = params.container || d3.select('body'),
+//     height = params.height || 250,
+//     width = params.width || 500,
+//     data = params.data,
+//     date_column = params.date_column || 'date',
+//     data_column = params.data_column || 'value',
+//     zero_based = params.zero_based || false,
+//     group_column = params.group_column || false,
+//     colors = params.colors || ['rgba(255,255,255,1)','rgba(0,0,0,1)'],
+//     svg = container.append('svg').attr('width', width).attr('height', height).attr('viewBox',`0 0 ${width} ${height}`).attr('preserveAspectRatio','xMidYMid meet'),
+//     margin = params.margin || {top: 20, right: 20, bottom: 30, left: 50},
+//     dWidth = width - margin.left - margin.right,
+//     dHeight = height - margin.top - margin.bottom,
+//     g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`),
+//     parseTime = params.parseTime || d3.timeParse("%Y-%m-%d"),
+//     isTime = params.isTime || false
 
-  data.forEach(d=>{
-    if(isTime){
-      d[date_column] = parseTime(d[date_column])
-    }else{
-      d[date_column] = +d[date_column]
-    }
-    d[data_column] = +d[data_column]
-  })
+//   data.forEach(d=>{
+//     if(isTime){
+//       d[date_column] = parseTime(d[date_column])
+//     }else{
+//       d[date_column] = +d[date_column]
+//     }
+//     d[data_column] = +d[data_column]
+//   })
 
-  let cols = params.cols || 10,
-      rows = params.rows || 10
+//   let cols = params.cols || 10,
+//       rows = params.rows || 10
 
-  let x = params.x || (isTime==true) ? d3.scaleTime().rangeRound([0,cols-1]).domain(d3.extent(data, function(d) { return d[date_column]; })) : d3.scaleLinear().rangeRound([0, cols-1]).domain(d3.extent(data, function(d) { return d[date_column]; })),
-    y = params.y || d3.scaleLinear().rangeRound([rows-1, 0]).domain((zero_based)?[0,d3.max(data, function(d) { return d[data_column]; })]:d3.extent(data, function(d) { return d[data_column]; })),
-    cell_width = dWidth/cols,
-    cell_height = dHeight/rows,
-    sx = params.x || (isTime==true) ? d3.scaleTime().rangeRound([0, (dWidth-cell_width)]).domain(d3.extent(data, function(d) { return d[date_column]; })) : d3.scaleLinear().range([0, (dWidth-cell_width)]).domain(d3.extent(data, function(d) { return d[date_column]; })),
-    sy = params.y || d3.scaleLinear().rangeRound([dHeight, 0]).domain((zero_based)?[0,d3.max(data, function(d) { return d[data_column]; })]:d3.extent(data, function(d) { return d[data_column]; }))
+//   let x = params.x || (isTime==true) ? d3.scaleTime().rangeRound([0,cols-1]).domain(d3.extent(data, function(d) { return d[date_column]; })) : d3.scaleLinear().rangeRound([0, cols-1]).domain(d3.extent(data, function(d) { return d[date_column]; })),
+//     y = params.y || d3.scaleLinear().rangeRound([rows-1, 0]).domain((zero_based)?[0,d3.max(data, function(d) { return d[data_column]; })]:d3.extent(data, function(d) { return d[data_column]; })),
+//     cell_width = dWidth/cols,
+//     cell_height = dHeight/rows,
+//     sx = params.x || (isTime==true) ? d3.scaleTime().rangeRound([0, (dWidth-cell_width)]).domain(d3.extent(data, function(d) { return d[date_column]; })) : d3.scaleLinear().range([0, (dWidth-cell_width)]).domain(d3.extent(data, function(d) { return d[date_column]; })),
+//     sy = params.y || d3.scaleLinear().rangeRound([dHeight, 0]).domain((zero_based)?[0,d3.max(data, function(d) { return d[data_column]; })]:d3.extent(data, function(d) { return d[data_column]; }))
 
-  let grid = {}
+//   let grid = {}
 
-  data.forEach(d=>{
-    let gx = x(d[date_column]),
-        gy = y(d[data_column])
+//   data.forEach(d=>{
+//     let gx = x(d[date_column]),
+//         gy = y(d[data_column])
 
-    if(!(gx in grid)){
-      grid[gx] = {}
-    }
+//     if(!(gx in grid)){
+//       grid[gx] = {}
+//     }
 
-    if(!(gy in grid[gx])){
-      grid[gx][gy] = 0
-    }
+//     if(!(gy in grid[gx])){
+//       grid[gx][gy] = 0
+//     }
 
-    grid[gx][gy]++
-  })
+//     grid[gx][gy]++
+//   })
 
-  let cells = []
+//   let cells = []
 
-  for(let gx in grid){
-    for(let gy in grid[gx]){
-      cells.push({
-        x:gx,
-        y:gy,
-        c:grid[gx][gy]
-      })
-    }
-  }
+//   for(let gx in grid){
+//     for(let gy in grid[gx]){
+//       cells.push({
+//         x:gx,
+//         y:gy,
+//         c:grid[gx][gy]
+//       })
+//     }
+//   }
 
-  let color = d3.scaleLinear().domain([0, d3.max(cells, (d)=>d.c)]).range([colors[0],colors[1]])
+//   let color = d3.scaleLinear().domain([0, d3.max(cells, (d)=>d.c)]).range([colors[0],colors[1]])
 
-  g.append("g")
-    .attr("transform", `translate(${cell_width/2},${dHeight})`)
-    .call(d3.axisBottom(sx))
+//   g.append("g")
+//     .attr("transform", `translate(${cell_width/2},${dHeight})`)
+//     .call(d3.axisBottom(sx))
 
-  g.append("g")
-    .call(d3.axisLeft(sy))
+//   g.append("g")
+//     .call(d3.axisLeft(sy))
 
-  g.append('g').selectAll('rect').data(cells).enter().append('rect')
-    .attr('width', cell_width)
-    .attr('height', cell_height)
-    .attr('x', d=>d.x*cell_width)
-    .attr('y', d=>d.y*cell_height)
-    .attr('fill', d=>color(d.c))
+//   g.append('g').selectAll('rect').data(cells).enter().append('rect')
+//     .attr('width', cell_width)
+//     .attr('height', cell_height)
+//     .attr('x', d=>d.x*cell_width)
+//     .attr('y', d=>d.y*cell_height)
+//     .attr('fill', d=>color(d.c))
 
-  return module
-}
+//   return module
+// }
 
 
 
@@ -879,52 +879,52 @@ d3.csv('/charts/all.csv').then(data=>{
 
 }).catch(err=>{ throw err; })
 
-d3.json('/charts/outlier.json').then(data=>{
+// d3.json('/charts/outlier.json').then(data=>{
 
-  data.forEach(o=>{
+//   data.forEach(o=>{
 
-    let container = d3.select('#outliers').append('div')
+//     let container = d3.select('#outliers').append('div')
 
-    container.append('h3').attr('class', 'p-top').text(o.title)
+//     container.append('h3').attr('class', 'p-top').text(o.title)
 
-    let text = `<strong>Lizenz</strong>: ${o.license_title}<br /><strong>Veröffentlichungsdatum</strong>:${o.date_released}<br /><strong>Autor</strong>:${o.author}<br /><a href="https://daten.berlin.de/datensaetze/${o.page}">Zum Datensatz &raquo;</a>`
+//     let text = `<strong>Lizenz</strong>: ${o.license_title}<br /><strong>Veröffentlichungsdatum</strong>:${o.date_released}<br /><strong>Autor</strong>:${o.author}<br /><a href="https://daten.berlin.de/datensaetze/${o.page}">Zum Datensatz &raquo;</a>`
 
-    container.append('p').attr('class','copy small-copy').html(text)
+//     container.append('p').attr('class','copy small-copy').html(text)
 
-    lineChart({
-      container:container,
-      yLabel:'Zugriffe',
-      xGrid:true,
-      yGrid:true,
-      data:o.original_pv,
-      data_column:'c',
-      isTime:true,
-      width:700,
-      xTickNum:5,
-      zero_based:true,
-      colors:'#000'
-    })
+//     lineChart({
+//       container:container,
+//       yLabel:'Zugriffe',
+//       xGrid:true,
+//       yGrid:true,
+//       data:o.original_pv,
+//       data_column:'c',
+//       isTime:true,
+//       width:700,
+//       xTickNum:5,
+//       zero_based:true,
+//       colors:'#000'
+//     })
 
-  })
+//   })
 
-}).catch(err=>{ throw err; })
+// }).catch(err=>{ throw err; })
 
-d3.csv('/charts/bots.csv').then(data=>{
-  data.forEach(d=>{ d.value = d.value*100; })
-  lineChart({
-    container:d3.select('#timepatterns'),
-    data:data,
-    isTime:true,
-    width:700,
-    yLabel:'Datensätze mit Klicks in %',
-    zero_based:true,
-    group_column:'type', 
-    colors:{
-      req:'rgba(0,0,0,1)',
-      reql:'rgba(0,0,0,0.5)'
-    }
-  })
-}).catch(err=>{ throw err; })
+// d3.csv('/charts/bots.csv').then(data=>{
+//   data.forEach(d=>{ d.value = d.value*100; })
+//   lineChart({
+//     container:d3.select('#timepatterns'),
+//     data:data,
+//     isTime:true,
+//     width:700,
+//     yLabel:'Datensätze mit Klicks in %',
+//     zero_based:true,
+//     group_column:'type', 
+//     colors:{
+//       req:'rgba(0,0,0,1)',
+//       reql:'rgba(0,0,0,0.5)'
+//     }
+//   })
+// }).catch(err=>{ throw err; })
 
 d3.csv('/charts/dataset_count.csv').then(data=>{
   let chart = lineChart({
@@ -1014,48 +1014,48 @@ d3.csv('/charts/dataset_top1_std.csv').then(data=>{
 
 }).catch(err=>{ throw err; })
 
-d3.csv('/charts/seasonal.csv').then(data=>{
-  lineChart({
-    container:d3.select('#seasonal'),
-    data:data,
-    yLabel:'Zugriffe rel. zum Jahresmax.',
-    width:700,
-    xGrid:true,
-    group_column:'year',
-    date_column:'month',
-    zero_based:true,
-    xTicks:(d)=>{
-      //let m = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
-      let m = ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez']
-      return m[d]
-    },
-    colors:{
-      2014:'rgba(0,0,0,0.25)',
-      2015:'rgba(0,0,0,0.5)',
-      2016:'rgba(0,0,0,0.75)',
-      2017:'rgba(0,0,0,0.1)'
-    }
-  })
-}).catch(err=>{ throw err; })
+// d3.csv('/charts/seasonal.csv').then(data=>{
+//   lineChart({
+//     container:d3.select('#seasonal'),
+//     data:data,
+//     yLabel:'Zugriffe rel. zum Jahresmax.',
+//     width:700,
+//     xGrid:true,
+//     group_column:'year',
+//     date_column:'month',
+//     zero_based:true,
+//     xTicks:(d)=>{
+//       //let m = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
+//       let m = ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez']
+//       return m[d]
+//     },
+//     colors:{
+//       2014:'rgba(0,0,0,0.25)',
+//       2015:'rgba(0,0,0,0.5)',
+//       2016:'rgba(0,0,0,0.75)',
+//       2017:'rgba(0,0,0,0.1)'
+//     }
+//   })
+// }).catch(err=>{ throw err; })
 
-d3.csv('/charts/overtime.csv').then(data=>{
-  lineChart({
-    container:d3.select('#individual'),
-    data:data,
-    group_column:'type',
-    colors:'rgba(0,0,0,0.1)'
-  })
+// d3.csv('/charts/overtime.csv').then(data=>{
+//   lineChart({
+//     container:d3.select('#individual'),
+//     data:data,
+//     group_column:'type',
+//     colors:'rgba(0,0,0,0.1)'
+//   })
 
-  heatgrid({
-    container:d3.select('#individual'),
-    data:data,
-    rows:10,
-    cols:24,
-    zero_based:true
-  })
-}).catch(err=>{ throw err; })
+//   heatgrid({
+//     container:d3.select('#individual'),
+//     data:data,
+//     rows:10,
+//     cols:24,
+//     zero_based:true
+//   })
+// }).catch(err=>{ throw err; })
 
-d3.csv('/charts/histofull.csv').then(data=>{
+d3.csv('/charts/histofull_smoothed.csv').then(data=>{
   histodots({
     container:d3.select('#histograms-1'),
     data:data,
@@ -1108,121 +1108,121 @@ d3.csv('/charts/histofull.csv').then(data=>{
   */
 }).catch(err=>{ throw err; })
 
-d3.select('#showhistos').on('click', ()=>{
-  let el = d3.select('#individual-histograms'),
-    but = d3.select('#showhistos'),
-    display = el.style('display')
+// d3.select('#showhistos').on('click', ()=>{
+//   let el = d3.select('#individual-histograms'),
+//     but = d3.select('#showhistos'),
+//     display = el.style('display')
 
-  if(display == 'block'){
-    el.style('display','none')
-    but.text('Die ersten 12 Monate eines Datensatzes als Histogramme anzeigen')
-  }else{
-    el.style('display','block')
-    but.text('Histogramme ausblenden')
-  }
-})
+//   if(display == 'block'){
+//     el.style('display','none')
+//     but.text('Die ersten 12 Monate eines Datensatzes als Histogramme anzeigen')
+//   }else{
+//     el.style('display','block')
+//     but.text('Histogramme ausblenden')
+//   }
+// })
 
-d3.csv('/charts/histotime.csv').then(data=>{
+// d3.csv('/charts/histotime.csv').then(data=>{
 
-  let type = 'median' // mean,median
-  let maxs = [], overallmax = 0
-  for(let t = 1; t<=12; t++){
-    maxs[t] = 0
-    data.forEach(d=>{
-      if(d['t'+t+'_'+type] != 'NaN'){
-        maxs[t]++
-      }
-    })
-    if(maxs[t]>overallmax) overallmax = maxs[t]
-  }
+//   let type = 'median' // mean,median
+//   let maxs = [], overallmax = 0
+//   for(let t = 1; t<=12; t++){
+//     maxs[t] = 0
+//     data.forEach(d=>{
+//       if(d['t'+t+'_'+type] != 'NaN'){
+//         maxs[t]++
+//       }
+//     })
+//     if(maxs[t]>overallmax) overallmax = maxs[t]
+//   }
 
-  for(let t = 1; t<=12; t++){
-    let chart = histogram({
-      container:d3.select('#individual-histograms'),
-      data:data,
-      width:350,
-      height:200,
-      maxValue:160,
-      maxLength:820,
-      bins:20,
-      equalize:(d)=>d/maxs[t]*overallmax,
-      data_column:`t${t}_${type}`
-    })
+//   for(let t = 1; t<=12; t++){
+//     let chart = histogram({
+//       container:d3.select('#individual-histograms'),
+//       data:data,
+//       width:350,
+//       height:200,
+//       maxValue:160,
+//       maxLength:820,
+//       bins:20,
+//       equalize:(d)=>d/maxs[t]*overallmax,
+//       data_column:`t${t}_${type}`
+//     })
 
-    chart.g().append('g').attr('transform', `translate(${chart.dWidth()},0)`)
-      .append('text').attr('text-anchor','end').text(t+' Monate nach Release')
-      .attr('dy',6)
-      // .style('font-family','sans-serif').style('font-weight','bold').style('font-size',12)
-  }
-}).catch(err=>{ throw err; })
+//     chart.g().append('g').attr('transform', `translate(${chart.dWidth()},0)`)
+//       .append('text').attr('text-anchor','end').text(t+' Monate nach Release')
+//       .attr('dy',6)
+//       // .style('font-family','sans-serif').style('font-weight','bold').style('font-size',12)
+//   }
+// }).catch(err=>{ throw err; })
 
-d3.csv('/charts/group_author.csv').then(data=>{
+// d3.csv('/charts/group_author.csv').then(data=>{
 
-  let chart = stackedArea({
-    container:d3.select('#stacked_groups_2'),
-    data:data,
-    isTime:true,
-    height:600,
-    width:700
-  })
+//   let chart = stackedArea({
+//     container:d3.select('#stacked_groups_2'),
+//     data:data,
+//     isTime:true,
+//     height:600,
+//     width:700
+//   })
 
-  d3.select('#stacked_groups_2-abs').on('click', ()=>{
-    chart.setMode(true)
-    chart.update()
-  })
+//   d3.select('#stacked_groups_2-abs').on('click', ()=>{
+//     chart.setMode(true)
+//     chart.update()
+//   })
 
-  d3.select('#stacked_groups_2-rel').on('click', ()=>{
-    chart.setMode(false)
-    chart.update()
-  })
-
-
-}).catch(err=>{ throw err; })
-
-d3.csv('/charts/group_group_name.csv').then(data=>{
-
-  let chart = stackedArea({
-    container:d3.select('#stacked_groups_1'),
-    data:data,
-    isTime:true,
-    height:600,
-    width:700
-  })
-
-  d3.select('#stacked_groups_1-abs').on('click', ()=>{
-    chart.setMode(true)
-    chart.update()
-  })
-
-  d3.select('#stacked_groups_1-rel').on('click', ()=>{
-    chart.setMode(false)
-    chart.update()
-  })
-
-}).catch(err=>{ throw err; })
-
-d3.csv('/charts/group_license_title.csv').then(data=>{
-
-  let chart = stackedArea({
-    container:d3.select('#stacked_groups_3'),
-    data:data,
-    isTime:true,
-    height:600,
-    width:700
-  })
-
-  d3.select('#stacked_groups_3-abs').on('click', ()=>{
-    chart.setMode(true)
-    chart.update()
-  })
-
-  d3.select('#stacked_groups_3-rel').on('click', ()=>{
-    chart.setMode(false)
-    chart.update()
-  })
+//   d3.select('#stacked_groups_2-rel').on('click', ()=>{
+//     chart.setMode(false)
+//     chart.update()
+//   })
 
 
-}).catch(err=>{ throw err; })
+// }).catch(err=>{ throw err; })
+
+// d3.csv('/charts/group_group_name.csv').then(data=>{
+
+//   let chart = stackedArea({
+//     container:d3.select('#stacked_groups_1'),
+//     data:data,
+//     isTime:true,
+//     height:600,
+//     width:700
+//   })
+
+//   d3.select('#stacked_groups_1-abs').on('click', ()=>{
+//     chart.setMode(true)
+//     chart.update()
+//   })
+
+//   d3.select('#stacked_groups_1-rel').on('click', ()=>{
+//     chart.setMode(false)
+//     chart.update()
+//   })
+
+// }).catch(err=>{ throw err; })
+
+// d3.csv('/charts/group_license_title.csv').then(data=>{
+
+//   let chart = stackedArea({
+//     container:d3.select('#stacked_groups_3'),
+//     data:data,
+//     isTime:true,
+//     height:600,
+//     width:700
+//   })
+
+//   d3.select('#stacked_groups_3-abs').on('click', ()=>{
+//     chart.setMode(true)
+//     chart.update()
+//   })
+
+//   d3.select('#stacked_groups_3-rel').on('click', ()=>{
+//     chart.setMode(false)
+//     chart.update()
+//   })
+
+
+// }).catch(err=>{ throw err; })
 
 const buildTable = (data,id) => {
 
@@ -1270,10 +1270,10 @@ d3.csv('/charts/top_month.csv').then(data=>{
   buildTableExtended(data,'top_month')
 }).catch(err=>{ throw err; })
 
-d3.csv('/charts/top_group_abs.csv').then(data=>{
-  buildTable(data,'top_group_abs')
-}).catch(err=>{ throw err; })
+// d3.csv('/charts/top_group_abs.csv').then(data=>{
+//   buildTable(data,'top_group_abs')
+// }).catch(err=>{ throw err; })
 
-d3.csv('/charts/top_group_month.csv').then(data=>{
-  buildTable(data,'top_group_month')
-}).catch(err=>{ throw err; })
+// d3.csv('/charts/top_group_month.csv').then(data=>{
+//   buildTable(data,'top_group_month')
+// }).catch(err=>{ throw err; })
