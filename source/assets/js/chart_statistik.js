@@ -321,7 +321,6 @@ const histodots = (params) => {
   let bin_values = []
 
   bins.forEach(b=>{
-    console.log(bin_count)
     let e = d3.extent(b)
     if(isNaN(e[0])||isNaN(e[1])){
       bin_values.push({count:b.length, label:'-'})
