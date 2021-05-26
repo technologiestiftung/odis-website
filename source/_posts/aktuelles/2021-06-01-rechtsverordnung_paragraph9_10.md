@@ -11,7 +11,7 @@ visible: true
 *In einer Reihe von Blogposts wird die Open Data Informationsstelle einige Paragraphen der Open-Data-Rechtsverordnung näher beleuchten und erläutern, welche Auswirkungen die Verordnung auf die Arbeit von Verwaltungsmitarbeiter\*innen hat. In unserem ersten Blogpost dieser Reihe, haben wir § 7 der Open-Data-Rechtsverordnung [präsentiert](https://odis-berlin.de/aktuelles/2020/10/05/rechtsverordnung_paragraph7.html).*  
 
 Welche Verwendungszwecke von offenen Daten müssen erlaubt sein, damit die Daten wirklich *offen* sind? Und was für Risiken birgt die Bereitstellung von Daten für Behörden der Berliner Verwaltung? § 9 und § 10 der Open-Data-Rechtsverordnung thematisieren diese beiden Fragestellungen. In diesem Blogpost fassen wir diese Paragraphen zusammen und gehen auf die wichtigsten Aspekte ein. 
-
+<br><br>
 #### § 9 Nutzungsbedingungen
 
 Ein wichtiger Aspekt der Offenheit eines Datensatzes sind die Nutzungsbedingungen unter welchen die Daten bereitgestellt werden. Daten die zwar für jeden frei zugänglich sind, die aber nur für sehr spezifische Zwecke benutzt werden dürfen, sind nicht wirklich *offen* im Sinne von Open Data. Die eigentliche Grundidee offener Daten besteht schließlich darin, dass ein Mehrwert für die gesamte Stadt entsteht, wenn das volle Potenzial von Daten ausgeschöpft werden kann. Um das zu ermöglichen, sollte die Nutzung nicht auf bestimmte Zwecke, Ziel- oder Nutzergruppen beschränkt werden dürfen. 
