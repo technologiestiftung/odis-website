@@ -40,20 +40,28 @@ ressources:
             text: Die Veröffentlichung von Daten setzt voraus, dass die Offenlegung nach dem geltenden (Datenschutz-)Recht zulässig ist. Mit dieser Checkliste können Sie prüfen, ob Ihre Daten unter Einhaltung des Datenschutzes veröffentlicht werden können.
             image: page/process-07.svg
 
-      - question: Wie sieht ein gut strukturierter Datensatz aus?
+      # - question: Wie sieht ein gut strukturierter Datensatz aus?
+      #   sublinks:
+      #     - title: Diese Ressource kommt bald ...
+      #       source: Datenqualität
+      #       #url: /ressourcen/example.html
+      #       text: Ein wichtiger Anspruch der an Open Data gestellt wird, ist das die Daten in einem offenen und maschinenlesbaren Format zugänglich sind. Es gibt aber noch viele andere Aspekte, die darüber entscheiden ob Anwender*innen leicht mit den Daten weiterarbeiten können. Welche Qualitätsmerkmale für die Beurteilung offener Daten herangezogen werden können, lesen Sie in unserem Leitfaden.
+      #       image: page/process-04.svg
+
+      - question: Wie veröffentliche ich Open Data?
         sublinks:
-          - title: Diese Ressource kommt bald ...
-            source: Datenqualität
-            #url: /ressourcen/example.html
-            text: Ein wichtiger Anspruch der an Open Data gestellt wird, ist das die Daten in einem offenen und maschinenlesbaren Format zugänglich sind. Es gibt aber noch viele andere Aspekte, die darüber entscheiden ob Anwender*innen leicht mit den Daten weiterarbeiten können. Welche Qualitätsmerkmale für die Beurteilung offener Daten herangezogen werden können, lesen Sie in unserem Leitfaden.
-            image: page/process-04.svg
+          - title: Video-Tutorial zum Datenregister
+            source: Veröffentlichung im Datenportal
+            url: /ressourcen/datenregister.html
+            text: Das Berliner Datenportal ist die zentrale Plattform für alle offenen Datensätze der Stadt. Erfahren Sie welche Möglichkeiten es gibt, um Daten im Portal zu veröffentlichen. Wir erklären ihnen Schritt-für-Schritt, wie Sie (Meta)-Daten über das sogenannte Datenregister eintragen und bearbeiten und geben Tipps, wie sie Ihre Daten besonders gut auffindbar machen.
+            image: page/logo-opendata.svg
 
       - question: Wie visualisiere ich offene Daten für Bürger*innen?
         sublinks:
           - title: Video-Tutorials zur Datenvisualisierung
             source: Datenvisualisierung
             url: /ressourcen/datenvisualisierung.html
-            text: Open-Data ist kein Selbstzweck an sich, sondern dient in erster Linie dazu, Informationen einer breiten Masse zugänglich zu machen. Gut gemachte Datenvisualisierungen sind ein wichtiges Mittel, um Beobachtungen, Analysen und Erkentnisse aus Daten auf einfache Art und Weise zu präsentieren. Sehen Sie hier was es dabei zu beachten gibt und wie sie mittels des kostenlosen Visualisierungs-Tools Datawrapper eigene Graphen und Karten erstellen können.
+            text: Open-Data ist kein Selbstzweck an sich, sondern dient in erster Linie dazu, Informationen einer breiten Masse zugänglich zu machen. Gut gemachte Datenvisualisierungen sind ein wichtiges Mittel, um Beobachtungen, Analysen und Erkenntnisse aus Daten auf einfache Art und Weise zu präsentieren. Sehen Sie hier was es dabei zu beachten gibt und wie sie mittels des kostenlosen Visualisierungs-Tools Datawrapper eigene Graphen und Karten erstellen können.
             image: page/process-03.svg
             
       - question: Studien der Technologiestiftung zu Open Data
