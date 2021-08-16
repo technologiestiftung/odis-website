@@ -862,7 +862,9 @@ p.copy {
 // Breakpoints: 
 // > 64rem: 1024px 
 // > 54rem - 64rem: 864 - 1024
-
+td.bold{
+    font-weight: bold;
+}
 
 @media screen and (min-width: 64rem) {
     .section {
