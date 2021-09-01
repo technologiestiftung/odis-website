@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Erwähnungen von Straßennamen in BVV-Sitzungen in Treptow-Köpenick</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+.mapboxgl-popup {
+max-width: 280px;
+font: 12px/20px 'Clan Book', sans-serif;
+}
+.session {
+  margin-bottom: 20px;
+  font: 12px/20px 'Clan Book', sans-serif;
+}
+
+.row {
+  height: 12px;
+  width: 100%;
+}
+
+.colors {
+  background: linear-gradient(to right, #909CC6, #00ACCF, #2e91d2, #2a49af,#213A8F);
+  margin-bottom: 2px;
+}
+
+.label {
+  width: 15%;
+  display: inline-block;
+  text-align: center;
+}
+
+#console {
+  position: absolute;
+  width: 240px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: white;
+}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id='console'>
+<div class='session'>
+	<p>Anzahl Erwähnungen von Straßennamen</p>
+	<div class='row colors'>
+	</div>
+	<div class='row labels'>
+	<div class='label'>1</div>
+	  <div class='label'>10</div>
+	  <div class='label'>20</div>
+	  <div class='label'>30</div>
+	  <div class='label'>40</div>
+    <div class='label'>+</div>
+	</div>
+  </div>
+</div>  
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoidGVjaG5vbG9naWVzdGlmdHVuZyIsImEiOiJja3QxZjk0ejMwOXU4MnBwaGJmOHJ4eHM4In0.ND7gepZDgIDLCChzKckn5w';
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/light-v10',
+center: [13.5394, 52.4495],
+zoom: 12
+});
+ 
+map.on('load', () => {
+// Add a geojson point source.
+// Heatmap layers also work with a vector tile source.
+map.addSource('allris-streets', {
+'type': 'geojson',
+'data': 'allris.geojson'
+});
+ 
+map.addLayer(
+{
+'id': 'allris-streets-heat',
+'type': 'heatmap',
+'source': 'allris-streets',
+'maxzoom':10,
+'paint': {
+// Increase the heatmap weight based on frequency and property magnitude
+'heatmap-weight': 0.2,
+
+// Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
+// Begin color ramp at 0-stop with a 0-transparancy color
+// to create a blur-like effect.
+'heatmap-color': [
+'interpolate',
+['linear'],
+['heatmap-density'],
+0,
+'rgba(33,102,172,0)',
+0.5,
+        '#909CC6',
+        0.8,
+        '#2e91d2',
+        0.9,
+        '#2a49af',
+        0.95,
+        '#213A8F'
+]
+}
+},
+);
+ 
+map.addLayer(
+{
+'id': 'allris-streets-point',
+'type': 'circle',
+'source': 'allris-streets',
+'minzoom': 10,
+'paint': {
+      'circle-radius': [
+        'interpolate',
+        ['linear'],
+        ['number', ['get', 'freq2']],
+        1,
+        4,
+        10,
+        6,
+		20,
+		8,
+		30,
+		10,
+		40,
+		12
+      ],
+      'circle-color': [
+        'interpolate',
+        ['linear'],
+        ['number', ['get', 'freq2']],
+        1,
+        '#909CC6',
+        10,
+        '#00ACCF',
+        20,
+        '#2e91d2',
+        30,
+        '#2a49af',
+        40,
+        '#213A8F'
+      ],
+      'circle-opacity': 0.8
+    }
+},
+
+'waterway-label'
+);
+});
+
+map.on('click', 'allris-streets-point', (e) => {
+// Copy coordinates array.
+const coordinates = e.features[0].geometry.coordinates.slice();
+const FreqWords = e.features[0].properties.mostFreqWords.split(',');
+const FreqWordsSel = FreqWords.slice(0, 10);
+
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML('<h3>' + e.features[0].properties.streetName + '</h3>' +
+						'<h4 style="margin-bottom:0px">Anzahl Erwähnungen: </h4><a>'+ e.features[0].properties.freq + '</a>' + 
+						'<h4 style="margin-bottom:0px">Häufige im Zusammenhang stehende Begriffe: </h4><a>' + FreqWordsSel)
+ 
+.addTo(map);
+});
+ 
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'allris-streets-point', () => {
+map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'allris-streets-point', () => {
+map.getCanvas().style.cursor = '';
+});
+
+
+</script>
+ 
+</body>
+</html>
