@@ -6,9 +6,13 @@
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+<link rel="stylesheet" href="/assets/css/main.css">
 <style>
 body { margin: 0; padding: 0; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+h5 { font-size: 16px;}
+h6 { font-size: 12px;}
 
 .mapboxgl-popup {
 max-width: 280px;
@@ -37,7 +41,7 @@ font: 12px/20px 'Clan Book', sans-serif;
 
 #console {
   position: absolute;
-  width: 240px;
+  width: 220px;
   margin: 10px;
   padding: 10px 20px;
   background-color: white;
@@ -170,9 +174,9 @@ coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
  
 new mapboxgl.Popup()
 .setLngLat(coordinates)
-.setHTML('<h3>' + e.features[0].properties.streetName + '</h3>' +
-						'<h4 style="margin-bottom:0px">Anzahl Erwähnungen: </h4><a>'+ e.features[0].properties.freq + '</a>' + 
-						'<h4 style="margin-bottom:0px">Häufige im Zusammenhang stehende Begriffe: </h4><a>' + FreqWordsSel)
+.setHTML('<h5>' + e.features[0].properties.streetName + '</h5>' +
+						'<a style="margin-bottom:0px">Anzahl Erwähnungen: </a><p style="margin-bottom:2px">'+ e.features[0].properties.freq + '</p>' + 
+						'<a style="margin-bottom:0px">Häufige im Zusammenhang stehende Begriffe: </a><p style="margin-bottom:0px">' + FreqWordsSel +'</p>')
  
 .addTo(map);
 });

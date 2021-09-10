@@ -8,6 +8,7 @@
     border: 1px solid #052657;
     padding: 6px;
     text-align: center;
+    font-size: 12px;
   }
 </style>
 
@@ -71,7 +72,7 @@
         .style("left", d3.event.pageX - 50 + "px")
         .style("top", d3.event.pageY - 70 + "px")
         .style("display", "inline-block")
-        .html('Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' + d.Word + '</span>: '+ d.Value);
+        .html('Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' + d.Word + '</span>: <span style="font-weight:bold">'+ d.Value + '</span>');
       })
       .on("mouseout", function(d, i) {
         d3.select(this)
@@ -99,7 +100,7 @@
       .style("left", d3.event.pageX - 50 + "px")
       .style("top", d3.event.pageY - 70 + "px")
       .style("display", "inline-block")
-      .html('Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' + d.Word + '</span>: '+ d.Value);
+      .html('Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' + d.Word + '</span>: <span style="font-weight:bold">'+ d.Value + '</span>');
       })
     .on("mouseout", function(d, i) {
       d3.select(this)
