@@ -19,8 +19,8 @@
 
 <script>
   const dimensions = ({  
-    height:500,
-    width:500,  
+    height:520,
+    width:460,  
     margin: {
         top: 5,
         right: 10,
@@ -38,7 +38,7 @@
       .attr("width", dimensions.width + dimensions.margin.left + dimensions.margin.right)
       .attr("height", dimensions.height + dimensions.margin.top + dimensions.margin.bottom)
     .append("g")
-      .attr("transform", "translate(" + dimensions.width / 2 + "," + ( 500/1.8)+")");
+      .attr("transform", "translate(" + dimensions.width / 2 + "," + ( 550/1.8)+")");
     
     const x = d3.scaleBand()
         .range([0, 2 * Math.PI])    
