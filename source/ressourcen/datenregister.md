@@ -14,7 +14,7 @@ Im folgenden Video-Tutorial erklären wir Ihnen, wie Sie Datensätze manuell üb
 
 
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://youtube.com/embed/tSyVYAolJog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/z-x0of0HEkk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 
