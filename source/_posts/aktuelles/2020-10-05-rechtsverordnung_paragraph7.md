@@ -35,7 +35,7 @@ Um solche Situationen zu vermeiden, sind die Behörden dazu angehalten bei Neuab
 
 Beispielsweise könnte eine solche Formulierung so aussehen:
 
-*Der Zuwendungsempfänger wird verpflichtet, die entsprechenden Daten im Sinne des § 3 Absatz 2 der Berliner Open Data Verordnung in einem offenen, maschinenlesbaren Format bereitzustellen. Weiterhin müssen diese Daten unter einer offenen Lizenz gemäß § 9 Absatz 1, 2 der Berliner Open Data Verordnung bereitgestellt werden, sodass die uneingeschränkte Wiederverwendung der Daten für die private sowie die kommerzielle Nutzung gewährleistet ist.*
+*Der/Die Auftragnehmer\*in wird verpflichtet, im Rahmen des Projektes durch ihn erhobene Daten im Sinne des § 3 Absatz 2 der Open Data Verordnung des Landes Berlin in einem offenen, maschinenlesbaren Format dem/der Auftraggeber\*in bereitzustellen. Weiterhin können diese Daten von dem/der Auftraggeber\*in unter einer offenen Lizenz gemäß § 9 Absatz 1, 2 der Open Data Verordnung des Landes Berlin auf dem Open Data Portal www.daten.berlin.de bereitgestellt werden, sodass die uneingeschränkte Verwendung der Daten für die private sowie die kommerzielle Nutzung gewährleistet ist.*
 
 Wenn Sie Unterstützung bei der Formulierung einer solchen Klausel benötigen, kontaktieren Sie gerne die ODIS. 
 
