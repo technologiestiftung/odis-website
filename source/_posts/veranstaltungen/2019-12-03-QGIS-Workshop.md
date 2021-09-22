@@ -11,7 +11,7 @@ mail: odis@technologiestiftung-berlin.de
 adresse: Amt für Statistik, Alt-Friedrichsfelde 60, 10315 Berlin
 ---
 
-# QGIS Workshop
+# QGIS Workshop Teil 2
 
 In diesem initialen Workshop zur Datenvisualisierung wollen wir uns auf räumliche Daten konzentrieren. Grundlegende Computerkenntnisse sind erforderlich. Darüber hinaus müssen Sie aber keine tiefgehenden Daten- oder Programmierkenntnisse mitbringen. Der Ablauf des Workshops setzt sich wie folgt zusammen:
 
