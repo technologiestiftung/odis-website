@@ -8,7 +8,7 @@ visible: true
 time:  09:00-12:30 Uhr
 web: 
 mail: odis@technologiestiftung-berlin.de
-adresse: online (den Zugangslink erhalten Sie nach der Anmeldung) #Webex oder Zoom?
+adresse: online (den Zugangslink erhalten Sie nach der Anmeldung)
 ---
 
 # QGIS Workshop (online)
