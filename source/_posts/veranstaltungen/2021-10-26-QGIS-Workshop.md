@@ -5,7 +5,7 @@ metaDescription: 3,5 stündiger Online Workshop zur Datenvisualisierung von Offe
 description: 3,5 stündiger Online Workshop zur Datenvisualisierung von Offenen Geodaten mit der Open Source Software QGIS.
 categories: veranstaltungen
 visible: true
-time:  09:00-12:30 Uhr
+time:  09:30-13:00 Uhr
 web: 
 mail: odis@technologiestiftung-berlin.de
 adresse: online (den Zugangslink erhalten Sie nach der Anmeldung)
