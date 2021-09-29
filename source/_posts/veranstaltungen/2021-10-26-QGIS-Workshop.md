@@ -8,7 +8,7 @@ visible: true
 time:  09:30-13:00 Uhr
 web: 
 mail: odis@technologiestiftung-berlin.de
-adresse: online (den Zugangslink erhalten Sie nach der Anmeldung)
+adresse: online über Webex (den Zugangslink erhalten Sie nach der Anmeldung)
 ---
 
 # QGIS Workshop (online)
@@ -21,11 +21,12 @@ In diesem Workshop zur Datenvisualisierung wollen wir uns auf räumliche Daten k
     - Datenimport
     - Erstellen eigener Datensätze
     - Explorieren und Visualisieren
+    - Geocodieren
     - Export von Daten
 - Erstellung einer statischen Karte für Web und Druck
 - Erstellung eines Geodatensatzes für das Open Data Portal Berlin
 
-Im Rahmen des Workshops wird die kostenlose, quelloffene Anwendungen QGIS genutzt. QGIS ist die weltweit meist verwendete Open Source Software für die Verarbeitung räumlicher Informationen. Die Software kann von Ihnen einfach auf dem eigenen Rechner installiert werden und so über den Workshop hinaus genutzt werden. Bitte beachten Sie, da der Workshop rein digital angeboten wird, benötigen Sie einen eigenen internetfähigen Rechner auf dem bereits QGIS installiert ist, sowie Mikrofon oder Headset um per Audio teilzunehmen. QGIS können Sie [hier](https://www.qgis.org/de/site/forusers/download.html) herunterladen. Bei Fragen kontaktieren Sie uns bitte.
+Im Rahmen des Workshops wird die kostenlose, quelloffene Anwendungen QGIS genutzt. QGIS ist die weltweit meist verwendete Open Source Software für die Verarbeitung räumlicher Informationen. Die Software kann von Ihnen einfach auf dem eigenen Rechner installiert werden und so über den Workshop hinaus genutzt werden. Bitte beachten Sie, da der Workshop rein digital angeboten wird, benötigen Sie einen eigenen internetfähigen Rechner auf dem bereits QGIS installiert ist, sowie Mikrofon oder Headset um per Audio teilzunehmen. QGIS können Sie [hier](https://www.qgis.org/de/site/forusers/download.html) herunterladen. Wir empfehlen die neuste QGIS Version als Standalone Installer, ältere QGIS Versionen können jedoch auch verwendet werden. Bei Fragen kontaktieren Sie uns bitte.
 
-Der Workshop richtet sich an QGIS Einsteiger:innen mit geringen oder keinerlei GIS Vorerfahrung und in erster Linie an Mitarbeiter:innen der Berliner Verwaltung. Wir bitten um Verständnis dafür, dass die Anzahl der Plätze begrenzt ist.
+Der Workshop richtet sich an QGIS Einsteiger:innen mit geringer oder keinerlei GIS Vorerfahrung und in erster Linie an Mitarbeiter:innen der Berliner Verwaltung. Wir bitten um Verständnis dafür, dass die Anzahl der Plätze begrenzt ist.
 Der Workshop ist kostenfrei. Anmelden können Sie sich über die unten stehende Mailadresse.
