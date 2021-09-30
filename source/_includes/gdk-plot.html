@@ -24,8 +24,8 @@
       .mapboxgl-popup {
         width: inline-block;
         font: 12px/14px "Helvetica Neue", Arial, Helvetica, sans-serif;
-        line-height: 60%;
       }
+
       .mapboxgl-popup-content {
         padding: 1em 1em 0 1em;
         box-shadow: 0 6px 6px rgba(0, 0, 0, 0.11);
@@ -64,7 +64,7 @@
     <div id="map">
       <div id="state-legend" class="legend">
         <h4>Gieß den Kiez Kennzahlen</h4>
-        <p><em>Vegetationsperiode 2021 (März bis Oktober)</em></p>
+        <p><em>Zeitraum: 05/2020 bis 10/2021</em></p>
         <hr style="opacity: 0.4; margin: 0 0 0 0;" />
           <p style="background-color: #35de89; opacity: 0.8; color: white; padding: 0.5em 1em 0.5em 1em; display: inline-flex; margin: 1em 0 0 0;"><strong>Berlin</strong></p>
           <p>∑ Gegossene Bäume: <strong><span id="sumBaumBerlin"></span></strong></p>
@@ -87,7 +87,7 @@
         center: [13.430168, 52.489868], // starting position ([lng, lat] close to Hermannplatz
         zoom: 14, // starting zoom
         pitch: 45,
-        maxZoom: 18,
+        maxZoom: 17,
         minZoom: 9,
       });
 
@@ -126,7 +126,7 @@
       let sumG = 0;
       let sumW = 0
       // load data with vanllia JS
-      fetch("./data/wateredTreesSum_MidSep.geojson").then(data => data.json()).then(geojson => {
+      fetch("./data/treesWateredSum.geojson").then(data => data.json()).then(geojson => {
         trees = Object.values(geojson) // object
         trees = trees[1] // array
 
@@ -154,7 +154,7 @@
 
         map.addSource("watered-trees", {
           type: "vector",
-          url: "mapbox://juliazet.azwgfjip",
+          url: "mapbox://juliazet.d8jpuaz0",
         });
 
         map.addSource("watered-trees-geojson", {
@@ -193,7 +193,7 @@
           id: "watered-trees",
           type: "circle",
           source: "watered-trees",
-          "source-layer": "wateredTreesSum_MidSep-0lqlgu",
+          "source-layer": "treesWateredSum-7hk920",
           paint: {
             // Make circles larger as the user zooms from z12 to z22.
             "circle-radius": {
@@ -329,7 +329,7 @@
               "<p> ∑ Gießungen: <b>" +
               anzahlG +
               "</b></p>" +
-              "<p> ∑ Wassermenge: <b>" +
+              "<p style='line-height: 60%;'> ∑ Wassermenge: <b>" +
               wassersumme +
               " Liter</b></p><p>" +
               strname +
