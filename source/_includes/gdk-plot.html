@@ -304,8 +304,8 @@
 
         let coordinates = e.features[0].geometry.coordinates.slice();
         let artdtsch = e.features[0].properties.artdtsch;
-        let strname = e.features[0].properties.strname;
-        let hausnr = e.features[0].properties.hausnr;
+        let strname = (e.features[0].properties.strname === "unbekannte Straße") ? (""): (e.features[0].properties.strname)
+        let hausnr = (e.features[0].properties.hausnr === "unbekannte Nummer") ? (""): (" Nr. " + e.features[0].properties.hausnr)
         let wassersumme = e.features[0].properties.wassersumme;
         let anzahlG = e.features[0].properties.anzahlG;
         let alter = e.features[0].properties.standalter;
@@ -333,7 +333,6 @@
               wassersumme +
               " Liter</b></p><p>" +
               strname +
-              " Nr. " +
               hausnr +
               "</p>"
           )
