@@ -58,11 +58,26 @@
         margin-right: 5px;
         width: 10px;
       }
+
+      .closebtn {
+        font-size: 20px;
+      }
+
+      .openbtn {
+        font-size: 14px;
+        cursor: pointer;
+        color: #35de89;
+        background-color: transparent;
+        margin-top: 5px;
+        padding: 2px 0px;
+        border: none;
+      }
     </style>
   </head>
   <body>
     <div id="map">
       <div id="state-legend" class="legend">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <h4>Gieß den Kiez Kennzahlen</h4>
         <p><em>Vegetationsperiode 2021 (März bis Oktober)</em></p>
         <hr style="opacity: 0.4; margin: 0 0 0 0;" />
@@ -76,8 +91,22 @@
           <p>∑ Gegossene Bäume: <strong><span id="sumBaumBezirk">0</span></strong></p>
           <p>∑ Gießungen: <strong><span id="sumGiessBezirk">0</span></strong></p>
           <p>∑ Wassermenge: <strong><span id="sumWasserBezirk">0</span> Liter</strong></p>
-          </div>
+      </div>
+      <div id="closed-legend" class="legend" style="display:none">
+        <button class="openbtn" onclick="openNav()">&#9776; Öffne Infobox</button> 
+        <h4>Gieß den Kiez Kennzahlen</h4>
+      </div>
+    
     <script>
+      function closeNav() {
+        document.getElementById("state-legend").style.display = "none";
+        document.getElementById("closed-legend").style.display = "block";
+      }
+      function openNav() {
+      document.getElementById("state-legend").style.display = "block";
+      document.getElementById("closed-legend").style.display = "none";
+      }
+
       mapboxgl.accessToken =
         "pk.eyJ1IjoianVsaWF6ZXQiLCJhIjoiY2trdmhkdmE0MXNidjJ1cGZhaXVrZDE1NSJ9.I0eyCt352bKnMo50n4cDIQ";
       var map;
