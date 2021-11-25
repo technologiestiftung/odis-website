@@ -22,7 +22,7 @@ Kerndatensätze sind Datensätze, die wir als besonders wertvoll für Berlin bew
 
 Die Liste von Datensätzen wird hier bereitgestellt. Sie kann nach verschiedenen Merkmalen wie Kategorie oder Name sortiert und nach Stichwörtern durchsucht werden. Wo möglich, ist entweder der relevante offenen Datensatz verlinkt (insofern die Daten schon als Open Data vorhanden sind), oder eine Ressource unter der die Daten in einer nicht-maschinenlesbaren Form zugänglich sind. Zum aktuellen Zeitpunkt sind also noch nicht alle Daten als Open Data verfügbar, aber ODIS und zahlreiche Kolleg:innen in der Berliner Verwaltung arbeiten ständig daran, immer mehr Datensätze für die Öffentlichkeit bereitzustellen.
 
-Mehr Informationen dazu wie diese Liste entstanden ist gibt es in der Veröffentlichung "Kerndatensätze für Berlin", die **hier** heruntergeladen werden kann.
+Die vollständige Liste und Informationen dazu, wie die Datensätze ausgewählt wurden, sind in der [Veröffentlichung "Kerndatensätze für Berlin"](/assets/file-download/ODIS_Kerndatensaetze.pdf) zu finden.
 
 <br>
 <table id='kerndatentable' class="display">
