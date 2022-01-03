@@ -27,7 +27,7 @@ ressources:
             text: Damit Daten im Open Data Portal gezielt gefunden werden können, wird jeder Datensatz durch Schlüsselworte, die sogenannten Tags, beschrieben. Die Tags dienen außerdem dazu, thematisch zusammenhängende Datensätze miteinander zu vernetzen. Lesen Sie hier weshalb es wichtig ist "gute" Tags zu vergeben und was es dabei zu beachten gibt.
             image: page/graph.svg
 
-      - question: Sind meine Daten Open-Data-tauglich?
+      - question: Sind meine Daten als Open Data veröffentlichbar?
         sublinks:
           - title: Veröffentlichungs-Checkliste
             source: Veröffentlichungs-Check
@@ -39,6 +39,20 @@ ressources:
             url: /ressourcen/datenschutz.html
             text: Die Veröffentlichung von Daten setzt voraus, dass die Offenlegung nach dem geltenden (Datenschutz-)Recht zulässig ist. Mit dieser Checkliste können Sie prüfen, ob Ihre Daten unter Einhaltung des Datenschutzes veröffentlicht werden können.
             image: page/process-07.svg
+      
+      - question: Wie ist die Qualität meiner Daten?
+        sublinks:
+          - title: Geocodierung von Daten
+            source: Geocodierung
+            url: /ressourcen/geocodierung.html
+            text: Um die Weiterverarbeitung von Geodaten zu erleichtern, sollten die Daten nicht nur eine Adresse enthalten, sondern auch Koordinaten. In unserem Video-Tutorial zeigen wir, wie Sie einen Datensatz mit Adressangaben mithilfe des BKG Geocoders geokodieren können. 
+            image: ressourcenPlaceholder2.svg
+          #- title: Datenqualität Tutorial I
+            #source: xyz
+            #url: /ressourcen/example.html
+            #text: Um die Weiterverarbeitung von Geodaten zu erleichtern, sollten die Daten nicht nur eine Adresse enthalten, sondern auch Koordinaten. In unserem Video-Tutorial zeigen wir, wie Sie einen Datensatz mit Adressangaben mithilfe des BKG Geocoders geokodieren können. 
+            #image: ressourcenPlaceholder2.svg
+  
 
       # - question: Wie sieht ein gut strukturierter Datensatz aus?
       #   sublinks:
