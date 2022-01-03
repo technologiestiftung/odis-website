@@ -1,10 +1,10 @@
 ---
 layout: project
 title:  Kerndatensätze
-blogLinkTitle: 
-blogLink: 
+blogLinkTitle: "Hier geht's zur Publikation"
+blogLink: /assets/file-download/ODIS_Kerndatensaetze.pdf
 metaDescription: Wo offene Daten das größte Potential haben
-date: 2021-08-20
+date: 2022-01-04
 visible: true
 indexImage: thumbnail.png
 heroImage: home_globe.png
@@ -20,7 +20,7 @@ Welche Daten sind für eine Stadt eigentlich relevant? Die Antwort hängt vom Bl
 
 Kerndatensätze sind Datensätze, die wir als besonders wertvoll für Berlin bewertet haben, weil sie einen großen Mehrwert für ein breites Publikum liefern können. Für diese Liste wurden die Bedarfe und Interessen der Wirtschaft, der Wissenschaft, der Zivilgesellschaft und der Verwaltung selbst betrachtet. Die Liste ist allerdings keine abgeschlossene Aufzählung, sondern eher eine Orientierungshilfe um herauszufinden, wo wir als Stadt eigentlich anfangen und welche Datensätze wir unbedingt (noch) veröffentlichen sollten.
 
-Die Liste von Datensätzen wird hier bereitgestellt. Sie kann nach verschiedenen Merkmalen wie Kategorie oder Name sortiert und nach Stichwörtern durchsucht werden. Wo möglich, ist entweder der relevante offenen Datensatz verlinkt (insofern die Daten schon als Open Data vorhanden sind), oder eine Ressource unter der die Daten in einer nicht-maschinenlesbaren Form zugänglich sind. Zum aktuellen Zeitpunkt sind also noch nicht alle Daten als Open Data verfügbar, aber ODIS und zahlreiche Kolleg:innen in der Berliner Verwaltung arbeiten ständig daran, immer mehr Datensätze für die Öffentlichkeit bereitzustellen.
+Die Liste von Datensätzen wird hier bereitgestellt. Sie kann nach **Kategorie** und **Name** sortiert und nach **Stichwörtern** durchsucht werden. Wenn möglich, ist außerdem der relevante **offene** Datensatz verlinkt (insofern die Daten schon als maschinenlesbare Open Data vorhanden sind), oder eine Ressource unter der die Daten zumindest **teilweise zugänglich** (also zum Beispiel nicht komplett maschinenlesbar oder in einem geringen Detaillierungsgrad) sind. Zum aktuellen Zeitpunkt sind also noch nicht alle Daten als Open Data verfügbar, aber ODIS und zahlreiche Kolleg:innen in der Berliner Verwaltung arbeiten ständig daran, immer mehr Datensätze für die Öffentlichkeit bereitzustellen.
 
 Die vollständige Liste und Informationen dazu, wie die Datensätze ausgewählt wurden, sind in der [Veröffentlichung "Kerndatensätze für Berlin"](/assets/file-download/ODIS_Kerndatensaetze.pdf) zu finden.
 
@@ -58,11 +58,11 @@ $('#kerndatentable').DataTable( {
     "columnDefs": [
     { "orderable": false, "targets": [2,4] },
     { className: "bold", "targets": [1] },
-    { "width": "45%", "targets": 2 },
-    {"className": "dt-center", "targets": 4}
+    // { "width": "100%", "targets": [2] },
+    {"className": "dt-center", "targets": 3}
   ],
     initComplete: function () {
-        this.api().columns([0,4]).every( function () {
+        this.api().columns([0,3]).every( function () {
             var column = this;
             var select = $('<select><option value="">Alle</option></select>')
                 .appendTo( $(column.header()))
@@ -76,7 +76,7 @@ $('#kerndatentable').DataTable( {
                 } );
 
             column.data().unique().sort().each( function ( d, j ) {
-                select.append('<option value="' + d + '">' + d.substr(0,35) + '</option>')
+                select.append('<option value="' + d + '">' + d.substr(0,30) + '</option>')
                 //var val = $('<div/>').html(d.substr(0,35)).text();
                 //select.append( '<option value="' + val + '">' + val + '</option>' );
             } );
@@ -84,3 +84,8 @@ $('#kerndatentable').DataTable( {
     }
 } );
 </script>
+
+<br>
+**Warum enthält die Liste 103 Datensätze?**
+Die Corona-Pandemie hat die Gesellschaft vor ganz neue Herausforderungen gestellt - und auch ganz neue Bedarfe an Daten aufgezeigt.
+Aufgrund der anhaltenden Pandemielage zum Zeitpunkt der Veröffentlichung der Liste, haben wir uns entschlossen 3 besonders relevante, auf Corona bezogene Datensätze zusätzlich zu den 100 Kerndatensätzen in die Liste aufzunehmen.
