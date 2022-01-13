@@ -28,6 +28,13 @@ Das ODIS-Team:
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
+						<div class="profile-image-4"></div>
+						<div class="profile-desc-wrapper-2">
+							<span><b>Ester Scheck</b></span>
+							<span>Scheck@technologiestiftung-berlin.de</span>
+						</div>
+					</div>
+					<div class="profile-wrapper mt-2">
 						<div class="profile-image"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Dr. Benjamin Seibel</b></span>
