@@ -40,7 +40,7 @@ ressources:
             text: Die Veröffentlichung von Daten setzt voraus, dass die Offenlegung nach dem geltenden (Datenschutz-)Recht zulässig ist. Mit dieser Checkliste können Sie prüfen, ob Ihre Daten unter Einhaltung des Datenschutzes veröffentlicht werden können.
             image: page/process-07.svg
       
-      - question: Wie ist die Qualität meiner Daten?
+      - question: Wie kann ich Daten aufwerten und die Qualität erhöhen?
         sublinks:
           - title: Geocodierung von Daten
             source: Geocodierung
