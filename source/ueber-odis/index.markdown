@@ -15,7 +15,7 @@ Das ODIS-Team:
 						<div class="profile-image-2"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Victoria Boeck</b></span>
-							<span>Boeck@technologiestiftung-berlin.de</span>
+							<span>victoria.boeck@ts.berlin</span>
 							<span>030 209 69 99 41</span>
 						</div>
 					</div>
@@ -23,7 +23,7 @@ Das ODIS-Team:
 						<div class="profile-image-3"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Lisa Stubert</b></span>
-							<span>Stubert@technologiestiftung-berlin.de</span>
+							<span>lisa.stubert@ts.berlin</span>
 							<span>030 209 69 99 43</span>
 						</div>
 					</div>
@@ -31,14 +31,14 @@ Das ODIS-Team:
 						<div class="profile-image-4"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Ester Scheck</b></span>
-							<span>Scheck@technologiestiftung-berlin.de</span>
+							<span>ester.scheck@ts.berlin</span>
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
 						<div class="profile-image"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Dr. Benjamin Seibel</b></span>
-							<span>Seibel@technologiestiftung-berlin.de</span>
+							<span>benjamin.seibel@ts.berlin</span>
 							<span>030 209 69 99 40</span>
 						</div>
 					</div>

@@ -18,4 +18,4 @@ Unter **Aktuelles** werden wir regelmäßig über Neuigkeiten bei ODIS und in de
 
 Und unter **Veranstaltungen** ist eine Übersicht der kommenden und vergangenen ODIS-Veranstaltungen (wie Workshops, Schulungen und Infoveranstaltungen) zu finden, inklusive eventueller Links zu zugehörigen Materialien.
 
-Diese Seite wird stets mit neuem Inhalt aktualisiert. Für Interessierte haben wir aber auch einen ODIS-Verteiler, mit dem Sie automatisch über Neuigkeiten informiert werden. Um in den Verteiler aufgenommen zu werden, senden Sie bitte eine kurze Mail an <a href="mailto:odis@technologiestiftung-berlin.de">odis@technologiestiftung-berlin.de.</a> 
+Diese Seite wird stets mit neuem Inhalt aktualisiert. Für Interessierte haben wir aber auch einen ODIS-Verteiler, mit dem Sie automatisch über Neuigkeiten informiert werden. Um in den Verteiler aufgenommen zu werden, senden Sie bitte eine kurze Mail an <a href="mailto:odis@ts.berlin">odis@ts.berlin.</a> 

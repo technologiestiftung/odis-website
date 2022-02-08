@@ -7,7 +7,7 @@ categories: veranstaltungen
 visible: true
 time:  09:30-13:00 Uhr
 web: 
-mail: odis@technologiestiftung-berlin.de
+mail: odis@ts.berlin
 adresse: online über Webex (den Zugangslink erhalten Sie nach der Anmeldung)
 ---
 
