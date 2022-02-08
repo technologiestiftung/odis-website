@@ -7,7 +7,7 @@ categories: veranstaltungen
 visible: true
 time:  09:30-15:30 Uhr 
 web: 
-mail: odis@technologiestiftung-berlin.de
+mail: odis@ts.berlin
 adresse: Amt für Statistik, Alt-Friedrichsfelde 60, 10315 Berlin
 ---
 
