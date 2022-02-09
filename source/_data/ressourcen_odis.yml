@@ -42,11 +42,11 @@ ressources:
       
       - question: Wie kann ich Daten aufwerten und die Qualität erhöhen?
         sublinks:
-          - title: Geocodierung von Daten
-            source: Geocodierung
+          - title: Video-Tutorial zur Geocodierung
+            source: Daten zu Geodaten machen
             url: /ressourcen/geocodierung.html
-            text: Um die Weiterverarbeitung von Geodaten zu erleichtern, sollten die Daten nicht nur eine Adresse enthalten, sondern auch Koordinaten. In unserem Video-Tutorial zeigen wir, wie Sie einen Datensatz mit Adressangaben mithilfe des BKG Geocoders geokodieren können. 
-            image: ressourcenPlaceholder2.svg
+            text: Der Großteil aller Verwaltungsdaten hat einen geographischen Bezug. Das können Adressen sein oder Informationen die sich auf bestimmte Räume wie Bezirke oder Planungsräume beziehen. Um die Nutzung zu erleichtern, sollten diese Daten um Koordinaten ergänzt werden. Das ist leichter als gedacht. In unserem Video-Tutorial zeigen wir, wie Sie einen Datensatz mithilfe eines Webtools geocodieren können. 
+            image: page/geo_marker.svg
           #- title: Datenqualität Tutorial I
             #source: xyz
             #url: /ressourcen/example.html
