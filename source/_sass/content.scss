@@ -433,6 +433,12 @@ padding-bottom: 2rem;
         background: url('/assets/images/page/lisa.jpg') no-repeat center/100%;
         border-radius: 100%;
     }
+    .profile-image-4 {
+        width: 100px;
+        height: 100px;
+        background: url('/assets/images/page/profile-ester.jpg') no-repeat center/100%;
+        border-radius: 100%;
+    }
 
     .profile-desc-wrapper {
         margin-left: 1.5rem;
@@ -862,7 +868,9 @@ p.copy {
 // Breakpoints: 
 // > 64rem: 1024px 
 // > 54rem - 64rem: 864 - 1024
-
+td.bold{
+    font-weight: bold;
+}
 
 @media screen and (min-width: 64rem) {
     .section {
