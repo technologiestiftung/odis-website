@@ -5,11 +5,11 @@ title: Geocodierung
 
 # Wie geocodiere ich Geodaten?
 
-Standorte von Kindertagesstätten, die Einwohnerdichte im Bezirk oder der Streckenverlauf einer Demonstration: Verwaltungsdaten weisen häufig räumliche Bezüge auf. Nicht immer liegen diese Informationen jedoch als *richtige* Geodaten vor, sondern nur als Adresslisten oder Standortbeschreibungen. Um hochwertige Daten bereitzustellen, die bestmöglich weiterverarbeitet werden können, sollten die Daten daher um Koordinaten ergänzt werden. Diese Umwandlung bzw. Aufarbeitung eines Datensatzes nennt man *Geocodierung*.
+Standorte von Kindertagesstätten, die Einwohner:innendichte im Bezirk oder der Streckenverlauf einer Demonstration: Verwaltungsdaten weisen häufig räumliche Bezüge auf. Nicht immer liegen diese Informationen jedoch als *richtige* Geodaten vor, sondern nur als Adresslisten oder Standortbeschreibungen. Um hochwertige Daten bereitzustellen, die bestmöglich weiterverarbeitet werden können, sollten die Daten daher um Koordinaten ergänzt werden. Diese Umwandlung bzw. Aufarbeitung eines Datensatzes nennt man *Geocodierung*.
 
 Im folgenden Video-Tutorial zeigen wir Ihnen, wie Sie Daten bzw. Informationen zu einfachen Hausadressen in ein Geodatenformat bringen. Es gibt zwei verschiedene Methoden zur Geocodierung. Das Video ist in entsprechende Kapitel unterteilt:
-- Für Einsteiger*innen erläutern wir die Nutzung des [Geocodierungsdienstes des Bundesamts für Kartografie und Geodäsie (BKG)](http://gdz.bkg.bund.de/index.php/default/bkg-geocoder.html?___store=default).
-- Für erfahrenere Nutzer*innen erklären wir das BKG Plugin für die Open Source Software [QGIS](https://www.qgis.org/de/site/). 
+- Für Einsteiger:innen erläutern wir die Nutzung des [Geocodierungsdienstes des Bundesamts für Kartografie und Geodäsie (BKG)](http://gdz.bkg.bund.de/index.php/default/bkg-geocoder.html?___store=default).
+- Für erfahrenere Nutzer:innen erklären wir das BKG Plugin für die Open Source Software [QGIS](https://www.qgis.org/de/site/). 
 
 <p style="text-align: center; margin-top:4rem">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ahK8pwkJIcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

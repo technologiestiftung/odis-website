@@ -7,7 +7,7 @@ categories: veranstaltungen
 visible: true
 time: 18:30-20:30 Uhr 
 web: 
-mail: odis@technologiestiftung-berlin.de
+mail: odis@ts.berlin
 adresse: Platz der Luftbrücke 4, Gebäude H2rund, 12101 Berlin
 ---
 
