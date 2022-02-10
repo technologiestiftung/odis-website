@@ -22,4 +22,4 @@ Im folgenden Video-Tutorial zeigen wir Ihnen, wie Sie Daten bzw. Informationen z
 
 <br>
 #### Sie haben noch Fragen?
-Die ODIS hilft Ihnen natürlich gerne bei weiteren Fragen, kontaktieren Sie uns einfach.
+Die ODIS hilft Ihnen natürlich gerne bei weiteren Fragen, [kontaktieren Sie uns](mailto:odis@ts.berlin) einfach.
