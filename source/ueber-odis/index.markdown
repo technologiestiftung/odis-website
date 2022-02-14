@@ -35,6 +35,20 @@ Das ODIS-Team:
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
+						<div class="profile-image-6"></div>
+						<div class="profile-desc-wrapper-2">
+							<span><b>Klemens Maget</b></span>
+							<span>klemens.maget@ts.berlin</span>
+						</div>
+					</div>
+					<div class="profile-wrapper mt-2">
+						<div class="profile-image-5"></div>
+						<div class="profile-desc-wrapper-2">
+							<span><b>Max B. Eckert</b></span>
+							<span>max.eckert@ts.berlin</span>
+						</div>
+					</div>										
+					<div class="profile-wrapper mt-2">
 						<div class="profile-image"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Dr. Benjamin Seibel</b></span>
