@@ -4,6 +4,7 @@ title:  "ODIS-Seite Relaunch"
 metaDescription: Vorstellung der neuen Homepage von ODIS
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 
 # Willkommen auf der neuen ODIS-Seite!

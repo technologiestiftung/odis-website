@@ -20,11 +20,17 @@ title: Aktuelles
         {% for post in items %}
         <div class="blog-post">
             <span class="date-small">{{post.date | date: "%d.%m.%Y"}}</span>
-            <h3 class="headline-03">{{ post.title }}</h3>
-    
+            <div style="margin-bottom: 2rem;">
+                <h3 class="headline-03" style="margin-bottom: 1rem;">{{ post.title }}</h3>
+                <p style="margin-top: 0rem;">{{ post.metaDescription }}</p>
+            </div>
+            {% if post.link %}
             <a class="blog-link"
-                href="{{post.url}}">Zum
-                Artikel</a>
+                href="{{post.link}}">{{post.urlText}}</a>
+                {% else %}
+                <a class="blog-link"
+                href="{{post.url}}">{{post.urlText}}</a>
+            {% endif %}
         </div>
         {% endfor %}
 </div>

@@ -4,6 +4,7 @@ title:  "Im Spotlight: § 9 und 10 der Open-Data-Rechtsverordnung"
 metaDescription: Paragraphen 9 und 10 der Rechtsverordnung
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 
 # Im Spotlight: § 9 und 10 der Open-Data-Rechtsverordnung

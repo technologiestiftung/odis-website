@@ -4,6 +4,7 @@ title:  "Testpost"
 metaDescription: Lorem ipsum...
 categories: aktuelles
 visible: false
+urlText: Zum Blogbeitrag
 ---
 
 # Testpost

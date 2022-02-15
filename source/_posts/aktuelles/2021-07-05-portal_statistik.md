@@ -4,6 +4,7 @@ title:  "Statistiken zum Berliner Datenportal"
 metaDescription: 
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 # Statistiken zum Berliner Open-Data-Portal
 

@@ -4,6 +4,7 @@ title:  "Die neue Berliner Open-Data-Rechtsverordnung ist da"
 metaDescription: Vorstellung der neuen Homepage von ODIS
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 
 # Die neue Berliner Open-Data-Rechtsverordnung ist da

@@ -4,6 +4,7 @@ title:  "Vortrag \"Open Data und Resilient Cities\" beim Sommerfest des CityLAB 
 metaDescription: Link zur Videoaufzeichnung des Sommerfest-Talks
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 
 # Vortrag "Open Data und Resilient Cities" beim Sommerfest des CityLAB Berlin

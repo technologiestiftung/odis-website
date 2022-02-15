@@ -4,6 +4,7 @@ title:  "Im Spotlight: § 7 der Open-Data-Rechtsverordnung"
 metaDescription: Paragraph 7 der Rechtsverordnung
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 
 # Im Spotlight: § 7 der Open-Data-Rechtsverordnung
