@@ -1,6 +1,6 @@
 ---
 layout: news
-title:  "Online QGIS Workshop"
+title:  "Veranstaltung: Online QGIS Workshop"
 metaDescription: In einem Workshop für die Berliner Verwaltung zeigen wir Grundlagen in der Open Source Geoinformationssoftware QGIS. Der Workshop findet am 26.Oktober statt.
 categories: aktuelles
 visible: true
