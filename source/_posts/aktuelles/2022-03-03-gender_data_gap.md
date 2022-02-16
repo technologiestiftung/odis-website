@@ -4,6 +4,7 @@ title:  "Gender Data und Open Data Berlin"
 metaDescription: Der Umfang von Gender Data bei Open Data Berlin
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 
 # Gender Data und Open Data Berlin
