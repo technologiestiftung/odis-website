@@ -1,10 +1,11 @@
 ---
 layout: news
 title:  "Testpost"
-metaDescription: Lorem ipsum...
+metaDescription: Lore ipsum...
 categories: aktuelles
 visible: false
-urlText: Zum Blogbeitrag
+link: /projekte/testprojekt/
+urlText: Zum Test
 ---
 
 # Testpost

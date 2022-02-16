@@ -1,7 +1,7 @@
 ---
 layout: news
 title:  "Die neue Berliner Open-Data-Rechtsverordnung ist da"
-metaDescription: Vorstellung der neuen Homepage von ODIS
+metaDescription: Am 01.Januar 2021 tritt die neue Open-Data-Rechtsverordnung in Kraft. Was ändert sich damit? Welche Daten sollen veröffentlicht werden und wo gibt es Unterstützung?
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag

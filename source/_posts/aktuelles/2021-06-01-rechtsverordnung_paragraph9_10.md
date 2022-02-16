@@ -1,7 +1,7 @@
 ---
 layout: news
 title:  "Im Spotlight: § 9 und 10 der Open-Data-Rechtsverordnung"
-metaDescription: Paragraphen 9 und 10 der Rechtsverordnung
+metaDescription: Unser dritter Blogbeitrag zur Open-Data-Rechtsverordnung befasst sich mit Paragraph 9 und 10 zu Nutzungsbedingungen und Haftungsausschluss. Welche Verwendungszwecke von offenen Daten müssen erlaubt sein, damit die Daten wirklich offen sind? Und was für Risiken birgt die Bereitstellung von Daten für Behörden der Berliner Verwaltung? 
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag

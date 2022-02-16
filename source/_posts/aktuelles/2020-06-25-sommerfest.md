@@ -1,10 +1,10 @@
 ---
 layout: news
 title:  "Vortrag \"Open Data und Resilient Cities\" beim Sommerfest des CityLAB Berlin"
-metaDescription: Link zur Videoaufzeichnung des Sommerfest-Talks
+metaDescription: Anlässlich seines einjährigen Jubiläums hat das Innovationslabor CityLAB Berlin am 19. Juni Verwaltungsmitarbeiter*innen und Interessierte der Zivilgesellschaft zum digitalen Sommerfest eingeladen. Die ODIS war mit einem Votrag zum Thema “Open Data und Resilient Cities” dabei. Sehen Sie sich hier den Votrag an.
 categories: aktuelles
 visible: true
-urlText: Zum Blogbeitrag
+urlText: Zum Video
 ---
 
 # Vortrag "Open Data und Resilient Cities" beim Sommerfest des CityLAB Berlin
