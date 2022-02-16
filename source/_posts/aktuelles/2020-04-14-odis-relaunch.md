@@ -1,9 +1,10 @@
 ---
 layout: news
 title:  "ODIS-Seite Relaunch"
-metaDescription: Vorstellung der neuen Homepage von ODIS
+metaDescription: Unsere Webseite hat einen neuen Auftritt bekommen! Erfahren Sie hier, was hinter den einzelnen Reitern steckt.
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 
 # Willkommen auf der neuen ODIS-Seite!
