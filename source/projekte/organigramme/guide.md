@@ -23,7 +23,7 @@ Das Berliner Organigramm Tool ist ein Prototyp von uns und hat zum Ziel, die Org
 
 **1) Tool öffnen:** Öffnen Sie folgende Internetseite in Ihrem Browser: [https://berlin-organigramm-tool.netlify.app/](https://berlin-organigramm-tool.netlify.app/) Am besten funktioniert die Anwendung in Firefox und Chrome. 
 
-**2) Dokument neu erstellen oder öffnen:** Beim ersten Aufruf wird ein neues Dokument erstellt. Später werden Änderungen automatisch für eine gewisse Zeit in Ihrem Browser gespeichert, Sie können jedoch jederzeit über die Bedienungsleiste oben links ein neues Dokument anlegen. Über ‘Neues Dokument’ können Sie ein Dokument neu erstellen oder eine bestehende JSON-Datei öffnen.  
+**2) Dokument neu erstellen oder öffnen:** Beim ersten Aufruf wird ein neues Dokument erstellt. Später werden Änderungen automatisch für eine gewisse Zeit in Ihrem Browser gespeichert, Sie können jedoch jederzeit über die Bedienungsleiste oben links ein neues Dokument anlegen. Über ‘Neues Dokument erstellen/öffnen’ können Sie ein Dokument neu erstellen oder eine bestehende JSON-Datei öffnen.  
 
 *Hinweis: Zum aktuellen Zeitpunkt ist es leider nicht möglich, ein bereits bestehendes Organigramm im PDF-Format zu importieren. Sollten Sie noch keine JSON-Datei aus dem Tool zu Ihrem Organigramm haben, müssen Sie das Dokument neu erstellen.*
 
@@ -33,19 +33,19 @@ Das Berliner Organigramm Tool ist ein Prototyp von uns und hat zum Ziel, die Org
 
 *Hinweis: Die Ausgabegröße können Sie auch später anpassen, wenn Ihr Organigramm größer wird und die aktuelle Ausgabegröße nicht ausreicht.* 
 
-**5) Fußzeile bearbeiten:** In der Fußzeile können Sie weitere Informationen zum Organigramm eintragen. Die Formatierung funktioniert über Markdown, Sie können jedoch auch einfach die Werkzeugleiste zum formatieren von Text verwenden. Die Fußzeile wird stets in Spalten dargestellt, eine Spalte entspricht einem Spiegelpunkt.  
+**5) Fußzeile bearbeiten:** In der Fußzeile können Sie weitere Informationen zum Organigramm eintragen. Die Formatierung funktioniert über Markdown, Sie können jedoch auch einfach die Werkzeugleiste zum formatieren von Text verwenden. Die Unterpunkte der Fußzeile werden stets in Spalten dargestellt, eine Spalte entspricht einem Spiegelpunkt.  
 
 *Hinweis: Wenn Sie beispielsweise ein * einbinden möchten, ohne dass dies als Markdown Syntax interpretiert und zu einer Kursiv-Formatierung führt, müssen Sie es wie folgt eintragen: \\* *
 
-**6) Organisationseinheiten bearbeiten:** Mit Klick auf eine Organisationseinheit öffnet sich das Bearbeitungsfenster. Dort können Sie Daten eingeben wie Bezeichnung, Darstellungsstil, Kontaktdaten und Anschrift. Ferner können Sie Abteilungen und Personen mit jeweils eigenen Daten anlegen.
+**6) Organisationen bearbeiten:** Mit Klick auf eine Organisation öffnet sich das Bearbeitungsfenster. Dort können Sie Daten eingeben wie Art, Bezeichnung, Darstellungsstil, Kontaktdaten und Anschrift der Organisation. Ferner können Sie über das Plus-Icon Personen hinzufügen, entweder ohne Organisationseinheit oder innerhalb einer von Ihnen angelegten, zugehörigen Organisationseinheit. Auch für Personen können Sie Informationen und Kontaktdaten eintragen. Durch Klick auf das rote Minus-Symbol werden Organisationseinheiten und Personen wieder gelöscht.
 
 **7) Daten eintragen:** Bei Doppelklick auf ein Eingabefeld werden Ihnen bei einigen Feldern Vorschläge gemacht, was Sie dort eintragen könnten.
 <!--tbd, was soll als Hauptorganisation eingetragen werden, welche Felder gibt es und was sollte man dort eintragen-->
 
-**8) Organisationseinheiten neu anlegen oder entfernen:** Im Bearbeitungsfenster einer Organisationseinheit können Sie ganz unten eine neue Nebenorganisation oder eine neue Suborganisation einfügen, oder die Organisationseinheit entfernen. Organisationseinheiten kopieren, ausschneiden, einfügen oder entfernen können Sie auch mit Rechtsklick auf eine Organisationseinheit.
+**8) Organisationen neu anlegen oder entfernen:** Im Bearbeitungsfenster einer Organisation können Sie ganz unten eine neue Nebenorganisation oder eine neue Suborganisation einfügen, oder die Organisation entfernen. Organisationen kopieren, ausschneiden, einfügen oder entfernen können Sie auch mit Rechtsklick auf eine Organisationseinheit.
 
 **9) Abteilungen und Suborganisationen anlegen:**
-<!-- tbd beschreiben was als Abteilung und was als Suborganisation angelegt werden soll, was ist der Unterschied -->
+<!-- tbd beschreiben was als Abteilung und was als Suborganisation angelegt werden soll, was ist der Unterschied. Auch, wozu gibt es den Stil 'Verbindungspunkt'. -->
 
 **10) Dokument speichern und exportieren:** Am Ende sollten Sie Ihr erstelltes Organigramm unbedingt speichern. Wählen Sie ‘sichern’ um die Daten als JSON-Datei herunterzuladen. Diese Datei sollten Sie aufbewahren, um später damit weiterarbeiten zu können und ggf. das Organigramm anpassen zu können. Unter ‘Exportieren’ werden Ihnen verschiedene Dateiformate zur Auswahl gestellt, u.a. können Sie die grafische Darstellung des Organigramms als PDF exportieren.
 <!-- tbd nochmal prüfen welche Formate es letztendlich zum Export gibt -->
