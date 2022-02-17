@@ -39,7 +39,7 @@ Das Berliner Organigramm Tool ist ein Prototyp von uns und hat zum Ziel, die Org
 
 **6) Organisationseinheiten bearbeiten:** Mit Klick auf eine Organisationseinheit öffnet sich das Bearbeitungsfenster. Dort können Sie Daten eingeben wie Bezeichnung, Darstellungsstil, Kontaktdaten und Anschrift. Ferner können Sie Abteilungen und Personen mit jeweils eigenen Daten anlegen.
 
-**7) Daten eintragen:**
+**7) Daten eintragen:** Bei Doppelklick auf ein Eingabefeld werden Ihnen bei einigen Feldern Vorschläge gemacht, was Sie dort eintragen könnten.
 <!--tbd, was soll als Hauptorganisation eingetragen werden, welche Felder gibt es und was sollte man dort eintragen-->
 
 **8) Organisationseinheiten neu anlegen oder entfernen:** Im Bearbeitungsfenster einer Organisationseinheit können Sie ganz unten eine neue Nebenorganisation oder eine neue Suborganisation einfügen, oder die Organisationseinheit entfernen. Organisationseinheiten kopieren, ausschneiden, einfügen oder entfernen können Sie auch mit Rechtsklick auf eine Organisationseinheit.
