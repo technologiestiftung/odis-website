@@ -17,7 +17,7 @@ Im folgenden Video-Tutorial zeigen wir Ihnen, wie Sie Daten bzw. Informationen z
 <br>
 
 #### Vorrausetzungen für die Geocodierung
-- **Nutzer:innen-ID:** Der Geocodierungsdienst des BKG ist nicht frei verfügbar, das Land Berlin verfügt jedoch über eine Lizenz und deshalb kann der Dienst von allen Berliner Verwaltungsmitarbeiter:innen genutzt werden. Sie benötigen dafür lediglich eine Nutzer:innen-ID. Wenn Sie noch keine ID erhalten haben, können Sie diese bei der Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen erfragen, in dem Sie eine E-Mail an [fisbroker@SenSW.Berlin.de](mailto:fisbroker@SenSW.Berlin.de) schreiben.
+- **Nutzer:innen-ID:** Der Geocodierungsdienst des BKG ist nicht frei verfügbar, das Land Berlin verfügt jedoch über eine Lizenz und deshalb kann der Dienst von allen Berliner Verwaltungsmitarbeiter:innen genutzt werden. Sie benötigen dafür lediglich eine Nutzer:innen-ID. Wenn Sie noch keine ID erhalten haben, können Sie diese bei der Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen erfragen, in dem Sie eine E-Mail an [fisbroker@senstadt.berlin.de](mailto:fisbroker@senstadt.berlin.de) schreiben (Achtung, E-Mail-Adresse hat sich seit Erstellung des Videos geändert).
 - **Datensatz im CSV-Format:** Ihr zu geocodierender Datensatz muss im CSV-Format vorliegen. Eine Liste im PDF-Format oder in Word ist leider nicht maschinenlesbar und kann nicht für die Geocodierung verwendet werden. Auch eine Excel-Tabelle kann nicht verwendet werden, kann jedoch über 'Speichern unter' leicht aus dem Programm heraus als CSV-Datei exportiert werden. Wie das geht erklären wir [hier](https://youtu.be/ahK8pwkJIcU?t=187) im Video.
 
 <br>
