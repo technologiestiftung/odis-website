@@ -10,6 +10,6 @@ visible: false
 indexImage: bzr-thumbnail.png
 heroImage: bzr-hero.png
 ---
-
+# In 10 Schritten zum maschinenlesbaren Organigramm
 
 Seite noch im Aufbau
