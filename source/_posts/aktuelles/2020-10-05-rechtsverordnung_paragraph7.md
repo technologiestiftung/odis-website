@@ -1,9 +1,10 @@
 ---
 layout: news
 title:  "Im Spotlight: § 7 der Open-Data-Rechtsverordnung"
-metaDescription: Paragraph 7 der Rechtsverordnung
+metaDescription: Unser zweiter Blogbeitrag zur Open-Data-Rechtsverordnung untersucht Paragraph 7 genauer. Worum geht es bei den Anforderungen an Verwaltungsabläufe und die technische Infrastruktur?
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 
 # Im Spotlight: § 7 der Open-Data-Rechtsverordnung

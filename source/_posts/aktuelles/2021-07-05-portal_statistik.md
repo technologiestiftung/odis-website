@@ -1,9 +1,10 @@
 ---
 layout: news
-title:  "Statistiken zum Berliner Datenportal"
-metaDescription: 
+title:  "Datenanalyse: Statistiken zum Berliner Datenportal"
+metaDescription: BerlinOnline veröffentlicht monatlich aktuelle Zugriffsstatistiken zum Open-Data-Portal der Hauptstadt. Wie hat sich das Portal seit 2013 entwickelt? Was sind Trends und wesentliche Erkenntnisse? Wir haben uns die Statistiken angeguckt.
 categories: aktuelles
 visible: true
+urlText: Zum Blogbeitrag
 ---
 # Statistiken zum Berliner Open-Data-Portal
 
