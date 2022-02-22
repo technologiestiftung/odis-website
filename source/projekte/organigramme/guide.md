@@ -14,14 +14,16 @@ visible: false
 
 <br/>
 
-Das [Organigramm-Tool](https://deploy-preview-3--berlin-organigramm-tool.netlify.app) hat zum Ziel, die Erstellung der Organigramme der Berliner Verwaltung zu vereinfachen und die Organigramme in ein einheitlicheres und maschinenlesbares Format zu bringen. Neben einer schicken grafischen Darstellung der Berliner Verwaltungsorganisation, welche sich unter anderem als PDF exportieren lässt, legt das Tool Organigramme als [JSON](https://berlinonline.github.io/open-data-handbuch/#formatwahl)-Dateien an. Dieses Dateiformat ermöglicht es, die eingegebenen Daten in einem einfachen Textformat zu speichern und auch wieder in das Tool einzuladen und zu bearbeiten. Durch das JSON-Format werden die Daten außerdem vielfältig als Open Data für ganz andere Anwendungen und Auswertungen nutzbar. Das Tool befindet sich derzeit in einer prototypischen Version.
+Das [Organigramm-Tool](https://organigramme.odis-berlin.de) hat zum Ziel, die Erstellung der Organigramme der Berliner Verwaltung zu vereinfachen und die Organigramme in ein einheitlicheres und maschinenlesbares Format zu bringen. Neben einer schicken grafischen Darstellung der Berliner Verwaltungsorganisation, welche sich unter anderem als PDF exportieren lässt, legt das Tool Organigramme als [JSON](https://berlinonline.github.io/open-data-handbuch/#formatwahl)-Dateien an. Dieses Dateiformat ermöglicht es, die eingegebenen Daten in einem einfachen Textformat zu speichern und auch wieder in das Tool einzuladen und zu bearbeiten. Durch das JSON-Format werden die Daten außerdem vielfältig als Open Data für ganz andere Anwendungen und Auswertungen nutzbar. Das Tool befindet sich derzeit in einer prototypischen Version.
 
 <br/>
 
 #### Getting started: Wir führen Sie in 10 einfachen Schritten durch das Tool
 <br/>
 
-**1) Tool öffnen und navigieren:** Das Tool funktioniert direkt im Browser, ein Download oder eine Anmeldung sind nicht nötig. Am besten funktioniert die Anwendung in Firefox und Chrome. Öffnen Sie folgende Internetseite in Ihrem Browser: [https://berlin-organigramm-tool.netlify.app/](https://berlin-organigramm-tool.netlify.app/). Wenn Sie das Tool zum ersten mal aufrufen, dann sehen Sie ein von uns angelegtes Beispiel-Organigramm. Um sich an eine andere Stelle im Dokument zu bewegen, halten Sie die Maustaste gedrückt und ziehen Sie das Dokument. Unten rechts können Sie rein- und rauszoomen sowie die Ansicht auf das ganze Dokument aktivieren, alternativ können Sie dafür auch das Scrollrad der Maus benutzen. In der Leiste oben rechts gibt es Pfeile um Schritte ‘rückgängig’ zu machen bzw. zu ‘wiederholen’.
+**1) Tool öffnen und navigieren:** Das Tool funktioniert direkt im Browser, ein Download oder eine Anmeldung sind nicht nötig. Am besten funktioniert die Anwendung in Firefox und Chrome. Öffnen Sie folgende Internetseite in Ihrem Browser: [https://organigramme.odis-berlin.de](https://organigramme.odis-berlin.de). Wenn Sie das Tool zum ersten mal aufrufen, dann sehen Sie ein von uns angelegtes Beispiel-Organigramm. Um sich an eine andere Stelle im Dokument zu bewegen, halten Sie die Maustaste gedrückt und ziehen Sie das Dokument. Unten rechts können Sie rein- und rauszoomen sowie die Ansicht auf das ganze Dokument aktivieren, alternativ können Sie dafür auch das Scrollrad der Maus benutzen. In der Leiste oben rechts gibt es Pfeile um Schritte *rückgängig* zu machen bzw. zu *wiederholen*.
+
+<center>{% include macro-image-section-small.html src="images/step1.png"%}</center>
 
 **2) Informationen zu einer Organisationseinheit eintragen:** Jede der Boxen die Sie sehen stellt eine *Organisationseinheit* dar. Klicken Sie jetzt einmal auf einer der Boxen, die noch keine Beispielinformationen enthält. Es öffnet sich links das Bearbeitungsfenster. Geben Sie dort die Daten ein, die in der Kopfzeile der Box angezeigt werden sollen. Tragen Sie ein um welche Art von Organisationseinheit es sich handelt (diese Info erscheint nicht in der Box, sie ist aber für die JSON-Datei wichtig), also zum Beispiel um eine Abteilung oder um ein Referat. Mit Klick in das Textfeld, macht Ihnen das Tool vorschläge, Sie können aber auch Freitext eingeben. Tragen Sie als nächstes eine konkrete Bezeichnung ein, die als Titel der Box erscheinen soll, z.B. "Abteilung II - Kultur". Sie können zudem eine alternative Bezeichnung angeben, z.B. "Abt. II". Unter dem Punkt *Stil* können Sie die Darstellungsform der Box verändern.
 
@@ -29,7 +31,7 @@ Das [Organigramm-Tool](https://deploy-preview-3--berlin-organigramm-tool.netlify
 
 <center>{% include macro-image-section-small.html src="images/step2.png"%}</center>
 
-Nun kommen wir zum Inhalt der Box. In den nachfolgenden Felder der Eingabemaske können Sie weitere Informationen eintragen. Das sind beispielsweise die Adresse und Kontaktdaten der Organisationseinheit. Wenn Sie Daten zu einer Person eintragen möchten, klicken Sie auf das kleine Plus-Symbol in der *Personen-Leiste* und tragen Sie Daten in die Maske ein. Sie können auch mehrere Personen hinzufügen. 
+Nun kommen wir zum Inhalt der Box. In den nachfolgenden Felder der Eingabemaske können Sie weitere Informationen eintragen. Das sind beispielsweise die Adresse und Kontaktdaten der Organisationseinheit. Wenn Sie Daten zu einer Person eintragen möchten, klicken Sie auf das kleine Plus-Symbol in der *Personen*-Leiste und tragen Sie Daten in die Maske ein. Sie können auch mehrere Personen hinzufügen. 
 
 **3) Einheiten innerhalb einer Organisationseinheit anlegen:** Nicht nur Personen können Teil einer Organisationseinheit sein, sondern auch weitere zugehörige Abteilungen oder Stellen. Klicken Sie auf das Plus-Symbol neben *Zugehörige Organisationseinheit* um diese hinzuzufügen und tragen Sie eine Bezeichnung ein. Klicken sie anschließend auf das Plus-Symbol neben *Personen*, um wiederum eine Person anzulegen, die Teil dieser zugehörigen Organisationseinheit ist und tragen Sie testweise Daten zu dieser Person in die neu erschienene Maske ein. Durch Klick auf das rote Minus-Symbol werden Organisationseinheiten und Personen wieder gelöscht.
 
@@ -43,7 +45,7 @@ Nun kommen wir zum Inhalt der Box. In den nachfolgenden Felder der Eingabemaske 
 
 <center>{% include macro-image-section-small.html src="images/step4.png"%}</center>
 
-**5) Dokumentinformationen bearbeiten:** Neben dem eigentlichen Organigramm, müssen Sie auch Informationen über das Dokument an sich angeben. Klicken Sie in der kleinen Menüleiste oben links auf das Symbol "Dokumentinformationen". Es öffnet sich wiede eine Eingabemaske links. Tragen Sie über die Maske den Namen Ihrer Behörde als Dokumenttitel ein. Des Weiteren lässt sich die Ausrichtung des Dokuments (Hochformat oder Querformat) und die Ausgabegröße einstellen. In den Dokumentinformationen können Sie ebenfalls ein Logo einbinden. Bisher sind aus Lizenzgründen nur die Logos der Bezirksverwaltungen auswählbar. Sie können aber ganz einfach selbst eine Bilddatei mit einem Logo hochladen. Neben Datum und Name des Verfassers oder der Verfasserin kann hier auch die Fußzeile bearbeitet werden.
+**5) Dokumentinformationen bearbeiten:** Neben dem eigentlichen Organigramm, müssen Sie auch Informationen über das Dokument an sich angeben. Klicken Sie in der kleinen Menüleiste oben links auf das Symbol *Dokumentinformationen*. Es öffnet sich wiede eine Eingabemaske links. Tragen Sie über die Maske den Namen Ihrer Behörde als Dokumenttitel ein. Des Weiteren lässt sich die Ausrichtung des Dokuments (Hochformat oder Querformat) und die Ausgabegröße einstellen. In den Dokumentinformationen können Sie ebenfalls ein Logo einbinden. Bisher sind aus Lizenzgründen nur die Logos der Bezirksverwaltungen auswählbar. Sie können aber ganz einfach selbst eine Bilddatei mit einem Logo hochladen. Neben Datum und Name des Verfassers oder der Verfasserin kann hier auch die Fußzeile bearbeitet werden.
 
 *Hinweis: Die Ausgabegröße können Sie auch später bei Bedarf anpassen, wenn Ihr Organigramm größer wird und die aktuelle Ausgabegröße nicht ausreicht.* 
 
@@ -55,31 +57,47 @@ Nun kommen wir zum Inhalt der Box. In den nachfolgenden Felder der Eingabemaske 
 
 <center>{% include macro-image-section-small.html src="images/step6.png"%}</center>
 
-**7) Dokument (zwischen)speichern:** Alle Änderungen die Sie machen, werden automatisch für eine gewisse Zeit in Ihrem Browser gespeichert. Sie sollten Ihr erstelltes Organigramm aber auch abspeichern. Klicken Sie in der Menüleiste auf *Dokument sichern/exportieren*. Wählen Sie ‘sichern’ um die Daten als JSON-Datei herunterzuladen. Diese Datei ermöglicht es Ihnen die Datei zwischenzuspeichern, mit Kolleg:innen zu teilen und später daran weiterzuarbeiten. 
+**7) Dokument (zwischen)speichern:** Alle Änderungen die Sie machen, werden automatisch für eine gewisse Zeit in Ihrem Browser gespeichert. Sie sollten Ihr erstelltes Organigramm aber auch abspeichern. Klicken Sie in der Menüleiste auf *Dokument speichern oder exportieren*. Wählen Sie *speichern* um die Daten als JSON-Datei herunterzuladen. Diese Datei ermöglicht es Ihnen die Datei zwischenzuspeichern, mit Kolleg:innen zu teilen und später daran weiterzuarbeiten. 
 
-**8) Bestehendes Dokument einladen:** Ein Organigramm, dass mit unserem Tool erstellt wurde, kann einfach wieder in der Anwendung geladen werden. Probieren Sie das einmal exemplarisch aus. Laden Sie sich [hier]() eine Beispiel-JSON-Datei herunter, in der das Organigramm für die Senatsverwaltung für Kultur und Europe gespeichert ist.
-Gehen Sie nun zurück in das Organigramm-Tool und klicken Sie in der Menüleiste oben links auf das Symbol für *Neues Dokument erstellen/öffnen*. Klicken Sie auf *Datei auswählen* und wählen Sie die gerade heruntergeladene Datei in ihrem Filesystem aus und laden diese hoch. Wählen Sie im erscheinenden Fenster *Verwerfen* aus. Sie sollten nun das Organigramm der SenKultEu sehen.
+<center>{% include macro-image-section-small.html src="images/step7.png"%}</center>
+
+**8) Bestehendes Dokument einladen:** Ein Organigramm, dass mit unserem Tool erstellt wurde, kann einfach wieder in der Anwendung geladen werden. Probieren Sie das einmal exemplarisch aus. Laden Sie sich <a href="data/senkult_organigramm.json" download="senkult_organigramm.json">hier</a> eine Beispiel-JSON-Datei herunter, in der das Organigramm für die Senatsverwaltung für Kultur und Europe gespeichert ist.
+Gehen Sie nun zurück in das Organigramm-Tool und klicken Sie in der Menüleiste oben links auf das Symbol für *Neues Dokument erstellen oder öffnen*. Klicken Sie auf *Datei auswählen* und wählen Sie die gerade heruntergeladene Datei in ihrem Filesystem aus und laden diese hoch. Wählen Sie im erscheinenden Fenster *Verwerfen* aus. Sie sollten nun das Organigramm der SenKultEu sehen. Sie können sich das Organigramm auch hier als [PDF](data/senkult_organigramm.pdf) ansehen.
 
 *Hinweis: Zum aktuellen Zeitpunkt ist es leider nicht möglich, ein bereits bestehendes Organigramm im PDF-Format zu importieren, sondern nur Organigramme im JSON-Format, die mit unserem Tool erstellt wurden.*
 
+<center>{% include macro-image-section-small.html src="images/step8.png"%}</center>
+<center>
+<div class="project-image small">
+<a href="data/senkult_organigramm.pdf">
+<img class="img-fluid" src="images/step8_2.png">
+</a>
+</div>
+</center>
+<br><br>
+
 **9) Fertiges Organigramm exportieren:**
 
-Sie können ein fertiges Organigramm auch als PDF oder Bilddatei exportieren. Klicken Sie in der Menüleiste auf *Dokument sichern/exportieren*. 
+Sie können ein fertiges Organigramm auch als PDF oder Bilddatei exportieren. Klicken Sie in der Menüleiste auf *Dokument speichern oder exportieren*. 
 Unter *Exportieren* werden Ihnen verschiedene Dateiformate zur Auswahl gestellt. Wählen Sie testweise *PDF* und *Bidmap* und klicken Sie auf den Button exportieren um ein PDF herunterzuladen.
 <!-- tbd nochmal prüfen welche Formate es letztendlich zum Export gibt -->
 
+<center>{% include macro-image-section-small.html src="images/step9.png"%}</center>
+
 **10) Mit einem neuen Dokument starten:**
 
-Um wieder mit einem frischen Beispiel-Dokument zu starten, klicken Sie wieder links oben in der Menüleiste auf das Symbol für *Neues Dokument erstellen/öffnen*. Klicken Sie diesmal anschließend auf *Neues Dokument erstellen* und dann auf *Verwerfen*. Sie sehen wieder das Organigramm vom Anfang.
+Um wieder mit einem frischen Beispiel-Dokument zu starten, klicken Sie wieder links oben in der Menüleiste auf das Symbol für *Neues Dokument erstellen oder öffnen*. Klicken Sie diesmal anschließend auf *Neues Dokument erstellen* und dann auf *Verwerfen*. Sie sehen wieder das Organigramm vom Anfang.
 
+<center>{% include macro-image-section-small.html src="images/step10.png"%}</center>
+
+
+<br>
 
 Sie haben nun alle wichtigen Schritte und Funktionen testweise durchlaufen und können damit loslegen ein Organigramm für Ihre eigene Behörde zu erstellen.
 
+<br>
 
-
-
-
-Sie haben Fragen oder Anregungen? Wir freuen uns über Ihre Meldung an <a href="mailto:odis@ts.berlin">odis@ts.berlin.</a>.
+Sie haben Fragen oder Anregungen? Wir freuen uns über Ihre Meldung an <a href="mailto:odis@ts.berlin">odis@ts.berlin</a>.
 
 <!-- **Die maschinenlesbare JSON-Datei sollten Sie als Open Data im Open Data Portal Berlin zur Verfügung stellen.** Eine automatische Anbindung ist zum aktuellen Zeitpunkt leider noch nicht integriert. Kommen Sie bei Fragen zur Veröffentlichung als Open Data gerne auf [uns](mailto:odis@ts.berlin) und [die Open Data Beauftragte oder den Open Data Beauftragten Ihrer Verwaltung](https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/open-data-beauftragte/) zu. -->
 
