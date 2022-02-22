@@ -25,7 +25,7 @@ Das [Organigramm-Tool](https://organigramme.odis-berlin.de) hat zum Ziel, die Er
 
 <center>{% include macro-image-section-small.html src="images/step1.png"%}</center>
 
-**2) Informationen zu einer Organisationseinheit eintragen:** Jede der Boxen, die Sie sehen, stellt eine *Organisationseinheit* dar. Klicken Sie jetzt einmal auf eine der Boxen, die noch keine Beispielinformationen enthält. Es öffnet sich links das Bearbeitungsfenster. Geben Sie dort die Daten ein, die in der Kopfzeile der Box angezeigt werden sollen. Tragen Sie ein um welche Art von Organisationseinheit es sich handelt (diese Info erscheint nicht in der Box, sie ist aber für die JSON-Datei wichtig), also zum Beispiel um eine Abteilung oder um ein Referat. Mit Klick in das Textfeld, macht Ihnen das Tool Vorschläge, Sie können aber auch Freitext eingeben. Tragen Sie als nächstes eine konkrete Bezeichnung ein, die als Titel der Box erscheinen soll, z.B. "Abteilung II - Kultur". Sie können zudem eine alternative Bezeichnung angeben, z.B. "Abt. II". Unter dem Punkt *Stil* können Sie die Darstellungsform der Box verändern.
+**2) Informationen zu einer Organisationseinheit eintragen:** Jede der Boxen, die Sie sehen, stellt eine *Organisationseinheit* dar. Klicken Sie jetzt einmal auf eine der Boxen, die noch keine Beispielinformationen enthält. Es öffnet sich links das Bearbeitungsfenster. Geben Sie dort die Daten ein, die in der Kopfzeile der Box angezeigt werden sollen. Tragen Sie ein um welche Art von Organisationseinheit es sich handelt (diese Info erscheint nicht in der Box, sie ist aber für die JSON-Datei wichtig), also zum Beispiel um eine Abteilung oder um ein Referat. Mit Klick in das Textfeld macht Ihnen das Tool Vorschläge, Sie können aber auch Freitext eingeben. Tragen Sie als nächstes eine konkrete Bezeichnung ein, die als Titel der Box erscheinen soll, z.B. "Abteilung II - Kultur". Sie können zudem eine alternative Bezeichnung angeben, z.B. "Abt. II". Unter dem Punkt *Stil* können Sie die Darstellungsform der Box verändern.
 
 *Hinweis: Die Darstellungsformen sind rein kosmetischer natur. Wählen Sie "Hervorgehoben", um wichtige Einheiten wie einen Senator optisch hervorzuheben oder "Zurückgenommen" für Einheiten, die eine nachgeordnete Sonderrolle einnehmen, wie z. B. nachgeordnete Behörden. Der Stil "Verbindungspunkt" lässt die Box verschwinden und ersetzt sie durch einen reinen Knotenpunkt. Nutzen Sie diesen Stil nur wenn Sie ihn unbedingt brauchen, um bestimmte Hierachien abzubilden und tragen Sie dann keine Informationen in die Felder dieser Organisationseinheit ein.*
 
@@ -39,13 +39,13 @@ Nun kommen wir zum Inhalt der Box. In den nachfolgenden Feldern der Eingabemaske
 
 <center>{% include macro-image-section-small.html src="images/step3.png"%}</center>
 
-**4) Neue Organisationseinheiten anlegen, entfernen und umsortieren:** Scrollen Sie im Bearbeitungsfenster der Organisation nach ganz. Klicken Sie dort auf die Buttons, um eine neue Nebenorganisation oder eine neue Suborganisation von Ihrer aktuell bearbeitetend Box einzufügen. Klicken Sie auf eine der neu erstellten Boxen und dann auf die Schaltfläche *Entfernen*, um die Box wieder zu löschen. Sie können die Organisationseinheiten auch kopieren, ausschneiden, einfügen oder entfernen, wenn Sie mit einem Rechtsklick auf die Box klicken. Sie können eine Box auch mit links anklicken, gedrückt halten und die Maus bewegen, um Boxen umzusortieren. 
+**4) Neue Organisationseinheiten anlegen, entfernen und umsortieren:** Scrollen Sie im Bearbeitungsfenster der Organisation nach ganz unten. Klicken Sie dort auf die Buttons, um eine neue Nebenorganisation oder eine neue Suborganisation von Ihrer aktuell bearbeitetend Box einzufügen. Klicken Sie auf eine der neu erstellten Boxen und dann auf die Schaltfläche *Entfernen*, um die Box wieder zu löschen. Sie können die Organisationseinheiten auch kopieren, ausschneiden, einfügen oder entfernen, wenn Sie mit einem Rechtsklick auf die Box klicken. Sie können eine Box auch mit links anklicken, gedrückt halten und die Maus bewegen, um Boxen umzusortieren. 
 
 *Hinweis: Achtung, wenn Sie eine Organisationseinheit entfernen, löschen Sie auch alle Suborganisationen*
 
 <center>{% include macro-image-section-small.html src="images/step4.png"%}</center>
 
-**5) Dokumentinformationen bearbeiten:** Neben dem eigentlichen Organigramm, müssen Sie auch Informationen über das Dokument an sich angeben. Klicken Sie in der kleinen Menüleiste oben links auf das Symbol *Dokumentinformationen*. Es öffnet sich wiede eine Eingabemaske links. Tragen Sie über die Maske den Namen Ihrer Behörde als Dokumenttitel ein. Des Weiteren lässt sich die Ausrichtung des Dokuments (Hochformat oder Querformat) und die Ausgabegröße einstellen. In den Dokumentinformationen können Sie ebenfalls ein Logo einbinden. Bisher sind aus Lizenzgründen nur die Logos der Bezirksverwaltungen auswählbar. Sie können aber ganz einfach selbst eine Bilddatei mit einem Logo hochladen. Neben Datum und Name des Verfassers oder der Verfasserin kann hier auch die Fußzeile bearbeitet werden.
+**5) Dokumentinformationen bearbeiten:** Neben dem eigentlichen Organigramm müssen Sie auch Informationen über das Dokument an sich angeben. Klicken Sie in der kleinen Menüleiste oben links auf das Symbol *Dokumentinformationen*. Es öffnet sich wieder eine Eingabemaske links. Tragen Sie über die Maske den Namen Ihrer Behörde als Dokumenttitel ein. Des Weiteren lässt sich die Ausrichtung des Dokuments (Hochformat oder Querformat) und die Ausgabegröße einstellen. In den Dokumentinformationen können Sie ebenfalls ein Logo einbinden. Bisher sind aus Lizenzgründen nur die Logos der Bezirksverwaltungen auswählbar. Sie können aber ganz einfach selbst eine Bilddatei mit einem Logo hochladen. Neben Datum und Name des Verfassers oder der Verfasserin kann hier auch die Fußzeile bearbeitet werden.
 
 *Hinweis: Die Ausgabegröße können Sie auch später bei Bedarf anpassen, wenn Ihr Organigramm größer wird und die aktuelle Ausgabegröße nicht ausreicht.* 
 
@@ -93,7 +93,7 @@ Um wieder mit einem frischen Beispiel-Dokument zu starten, klicken Sie wieder li
 
 <br>
 
-Sie haben nun alle wichtigen Schritte und Funktionen testweise durchlaufen und können damit loslegen ein Organigramm für Ihre eigene Behörde zu erstellen.
+Sie haben nun alle wichtigen Schritte und Funktionen testweise durchlaufen und können damit loslegen, ein Organigramm für Ihre eigene Behörde zu erstellen.
 
 <br>
 
