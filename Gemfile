@@ -31,3 +31,4 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 # Hello rebuild this netlify
 
 gem "webrick", "~> 1.7"
+gem "jekyll-paginate-v2"

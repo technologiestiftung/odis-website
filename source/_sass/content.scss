@@ -486,7 +486,7 @@ padding-bottom: 2rem;
 .blog-post {
     overflow: hidden;
     max-width: 750px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 
     .headline-03 {
         margin-top: .5rem;
@@ -1410,4 +1410,37 @@ color: white;
         flex-direction: column;
         position: relative;
     }
+}
+
+.pagination a {
+    padding: 7px 18px;
+    text-decoration: none;
+    margin-left: -2px;
+    margin-right: -2px;
+    display: inline-block;
+  }
+
+.pagination span {
+    padding: 7px 9px;
+    margin-left: -1px;
+    margin-right: -1px;
+    display: inline-block;
+}
+
+.pagination a {    
+    &:hover {
+        background-color: #f1f1f1;
+        color: #333;
+    }
+ }
+
+.pagination {
+    text-align: center;
+    padding-top: -24px;
+    padding-bottom: 18px;
+ }
+.selected a {
+    color: rgb(236, 0, 0);
+    text-decoration: underline;
+    border: 1px solid #eee;
 }
