@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.liquid
 title: Veranstaltungen
 ---
 
@@ -12,12 +12,12 @@ title: Veranstaltungen
         <div class="schedule-wrapper mb-6">
             {% assign items = site.categories.veranstaltungen | where: "visible", "true" %}
             {% for post in items %}
-            
+
             {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
             {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
             {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
-            
-            
+
+
             <div class="schedule-event full-width pt-3">
                     {% assign year = year %}
                     {% if year != yearPrev %}
@@ -27,9 +27,9 @@ title: Veranstaltungen
                 <div class="schedule-event-block pt-1 pb-1 {% if posttime < nowunix %}has-passed{% endif %}">
                     <div class="schedule-date mr-3 white ">
                         <div>
-                            <span class="headline-02 white">{{post.date | date: "%d"}}.</span> <br> 
+                            <span class="headline-02 white">{{post.date | date: "%d"}}.</span> <br>
                             <span class="schedule-date-month">{{post.date | date: "%b"}}</span>
-                        </div>    
+                        </div>
                     </div>
                     <div class="schedule-time mr-3">{{post.time}}</div>
 

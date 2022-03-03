@@ -1,14 +1,9 @@
 ---
-layout: default
+layout: default.liquid
 title: Open Data Informationsstelle Berlin
 ---
 
-		<!-- <div id="canvas"></div> -->
-
-		<div class="section-wrapper intro">	
-
-        
-			
+		<div class="section-wrapper intro">
 			<div class="section h-100">
 				<h1 class="inverted headline-01 pt-18 pb-5">
 					<span class="secondary">Open Data</span> für <br class="conditional-break"/>
@@ -17,7 +12,7 @@ title: Open Data Informationsstelle Berlin
 				<h3 class="headline-03 white">
 					Sie haben die Daten. Wir haben die Antworten. <br class="conditional-break"/>
 				</h3>
-				{% include logo.svg %}
+				{% include "logo.svg" %}
 			</div>
 			<img src="/assets/images/home_globe.png" alt="ODIS Berlin">
 		</div>
@@ -36,13 +31,13 @@ title: Open Data Informationsstelle Berlin
 			</div>
 
 			<h3 class="headline-03 primary mb-4">
-				Um Berlin erfolgreich in die digitale Zukunft 
+				Um Berlin erfolgreich in die digitale Zukunft
 				<br class="conditional-break"/>
-				zu navigieren, benötigen wir Ihre Unterstützung. 
+				zu navigieren, benötigen wir Ihre Unterstützung.
 			</h3>
 
 			<span class="headline-04 mb-12">
-				Wir helfen Berliner Verwaltungen, Behörden und 
+				Wir helfen Berliner Verwaltungen, Behörden und
 				<br class="conditional-break"/>
 				Wissenschaftseinrichtungen bei der Bereitstellung und Nutzung offener Daten.
 			</span>
@@ -71,19 +66,19 @@ title: Open Data Informationsstelle Berlin
 					<span class="bullet white">Wie kann ich die Veröffentlichung in meine Arbeitsabläufe integrieren?</span>
 				</div>
 
-				
+
 
 				<h3 class="headline-03 white primary mb-4">
 					<br>
-					Open Data erfolgreich umzusetzen ist ein mehrstufiger Prozess. 
+					Open Data erfolgreich umzusetzen ist ein mehrstufiger Prozess.
 					<br class="conditional-break-2"/>
-					Wir begleiten Sie auf diesem Weg. 
+					Wir begleiten Sie auf diesem Weg.
 				</h3>
 
 				<div class="tiles-wrapper">
 
 					<div class="tile-wrapper pt-3">
-		
+
 						<div class="tile">
 							<div class="tile-image process-01"></div>
 							<div class="tile-headline-wrapper">
@@ -94,7 +89,7 @@ title: Open Data Informationsstelle Berlin
 								</p>
 							</div>
 						</div>
-		
+
 						<div class="tile">
 							<div class="tile-image process-02"></div>
 							<div class="tile-headline-wrapper">
@@ -102,7 +97,7 @@ title: Open Data Informationsstelle Berlin
 								<span class="process-headline mb-1">Daten
 										<br/> sichten</span>
 								<p class="copy white">
-									Wir helfen Ihnen, geeignete Datensätze in ihrer Einrichtung zu finden und für die Veröffentlichung aufzubereiten. 
+									Wir helfen Ihnen, geeignete Datensätze in ihrer Einrichtung zu finden und für die Veröffentlichung aufzubereiten.
 								</p>
 							</div>
 						</div>
@@ -112,7 +107,7 @@ title: Open Data Informationsstelle Berlin
 							<div class="tile-headline-wrapper">
 								<span class="process-step">3.</span>
 								<span class="process-headline mb-1">
-									Veröffentlichung 
+									Veröffentlichung
 									<br/>
 									planen
 								</span>
@@ -121,7 +116,7 @@ title: Open Data Informationsstelle Berlin
 								</p>
 							</div>
 						</div>
-		
+
 						<div class="tile">
 							<div class="tile-image process-04"></div>
 							<div class="tile-headline-wrapper">
@@ -153,11 +148,11 @@ title: Open Data Informationsstelle Berlin
 				</h4>
 
 				<div class="container-out">
-    
+
 					<div class="container-in">
-					
-					<div class="grid">  
-					  
+
+					<div class="grid">
+
 						<div class="a content">
 
 							<div class="wrapper-inner" style="height: 50%">
@@ -181,42 +176,42 @@ title: Open Data Informationsstelle Berlin
 								<div class="dataset" id="newest4"></div>
 							</div>
 						</div>
-					 
+
 					 <div class="b content">
 						<h3 class="headline-03 white">Häufigste Tags</h3>
 					   <div class="chart-container">
 						<canvas id="tagCanvas"></canvas>
 					  </div>
 					  </div>
-				
+
 					  <div class="c content">
 						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Top-Bereitsteller</h3>
 						<div class="chart-container">
 						<canvas id="chartOne"></canvas>
 					  </div>
 					  </div>
-					  
+
 					  <div class="d content headline-03 white">
 						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Kategorien</h3>
 						<div class="chart-container">
 						<canvas id="chartTwo" style="transform: translateX(-8px) translateY(-15px);"> </canvas>
 					  </div>
 					  </div>
-					  
-					  <div class="e content"> 
+
+					  <div class="e content">
 						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Update-Aktivität</h3>
 						<div class="chart-container activity">
 						<canvas id="activity"> </canvas>
 					  </div>
 					  </div>
-					 
-				
+
+
 					 </div>
 				   </div>
 				  </div>
-				   
 
-				
+
+
 			</div>
 		</div>
 
@@ -248,7 +243,7 @@ title: Open Data Informationsstelle Berlin
 				<h3 class="headline-03 white primary mb-1 mt-4">
 					Immer auf dem neusten Stand:
 				</h3>
-				
+
 				<span class="headline-04 white mb-12">
 					Sie möchten über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden?
 					<br class="conditional-break">

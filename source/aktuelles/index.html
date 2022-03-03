@@ -1,12 +1,13 @@
 ---
-layout: default
+layout: default.liquid
 title: Aktuelles
-pagination: 
-  enabled: true
-  category: aktuelles
-  trail: 
-    before: 2
-    after: 2
+# pagination:
+#   size: 1
+#   enabled: true
+#   category: aktuelles
+#   trail:
+#     before: 2
+#     after: 2
 ---
 
 
@@ -19,7 +20,7 @@ pagination:
 
         <h3 class="headline-03 primary mb-1 mt-4">
             Immer auf dem neusten Stand.
-        </h3>   
+        </h3>
         <p>
             Sie möchten über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden?
             <br class="conditional-break">
@@ -33,7 +34,7 @@ pagination:
                 Newsletter verpasst? Stöbern Sie im
             </p>
             <a class="blog-link mt-4"
-            href="{{"archiv"}}">Newsletter-Archiv</a> 
+            href="{{"archiv"}}">Newsletter-Archiv</a>
         </div>
         <!-- <span class="headline-04 mb-12"> -->
             <!-- Hier finden Sie die neusten Blogposts der Open Data Informationsstelle. -->
@@ -61,7 +62,7 @@ pagination:
     {% if paginator.total_pages > 1 %}
         <div class="pagination">
             <span>
-                {% if paginator.previous_page %}     
+                {% if paginator.previous_page %}
                     <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo; Neuere</a>
                     {% else %}
                     &laquo; Neuere
@@ -75,13 +76,13 @@ pagination:
             {% endfor %}
           {% endif %}
           <span>
-                {% if paginator.next_page %}      
+                {% if paginator.next_page %}
                     <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Ältere &raquo;</a>
                 {% else %}
                     Ältere &raquo;
                 {% endif %}
             </span>
         </div>
-    {% endif %}       
+    {% endif %}
 
-   
+

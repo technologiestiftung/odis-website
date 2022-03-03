@@ -5,10 +5,11 @@
 
     <title>{{ page.title }} - {{site.title}}</title>
 
-    {% include meta.html %}
+    {% include "meta.html" %}
 
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/datatables.css">
-    
-    {% include js.html %}
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    {% include "js.html" %}
 </head>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.liquid
 title: Veröffentlichungs-Check
 ---
 
@@ -18,8 +18,6 @@ Wir empfehlen die Checkliste für jeden potentiell veröffentlichenswerten Daten
 </center>
 <br>
 
-
 ## Download
 
 [Veröffentlichungs-Checkliste als PDF](/assets/file-download/open_data_checkliste.pdf)
-
