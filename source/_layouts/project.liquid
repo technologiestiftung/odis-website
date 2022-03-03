@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	{% include "head.html" %}
+<body>
+	<div id="barba-wrapper">
+		<div class="barba-container">
+			{% include "topnav.html" %}
+            {% if page.heroImage %}
+            <div class="project-header bright">
+				<img class=" w-100 img-fluid" src="{{page.heroImage}}" alt="{{page.title}}">
+				<div class="gradient-overlay"></div>
+                <div>
+                    <div class="section" id="section">
+						<h1>{{ page.title }}</h1>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+			<div class="section mt-5 mb-6">
+				{%- if page.blogLink -%}
+				<a class="blog-link" href="{{page.blogLink}}" target="_blank">{{page.blogLinkTitle}}</a>
+				{%- endif -%}
+				{{ content }}
+			</div>
+
+
+			{% include "footer.html" %}
+			{% include "matomo.html" %}
+		</div>
+	</div>
+</body>
+
+</html>
