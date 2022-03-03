@@ -1,0 +1,48 @@
+{
+  "name": "@technologiestiftung/odis-website",
+  "version": "1.0.0",
+  "description": "Repository for the website of Berlins Open Data Informationsstelle (ODIS).",
+  "scripts": {
+    "start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:css && eleventy",
+    "build:css": "npm run dev:sass && npm run dev:postcss",
+    "predev": "npm run build",
+    "dev": "npm-run-all -p dev:sass:watch dev:postcss:watch dev:eleventy ",
+    "dev:eleventy": "eleventy --serve --quiet --incremental",
+    "dev:css": "npm run dev:sass && npm run dev:postcss",
+    "dev:sass": "sass --quiet source/assets/css/main.scss --load-path=source/_sass/ source/assets/css/main.css",
+    "dev:sass:watch": "npm run dev:sass -- --watch",
+    "dev:postcss": "postcss source/assets/css/main.css --output source/assets/css/main.min.css",
+    "dev:postcss:watch": "npm run dev:postcss -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technologiestiftung/odis-website.git"
+  },
+  "keywords": [],
+  "contributors": [
+    {
+      "name": "ff6347",
+      "email": "hash@ff6347.email"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technologiestiftung/odis-website/issues"
+  },
+  "homepage": "https://github.com/technologiestiftung/odis-website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
+    "autoprefixer": "10.4.2",
+    "cssnano": "5.1.0",
+    "eslint": "8.10.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "npm-run-all": "4.1.5",
+    "postcss": "8.4.7",
+    "postcss-cli": "9.1.0",
+    "sass": "1.49.9"
+  }
+}
