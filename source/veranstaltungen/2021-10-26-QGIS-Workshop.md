@@ -1,12 +1,13 @@
 ---
 layout: event
-title:  "QGIS Workshop"
+tags: event
+title: "QGIS Workshop"
 metaDescription: 3,5 stündiger Online Workshop zur Datenvisualisierung von Offenen Geodaten mit der Open Source Software QGIS.
 description: 3,5 stündiger Online Workshop zur Datenvisualisierung von Offenen Geodaten mit der Open Source Software QGIS.
 categories: veranstaltungen
 visible: true
-time:  09:30-13:00 Uhr
-web: 
+time: 09:30-13:00 Uhr
+web:
 mail: odis@ts.berlin
 adresse: online über Webex (den Zugangslink erhalten Sie nach der Anmeldung)
 ---
@@ -18,11 +19,11 @@ In diesem Workshop zur Datenvisualisierung wollen wir uns auf räumliche Daten k
 - Grundlagen räumlicher Daten und offener Daten
 - Datenquellen für Open Data
 - Einführung in QGIS
-    - Datenimport
-    - Erstellen eigener Datensätze
-    - Explorieren und Visualisieren
-    - Geocodieren
-    - Export von Daten
+  - Datenimport
+  - Erstellen eigener Datensätze
+  - Explorieren und Visualisieren
+  - Geocodieren
+  - Export von Daten
 - Erstellung einer statischen Karte für Web und Druck
 - Erstellung eines Geodatensatzes für das Open Data Portal Berlin
 

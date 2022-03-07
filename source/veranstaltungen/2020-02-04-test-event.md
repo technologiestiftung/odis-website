@@ -1,10 +1,11 @@
 ---
 layout: event
-title:  "Testveranstaltung 2020"
+tags: event
+title: "Testveranstaltung 2020"
 metaDescription: Lorem ipsum...
 description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.
 categories: veranstaltungen
-visible: falce
+visible: false
 time: 12:15 Uhr
 web: https://google.de
 mail: info@event.com
