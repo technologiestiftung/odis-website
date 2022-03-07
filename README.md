@@ -4,36 +4,50 @@ Repository for the website of Berlins Open Data Informationsstelle (ODIS).
 
 ## Setup
 
-This site is build with jekyll. Make sure jekyll is installed on your system. [jekyll quickstart instructions] (https://jekyllrb.com/docs/)
+This site is build with eleventy. Make sure Node.js >+ 14 is installed on your system. Best way to do this is using [nvm](https://github.com/nvm-sh/nvm).
 
 ## Command Line Usage
 
 Install dependencies
 
-    bundle install
+```bash
+npm ci
+```
+
+Just writing posts (without working on js or css):
+
+```bash
+npm start
+```
 
 Development:
-`bundle exec jekyll serve --livereload` or `bundle exec jekyll serve`
+
+```bash
+npm run dev
+```
 
 Building site:
-`bundle exec jekyll build`
+
+```bash
+npm run build
+```
 
 ## Content
 
-All page source data is stores in `/sources`folder. The posts for the sections `Aktuelles` and `Veranstaltungen` are stored as posts in the folder `page/_posts` and filtered via the category variable in front matter. All pages for the projects section are stored in the folder `/source/projekte`. Posts and pages need to have to flag `visible: true` to be rendered on the page. The links in the section `Ressourcen` are stored as a yml data file in the folder `/source/_data`.
+All page source data is stores in `/sources`folder. The posts for the sections `Aktuelles` and `Veranstaltungen` are stored as posts in the folders `aktuelles` and `veranstaltung` and filtered via the `tags` variable in front matter (Veranstaltungen is tag `event` and Aktuelles is tag `post`). All pages for the projects section are stored in the folder `/source/projekte` and need the tag `project`. Posts and pages need to have to flag `visible: true` to be rendered on the page. The links in the section `Ressourcen` are stored as a json data file in the folder `/source/_data`.
 
 ### Adding posts for "Aktuelles"
 
-All posts for section "Aktuelles" should be stored in `/_posts/aktuelles`. To add a new post simple create a new markdown file (`.md`) in this folder.
+All posts for section "Aktuelles" should be stored in `/aktuelles`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
-Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `aktuelles`.
+Specify the site `title`, `metaDescription` and `tags` in the front matter section. The `tags` needs to be set to `post`.
 
 ```
 ---
 layout: default.liquid
+layout: post
 title:  "Testpost"
 metaDescription: Lorem ipsum...
-categories: aktuelles
 visible: true/false
 ---
 
@@ -43,18 +57,18 @@ Lorem ipsum....
 
 ### Adding posts for "Veranstaltungen"
 
-All posts for section "Veranstaltungen" should be stored in `/_posts/veranstaltungen`. To add a new post simple create a new markdown file (`.md`) in this folder.
+All posts for section "Veranstaltungen" should be stored in `/veranstaltungen`. To add a new post simple create a new markdown file (`.md`) in this folder.
 
-Specify the site `title`, `metaDescription` and `category` in the front matter section. The `categoy` needs to be set to `veranstaltungen`. In adition to that we can add also need to specify a short `description` that will be shown in the "Veranstaltungen" overview page.
+Specify the site `title`, `metaDescription` and `tags` in the front matter section. The `tags` needs to be set to `event`. In adition to that we can add also need to specify a short `description` that will be shown in the "Veranstaltungen" overview page.
 The fields `time`, `web`, `mail` and `adresse` are optional and appear in the summary section of the page.
 
 ```
 ---
 layout: event
+tags: event
 title:  "Testveranstaltung 2019"
 metaDescription: Lorem ipsum...
 description: Lorem ipsum dolor sit amet...
-categories: veranstaltungen
 visible: true/false
 time: 12:15 Uhr
 web: https://example.de
@@ -70,11 +84,12 @@ Lorem ipsum....
 
 All pages for section "Projekte" should be stored in `/source/projekte`. To add a new project simple create a new folder with a index.md markdown file (`.md`) in it.
 
-Specify the site `title`, `metaDescription` in the front matter section. In adition to that we also need to specify a `indexImage` and `heroImage`.
+Specify the site `title`, `metaDescription` in the front matter section. In adition to that we also need to specify a `indexImage` and `heroImage` and set the `tags` to `post`.
 
 ```
 ---
 layout: project
+tags: project
 title:  Kita-Suche in Berlin
 metaDescription: Lorem ipsum...
 date: 2019-12-24
@@ -99,17 +114,17 @@ It needs several steps to add an ODIS project to the ODIS website.
 
 The _netlify.toml_ file manages the build process.
 
-```
+```toml
 publish = "_site"
 ```
 
 indicates which folder will be published.
 
-```
-command = "./build-scripts/buildprocess.sh && bundle exec jekyll build"
+```toml
+command = "./build-scripts/buildprocess.sh && npm ci && npm run build"
 ```
 
-runs the Shell script _buildprocess.sh_ and starts the jykell build process once the Shell script was executed.
+runs the Shell script _buildprocess.sh_ and starts the eleventy build process once the shell script was executed.
 
 #### Step 1: Get approval and push approved project to master
 
@@ -124,7 +139,7 @@ Please find comments in yaml-file below and follow.
 
 ```yaml
 ---
-layout: nil #don't change
+tags: project
 title: "Grundsicherung" #add individual project name
 blogLinkTitle: "Hier geht't zu den HG Infos"
 #blogLink: /aktuelles
@@ -177,9 +192,11 @@ If you want a specialized layout you can use the macros included in `source/_inc
 - macro-image-section.html
 
 ```html
-{% include macro-image-section.html src="cat.png" caption="Here is a picture of
-a cat" %}
+{% include "macro-image-section.html" src="cat.png" caption="Here is a picture
+of a cat" %}
 ```
+
+Hint: include file names need to be quoted.
 
 ---
 
@@ -205,4 +222,15 @@ This will work:
 Dies ist ein Typoblindtext.
 
 <div>someHTML</div>
+```
+
+Or you use html and you can use {% renderTemplate %} and {% renderFile %} tags: https://11ty.dev/docs/plugins/render
+
+```plain
+{% renderTemplate "md" %}
+# I am a title
+
+* I am a list
+* I am a list
+{% endrenderTemplate %}
 ```
