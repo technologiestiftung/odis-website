@@ -7,16 +7,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("source/**/*.svg");
   eleventyConfig.addPassthroughCopy("source/**/*.jpeg");
   eleventyConfig.addPassthroughCopy("source/**/*.png");
+  eleventyConfig.addPassthroughCopy("source/**/*.geojson");
   eleventyConfig.addPassthroughCopy("source/assets/file-download/");
   eleventyConfig.addPassthroughCopy("source/assets/charts/");
-  eleventyConfig.addPassthroughCopy("source/assets/allris/");
+  eleventyConfig.addPassthroughCopy("source/assets/allris/allris_streets.html");
   eleventyConfig.addPassthroughCopy("source/assets/fonts/");
   eleventyConfig.addPassthroughCopy("source/assets/css/*.css");
   eleventyConfig.addPassthroughCopy("source/assets/js/*.js");
   eleventyConfig.addPassthroughCopy("source/assets/css/**/*.css.map");
 
   // grundsicherung files
-  eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/data");
+  eleventyConfig.addPassthroughCopy(
+    "source/projekte/grundsicherung/data/*.csv"
+  );
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/js");
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/public");
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/*.css*");
