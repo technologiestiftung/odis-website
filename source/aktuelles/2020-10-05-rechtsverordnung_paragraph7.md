@@ -22,7 +22,10 @@ Die Rechtsverordnung benennt zwei konkrete Szenarien, bei denen eine Anpassung z
 **Szenario 1: Neugestaltung von Verwaltungsabläufen**
 
 <span style="color:#213A8F">
-*“Werden Verwaltungsabläufe gemäß § 10 des E-Government-Gesetzes Berlin neu gestaltet, sind auch die Abläufe einzubeziehen, mit denen Informationen gemäß dieser Rechtsverordnung im Datenportal bereitzustellen sind.”*<br> (Absatz 1 aus § 7 der Open-Data-Rechtsverordnung) </span>
+
+<strong>“Werden Verwaltungsabläufe gemäß § 10 des E-Government-Gesetzes Berlin neu gestaltet, sind auch die Abläufe einzubeziehen, mit denen Informationen gemäß dieser Rechtsverordnung im Datenportal bereitzustellen sind.”</strong>
+
+<br> (Absatz 1 aus § 7 der Open-Data-Rechtsverordnung) </span>
 
 §10 des E-Government-Gesetzes schreibt vor, dass bestehende interne Verwaltungsabläufe digitalisiert werden müssen, sodass diese Abläufe digital abgewickelt werden können. Im Kontext der Open-Data-Rechtsverordnung muss jetzt bei solchen Digitalisierungsverfahren auch betrachtet werden, inwiefern diese Verwaltungsabläufe Open Data-relevant sind.
 Verwaltungsmitarbeiter\*innen, die an der Digitalisierung eines Verwaltungsablaufs arbeiten, müssen sich folgende Frage stellen: Werden im Rahmen dieses Ablaufs Daten generiert oder verarbeitet, die laut der Rechtsverordnung veröffentlichungspflichtig sind (eine Übersicht der veröffentlichungspflichtigen Daten ist in § 4 der Rechtsverordnung zu finden)? Wenn ja, sollte die Digitalisierung dieses Verwaltungsablaufs berücksichtigen, wie auch die Prozesse rund um die Generierung dieser Daten entsprechend digitalisiert werden können. So soll beispielsweise gesichert werden, dass die generierten Daten leicht und möglichst automatisiert direkt über das [Berliner Datenportal](https://daten.berlin.de) als strukturierter Datensatz veröffentlicht werden können (die automatisierte Bereitstellung von Daten und Metadaten wird explizit im §3 der Rechtsverordnung thematisiert und im Folgenden aufgegriffen).
