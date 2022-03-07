@@ -1,13 +1,14 @@
 ---
 layout: default.liquid
 title: Aktuelles
-# pagination:
-#   size: 1
-#   enabled: true
-#   category: aktuelles
-#   trail:
-#     before: 2
-#     after: 2
+pagination:
+    data: collections.post
+    size: 8
+    enabled: true
+    alias: posts
+    reverse: true
+
+
 ---
 
 
@@ -40,49 +41,51 @@ title: Aktuelles
             <!-- Hier finden Sie die neusten Blogposts der Open Data Informationsstelle. -->
         <!-- </span> -->
     </div>
-        {% for post in paginator.posts %}
-            {% if post.visible== true  %}
+        {% for post in posts %}
+           {% if post.data.visible== true  %}
             <div class="blog-post">
                 <span class="date-small">{{post.date | date: "%d.%m.%Y"}}</span>
                 <div style="margin-bottom: 2rem;">
-                    <h3 class="headline-03" style="margin-bottom: 1rem;">{{ post.title }}</h3>
-                    <p style="margin-top: 0rem;">{{ post.metaDescription }}</p>
+                    <h3 class="headline-03" style="margin-bottom: 1rem;">{{ post.data.title }}</h3>
+                    <p style="margin-top: 0rem;">{{ post.data.metaDescription }}</p>
                 </div>
-                {% if post.link %}
+                {% if post.data.link %}
                 <a class="blog-link"
-                    href="{{post.link}}">{{post.urlText}}</a>
+                    href="{{post.data.link}}">{{post.data.urlText}}</a>
                     {% else %}
                     <a class="blog-link"
-                    href="{{post.url}}">{{post.urlText}}</a>
+                    href="{{post.url}}">{{post.data.urlText}}</a>
                 {% endif %}
             </div>
-            {% endif %}
+           {% endif %}
         {% endfor %}
 
-    {% if paginator.total_pages > 1 %}
         <div class="pagination">
             <span>
-                {% if paginator.previous_page %}
-                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo; Neuere</a>
-                    {% else %}
-                    &laquo; Neuere
+                {% if pagination.href.previous %}
+                <a href="{{ pagination.href.previous }}">&laquo; Neuere</a>
+                {% else %}
+                &laquo; Neuere
                 {% endif %}
             </span>
-            {% if paginator.page_trail %}
-            {% for trail in paginator.page_trail %}
-                <span {% if page.url == trail.path %}class="selected"{% endif %}>
-                  <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
-                </span>
+<!-- eleventy create numbered pagination -->
+            {% for page in pagination.pages %}
+
+            <!-- {{ forloop.index  }} -->
+                {% if forloop.index0 == pagination.pageNumber %}
+                <span class="selected">{{ forloop.index}}</span>
+                {% else %}
+                <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
+                {% endif %}
             {% endfor %}
-          {% endif %}
+
+
           <span>
-                {% if paginator.next_page %}
-                    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Ältere &raquo;</a>
+                {% if pagination.href.next %}
+                    <a href="{{ pagination.href.next }}">Ältere &raquo;</a>
                 {% else %}
                     Ältere &raquo;
                 {% endif %}
             </span>
         </div>
-    {% endif %}
-
 
