@@ -18,20 +18,22 @@ function main() {
   echo "running build"
   npm run build
   echo "creating project folder"
-  mkdir -p "../../_site/projekte/${TARGET}"
+  mkdir -p "../../source/projekte/${TARGET}"
   echo "copying build files to project folder"
-  rsync -avz ./build/* "../../_site/projekte/${TARGET}"
+  rsync -avz ./build/* "../../source/projekte/${TARGET}"
   echo "moving to root"
   cd ../../
   echo "copy content of index.html in project into tmp"
-  cat "_site/projekte/${TARGET}/index.html" >tmp/tmp_index.html
+  cat "source/projekte/${TARGET}/index.html" >tmp/tmp_index.html
   echo "adding yml frontmatter to new index.html"
-  cat build-scripts/grundsicherung.yml >tmp/index.html
+  cat build-scripts/grundsicherung.yml >tmp/index.liquid
   echo "adding content of old index.html again to new index.html"
-  echo "" >>tmp/index.html
-  cat tmp/tmp_index.html >>tmp/index.html
+  echo "" >>tmp/index.liquid
+  cat tmp/tmp_index.html >>tmp/index.liquid
   echo "copy index to destination"
-  cp tmp/index.html "_site/projekte/${TARGET}/index.html"
+  cp tmp/index.liquid "source/projekte/${TARGET}/index.liquid"
+  echo "removing old index.html from grundsicherung build"
+  rm "source/projekte/${TARGET}/index.html"
   echo "removing tmp folder"
   rm -rf ./tmp
   exit 0
