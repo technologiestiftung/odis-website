@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default.liquid
 title: Über ODIS
 ---
 
@@ -7,8 +7,7 @@ Die Open Data Informationsstelle (ODIS) wurde im Mai 2018 als ein Unterstützung
 
 ODIS wird von der Berliner Senatsverwaltung für Wirtschaft, Energie und Betriebe finanziert und von der [Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/) betrieben.
 
-Das ODIS-Team: 
-
+Das ODIS-Team:
 
 <div class="profiles-wrapper">
 					<div class="profile-wrapper mt-2">
@@ -57,5 +56,3 @@ Das ODIS-Team:
 						</div>
 					</div>
 				</div>
-				
-					
