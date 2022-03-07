@@ -8,4 +8,4 @@
   # been specified, include it in the publish directory path.
   publish = "_site"
 
-  command = "./build-scripts/buildprocess.sh && npm ci && npm run build"
+  command = "npm ci && npm run build && ./build-scripts/buildprocess.sh"
