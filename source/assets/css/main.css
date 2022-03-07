@@ -7202,7 +7202,7 @@ body {
 }
 
 svg.logo-berlin path {
-  fill: #213A8F;
+  fill: #213a8f;
 }
 
 .project-desc-title .cross-link {
@@ -7281,7 +7281,7 @@ svg.logo-ibb:hover path#Shape {
 .button-primary_lp {
   transition: background 0.1s;
   cursor: pointer;
-  background: #213A8F;
+  background: #213a8f;
   font-family: "Clan Book", sans-serif;
   font-size: 16px;
   padding: 0.75rem 1.5rem;
@@ -7563,13 +7563,13 @@ svg.logo-ibb:hover path#Shape {
 .profile-wrapper .profile-image-5 {
   width: 100px;
   height: 100px;
-  background: url("/assets/images/page/profile-max.jpeg") no-repeat center/100%;
+  background: url("/assets/images/page/profile-max.jpg") no-repeat center/100%;
   border-radius: 100%;
 }
 .profile-wrapper .profile-image-6 {
   width: 100px;
   height: 100px;
-  background: url("/assets/images/page/profile-klemens.jpeg") no-repeat center/100%;
+  background: url("/assets/images/page/profile-klemens.jpg") no-repeat center/100%;
   border-radius: 100%;
 }
 .profile-wrapper .profile-desc-wrapper {
@@ -8386,7 +8386,7 @@ td.bold {
   display: flex;
   justify-content: center;
   height: 5em;
-  background: #213A8F;
+  background: #213a8f;
 }
 
 @media screen and (max-width: 600px) {
