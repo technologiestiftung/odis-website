@@ -39,7 +39,7 @@ Nun kommen wir zum Inhalt der Box. In den nachfolgenden Feldern der Eingabemaske
 
 <center>{% include macro-image-section-small.html src="images/step3.png"%}</center>
 
-**4) Neue Organisationseinheiten anlegen, entfernen und umsortieren:** Scrollen Sie im Bearbeitungsfenster der Organisation nach ganz unten. Klicken Sie dort auf die Buttons, um eine neue Nebenorganisation oder eine neue Suborganisation von Ihrer aktuell bearbeiteten Box einzufügen. Klicken Sie auf eine der neu erstellten Boxen und dann auf die Schaltfläche *Entfernen*, um die Box wieder zu löschen. Sie können die Organisationseinheiten auch kopieren, ausschneiden, einfügen oder entfernen, wenn Sie mit einem Rechtsklick auf die Box klicken. Sie können eine Box auch mit links anklicken, gedrückt halten und die Maus bewegen, um Boxen umzusortieren. 
+**4) Neue Organisationseinheiten anlegen, entfernen und umsortieren:** Scrollen Sie im Bearbeitungsfenster der Organisation nach ganz unten. Klicken Sie dort auf die Buttons, um eine neue Nebenorganisation oder eine neue Suborganisation von Ihrer aktuell bearbeiteten Box einzufügen. Klicken Sie auf eine der neu erstellten Boxen und dann auf die Schaltfläche *Entfernen*, um die Box wieder zu löschen. Sie können die Organisationseinheiten auch kopieren, ausschneiden, einfügen oder entfernen, wenn Sie mit einem Rechtsklick auf die Box klicken. Sie können eine Box auch mit links anklicken, gedrückt halten und die Maus bewegen, um Boxen umzusortieren. Lassen Sie den Mauszeiger wieder los, wenn er sich über der grün eingefärbten Box befindet, an die die umzusortierende Box angehängt werden soll.
 
 *Hinweis: Achtung, wenn Sie eine Organisationseinheit entfernen, löschen Sie auch alle Suborganisationen*
 
