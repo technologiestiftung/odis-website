@@ -23,5 +23,7 @@ Im folgenden Video-Tutorial zeigen wir Ihnen, wie Sie Daten bzw. Informationen z
 - **Datensatz im CSV-Format:** Ihr zu geocodierender Datensatz muss im CSV-Format vorliegen. Eine Liste im PDF-Format oder in Word ist leider nicht maschinenlesbar und kann nicht für die Geocodierung verwendet werden. Auch eine Excel-Tabelle kann nicht verwendet werden, kann jedoch über 'Speichern unter' leicht aus dem Programm heraus als CSV-Datei exportiert werden. Wie das geht erklären wir [hier](https://youtu.be/ahK8pwkJIcU?t=187) im Video.
 
 <br>
+
 #### Sie haben noch Fragen?
+
 Die ODIS hilft Ihnen natürlich gerne bei weiteren Fragen, [kontaktieren Sie uns](mailto:odis@ts.berlin) einfach.
