@@ -1,12 +1,13 @@
 ---
 layout: project
+tags: project
 title: Netzwerkanalyse von Metadaten-Tags
 blogLinkTitle:
 blogLink:
 metaDescription: Analyse der meist genutzten Tags im Berliner Open Data Portal.
 date: 2021-03-16
 visible: true
-indexImage: thumbnail.png
+indexImage: "thumbnail.png"
 heroImage: hero.png
 ---
 

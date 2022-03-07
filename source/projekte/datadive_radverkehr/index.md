@@ -1,5 +1,6 @@
 ---
 layout: project
+tags: project
 title: Data Dive – Radverkehr
 blogLinkTitle: "Hier geht's zum ausführlichen Bericht"
 blogLink: https://lab.technologiestiftung-berlin.de/projects/datadive-cycling/de/

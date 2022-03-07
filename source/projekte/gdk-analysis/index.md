@@ -1,5 +1,6 @@
 ---
 layout: project
+tags: project
 title: Gieß den Kiez Nutzungsdaten
 blogLinkTitle: Hier geht's zu Gieß den Kiez
 blogLink: https://giessdenkiez.de

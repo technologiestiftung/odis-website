@@ -16,18 +16,22 @@ title: Projekte
         </h4>
 
         <div class="row">
-            {% assign items = site.pages | where: "visible", "true" %}
+            {% assign items = collections.project  %}
             {% assign itemsSorted = items | sort: 'date' | reverse %}
             {% for post in itemsSorted  %}
+            {%- if post.data.visible == true -%}
+
+
             <div class="col-12 col-sm-6 col-md-4 pb-5">
                 <a class="project" href="{{post.url}}" title="{{ post.title }}">
-                <div class="mb-3 img-square-container"><img class="img-fluid" src="{{post.url}}/{{post.indexImage}}" alt="{{ post.title }}"></div>
-                <div>
-                    <h4>{{ post.title }}</h4>
-                    <span>{{post.description}}</span>
-                </div>
-            </a>
-        </div>
+                    <div class="mb-3 img-square-container"><img class="img-fluid" src="{{post.url}}/{{post.data.indexImage}}" alt="{{ post.title }}"></div>
+                    <div>
+                        <h4>{{ post.title }}</h4>
+                        <span>{{post.description}}</span>
+                    </div>
+                </a>
+            </div>
+            {%- endif -%}
             {% endfor %}
         </div>
 
