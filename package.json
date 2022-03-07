@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Repository for the website of Berlins Open Data Informationsstelle (ODIS).",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --quiet",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:css && eleventy",
     "build:css": "npm run dev:sass && npm run dev:postcss",
