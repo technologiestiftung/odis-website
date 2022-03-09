@@ -16,11 +16,7 @@ adresse: digital
 
 Es ist wieder soweit. Die Senatsverwaltung für Wirtschaft, Energie und Betriebe und die ODIS laden Sie herzlich ein zum digitalen **Open Data Lunch per Webex Videokonferenz am Freitag, den 29. April von 10 bis 12 Uhr**. 
 
-Einwahllink:<br><span style="color:red">
-https://uhuradigitalgmbh.my.webex.com/uhuradigitalgmbh.my/j.php?MTID=m4b81aad407fd4a1531a59dae7a35796d
-</span>
-
-Diesmal steht der digitale Open Data Lunch unter dem Motto:<br> **"Nutzungsbedingungen (Lizenzen) - welche Lizenen gibt es zur Auswahl, was empfiehlt die Open Data Verordnung bzw. §13 EGovG und welche Nachnutzung erlauben die verschiedenen Lizenzen für Dritte?"**
+Diesmal steht der digitale Open Data Lunch unter dem Motto:<br> **"Nutzungsbedingungen (Lizenzen) - Welche Lizenen gibt es zur Auswahl, was empfiehlt die Open Data Verordnung bzw. §13 EGovG und welche Nachnutzung erlauben die verschiedenen Lizenzen für Dritte?"**
 
 Lizenzen sind wichtig. Denn damit Daten als "offen" eingestuft werden können, sollten sie frei zugänglich und (weiter-) verwendbar sein. Das bedeutet normalerweise, dass sie online auf dem Datenportal [www.daten.berlin.de](www.daten.berlin.de) veröffentlicht werden und eine Lizenz haben, die es erlaubt, dass jede:r die Daten öffnen, verwenden und mit anderen teilen kann. Beim digitalen Open Data Lunch bekommen Sie wichtige Hinweise, anhand derer Sie die "richtige" Lizenz für "Ihre" Daten beim Schritt der Veröffentlichung auf dem Datenportal des Landes Berlin auswählen können. Anhand eines Community Vortrages erhalten Sie auch einen Einblick, inwiefern und wie Dritte Ihre Daten bei der Wahl der zur Verfügung stehenden Lizenzen nachnutzen können.
 
@@ -35,3 +31,6 @@ Folgendes Programm erwartet Sie:
 - Abschluss und Ausblick
 
 Zielgruppe für den Open Data Lunch sind: Open-Data-Beauftragte, Datenkoordinator:innen, Datenschutzbeauftragte, Webmaster, Start-ups, Community-Mitglieder, NGOs, Verbände, IT-Dienstleister:innen und Wirtschaftsakteur:innen aus KMUs.
+
+Einwahllink:<br>
+[https://uhuradigitalgmbh.my.webex.com/uhuradigitalgmbh.my/j.php?MTID=m4b81aad407fd4a1531a59dae7a35796d](https://uhuradigitalgmbh.my.webex.com/uhuradigitalgmbh.my/j.php?MTID=m4b81aad407fd4a1531a59dae7a35796d)
