@@ -11,15 +11,23 @@ indexImage: "thumbnail.png"
 heroImage: hero.png
 ---
 
+{% renderTemplate "md" %}
+
 Was sagen uns die Tags im [Berliner Datenportal](https://daten.berlin.de) über den Stand von Open Data in Berlin? Es gibt verschiedene Möglichkeiten, die Tags des Portals zu analysieren. Eine davon ist zu schauen, welche Tags oft in Zusammenhang miteinander benutzt werden, um Themencluster aus dem Datenportal zu erkennen.
 In dieser kleinen Visualisierung ist zu sehen wie oft bestimmte Tags im Zusammenhang stehen (also wie oft jeweils zwei Tags in den Metadaten des gleichen Datensatzes auftauchen). Nur Tags, die mindestens 20 mal mit einem anderen Tag in Verbindung gebracht wurden, werden in der Visualisierung angezeigt. Diese Visualisierung zeigt demzufolge nicht alle Tags, die im Datenportal benutzt werden.
 
 Die Größe eines Node, also eines Knotenpunktes, entspricht der Häufigkeit der Verwendung dieses Tags. Die Stärke der Linie zwischen zwei Nodes entspricht der Anzahl mit der diese zwei Tags zusammen benutzt werden. Die Farben der Nodes werden durch die zugehörige Kategorie zu einem Cluster bestimmt. Diese Cluster wurden automatisiert durch eine Netzwerkanalyse identifiziert.
 
-<br>
-{% include "graph.html" %}
-<br><br>
+{% endrenderTemplate %}
 
+<br>
+
+{% include "graph.html" %}
+
+<br>
+<br>
+
+{% renderTemplate "md" %}
 ## Auswertung
 
 Aus der Analyse lassen sich einige interessante Korrelationen zur Häufigkeit und Verwendung von Tags ableiten. Der Graph teilt sich optisch in zwei große Bereiche auf, die nur über wenige Tags miteinander verknüpft sind. Der eine Bereich ist der rund um die Knotenpunkte _Geodaten_ und _Karten_. Es scheint, dass zumindest die meisten der hier enthaltenen Tags zu Datensätzen gehören, die tatsächliche Geodatensätze sind, also Daten, die einen Raumbezug haben und zum Beispiel mit einem Geoinformationssystem weiterverarbeitet werden können. Das zweite große Cluster findet sich rund um die Nodes _GSI_ (Gesundheits- und Sozialinformationssystem) und _Regionalvergleich_. Daten aus dem Themenbereichen Gesundheit und Soziales, sowie Pflege und Demografie liegen demnach häufig nicht als georeferenzierte Datensätze vor. Ein Grund dafür ist sicher, dass viele dieser Daten keinen Raumbezug besitzen oder der Raumbezug über die Angabe von LOR's stattfindet, wie der Knotenpunkt _LOR_ (Lebensweltlich orientierte Räume, eine Raumeinheit, mehr dazu [hier](https://lab.technologiestiftung-berlin.de/projects/spatial-units/de/)) vermuten lässt, der eine Art Bindeglied zwischen den zwei großen Clustern darstellt.
@@ -35,3 +43,5 @@ Falls Sie mehr zum Thema Tags wissen wollen (zum Beispiel warum Tags wichtig sin
 ## Datenquelle und technische Umsetzung
 
 Mehr darüber, wie die Daten verarbeitet und analysiert wurden erfahren Sie in einem [Blogpost](https://lab.technologiestiftung-berlin.de/projects/tag-analysis/de/) des Ideation & Prototyping Lab der Technologiestiftung. Dort finden Sie auch den Link zum offenem Quellcode der Netzwerkanalyse.
+
+{% endrenderTemplate %}
