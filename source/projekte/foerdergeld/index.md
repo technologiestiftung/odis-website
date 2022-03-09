@@ -15,4 +15,4 @@ Jahr für Jahr werden werden mehr als 1 Milliarde Euro Fördergelder in Berlin a
 
 Das Tool nutzt die [offenen Daten der Senatsverwaltung für Finanzen](https://daten.berlin.de/datensaetze/zuwendungsdatenbank). Im Datensatz enthalten sind Angaben zu Geldempfängern, Geldgebern, dem Zweck der Zuwendung, dem thematischen Bereich der Zuwendung und der Höhe der Zuwendung.
 
-<center>{% include "macro-image-section-small.html" src="foerdergeld_screenshot.png" caption="Das Recherchetool für Förderdaten" %}</center>
+<center>{% include "macro-image-section-small.html", src:"foerdergeld_screenshot.png", caption:"Das Recherchetool für Förderdaten" %}</center>

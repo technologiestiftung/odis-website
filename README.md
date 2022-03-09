@@ -195,7 +195,7 @@ If you want a specialized layout you can use the macros included in `source/_inc
 - macro-image-section.html
 
 ```html
-{% include "macro-image-section.html" src="cat.png" caption="Here is a picture
+{% include "macro-image-section.html", src:"cat.png" caption:"Here is a picture
 of a cat" %}
 ```
 
