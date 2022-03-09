@@ -4,6 +4,7 @@ title:  "Gender Data und Open Data Berlin"
 metaDescription: Die Potenziale von Open Data können noch besser ausgeschöpft werden, wenn die Gender-Dimension mitgedacht wird. Wenn offene Verwaltungsdaten geschlechterspezifische Daten und Themen enthalten, können auch darauf basierende politische Maßnahmen, Produkte und Anwendungen Gender-Aspekte besser einbeziehen und zu einer gleichberechtigteren Gesellschaft beitragen. Anhand einer Metadatenanalyse haben wir untersucht, in welchem Umfang Gender Data Teil der offenen Daten von Berlin ist.
 categories: aktuelles
 visible: true
+tags: post
 urlText: Zum Blogbeitrag
 ---
 
