@@ -1,5 +1,6 @@
 ---
 layout: event
+tags: event
 title:  "Open Data Lunch - Lizenzen"
 metaDescription: Das 5. Open Data Lunch für Verwaltungs&shy;mitarbeiter&shy;*innen
 description: Das 5. Open Data Lunch für Verwaltungs&shy;mitarbeiter&shy;*innen
