@@ -20,6 +20,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(
     "source/projekte/grundsicherung/data/*.csv"
   );
+  eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/src/fonts");
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/js");
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/public");
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/*.css*");
