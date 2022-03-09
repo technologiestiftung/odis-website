@@ -29,16 +29,16 @@ Die vollständige Liste und Informationen dazu, wie die Datensätze ausgewählt 
 <br>
 
 <table id='kerndatentable' class="display">
-{% for row in processed_kerndatensaetze %}
-{% if forloop.first %}
 <thead>
 <tr>
-{% for pair in row %}
-<th>{{ pair }}</th>
-{% endfor %}
+<th>Kategorie</th>
+<th>Datensatz</th>
+<th>Beschreibung</th>
+<th>offen</th>
+<th>Link</th>
 </tr>
 </thead>
-{% endif %}
+{% for row in processed_kerndatensaetze %}
 {% tablerow pair in row %}
 {{ pair }}
 {% endtablerow %}

@@ -1,16 +1,15 @@
 [
-  ["Kategorie", "Datensatz", "Beschreibung", "offen", "Link"],
   [
     "Bevölkerung und Gesellschaft",
     "Anzahl Obdachlose",
-    "\"Anzahl von Menschen, die im öffentlichen Raum, im Freien oder in Notunterkünften übernachten\"",
+    "Anzahl von Menschen, die im öffentlichen Raum, im Freien oder in Notunterkünften übernachten",
     "Nein",
     ""
   ],
   [
     "Bevölkerung und Gesellschaft",
     "Arbeitslosenzahlen",
-    "\"Statistische Informationen zu der Arbeitslosenquote (SGB, SGB II, SGB III)\"",
+    "Statistische Informationen zu der Arbeitslosenquote (SGB, SGB II, SGB III)",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/search/node/sgb%20OR%20arbeitslosigkeit'>daten.berlin.de</a>"
   ],
@@ -24,7 +23,7 @@
   [
     "Bevölkerung und Gesellschaft",
     "Einwohner*innen-Bewegungsdaten (Außen- und Binnenwanderung)",
-    "\"Einwohner*innen-Bewegungsdaten nach Jahr, Stadtteil, usw. gegliedert\"",
+    "Einwohner*innen-Bewegungsdaten nach Jahr, Stadtteil, usw. gegliedert",
     "Nein",
     ""
   ],
@@ -38,103 +37,103 @@
   [
     "Bevölkerung und Gesellschaft",
     "Bevölkerungsstatistik",
-    "\"Allgemeine Bevölkerungsstatistik zu Berlin wie Alter, Einwohnerzahl, Staatsangehörigkeit, Religionszugehörigkeit, usw.\"",
+    "Allgemeine Bevölkerungsstatistik zu Berlin wie Alter, Einwohnerzahl, Staatsangehörigkeit, Religionszugehörigkeit, usw.",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze?title=einwohnerinnen+und+einwohner&field_license_tid=All&field_publisher_tid=193&field_geo_granularity_tid=All&field_temporal_granularity_tid=All&field_geo_coverage_tid=All&state=open'>daten.berlin.de</a>"
   ],
   [
     "Bevölkerung und Gesellschaft",
     "Geburten und Sterbefälle",
-    "\"Anzahl Geburten und Sterbefälle nach Geschlecht und Alter (Sterbefälle), aufgeschlüsselt nach Bezirk oder detaillierter\"",
+    "Anzahl Geburten und Sterbefälle nach Geschlecht und Alter (Sterbefälle), aufgeschlüsselt nach Bezirk oder detaillierter",
     "Teilweise",
     "<a target='_blank' href='https://www.statistik-berlin-brandenburg.de/bevoelkerung/demografie/geburten-sterbefaelle-eheschliessungen'>statistik-berlin-brandenburg.de</a>"
   ],
   [
     "Bevölkerung und Gesellschaft",
     "Soziale Einrichtungen",
-    "\"Angebote wie kostenfreie Übernachtungsangebote für Wohnungslose, Behindertenwohnheime, Einrichtungen für Senior*innen, Beratungsstellen, Einrichtungen für Stadtteilarbeit, usw.\"",
+    "Angebote wie kostenfreie Übernachtungsangebote für Wohnungslose, Behindertenwohnheime, Einrichtungen für Senior*innen, Beratungsstellen, Einrichtungen für Stadtteilarbeit, usw.",
     "Nein",
     ""
   ],
   [
     "Bevölkerung und Gesellschaft",
     "Sozialindikatoren",
-    "\"Sozio-Ökonomische Indikatoren (Wohnlage, Einkommen, usw.) auf LOR-Ebene\"",
+    "Sozio-Ökonomische Indikatoren (Wohnlage, Einkommen, usw.) auf LOR-Ebene",
     "Nein",
     ""
   ],
   [
     "Bevölkerung und Gesellschaft",
     "Lebensformen",
-    "\"Lebensformen (wie Ehepaar ohne Kinder, Alleinstehende, Alleinerziehende mit Kinder, usw.), aufgeteilt in LOR, Stadtbezirke und die gesamte Stadt.\"",
+    "Lebensformen (wie Ehepaar ohne Kinder, Alleinstehende, Alleinerziehende mit Kinder, usw.), aufgeteilt in LOR, Stadtbezirke und die gesamte Stadt.",
     "Teilweise",
     "<a target='_blank' href='https://www.statistik-berlin-brandenburg.de/bevoelkerung/demografie/mikrozensus'>statistik-berlin-brandenburg.de</a>"
   ],
   [
     "Bevölkerung und Gesellschaft",
     "Menschen mit Behinderung",
-    "\"Anzahl Menschen mit Behinderung nach Behinderungsgrad, Art der Behinderung, Geschlecht und Alter\"",
+    "Anzahl Menschen mit Behinderung nach Behinderungsgrad, Art der Behinderung, Geschlecht und Alter",
     "Ja",
     "<a target='_blank' href='https://www.statistik-berlin-brandenburg.de/menschen-mit-behinderung'>statistik-berlin-brandenburg.de</a>"
   ],
   [
-    "\"Bildung, Kultur und Sport\"",
+    "Bildung, Kultur und Sport",
     "Internetanbindung von Schulen",
     "Die Bandbreitenübersicht für Schulen soll einen Überblick über die Internetanbindung der öffentlichen Schulen ermöglichen",
     "Nein",
     ""
   ],
   [
-    "\"Bildung, Kultur und Sport\"",
+    "Bildung, Kultur und Sport",
     "Kinderpflege",
-    "\"Einrichtungen, Standorte, Öffnungszeiten, Alter von Kindern und freie Betreuungsplätze von Kindertagesstätten sowie Daten zu Kindertagespflegestellen\"",
+    "Einrichtungen, Standorte, Öffnungszeiten, Alter von Kindern und freie Betreuungsplätze von Kindertagesstätten sowie Daten zu Kindertagespflegestellen",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/kindertagesst%C3%A4tten-wfs'>daten.berlin.de</a>"
   ],
   [
-    "\"Bildung, Kultur und Sport\"",
+    "Bildung, Kultur und Sport",
     "Museen und kulturelle Einrichtungen",
-    "\"Standorte, Öffnungszeiten und Beschreibung aller kulturellen Einrichtungen\"",
+    "Standorte, Öffnungszeiten und Beschreibung aller kulturellen Einrichtungen",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/standorte-gef%C3%B6rderter-kultureinrichtungen'>daten.berlin.de</a>"
   ],
   [
-    "\"Bildung, Kultur und Sport\"",
+    "Bildung, Kultur und Sport",
     "Schuleingangsuntersuchungen",
     "Der Datensatz enthält Daten der Schuleingangsuntersuchungen und der Check-Untersuchungen auf LOR Ebene",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/search/node/Einschulungsuntersuchungen'>daten.berlin.de</a>"
   ],
   [
-    "\"Bildung, Kultur und Sport\"",
+    "Bildung, Kultur und Sport",
     "Schuleinzugsgebiete",
-    "\"Die Flächen der Gebiete oder eine Liste von den Adressen, die zu jeder Schule gehören\"",
+    "Die Flächen der Gebiete oder eine Liste von den Adressen, die zu jeder Schule gehören",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/search/node/einschulbereiche'>daten.berlin.de</a>"
   ],
   [
-    "\"Bildung, Kultur und Sport\"",
+    "Bildung, Kultur und Sport",
     "Schulstandorte",
-    "\"Standortspezifische Daten wie Adresse, Anzahl von Schüler*innen, Anzahl von Lehrer*innen, Angebote, Informationen (z.B. Barrierefrei, Sprachen)\"",
+    "Standortspezifische Daten wie Adresse, Anzahl von Schüler*innen, Anzahl von Lehrer*innen, Angebote, Informationen (z.B. Barrierefrei, Sprachen)",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/schulen-wfs'>daten.berlin.de</a>"
   ],
   [
-    "\"Bildung, Kultur und Sport\"",
+    "Bildung, Kultur und Sport",
     "Schulstatistik",
-    "\"Zahl der Schülerinnen und Schüler, Zahl und Art der Klassen, Anzahl der Lehrerinnen und Lehrer oder der Ausbildungsberufe, usw.\"",
+    "Zahl der Schülerinnen und Schüler, Zahl und Art der Klassen, Anzahl der Lehrerinnen und Lehrer oder der Ausbildungsberufe, usw.",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/sch%C3%BCler-und-lehrkr%C3%A4ftestatistik'>daten.berlin.de</a>"
   ],
   [
-    "\"Bildung, Kultur und Sport\"",
+    "Bildung, Kultur und Sport",
     "Sportstätten",
     "Standorte von Sportanlagen sowie Belegungspläne",
     "Nein",
     ""
   ],
   [
-    "\"Bildung, Kultur und Sport\"",
+    "Bildung, Kultur und Sport",
     "Hochschulstatistik",
     "Studierendenzahl nach Universtät und Studiengang",
     "Nein",
@@ -151,7 +150,7 @@
   [
     "Gesundheit",
     "Ärzte",
-    "\"Liste von Ärzt*innen in der Stadt, mit Angaben zur Fachrichtung und zum Standort\"",
+    "Liste von Ärzt*innen in der Stadt, mit Angaben zur Fachrichtung und zum Standort",
     "Nein",
     ""
   ],
@@ -165,112 +164,112 @@
   [
     "Gesundheit",
     "Krankenhäuser",
-    "\"Standorte aller Krankenhäuser, inklusive Angaben zu Fachabteilungen\"",
+    "Standorte aller Krankenhäuser, inklusive Angaben zu Fachabteilungen",
     "Nein",
     ""
   ],
   [
     "Gesundheit",
     "Lebensmittelkontrollen",
-    "\"Datum und Ergebnisse der Lebensmittelkontrollen (Hygienebedingungen, Lagerbedingungen und die Einhaltung von Kennzeichnungsvorgaben)\"",
+    "Datum und Ergebnisse der Lebensmittelkontrollen (Hygienebedingungen, Lagerbedingungen und die Einhaltung von Kennzeichnungsvorgaben)",
     "Nein",
     ""
   ],
   [
     "Gesundheit (COVID-19)",
     "COVID-19 Erkrankungen",
-    "\"COVID-19-Infizierte nach Meldedatum und Bezirk, inklusive Angaben zu Altersgruppen und Impfstatus\"",
+    "COVID-19-Infizierte nach Meldedatum und Bezirk, inklusive Angaben zu Altersgruppen und Impfstatus",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/search/node/covid-19'>daten.berlin.de</a>"
   ],
   [
     "Gesundheit (COVID-19)",
     "Impf- und Testinfrastruktur",
-    "\"Standorte, Öffnungszeiten und Kontaktdaten von Impfzentren, Arztpraxen, die Impfungen anbieten, und offiziellen Testzentren\"",
+    "Standorte, Öffnungszeiten und Kontaktdaten von Impfzentren, Arztpraxen, die Impfungen anbieten, und offiziellen Testzentren",
     "Nein",
     ""
   ],
   [
-    "\"Justiz, Rechtssystem und öffentliche Sicherheit\"",
+    "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Angemeldete Versammlungen (Demos)",
-    "\"Eine Datenbank von angemeldeten Demos in Berlin mit Name der organisierenden Organization/Person, gemeldeten Zweck der Demo, gemeldeten Ort oder Route, Datum usw. \"",
+    "Eine Datenbank von angemeldeten Demos in Berlin mit Name der organisierenden Organization/Person, gemeldeten Zweck der Demo, gemeldeten Ort oder Route, Datum usw. ",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/versammlungen-im-land-berlin'>daten.berlin.de</a>"
   ],
   [
-    "\"Justiz, Rechtssystem und öffentliche Sicherheit\"",
+    "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Bußgelder (Verkehr)",
     "Verwarn- und Bußgelder fließender und stehender Verkehr (statistische Zusammenfassung)",
     "Nein",
     ""
   ],
   [
-    "\"Justiz, Rechtssystem und öffentliche Sicherheit\"",
+    "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Fahrraddiebstähle",
     "Angabe von genauen Standorten der Fahrraddiebstähle",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/fahrraddiebstahl-berlin'>daten.berlin.de</a>"
   ],
   [
-    "\"Justiz, Rechtssystem und öffentliche Sicherheit\"",
+    "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Feuerwehreinsätze",
-    "\"Einzelne Einsätze (Rohdaten) oder Einsatzbilanz und ihre Reaktionszeit unterteilt in Art des Einsatzes (Brandeinsätze, Hilfeleistungseinsätze, Fehleinsätze, usw.)\"",
+    "Einzelne Einsätze (Rohdaten) oder Einsatzbilanz und ihre Reaktionszeit unterteilt in Art des Einsatzes (Brandeinsätze, Hilfeleistungseinsätze, Fehleinsätze, usw.)",
     "Nein",
     ""
   ],
   [
-    "\"Justiz, Rechtssystem und öffentliche Sicherheit\"",
+    "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Flugverbotszonen",
-    "\"Flächen von Flugverbotszonen, wo z.B. das Fliegen von Drohnen nicht erlaubt ist\"",
+    "Flächen von Flugverbotszonen, wo z.B. das Fliegen von Drohnen nicht erlaubt ist",
     "Nein",
     ""
   ],
   [
-    "\"Justiz, Rechtssystem und öffentliche Sicherheit\"",
+    "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Gesetzestexte",
     "Bereitstellung von Gesetze als einfacher Volltext",
     "Nein",
     ""
   ],
   [
-    "\"Justiz, Rechtssystem und öffentliche Sicherheit\"",
+    "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Kriminalitätsstatistik",
-    "\"Allgemeine polizeiliche Kriminalstatistik wie Delikte, Tatverdächtige, Geschlecht, Alter, Jahre\"",
+    "Allgemeine polizeiliche Kriminalstatistik wie Delikte, Tatverdächtige, Geschlecht, Alter, Jahre",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/kriminalit%C3%A4tsatlas-berlin'>daten.berlin.de</a>"
   ],
   [
-    "\"Justiz, Rechtssystem und öffentliche Sicherheit\"",
+    "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Verkehrsunfälle",
     "Georeferenzierte Unfälle mit zusätzlichen Informationen zur Unfallursache und Angabe zu Personenschaden",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/search/node/unfälle'>daten.berlin.de</a>"
   ],
   [
-    "\"Justiz, Rechtssystem und öffentliche Sicherheit\"",
+    "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Vermisste Personen / Polizei-Meldungen",
-    "\"Eine API mit aktuelle Daten zu vermissten Personen mit einer Beschreibung der Person, Datum der Meldung, usw.\"",
+    "Eine API mit aktuelle Daten zu vermissten Personen mit einer Beschreibung der Person, Datum der Meldung, usw.",
     "Nein",
     ""
   ],
   [
     "Regierung und öffentlicher Sektor",
     "Anliegenmanagement",
-    "\"Bürgerbriefe und -anträge mit Datum, Standort, Art der Bewschwerde, Status, usw.\"",
+    "Bürgerbriefe und -anträge mit Datum, Standort, Art der Bewschwerde, Status, usw.",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/ordnungsamt-online'>daten.berlin.de</a>"
   ],
   [
     "Regierung und öffentlicher Sektor",
     "Barrierefreiheit öffentlicher Gebäude",
-    "\"Information zur Barrierefreiheit öffentlicher Gebäude: Standorte von Rampen, Aufzügen, etc.\"",
+    "Information zur Barrierefreiheit öffentlicher Gebäude: Standorte von Rampen, Aufzügen, etc.",
     "Nein",
     ""
   ],
   [
     "Regierung und öffentlicher Sektor",
     "Politische Mandatare",
-    "\"Liste von allen aktuellen politischen Mandataren mit Name, Partei, Alter, Geschlecht, Beruf, usw.\"",
+    "Liste von allen aktuellen politischen Mandataren mit Name, Partei, Alter, Geschlecht, Beruf, usw.",
     "Nein",
     ""
   ],
@@ -284,14 +283,14 @@
   [
     "Regierung und öffentlicher Sektor",
     "Wahlbezirke",
-    "\"Geodaten zu Wahlbezirken, Wahlkreisen und Wahllokalen\"",
+    "Geodaten zu Wahlbezirken, Wahlkreisen und Wahllokalen",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/search/node/Geometrien%20der%20Wahlbezirke'>daten.berlin.de</a>"
   ],
   [
     "Regierung und öffentlicher Sektor",
     "Wahlergebnisse",
-    "\"Wahlergebnisse und Wahlbeteiligung zu Europa-, Bundestags-, Landtags- und Kommunalwahlen\"",
+    "Wahlergebnisse und Wahlbeteiligung zu Europa-, Bundestags-, Landtags- und Kommunalwahlen",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/search/node/wahl'>daten.berlin.de</a>"
   ],
@@ -305,7 +304,7 @@
   [
     "Stadtentwicklung und Wohnen",
     "Baufertigstellungen",
-    "\"Baufertigstellungen von neuen Gebäuden, mit Angaben zu Standort, Gebäudeart, Baustoffart, usw. \"",
+    "Baufertigstellungen von neuen Gebäuden, mit Angaben zu Standort, Gebäudeart, Baustoffart, usw. ",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/search/node/Baufertigstellungen'>daten.berlin.de</a>"
   ],
@@ -319,7 +318,7 @@
   [
     "Stadtentwicklung und Wohnen",
     "Bebauungspläne",
-    "\"Informationen zu Aufstellungsbeschlüssen, Fluchtlinienplänen und rechtskräftigen Bebauungsplänen\"",
+    "Informationen zu Aufstellungsbeschlüssen, Fluchtlinienplänen und rechtskräftigen Bebauungsplänen",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/bebauungspl%C3%A4ne-vorhabenbezogene-bebauungspl%C3%A4ne-geltungsbereiche-wfs'>daten.berlin.de</a>"
   ],
@@ -347,7 +346,7 @@
   [
     "Stadtentwicklung und Wohnen",
     "Flächennutzungen",
-    "\"Geodaten zur Flächennutzung nach Art der Nutzung (Wohnbaufläche, gewerbliche Baufläche, usw.)\"",
+    "Geodaten zur Flächennutzung nach Art der Nutzung (Wohnbaufläche, gewerbliche Baufläche, usw.)",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/fl%C3%A4chennutzung-stadtstruktur-2015-und-versiegelung-2016-umweltatlas-wfs'>daten.berlin.de</a>"
   ],
@@ -361,7 +360,7 @@
   [
     "Stadtentwicklung und Wohnen",
     "Leerstehende Gebäude",
-    "\"Standorte von Gebäuden, die aktuell leer stehen und nicht benutzt werden\"",
+    "Standorte von Gebäuden, die aktuell leer stehen und nicht benutzt werden",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/alkis-berlin-geb%C3%A4ude-wfs'>daten.berlin.de (unter Attribut Zustand)</a>"
   ],
@@ -382,7 +381,7 @@
   [
     "Stadtentwicklung und Wohnen",
     "Verwaltungsgebiete (administrative Gebietseinheiten)",
-    "\"Flächen der Stadtgebiete, Bezirke und Lebensweltlich orientierte Räume (LOR) von Berlin\"",
+    "Flächen der Stadtgebiete, Bezirke und Lebensweltlich orientierte Räume (LOR) von Berlin",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/lebensweltlich-orientierte-r%C3%A4ume-lor-bezirksregionen-wfs'>daten.berlin.de</a>"
   ],
@@ -403,7 +402,7 @@
   [
     "Stadtentwicklung und Wohnen",
     "Wohnungseigentum",
-    "\"Historische Daten zu Anzahl von Mietwohnungen und Eigentumswohnungen, aufgeschlüsselt nach Bezirk oder spezifischer\"",
+    "Historische Daten zu Anzahl von Mietwohnungen und Eigentumswohnungen, aufgeschlüsselt nach Bezirk oder spezifischer",
     "Ja",
     "<a target='_blank' href='https://www.statistik-berlin-brandenburg.de/bevoelkerung/zensus/zensus_2011'>statistik-berlin-brandenburg.de</a>"
   ],
@@ -431,7 +430,7 @@
   [
     "Stadtraum",
     "Öffentliche Grünflächen und Spielplätze",
-    "\"Alle öffentliche Grünflächen (Spielplätze, Parkanlagen, Ausgleichsflächen, Wälder, Urban Gardening, Kleingärten) als Flächengeometrien\"",
+    "Alle öffentliche Grünflächen (Spielplätze, Parkanlagen, Ausgleichsflächen, Wälder, Urban Gardening, Kleingärten) als Flächengeometrien",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/gr%C3%BCnanlagenbestand-berlin-einschl-der-%C3%B6ffentlichen-spielpl%C3%A4tze-gr%C3%BCnanlagen-wfs'>daten.berlin.de</a>"
   ],
@@ -445,7 +444,7 @@
   [
     "Stadtraum",
     "Öffentliche Mülleimer und Wertstoffcontainer",
-    "\"Standorte von öffentlichen Mülleimern und Wertstoff-Containern und Art des Wertstoffs (Altkleider, Glas, Altpapier, ...)\"",
+    "Standorte von öffentlichen Mülleimern und Wertstoff-Containern und Art des Wertstoffs (Altkleider, Glas, Altpapier, ...)",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/search/node/abfallbehälter%20OR%20recycling-container'>daten.berlin.de</a>"
   ],
@@ -459,14 +458,14 @@
   [
     "Stadtraum",
     "Stadtpläne",
-    "\"Stadtkartenwerk, inklusive Eigenschaften wie Gebäudenumrisse, Straßen, Grenzen, usw.\"",
+    "Stadtkartenwerk, inklusive Eigenschaften wie Gebäudenumrisse, Straßen, Grenzen, usw.",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/karte-von-berlin-15000-k5-farbausgabe'>daten.berlin.de</a>"
   ],
   [
     "Stadtraum",
     "Straßenverzeichnis",
-    "\"Auskünfte aus dem öffentlichen Straßenverzeichnis (als Flächengeometrie) zu allen öffentlichen gewidmeten Straßen, inklusive Angaben wie Breite der Straße\"",
+    "Auskünfte aus dem öffentlichen Straßenverzeichnis (als Flächengeometrie) zu allen öffentlichen gewidmeten Straßen, inklusive Angaben wie Breite der Straße",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/detailnetz-stra%C3%9Fenabschnitte-wfs'>daten.berlin.de</a>"
   ],
@@ -487,7 +486,7 @@
   [
     "Umwelt",
     "Energieverbrauch",
-    "\"Energieverbrauch der Stadt, inklusive Angaben zu Heizung, Strom, Wasser\"",
+    "Energieverbrauch der Stadt, inklusive Angaben zu Heizung, Strom, Wasser",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/energieatlas-berlin'>daten.berlin.de</a>"
   ],
@@ -501,7 +500,7 @@
   [
     "Umwelt",
     "Klimabilanz",
-    "\"Angaben zu verschiedenen Energie-Indikatoren wie CO2 Gesamt, CO2 pro Kopf, Energie nach Bereichsverbrauch, usw.\"",
+    "Angaben zu verschiedenen Energie-Indikatoren wie CO2 Gesamt, CO2 pro Kopf, Energie nach Bereichsverbrauch, usw.",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/energieatlas-berlin'>daten.berlin.de</a>"
   ],
@@ -536,28 +535,28 @@
   [
     "Verkehr",
     "Baustellen",
-    "\"Termine für Baubeginn und Bauende für akutelle und geplante Vorhaben, sowie Geodaten zu den Standorten/Strecken der Baustellen\"",
+    "Termine für Baubeginn und Bauende für akutelle und geplante Vorhaben, sowie Geodaten zu den Standorten/Strecken der Baustellen",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/baustellen-sperrungen-und-sonstige-st%C3%B6rungen-von-besonderem-verkehrlichem-interesse'>daten.berlin.de</a>"
   ],
   [
     "Verkehr",
     "Fahrradwege",
-    "\"Liniengeometrien aller Fahrradstraßen und -routen mit Art der Straße (abgetennter Weg, markierter Streifen, usw.)\"",
+    "Liniengeometrien aller Fahrradstraßen und -routen mit Art der Straße (abgetennter Weg, markierter Streifen, usw.)",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/radverkehrsanlagen-wfs'>daten.berlin.de</a>"
   ],
   [
     "Verkehr",
     "Haltestellen",
-    "\"Standorte Haltestellen und informationen zu Linien, die dort halten\"",
+    "Standorte Haltestellen und informationen zu Linien, die dort halten",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/koordinaten-der-zugangsm%C3%B6glichkeiten-zu-stationen-0'>daten.berlin.de</a>"
   ],
   [
     "Verkehr",
     "KFZ-Zulassungen",
-    "\"Absoluter Bestand und monatlich neue Fahrzeugzulassungen jeder Art, inklusive Daten zu Antriebsarten, Automarke, Postleitzahl der Besitzer, usw. \"",
+    "Absoluter Bestand und monatlich neue Fahrzeugzulassungen jeder Art, inklusive Daten zu Antriebsarten, Automarke, Postleitzahl der Besitzer, usw. ",
     "Nein",
     ""
   ],
@@ -571,7 +570,7 @@
   [
     "Verkehr",
     "Messstellen Fahrräder",
-    "\"An den Dauerzählstellen werden alle Fahrräder, welche die Erfassungsquerschnitte der Zählstellen überfahren, gezählt. (Stundenwerte)\"",
+    "An den Dauerzählstellen werden alle Fahrräder, welche die Erfassungsquerschnitte der Zählstellen überfahren, gezählt. (Stundenwerte)",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/radz%C3%A4hldaten-berlin'>daten.berlin.de</a>"
   ],
@@ -613,14 +612,14 @@
   [
     "Verkehr",
     "Parkplätze",
-    "\"Standorte mit Bezeichnung der öffentlichen Parkplätze (PKW-, Motorrad-, Wohnmobil/Wohnwagen-, Busparkplätze und Behindertenparkplätze)\"",
+    "Standorte mit Bezeichnung der öffentlichen Parkplätze (PKW-, Motorrad-, Wohnmobil/Wohnwagen-, Busparkplätze und Behindertenparkplätze)",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/stra%C3%9Fenbefahrung-2014-parkfl%C3%A4che-wfs'>daten.berlin.de</a>"
   ],
   [
     "Verkehr",
     "Parkraum (Bewirtschaftung)",
-    "\"Informationen zu Preisen, Uhrzeiten, Zuständigkeit, Bewohnerparken und Flächengeometrien\"",
+    "Informationen zu Preisen, Uhrzeiten, Zuständigkeit, Bewohnerparken und Flächengeometrien",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/parkraumbewirtschaftung-wfs'>daten.berlin.de</a>"
   ],
@@ -634,14 +633,14 @@
   [
     "Wirtschaft und Finanzen",
     "Ausschreibungen und Vergaben",
-    "\"Daten über geplante und vergebene Aufträge, inklusive Eckdaten zum Auftragsgewinner und deren Angebot\"",
+    "Daten über geplante und vergebene Aufträge, inklusive Eckdaten zum Auftragsgewinner und deren Angebot",
     "Teilweise",
     "<a target='_blank' href='https://www.berlin.de/vergabeplattform/veroeffentlichungen/bekanntmachungen/'>berlin.de</a>"
   ],
   [
     "Wirtschaft und Finanzen",
     "Wirtschaftsleistung",
-    "\"Bruttoinlandsprodukt, wirtschaftliche Kennzahlen\"",
+    "Bruttoinlandsprodukt, wirtschaftliche Kennzahlen",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/bruttoinlandsprodukt-berlin-1991-2020'>daten.berlin.de</a>"
   ],
@@ -655,7 +654,7 @@
   [
     "Wirtschaft und Finanzen",
     "Beteiligungen der Stadt",
-    "\"Städtischen Beteiligungsgesellschaften, Eigenbetriebe und eigenbetriebsähnlichen Einrichtungen\"",
+    "Städtischen Beteiligungsgesellschaften, Eigenbetriebe und eigenbetriebsähnlichen Einrichtungen",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/beteiligungsdatenbank-des-landes-berlin'>daten.berlin.de</a>"
   ],
@@ -669,14 +668,14 @@
   [
     "Wirtschaft und Finanzen",
     "Gewerbemeldungen",
-    "\"Auflistung der Gewerbemeldungen (Anmeldung, Abmeldung, Ummeldung, Sonstige Änderung) \"",
+    "Auflistung der Gewerbemeldungen (Anmeldung, Abmeldung, Ummeldung, Sonstige Änderung) ",
     "Nein",
     ""
   ],
   [
     "Wirtschaft und Finanzen",
     "Grundbuch",
-    "\"Einträge in dem Grundbuch für Berlin, die die Eigentumsverhältnisse von Grundstücken in Berlin verzeichnen\"",
+    "Einträge in dem Grundbuch für Berlin, die die Eigentumsverhältnisse von Grundstücken in Berlin verzeichnen",
     "Nein",
     ""
   ],
@@ -697,14 +696,14 @@
   [
     "Wirtschaft und Finanzen",
     "Landesgrundbesitz (Vermögen)",
-    "\"Daten, möglichst georeferenziert, zu allen Grundstücke die Berlin gehören\"",
+    "Daten, möglichst georeferenziert, zu allen Grundstücke die Berlin gehören",
     "Nein",
     ""
   ],
   [
     "Wirtschaft und Finanzen",
     "Zuwendungen Datenbank",
-    "\"Daten zu Zuwendungen aus Landesmitteln (Geldgeber, Geldempfänger, höhe des Beitrags, usw.)\"",
+    "Daten zu Zuwendungen aus Landesmitteln (Geldgeber, Geldempfänger, höhe des Beitrags, usw.)",
     "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/zuwendungsdatenbank'>daten.berlin.de</a>"
   ],
