@@ -1,6 +1,6 @@
 {
   "name": "@technologiestiftung/odis-website",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Repository for the website of Berlins Open Data Informationsstelle (ODIS).",
   "scripts": {
     "start": "eleventy --serve --quiet",
