@@ -17,4 +17,4 @@ Das Tool nutzt die [offenen Daten der Senatsverwaltung für Finanzen](https://da
 
 
 
-<center>{% include macro-image-section-small.html src="foerdergeld_screenshot.png" caption="Das Recherchetool für Förderdaten" %}</center>
+<center>{% include "macro-image-section-small.html" src="foerdergeld_screenshot.png" caption="Das Recherchetool für Förderdaten" %}</center>

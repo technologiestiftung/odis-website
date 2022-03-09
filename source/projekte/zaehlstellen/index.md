@@ -17,4 +17,4 @@ In [dieser interaktiven Visualisierung](https://lab.technologiestiftung-berlin.d
 
 Die stündliche zusammengefassten Werte werden jedes Jahr als [offener Datensatz](https://www.berlin.de/senuvk/verkehr/lenkung/vlb/de/radzaehlungen.shtml) von der Senatsverwaltung für Umwelt, Verkehr und Klimaschutz veröffentlicht. 
 
-<center>>{% include macro-image-section-small.html src="zaehlstellen_screenshot.png" caption="Einige Erkenntnisse aus der Datenanalyse" %}</center>>
+<center>{% include "macro-image-section-small.html" src="zaehlstellen_screenshot.png" caption="Einige Erkenntnisse aus der Datenanalyse" %}</center>

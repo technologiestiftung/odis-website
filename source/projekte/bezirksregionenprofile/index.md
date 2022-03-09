@@ -19,4 +19,4 @@ Die vielfältigen Daten, die in den Bezirksregionen zusammengetragen, ausgewerte
 Tempelhof-Schöneberg hat als erster Bezirk die Daten hierfür bereitgestellt. Die Anwendung kann [hier](xxx.de) erkundet werden.
 
 
-{% include macro-image-section-small.html src="bzr.png" caption="Anwendung Bezirksregionenprofile Tempelhof-Schöneberg" %}
+{% include "macro-image-section-small.html" src="bzr.png" caption="Anwendung Bezirksregionenprofile Tempelhof-Schöneberg" %}
