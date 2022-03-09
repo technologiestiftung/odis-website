@@ -112,6 +112,9 @@ It needs several steps to add an ODIS project to the ODIS website.
 
 #### General: How the build process works
 
+!Hint: This is currently deprecated for the "grundsicherung" project.
+You still can use the buildscript.sh script but it wont be run during a normal build.
+
 The _netlify.toml_ file manages the build process.
 
 ```toml
@@ -141,7 +144,7 @@ Please find comments in yaml-file below and follow.
 ---
 tags: project
 title: "Grundsicherung" #add individual project name
-blogLinkTitle: "Hier geht't zu den HG Infos"
+blogLinkTitle: "Hier geht's zu den HG Infos"
 #blogLink: /aktuelles
 metaDescription: Darstellung der Sozialstatistikdaten zu Grundsicherung.
 date: 2019-12-17
