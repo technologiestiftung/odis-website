@@ -153,12 +153,3 @@ $RECYCLE.BIN/
 
 # Local Netlify folder
 .netlify
-foo
-
-source/projekte/grundsicherung/config.json
-source/projekte/grundsicherung/index.liquid
-source/projekte/grundsicherung/data/lor_planungsraeume.geojson
-source/projekte/grundsicherung/data/timelapse.csv
-source/projekte/grundsicherung/data/timeline.csv
-source/projekte/grundsicherung/data/xii.geojson
-source/projekte/grundsicherung/src/img/arrow-bullet-white.svg
