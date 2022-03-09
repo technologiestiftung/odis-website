@@ -1,6 +1,7 @@
 ---
 layout: default.liquid
 title: Aktuelles
+permalink: "aktuelles/{% assign pg=pagination.pageNumber %}{{ pg  | plus: 1}}/index.html"
 pagination:
     data: collections.post
     size: 8
@@ -10,6 +11,7 @@ pagination:
 
 
 ---
+
 
 
 
@@ -68,12 +70,13 @@ pagination:
                 &laquo; Neuere
                 {% endif %}
             </span>
+            {{pagination | log }}
 <!-- eleventy create numbered pagination -->
             {% for page in pagination.pages %}
 
             <!-- {{ forloop.index  }} -->
                 {% if forloop.index0 == pagination.pageNumber %}
-                <span class="selected">{{ forloop.index}}</span>
+                <span class="selected"><a href="#">{{ forloop.index}}</a></span>
                 {% else %}
                 <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
                 {% endif %}
