@@ -1,13 +1,3 @@
-source/projekte/grundsicherung/bundle.css
-source/projekte/grundsicherung/bundle.css.map
-source/projekte/grundsicherung/js/*.js
-source/projekte/grundsicherung/js/*.js.map
-source/projekte/grundsicherung/js/*.js
-source/projekte/grundsicherung/js/*.map
-source/projekte/grundsicherung/public/.gitkeep
-source/projekte/grundsicherung/src/fonts/clan-book.woff
-source/projekte/grundsicherung/src/fonts/clan-medium.woff
-source/projekte/grundsicherung/src/img/arrow-bullet.svg
 !source/projekte/index.html
 !source/projekte/img
 _site/
