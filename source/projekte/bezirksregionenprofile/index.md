@@ -5,7 +5,7 @@ title: "Digitale Bezirksregionenprofile"
 visibleLink: false
 blogLinkTitle: "Hier geht's zum Projekt"
 #blogLink: https://bezirksregionenprofile-ts.netlify.com/
-metaDescription: Digitale Aufbereitung der Bezirksregionenprofile in einer Webanwendung.
+metaDescription: Digitale Aufbereitung der Bezirksregionenprofile in einer Webanwendung
 date: 2019-12-12
 visible: false
 indexImage: bzr-thumbnail.png

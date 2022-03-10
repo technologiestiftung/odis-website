@@ -4,7 +4,7 @@ tags: project
 title: Fahrradzählstellen
 blogLinkTitle: "Hier gehts zur interaktiven Visualisierung"
 blogLink: https://lab.technologiestiftung-berlin.de/projects/bikerides/de/
-metaDescription: Eine Visualisierungen von Messungen der Radzählstellen in Berlin.
+metaDescription: Eine Visualisierungen von Messungen der Radzählstellen in Berlin
 date: 2018-09-11
 visible: true
 indexImage: placeholder.png

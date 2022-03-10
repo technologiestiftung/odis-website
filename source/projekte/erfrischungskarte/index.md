@@ -4,7 +4,7 @@ tags: project
 title: Erfrischungskarte
 blogLinkTitle: "Hier geht's zur Karte"
 blogLink: https://erfrischungskarte.odis-berlin.de/
-metaDescription: Eine Webkarte vom Berliner Stadtgebiet, die Temperatur, kühlen Wind und Schattenbereiche anzeigt.
+metaDescription: Eine Webkarte vom Berliner Stadtgebiet, die Temperatur, kühlen Wind und Schattenbereiche anzeigt
 date: 2021-07-01
 visible: true
 indexImage: placeholder.png

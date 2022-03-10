@@ -4,7 +4,7 @@ tags: project
 title: Data Dive – Radverkehr
 blogLinkTitle: "Hier geht's zum ausführlichen Bericht"
 blogLink: https://lab.technologiestiftung-berlin.de/projects/datadive-cycling/de/
-metaDescription: Eine Analyse von der Verfügbarkeit von Radverkehrsdaten in Berlin.
+metaDescription: Eine Analyse der Verfügbarkeit von Radverkehrsdaten in Berlin
 date: 2018-09-17
 visible: true
 indexImage: placeholder.png

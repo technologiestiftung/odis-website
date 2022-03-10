@@ -4,7 +4,7 @@ tags: project
 title: Berliner Gehwegbreiten
 blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://gehwege.citylab-berlin.org/info
-metaDescription: Eine Anwendung, die die Gehwegbreiten in Berlin visualisiert.
+metaDescription: Eine Anwendung, die die Gehwegbreiten in Berlin visualisiert
 date: 2020-05-06
 visible: true
 indexImage: placeholder.png

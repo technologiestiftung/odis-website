@@ -4,7 +4,7 @@ tags: project
 title: Data Dive – Barrierefreiheit
 blogLinkTitle: "Hier geht's zum ausführlichen Bericht"
 blogLink: https://lab.technologiestiftung-berlin.de/projects/datadive-accessibility/de/
-metaDescription: Eine Analyse von der Verfügbarkeit von Daten zu Barrierefreiheit in Berlin.
+metaDescription: Eine Analyse der Verfügbarkeit von Daten zu Barrierefreiheit in Berlin
 date: 2019-02-20
 visible: true
 indexImage: placeholder.png
