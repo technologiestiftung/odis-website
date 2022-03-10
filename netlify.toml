@@ -8,4 +8,4 @@
   # been specified, include it in the publish directory path.
   publish = "_site"
 
-  command = "./build-scripts/buildprocess.sh && bundle exec jekyll build"
+  command = "npm ci && npm run build"

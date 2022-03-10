@@ -1,6 +1,7 @@
 ---
 layout: project
-title:  Wahlbezirke Editor
+tags: project
+title: Wahlbezirke Editor
 blogLinkTitle: "Hier geht's zum Tool"
 blogLink: https://wahlbezirke.odis-berlin.de/
 metaDescription: Ein digitaler Prototyp für die Editierung von Wahlbezirken
