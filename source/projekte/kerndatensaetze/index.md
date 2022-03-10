@@ -89,6 +89,7 @@ $('#kerndatentable').DataTable( {
 </script>
 
 <br>
+
 **Warum enthält die Liste 103 Datensätze?**
 Die Corona-Pandemie hat die Gesellschaft vor ganz neue Herausforderungen gestellt - und auch ganz neue Bedarfe an Daten aufgezeigt.
 Aufgrund der anhaltenden Pandemielage zum Zeitpunkt der Veröffentlichung der Liste, haben wir uns entschlossen 3 besonders relevante, auf Corona bezogene Datensätze zusätzlich zu den 100 Kerndatensätzen in die Liste aufzunehmen.
