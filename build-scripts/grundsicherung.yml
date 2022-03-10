@@ -1,7 +1,7 @@
 ---
-layout: nil
-title:  "Grundsicherung"
-blogLinkTitle: "Hier geht't zu den HG Infos"
+title: "Grundsicherung"
+tags: project
+blogLinkTitle: "Hier geht's zu den HG Infos"
 #blogLink: /aktuelles
 metaDescription: Darstellung der Sozialstatistikdaten zu Grundsicherung.
 date: 2019-12-17
@@ -9,3 +9,4 @@ visible: true
 indexImage: ./img/gs-thumbnail.png
 heroImage: ./img/gs-hero.png
 ---
+
