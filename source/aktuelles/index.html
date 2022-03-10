@@ -1,7 +1,7 @@
 ---
 layout: default.liquid
 title: Aktuelles
-permalink: "aktuelles/{% assign pg=pagination.pageNumber %}{{ pg  | plus: 1}}/index.html"
+permalink: "aktuelles/{%if pagination.pageNumber != 0%}{% assign pg=pagination.pageNumber %}{{ pg  | plus: 1}}/{%endif%}index.html"
 pagination:
     data: collections.post
     size: 8
