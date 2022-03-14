@@ -3,8 +3,7 @@ layout: default.liquid
 title: In 10 Schritten zum maschinenlesbaren Organigramm
 visibleLink: false
 blogLinkTitle: "Anleitung für das Organigramm Tool"
-#blogLink: https://bezirksregionenprofile-ts.netlify.com/
-metaDescription: Digitale Anwendung um Organigramme der Berliner Verwaltung einheitlicher und maschinenlesbar zu gestalten.
+metaDescription: Anleitung für das Organigramm Tool
 date: 2022-02-18
 visible: false
 ---
