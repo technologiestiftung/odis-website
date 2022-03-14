@@ -1,7 +1,17 @@
 ---
-layout: default
+layout: default.liquid
 title: Aktuelles
+permalink: "aktuelles/{%if pagination.pageNumber != 0%}{% assign pg=pagination.pageNumber %}{{ pg  | plus: 1}}/{%endif%}index.html"
+pagination:
+    data: collections.post
+    size: 8
+    enabled: true
+    alias: posts
+    reverse: true
+
+
 ---
+
 
 
 
@@ -11,49 +21,73 @@ title: Aktuelles
             Aktuelles
         </h3>
 
+        <h3 class="headline-03 primary mb-1 mt-4">
+            Immer auf dem neusten Stand.
+        </h3>
+        <p>
+            Sie möchten über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden?
+            <br class="conditional-break">
+            Melden Sie sich für den ODIS Newsletter an!
+        </p>
+        <a href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343">
+            <button class="button-primary">Für den Newsletter anmelden</button>
+        </a>
+        <div class="blog-post">
+            <p class="mt-4">
+                Newsletter verpasst? Stöbern Sie im
+            </p>
+            <a class="blog-link mt-4"
+            href="{{"archiv"}}">Newsletter-Archiv</a>
+        </div>
         <!-- <span class="headline-04 mb-12"> -->
             <!-- Hier finden Sie die neusten Blogposts der Open Data Informationsstelle. -->
         <!-- </span> -->
     </div>
-
-        {% assign items = site.categories.aktuelles | where: "visible", "true" %}
-        {% for post in items %}
-        <div class="blog-post">
-            <span class="date-small">{{post.date | date: "%d.%m.%Y"}}</span>
-            <div style="margin-bottom: 2rem;">
-                <h3 class="headline-03" style="margin-bottom: 1rem;">{{ post.title }}</h3>
-                <p style="margin-top: 0rem;">{{ post.metaDescription }}</p>
-            </div>
-            {% if post.link %}
-            <a class="blog-link"
-                href="{{post.link}}">{{post.urlText}}</a>
-                {% else %}
+        {% for post in posts %}
+           {% if post.data.visible== true  %}
+            <div class="blog-post">
+                <span class="date-small">{{post.date | date: "%d.%m.%Y"}}</span>
+                <div style="margin-bottom: 2rem;">
+                    <h3 class="headline-03" style="margin-bottom: 1rem;">{{ post.data.title }}</h3>
+                    <p style="margin-top: 0rem;">{{ post.data.metaDescription }}</p>
+                </div>
+                {% if post.data.link %}
                 <a class="blog-link"
-                href="{{post.url}}">{{post.urlText}}</a>
-            {% endif %}
-        </div>
+                    href="{{post.data.link}}">{{post.data.urlText}}</a>
+                    {% else %}
+                    <a class="blog-link"
+                    href="{{post.url}}">{{post.data.urlText}}</a>
+                {% endif %}
+            </div>
+           {% endif %}
         {% endfor %}
-</div>
 
-<h3 class="headline-03 primary mb-1 mt-4">
-    Immer auf dem neusten Stand.
-</h3>
+        <div class="pagination">
+            <span>
+                {% if pagination.href.previous %}
+                <a href="{{ pagination.href.previous }}">&laquo; Neuere</a>
+                {% else %}
+                &laquo; Neuere
+                {% endif %}
+            </span>
+<!-- eleventy create numbered pagination -->
+            {% for page in pagination.pages %}
+
+            <!-- {{ forloop.index  }} -->
+                {% if forloop.index0 == pagination.pageNumber %}
+                <span class="selected"><a href="#">{{ forloop.index}}</a></span>
+                {% else %}
+                <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
+                {% endif %}
+            {% endfor %}
 
 
-<p>
-    Sie möchten über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden?
-    <br class="conditional-break">
-    Melden Sie sich für den ODIS Newsletter an!
-</p>
-<a href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343">
-    <button class="button-primary">Für den Newsletter anmelden</button>
-</a>
+          <span>
+                {% if pagination.href.next %}
+                    <a href="{{ pagination.href.next }}">Ältere &raquo;</a>
+                {% else %}
+                    Ältere &raquo;
+                {% endif %}
+            </span>
+        </div>
 
-<div class="blog-post">
-<p class="mt-5">
-    Newsletter verpasst? Stöbern Sie im
-</p>
-<a class="blog-link mt-4"
-href="{{"archiv"}}">Newsletter-Archiv</a> 
-</div>
-        

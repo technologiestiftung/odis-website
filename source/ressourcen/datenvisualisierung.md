@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.liquid
 title: Datenvisualisierung
 ---
 
@@ -7,7 +7,7 @@ title: Datenvisualisierung
 
 Die Visualisierung von Daten ist ein wichtiger Teil des ganzheitlichen Ansatzes von Open Data. Durch geeignete Darstellungsform können Nutzer\*innen besser verstehen, welche Informationen ein Datensatz beinhaltet und ob er für eine bestimmte Nachnutzung geeignet ist. Eine gute Visualisierung kann somit den Wert und die Nachnutzung von offenen Daten fördern, indem sie bestimmte Erkenntnisse und Zusammenhänge hervorhebt und dadurch potenzielle Wege zum Weiterdenken und -nutzen aufzeigt. Da nicht alle Bürger\*innen die nötigen Skills besitzen, um die sogenannten Rohdaten, also z.B. große Datentabellen, zu analysieren und daraus Erkenntnisse zu gewinnen, nehmen Datenvisualisierungen oft sogar eine kritische Rolle ein, um die durch Open Data bereitgestellten Informationen für alle zugänglich zu machen.
 
-Eine gute, aussagekräftige Datenvisualisierung zu erstellen muss nicht aufwendig sein, ist aber auch nicht unbedingt trivial. Es gilt nicht nur zu überlegen welche Art von Visualisierung zu den Daten passt (z.B. ein Balkendiagramm oder doch lieber eine stilisierte Karte), sondern sich auch Gedanken darüber zu machen, welche Werte des Datensatzes überhaupt für eine Visualisierung geeignet sind und ob diese für jeden leicht verständlich und lesbar ist (z.B. auch für farbenblinde Menschen). 
+Eine gute, aussagekräftige Datenvisualisierung zu erstellen muss nicht aufwendig sein, ist aber auch nicht unbedingt trivial. Es gilt nicht nur zu überlegen welche Art von Visualisierung zu den Daten passt (z.B. ein Balkendiagramm oder doch lieber eine stilisierte Karte), sondern sich auch Gedanken darüber zu machen, welche Werte des Datensatzes überhaupt für eine Visualisierung geeignet sind und ob diese für jeden leicht verständlich und lesbar ist (z.B. auch für farbenblinde Menschen).
 
 ## Videotutorials zur Datenvisualisierung
 
@@ -21,6 +21,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
     Im anschließenden ersten Teil des Tutorials werden die generellen Ziele der Datenvisualisierung thematisiert: Warum visualisieren wir Daten und welche Grundprinzipien gibt es?
 
 <br><br>
+
 <p style="text-align: center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4bQ2DniKfHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
@@ -32,6 +33,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
     In zweiten Teil der Videoreihe werden verschiedene Typen von Datenvisualisierungen präsentiert und ihre Vor- und Nachteile miteinander verglichen. Wann sollte ich z.B. ein Balkendiagramm nutzen und wann lieber ein Kreisdiagramm? Welche Eigenschaften der Daten spielen bei der Auswahl eines Diagrammtyps eine Rolle?
 
 <br><br>
+
 <p style="text-align: center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TfzW-NDqhZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
@@ -40,9 +42,10 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <details open="open">
     <summary class="h4">Teil 3: Worte</summary>
-    Eine gute Visualisierung spricht für sich selbst und braucht keine Textelemente – im Gegenteil! Textelemente sollten gezielt benutzt werden, um die Verständlichkeit einer Visualisierung zu verstärken. In diesem Teil wird erläutert, wo and wie Textelemente bei guten Datenvisualisierungen Verwendung finden und was es zu beachten gibt.  
+    Eine gute Visualisierung spricht für sich selbst und braucht keine Textelemente – im Gegenteil! Textelemente sollten gezielt benutzt werden, um die Verständlichkeit einer Visualisierung zu verstärken. In diesem Teil wird erläutert, wo and wie Textelemente bei guten Datenvisualisierungen Verwendung finden und was es zu beachten gibt.
 
 <br><br>
+
 <p style="text-align: center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mo6sVxdxU6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
@@ -54,6 +57,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
     Der vierte Teil der Videoreihe widmet sich ganz dem Thema Farben. Die Auswahl der richtigen Farben und Farbpaletten leistet einen wichtigen Beitrag zur Verständlichkeit – oder zur Fehlinterpretation – einer Visualisierung.
 
 <br><br>
+
 <p style="text-align: center;">
 <iframe width="560" height="315" src="https://youtube.com/embed/29BoZh5200Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
@@ -65,6 +69,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
  Im fünften und letzten Teil der Videoreihe wird diskutiert, was eigentlich eine vertrauenswürdige Visualisierung ausmacht und wie man irreführende oder falsch interpretierbare Abbildungen vermeiden kann.
 
 <br><br>
+
 <p style="text-align: center;">
 <iframe width="560" height="315" src="https://youtube.com/embed/tSyVYAolJog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
