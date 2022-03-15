@@ -163,7 +163,7 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 
 ## Download
 
-[Download Dateninformationsblatt als Excel-Tabelle](/assets/file-download/Dateninformationsblatt_Vorlage_Version1.1.xlsx)
+[Download Dateninformationsblatt als Excel-Tabelle](/assets/file-download/Dateninformationsblatt.xlsx)
 
-[Download Dateninformationsblatt als csv](/assets/file-download/Dateninformationsblatt_Vorlage_Version1.1.csv)
+[Download Dateninformationsblatt als csv](/assets/file-download/Dateninformationsblatt.csv)
 
