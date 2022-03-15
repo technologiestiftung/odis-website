@@ -1,6 +1,7 @@
 ---
 layout: project
-title:  Kerndatensätze
+tags: project
+title: Kerndatensätze
 blogLinkTitle: "Hier geht's zur Publikation"
 blogLink: /assets/file-download/ODIS_Kerndatensaetze.pdf
 metaDescription: Wo offene Daten das größte Potential haben
@@ -10,6 +11,7 @@ indexImage: thumbnail.png
 heroImage: home_globe.png
 datatable: true
 ---
+
 ## Das Potenzial von Daten für eine Stadt
 
 Daten haben das Potenzial, diverse Dimensionen einer Stadt zu transformieren – mit Daten können zum Beispiel Dienstleistungen und Prozesse verbessert, neue Geschäftsmodelle entwickelt und eine bessere Lebensqualität für die Bürger:innen der Stadt geschafft werden. Diese Potenziale können aber nur realisiert werden, wenn die dafür nötigen Daten überhaupt existieren – und wenn sie auch tatsächlich zugänglich und nutzbar sind.
@@ -25,21 +27,22 @@ Die Liste von Datensätzen wird hier bereitgestellt. Sie kann nach **Kategorie**
 Die vollständige Liste und Informationen dazu, wie die Datensätze ausgewählt wurden, sind in der [Veröffentlichung "Kerndatensätze für Berlin"](/assets/file-download/ODIS_Kerndatensaetze.pdf) zu finden.
 
 <br>
+
 <table id='kerndatentable' class="display">
-  {% for row in site.data.processed_kerndatensaetze %}
-    {% if forloop.first %}
-        <thead>
-    <tr>
-      {% for pair in row %}
-        <th>{{ pair[0] }}</th>
-      {% endfor %}
-    </tr>
-    </thead>
-    {% endif %}
-    {% tablerow pair in row %}
-      {{ pair[1] }}
-    {% endtablerow %}
-    {% endfor %}
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Datensatz</th>
+<th>Beschreibung</th>
+<th>offen</th>
+<th>Link</th>
+</tr>
+</thead>
+{% for row in processed_kerndatensaetze %}
+{% tablerow pair in row %}
+{{ pair }}
+{% endtablerow %}
+{% endfor %}
 </table>
 
 <script>
@@ -86,6 +89,7 @@ $('#kerndatentable').DataTable( {
 </script>
 
 <br>
+
 **Warum enthält die Liste 103 Datensätze?**
 Die Corona-Pandemie hat die Gesellschaft vor ganz neue Herausforderungen gestellt - und auch ganz neue Bedarfe an Daten aufgezeigt.
 Aufgrund der anhaltenden Pandemielage zum Zeitpunkt der Veröffentlichung der Liste, haben wir uns entschlossen 3 besonders relevante, auf Corona bezogene Datensätze zusätzlich zu den 100 Kerndatensätzen in die Liste aufzunehmen.

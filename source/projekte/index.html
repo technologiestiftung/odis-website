@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.liquid
 title: Projekte
 ---
 
@@ -16,22 +16,27 @@ title: Projekte
         </h4>
 
         <div class="row">
-            {% assign items = site.pages | where: "visible", "true" %}
+            {% assign items = collections.project  %}
             {% assign itemsSorted = items | sort: 'date' | reverse %}
             {% for post in itemsSorted  %}
+            {%- if post.data.visible == true -%}
+
+
             <div class="col-12 col-sm-6 col-md-4 pb-5">
-                <a class="project" href="{{post.url}}" title="{{ post.title }}">
-                <div class="mb-3 img-square-container"><img class="img-fluid" src="{{post.url}}/{{post.indexImage}}" alt="{{ post.title }}"></div>
-                <div>
-                    <h4>{{ post.title }}</h4>
-                    <span>{{post.description}}</span>
-                </div>
-            </a>
-        </div>
+                <a class="project" href="{{post.url}}" title="{{ post.data.title }}">
+                    <div class="mb-3 img-square-container"><img class="img-fluid" src="{{post.url}}/{{post.data.indexImage}}" alt="{{ post.data.title }}"></div>
+                    <div>
+                        <h4>{{ post.data.title }}</h4>
+                        <!-- TODO: [ODISPROJ-283] Should this pull in the metaDescription? -->
+                        <span>{{post.data.metaDescription}}</span>
+                    </div>
+                </a>
+            </div>
+            {%- endif -%}
             {% endfor %}
         </div>
 
-
+<!-- TODO: [ODISPROJ-282] project overview page references lab site. But the lab site is read only and won't be updated -->
         <h4 class="headline-04 mb-4 mt-5">
             Weitere Beispiele und Ressourcen rund um Open Data finden Sie auf der Seite des <br
                 class="conditional-break">

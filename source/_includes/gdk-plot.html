@@ -1,11 +1,11 @@
-<html lang="en">
+<!-- <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Gieß den Kiez – Kennzahlen</title>
     <meta
       name="viewport"
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
-    />
+    /> -->
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
@@ -73,8 +73,8 @@
         border: none;
       }
     </style>
-  </head>
-  <body>
+  <!-- </head>
+  <body> -->
     <div id="map">
       <div id="state-legend" class="legend">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -93,10 +93,10 @@
           <p>∑ Wassermenge: <strong><span id="sumWasserBezirk">0</span> Liter</strong></p>
       </div>
       <div id="closed-legend" class="legend" style="display:none">
-        <button class="openbtn" onclick="openNav()">&#9776; Öffne Infobox</button> 
+        <button class="openbtn" onclick="openNav()">&#9776; Öffne Infobox</button>
         <h4>Gieß den Kiez Kennzahlen</h4>
       </div>
-    
+
     <script>
       function closeNav() {
         document.getElementById("state-legend").style.display = "none";
@@ -129,7 +129,7 @@
       map.addControl(scale, "bottom-right");
       map.addControl(new mapboxgl.NavigationControl());
       map.addControl(new mapboxgl.FullscreenControl());
-      
+
       map.addControl(
         new mapboxgl.GeolocateControl({
           positionOptions: {
@@ -150,7 +150,7 @@
       }
 
       let kiezname;
-      let trees; 
+      let trees;
       let sumB = 0;
       let sumG = 0;
       let sumW = 0
@@ -167,7 +167,7 @@
             })
 
         const sumBaumBerlin = document.getElementById("sumBaumBerlin");
-        sumBaumBerlin.innerHTML = numberFormat(sumB);    
+        sumBaumBerlin.innerHTML = numberFormat(sumB);
         const sumGiessBerlin = document.getElementById("sumGiessBerlin");
         sumGiessBerlin.innerHTML = numberFormat(sumG);
         const sumWasserBerlin = document.getElementById("sumWasserBerlin");
@@ -291,17 +291,17 @@
         })
 
         let ratioBaum = sumBBezirk/sumB*100;
-        ratioBaum = ratioBaum.toFixed(2); 
+        ratioBaum = ratioBaum.toFixed(2);
 
         let ratioGiess = sumGBezirk/sumG*100;
-        ratioGiess = ratioGiess.toFixed(2); 
+        ratioGiess = ratioGiess.toFixed(2);
 
         let ratioWasser =sumWBezirk/sumW*100;
-        ratioWasser = ratioWasser.toFixed(2); 
+        ratioWasser = ratioWasser.toFixed(2);
 
 
         const sumBaumBezirk = document.getElementById("sumBaumBezirk");
-        sumBaumBezirk.innerHTML = numberFormat(sumBBezirk) + " (" + ratioBaum +"%)";    
+        sumBaumBezirk.innerHTML = numberFormat(sumBBezirk) + " (" + ratioBaum +"%)";
         const sumGiessBezirk = document.getElementById("sumGiessBezirk");
         sumGiessBezirk.innerHTML = numberFormat(sumGBezirk) + " (" + ratioGiess +"%)";
         const sumWasserBezirk = document.getElementById("sumWasserBezirk");
@@ -373,5 +373,5 @@
         popup.remove();
       });
     </script>
-  </body>
-</html>
+  <!-- </body> -->
+<!-- </html> -->

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.liquid
 title: Vorlage für ein Dateninformationsblatt
 ---
 
@@ -9,6 +9,7 @@ Damit Verwaltungen einen Überblick über vorhandene Datensätze und die zustän
 Zur strukturierten Dokumentation der Dateninventur hat ODIS anhand bestehender Beispiele verschiedener Verwaltungen und anderer Städte eine tabellarische Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann. Pro Datensatz sollte eines der sogenannten Dateninformationsblätter ausgefüllt werden. Die gesammelten Informationsblätter können dann leicht zusammengeführt, ausgetauscht und gepflegt werden.
 
 Die Informationen, die über einen Datensatz geführt werden sollten, lassen sich in drei Themenbereiche einteilen, die sich im Dateninformationsblatt als Hauptblöcke wiederfinden:
+
 - **Inhaltliche Felder**: Metadaten über den Inhalt der Daten
 - **Verantwortlichkeit**: Zuständige Stellen und Personen auf Hauptverwaltungs- und Bezirksebene
 - **Technische Details**: Informationen zu Datenbereitstellung und Aktualisierung
@@ -157,13 +158,17 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
     <td class="tg-hvao">Datum der letzten Bearbeitung dieser Metadatenzeile</td>
     <td class="tg-54w3">2019-12-16</td>
   </tr>
-  <td class="tg-eo4b">Version 1.1</td>
+  <td class="tg-eo4b">Version 2.0</td>
 </table>
 </div>
 
 ## Download
 
-[Download Dateninformationsblatt als Excel-Tabelle](/assets/file-download/Dateninformationsblatt.xlsx)
+[Download Dateninformationsblatt als Excel-Tabelle](/assets/file-download/Dateninformationsblatt_v2.xlsx)
 
-[Download Dateninformationsblatt als csv](/assets/file-download/Dateninformationsblatt.csv)
+<<<<<<< HEAD
+[Download Dateninformationsblatt als csv](/assets/file-download/Dateninformationsblatt_v2.csv)
 
+=======
+[Download Dateninformationsblatt als csv](/assets/file-download/Dateninformationsblatt_Vorlage_Version1.1.csv)
+>>>>>>> 501d6a9eb413ea5d9ec427d5247ba13e61646cb1
