@@ -158,12 +158,12 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
     <td class="tg-hvao">Datum der letzten Bearbeitung dieser Metadatenzeile</td>
     <td class="tg-54w3">2019-12-16</td>
   </tr>
-  <td class="tg-eo4b">Version 1.1</td>
+  <td class="tg-eo4b">Version 2.0</td>
 </table>
 </div>
 
 ## Download
 
-[Download Dateninformationsblatt als Excel-Tabelle](/assets/file-download/Dateninformationsblatt_Vorlage_Version1.1.xlsx)
+[Download Dateninformationsblatt als Excel-Tabelle](/assets/file-download/Dateninformationsblatt_v2.xlsx)
 
-[Download Dateninformationsblatt als csv](/assets/file-download/Dateninformationsblatt_Vorlage_Version1.1.csv)
+[Download Dateninformationsblatt als csv](/assets/file-download/Dateninformationsblatt_v2.csv)
