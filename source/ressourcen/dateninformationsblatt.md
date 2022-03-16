@@ -166,9 +166,4 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 
 [Download Dateninformationsblatt als Excel-Tabelle](/assets/file-download/Dateninformationsblatt_v2.xlsx)
 
-<<<<<<< HEAD
 [Download Dateninformationsblatt als csv](/assets/file-download/Dateninformationsblatt_v2.csv)
-
-=======
-[Download Dateninformationsblatt als csv](/assets/file-download/Dateninformationsblatt_Vorlage_Version1.1.csv)
->>>>>>> 501d6a9eb413ea5d9ec427d5247ba13e61646cb1
