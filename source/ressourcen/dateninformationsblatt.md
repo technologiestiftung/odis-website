@@ -43,25 +43,26 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 
 <div style="overflow-x:auto;">
 <table class="tg">
+<tr>
+<th class="tg-xm73" colspan="1">Themenfelder</th>
+<th class="tg-xm73" colspan="1">Metadaten-Kategorie</th>
+<th class="tg-xm73" colspan="1">Hilfetext</th>
+<th class="tg-zv4m">&nbsp;</th>
+<th class="tg-eo4b">&nbsp;</th>
+</tr>
   <tr>
-    <th class="tg-xm73" colspan="2">Das Dateninformationsblatt</th>
-    <th class="tg-zv4m"></th>
-    <th class="tg-eo4b"></th>
-  </tr>
-  <tr>
-    <td class="tg-czno"></td>
-    <td class="tg-km2t"></td>
-    <td class="tg-zv4m"></td>
-    <td class="tg-eo4b">Beispiel</td>
-  </tr>
-  <tr>
-    <td class="tg-0x0e" rowspan="4">Inhaltliche Felder</td>
+    <td class="tg-0x0e" rowspan="5">Inhatliche Felder</td>
     <td class="tg-16zm">Thema</td>
     <td class="tg-tng1">Das übergeordnete Thema des Datensatzes.</td>
     <td class="tg-54w3">Geographie und Stadtplanung</td>
   </tr>
   <tr>
-    <td class="tg-16zm">Datensatztitel</td>
+    <td class="tg-16zm">Typ</td>
+    <td class="tg-tng1">Datensatz (z.B. eine alleinstehende Tabelle) oder eine Datensatzsammlung (z.B., ein Sachbericht mit mehreren Tabellen</td>
+    <td class="tg-54w3">Kleingartenbestand</td>
+  </tr>
+    <tr>
+    <td class="tg-16zm">Titel</td>
     <td class="tg-tng1">Der Titel des Datensatzes.</td>
     <td class="tg-54w3">Kleingartenbestand</td>
   </tr>
@@ -71,30 +72,20 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
     <td class="tg-54w3">In der Karte sind alle Kleingartenanlagen auf privaten und landeseigenen Flächen in ihrer Gesamtfläche dargestellt, für die die Bestimmungen des Bundeskleingartengesetzes Anwendung finden.</td>
   </tr>
   <tr>
-    <td class="tg-16zm">Räumliche Auflösung (ggf.)</td>
+    <td class="tg-16zm">Räumlicher Bezug</td>
     <td class="tg-tng1">Der Bezug des Datensatzes – z.B. PLR, Adresse. Nur für räumlich bezogene Datensätze relevant.</td>
     <td class="tg-54w3">Flächengeometrie</td>
   </tr>
   <tr>
-    <td class="tg-ozf7" rowspan="5">Verantwortlichkeit</td>
-    <td class="tg-lu18">Verantwortlichkeit - Bezirksebene</td>
+    <td class="tg-ozf7" rowspan="3">Verantwortlichkeit</td>
+    <td class="tg-lu18">Verantwortlichkeit</td>
     <td class="tg-eahn">Falls Inventur auf Bezirksebene: Verantwortliche Stelle auf bezirklicher Ebene.</td>
     <td class="tg-o9w4">BA Tempelhof-Schöneberg Straßen- und Grünflächenamt</td>
   </tr>
   <tr>
-    <td class="tg-lu18">Ansprechperson - Bezirksebene</td>
+    <td class="tg-lu18">Ansprechperson </td>
     <td class="tg-eahn">Falls Inventur auf Bezirksebene: Konkrete Ansprechperson auf bezirklicher Ebene mit Kontaktinformation.</td>
     <td class="tg-o9w4">Herr Max Mustermann, max.mustermann@email.de, 030 - 000 000</td>
-  </tr>
-  <tr>
-    <td class="tg-lu18">Verantwortlichkeit - Landesebene</td>
-    <td class="tg-eahn">Verantwortliche Stelle auf Landesebene.</td>
-    <td class="tg-o9w4">Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin</td>
-  </tr>
-  <tr>
-    <td class="tg-lu18">Ansprechperson - Landesebene</td>
-    <td class="tg-eahn">Konkrete Ansprechperson auf Landesebene mit Kontaktinformation.</td>
-    <td class="tg-o9w4">Frau Maria Mustermann, maria.mustermann@email.de, 030 - 111 111</td>
   </tr>
   <tr>
     <td class="tg-lu18">Datenhoheit bei</td>
@@ -102,7 +93,7 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
     <td class="tg-o9w4">Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin</td>
   </tr>
   <tr>
-    <td class="tg-ortv" rowspan="7">Technische Details</td>
+    <td class="tg-ortv" rowspan="6">Technische Details</td>
     <td class="tg-dydg">IT-Fachverfahren</td>
     <td class="tg-lhx1">Falls vorhanden: für diesen Datensatz verwendetes Fachverfahren oder Datenplattform.</td>
     <td class="tg-zj9c">GRIS (Grünflächeninformationssystem)</td>
@@ -123,11 +114,6 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
     <td class="tg-zj9c">manuell</td>
   </tr>
   <tr>
-    <td class="tg-dydg">Zuletzt aktualisiert</td>
-    <td class="tg-lhx1">Datum der letzten Aktualisierung</td>
-    <td class="tg-zj9c">2018-05-23</td>
-  </tr>
-  <tr>
     <td class="tg-dydg">Aktualisierungsfrequenz</td>
     <td class="tg-lhx1">Wie häufig wird der Datensatz aktualisiert?</td>
     <td class="tg-zj9c">jährlich</td>
@@ -139,16 +125,6 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
   </tr>
   <tr>
     <td class="tg-0x0e" rowspan="4">Sonstiges</td>
-    <td class="tg-u6gx">Personenbezug</td>
-    <td class="tg-hvao">Ist der Datensatz personenbezogen?</td>
-    <td class="tg-54w3">Nein</td>
-  </tr>
-    <tr>
-    <td class="tg-u6gx">Anonymisierbarkeit</td>
-    <td class="tg-hvao">Falls ein Personenbezug besteht, können die Daten ohne Personenbezug sinnvoll veröffentlicht werden?</td>
-    <td class="tg-54w3"></td>
-  </tr>
-  <tr>
     <td class="tg-u6gx">Kommentar</td>
     <td class="tg-hvao">weitere Anmerkungen</td>
     <td class="tg-54w3"></td>
@@ -157,6 +133,15 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
     <td class="tg-u6gx">Datum zuletzt bearbeitet</td>
     <td class="tg-hvao">Datum der letzten Bearbeitung dieser Metadatenzeile</td>
     <td class="tg-54w3">2019-12-16</td>
+  </tr>    
+    <td class="tg-u6gx">Tags</td>
+    <td class="tg-hvao">Weitere Stichworte, die den Datensatz beschreiben und über eine Stichwortsuche auffindbar machen würden, die noch nicht in der Beschreibung und im Titel auftauchen</td>
+    <td class="tg-54w3">Nein</td>
+  </tr>
+    <tr>
+    <td class="tg-u6gx">für eine Open Data Veröffentlichung identifiziert</td>
+    <td class="tg-hvao">Sollte er Datensatz als Open Data veröffentlicht werden? (Ja/Nein/mit Einschränkungen)</td>
+    <td class="tg-54w3"></td>
   </tr>
   <td class="tg-eo4b">Version 2.0</td>
 </table>
