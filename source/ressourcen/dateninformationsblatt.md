@@ -47,7 +47,6 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 <tr>
 <th class="tg-xm73" colspan="1">Themenfelder</th>
 <th class="tg-xm73" colspan="1">Metadaten-Kategorie</th>
-<th class="tg-xm73" colspan="1">Eingaben</th>
 <th class="tg-xm73" colspan="1">Hilfetext</th>
 <th class="tg-zv4m">&nbsp;</th>
 <th class="tg-eo4b">&nbsp;</th>
@@ -55,91 +54,73 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 <tr>
 <td class="tg-0x0e" rowspan="5">Inhaltliche Felder</td>
 <td class="tg-16zm">Thema</td>
-<td class="tg-16zm">&nbsp;</td>
 <td class="tg-tng1">Das &uuml;bergeordnete Thema des Datensatzes.</td>
 </tr>
 <tr>
 <td class="tg-16zm">Typ</td>
-<td class="tg-16zm">&nbsp;</td>
 <td class="tg-tng1">Datensatz (z.B. eine alleinstehende Tabelle) oder eine Datensatzsammlung (z.B., ein Sachbericht mit mehreren Tabellen</td>
 </tr>
 <tr>
 <td class="tg-16zm">Titel</td>
-<td class="tg-16zm">&nbsp;</td>
 <td class="tg-tng1">Der Titel des Datensatzes.</td>
 </tr>
 <tr>
 <td class="tg-16zm">Beschreibung</td>
-<td class="tg-16zm">&nbsp;</td>
 <td class="tg-tng1">Eine kurze Beschreibung des Datensatzes.</td>
 </tr>
 <tr>
 <td class="tg-16zm">R&auml;umlicher Bezug</td>
-<td class="tg-16zm">&nbsp;</td>
 <td class="tg-tng1">Der Bezug des Datensatzes &ndash; z.B. PLR, Adresse. Nur f&uuml;r r&auml;umlich bezogene Datens&auml;tze relevant.</td>
 </tr>
 <tr>
 <td class="tg-ozf7" rowspan="3">Verantwortlichkeit</td>
 <td class="tg-lu18">Verantwortlichkeit</td>
-<td class="tg-lu18">&nbsp;</td>
 <td class="tg-eahn">Falls Inventur auf Bezirksebene: Verantwortliche Stelle auf bezirklicher Ebene.</td>
 </tr>
 <tr>
 <td class="tg-lu18">Ansprechperson</td>
-<td class="tg-lu18">&nbsp;</td>
 <td class="tg-eahn">Falls Inventur auf Bezirksebene: Konkrete Ansprechperson auf bezirklicher Ebene mit Kontaktinformation.</td>
 </tr>
 <tr>
 <td class="tg-lu18">Datenhoheit bei</td>
-<td class="tg-lu18">&nbsp;</td>
 <td class="tg-eahn">Die Abteilung / Institution die diese Daten bereitstellt.</td>
 </tr>
 <tr>
 <td class="tg-ortv" rowspan="6">Technische Details</td>
 <td class="tg-dydg">IT-Fachverfahren</td>
-<td class="tg-lu18">&nbsp;</td>
 <td class="tg-lhx1">Falls vorhanden: f&uuml;r diesen Datensatz verwendetes Fachverfahren oder Datenplattform.</td>
 </tr>
 <tr>
 <td class="tg-dydg">Dateiformat</td>
-<td class="tg-dydg">&nbsp;</td>
 <td class="tg-lhx1">Dateiformat, in dem der Datensatz vorliegt. (z.B. Excel, CSV, Shape-File, Access Datenbank, PostgreSQL Datenbank, etc.)</td>
 </tr>
 <tr>
 <td class="tg-dydg">Verf&uuml;gbarkeit (intern / ver&ouml;ffentlicht)</td>
-<td class="tg-dydg">&nbsp;</td>
 <td class="tg-lhx1">Ist der Datensatz nur intern verf&uuml;gbar oder &ouml;ffentlich zug&auml;nglich?</td>
 </tr>
 <tr>
 <td class="tg-dydg">Aktualisierungsprozess (manuell / automatisiert)</td>
-<td class="tg-dydg">&nbsp;</td>
 <td class="tg-lhx1">Wird der Datensatz automatisch (z.B. automatischer Datenbankexport) oder manuell aktualisiert?</td>
 </tr>
 <tr>
 <td class="tg-dydg">Aktualisierungsfrequenz</td>
-<td class="tg-lhx1">&nbsp;</td>
 <td class="tg-lhx1">Wie h&auml;ufig wird der Datensatz aktualisiert?</td>
 </tr>
 <tr>
 <td class="tg-dydg">Ressource Link</td>
-<td class="tg-dydg">&nbsp;</td>
 <td class="tg-lhx1">Falls vorhanden: Link zur Ressource (externe URL oder lokaler Dateipfad)</td>
 </tr>
 <tr>
 <td class="tg-0x0e" rowspan="4">Sonstiges</td>
 <td class="tg-u6gx">Kommentar</td>
-<td class="tg-hvao">&nbsp;</td>
 <td class="tg-hvao">weitere Anmerkungen</td>
-<td class="tg-54w3">&nbsp;</td>
 </tr>
 <tr>
 <td class="tg-u6gx">Datum zuletzt bearbeitet</td>
- <td class="tg-u6gx"></td>
 <td class="tg-hvao">Datum der letzten Bearbeitung dieser Metadatenzeile</td>
 </tr>
 <tr>
 <td class="tg-u6gx">f&uuml;r eine Open Data Ver&ouml;ffentlichung identifiziert</td>
-  <td class="tg-hvao"></td>
 <td class="tg-hvao">Sollte er Datensatz als Open Data ver&ouml;ffentlicht werden? (Ja/Nein/mit Einschr&auml;nkungen)</td>
 <td class="tg-54w3">&nbsp;</td>
 </tr>
