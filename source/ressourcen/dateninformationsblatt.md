@@ -41,7 +41,7 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 .tg .tg-hvao{background-color:#c0c0c0;border-color:#ffffff;text-align:left;vertical-align:top}
 </style>
 
-<div style="overflow-x: auto;">Version 2.0
+<div style="overflow-x: auto;">
 <table class="tg">
 <tbody>
   <tr>
@@ -129,8 +129,10 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 <tr>
 <td class="tg-u6gx">F&uuml;r eine Open Data Ver&ouml;ffentlichung identifiziert</td>
 <td class="tg-hvao">Sollte er Datensatz als Open Data ver&ouml;ffentlicht werden? (Ja/Nein/mit Einschr&auml;nkungen)</td>
-<td class="tg-54w3">&nbsp;</td>
 </tr>
+<tr>
+    <th class="tg-eo4b">Version 2.0</th>
+  </tr>
 </tbody>
 </table>
 </div>
