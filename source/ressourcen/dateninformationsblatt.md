@@ -123,7 +123,11 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 <td class="tg-hvao">Datum der letzten Bearbeitung dieser Metadatenzeile</td>
 </tr>
 <tr>
-<td class="tg-u6gx">f&uuml;r eine Open Data Ver&ouml;ffentlichung identifiziert</td>
+<td class="tg-u6gx">Tags</td>
+<td class="tg-hvao">Weitere Stichworte, die den Datensatz beschreiben und über eine Stichwortsuche auffindbar machen würden, die noch nicht in der Beschreibung und im Titel auftauchen</td>
+</tr>
+<tr>
+<td class="tg-u6gx">F&uuml;r eine Open Data Ver&ouml;ffentlichung identifiziert</td>
 <td class="tg-hvao">Sollte er Datensatz als Open Data ver&ouml;ffentlicht werden? (Ja/Nein/mit Einschr&auml;nkungen)</td>
 <td class="tg-54w3">&nbsp;</td>
 </tr>
