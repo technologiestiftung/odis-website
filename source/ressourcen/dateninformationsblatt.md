@@ -41,124 +41,99 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 .tg .tg-hvao{background-color:#c0c0c0;border-color:#ffffff;text-align:left;vertical-align:top}
 </style>
 
-<div style="overflow-x:auto;">
+<div style="overflow-x: auto;">
 <table class="tg">
+<tbody>
   <tr>
     <th class="tg-xm73" colspan="2">Das Dateninformationsblatt</th>
     <th class="tg-zv4m"></th>
     <th class="tg-eo4b"></th>
   </tr>
   <tr>
-    <td class="tg-czno"></td>
-    <td class="tg-km2t"></td>
-    <td class="tg-zv4m"></td>
+    <td class="tg-czno">Themenfelder</td>
+    <td class="tg-zv4m">Metadaten</td>
     <td class="tg-eo4b">Beispiel</td>
   </tr>
-  <tr>
-    <td class="tg-0x0e" rowspan="4">Inhaltliche Felder</td>
-    <td class="tg-16zm">Thema</td>
-    <td class="tg-tng1">Das übergeordnete Thema des Datensatzes.</td>
-    <td class="tg-54w3">Geographie und Stadtplanung</td>
+<tr>
+<td class="tg-0x0e" rowspan="5">Inhaltliche Felder</td>
+<td class="tg-16zm">Thema</td>
+<td class="tg-tng1">Das &uuml;bergeordnete Thema des Datensatzes.</td>
+</tr>
+<tr>
+<td class="tg-16zm">Typ</td>
+<td class="tg-tng1">Datensatz (z.B. eine alleinstehende Tabelle) oder eine Datensatzsammlung (z.B., ein Sachbericht mit mehreren Tabellen</td>
+</tr>
+<tr>
+<td class="tg-16zm">Titel</td>
+<td class="tg-tng1">Der Titel des Datensatzes.</td>
+</tr>
+<tr>
+<td class="tg-16zm">Beschreibung</td>
+<td class="tg-tng1">Eine kurze Beschreibung des Datensatzes.</td>
+</tr>
+<tr>
+<td class="tg-16zm">R&auml;umlicher Bezug</td>
+<td class="tg-tng1">Der Bezug des Datensatzes &ndash; z.B. PLR, Adresse. Nur f&uuml;r r&auml;umlich bezogene Datens&auml;tze relevant.</td>
+</tr>
+<tr>
+<td class="tg-ozf7" rowspan="3">Verantwortlichkeit</td>
+<td class="tg-lu18">Verantwortlichkeit</td>
+<td class="tg-eahn">Falls Inventur auf Bezirksebene: Verantwortliche Stelle auf bezirklicher Ebene.</td>
+</tr>
+<tr>
+<td class="tg-lu18">Ansprechperson</td>
+<td class="tg-eahn">Falls Inventur auf Bezirksebene: Konkrete Ansprechperson auf bezirklicher Ebene mit Kontaktinformation.</td>
+</tr>
+<tr>
+<td class="tg-lu18">Datenhoheit bei</td>
+<td class="tg-eahn">Die Abteilung / Institution die diese Daten bereitstellt.</td>
+</tr>
+<tr>
+<td class="tg-ortv" rowspan="6">Technische Details</td>
+<td class="tg-dydg">IT-Fachverfahren</td>
+<td class="tg-lhx1">Falls vorhanden: f&uuml;r diesen Datensatz verwendetes Fachverfahren oder Datenplattform.</td>
+</tr>
+<tr>
+<td class="tg-dydg">Dateiformat</td>
+<td class="tg-lhx1">Dateiformat, in dem der Datensatz vorliegt. (z.B. Excel, CSV, Shape-File, Access Datenbank, PostgreSQL Datenbank, etc.)</td>
+</tr>
+<tr>
+<td class="tg-dydg">Verf&uuml;gbarkeit (intern / ver&ouml;ffentlicht)</td>
+<td class="tg-lhx1">Ist der Datensatz nur intern verf&uuml;gbar oder &ouml;ffentlich zug&auml;nglich?</td>
+</tr>
+<tr>
+<td class="tg-dydg">Aktualisierungsprozess (manuell / automatisiert)</td>
+<td class="tg-lhx1">Wird der Datensatz automatisch (z.B. automatischer Datenbankexport) oder manuell aktualisiert?</td>
+</tr>
+<tr>
+<td class="tg-dydg">Aktualisierungsfrequenz</td>
+<td class="tg-lhx1">Wie h&auml;ufig wird der Datensatz aktualisiert?</td>
+</tr>
+<tr>
+<td class="tg-dydg">Ressource Link</td>
+<td class="tg-lhx1">Falls vorhanden: Link zur Ressource (externe URL oder lokaler Dateipfad)</td>
+</tr>
+<tr>
+<td class="tg-0x0e" rowspan="4">Sonstiges</td>
+<td class="tg-u6gx">Kommentar</td>
+<td class="tg-hvao">weitere Anmerkungen</td>
+</tr>
+<tr>
+<td class="tg-u6gx">Datum zuletzt bearbeitet</td>
+<td class="tg-hvao">Datum der letzten Bearbeitung dieser Metadatenzeile</td>
+</tr>
+<tr>
+<td class="tg-u6gx">Tags</td>
+<td class="tg-hvao">Weitere Stichworte, die den Datensatz beschreiben und über eine Stichwortsuche auffindbar machen würden, die noch nicht in der Beschreibung und im Titel auftauchen</td>
+</tr>
+<tr>
+<td class="tg-u6gx">F&uuml;r eine Open Data Ver&ouml;ffentlichung identifiziert</td>
+<td class="tg-hvao">Sollte er Datensatz als Open Data ver&ouml;ffentlicht werden? (Ja/Nein/mit Einschr&auml;nkungen)</td>
+</tr>
+<tr>
+    <th class="tg-eo4b">Version 2.0</th>
   </tr>
-  <tr>
-    <td class="tg-16zm">Datensatztitel</td>
-    <td class="tg-tng1">Der Titel des Datensatzes.</td>
-    <td class="tg-54w3">Kleingartenbestand</td>
-  </tr>
-  <tr>
-    <td class="tg-16zm">Beschreibung</td>
-    <td class="tg-tng1">Eine kurze Beschreibung des Datensatzes.</td>
-    <td class="tg-54w3">In der Karte sind alle Kleingartenanlagen auf privaten und landeseigenen Flächen in ihrer Gesamtfläche dargestellt, für die die Bestimmungen des Bundeskleingartengesetzes Anwendung finden.</td>
-  </tr>
-  <tr>
-    <td class="tg-16zm">Räumliche Auflösung (ggf.)</td>
-    <td class="tg-tng1">Der Bezug des Datensatzes – z.B. PLR, Adresse. Nur für räumlich bezogene Datensätze relevant.</td>
-    <td class="tg-54w3">Flächengeometrie</td>
-  </tr>
-  <tr>
-    <td class="tg-ozf7" rowspan="5">Verantwortlichkeit</td>
-    <td class="tg-lu18">Verantwortlichkeit - Bezirksebene</td>
-    <td class="tg-eahn">Falls Inventur auf Bezirksebene: Verantwortliche Stelle auf bezirklicher Ebene.</td>
-    <td class="tg-o9w4">BA Tempelhof-Schöneberg Straßen- und Grünflächenamt</td>
-  </tr>
-  <tr>
-    <td class="tg-lu18">Ansprechperson - Bezirksebene</td>
-    <td class="tg-eahn">Falls Inventur auf Bezirksebene: Konkrete Ansprechperson auf bezirklicher Ebene mit Kontaktinformation.</td>
-    <td class="tg-o9w4">Herr Max Mustermann, max.mustermann@email.de, 030 - 000 000</td>
-  </tr>
-  <tr>
-    <td class="tg-lu18">Verantwortlichkeit - Landesebene</td>
-    <td class="tg-eahn">Verantwortliche Stelle auf Landesebene.</td>
-    <td class="tg-o9w4">Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin</td>
-  </tr>
-  <tr>
-    <td class="tg-lu18">Ansprechperson - Landesebene</td>
-    <td class="tg-eahn">Konkrete Ansprechperson auf Landesebene mit Kontaktinformation.</td>
-    <td class="tg-o9w4">Frau Maria Mustermann, maria.mustermann@email.de, 030 - 111 111</td>
-  </tr>
-  <tr>
-    <td class="tg-lu18">Datenhoheit bei</td>
-    <td class="tg-eahn">Die Abteilung / Institution die diese Daten bereitstellt.</td>
-    <td class="tg-o9w4">Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin</td>
-  </tr>
-  <tr>
-    <td class="tg-ortv" rowspan="7">Technische Details</td>
-    <td class="tg-dydg">IT-Fachverfahren</td>
-    <td class="tg-lhx1">Falls vorhanden: für diesen Datensatz verwendetes Fachverfahren oder Datenplattform.</td>
-    <td class="tg-zj9c">GRIS (Grünflächeninformationssystem)</td>
-  </tr>
-  <tr>
-    <td class="tg-dydg">Dateiformat</td>
-    <td class="tg-lhx1">Dateiformat, in dem der Datensatz vorliegt. (z.B. Excel, CSV, Shape-File, Access Datenbank, PostgreSQL Datenbank, etc.)</td>
-    <td class="tg-zj9c">WFS, WMS</td>
-  </tr>
-  <tr>
-    <td class="tg-dydg">Verfügbarkeit (intern / veröffentlicht)</td>
-    <td class="tg-lhx1">Ist der Datensatz nur intern verfügbar oder öffentlich zugänglich?</td>
-    <td class="tg-zj9c">veröffentlicht</td>
-  </tr>
-  <tr>
-    <td class="tg-dydg">Aktualisierungsprozess (manuell / automatisiert)</td>
-    <td class="tg-lhx1">Wird der Datensatz automatisch (z.B. automatischer Datenbankexport) oder manuell aktualisiert?</td>
-    <td class="tg-zj9c">manuell</td>
-  </tr>
-  <tr>
-    <td class="tg-dydg">Zuletzt aktualisiert</td>
-    <td class="tg-lhx1">Datum der letzten Aktualisierung</td>
-    <td class="tg-zj9c">2018-05-23</td>
-  </tr>
-  <tr>
-    <td class="tg-dydg">Aktualisierungsfrequenz</td>
-    <td class="tg-lhx1">Wie häufig wird der Datensatz aktualisiert?</td>
-    <td class="tg-zj9c">jährlich</td>
-  </tr>
-  <tr>
-    <td class="tg-dydg">Ressource Link</td>
-    <td class="tg-lhx1">Falls vorhanden: Link zur Ressource (externe URL oder lokaler Dateipfad)</td>
-    <td class="tg-zj9c">https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=showMap&amp;mapId=kleing@senstadt</td>
-  </tr>
-  <tr>
-    <td class="tg-0x0e" rowspan="4">Sonstiges</td>
-    <td class="tg-u6gx">Personenbezug</td>
-    <td class="tg-hvao">Ist der Datensatz personenbezogen?</td>
-    <td class="tg-54w3">Nein</td>
-  </tr>
-    <tr>
-    <td class="tg-u6gx">Anonymisierbarkeit</td>
-    <td class="tg-hvao">Falls ein Personenbezug besteht, können die Daten ohne Personenbezug sinnvoll veröffentlicht werden?</td>
-    <td class="tg-54w3"></td>
-  </tr>
-  <tr>
-    <td class="tg-u6gx">Kommentar</td>
-    <td class="tg-hvao">weitere Anmerkungen</td>
-    <td class="tg-54w3"></td>
-  </tr>
-  <tr>
-    <td class="tg-u6gx">Datum zuletzt bearbeitet</td>
-    <td class="tg-hvao">Datum der letzten Bearbeitung dieser Metadatenzeile</td>
-    <td class="tg-54w3">2019-12-16</td>
-  </tr>
-  <td class="tg-eo4b">Version 2.0</td>
+</tbody>
 </table>
 </div>
 
