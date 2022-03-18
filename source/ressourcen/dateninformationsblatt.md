@@ -44,13 +44,16 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 <div style="overflow-x: auto;">Version 2.0
 <table class="tg">
 <tbody>
-<tr>
-<th class="tg-xm73" colspan="1">Themenfelder</th>
-<th class="tg-xm73" colspan="1">Metadaten-Kategorie</th>
-<th class="tg-xm73" colspan="1">Hilfetext</th>
-<th class="tg-zv4m">&nbsp;</th>
-<th class="tg-eo4b">&nbsp;</th>
-</tr>
+  <tr>
+    <th class="tg-xm73" colspan="2">Das Dateninformationsblatt</th>
+    <th class="tg-zv4m"></th>
+    <th class="tg-eo4b"></th>
+  </tr>
+  <tr>
+    <td class="tg-czno">Themenfelder</td>
+    <td class="tg-zv4m">Metadaten</td>
+    <td class="tg-eo4b">Beispiel</td>
+  </tr>
 <tr>
 <td class="tg-0x0e" rowspan="5">Inhaltliche Felder</td>
 <td class="tg-16zm">Thema</td>
