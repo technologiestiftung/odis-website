@@ -1,0 +1,30 @@
+---
+layout: news
+tags: post
+title: "Neues vom Wahlbezirke Editor "
+metaDescription: "ODIS und die Landeswahlleitung des Landes Berlin luden Mitarbeiter:innen der Bezirksverwaltungen zu einem digitalen Workshop ein. Er bot die Möglichkeit, unseren Prototypen des Wahlbezirke Editors vorzustellen, sowie Feedback und Anforderungen zu sammeln."
+visible: true
+urlText: Zum Blogbeitrag
+---
+
+# Der Wahlbezirke-Editor als Antwort auf demografische Verschiebungen
+
+Berlin ist nicht nur eine wachsende Stadt, auch ist von Jahr zu Jahr eine Verschiebung der Bevölkerung innerhalb der Bezirke und Stadtteile zu beobachten.  Diese Verschiebungen sind auch für die Mitarbeiter:innen der Bezirksverwaltungen eine Herausforderung, die für das Zuschneiden von Wahlbezirken, von Kommunal- bis Europawahl, zuständig sind. Denn nach der Berliner Landeswahlordnung soll jeder Wahlbezirk maximal 2500 Bundesbürger:innen umfassen. Im letzten Jahr entwickelten wir auf Initiative des Bezirks Tempelhof-Schöneberg daher ein [Tool](https://wahlbezirke.odis-berlin.de), das den Bezirken dabei helfen soll Teile des Prozesses der Neufestlegung von Wahlbezirken durch algorithmisch optimierte Wahlbezirkskarten zu automatisieren. Damit soll der Aufwand durch die händische Bearbeitung, die teilweise durch Stift und Papier erfolgt, digitalisiert und reduziert werden. Wir haben den Prototypen unter anderem [beim Open Data Day 2021 präsentiert](https://youtu.be/v4sS_yGK_6U?t=13346).  
+
+#### Workshop zur Weiterentwicklung des Tools
+
+Der Prototyp ist bisher nur für den Bezirk Tempelhof-Schöneberg funktionsfähig. Für eine Weiterentwicklung des Prototypen hin zu einem standardisierten Tool für alle Bezirke, lud die Landeswahlleitung des Landes Berlin gemeinsam mit der ODIS am 24.02.2022 die zuständigen Mitarbeiter:innen der Berliner Bezirksverwaltungen und das Amt für Statistik zu einem digitalen Workshop ein. Im Rahmen des Workshops stellten wir zunächst den Prototypen vor und diskutierten im Plenum den Status Quo und Zielstellung eines landesweiten Wahlbezirke-Editors. In Kleingruppen hatten die Teilnehmer:innen anschließend die Möglichkeit auf inhaltliche und technische Anforderungen, sowie eine allgemeine Evaluierung des Prototypen einzugehen.  
+
+#### Die Bezirke formulierten ihre Wünsche an ein künftiges Tool
+
+Dabei äußerten die Teilnehmer:innen viele Anforderungen und Vorstellungen an ein künftiges Tool, die auf einem digitalen Notizboard zusammengetragen wurden (siehe Bild unten). Dazu gehört unter anderem der Wunsch, zusätzliche lokale Informationen, wie Wahlbeteiligung, Wahllokale, und natürliche Grenzen, wie Straßen, oder Gewässer in das Tool zu integrieren. Bezüglich der technischen Anforderungen betonten die Teilnehmer:innen  den Bedarf, Adresslisten sowie Straßenverzeichnisse aus .xlsx Dateien importieren zu können, sowie Exportmöglichkeiten von Kartenausschnitten in .jpg und .pdf-Dateiformaten zur Verfügung zu stellen. Die ansprechende und unmittelbare grafische Darstellung von Neuzuschnitten wurde als große Verbesserung hervorgehoben und bestärkte gleichzeitig den Wunsch nach einem einheitlichen Verfahren, das von allen Bezirksämtern genutzt wird.  
+
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/wahlbezirke_workshop.png", caption:"Einblick in einen Teil des Miro-Boards zur Sammlung von Anforderungen an das Tool beim digitalen Workshop" %}
+</center>
+
+<br>
+
+#### Die nächsten Schritte
+
+Die Ergebnisse des Workshops haben wir gemeinsam mit der Landeswahlleitung in einen Anforderungskatalog überführt. Die Teilnehmer:innen des Workshops haben nun die Möglichkeit den Anforderungskatalog zu kommentieren und zu ergänzen. Abschließend steht die Entscheidung an, ob und wie ein zukünftiges Tool zum Wahlgebietszuschnitt (weiter-)entwickelt werden soll.
