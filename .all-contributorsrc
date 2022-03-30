@@ -123,6 +123,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "bnjmnsbl",
+      "name": "Benjamin Seibel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11134234?v=4",
+      "profile": "https://github.com/bnjmnsbl",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7
