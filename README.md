@@ -289,6 +289,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/KlemensM"><img src="https://avatars.githubusercontent.com/u/98896505?v=4?s=64" width="64px;" alt=""/><br /><sub><b>KlemensM</b></sub></a><br /><a href="#content-KlemensM" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/AlexandraKapp"><img src="https://avatars.githubusercontent.com/u/18367515?v=4?s=64" width="64px;" alt=""/><br /><sub><b>AlexandraKapp</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=AlexandraKapp" title="Documentation">📖</a></td>
   </tr>
 </table>
 

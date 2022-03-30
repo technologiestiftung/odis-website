@@ -87,6 +87,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "AlexandraKapp",
+      "name": "AlexandraKapp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18367515?v=4",
+      "profile": "https://github.com/AlexandraKapp",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
