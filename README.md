@@ -294,6 +294,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/TDesjardins"><img src="https://avatars.githubusercontent.com/u/1841306?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Tino Desjardins</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/issues?q=author%3ATDesjardins" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/dnsos"><img src="https://avatars.githubusercontent.com/u/15640196?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Dennis Ostendorf</b></sub></a><br /><a href="#maintenance-dnsos" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/bnjmnsbl"><img src="https://avatars.githubusercontent.com/u/11134234?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Benjamin Seibel</b></sub></a><br /><a href="#content-bnjmnsbl" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/vogelino"><img src="https://avatars.githubusercontent.com/u/2759340?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Lucas Vogel</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=vogelino" title="Documentation">📖</a></td>
   </tr>
 </table>
 
