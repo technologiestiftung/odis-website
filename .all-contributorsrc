@@ -42,6 +42,15 @@
         "content",
         "doc"
       ]
+    },
+    {
+      "login": "rgb3000",
+      "name": "Ralph Schulz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5826403?v=4",
+      "profile": "https://github.com/rgb3000",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
