@@ -77,7 +77,7 @@ Umwelt,Trinkwasseranalyse,Ergebnisse der Trinkwasseranalysen,Teilweise,<a target
 Umwelt,Emissionskataster,Aktuelle Messungen der Messestellen zu Luftschadstoffen in Berlin,Ja,<a target='_blank' href='https://luftdaten.berlin.de/lqi'>luftdaten.berlin.de</a>
 Verkehr,Ampelanlagen,Standorte der Lichtsignalanlagen,Ja,<a target='_blank' href='https://daten.berlin.de/datensaetze/lichtsignalanlagen-wms'>daten.berlin.de</a>
 Verkehr,Baustellen,"Termine für Baubeginn und Bauende für akutelle und geplante Vorhaben, sowie Geodaten zu den Standorten/Strecken der Baustellen",Ja,<a target='_blank' href='https://daten.berlin.de/datensaetze/baustellen-sperrungen-und-sonstige-st%C3%B6rungen-von-besonderem-verkehrlichem-interesse'>daten.berlin.de</a>
-Verkehr,Fahrradwege,"Liniengeometrien aller Fahrradstraßen und -routen mit Art der Straße (abgetennter Weg, markierter Streifen, usw.)",Ja,<a target='_blank' href='https://daten.berlin.de/datensaetze/radverkehrsanlagen-wfs'>daten.berlin.de</a>
+Verkehr,Fahrradwege,"Liniengeometrien aller Fahrradstraßen und -routen mit Art der Straße (abgetrennter Weg, markierter Streifen, usw.)",Ja,<a target='_blank' href='https://daten.berlin.de/datensaetze/radverkehrsanlagen-wfs'>daten.berlin.de</a>
 Verkehr,Haltestellen,"Standorte Haltestellen und informationen zu Linien, die dort halten",Teilweise,<a target='_blank' href='https://daten.berlin.de/datensaetze/koordinaten-der-zugangsm%C3%B6glichkeiten-zu-stationen-0'>daten.berlin.de</a>
 Verkehr,KFZ-Zulassungen,"Absoluter Bestand und monatlich neue Fahrzeugzulassungen jeder Art, inklusive Daten zu Antriebsarten, Automarke, Postleitzahl der Besitzer, usw. ",Nein,
 Verkehr,Leihfahrräder,Echtzeitdaten der Standorte aller Leihfahrräder,Nein,
