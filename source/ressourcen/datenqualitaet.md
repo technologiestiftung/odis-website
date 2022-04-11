@@ -3,27 +3,29 @@ layout: default.liquid
 title: Datenqualität und Maschinenlesbarkeit
 ---
 
-# Wie geocodiere ich Geodaten?
+# Datenqualität und Maschinenlesbarkeit offener Daten
 
-Standorte von Kindertagesstätten, die Einwohner:innendichte im Bezirk oder der Streckenverlauf einer Demonstration: Verwaltungsdaten weisen häufig räumliche Bezüge auf. Nicht immer liegen diese Informationen jedoch als _richtige_ Geodaten vor, sondern nur als Adresslisten oder Standortbeschreibungen. Um hochwertige Daten bereitzustellen, die bestmöglich weiterverarbeitet werden können, sollten die Daten daher um Koordinaten ergänzt werden. Diese Umwandlung bzw. Aufarbeitung eines Datensatzes nennt man _Geocodierung_.
+Das Potenzial offener Daten kann nur dann voll ausgeschöpft werden, wenn die Daten hochwertig und leicht nutzbar sind. Datenqualtät hat dabei viele Facetten. In diesem Video-Tutorial fokussieren wir uns auf das Thema **Maschinenlesbarkeit** und die beiden Dateiformate **CSV** und **Excel**.
 
-Im folgenden Video-Tutorial zeigen wir Ihnen, wie Sie Daten bzw. Informationen zu einfachen Hausadressen in ein Geodatenformat bringen. Es gibt zwei verschiedene Methoden zur Geocodierung. Das Video ist in entsprechende Kapitel unterteilt:
-
-- Für Einsteiger:innen erläutern wir die Nutzung des [Geocodierungsdienstes des Bundesamts für Kartografie und Geodäsie (BKG)](http://gdz.bkg.bund.de/index.php/default/bkg-geocoder.html?___store=default).
-- Für erfahrenere Nutzer:innen erklären wir das BKG Plugin für die Open Source Software [QGIS](https://www.qgis.org/de/site/).
-
-<p style="text-align: center; margin-top:4rem">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/96ZgMLkpD8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
 <br>
 
-#### Vorrausetzungen für die Geocodierung
 
-- **Nutzer:innen-ID:** Der Geocodierungsdienst des BKG ist nicht frei verfügbar, das Land Berlin verfügt jedoch über eine Lizenz und deshalb kann der Dienst von allen Berliner Verwaltungsmitarbeiter:innen genutzt werden. Sie benötigen dafür lediglich eine Nutzer:innen-ID. Wenn Sie noch keine ID erhalten haben, können Sie diese bei der Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen erfragen, in dem Sie eine E-Mail an [fisbroker@senstadt.berlin.de](mailto:fisbroker@senstadt.berlin.de) schreiben.
-- **Datensatz im CSV-Format:** Ihr zu geocodierender Datensatz muss im CSV-Format vorliegen. Eine Liste im PDF-Format oder in Word ist leider nicht maschinenlesbar und kann nicht für die Geocodierung verwendet werden. Auch eine Excel-Tabelle kann nicht verwendet werden, kann jedoch über 'Speichern unter' leicht aus dem Programm heraus als CSV-Datei exportiert werden. Wie das geht erklären wir [hier](https://youtu.be/ahK8pwkJIcU?t=187) im Video.
+#### Wir zeigen dabei:
+
+- welche Dateiformate für tabellarische Daten geeignet sind.
+- wie Daten im CSV- und im Excel-Format aussehen können.
+- wie Daten im CSV- und im Excel-Format maschinell gelesen und verarbeitet werden können.
+- wie Daten im Excel-Format maschinenlesbarer aufbereitet werden können.
+- wie Sie eine Excel-Datei im CSV-Format abspeichern können.
+- die Vor- und Nachteile von Daten im CSV- und im Excel-Format.
+
+Außerdem geben wir verschiedene Empfehlungen zur Struktur und zum Inhalt des Datensatzes, um ihn maschinenlesbarer zu gestalten. Diese Hinweise sind dabei stets als Orientierung für eine optimale Bereitstellung zu sehen. Auch wenn Ihr Datensatz nicht in allen Punkten unseren Empfehlungen entspricht, sollten Sie eine Veröffentlichung in Erwägung ziehen.
+
 <br>
 
-**Wichtig:** Wenn Sie den geocodierten Datensatz veröffentlichen, zum Beispiel im [Berliner Open Data Portal](https://daten.berlin.de/), geben Sie in den Metadaten unbedingt das Koordinatenbezugssystem an, in welches Sie geocodiert haben. Nur so können die Daten richtig weiterverwendet werden.
+#### NQDM - Leitfaden für qualitativ hochwertige Daten und Metadaten.
+
+Möchten Sie mehr über Datenqualität und hochwertige Metadaten wissen möchten, empfehlen wir Ihnen den [NQDM – Leitfaden für qualitativ hochwertige Daten und Metadaten](https://www.fokus.fraunhofer.de/de/fokus/news/leitfaden_nqdm_2019) des Fraunhofer-Institut für offene Kommunikationssysteme Fokus. Dort finden Sie umfangreiche Qualitätsmerkmale und Handlungsempfehlungen, auch zu spezifischen Dateiformaten.
 
 <br>
 
