@@ -21,6 +21,10 @@ Das Potenzial offener Daten kann nur dann voll ausgeschöpft werden, wenn die Da
 
 Außerdem geben wir verschiedene Empfehlungen zur Struktur und zum Inhalt des Datensatzes, um ihn maschinenlesbarer zu gestalten. Diese Hinweise sind dabei stets als Orientierung für eine optimale Bereitstellung zu sehen. Auch wenn Ihr Datensatz nicht in allen Punkten unseren Empfehlungen entspricht, sollten Sie eine Veröffentlichung in Erwägung ziehen.
 
+
+<!--<p style="text-align: center; margin-top:4rem">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/96ZgMLkpD8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>-->
 <br>
 
 #### NQDM - Leitfaden für qualitativ hochwertige Daten und Metadaten.
