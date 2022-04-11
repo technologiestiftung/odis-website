@@ -29,7 +29,7 @@ Außerdem geben wir verschiedene Empfehlungen zur Struktur und zum Inhalt des Da
 
 #### NQDM - Leitfaden für qualitativ hochwertige Daten und Metadaten.
 
-Möchten Sie mehr über Datenqualität und hochwertige Metadaten wissen möchten, empfehlen wir Ihnen den [NQDM – Leitfaden für qualitativ hochwertige Daten und Metadaten](https://www.fokus.fraunhofer.de/de/fokus/news/leitfaden_nqdm_2019) des Fraunhofer-Institut für offene Kommunikationssysteme Fokus. Dort finden Sie umfangreiche Qualitätsmerkmale und Handlungsempfehlungen, auch zu spezifischen Dateiformaten.
+Möchten Sie mehr über Datenqualität und hochwertige Metadaten wissen? Dann empfehlen wir Ihnen den [NQDM – Leitfaden für qualitativ hochwertige Daten und Metadaten](https://www.fokus.fraunhofer.de/de/fokus/news/leitfaden_nqdm_2019) des Fraunhofer-Institut für offene Kommunikationssysteme Fokus. Dort finden Sie umfangreiche Qualitätsmerkmale und Handlungsempfehlungen, auch zu spezifischen Dateiformaten.
 
 <br>
 
