@@ -73,7 +73,7 @@
             {
               "title": "Video-Tutorial zur Datenqualität",
               "source": "Die Maschinenlesbarkeit erhöhen",
-              "url": "/ressourcen/datenqualitaet.html",
+              "url": "/ressourcen/datenqualitaet/",
               "text": "Das Potenzial offener Daten kann nur dann voll ausgeschöpft werden, wenn die Daten hochwertig und leicht nutzbar sind. Ein wichtiger Punkt dabei ist die Maschinenlesbarkeit, welche wir in diesem Video-Tutorial genauer erklären. Wir zeigen Ihnen, wie Sie die Maschinenlesbarkeit eines Datensatzes im CSV- oder Excel-Format erhöhen und was dabei wichtig ist.",
               "image": "page/geo_marker.svg"
             }
