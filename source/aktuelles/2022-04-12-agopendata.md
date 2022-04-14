@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 # Die AG Open Data als Vernetzungsformat der OD-Beauftragten
-Bereits seit zwei Jahren tagt die AG Open Data als zentrales Gremium der behördlichen Open Data Beauftragten. Damit Verwaltungsdaten als Open Data standardmäßig und auch in guter nutzbarer Qualität vorliegt, kommt den Open Data Beauftragten eine Schlüsselrolle zu. Sie sind in erster Linie Ansprechspersonen für die Verwaltungsmitarbeiter:innen in den jeweiligen Behörden. Sie koordinieren und unterstützen Maßnahmen zu Open Data und fördern die Bereitstellung von Open Data innerhalb der Behörde. 
+Bereits seit zwei Jahren tagt die AG Open Data als zentrales Gremium der behördlichen Open Data Beauftragten. <a href="https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/open-data-beauftragte/" target="blank">behördlichen Open Data Beauftragten</a> Damit Verwaltungsdaten als Open Data standardmäßig und auch in guter nutzbarer Qualität vorliegt, kommt den Open Data Beauftragten eine Schlüsselrolle zu. Sie sind in erster Linie Ansprechspersonen für die Verwaltungsmitarbeiter:innen in den jeweiligen Behörden. Sie koordinieren und unterstützen Maßnahmen zu Open Data und fördern die Bereitstellung von Open Data innerhalb der Behörde. 
 
 Mittlerweile hat die Mehrheit der Berliner Senatsverwaltungen und Bezirke Open Data Beauftragte, die im Rahmen der AG Open Data einmal im Quartal zusammenkommen. Sebastian Askar, Open Data Beauftragter des Landes Berlin leitet die AG, die aufgrund der Corona-Pandemie bislang nur virtuell zusammen kommen konnte.
 
@@ -23,5 +23,5 @@ Zum Abschluss der Veranstaltung berichtete Betül Özdemir von SenWEB zum aktuel
 Das Fazit der AG Open Data war deutlich: Die Präsenzveranstaltuneg hat den Teilnehmer:innen sichtlich Spaß gemacht. Es hat gut getan die Kolleg:innen persönlich zu treffen und besser kennenzulernen. Auch der interaktive Part wurde positiv hervorgehoben und soll weiter Bestandteil der AG Open Data sein. Insgesamt ist eine stärkere Vernetzung unter den Open Data Beauftragten gewünscht. Die ODIS hat eine Vielzahl an wichtigen Anregungen mitgenommen und freut sich auf die nächste AG Open Data.
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/Gruppenfoto_agopendata.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
+{% include "macro-image-section-small.html", src:"/assets/images/Gruppenfoto_AGopendata2.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
 </center>
