@@ -18,5 +18,5 @@ Im Anschluss an die Auflockerunsgrunde sammelten und diskutierten die Teilnehmer
 Das Fazit der AG Open Data war deutlich: Die Präsenzveranstaltuneg hat den Teilnehmer:innen sichtlich Spaß gemacht. Es hat gut getan die Kolleg:innen persönlich zu treffen und besser kennenzulernen. Auch der interaktive Part wurde positiv hervorgehoben und soll weiter Bestandteil der AG Open Data sein. Insgesamt ist eine stärkere Vernetzung unter den Open Data Beauftragten gewünscht. Die ODIS hat eine Vielzahl an wichtigen Anregungen mitgenommen und freut sich auf die nächste AG Open Data.
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/wahlbezirke_workshop.png", caption:"Einblick in einen Teil des Miro-Boards zur Sammlung von Anforderungen an das Tool beim digitalen Workshop" %}
+{% include "macro-image-section-small.html", src:"/assets/images/Gruppenfoto_agopendata.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
 </center>
