@@ -13,7 +13,7 @@ Das ODIS-Team:
 					<div class="profile-wrapper mt-2">
 						<div class="profile-image-2"></div>
 						<div class="profile-desc-wrapper-2">
-							<span><b>Victoria Boeck</b></span>
+							<span><b>Victoria Boeck (Elternzeit)</b></span>
 							<span>victoria.boeck@ts.berlin</span>
 							<span>030 209 69 99 41</span>
 						</div>
