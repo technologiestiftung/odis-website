@@ -8,10 +8,11 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 # Die AG Open Data als Vernetzungsformat der OD-Beauftragten
-Bereits seit zwei Jahren tagt die AG Open Data als zentrales Gremium der behördlichen Open data Beauftragten. Damit Verwaltungsdaten als Open Data standardmäßig und auch in guter nutzbarer Qualität vorliegt, kommt den Open Data Beauftragten eine Schlüsselrolle zu. Sie sind in erster Linie Ansprechspersonen für die Verwaltungsmitarbeiter:innen in den jeweiligen Behörden. Sie koordinieren und unterstützen Maßnahmen zu Open Data und fördern die Bereitstellung von Open Data innerhalb der Behörde. Mittlerweile hat die Mehrheit der Berliner Senatsverwaltungen und Bezirke Open Data Beauftragte, die im Rahmen der AG Open Data einmal im Quartal zusammenkommen. Sebastian Askar, Open Data Beauftragter des Landes Berlin leitet die AG, die aufgrund der Corona-Pandemie bislang nur virtuell zusammen kommen konnte.
+Bereits seit zwei Jahren tagt die AG Open Data als zentrales Gremium der behördlichen Open Data Beauftragten. Damit Verwaltungsdaten als Open Data standardmäßig und auch in guter nutzbarer Qualität vorliegt, kommt den Open Data Beauftragten eine Schlüsselrolle zu. Sie sind in erster Linie Ansprechspersonen für die Verwaltungsmitarbeiter:innen in den jeweiligen Behörden. Sie koordinieren und unterstützen Maßnahmen zu Open Data und fördern die Bereitstellung von Open Data innerhalb der Behörde. Mittlerweile hat die Mehrheit der Berliner Senatsverwaltungen und Bezirke Open Data Beauftragte, die im Rahmen der AG Open Data einmal im Quartal zusammenkommen. Sebastian Askar, Open Data Beauftragter des Landes Berlin leitet die AG, die aufgrund der Corona-Pandemie bislang nur virtuell zusammen kommen konnte.
 
 ## Erste Präsenzsitzung als interaktiver Workshop
-
+Für die erste Präsenzsitzung am 08.04.2022 im CityLAB Berlin hat sich die ODIS eine besondere Agenda überlegt. Nach der Begrüßung durch Sebastian Askar startete die Sitzung mit einer Vorstellunsgrunde, bei der die Teilnehmer:innen gleich ihre Datenvisualisierungskompetenz beweisen konnten. So stellten die Teilnehmer ihr Frühstück anhand verschiedener zum Teil durchwegs komplexen Visualiserungen vor.
+Im Anschluss an die Auflockerunsgrunde sammelten und diskutierten die Teilnehmer an einem Whiteboard Themen, die sie in ihrer Arbeit als OD-Beauftragte ausbremsen bzw. die ihre Arbeit erleichtern würden. D
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/wahlbezirke_workshop.png", caption:"Einblick in einen Teil des Miro-Boards zur Sammlung von Anforderungen an das Tool beim digitalen Workshop" %}
