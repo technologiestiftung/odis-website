@@ -5,10 +5,10 @@ title: Über ODIS
 
 Die Open Data Informationsstelle (ODIS) wurde im Mai 2018 als ein **Unterstützungsangebot zu Open Data für Mitarbeiter\*innen der Berliner Verwaltung** gegründet. In dieser Funktion dient die ODIS als Ansprechpartnerin für Fragen rund um das Thema offene Daten, organisiert Veranstaltungen und Workshops mit Verwaltungsbeschäftigten sowie Mitgliedern der Berliner Open Data Community und entwickelt eigene Anwendungen und Visualisierungen basierend auf Open Data.
 
-Wir führen unter anderem Erstgespräche zum Thema Open Data und unterstützen Verwaltungsmitarbeiter\*innen in den verschiedenen Schritten hin zur Datenbereitstellung im [Berliner Open Data Portal](https://daten.berlin.de/). Dabei arbeiten wir eng mit den [behördlichen Open Data Beauftragten](https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/open-data-beauftragte/) in den einzelnen Verwaltungen zusammen. Zudem unterstützen wir dabei, offene Verwaltungsdaten sichtbar zu machen und die Potenziale zu nutzen, zum Beispiel durch gemeinsames Prototyping. Auch die Stärkung der Datenkompetenz in der Berliner Verwaltung gehört zu unseren Aufgaben. So stellen wir unter ['Ressourcen'](/ressourcen) verschiedene Leitfäden und Tutorials zur Verfügung und veranstalten gelegentlich Schulungen.
+Wir führen unter anderem Erstgespräche zum Thema Open Data und unterstützen Verwaltungsmitarbeiter\*innen bei den verschiedenen Schritten hin zur Datenbereitstellung im [Berliner Open Data Portal](https://daten.berlin.de/). Dabei arbeiten wir eng mit den behördlichen [Open Data Beauftragten](https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/open-data-beauftragte/) der einzelnen Verwaltungen zusammen. Zudem unterstützen wir dabei, offene Verwaltungsdaten und deren Potenziale sichtbar zu machen, zum Beispiel durch gemeinsames Prototyping. Auch die Stärkung der Datenkompetenz in der Berliner Verwaltung gehört zu unseren Aufgaben. So stellen wir unter [Ressourcen](/ressourcen) verschiedene Leitfäden und Tutorials zur Verfügung und veranstalten Schulungen und Netzwerktreffen.
 
 
-Die ODIS wird von der Berliner Senatsverwaltung für Wirtschaft, Energie und Betriebe finanziert und von der [Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/) betrieben.
+Die ODIS wird von der Berliner Senatsverwaltung für Wirtschaft, Energie und Betriebe gefördert und von der [Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/) betrieben.
 
 Das ODIS-Team:
 
