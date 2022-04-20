@@ -16,7 +16,8 @@ Das ODIS-Team:
 					<div class="profile-wrapper mt-2">
 						<div class="profile-image-2"></div>
 						<div class="profile-desc-wrapper-2">
-							<span><b>Victoria Boeck (Elternzeit)</b></span>
+							<span><b>Victoria Boeck</b></span>
+							<span><em>Leitung (Elternzeit)</em></span>
 							<span>victoria.boeck@ts.berlin</span>
 							<span>030 209 69 99 41</span>
 						</div>
@@ -25,28 +26,32 @@ Das ODIS-Team:
 						<div class="profile-image-3"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Lisa Stubert</b></span>
+							<span><em>Leitung</em></span>
 							<span>lisa.stubert@ts.berlin</span>
 							<span>030 209 69 99 43</span>
-						</div>
-					</div>
-					<div class="profile-wrapper mt-2">
-						<div class="profile-image-4"></div>
-						<div class="profile-desc-wrapper-2">
-							<span><b>Ester Scheck</b></span>
-							<span>ester.scheck@ts.berlin</span>
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
 						<div class="profile-image-6"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Klemens Maget</b></span>
+							<span><em>Wissenschaftlicher Mitarbeiter</em></span>
 							<span>klemens.maget@ts.berlin</span>
+						</div>
+					</div>
+					<div class="profile-wrapper mt-2">
+						<div class="profile-image-4"></div>
+						<div class="profile-desc-wrapper-2">
+							<span><b>Ester Scheck</b></span>
+							<span><em>Studentische Hilfskraft</em></span>
+							<span>ester.scheck@ts.berlin</span>
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
 						<div class="profile-image-5"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Max B. Eckert</b></span>
+							<span><em>Studentische Hilfskraft</em></span>
 							<span>max.eckert@ts.berlin</span>
 						</div>
 					</div>										
@@ -54,6 +59,7 @@ Das ODIS-Team:
 						<div class="profile-image"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Dr. Benjamin Seibel</b></span>
+							<span><em>Abteilungsleitung CityLAB Berlin</em></span>
 							<span>benjamin.seibel@ts.berlin</span>
 							<span>030 209 69 99 40</span>
 						</div>
