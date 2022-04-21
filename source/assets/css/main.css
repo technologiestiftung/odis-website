@@ -8408,10 +8408,10 @@ td.bold {
     padding-bottom: 2rem;
   }
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 680px) {
   .video-big {
-    width: 320px;
-    height: 180px;
+    width: 420px;
+    height: 236.25px;
   }
 }
 @media screen and (min-width: 54rem) and (max-width: 64rem) {
@@ -8437,6 +8437,11 @@ td.bold {
     left: 0;
     flex-direction: column;
     position: relative;
+  }
+
+  .video-big {
+    width: 320px;
+    height: 180px;
   }
 }
 .pagination a {

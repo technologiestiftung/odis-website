@@ -16,7 +16,7 @@ Victoria Boeck von der Open Data Informationsstelle und Claudia Jach von [Code f
 
 <br>
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MBV6ASWoY3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video-big" src="https://www.youtube.com/embed/MBV6ASWoY3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 

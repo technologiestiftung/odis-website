@@ -1382,10 +1382,10 @@ td.bold {
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 680px) {
   .video-big {
-    width: 320px;
-    height: 180px
+    width: 420px;
+    height: 236.25px
   }
 }
 
@@ -1415,6 +1415,10 @@ td.bold {
     left: 0;
     flex-direction: column;
     position: relative;
+  }
+  .video-big {
+    width: 320px;
+    height: 180px
   }
 }
 

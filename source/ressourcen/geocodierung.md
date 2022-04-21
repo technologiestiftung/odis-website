@@ -13,7 +13,7 @@ Im folgenden Video-Tutorial zeigen wir Ihnen, wie Sie Daten bzw. Informationen z
 - Für erfahrenere Nutzer:innen erklären wir das BKG Plugin für die Open Source Software [QGIS](https://www.qgis.org/de/site/).
 
 <p style="text-align: center; margin-top:4rem">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/96ZgMLkpD8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video-big" src="https://www.youtube.com/embed/96ZgMLkpD8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 
