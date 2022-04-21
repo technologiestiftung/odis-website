@@ -64,18 +64,18 @@
           "question": "Wie kann ich Daten aufwerten und die Qualität erhöhen?",
           "sublinks": [
             {
+              "title": "Video-Tutorial zur Datenqualität",
+              "source": "Die Maschinenlesbarkeit erhöhen",
+              "url": "/ressourcen/datenqualitaet/",
+              "text": "Das Potenzial offener Daten kann nur dann voll ausgeschöpft werden, wenn die Daten hochwertig und leicht nutzbar sind. Ein wichtiger Punkt dabei ist die Maschinenlesbarkeit, welche wir in diesem Video-Tutorial genauer erklären. Wir zeigen Ihnen, wie Sie die Maschinenlesbarkeit eines Datensatzes im CSV- oder XLSX-Format erhöhen und was dabei wichtig ist.",
+              "image": "page/dataquality.svg"
+            },
+            {
               "title": "Video-Tutorial zur Geocodierung",
               "source": "Daten zu Geodaten machen",
               "url": "/ressourcen/geocodierung/",
               "text": "Der Großteil aller Verwaltungsdaten hat einen geographischen Bezug. Das können Adressen sein oder Informationen, die sich auf bestimmte Räume wie Bezirke oder Planungsräume beziehen. Um die Nutzung zu erleichtern, sollten diese Daten um Koordinaten ergänzt werden. Das ist leichter als gedacht. In unserem Video-Tutorial zeigen wir, wie Sie einen Datensatz mithilfe eines Webtools geocodieren können.",
               "image": "page/geo_marker.svg"
-            },
-            {
-              "title": "Video-Tutorial zur Datenqualität",
-              "source": "Die Maschinenlesbarkeit erhöhen",
-              "url": "/ressourcen/datenqualitaet/",
-              "text": "Das Potenzial offener Daten kann nur dann voll ausgeschöpft werden, wenn die Daten hochwertig und leicht nutzbar sind. Ein wichtiger Punkt dabei ist die Maschinenlesbarkeit, welche wir in diesem Video-Tutorial genauer erklären. Wir zeigen Ihnen, wie Sie die Maschinenlesbarkeit eines Datensatzes im CSV- oder Excel-Format erhöhen und was dabei wichtig ist.",
-              "image": "page/dataquality.svg"
             }
           ]
         },
