@@ -8,7 +8,7 @@ title: Datenqualität und Maschinenlesbarkeit
 Eine Datenveröffentlichung ist kein Selbstzweck. Die Idee von Open Data ist, dass Ihre Daten von anderen betrachtet, ausgewertet und gegebenfalls sogar auf vielfältige Art und Weise weiterverarbeitet werden können.
 Datennutzer und -nutzerinnen wird diese Weiterverarbeitung erleichtert, wenn die Daten in guter Qualität bereitgestellt werden. Doch was bedeutet das?  
 
-Datenqualtät hat viele Facetten. Ein wichtiger Aspekt für offene Datensätze ist, das diese maschienenlesbar sind, also von einem Computer bzw. von Sofware verarbeitet werden können.
+Datenqualtät hat viele Facetten. Ein wichtiger Aspekt für offene Datensätze ist, dass diese maschinenlesbar sind, also von einem Computer bzw. von Software verarbeitet werden können.
 In diesem Video-Tutorial fokussieren wir uns auf Maschinenlesbarkeit tabellarischer Daten und die beiden Dateiformate **CSV** und **XLSX** (Excel).  
 
 #### Im Videotutorial sehen Sie:
