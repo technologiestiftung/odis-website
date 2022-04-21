@@ -389,6 +389,11 @@ svg.logo-ibb:hover {
   width: 100%;
 }
 
+.video-big {
+  width: 640px;
+  height: 360px
+}
+
 .profile-wrapper {
   display: flex;
   flex-direction: row;
@@ -1374,6 +1379,13 @@ td.bold {
   .bl {
     padding-top: 4rem;
     padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .video-big {
+    width: 320px;
+    height: 180px
   }
 }
 
