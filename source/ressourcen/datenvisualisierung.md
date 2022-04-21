@@ -16,8 +16,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <details open="open">
     <summary class="h4">Einführung und Teil 1: Ziele</summary>
-    In der Einführung wird das Datawrapper-Tool vorgestellt und seine allgemeinen Funktionen, sowie die verschiedenen Typen von Diagrammen und Karten werden demonstriert.
-
+    In der Einführung wird das Datawrapper-Tool vorgestellt und seine allgemeinen Funktionen, sowie die verschiedenen Typen von Diagrammen und Karten werden demonstriert.  
     Im anschließenden ersten Teil des Tutorials werden die generellen Ziele der Datenvisualisierung thematisiert: Warum visualisieren wir Daten und welche Grundprinzipien gibt es?
 
 <br><br>
