@@ -43,7 +43,7 @@ Das ODIS-Team:
 						<div class="profile-image-4"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Ester Scheck</b></span>
-							<span><em>Studentische Hilfskraft</em></span>
+							<span><em>Studentische Mitarbeiterin</em></span>
 							<span>ester.scheck@ts.berlin</span>
 						</div>
 					</div>
@@ -51,7 +51,7 @@ Das ODIS-Team:
 						<div class="profile-image-5"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Max B. Eckert</b></span>
-							<span><em>Studentische Hilfskraft</em></span>
+							<span><em>Studentischer Mitarbeiter</em></span>
 							<span>max.eckert@ts.berlin</span>
 						</div>
 					</div>										
