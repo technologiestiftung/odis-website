@@ -1,12 +1,12 @@
 Kategorie,Datensatz,Beschreibung,offen,Link
 Bevölkerung und Gesellschaft,Anzahl Obdachlose,"Anzahl von Menschen, die im öffentlichen Raum, im Freien oder in Notunterkünften übernachten",Nein,
 Bevölkerung und Gesellschaft,Arbeitslosenzahlen,"Statistische Informationen zu der Arbeitslosenquote (SGB, SGB II, SGB III)",Teilweise,<a target='_blank' href='https://daten.berlin.de/search/node/sgb%20OR%20arbeitslosigkeit'>daten.berlin.de</a>
-Bevölkerung und Gesellschaft,Asylwerber*innen,Anzahl und Herkunftsländer von Asylbewerber*innen sowie Höhe von Leistungen,Teilweise,<a target='_blank' href='https://daten.berlin.de/search/node/asylbewerber'>daten.berlin.de</a>
-Bevölkerung und Gesellschaft,Einwohner*innen-Bewegungsdaten (Außen- und Binnenwanderung),"Einwohner*innen-Bewegungsdaten nach Jahr, Stadtteil, usw. gegliedert",Nein,
+Bevölkerung und Gesellschaft,Asylwerber:innen,Anzahl und Herkunftsländer von Asylbewerber:innen sowie Höhe von Leistungen,Teilweise,<a target='_blank' href='https://daten.berlin.de/search/node/asylbewerber'>daten.berlin.de</a>
+Bevölkerung und Gesellschaft,Einwohner:innen-Bewegungsdaten (Außen- und Binnenwanderung),"Einwohner:innen-Bewegungsdaten nach Jahr, Stadtteil, usw. gegliedert",Nein,
 Bevölkerung und Gesellschaft,Flüchtlingszahlen ,Ankunftszahlen nach Herkunftsländern,Nein,
 Bevölkerung und Gesellschaft,Bevölkerungsstatistik,"Allgemeine Bevölkerungsstatistik zu Berlin wie Alter, Einwohnerzahl, Staatsangehörigkeit, Religionszugehörigkeit, usw.",Teilweise,<a target='_blank' href='https://daten.berlin.de/datensaetze?title=einwohnerinnen+und+einwohner&field_license_tid=All&field_publisher_tid=193&field_geo_granularity_tid=All&field_temporal_granularity_tid=All&field_geo_coverage_tid=All&state=open'>daten.berlin.de</a>
 Bevölkerung und Gesellschaft,Geburten und Sterbefälle,"Anzahl Geburten und Sterbefälle nach Geschlecht und Alter (Sterbefälle), aufgeschlüsselt nach Bezirk oder detaillierter",Teilweise,<a target='_blank' href='https://www.statistik-berlin-brandenburg.de/bevoelkerung/demografie/geburten-sterbefaelle-eheschliessungen'>statistik-berlin-brandenburg.de</a>
-Bevölkerung und Gesellschaft,Soziale Einrichtungen,"Angebote wie kostenfreie Übernachtungsangebote für Wohnungslose, Behindertenwohnheime, Einrichtungen für Senior*innen, Beratungsstellen, Einrichtungen für Stadtteilarbeit, usw.",Nein,
+Bevölkerung und Gesellschaft,Soziale Einrichtungen,"Angebote wie kostenfreie Übernachtungsangebote für Wohnungslose, Behindertenwohnheime, Einrichtungen für Senior:innen, Beratungsstellen, Einrichtungen für Stadtteilarbeit, usw.",Nein,
 Bevölkerung und Gesellschaft,Sozialindikatoren,"Sozio-Ökonomische Indikatoren (Wohnlage, Einkommen, usw.) auf LOR-Ebene",Nein,
 Bevölkerung und Gesellschaft,Lebensformen,"Lebensformen (wie Ehepaar ohne Kinder, Alleinstehende, Alleinerziehende mit Kinder, usw.), aufgeteilt in LOR, Stadtbezirke und die gesamte Stadt.",Teilweise,<a target='_blank' href='https://www.statistik-berlin-brandenburg.de/bevoelkerung/demografie/mikrozensus'>statistik-berlin-brandenburg.de</a>
 Bevölkerung und Gesellschaft,Menschen mit Behinderung,"Anzahl Menschen mit Behinderung nach Behinderungsgrad, Art der Behinderung, Geschlecht und Alter",Ja,<a target='_blank' href='https://www.statistik-berlin-brandenburg.de/menschen-mit-behinderung'>statistik-berlin-brandenburg.de</a>
@@ -15,13 +15,13 @@ Bevölkerung und Gesellschaft,Menschen mit Behinderung,"Anzahl Menschen mit Behi
 "Bildung, Kultur und Sport",Museen und kulturelle Einrichtungen,"Standorte, Öffnungszeiten und Beschreibung aller kulturellen Einrichtungen",Teilweise,<a target='_blank' href='https://daten.berlin.de/datensaetze/standorte-gef%C3%B6rderter-kultureinrichtungen'>daten.berlin.de</a>
 "Bildung, Kultur und Sport",Schuleingangsuntersuchungen,Der Datensatz enthält Daten der Schuleingangsuntersuchungen und der Check-Untersuchungen auf LOR Ebene,Teilweise,<a target='_blank' href='https://daten.berlin.de/search/node/Einschulungsuntersuchungen'>daten.berlin.de</a>
 "Bildung, Kultur und Sport",Schuleinzugsgebiete,"Die Flächen der Gebiete oder eine Liste von den Adressen, die zu jeder Schule gehören",Ja,<a target='_blank' href='https://daten.berlin.de/search/node/einschulbereiche'>daten.berlin.de</a>
-"Bildung, Kultur und Sport",Schulstandorte,"Standortspezifische Daten wie Adresse, Anzahl von Schüler*innen, Anzahl von Lehrer*innen, Angebote, Informationen (z.B. Barrierefrei, Sprachen)",Teilweise,<a target='_blank' href='https://daten.berlin.de/datensaetze/schulen-wfs'>daten.berlin.de</a>
+"Bildung, Kultur und Sport",Schulstandorte,"Standortspezifische Daten wie Adresse, Anzahl von Schüler:innen, Anzahl von Lehrer:innen, Angebote, Informationen (z.B. Barrierefrei, Sprachen)",Teilweise,<a target='_blank' href='https://daten.berlin.de/datensaetze/schulen-wfs'>daten.berlin.de</a>
 "Bildung, Kultur und Sport",Schulstatistik,"Zahl der Schülerinnen und Schüler, Zahl und Art der Klassen, Anzahl der Lehrerinnen und Lehrer oder der Ausbildungsberufe, usw.",Teilweise,<a target='_blank' href='https://daten.berlin.de/datensaetze/sch%C3%BCler-und-lehrkr%C3%A4ftestatistik'>daten.berlin.de</a>
 "Bildung, Kultur und Sport",Sportstätten,Standorte von Sportanlagen sowie Belegungspläne,Nein,
 "Bildung, Kultur und Sport",Hochschulstatistik,Studierendenzahl nach Universtät und Studiengang,Nein,
 Gesundheit (COVID-19),Auslastung von Intensivbetten ,Daten zu freien und belegten Intensivbetten in den Berliner Krankenhäusern sowie zur Art der Belegung ,Teilweise,<a target='_blank' href='https://daten.berlin.de/datensaetze/covid-19-berlin-fallzahlen-und-indikatoren-gesamt%C3%BCbersicht'>daten.berlin.de</a>
 Gesundheit,Apotheken,Standorte aller Apotheken,Nein,
-Gesundheit,Ärzte,"Liste von Ärzt*innen in der Stadt, mit Angaben zur Fachrichtung und zum Standort",Nein,
+Gesundheit,Ärzte,"Liste von Ärzt:innen in der Stadt, mit Angaben zur Fachrichtung und zum Standort",Nein,
 Gesundheit,Defibrillatoren,Standorte von Defibrillatoren,Nein,
 Gesundheit,Krankenhäuser,"Standorte aller Krankenhäuser, inklusive Angaben zu Fachabteilungen",Nein,
 Gesundheit,Lebensmittelkontrollen,"Datum und Ergebnisse der Lebensmittelkontrollen (Hygienebedingungen, Lagerbedingungen und die Einhaltung von Kennzeichnungsvorgaben)",Nein,

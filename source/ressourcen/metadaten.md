@@ -5,18 +5,18 @@ title: Metadaten-Leitfaden
 
 # Was sind Metadaten?
 
-Daten im Open-Data-Portal zu veröffentlichen, ist ein wichtiger Schritt zur Umsetzung der Open-Data-Richtlinie. Wichtig zu wissen ist allerdings, dass ein vollständiger Datensatz nicht nur aus den Daten(-werten) allein besteht, sondern ebenfalls die Angaben der sogenannten Metadaten umfasst. Ohne Metadaten können die Daten eventuell nicht optimal gefunden und genutzt werden oder sind im schlimmsten Fall sogar unbrauchbar, da die Anwender\*innen sie nicht in den richtigen Kontext setzen können. Doch was sind Metadaten eigentlich und warum sind sie so wichtig?
+Daten im Open-Data-Portal zu veröffentlichen, ist ein wichtiger Schritt zur Umsetzung der Open-Data-Richtlinie. Wichtig zu wissen ist allerdings, dass ein vollständiger Datensatz nicht nur aus den Daten(-werten) allein besteht, sondern ebenfalls die Angaben der sogenannten Metadaten umfasst. Ohne Metadaten können die Daten eventuell nicht optimal gefunden und genutzt werden oder sind im schlimmsten Fall sogar unbrauchbar, da die Anwender:innen sie nicht in den richtigen Kontext setzen können. Doch was sind Metadaten eigentlich und warum sind sie so wichtig?
 
 #### "Daten über Daten"
 
 **Metadaten be- und umschreiben die eigentlichen Daten, es sind „Daten über Daten“.** Sie sind nicht nur für Open Data relevant, sondern finden sich auch in vielen anderen Bereichen. Eine Musikdatei beispielsweise, enthält nicht nur die Musik an sich, sondern auch eingebettete Informationen, wie den Interpreten, das Musikgenre oder das Erscheinungsjahr des Musikstückes. Ohne diese Angaben wäre es nicht möglich die Musik in einer entsprechenden Bibliothek oder Anwendung zu suchen oder zu sortieren.
-Im Falle von Verwaltungsdaten sieht das ähnlich aus. Nur durch den Datensatz ergänzende Angaben, wie dem Namen der veröffentlichenden Stelle, Kategoriezugehörigkeit und das Veröffentlichungsdatum, können die Daten von den Nutzer\*innen schnell gefunden und richtig eingeordnet werden.
+Im Falle von Verwaltungsdaten sieht das ähnlich aus. Nur durch den Datensatz ergänzende Angaben, wie dem Namen der veröffentlichenden Stelle, Kategoriezugehörigkeit und das Veröffentlichungsdatum, können die Daten von den Nutzer:innen schnell gefunden und richtig eingeordnet werden.
 
 #### Metadatenqualität
 
 So trivial es auch erst einmal klingen mag, in der Praxis zeigt sich, dass viele Datensätze keine akkuraten, anwenderfreundlichen Metadaten besitzen. Für eine Studie aus dem Jahr 2016 \[1\] wurden im Rahmen einer Qualitätsbewertung von Open Data deren Metadaten auf verschiedene Qualitätskriterien überprüft. Insgesamt wurden die Metadaten von über 1,1 Millionen Datensätzen auf 261 verschiedenen Open-Data-Portalen der ganzen Welt aus dem Bereich Verwaltung, aber auch aus dem privaten Sektor, analysiert. Laut den Ergebnissen konnten hierbei einige Defizite festgestellt werden. So verfügte zum Beispiel der überwiegende Anteil offener Datensätze über keine maschinenlesbare E-Mail oder URL-Adresse zu einem Ansprechpartner. Solch fehlende Informationen zur Herkunft von Daten mindern die Transparenz und nachhaltige Nutzbarkeit von Open Data ungemein.
 
-Ein weiteres bekanntes Problem sind nicht vorhandene oder ungenaue Angaben zur zeitlichen Auflösungen und zum Aktualisierungsrhythmus. Hier wird es Nutzer\*innen erschwert, zu erkennen ob sie den aktuellsten Datensatz zur Verfügung stehen haben oder mit veralteten Daten handhaben. Ein anderes Beispiel sind Defizite bei der Auffindbarkeit von Daten. Diese können sich unter anderem dann ergeben, wenn wenige oder schlechte Tags in den Metadaten festgelegt sind. Die Tags fungieren als eine Art Suchbegriff. Der Datensatz kann über seinen Titel und die festgelegten Tags durch die Suchfunktion im Open-Data-Portal gefunden werden. Dies wird besonders dann wichtig, wenn potentielle Datennutzer\*innen nicht nach einem speziellen Datensatz suchen, sondern die Datenverfügbarkeit zu einem übergeordneten Thema ausloten, oder wenn ein Datensatz sehr viele verschiedene Informationen enthält. Ein Datensatz der beispielsweise das gesamte Streckennetz und die Fahrpläne des ÖPNV enthält, sollte auch durch Tags wie _U-Bahn_, _Tram_ usw. auffindbar sein.
+Ein weiteres bekanntes Problem sind nicht vorhandene oder ungenaue Angaben zur zeitlichen Auflösungen und zum Aktualisierungsrhythmus. Hier wird es Nutzer:innen erschwert, zu erkennen ob sie den aktuellsten Datensatz zur Verfügung stehen haben oder mit veralteten Daten handhaben. Ein anderes Beispiel sind Defizite bei der Auffindbarkeit von Daten. Diese können sich unter anderem dann ergeben, wenn wenige oder schlechte Tags in den Metadaten festgelegt sind. Die Tags fungieren als eine Art Suchbegriff. Der Datensatz kann über seinen Titel und die festgelegten Tags durch die Suchfunktion im Open-Data-Portal gefunden werden. Dies wird besonders dann wichtig, wenn potentielle Datennutzer:innen nicht nach einem speziellen Datensatz suchen, sondern die Datenverfügbarkeit zu einem übergeordneten Thema ausloten, oder wenn ein Datensatz sehr viele verschiedene Informationen enthält. Ein Datensatz der beispielsweise das gesamte Streckennetz und die Fahrpläne des ÖPNV enthält, sollte auch durch Tags wie _U-Bahn_, _Tram_ usw. auffindbar sein.
 
 #### Metadatenstandards
 
@@ -116,7 +116,7 @@ Bei der Veröffentlichung von Daten im Open-Data-Portal Berlin müssen die Metad
   </tr>
   <tr>
     <td class="tg-dydg">Text für Namensnennung</td>
-    <td class="tg-o9w4">Exakter Text der von Nutzer*innen angegeben werden muss, wenn sie die Daten verwenden und die gewählte Lizenz eine Namensnennung vorsieht (z.B. CC-BY 3.0). Für gewöhnlich wird der Name der veröffentlichenden Stelle genannt.</td>
+    <td class="tg-o9w4">Exakter Text der von Nutzer:innen angegeben werden muss, wenn sie die Daten verwenden und die gewählte Lizenz eine Namensnennung vorsieht (z.B. CC-BY 3.0). Für gewöhnlich wird der Name der veröffentlichenden Stelle genannt.</td>
     <td class="tg-54w3">Die Daten wurden von der Senatsverwaltung für Wirtschaft, Energie und Betriebe und ODIS erhoben.</td>
   </tr>
   <tr>

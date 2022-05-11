@@ -14,7 +14,7 @@ Wir freuen uns sehr, unsere neue Webpräsenz vorzustellen. Wir haben die ODIS-Se
 
 Unter dem Reiter **Projekte**, gibt es einen Einblick in unsere Hauptprojekte. Darunter sind diverse Visualisierungen und Anwendungen mit Open Data zu finden.
 
-Unter **Ressourcen** gibt es eine Auswahl an relevanten Dokumenten, wie Leitfäden, FAQs und Checklisten zu Themen wie Dateninventuren und Metadaten, die von ODIS insbesondere für Mitarbeiter\*innen der Berliner Verwaltung entwickelt wurden. Hier haben wir auch eine Sammlung an Links zu externen Ressourcen zusammengestellt, die wir als besonders empfehlenswert erachten.
+Unter **Ressourcen** gibt es eine Auswahl an relevanten Dokumenten, wie Leitfäden, FAQs und Checklisten zu Themen wie Dateninventuren und Metadaten, die von ODIS insbesondere für Mitarbeiter:innen der Berliner Verwaltung entwickelt wurden. Hier haben wir auch eine Sammlung an Links zu externen Ressourcen zusammengestellt, die wir als besonders empfehlenswert erachten.
 
 Unter **Aktuelles** werden wir regelmäßig über Neuigkeiten bei ODIS und in der Berliner Verwaltung berichten.
 
