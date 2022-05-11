@@ -11,7 +11,7 @@ indexImage: placeholder.png
 heroImage: zaehlstellen_hero.png
 ---
 
-Um die langfristige Entwicklung des Radverkehrs in Berlin zu beobachten und zu analysieren, wird an insgesamt 26 Zählstellen automatisiert die Anzahl an vorbeifahrenden Fahrradfahrer\*innen erfasst. Aus den stündlich zusammengefassten Messungen können Informationen über das Radverkehrsaufkommen auf verschiedenen Detailstufen abgeleitet werden.
+Um die langfristige Entwicklung des Radverkehrs in Berlin zu beobachten und zu analysieren, wird an insgesamt 26 Zählstellen automatisiert die Anzahl an vorbeifahrenden Fahrradfahrer:innen erfasst. Aus den stündlich zusammengefassten Messungen können Informationen über das Radverkehrsaufkommen auf verschiedenen Detailstufen abgeleitet werden.
 
 In [dieser interaktiven Visualisierung](https://lab.technologiestiftung-berlin.de/projects/bikerides/de/) können mittels Netzdiagrammen die jährlichen, wöchentlichen und täglichen Fahrmuster der jeweiligen Standorte zielgerichtet und vergleichend untersucht werden.
 

@@ -10,7 +10,7 @@ Um Verwaltungsdaten als Open Data systematisch bereitstellen zu können, muss un
 - Zuständigkeiten zwischen einzelnen Fachabteilungen sind nicht immer eindeutig oder einheitlich in allen Bezirken.
 - Zuständigkeiten zwischen Haupt- und Bezirksverwaltung sind teilweise nicht klar.
 - Daten werden über diverse Wege generiert und gespeichert. Diese können in Fachverfahren, lokalen Datenbanken oder Excel-Listen vorliegen, was die Datenlage unübersichtlich macht.
-- Diejenigen Stellen die Daten erheben sind nicht zwangsläufig die Stellen, die Zugriff auf die Daten haben. So werden beispielsweise Daten beim Bürgeramt erfasst (z.B. wenn Bürger\*innen ihren Wohnsitz ummelden), der Zugriff auf die gesammelten Daten (z.B. wieviele Ummeldungen gab es je Bezirk) wird jedoch an einer anderen Stelle vorgenommen.
+- Diejenigen Stellen die Daten erheben sind nicht zwangsläufig die Stellen, die Zugriff auf die Daten haben. So werden beispielsweise Daten beim Bürgeramt erfasst (z.B. wenn Bürger:innen ihren Wohnsitz ummelden), der Zugriff auf die gesammelten Daten (z.B. wieviele Ummeldungen gab es je Bezirk) wird jedoch an einer anderen Stelle vorgenommen.
 
 Dies Erfassung aller vorliegenden Datensätze und das Sammeln von Informationen und Zuständigkeiten zu diesen Daten ist deshalb häufig eine komplexe Aufgabe, bei der es ratsam ist ein möglichst organisiertes Vorgehen zu verfolgen. Hier bietet sich die Durchführung einer sogenannten Dateninventur an.
 

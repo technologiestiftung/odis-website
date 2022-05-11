@@ -2,8 +2,8 @@
 layout: event
 tags: event
 title:  "Open Data Lunch - Lizenzen"
-metaDescription: Das 5. Open Data Lunch für Verwaltungs&shy;mitarbeiter&shy;*innen
-description: Das 5. Open Data Lunch für Verwaltungs&shy;mitarbeiter&shy;*innen
+metaDescription: Das 5. Open Data Lunch für Verwaltungs&shy;mitarbeiter&shy;:innen
+description: Das 5. Open Data Lunch für Verwaltungs&shy;mitarbeiter&shy;:innen
 categories: veranstaltungen
 visible: true
 time: 10:00-12:00 Uhr
