@@ -1,0 +1,60 @@
+---
+layout: news
+tags: post
+title: "Offene Daten und Lizenzen – Ein Fahrplan durch den Lizenzdschungel"
+metaDescription: "ODIS und die Landeswahlleitung des Landes Berlin luden Mitarbeiter:innen der Bezirksverwaltungen zu einem digitalen Workshop ein. Er bot die Möglichkeit, unseren Prototypen des Wahlbezirke Editors vorzustellen, sowie Feedback und Anforderungen zu sammeln."
+visible: true
+urlText: Zum Blogbeitrag
+---
+
+## Die Frage nach der richtigen Lizenz
+
+Eine zentrale und häufig kontrovers diskutierte Fragestellung, die eine Bereitstellung offener Daten ausbremsen kann, betrifft die „richtige“ Vergabe von Lizenzen. Gerade die Fülle an möglichen Nutzungsbestimmungen führt häufig zu Unsicherheiten sowohl bei den Datenverantwortlichen, die Daten bereitstellen wollen, als auch bei den Anwender:innen von Daten, die eine Nachnutzung im Sinn haben. 
+
+ODIS greift das Thema Lizenzen anlässlich des digitalen [Open Data Lunches] (https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/veranstaltungen/artikel.1184326.php) zu diesem Thema vom 29. April 2022 auf. Ziel dieses Beitrags ist mehr Klarheit in das Thema Lizenzen zu bringen und Datenverantwortliche im Land Berlin zu ermutigen, offene Daten unter Verwendung einer geeigneten, möglichst offenen Lizenz bereitzustellen. Denn die bereitstellende Behörde ist in jedem Einzelfall selbst in der Pflicht zu prüfen und zu entscheiden, unter welchen Nutzungsbedingungen die jeweiligen Informationen bereitgestellt werden sollen. Dies schreibt auch die [Berliner Open Data Rechtsverordnung] (https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/verordnung/) vor. 
+
+## Offene Daten sollten frei und nachnutzbar sein.
+
+Zunächst ist es hilfreich sich nochmal vor Auge zu führen, dass Daten dann offen sind, wenn alle Personen darauf frei zugreifen können und von allen genutzt, verändert und geteilt werden können. Entsprechend gibt es nach §9 Abs. 1 der Rechtsverordnung den Open Data Grundsatz, dass die Lizenzen die Weiternutzung so wenig wie möglich einschränken sollen. Wichtig für den Open Data Grundsatz ist auch, dass die veröffentlichten Datensätze auch wieder verwendbar sind. Gerade wenn offene Daten in individuellen Projekten oder Geschäftsideen weiterverwendet werden, wenn sie die Basis für Innovationen oder Grundlage für neue Geschäftsmodelle bilden und wenn sie in Apps oder Visualisierungen genutzt und mit weiteren Daten verknüpft werden, schöpfen offene Daten ihr wahres Potenzial aus. 
+Lizenzen sind wichtig, um festzulegen, unter welchen Bedingungen die Daten genutzt werden können. Bei Lizenzen handelt es sich um sogenannte Verträge: Das heißt, mit der Wahl der Lizenz gibt es zwischen dem/der Rechteinhaber:in und dem/der Nachnutzer:in eine Vereinbarung, wie die Informationen genutzt werden dürfen. 
+
+## Lizenzarten mit Open Data Grundgedanken
+
+Auf der Seite (https://www.dcat-ap.de) ist eine auführliche Liste mit erlaubten Lizenzen zusammengestellt. Auch das [Protokoll zum Open Data Lunch] gibt eine gelungene Übersicht über die verschiedenen Lizenzen und damit verbundenen Rechten und Pflichten. Daher soll an dieser Stelle nur eine kurze Gegenüberstellung der Lizenarten erfolgen.
+Im Grundsatz gibt es zwei Lizenzfamilien, die in der Regel zur Anwendung kommen und im Sinne des Open Data Grundgedanken zu empfehlen sind:
+  
+
+#### Creative Commons-Lizenzen
+
+Creative Commons sind entstanden von einer gemeinnützigen Organisation und entwickeln sogenannte Standardlizenzverträge, die wiederum öffentlich zur Verfügung gestellt werden. Damit sollen „freie Inhalte“ gefördert werden. Allgemein bieten Creative Commons modular aufgebaute Lizenzen, die miteinander kombiniert werden können, wie Abbildung 1 zeigt.
+  
+<center>
+{% include "macro-image-section-small.html", src:"/assets/file-download/CC-Lizenzen.pdf", caption:"Die verschiedenen CC-Lizenzen nach Freiheitsgrad" %}
+</center>
+
+Creative Commons Zero (CC0) ist die einfachste Lizenz und steht für eine Freigabe von Inhalten mit „Null Bedingungen“. Das heißt, man wird in keiner Weise durch Lizenzbedingungen eingeschränkt: Diese Lizenz macht es möglich, die Daten so weiterzugeben, als wären sie frei von Urheberrechten. Eine weitere offene Lizenz ist die CC „Namensnennung Lizenz“ (CC BY). Hier gilt zu beachten, dass folgende Angaben gemacht werden müssen:
+- Nennung des Urhebers
+- Nennung der Lizenz CC BY
+- Nennung des vollständigen Links zum Originaldatensatz
+- Hinweis ob und wie der Datensatz bearbeitet wurde
+
+Im Gegensatz zur CCO liegt der Vorteil für die Datenbereitstellenden dabei, dass namentlich die Behörde genannt und auch Änderungen in der Weiterverarbeitung Ihrer Daten kenntlich gemacht werden. Die Daten können in jedem Format oder Medium vervielfältigt und weiterverbreitet werden, sogar für kommerzielle Zwecke. 
+Eine weitere Lizenz, die auf CC aufbaut ist die sogenannte „Abwandlungslizenz“ CC BY SA. Mit SA „Share-alike“ kann zusätzlich angegeben werden, dass die nachgenutzten Daten ebenfalls unter „freien Lizenzen“ weitergegeben werden. Diese Lizenzart wird auch Abwandlungslizenz genannt und bietet den Vorteil, dass der Bereitstellende die Sicherheit hat, dass kein Nutzer sich die Daten mit Änderungen zum „Eigentum machen“ kann. 
+
+
+#### Datenlizenzen Deutschland
+
+Diese Lizenzart „Datenlizenz Deutschland“ ist in Zusammenarbeit von Bund, Ländern und kommunalen Spitzenverbänden als Empfehlung für eine einheitliche Nutzungsbestimmung für Verwaltungsdaten in Deutschland entwickelt worden. Es gibt mittlerweile die Version 2.0, die auch offiziell durch den Sachverständigenrat der Open Definition als offene Lizenz anerkannt ist. 
+Die Variante Namensnennung (Deutschland 2.0 Namensnennung (dl-de/by-2-0)) verpflichtet die Datennutzenden, die jeweiligen Datenbereitstellenden zu nennen. Die Variante Zero ermöglicht eine einschränkungslose Weiterverwendung. 
+Die Datenlizenz Deutschland Zero Lizenz (dl-zero-de/2.0) ist wie die CC0 mit der Prämisse verknüpft, dass jede Nutzung ohne Einschränkungen oder Bedingungen zulässig ist. Die Daten können für kommerzielle und nicht kommerzielle Zwecke insbesondere vervielfältigt, ausgedruckt, präsentiert, verändert, bearbeitet sowie an Dritte übermittelt werden. Diese Daten können mit Daten anderer zusammengeführt und zu selbständigen neuen Datensätzen verbunden werden. 
+Bei der Nutzung  muss darauf geachtet werden muss, dass Angaben als Quellenvermerk enthalten sind: 
+- Bezeichnung des Bereitstellers, der Bereitstellenden 
+- der Vermerk „Datenlizenz Deutschland - Namensnennung-Version 2.0- mit Verweis auf den Lizenztext unter Govdata. 
+- und einen Verweis auf den Datensatz (URI) 
+
+## Offene Lizenzen sind leichter weiterzuverwenden 
+
+Wenngleich eine Lizenzierung mit Namensnennung wie zum Beispiel CCBY oder dl-de/by-2-0 legitim ist, so sollte bei der Wahl der Lizenzen beachtet werden, dass je offener die Lizenz ist, desto leichter kann der Anwender oder die Anwenderin die Datensätze finden, verwenden und miteinander verknüpfen. Oder andersherum: Je restriktiver die Lizenzierung, desto größer werden die Herausforderungen bei der Datennutzung. So können gerade Medienhäuser mit offenen Daten spannende Visualisierungen umsetzen und digital für ihre Leser:innen aufbereiten, wenn die Daten frei nutzbar sind. Auch ist es für den Datennutzenden schwierig verschiedene Datensätze mit restriktiven Lizenzen zu kombinieren, weil dann die Quellenangaben oftmals komplex und ausführlich werden können. So werden durch nicht frei Lizenzen Darstellungs- und Visualisierungsmöglichkeiten erschwert.
+Zudem sind oftmals von Seiten der Bereitstellenden von Daten geäußerte Bedenken hinsichtlich von Haftungsmöglichkeiten in der Regel unbegründet. Denn der/die Ersteller:in der Daten wird nicht haftbar gemacht für Veränderungen, die durch Dritte an den jeweiligen Daten vorgenommen wurden. Im Übrigen besteht auch bei der Bereitstellung von Daten prinzipiell ein Haftungsausschluss. § 10 besagt: (…)„die bereitstellenden Behörden der Berliner Verwaltung sind nicht verpflichtet, die bereitzustellenden Informationen auf Richtigkeit, Vollständigkeit, Plausibilität oder in sonstiger Weise zu prüfen. Für die Kompatibilität der bereit gestellten Informationen mit den Systemen der Nutzenden, die inhaltliche Richtigkeit, eine bestimmte Datenqualität, die dauerhafte Bereitstellung oder die Aktualität wird keine Haftung übernommen.“ 
+
+Wichtig für die Datenbereisteller:innen  bei der Wahl der Lizenz ist auch zu beachten, dass es zwar technisch möglich ist, dass man auf dem Open Data Portal die Datenlizenz nach der Veröffentlichung ändern kann. Jedoch ist es datenschutzrechtlich nicht zu empfehlen, eine Lizenz, die man einmal vergeben hat, zu widerrufen. Ist der Datensatz einmal mit der jeweiligen Lizenz veröffentlicht worden, so gilt für die Datennutzenden die erste Lizenz, die bei der Veröffentlichung gewählt wurde.
