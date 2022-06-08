@@ -19,7 +19,7 @@ Der Betrieb von Bildungseinrichtungen, die Instandhaltung der Infrastruktur oder
  
 ### Die Ausgangslage 
  
-Informationen darüber bereitzustellen, wo wieviel öffentliche Gelder ausgegeben werden, ist ein wichtiger Aspekt im Sinne einer transparent agierenden Verwaltung. Die Senatsverwaltung für Finanzen (SenFIN) veröffentlicht daher seit dem Jahr 2000 jährlich die Broschüre [“Was kostet wo wie viel?”](https://www.berlin.de/sen/finanzen/haushalt/downloads/artikel.6347.php) zum Download im Internet. Darin werden auf knapp 70 PDF-Seiten Verwaltungskosten aufgeschlüsselt nach Bezirken und Fachbereichen dargestellt. 
+Informationen darüber bereitzustellen, wo wieviel öffentliche Gelder ausgegeben werden, ist ein wichtiger Aspekt im Sinne einer transparent agierenden Verwaltung. Die Senatsverwaltung für Finanzen (SenFin) veröffentlicht daher seit dem Jahr 2000 jährlich die Broschüre [“Was kostet wo wie viel?”](https://www.berlin.de/sen/finanzen/haushalt/downloads/artikel.6347.php) zum Download im Internet. Darin werden auf knapp 70 PDF-Seiten Verwaltungskosten aufgeschlüsselt nach Bezirken und Fachbereichen dargestellt. 
  
 Ein Blick in die Broschüre zeigt aber: Die Übersichtlichkeit und Anordnung der Daten sowie die Vergleichbarkeit zwischen Verwaltungseinheiten und Themenfeldern werden einer modernen, digitalen Datenpräsentation nicht gerecht. Aus Open-Data-Sicht problematisch: Die Informationen sind zwar von jedem einsehbar, liegen aber nicht im eigentlichen Sinne als offene Daten vor. Die reine Veröffentlichung von Daten im PDF-Format erschwert die Weiterverarbeitung. Potentiell interessierte Nutzer:innen, die die Daten für eigene Analysen oder Präsentationsformen verwenden möchten, müssen die Daten umständlich aus der PDF extrahieren oder gar abtippen.  
  <center><a href="https://www.berlin.de/sen/finanzen/haushalt/downloads/wkwwv_hv_2017.pdf">
@@ -29,13 +29,13 @@ Ein Blick in die Broschüre zeigt aber: Die Übersichtlichkeit und Anordnung der
 
 ### Das Vorgehen 
  
-Vor diesem Hintergrund haben wir mit der SenFIN die Bereitstellung von offenen, maschinenlesbaren Verwaltungsdaten in Kombination mit ansprechenden Präsentationsformen diskutiert. Gemeinsam haben wir einen Vorschlag für eine alternative Darstellungen der Broschüre „Was kostet wo wie viel?“ und eine integrierte Bereitstellung von Daten in offenen Dateiformaten erarbeitet. 
+Vor diesem Hintergrund haben wir mit der SenFin die Bereitstellung von offenen, maschinenlesbaren Verwaltungsdaten in Kombination mit ansprechenden Präsentationsformen diskutiert. Gemeinsam haben wir einen Vorschlag für eine alternative Darstellungen der Broschüre „Was kostet wo wie viel?“ und eine integrierte Bereitstellung von Daten in offenen Dateiformaten erarbeitet. 
  
 **Eine Grundlage schaffen – Datenschema und Datenqualität**  
-In einem ersten Schritt wurden ein geeignetes Schema und Datenformat für die zugrunde liegenden Daten abgestimmt. Die SenFIN stellte dafür Daten für einen ausgewählten Themenbereich der Broschüre im CSV-Format zur Verfügung und passte diese nach Hinweisen der ODIS an, damit sie später in einer Anwendung leicht weiterverarbeitet werden können. 
+In einem ersten Schritt wurden ein geeignetes Schema und Datenformat für die zugrunde liegenden Daten abgestimmt. Die SenFin stellte dafür Daten für einen ausgewählten Themenbereich der Broschüre im CSV-Format zur Verfügung und passte diese nach Hinweisen der ODIS an, damit sie später in einer Anwendung leicht weiterverarbeitet werden können. 
  
 **Das Problem erkennen und Lösungen finden – Anforderungen und Use-Cases**  
-Die erste Grundlage für die Überlegungen zur Datenpräsentation bildete eine Ausarbeitung von Zielgruppen, Zieldefinition und Anforderungen an die Visualisierung durch die SenFIN. Darauf basierend arbeitete die ODIS in einem internen Workshop eine Ideensammlung aus, um mögliche Use-Cases, die Bedürfnisse der Zielgruppen und eine langfristige Zieldefinition des Projektes auf verschiedene Art und Weisen zu adressieren. Für die Auseinandersetzung mit dem Thema haben wir uns unter anderem folgende Fragen gestellt:  
+Die erste Grundlage für die Überlegungen zur Datenpräsentation bildete eine Ausarbeitung von Zielgruppen, Zieldefinition und Anforderungen an die Visualisierung durch die SenFin. Darauf basierend arbeitete die ODIS in einem internen Workshop eine Ideensammlung aus, um mögliche Use-Cases, die Bedürfnisse der Zielgruppen und eine langfristige Zieldefinition des Projektes auf verschiedene Art und Weisen zu adressieren. Für die Auseinandersetzung mit dem Thema haben wir uns unter anderem folgende Fragen gestellt:  
 - Wie kann man die Informationen der Broschüren präsentieren, um Interesse für das Thema zu fördern? 
 - Wie können die Daten leicht verstanden werden und wie beugt man Fehlinterpretation vor? 
 - Wie können offene (Roh-)Daten in die Anwendung eingebunden und mit dem Berliner Open Data Portal verknüpft werden? 
@@ -57,4 +57,4 @@ Besonders wichtig aus unserer Sicht ist es auch, die Daten als Open Data maschin
  
 Das Storytelling-Mockup wurde dem Projektteam der SenFin vorgestellt und soll nun als Grundlage dienen, um intern weiter über die Bereitstellung von Open Data und eine moderne Datenpräsentation für Bürger:innen und weitere Zielpersonen zu diskutieren und Veränderungen anzustoßen. Es handelt sich dabei nicht um ein komplett fertiges Konzept oder einen Anforderungskatalog, sondern eher um eine Entscheidungshilfe, um weiter zu überlegen, welche Präsentationsform letztendlich gewünscht ist und ganz konkrete Anforderungen an die Umsetzung zu definieren. Dieser Ansatz kann auch als Beispiel für viele andere Datenprojekte und Themen in der Berliner Verwaltung dienen.  
 
-Wir bedanken uns an dieser Stelle bei der SenFIN für die Kontaktaufnahme und freuen uns, die Berliner Verwaltungsakteur:innen auch künftig auf dem Weg zu einer modernen, Open Data basierten Verwaltung unterstützen zu können.
+Wir bedanken uns an dieser Stelle bei der SenFin für die Kontaktaufnahme und freuen uns, die Berliner Verwaltungsakteur:innen auch künftig auf dem Weg zu einer modernen, Open Data basierten Verwaltung unterstützen zu können.
