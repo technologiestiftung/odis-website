@@ -49,9 +49,8 @@ Im nächsten Schritt entschieden wir uns dafür, eine Variante zur Datenpräsent
  
 Der Wireframe zeigt den konkreten Aufbau, Grafiken und Textbausteine, sowie erste leichte Andeutungen von Design-Elementen (er ist allerdings kein fertiger Designentwurf) für eine Homepage und eine thematische Unterseite für die von SenFin bereitgestellten Datenthemen ‘Bauen, Wohnen, Vermessen und Verkehr’. Die Anwendung kann also für sich alleine stehen, z.B. als eigenständige Website. Die Besucher der Seite werden dabei vom “Groben ins Feine” durch die Daten geführt. Alle Graphen sind interaktiv. Schieberegler und klickbare Karten bieten die Möglichkeit, sowohl die Veränderungen der Kosten über die Zeit als auch im Vergleich zwischen den Bezirken zu betrachten und zu vergleichen. Kurze, präzise Texte setzen die Informationen in den nötigen Kontext und verweisen auf weiterführende Informationen. 
 Besonders wichtig aus unserer Sicht ist es auch, die Daten als Open Data maschinenlesbar zur Verfügung zu stellen. Dies könnte über eine separate Datenbank im Backend realisiert werden. Über eine Programmierschnittstelle werden die Daten in das Frontend geladen, können aber ebenso von interessierten Nutzer:innen mittels eigener Programmcodes abgefragt oder auch als csv-Dateien über Download-Buttons heruntergeladen werden.  
- <center><a href="/assets/file-download/Wireframe_Verwaltungskosten_Ideation.pdf">
-{% include "macro-image-section-small.html", src:"wireframe.png", caption:"Ausschnitt aus dem Wireframe für die interaktiven Datenvisualisierungen" %}</a>
-</center>
+ <center>
+{% include "macro-image-section-small.html", src:"wireframe.png", caption:"Ausschnitt aus dem Wireframe für die interaktiven Datenvisualisierungen" %} </center>
 <br> 
 
 ### Wie geht’s weiter? 
