@@ -2,8 +2,6 @@
 layout: project
 tags: project
 title: Was kostet wo wie viel?
-blogLinkTitle: "Hier geht's zum Wireframe"
-blogLink: /assets/file-download/Wireframe_Verwaltungskosten_Ideation.pdf
 metaDescription: Ideation für eine interaktive Visualisierung offener Verwaltungsdaten
 date: 2022-03-28
 visible: true
