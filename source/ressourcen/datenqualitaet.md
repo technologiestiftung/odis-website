@@ -6,18 +6,18 @@ title: Datenqualität und Maschinenlesbarkeit
 # Datenqualität und Maschinenlesbarkeit offener Daten
 
 Eine Datenveröffentlichung ist kein Selbstzweck. Die Idee von Open Data ist, dass Ihre Daten von anderen betrachtet, ausgewertet und gegebenfalls sogar auf vielfältige Art und Weise weiterverarbeitet werden können.
-Datennutzer und -nutzerinnen wird diese Weiterverarbeitung erleichtert, wenn die Daten in guter Qualität bereitgestellt werden. Doch was bedeutet das?  
+Datennutzer:innen wird diese Weiterverarbeitung erleichtert, wenn die Daten in guter Qualität bereitgestellt werden. Doch was bedeutet das?  
 
-Datenqualtät hat viele Facetten. Ein wichtiger Aspekt für offene Datensätze ist, dass diese maschinenlesbar sind, also von einem Computer bzw. von Software verarbeitet werden können.
+Datenqualität hat viele Facetten. Ein wichtiger Aspekt für offene Datensätze ist, dass diese maschinenlesbar sind, also von einem Computer bzw. von Software verarbeitet werden können.
 In diesem Video-Tutorial fokussieren wir uns auf Maschinenlesbarkeit tabellarischer Daten und die beiden Dateiformate **CSV** und **XLSX** (Excel).  
 
 #### Im Videotutorial sehen Sie:
 
 - was es mit den Dateiformaten CSV und XLSX auf sich hat und wie sie sich unterscheiden
-- wie ein:e Programmierer:in Daten maschinell lesen und verarbeitet kann
+- wie ein:e Programmierer:in Daten maschinell lesen und verarbeiten kann
 - warum Excel-Tabellen oft nicht einwandfrei maschinenlesbar sind
 - wie Sie eine Excel-Datei in eine CSV-Datei umwandeln
-- eine Sammlung wichtiger Tipps und Konventionen um die Datenqualität zu erhöhen
+- eine Sammlung wichtiger Tipps und Konventionen, um die Datenqualität zu erhöhen.
 
 <p style="text-align: center; margin-top:4rem">
 <iframe class="video-big" src="https://www.youtube.com/embed/Nb_cLObVKho" title="Videotutorial zur Datenqualität" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
