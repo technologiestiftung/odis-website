@@ -389,6 +389,11 @@ svg.logo-ibb:hover {
   width: 100%;
 }
 
+.video-big {
+  width: 640px;
+  height: 360px
+}
+
 .profiles-wrapper {
   display: grid;
   grid-template-columns: 50% 50%
@@ -1396,6 +1401,13 @@ td.bold {
   }
 }
 
+@media screen and (max-width: 680px) {
+  .video-big {
+    width: 420px;
+    height: 236.25px
+  }
+}
+
 @media screen and (min-width: 54rem) and (max-width: 64rem) {
   .footer-wrapper {
     left: 0;
@@ -1422,6 +1434,10 @@ td.bold {
     left: 0;
     flex-direction: column;
     position: relative;
+  }
+  .video-big {
+    width: 320px;
+    height: 180px
   }
 }
 

@@ -16,14 +16,13 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 
 <details open="open">
     <summary class="h4">Einführung und Teil 1: Ziele</summary>
-    In der Einführung wird das Datawrapper-Tool vorgestellt und seine allgemeinen Funktionen, sowie die verschiedenen Typen von Diagrammen und Karten werden demonstriert.
-
+    In der Einführung wird das Datawrapper-Tool vorgestellt und seine allgemeinen Funktionen, sowie die verschiedenen Typen von Diagrammen und Karten werden demonstriert.  
     Im anschließenden ersten Teil des Tutorials werden die generellen Ziele der Datenvisualisierung thematisiert: Warum visualisieren wir Daten und welche Grundprinzipien gibt es?
 
 <br><br>
 
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4bQ2DniKfHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video-big" src="https://www.youtube.com/embed/4bQ2DniKfHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
@@ -35,7 +34,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 <br><br>
 
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TfzW-NDqhZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video-big" src="https://www.youtube.com/embed/TfzW-NDqhZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
@@ -47,7 +46,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 <br><br>
 
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Mo6sVxdxU6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video-big" src="https://www.youtube.com/embed/Mo6sVxdxU6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
@@ -59,7 +58,7 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 <br><br>
 
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://youtube.com/embed/29BoZh5200Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video-big" src="https://youtube.com/embed/29BoZh5200Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 </details>
@@ -71,6 +70,6 @@ Datawrapper ist ein kostenloser Service mit dem sehr schnell ansprechende Datenv
 <br><br>
 
 <p style="text-align: center;">
-<iframe width="560" height="315" src="https://youtube.com/embed/tSyVYAolJog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video-big" src="https://youtube.com/embed/tSyVYAolJog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 </details>
