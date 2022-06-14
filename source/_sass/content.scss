@@ -402,8 +402,10 @@ svg.logo-ibb:hover {
 .profile-wrapper {
   display: flex;
   flex-direction: row;
+  padding-bottom: 1rem;
 
   .profile-image {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile_2x.jpg") no-repeat center/100%;
@@ -418,6 +420,7 @@ svg.logo-ibb:hover {
   }
 
   .profile-image-2 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile-2_2x.jpg") no-repeat
@@ -426,12 +429,14 @@ svg.logo-ibb:hover {
   }
 
   .profile-image-3 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/lisa.jpg") no-repeat center/100%;
     border-radius: 100%;
   }
   .profile-image-4 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile-ester.jpg") no-repeat
@@ -439,12 +444,14 @@ svg.logo-ibb:hover {
     border-radius: 100%;
   }
   .profile-image-5 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile-max.jpg") no-repeat center/100%;
     border-radius: 100%;
   }
   .profile-image-6 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile-klemens.jpg") no-repeat
@@ -1001,6 +1008,10 @@ td.bold {
     width: 80%;
   }
 
+  .profiles-wrapper {
+    display: block;
+  }
+
   .profile-wrapper {
     display: block;
     .profile-desc-wrapper {
@@ -1261,6 +1272,9 @@ td.bold {
         height: 120px;
       }
     }
+  }
+  .profiles-wrapper {
+    display: block;
   }
 
   .profile-wrapper {
