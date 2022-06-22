@@ -25,7 +25,7 @@ Die Ausstellung brachte den Besucher:innen das Thema Open Data näher und lud si
 </center>
 <br>
 
-Neben Plakaten, die bestehende Open Data Projekte in Berlin vorstellen, konnten die Besucher:innen unter dem Motto: “Welche Fragen hast du an Berlin?“ mit Post-It's festhalten, was sie über Berlin noch erfahren wollen und welche Datensätze sie persönlich interessant finden. So wurden u.a. Badequalität der Gewässer, Standorte von Tischtennisplatten oder Straßenfeste genannt. Für uns besonders erfreulich: Viele der genannten Themen sind auf die ein oder andere Art und Weise schon als Open Data im [Berliner Datenportal](https://daten.berlin.de/datensaetze) verfügbar. 
+Neben Plakaten, die bestehende Open Data Projekte in Berlin vorstellten, konnten die Besucher:innen unter dem Motto: “Welche Fragen hast du an Berlin?“ mit Post-It's festhalten, was sie über Berlin noch erfahren wollen und welche Datensätze sie persönlich interessant finden. So wurden u.a. Badequalität der Gewässer, Standorte von Tischtennisplatten oder Straßenfeste genannt. Für uns besonders erfreulich: Viele der genannten Themen sind auf die ein oder andere Art und Weise schon als Open Data im [Berliner Datenportal](https://daten.berlin.de/datensaetze) verfügbar. 
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/fragenanberlin_mallanders.png", caption:"Die Hinweise und Wünsche der Besucher:innen" %}
@@ -39,8 +39,8 @@ Als weiteres interaktives Element konnten die Besucher:innen die Berliner Kernda
 </center>
 <br>
 
-Das Fazit des mall ungewöhnlichen Arbeitsumfeldes der ODIS fällt positiv aus. Mit vielen Besucher:innen konnten wir ins Gespräch kommen und über den Mehrwert von Open Data informieren. Dabei hat es nicht nur Spaß gemacht mal aus seiner gewohnten Blase zu kommen, auch konnten in den Gesprächen ganz andere Sichtweisen auf das Thema Open Data gewonnen werden.  
+Das Fazit des mall ungewöhnlichen Arbeitsumfeldes der ODIS fällt positiv aus. Mit vielen Besucher:innen konnten wir ins Gespräch kommen und über den Mehrwert von Open Data informieren. Dabei hat es nicht nur Spaß gemacht, mal aus seiner gewohnten Blase zu kommen, auch konnten in den Gesprächen ganz andere Sichtweisen auf das Thema Open Data gewonnen werden.  
  
-Bis Ende Juni 2022 sind die Pforten bzw. Glastüren  der „Mall Anders“, dem offenen Lernlabors für Wissenschaft und Gesellschaft, noch geöffnet. 
+Bis Ende Juni 2022 sind die gläsernen Türen der „Mall Anders“, des offenen Lernlabors für Wissenschaft und Gesellschaft, noch geöffnet. 
 
 
