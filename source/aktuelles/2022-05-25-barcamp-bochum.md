@@ -2,7 +2,7 @@
 layout: news
 tags: post
 title: "ODIS beim ersten kommunalen Open Data Barcamp"
-metaDescription: Nach der langen pandemiebedingten Auszeit von Präsenzveranstaltungen luden die Bertelsmann Stiftung und das Deutsche Institut für Urbanistik (Difu) zum ersten kommunalen Open Data Barcamp nach Bochum ein, was sich die ODIS nicht entgehen ließ. Am 11. Mai machten wir Halt in Bochum und geben hier einen kleinen Rückblick in die Veranstaltung. 
+metaDescription: Nach der langen pandemiebedingten Auszeit von Präsenzveranstaltungen folgte die ODIS der Einladung der Bertelsmann Stiftung und des Deutschen Instituts für Urbanistik (Difu) zum ersten kommunalen Open Data Barcamp. Am 11. Mai machten wir Halt in Bochum und geben hier einen kleinen Rückblick in die Veranstaltung. 
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
