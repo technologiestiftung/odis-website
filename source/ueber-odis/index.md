@@ -51,7 +51,7 @@ Das ODIS-Team:
 						<div class="profile-image-5"></div>
 						<div class="profile-desc-wrapper-2">
 							<span><b>Max B. Eckert</b></span>
-							<span><em>Studentischer Mitarbeiter</em></span>
+							<span><em>Wissenschaftlicher Mitarbeiter</em></span>
 							<span>max.eckert@ts.berlin</span>
 						</div>
 					</div>										
