@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 # Schülerinnen-Workshop in der Technologiestiftung Berlin
-Als uns die Anfrage des Carl-Friedrich-von-Siemens-Gymnasium erreichte, ob wir einen Workshop für einen Leistungskurs anbieten können, haben wir uns gefreut, dass wir zum ersten Mal unsere Arbeit einer Schulklasse vorstellen können. Gleichzeitig haben wir uns in unsere Schulzeit zurückversetzt und uns gefragt: Wie können wir das Thema Open Data so aufbereiten, dass wir die Schüler:innen dafür begeistern können?
+Als uns die Anfrage des Carl-Friedrich-von-Siemens-Gymnasiums erreichte, ob wir einen Workshop für Schüler:innen anbieten können, freuten wir uns über die Möglichkeit, zum ersten Mal unsere Arbeit einer Schulklasse vorstellen zu können. Gleichzeitig versetzten wir uns zurück in unsere Schulzeit und fragten uns: Wie können wir das Thema Open Data so aufbereiten, dass wir die Schüler:innen dafür begeistern können?
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/schülerinnenworkshop1.png", caption:" 3 spannende Stunden zu Open Data" %}
@@ -16,11 +16,11 @@ Als uns die Anfrage des Carl-Friedrich-von-Siemens-Gymnasium erreichte, ob wir e
 <br>
 
 ## Das Berliner Open Data Portal spielerisch kennenlernen
-Herausgekommen ist ein dreistündiger Workshop, indem wir den Schüler:innen zunächst vorgestellt haben, was offene Daten sind und warum diese so wichtig sind. Dabei haben wir Open Data Projekte verschiedener Nutzergruppen vorgestellt: Datenjournalisten, Unternehmen, Verwaltung oder Zivilgesellschaft. Um den Schüler:innen vor Augen zu führen, wie das Berliner Datenportal funktioniert und welche Datensätze darin zu finden sind, haben die Schüler:innen unser Open Data Quiz gespielt. Dabei mussten Sie Datensätze finden oder Informationen aus Datensätzen zusammenrechnen.
+Herausgekommen ist ein dreistündiger Workshop, in dem wir den Schüler:innen zunächst vorgestellt haben, was offene Daten sind und warum diese so wichtig sind. Dabei haben wir Open Data Projekte verschiedener Nutzergruppen vorgestellt: Datenjournalisten, Unternehmen, Verwaltung oder Zivilgesellschaft. Mithilfe eines Open Data Quizzes haben wir den den Schüler:innen spielerisch vor Augen geführt, wie das Berliner Datenportal funktioniert und welche Datensätze darin zu finden sind. Dabei mussten Sie Datensätze finden oder Informationen aus Datensätzen zusammenrechnen.
 
 
 ## Schüler:innen versuchen sich in Prototyping
-Als Highlight des Workshops haben die Schüler:innen die Möglichkeit bekommen ein eigenes Prototyping-Projekt durchzuführen. So sollten die Schüler:innen auf der Basis von Datensätzen aus dem Berliner Open Data Portal in Gruppenarbeit ein Konzept oder eine Mind-Map für eine Projektidee entwickeln und den anderen vorstellen. Dabei sind nicht nur großartige Ideen entstanden, es wurde auch miteinander diskutiert, zum Beispiel ob die Sichtbarmachung von Problemen wie Kriminalität in bestimmten Räumen negative Auswirkungen haben können.
+Als Highlight des Workshops haben die Schüler:innen die Möglichkeit bekommen, ein eigenes Prototyping-Projekt durchzuführen. So sollten die Schüler:innen auf der Basis von Datensätzen aus dem Berliner Open Data Portal in Gruppenarbeit ein Konzept oder eine Mind-Map für eine Projektidee entwickeln und den anderen vorstellen. Dabei sind nicht nur großartige Ideen entstanden, sondern es wurde auch miteinander diskutiert, zum Beispiel ob die Sichtbarmachung von Problemen wie Kriminalität in bestimmten Räumen negative Auswirkungen haben können.
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/schülerinnenworkshop2.png" %}
@@ -30,5 +30,5 @@ Als Highlight des Workshops haben die Schüler:innen die Möglichkeit bekommen e
 </center>
 <br>
 
-Für uns war der Workshop mit den Schüler:innen eine interessante Erfahrung. Wir freuen uns auf den nächsten Austausch mit Schüler:innen 
+Für uns war der Workshop mit den Schüler:innen eine interessante Erfahrung. Wir freuen uns auf den nächsten Austausch mit Schüler:innen!
  
