@@ -1,8 +1,8 @@
 ---
 layout: news
 tags: post
-title: 11. Klasse trifft ODIS
-metaDescription: Im Rahmen der Projekttage der 11. Klasse des Carl-Friedrich-von-Siemens-Gymnasium lud die ODIS die Schüler:innen in die Räume der Technologiestiftung Berlin ein. Auf dem dreistündigen Programm stand ein Mix aus allgemeinem Input zu Open Data und Gruppenarbeiten 
+title: Schülerinnen-Workshop zu Open Data
+metaDescription: Im Rahmen der Projektwoche eines Gymnasiums empfing die ODIS Schüler:innen zu einem Open-Data-Workshop. Auf dem dreistündigen Programm stand ein Mix aus Input zu Anwendungsbeispielen und spielerischer Arbeit mit offenen Daten.
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
