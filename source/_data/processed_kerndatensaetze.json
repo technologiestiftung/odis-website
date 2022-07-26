@@ -15,15 +15,15 @@
   ],
   [
     "Bevölkerung und Gesellschaft",
-    "Asylwerber*innen",
-    "Anzahl und Herkunftsländer von Asylbewerber*innen sowie Höhe von Leistungen",
+    "Asylwerber:innen",
+    "Anzahl und Herkunftsländer von Asylbewerber:innen sowie Höhe von Leistungen",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/search/node/asylbewerber'>daten.berlin.de</a>"
   ],
   [
     "Bevölkerung und Gesellschaft",
-    "Einwohner*innen-Bewegungsdaten (Außen- und Binnenwanderung)",
-    "Einwohner*innen-Bewegungsdaten nach Jahr, Stadtteil, usw. gegliedert",
+    "Einwohner:innen-Bewegungsdaten (Außen- und Binnenwanderung)",
+    "Einwohner:innen-Bewegungsdaten nach Jahr, Stadtteil, usw. gegliedert",
     "Nein",
     ""
   ],
@@ -51,7 +51,7 @@
   [
     "Bevölkerung und Gesellschaft",
     "Soziale Einrichtungen",
-    "Angebote wie kostenfreie Übernachtungsangebote für Wohnungslose, Behindertenwohnheime, Einrichtungen für Senior*innen, Beratungsstellen, Einrichtungen für Stadtteilarbeit, usw.",
+    "Angebote wie kostenfreie Übernachtungsangebote für Wohnungslose, Behindertenwohnheime, Einrichtungen für Senior:innen, Beratungsstellen, Einrichtungen für Stadtteilarbeit, usw.",
     "Nein",
     ""
   ],
@@ -59,8 +59,8 @@
     "Bevölkerung und Gesellschaft",
     "Sozialindikatoren",
     "Sozio-Ökonomische Indikatoren (Wohnlage, Einkommen, usw.) auf LOR-Ebene",
-    "Nein",
-    ""
+    "Teilweise",
+    "<a target='_blank' href='https://daten.berlin.de/search/node/wohnlage'>daten.berlin.de</a>"
   ],
   [
     "Bevölkerung und Gesellschaft",
@@ -114,7 +114,7 @@
   [
     "Bildung, Kultur und Sport",
     "Schulstandorte",
-    "Standortspezifische Daten wie Adresse, Anzahl von Schüler*innen, Anzahl von Lehrer*innen, Angebote, Informationen (z.B. Barrierefrei, Sprachen)",
+    "Standortspezifische Daten wie Adresse, Anzahl von Schüler:innen, Anzahl von Lehrer:innen, Angebote, Informationen (z.B. Barrierefrei, Sprachen)",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/schulen-wfs'>daten.berlin.de</a>"
   ],
@@ -150,7 +150,7 @@
   [
     "Gesundheit",
     "Ärzte",
-    "Liste von Ärzt*innen in der Stadt, mit Angaben zur Fachrichtung und zum Standort",
+    "Liste von Ärzt:innen in der Stadt, mit Angaben zur Fachrichtung und zum Standort",
     "Nein",
     ""
   ],
@@ -255,7 +255,7 @@
   [
     "Regierung und öffentlicher Sektor",
     "Anliegenmanagement",
-    "Bürgerbriefe und -anträge mit Datum, Standort, Art der Bewschwerde, Status, usw.",
+    "Bürgerbriefe und -anträge mit Datum, Standort, Art der Beschwerde, Status, usw.",
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/ordnungsamt-online'>daten.berlin.de</a>"
   ],
@@ -375,8 +375,8 @@
     "Stadtentwicklung und Wohnen",
     "Mietspiegel (Basisdaten)",
     "Daten zu ortsüblichen Vergleichsmiete",
-    "Nein",
-    ""
+    "Teilweise",
+    "<a target='_blank' href='https://daten.berlin.de/datensaetze/wohnatlas-berlin-angebotsmieten-2020-eurm%C2%B2-monatlich-netto-kalt-wms'>daten.berlin.de</a>"
   ],
   [
     "Stadtentwicklung und Wohnen",
@@ -542,8 +542,8 @@
   [
     "Verkehr",
     "Fahrradwege",
-    "Liniengeometrien aller Fahrradstraßen und -routen mit Art der Straße (abgetennter Weg, markierter Streifen, usw.)",
-    "Ja",
+    "Liniengeometrien aller Fahrradstraßen und -routen mit Art der Straße (abgetrennter Weg, markierter Streifen, usw.)",
+    "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/radverkehrsanlagen-wfs'>daten.berlin.de</a>"
   ],
   [
@@ -697,8 +697,8 @@
     "Wirtschaft und Finanzen",
     "Landesgrundbesitz (Vermögen)",
     "Daten, möglichst georeferenziert, zu allen Grundstücke die Berlin gehören",
-    "Nein",
-    ""
+    "Teilweise",
+    "<a target='_blank' href='https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_es_stwbg@senstadt'>fbinter.stadt-berlin.de</a>"
   ],
   [
     "Wirtschaft und Finanzen",

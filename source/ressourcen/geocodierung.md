@@ -13,7 +13,7 @@ Im folgenden Video-Tutorial zeigen wir Ihnen, wie Sie Daten bzw. Informationen z
 - Für erfahrenere Nutzer:innen erklären wir das BKG Plugin für die Open Source Software [QGIS](https://www.qgis.org/de/site/).
 
 <p style="text-align: center; margin-top:4rem">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/96ZgMLkpD8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="video-big" src="https://www.youtube.com/embed/96ZgMLkpD8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 
@@ -21,6 +21,9 @@ Im folgenden Video-Tutorial zeigen wir Ihnen, wie Sie Daten bzw. Informationen z
 
 - **Nutzer:innen-ID:** Der Geocodierungsdienst des BKG ist nicht frei verfügbar, das Land Berlin verfügt jedoch über eine Lizenz und deshalb kann der Dienst von allen Berliner Verwaltungsmitarbeiter:innen genutzt werden. Sie benötigen dafür lediglich eine Nutzer:innen-ID. Wenn Sie noch keine ID erhalten haben, können Sie diese bei der Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen erfragen, in dem Sie eine E-Mail an [fisbroker@senstadt.berlin.de](mailto:fisbroker@senstadt.berlin.de) schreiben.
 - **Datensatz im CSV-Format:** Ihr zu geocodierender Datensatz muss im CSV-Format vorliegen. Eine Liste im PDF-Format oder in Word ist leider nicht maschinenlesbar und kann nicht für die Geocodierung verwendet werden. Auch eine Excel-Tabelle kann nicht verwendet werden, kann jedoch über 'Speichern unter' leicht aus dem Programm heraus als CSV-Datei exportiert werden. Wie das geht erklären wir [hier](https://youtu.be/ahK8pwkJIcU?t=187) im Video.
+<br>
+
+**Wichtig:** Wenn Sie den geocodierten Datensatz veröffentlichen, zum Beispiel im [Berliner Open Data Portal](https://daten.berlin.de/), geben Sie in den Metadaten unbedingt das Koordinatenbezugssystem an, in welches Sie geocodiert haben. Nur so können die Daten richtig weiterverwendet werden.
 
 <br>
 

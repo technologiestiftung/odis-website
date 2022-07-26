@@ -389,11 +389,23 @@ svg.logo-ibb:hover {
   width: 100%;
 }
 
+.video-big {
+  width: 640px;
+  height: 360px
+}
+
+.profiles-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%
+}
+
 .profile-wrapper {
   display: flex;
   flex-direction: row;
+  padding-bottom: 1rem;
 
   .profile-image {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile_2x.jpg") no-repeat center/100%;
@@ -408,6 +420,7 @@ svg.logo-ibb:hover {
   }
 
   .profile-image-2 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile-2_2x.jpg") no-repeat
@@ -416,12 +429,14 @@ svg.logo-ibb:hover {
   }
 
   .profile-image-3 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/lisa.jpg") no-repeat center/100%;
     border-radius: 100%;
   }
   .profile-image-4 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile-ester.jpg") no-repeat
@@ -429,12 +444,14 @@ svg.logo-ibb:hover {
     border-radius: 100%;
   }
   .profile-image-5 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile-max.jpg") no-repeat center/100%;
     border-radius: 100%;
   }
   .profile-image-6 {
+    margin: auto 0;
     width: 100px;
     height: 100px;
     background: url("/assets/images/page/profile-klemens.jpg") no-repeat
@@ -991,6 +1008,10 @@ td.bold {
     width: 80%;
   }
 
+  .profiles-wrapper {
+    display: block;
+  }
+
   .profile-wrapper {
     display: block;
     .profile-desc-wrapper {
@@ -1252,6 +1273,9 @@ td.bold {
       }
     }
   }
+  .profiles-wrapper {
+    display: block;
+  }
 
   .profile-wrapper {
     display: block;
@@ -1377,6 +1401,13 @@ td.bold {
   }
 }
 
+@media screen and (max-width: 680px) {
+  .video-big {
+    width: 420px;
+    height: 236.25px
+  }
+}
+
 @media screen and (min-width: 54rem) and (max-width: 64rem) {
   .footer-wrapper {
     left: 0;
@@ -1403,6 +1434,10 @@ td.bold {
     left: 0;
     flex-direction: column;
     position: relative;
+  }
+  .video-big {
+    width: 320px;
+    height: 180px
   }
 }
 

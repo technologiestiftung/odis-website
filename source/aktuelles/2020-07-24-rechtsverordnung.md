@@ -48,6 +48,6 @@ Ausgenommen von diesen Verpflichtungen sind natürlich weiterhin personenbezogen
 
 #### Welche Unterstützung bekommen die Behörden, um Daten zu veröffentlichen?
 
-Im Zuge einer weiteren wichtige Neuerung durch die Rechtsverordnung, sind alle Behörden dazu angehalten eine\*n Open-Data-Beauftragte\*n zu ernennen. Diese Person übernimmt eine koordinierende Rolle bei der Auffindung und Bereitstellung der Daten und fungiert als Ansprechperson bei der Beantwortung von Fragen zu Open Data innerhalb der Behörde.
+Im Zuge einer weiteren wichtige Neuerung durch die Rechtsverordnung, sind alle Behörden dazu angehalten eine:n Open-Data-Beauftragte:n zu ernennen. Diese Person übernimmt eine koordinierende Rolle bei der Auffindung und Bereitstellung der Daten und fungiert als Ansprechperson bei der Beantwortung von Fragen zu Open Data innerhalb der Behörde.
 
 Natürlich steht auch die Open Data Informationsstelle gerne zur Verfügung. Berliner Behörden können sowohl bei konkreten Fragen zur Aufbereitung und Bereitstellung, als auch bei Bedarf an einer allgemeinen Beratung zu Open Data Kontakt aufnehmen.
