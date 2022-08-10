@@ -9,23 +9,40 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
 
 <div class="pt-4">
 	<form name="contact" method="POST" data-netlify="true">
-    <div>
-      <h5 class="pt-4 pb-2">Kontaktdaten</h5>
-			<label for="Anrede">Anrede:</label>
-			<select name="anrede" id="anrede">
-				<option value="Frau">Frau</option>
-				<option value="Herr">Herr</option>
-				<option value="Divers">Divers</option>
-			</select>
-      <p>
-        <label>Name: <input type="text" name="name"/></label>
-			  <label>Organisation/Abteilung: <input type="text" name="organisation"/></label>
-      </p>
-			<p>
-        <label>Email-Adresse: <input type="email" name="email"/></label>
-			  <label>Telefonnummer: <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}" required></label>
-      </p>
-    </div>
+    <fieldset>
+      <legend>Kontaktdaten</legend>
+      <div class="flex-wrapper anrede">
+        <div class="form-field">
+			    <label for="anrede">Anrede</label>
+          <div>
+			      <select name="anrede" id="anrede">
+              <option value="Frau">Frau</option>
+              <option value="Herr">Herr</option>
+              <option value="Divers">Divers</option>
+            </select>
+          </div>
+        </div>
+      </div>
+              <div class="flex-wrapper">
+          <div class="form-field">
+            <label for id="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+          </div>
+          <div class="form-field">
+			      <label for id="organisation">Organisation/Abteilung</label>
+            <input type="text" id="organisation" name="organisation" placeholder="Ihre Organisation/Abteilung"/>
+          </div>
+          <div class="form-field">
+            <label for id="email">E-Mail-Adresse</label>
+            <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse">
+          </div>
+          <div class="form-field">
+            <label for id="phone">Telefonnummer</label>
+            <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}" required placeholder="Ihre Telefonnummer"/>
+          </div>
+        </div>
+    </fieldset>
+<!-- ab hier noch ohne Flexbox-->
 		<div>
 		  <h5>Anfrage</h5>
 		  <fieldset>
