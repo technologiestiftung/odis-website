@@ -102,12 +102,12 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
     <p>
       <h5>Kontakt und Datenschutz</h5>
       <div>
-        <input type="checkbox" id="DSV" name="source" value="DSV">
+        <input type="checkbox" id="DSV" name="source" value="DSV" required>
         <label for="DSV"> Ich habe die <a href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.
         </label>
       </div>
       <div>
-        <input type="checkbox" id="speicherung" name="source" value="speicherung">
+        <input type="checkbox" id="speicherung" name="source" value="speicherung" required>
         <label for="speicherung"> Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck
             der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.
         </label>
