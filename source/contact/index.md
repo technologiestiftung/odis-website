@@ -5,7 +5,7 @@ title: Kontakt
 
 # Kontakt
 <br>
-Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben? Dann schreiben Sie uns eine Mail an <a href="mailto:odis@ts.berlin">odis@ts.berlin</a> oder nutzen Sie das Kontaktformular.
+Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben? Dann kontaktieren Sie uns gerne über unser Kontaktformular. Alternativ schreiben Sie uns eine Mail an <a href="mailto:odis@ts.berlin">odis@ts.berlin</a>.
 
 <div class="pt-4">
 	<form name="contact" method="POST" data-netlify="true">
