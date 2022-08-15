@@ -25,7 +25,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       </div>
               <div class="flex-wrapper">
           <div class="form-field">
-            <label for id="name">Name</label>
+            <label for id="name">Name*</label>
             <input type="text" id="name" name="name" placeholder="Ihr Name" required>
           </div>
           <div class="form-field">
@@ -33,12 +33,12 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
             <input type="text" id="organisation" name="organisation" placeholder="Ihre Organisation/Abteilung"/>
           </div>
           <div class="form-field">
-            <label for id="email">E-Mail-Adresse</label>
+            <label for id="email">E-Mail-Adresse*</label>
             <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse">
           </div>
           <div class="form-field">
             <label for id="phone">Telefonnummer</label>
-            <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}" required placeholder="Ihre Telefonnummer"/>
+            <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}" placeholder="Ihre Telefonnummer"/>
           </div>
         </div>
     </fieldset>
@@ -103,13 +103,13 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       <h5>Kontakt und Datenschutz</h5>
       <div>
         <input type="checkbox" id="DSV" name="source" value="DSV" required>
-        <label for="DSV"> Ich habe die <a href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.
+        <label for="DSV"> Ich habe die <a href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.*
         </label>
       </div>
       <div>
         <input type="checkbox" id="speicherung" name="source" value="speicherung" required>
         <label for="speicherung"> Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck
-            der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.
+            der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.*
         </label>
       </div>
       <div>
@@ -122,5 +122,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
     <p>
       <button type="submit">Kontaktanfrage abschicken</button>
     </p>
+    </p> <br> <br> <br>
+  <p class="small"> * Angabe verpflichtend </p>
   </form>
 </div>
