@@ -50,7 +50,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
           (Mehrfachauswahl möglich)</legend>
         <div>
           <input type="checkbox" id="erstgespräch" name="source" value="erstgespräch">
-          <label for="Erstgespräch">Erstgespräch Open Data</label>
+          <label for="erstgespräch">Erstgespräch Open Data</label>
         </div>
         <div>
           <input type="checkbox" id="bereitstellung" name="source" value="bereitstellung">
