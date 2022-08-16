@@ -92,7 +92,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       </div>
       <div>
         <input type="checkbox" id="bereitgestellt" name="source" value="bereitsgestellt">
-        <label for="kenne-portal">Ich habe bereits offene Daten auf dem Berliner Open Data Portal bereitgestellt.</label>
+        <label for="bereitgestellt">Ich habe bereits offene Daten auf dem Berliner Open Data Portal bereitgestellt.</label>
       </div>
       <div>
         <input type="checkbox" id=kenne-odis" name="source" value="kenne-odis">
