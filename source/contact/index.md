@@ -83,22 +83,21 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       </fieldset>
       <label>Bitte nennen Sie uns Ihre Anfrage: <textarea name="message"></textarea></label>
     </div>
-    <div>
-      <h5>Weitere Informationen</h5> 
-      <legend>Bitte Zutreffendes ankreuzen.</legend>
-      <div>
+    <fieldset>
+      <legend>Weitere Informationen</legend> 
+      <p class="small">Bitte Zutreffendes ankreuzen</p>
+      <div class="checkbox">
+        <input type="checkbox" id="kenne-od" name="source" value="kenne-od">
+        <label for="kenne-od">Ich habe bereits ein Grundverständnis von Open Data.</label>
+      </div>
+      <div class="checkbox">
         <input type="checkbox" id="kenne-portal" name="source" value="kenne-portal">
         <label for="kenne-portal">Ich kenne das <a href="https://www.daten.berlin.de">Berliner Open Data Portal</a>.</label>
       </div>
-      <div>
+      <div class="checkbox">
         <input type="checkbox" id="bereitgestellt" name="source" value="bereitsgestellt">
         <label for="bereitgestellt">Ich habe bereits offene Daten auf dem Berliner Open Data Portal bereitgestellt.</label>
       </div>
-      <div>
-        <input type="checkbox" id=kenne-odis" name="source" value="kenne-odis">
-        <label for="kenne-portal">Ich kenne die Open Data Informationsstelle.</label>
-      </div>
-    </div>
     <p>
       <h5>Kontakt und Datenschutz</h5>
       <div>
