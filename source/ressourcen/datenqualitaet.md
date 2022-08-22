@@ -24,9 +24,19 @@ In diesem Video-Tutorial fokussieren wir uns auf Maschinenlesbarkeit tabellarisc
 </p>
 <br>
 
-<!-- #### Alles auf einen Blick - Der Datenqualitäts-Spickzettel
+#### Alles auf einen Blick - Der Datenqualitäts-Spickzettel
 
-Hier kommt der Leitfaden hin. -->
+Eine Zusammenfassung unserer Empfehlungen für maschinenlesbare, offene Daten finden Sie in unserem Handout, welches Sie [hier](/assets/file-download/Handout_Maschinenlesbarkeit.pdf) hier herunterladen können. 
+
+<center>
+  <object data="/assets/file-download/Handout_Maschinenlesbarkeit.pdf" type="application/pdf" class="pdf">
+      <embed src="/assets/file-download/Handout_Maschinenlesbarkeit.pdf">
+          <p>Dieser Browser unterstützt keine PDF-Ansichten. Bitte laden sich das PDF runter, um es anzusehen. <a href="/assets/file-download/Handout_Maschinenlesbarkeit.pdf">Download Handout</a>.</p>
+  </object>
+</center>
+<br>
+<br>
+
 
 #### Expert:in werden - Der NQDM Leitfaden für qualitativ hochwertige Daten und Metadaten
 
