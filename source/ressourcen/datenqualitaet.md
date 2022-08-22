@@ -26,7 +26,7 @@ In diesem Video-Tutorial fokussieren wir uns auf Maschinenlesbarkeit tabellarisc
 
 #### Alles auf einen Blick - Der Datenqualitäts-Spickzettel
 
-Eine Zusammenfassung unserer Empfehlungen für maschinenlesbare, offene Daten finden Sie in unserem Handout, welches Sie [hier](/assets/file-download/Handout_Maschinenlesbarkeit.pdf) hier herunterladen können. 
+Eine Zusammenfassung unserer Empfehlungen für maschinenlesbare, offene Daten finden Sie in unserem Handout, welches Sie [hier](/assets/file-download/Handout_Maschinenlesbarkeit.pdf) herunterladen können. 
 
 <center>
   <object data="/assets/file-download/Handout_Maschinenlesbarkeit.pdf" type="application/pdf" class="pdf">
