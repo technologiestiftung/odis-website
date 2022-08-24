@@ -119,9 +119,9 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       </div>
     </p>
     <p>
-      <button type="submit">Kontaktanfrage abschicken</button>
-    </p>
-    </p> <br> <br> <br>
+      <button type="submit">Anfrage abschicken</button> <!--onclick="?" -->
+    </p> 
+    <br> <br> <br>
   <p class="small"> * Angabe verpflichtend </p>
   </form>
 </div>
