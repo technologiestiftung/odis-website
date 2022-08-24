@@ -50,31 +50,31 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
           <input type="checkbox" id="erstgespräch" name="source" value="erstgespräch">
           <label for="erstgespräch">Erstgespräch Open Data</label>
         </div>
-        <div>
+        <div class="checkbox">
           <input type="checkbox" id="bereitstellung" name="source" value="bereitstellung">
           <label for="bereitstellung">Fragen zur Datenbereitstellung</label>
         </div>
-        <div>
+        <div class="checkbox">
           <input type="checkbox" id="visualisierung" name="source" value="visualisierung">
           <label for="visualisierung">Fragen zur Datenvisualisierung</label>
         </div>
-        <div>
+        <div class="checkbox">
           <input type="checkbox" id="datenquali" name="source" value="datenquali">
           <label for="datenquali">Fragen zur Datenqualität</label>
         </div>
-        <div>
+        <div class="checkbox">
           <input type="checkbox" id="od-portal" name="source" value="od-portal">
           <label for="od-portal">Fragen zum Open Data Portal</label>
         </div>
-        <div>
+        <div class="checkbox">
           <input type="checkbox" id="datensuche" name="source" value="datensuche">
           <label for="datensuche">Unterstützung bei der Suche nach Daten</label>
         </div>
-        <div>
+        <div class="checkbox">
           <input type="checkbox" id="prototyp" name="source" value="prototyp">
           <label for="prototyp">Unterstützung bei der Erstellung einer Anwendung / eines Prototypen</label>
         </div>
-        <div>
+        <div class="checkbox">
           <input type="checkbox" id="sonstiges" name="source" value="sonstiges">
           <label for="sonstiges">Sonstiges</label>
         </div>
@@ -105,17 +105,18 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
     <p>
       <h5>Kontakt und Datenschutz</h5>
       <div>
+      <div class="checkbox">
         <input type="checkbox" id="DSV" name="source" value="DSV" required>
         <label for="DSV"> Ich habe die <a href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.*
         </label>
       </div>
-      <div>
+      <div class="checkbox">
         <input type="checkbox" id="speicherung" name="source" value="speicherung" required>
         <label for="speicherung"> Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck
             der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.*
         </label>
       </div>
-      <div>
+      <div class="checkbox">
         <input type="checkbox" id="newsletter" name="source" value="newsletter">
         <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über 
              Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden.
