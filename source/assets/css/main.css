@@ -7526,7 +7526,6 @@ svg.logo-ibb:hover path#Shape {
   width: 100%;
 }
 
-
 .video-big {
   width: 640px;
   height: 360px;
@@ -8823,5 +8822,103 @@ a:hover {
   border-bottom: 1px solid #e8e8e8;
 }
 
-/*# sourceMappingURL=main.css.map */
+/* Style inputs, select elements and textareas */
+form input, form select, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: rgba(110, 205, 245, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
 
+form input[type=checkbox] {
+  box-sizing: content-box;
+  overflow: visible;
+  margin-right: 10px;
+  height: 10px;
+  width: 10px;
+  vertical-align: middle;
+}
+
+.checkbox label {
+  display: contents !important;
+  /* for showing checkbox labels in same row with line break*/
+}
+
+.checkbox {
+  margin-bottom: 10px;
+}
+
+/* Style the submit button */
+button[type=submit] {
+  background-color: #1e3791;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+fieldset > legend {
+  margin-top: 2rem;
+}
+
+form fieldset > fieldset > legend {
+  font-size: 110%;
+  margin-top: 2rem;
+}
+
+form .flex-wrapper, form .form-field {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px 10px;
+}
+
+form .form-field {
+  flex-wrap: nowrap;
+}
+
+form .flex-wrapper > div {
+  flex: 1 1 auto;
+}
+
+form .flex-wrapper > .form-field {
+  flex: 1 1 400px;
+}
+
+/*fixed size for labels*/
+form .flex-wrapper > .form-field > label, form .flex-wrapper.anrede > .form-field > label {
+  flex: 0 0 180px;
+}
+
+/*flexible size for input fields*/
+form .flex-wrapper > .form-field > div, form .flex-wrapper > .form-field > input {
+  flex: 1 1 auto;
+}
+
+/*special parameters for anrede element*/
+form .flex-wrapper.anrede {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 250px;
+  margin: 0 0 20px 0;
+}
+
+form .flex-wrapper.anrede > .form-field > div {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+@media (max-width: 600px) {
+  form .form-field {
+    flex-wrap: wrap;
+    gap: 0 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
