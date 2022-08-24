@@ -74,7 +74,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         </div>
         <div>
           <input type="checkbox" id="prototyp" name="source" value="prototyp">
-          <label for="prototyp">Unterstützung bei der Erstellung einer Anwendung/Prototyp</label>
+          <label for="prototyp">Unterstützung bei der Erstellung einer Anwendung / eines Prototypen</label>
         </div>
         <div>
           <input type="checkbox" id="sonstiges" name="source" value="sonstiges">
