@@ -124,7 +124,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       </div>
     </fieldset>
     <p>
-      <button type="submit">Anfrage abschicken</button> <!--onclick="?" -->
+      <button type="submit">Anfrage abschicken</button>
     </p> 
     <br> <br> <br>
   <p class="small"> * Angabe verpflichtend </p>
