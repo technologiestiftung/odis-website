@@ -102,9 +102,9 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         <input type="checkbox" id="bereitgestellt" name="source" value="bereitsgestellt">
         <label for="bereitgestellt">Ich habe bereits offene Daten auf dem Berliner Open Data Portal bereitgestellt.</label>
       </div>
-    <p>
-      <h5>Kontakt und Datenschutz</h5>
-      <div>
+    </fieldset>
+    <fieldset>
+      <legend>Kontakt und Datenschutz</legend>
       <div class="checkbox">
         <input type="checkbox" id="DSV" name="source" value="DSV" required>
         <label for="DSV"> Ich habe die <a href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.*
@@ -122,7 +122,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
              Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden.
         </label>
       </div>
-    </p>
+    </fieldset>
     <p>
       <button type="submit">Anfrage abschicken</button> <!--onclick="?" -->
     </p> 
