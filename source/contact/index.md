@@ -82,7 +82,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
           <label for="message" class="h5">Ihre Anfrage </label>
           <textarea id="message" name="message" rows="6" cols = "40"></textarea>
         </div>
-    </div>
+    </fieldset>
     <fieldset>
       <legend>Erfahrung mit Open Data</legend> 
       <p class="small">Bitte Zutreffendes ankreuzen</p>
