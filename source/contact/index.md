@@ -80,8 +80,10 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
           <input type="checkbox" id="sonstiges" name="source" value="sonstiges">
           <label for="sonstiges">Sonstiges</label>
         </div>
-      </fieldset>
-      <label>Bitte nennen Sie uns Ihre Anfrage: <textarea name="message"></textarea></label>
+        <div>
+          <label for="message" class="h5">Ihre Anfrage </label>
+          <textarea id="message" name="message" rows="6" cols = "40"></textarea>
+        </div>
     </div>
     <fieldset>
       <legend>Erfahrung mit Open Data</legend> 
