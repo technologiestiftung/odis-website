@@ -9,7 +9,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
 
 <div class="pt-4">
 	<form name="contact" method="POST" data-netlify="true">
-    <fieldset>
+    <fieldset name="kontaktdaten">
       <legend>Kontaktdaten</legend>
       <div class="flex-wrapper anrede">
         <div class="form-field">
@@ -42,7 +42,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
           </div>
         </div>
     </fieldset>
-		<fieldset>
+		<fieldset name="anfrage">
 		  <legend>Anfrage</legend>
         <h5>Thema der Anfrage <br> 
           (Mehrfachauswahl möglich)</h5>
@@ -83,7 +83,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
           <textarea id="message" name="message" rows="6" cols = "40"></textarea>
         </div>
     </fieldset>
-    <fieldset>
+    <fieldset name="erfahrung">
       <legend>Erfahrung mit Open Data</legend> 
       <p class="small">Bitte Zutreffendes ankreuzen</p>
       <div class="checkbox">
@@ -103,8 +103,8 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         <label for="bereitgestellt">Ich habe bereits offene Daten auf dem Berliner Open Data Portal bereitgestellt.</label>
       </div>
     </fieldset>
-    <fieldset>
       <legend>Kontakt und Datenschutz</legend>
+    <fieldset name="datenschutz">
       <div class="checkbox">
         <input type="checkbox" id="DSV" name="source" value="DSV" required>
         <label for="DSV"> Ich habe die <a href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.*
