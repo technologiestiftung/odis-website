@@ -87,8 +87,8 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       <legend>Erfahrung mit Open Data</legend> 
       <p class="small">Bitte Zutreffendes ankreuzen</p>
       <div class="checkbox">
-        <input type="checkbox" id="wenig-od" name="source" value="wenig-od">
-        <label for="wenig-od">Ich hatte bisher wenige Berührungspunkte mit Open Data.</label>
+        <input type="checkbox" id="wenig-od-erfahrung" name="source" value="wenig-od-erfahrung">
+        <label for="wenig-od-erfahrung">Ich hatte bisher wenige Berührungspunkte mit Open Data.</label>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="kenne-od" name="source" value="kenne-od">
