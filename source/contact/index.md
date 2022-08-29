@@ -38,7 +38,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
           </div>
           <div class="form-field">
             <label for id="phone">Telefonnummer</label>
-            <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}" placeholder="Ihre Telefonnummer"/>
+            <input type="tel" id="phone" name="phone" placeholder="Ihre Telefonnummer"/>
           </div>
         </div>
     </fieldset>
