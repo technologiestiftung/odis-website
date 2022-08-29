@@ -17,10 +17,12 @@
     height:16px;
     width:16px;
     vertical-align:middle;
+    cursor: pointer;
   }
   
   .checkbox label {
     display: contents!important; /* for showing checkbox labels in same row with line break*/
+    cursor: pointer;
    }
   
   .checkbox{
