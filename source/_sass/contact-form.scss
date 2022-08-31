@@ -40,14 +40,13 @@
     float: left;
   }
   
-  fieldset > legend {
+  fieldset {
     margin-top: 2rem;
   }
   
   
   form fieldset > fieldset > legend {
     font-size: 110%;
-    margin-top: 2rem;
   }
   
   form .flex-wrapper, form .form-field {
