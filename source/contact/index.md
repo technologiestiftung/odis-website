@@ -115,7 +115,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       </div>
       <div class="checkbox">
         <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
-        <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden. Weitere Informationen und Datenschutzbestimmungen <a href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343">hier</a>.</label>
+        <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden. Weitere Informationen und die Datenschutzbestimmungen <a href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343">hier</a>.</label>
       </div>
     </fieldset>
     <fieldset name="submit">
