@@ -14,7 +14,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       <div class="flex-wrapper anrede">
         <div class="form-field">
 			    <label for="anrede">Anrede</label>
-          <div>
+          <div class="dropdown">
 			      <select name="anrede" id="anrede">
               <option value="Frau">Frau</option>
               <option value="Herr">Herr</option>
