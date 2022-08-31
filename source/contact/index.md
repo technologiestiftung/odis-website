@@ -83,8 +83,8 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         <textarea id="message" name="message" rows="6" cols = "40"></textarea>
       </div>
     </fieldset>
-      <legend>Erfahrung mit Open Data</legend> 
     <fieldset name="erfahrung">
+      <label>Erfahrung mit Open Data</legend> 
       <p class="small">Bitte Zutreffendes ankreuzen</p>
       <div class="checkbox">
         <input type="checkbox" id="wenig-od-erfahrung" name="erfahrung" value="wenig-od-erfahrung">
