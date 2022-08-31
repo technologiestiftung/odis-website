@@ -87,37 +87,37 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       <legend>Erfahrung mit Open Data</legend> 
       <p class="small">Bitte Zutreffendes ankreuzen</p>
       <div class="checkbox">
-        <input type="checkbox" id="wenig-od-erfahrung" name="source" value="wenig-od-erfahrung">
+        <input type="checkbox" id="wenig-od-erfahrung" name="erfahrung" value="wenig-od-erfahrung">
         <label for="wenig-od-erfahrung">Ich hatte bisher wenige Berührungspunkte mit Open Data.</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="kenne-od" name="source" value="kenne-od">
+        <input type="checkbox" id="kenne-od" name="erfahrung" value="kenne-od">
         <label for="kenne-od">Ich habe bereits ein Grundverständnis von Open Data.</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="kenne-portal" name="source" value="kenne-portal">
+        <input type="checkbox" id="kenne-portal" name="erfahrung" value="kenne-portal">
         <label for="kenne-portal">Ich kenne das <a href="https://www.daten.berlin.de">Berliner Open Data Portal</a>.</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="bereitgestellt" name="source" value="bereitsgestellt">
+        <input type="checkbox" id="bereitgestellt" name="erfahrung" value="bereitsgestellt">
         <label for="bereitgestellt">Ich habe bereits offene Daten auf dem Berliner Open Data Portal bereitgestellt.</label>
       </div>
     </fieldset>
     <fieldset name="datenschutz">
       <legend>Datenschutz und Newsletter</legend>
       <div class="checkbox">
-        <input type="checkbox" id="DSV" name="source" value="DSV" required>
+        <input type="checkbox" id="DSV" name="datenschutz" value="DSV" required>
         <label for="DSV"> Ich habe die <a href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.*
         </label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="speicherung" name="source" value="speicherung" required>
+        <input type="checkbox" id="speicherung" name="datenschutz" value="speicherung" required>
         <label for="speicherung"> Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck
             der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.*
         </label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="newsletter" name="source" value="newsletter">
+        <input type="checkbox" id="newsletter" name="datenschutz" value="newsletter">
         <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über 
              Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden.
         </label>
