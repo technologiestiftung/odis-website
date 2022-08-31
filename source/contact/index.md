@@ -123,10 +123,10 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         </label>
       </div>
     </fieldset>
-    <p>
+    <fieldset name="submit">
       <button type="submit">Anfrage abschicken</button>
-    </p> 
-    <br> <br> <br>
+    </fieldset> 
+    <br> <br>
   <p class="small"> * Angabe verpflichtend </p>
   </form>
 </div>
