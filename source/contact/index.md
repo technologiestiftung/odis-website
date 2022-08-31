@@ -107,20 +107,15 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       <legend>Datenschutz und Newsletter</legend>
       <div class="checkbox">
         <input type="checkbox" id="DSV" name="datenschutz" value="DSV" required>
-        <label for="DSV"> Ich habe die <a href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.*
-        </label>
+        <label for="DSV"> Ich habe die <a href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.*</label>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="speicherung" name="datenschutz" value="speicherung" required>
-        <label for="speicherung"> Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck
-            der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.*
-        </label>
+        <label for="speicherung"> Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.*</label>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
-        <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über 
-             Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden.
-        </label>
+        <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden.</label>
       </div>
     </fieldset>
     <fieldset name="submit">
