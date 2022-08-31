@@ -44,8 +44,8 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
     </fieldset>
 		<fieldset name="anfrage">
 		  <legend>Anfrage</legend>
-        <h5>Thema der Anfrage <br> 
-          (Mehrfachauswahl möglich)</h5>
+        <h5>Thema der Anfrage </h5> 
+        <p class="small">(Mehrfachauswahl möglich)</p>
         <div class="checkbox">
           <input type="checkbox" id="erstgespräch" name="source" value="erstgespräch">
           <label for="erstgespräch">Erstgespräch Open Data</label>
