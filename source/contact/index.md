@@ -23,65 +23,65 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
           </div>
         </div>
       </div>
-              <div class="flex-wrapper">
-          <div class="form-field">
-            <label for id="name">Name*</label>
-            <input type="text" id="name" name="name" placeholder="Ihr Name" required>
-          </div>
-          <div class="form-field">
-			      <label for id="organisation">Organisation/Abteilung</label>
-            <input type="text" id="organisation" name="organisation" placeholder="Ihre Organisation/Abteilung"/>
-          </div>
-          <div class="form-field">
-            <label for id="email">E-Mail-Adresse*</label>
-            <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse">
-          </div>
-          <div class="form-field">
-            <label for id="phone">Telefonnummer</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9+]{4,30}" title="nur Zahlen und +, mindestens vier Ziffern" placeholder="Ihre Telefonnummer"/>
-          </div>
+      <div class="flex-wrapper">
+        <div class="form-field">
+          <label for id="name">Name*</label>
+          <input type="text" id="name" name="name" placeholder="Ihr Name" required>
         </div>
+        <div class="form-field">
+			    <label for id="organisation">Organisation/Abteilung</label>
+          <input type="text" id="organisation" name="organisation" placeholder="Ihre Organisation/Abteilung"/>
+        </div>
+        <div class="form-field">
+          <label for id="email">E-Mail-Adresse*</label>
+          <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse">
+        </div>
+        <div class="form-field">
+          <label for id="phone">Telefonnummer</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9+]{4,30}" title="nur Zahlen und +, mindestens vier Ziffern" placeholder="Ihre Telefonnummer"/>
+        </div>
+      </div>
     </fieldset>
 		<fieldset name="anfrage">
 		  <legend>Anfrage</legend>
-        <h5>Thema der Anfrage </h5> 
-        <p class="small">(Mehrfachauswahl möglich)</p>
-        <div class="checkbox">
-          <input type="checkbox" id="erstgespräch" name="source" value="erstgespräch">
-          <label for="erstgespräch">Erstgespräch Open Data</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" id="bereitstellung" name="source" value="bereitstellung">
-          <label for="bereitstellung">Fragen zur Datenbereitstellung</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" id="visualisierung" name="source" value="visualisierung">
-          <label for="visualisierung">Fragen zur Datenvisualisierung</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" id="datenquali" name="source" value="datenquali">
-          <label for="datenquali">Fragen zur Datenqualität</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" id="od-portal" name="source" value="od-portal">
-          <label for="od-portal">Fragen zum Open Data Portal</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" id="datensuche" name="source" value="datensuche">
-          <label for="datensuche">Unterstützung bei der Suche nach Daten</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" id="prototyp" name="source" value="prototyp">
-          <label for="prototyp">Unterstützung bei der Erstellung einer Anwendung / eines Prototypen</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" id="sonstiges" name="source" value="sonstiges">
-          <label for="sonstiges">Sonstiges</label>
-        </div>
-        <div>
-          <label for="message" class="h5">Ihre Anfrage </label>
-          <textarea id="message" name="message" rows="6" cols = "40"></textarea>
-        </div>
+      <h5>Thema der Anfrage </h5> 
+      <p class="small">Mehrfachauswahl möglich</p>
+      <div class="checkbox">
+        <input type="checkbox" id="erstgespräch" name="thema" value="erstgespräch">
+        <label for="erstgespräch">Erstgespräch Open Data</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="bereitstellung" name="thema" value="bereitstellung">
+        <label for="bereitstellung">Fragen zur Datenbereitstellung</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="visualisierung" name="thema" value="visualisierung">
+        <label for="visualisierung">Fragen zur Datenvisualisierung</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="datenquali" name="thema" value="datenquali">
+        <label for="datenquali">Fragen zur Datenqualität</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="od-portal" name="thema" value="od-portal">
+        <label for="od-portal">Fragen zum Open Data Portal</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="datensuche" name="thema" value="datensuche">
+        <label for="datensuche">Unterstützung bei der Suche nach Daten</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="prototyp" name="thema" value="prototyp">
+        <label for="prototyp">Unterstützung bei der Erstellung einer Anwendung / eines Prototypen</label>
+       </div>
+      <div class="checkbox">
+        <input type="checkbox" id="sonstiges" name="thema" value="sonstiges">
+         <label for="sonstiges">Sonstiges</label>
+      </div>
+      <div>
+        <label for="message" class="h5">Ihre Anfrage </label>
+        <textarea id="message" name="message" rows="6" cols = "40"></textarea>
+      </div>
     </fieldset>
     <fieldset name="erfahrung">
       <legend>Erfahrung mit Open Data</legend> 
