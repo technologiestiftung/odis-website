@@ -47,35 +47,35 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       <h5>Thema der Anfrage </h5> 
       <p class="small">Mehrfachauswahl möglich</p>
       <div class="checkbox">
-        <input type="checkbox" id="erstgespräch" name="thema" value="erstgespräch">
+        <input type="checkbox" id="erstgespräch" name="anfrage" value="erstgespräch">
         <label for="erstgespräch">Erstgespräch Open Data</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="bereitstellung" name="thema" value="bereitstellung">
+        <input type="checkbox" id="bereitstellung" name="anfrage" value="bereitstellung">
         <label for="bereitstellung">Fragen zur Datenbereitstellung</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="visualisierung" name="thema" value="visualisierung">
+        <input type="checkbox" id="visualisierung" name="anfrage" value="visualisierung">
         <label for="visualisierung">Fragen zur Datenvisualisierung</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="datenquali" name="thema" value="datenquali">
+        <input type="checkbox" id="datenquali" name="anfrage" value="datenquali">
         <label for="datenquali">Fragen zur Datenqualität</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="od-portal" name="thema" value="od-portal">
+        <input type="checkbox" id="od-portal" name="anfrage" value="od-portal">
         <label for="od-portal">Fragen zum Open Data Portal</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="datensuche" name="thema" value="datensuche">
+        <input type="checkbox" id="datensuche" name="anfrage" value="datensuche">
         <label for="datensuche">Unterstützung bei der Suche nach Daten</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="prototyp" name="thema" value="prototyp">
+        <input type="checkbox" id="prototyp" name="anfrage" value="prototyp">
         <label for="prototyp">Unterstützung bei der Erstellung einer Anwendung / eines Prototypen</label>
        </div>
       <div class="checkbox">
-        <input type="checkbox" id="sonstiges" name="thema" value="sonstiges">
+        <input type="checkbox" id="sonstiges" name="anfrage" value="sonstiges">
          <label for="sonstiges">Sonstiges</label>
       </div>
       <div>
@@ -99,7 +99,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         <label for="kenne-portal">Ich kenne das <a href="https://www.daten.berlin.de">Berliner Open Data Portal</a>.</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="bereitgestellt" name="erfahrung" value="bereitsgestellt">
+        <input type="checkbox" id="bereitgestellt" name="erfahrung" value="bereitgestellt">
         <label for="bereitgestellt">Ich habe bereits offene Daten auf dem Berliner Open Data Portal bereitgestellt.</label>
       </div>
     </fieldset>
@@ -117,7 +117,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         </label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="newsletter" name="datenschutz" value="newsletter">
+        <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
         <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über 
              Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden.
         </label>
