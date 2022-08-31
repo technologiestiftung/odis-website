@@ -83,7 +83,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         <textarea id="message" name="message" rows="6" cols = "40"></textarea>
       </div>
     </fieldset>
-    <fieldset name="erfahrung">
+    <div>
       <legend>Erfahrung mit Open Data</legend> 
       <p class="small">Bitte Zutreffendes ankreuzen</p>
       <div class="checkbox">
@@ -102,7 +102,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         <input type="checkbox" id="bereitgestellt" name="erfahrung" value="bereitgestellt">
         <label for="bereitgestellt">Ich habe bereits offene Daten auf dem Berliner Open Data Portal bereitgestellt.</label>
       </div>
-    </fieldset>
+    </div>
     <fieldset name="datenschutz">
       <legend>Datenschutz und Newsletter</legend>
       <div class="checkbox">
