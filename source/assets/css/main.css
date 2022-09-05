@@ -8837,16 +8837,14 @@ form input[type=checkbox] {
   box-sizing: content-box;
   overflow: visible;
   margin-right: 10px;
-  height: 16px;
-  width: 16px;
+  height: 10px;
+  width: 10px;
   vertical-align: middle;
-  cursor: pointer;
 }
 
 .checkbox label {
   display: contents !important;
   /* for showing checkbox labels in same row with line break*/
-  cursor: pointer;
 }
 
 .checkbox {
@@ -8864,12 +8862,13 @@ button[type=submit] {
   float: left;
 }
 
-fieldset {
+fieldset > legend {
   margin-top: 2rem;
 }
 
 form fieldset > fieldset > legend {
   font-size: 110%;
+  margin-top: 2rem;
 }
 
 form .flex-wrapper, form .form-field {
