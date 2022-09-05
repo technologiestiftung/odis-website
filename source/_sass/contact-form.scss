@@ -1,6 +1,7 @@
 
- /* Style inputs, select elements and textareas */
- form input, form select, form textarea{
+form {
+
+  input, select, textarea{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -9,8 +10,8 @@
     box-sizing: border-box;
     resize: vertical;
   }
-  
-  form input[type="checkbox"]{
+
+  input[type="checkbox"]{
     box-sizing:content-box;
     overflow: visible;
     margin-right: 10px;
@@ -20,16 +21,15 @@
     cursor: pointer;
   }
   
-  .checkbox label {
-    display: contents!important; /* for showing checkbox labels in same row with line break*/
-    cursor: pointer;
-   }
-  
   .checkbox{
     margin-bottom: 10px;
+
+    label {
+      display: contents!important; /* for showing checkbox labels in same row with line break*/
+      cursor: pointer;
+    }
   }
   
-  /* Style the submit button */
   button[type=submit] {
     background-color: rgb(30,55,145);
     color: white;
@@ -42,14 +42,15 @@
   
   fieldset {
     margin-top: 2rem;
+
+    fieldset{
+      legend{
+        font-size: 110%;
+      }
+    }
   }
   
-  
-  form fieldset > fieldset > legend {
-    font-size: 110%;
-  }
-  
-  form .flex-wrapper, form .form-field {
+  .flex-wrapper, .form-field {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;   
@@ -57,43 +58,45 @@
     gap: 20px 10px;
   }
   
-  form .form-field {
+  .form-field {
     flex-wrap: nowrap;
   }
   
-  form .flex-wrapper > div {
-    flex: 1 1 auto;
+  .flex-wrapper {
+    div {
+      flex: 1 1 auto;}
+
+    .form-field {
+      flex: 1 1 400px;
+
+      div, input{
+        flex: 1 1 auto;   /*flexible size for input fields*/
+      }
+
+      label {
+        flex: 0 0 180px;   /*fixed size for labels*/
+      }
+    }
   }
   
-  form .flex-wrapper > .form-field {
-    flex: 1 1 400px;
-  }
-  
-  /*fixed size for labels*/
-  form .flex-wrapper > .form-field > label, form .flex-wrapper.anrede > .form-field > label {
-    flex: 0 0 180px;
-  }
-  
-  /*flexible size for input fields*/
-  form .flex-wrapper > .form-field > div,form .flex-wrapper > .form-field > input {
-    flex: 1 1 auto;
-  }
-  
-  /*special parameters for anrede element*/
-  form .flex-wrapper.anrede{
+  .flex-wrapper.anrede{
     flex-grow: 0;
     flex-shrink: 0;
     width: 250px;
     margin: 0 0 20px 0;
-  }
-  form .flex-wrapper.anrede > .form-field > div{
-    flex-shrink:0;
-    flex-grow:0;
-  }
-  
-  @media (max-width: 600px) {
-    form .form-field {
-      flex-wrap: wrap;
-      gap: 0 0;
+
+    .form-field{
+      div{
+        flex-shrink:0;
+        flex-grow:0;
+      }
     }
   }
+}
+
+@media (max-width: 600px) {
+  form .form-field {
+    flex-wrap: wrap;
+    gap: 0 0;
+  }
+}
