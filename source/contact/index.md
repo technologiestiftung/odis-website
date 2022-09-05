@@ -79,8 +79,8 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
          <label for="sonstiges">Sonstiges</label>
       </div>
     </fieldset>
-    <fieldset name="anfrage">
-      <legend for="anfrage">Ihre Anfrage </legend>
+    <fieldset name="message">
+      <legend for="message">Ihre Anfrage </legend>
       <textarea id="message" name="message" rows="6" cols = "40"></textarea>
     </fieldset>
     <fieldset name="erfahrung">
