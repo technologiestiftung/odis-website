@@ -119,7 +119,6 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       </div>
     </fieldset>
     <fieldset name="submit">
-      <div data-netlify-recaptcha="true"></div>
       <button type="submit">Anfrage abschicken</button>
     </fieldset> 
     <br> <br>
