@@ -9,6 +9,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
 
 <div class="pt-4">
 	<form name="contact" method="POST" data-netlify="true" action="/success">
+  <input type="hidden" name="subject" value="Kontaktanfrage über die ODIS-Website" />
     <fieldset name="kontaktdaten">
       <legend>Kontaktdaten</legend>
       <div class="flex-wrapper anrede">
