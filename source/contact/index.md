@@ -86,6 +86,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
     <fieldset name="erfahrung">
       <legend>Erfahrung mit Open Data</legend> 
       <p class="small">Bitte Zutreffendes ankreuzen</p>
+      <label hidden>Erfahrung mit Open Data</label>
       <div class="checkbox">
         <input type="checkbox" id="wenig-od-erfahrung" name="erfahrung" value="wenig-od-erfahrung">
         <label for="wenig-od-erfahrung">Ich hatte bisher wenige Berührungspunkte mit Open Data.</label>
@@ -114,7 +115,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         <label for="speicherung"> Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.*</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+        <input type="checkbox" id="newsletter" name="newsletter" value="newsletter-ja">
         <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden. Weitere Informationen und die Datenschutzbestimmungen <a href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343">hier</a>.</label>
       </div>
     </fieldset>
