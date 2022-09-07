@@ -17,8 +17,8 @@ Dies Erfassung aller vorliegenden Datensätze und das Sammeln von Informationen 
 Das im folgenden bereitgestellte Handout bietet eine Übersicht zum Thema Dateninventur, erklärt welchen Zweck sie verfolgt, welche Vorteile sich für eine Behörde ergeben und gibt einen ersten Eindruck davon, wie eine Dateninventur ablaufen kann.
 
 <center>
-  <object data="/assets/file-download/Handout_Dateninventur.pdf" type="application/pdf" class="pdf">
-      <embed src="/assets/file-download/Handout_Dateninventur.pdf">
+  <object data="/assets/file-download/Handout_Dateninventur_august2022.pdf" type="application/pdf" class="pdf">
+      <embed src="/assets/file-download/Handout_Dateninventur_august2022.pdf">
           <p>Dieser Browser unterstützt keine PDF-Ansichten. Bitte laden sich das PDF runter, um es anzusehen. <a href="/assets/file-download/source/assets/file-download/Handout_Dateninventur_august2022.pdf">Download Handout</a>.</p>
   </object>
 </center>
