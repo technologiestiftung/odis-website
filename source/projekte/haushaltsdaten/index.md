@@ -14,7 +14,7 @@ heroImage: haushaltsdaten_hero.png
 
 Vom Ausbau von Kitas und Schulen bis hin zu bezahlbarem Wohnraum bestimmt der Haushalt maßgeblich das gesellschaftliche Leben in der Stadt und ist daher von großem Interesse für alle Berliner:innen. Um dem Anspruch an Transparenz gerecht zu werden, veröffentlicht die [Senatsverwaltung für Finanzen](https://www.berlin.de/sen/finanzen/) schon seit längerem aktuelle sowie vergangene Haushaltsdaten als maschinenlesbare Datensätze im [Datenportal Berlin](https://daten.berlin.de/tags/haushalt). Aufgrund ihrer Komplexität und Größe sind die Daten allerdings nur begrenzt für die breite Öffentlichkeit verständlich. Das CityLAB Berlin und die Open Data Informationsstelle (ODIS) haben die offenen Haushaltsdaten gemeinsam mit der Senatsverwaltung für Finanzen visualisiert.
 
-In der Visualisierung können die geplanten Einnahmen und Ausgaben  aus verschiedenen Funktionen und Bereiche der Berliner Verwaltung durch ein Baumdiagramm erkundet werden. Zudem ermöglicht eine Textsuche das Suchen von Bereichen, Kapiteln (Zuständigkeiten), Funktionen und Gruppen (Art der Ausgaben und Einnahmen) sowie einzelnen Ausgabetiteln.
+In der Visualisierung können die geplanten Einnahmen und Ausgaben  aus verschiedenen Funktionen und Bereichen der Berliner Verwaltung durch ein Baumdiagramm erkundet werden. Zudem ermöglicht eine Textsuche das Suchen von Bereichen, Kapiteln (Zuständigkeiten), Funktionen und Gruppen (Art der Ausgaben und Einnahmen) sowie einzelnen Ausgabetiteln.
 
 
 ## Vorschau
