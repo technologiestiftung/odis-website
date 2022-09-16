@@ -1,0 +1,102 @@
+
+form {
+
+  input, select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    background-color: rgba(110,205,245,0.1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+  input[type="checkbox"]{
+    box-sizing:content-box;
+    overflow: visible;
+    margin-right: 10px;
+    height:16px;
+    width:16px;
+    vertical-align:middle;
+    cursor: pointer;
+  }
+  
+  .checkbox{
+    margin-bottom: 10px;
+
+    label {
+      display: contents!important; /* for showing checkbox labels in same row with line break*/
+      cursor: pointer;
+    }
+  }
+  
+  button[type=submit] {
+    background-color: rgb(30,55,145);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+  }
+  
+  fieldset {
+    margin-top: 2rem;
+
+    fieldset{
+      legend{
+        font-size: 110%;
+      }
+    }
+  }
+  
+  .flex-wrapper, .form-field {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;   
+    align-items: baseline;
+    gap: 20px 10px;
+  }
+  
+  .form-field {
+    flex-wrap: nowrap;
+  }
+  
+  .flex-wrapper {
+    div {
+      flex: 1 1 auto;}
+
+    .form-field {
+      flex: 1 1 400px;
+
+      div, input{
+        flex: 1 1 auto;   /*flexible size for input fields*/
+      }
+
+      label {
+        flex: 0 0 180px;   /*fixed size for labels*/
+      }
+    }
+  }
+  
+  .flex-wrapper.anrede{
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 250px;
+    margin: 0 0 20px 0;
+
+    .form-field{
+      div{
+        flex-shrink:0;
+        flex-grow:0;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  form .form-field {
+    flex-wrap: wrap;
+    gap: 0 0;
+  }
+}
