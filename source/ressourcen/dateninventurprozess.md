@@ -18,13 +18,13 @@ In dem Prozessplan werden die einzelnen Phasen genauer beschrieben. Am Ende des 
 Gerne unterstützt die ODIS bei einer Dateninventur und steht für ein Erstgespräch bereit.
 
 <center>
-  <object data="/assets/file-download/Handout_Dateninventur_august2022.pdf" type="application/pdf" class="pdf">
-      <embed src="/assets/file-download/Handout_Dateninventur_august2022.pdf">
-          <p>Dieser Browser unterstützt keine PDF-Ansichten. Bitte laden sich das PDF runter, um es anzusehen. <a href="/assets/file-download/Handout_Dateninventur_august2022.pdf">Download Handout</a>.</p>
+  <object data="/assets/file-download/Prozessplan_Dateninventur_ODIS.pdf" type="application/pdf" class="pdf">
+      <embed src="/assets/file-download/Prozessplan_Dateninventur_ODIS.pdf">
+          <p>Dieser Browser unterstützt keine PDF-Ansichten. Bitte laden sich das PDF runter, um es anzusehen. <a href="/assets/file-download/Prozessplan_Dateninventur_ODIS.pdf">Download Handout</a>.</p>
   </object>
 </center>
 <br>
 
 ## Download
 
-[Handout zur Dateninventur als PDF](/assets/file-download/Handout_Dateninventur_august2022.pdf)
+[Handout zur Dateninventur als PDF](/assets/file-download/Prozessplan_Dateninventur_ODIS.pdf)

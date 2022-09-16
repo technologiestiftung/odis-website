@@ -26,4 +26,4 @@ Das im folgenden bereitgestellte Handout bietet eine Übersicht zum Thema Dateni
 
 ## Download
 
-[Handout zur Dateninventur als PDF](/assets/file-download/source/assets/file-download/Handout_Dateninventur_august2022.pdf)
+[Handout zur Dateninventur als PDF](/assets/file-download/Handout_Dateninventur_august2022.pdf)
