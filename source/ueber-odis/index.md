@@ -79,6 +79,15 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 							<span>max.eckert@ts.berlin</span>
 						</div>
 					</div>										
+					</div>	
+					<div class="profile-wrapper mt-2">
+						<img class="profile-image" src="/assets/images/page/profile_anna.png">
+						<div class="profile-desc-wrapper-2">
+							<span><b>Anna Meide</b></span>
+							<span><em>Praktikantin</em></span>
+							<span>anna.meide@ts.berlin</span>
+						</div>
+					</div>									
 					<div class="profile-wrapper mt-2">
 						<div class="profile-image"></div>
 						<div class="profile-desc-wrapper-2">
