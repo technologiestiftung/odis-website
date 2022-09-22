@@ -91,7 +91,7 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 						<img class="profile-image" src="/assets/images/page/profile_ben.png">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Dr. Benjamin Seibel</b></span>
-							<span><em>Abteilungsleitung CityLAB Berlin</em></span>
+							<span><em>Bereichsleitung CityLAB Berlin</em></span>
 							<span>benjamin.seibel@ts.berlin</span>
 							<span>030 209 69 99 40</span>
 						</div>
