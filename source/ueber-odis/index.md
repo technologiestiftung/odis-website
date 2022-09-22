@@ -61,6 +61,7 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 							<span><b>Klemens Maget</b></span>
 							<span><em>Wissenschaftlicher Mitarbeiter</em></span>
 							<span>klemens.maget@ts.berlin</span>
+							<span>030 209 69 99 42</span>
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
