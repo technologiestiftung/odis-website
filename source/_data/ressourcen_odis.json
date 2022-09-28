@@ -14,6 +14,13 @@
               "image": "page/process-01.svg"
             },
             {
+              "title": "Prozessplan Dateninventur",
+              "source": "Dateninventurprozess",
+              "url": "/ressourcen/dateninventurprozess/",
+              "text": "Eine Dateninventur kann je nach Zielstellung ein komplexes Unterfangen sein, bei dem ein strukturiertes Vorgehen hilft. Die ODIS hat in einem Prozessplan die wesentlichen Schritte von der Prozessvorbereitung bis hin zur Auswertung des Dateninventurprozesses zusammengefasst und stellt eine Checkliste zur Verfügung.",
+              "image": "page/process-08.png"
+            },
+            {
               "title": "Vorlage für ein Dateninformationsblatt",
               "source": "Dateninformationsblatt",
               "url": "/ressourcen/dateninformationsblatt/",
