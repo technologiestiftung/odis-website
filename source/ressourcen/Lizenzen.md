@@ -17,7 +17,7 @@ Dem Open Data Grundgedanken entsprechend soll die Nutzung der veröffentlichten 
 
 Das Handout zeigt aus Anwender:innenperspektive auf, welche <span style="">**Einschränkungen** durch "restriktive" Lizenzformen einhergehen und unterstützt  mithilfe eines <span style="">**Entscheidungsbaums** bei der Wahl der richtigen Lizenz. 
 
-Weiterführende Informationen und Hintergründe zum Thema Lizenzen bietet die Dokumentation zum <a href="https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/veranstaltungen/artikel.1184326.php" target="blank">Open Data Lunch:Lizenzen</a> von der Senatsverwaltung für Wirtschaft,
+Weiterführende Informationen und Hintergründe zum Thema Lizenzen bietet die Dokumentation zum <a href="https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/veranstaltungen/artikel.1184326.php" target="blank">Open Data Lunch: Lizenzen</a> von der Senatsverwaltung für Wirtschaft,
 Energie & Betriebe.
 
 
@@ -25,13 +25,13 @@ Energie & Betriebe.
 Gerne unterstützt die ODIS bei Unklarheiten oder Rückfragen zum Thema Nutzungsbedingungen/Lizenzen.
 
 <center>
-  <object data="/assets/file-download/Lizenzen_Handout_ODIS.pdf" type="application/pdf" class="pdf">
-      <embed src="/assets/file-download/Lizenzen_Handout_ODIS.pdf">
-          <p>Dieser Browser unterstützt keine PDF-Ansichten. Bitte laden sich das PDF runter, um es anzusehen. <a href="/assets/file-download/Lizenzen_Handout_ODIS.pdf">Download Handout</a>.</p>
+  <object data="/assets/file-download/Lizenzen_Handout_v2.pdf" type="application/pdf" class="pdf">
+      <embed src="/assets/file-download/Lizenzen_Handout_ODIS_v2.pdf">
+          <p>Dieser Browser unterstützt keine PDF-Ansichten. Bitte laden sich das PDF runter, um es anzusehen. <a href="/assets/file-download/Lizenzen_Handout_v2.pdf">Download Handout</a>.</p>
   </object>
 </center>
 <br>
 
 ## Download
 
-[Handout zu Lizenzen als PDF](/assets/file-download/Lizenzen_Handout_ODIS.pdf)
+[Handout zu Lizenzen als PDF](/assets/file-download/Lizenzen_Handout_v2.pdf)
