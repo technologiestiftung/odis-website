@@ -64,13 +64,6 @@
               "url": "/ressourcen/datenschutz/",
               "text": "Die Veröffentlichung von Daten setzt voraus, dass die Offenlegung nach dem geltenden (Datenschutz-)Recht zulässig ist. Mit dieser Checkliste können Sie prüfen, ob Ihre Daten unter Einhaltung des Datenschutzes veröffentlicht werden können.",
               "image": "page/process-07.svg"
-            },
-            {
-              "title": "Handout zum Thema Lizenzen",
-              "source": "Lizenzwahl",
-              "url": "/ressourcen/lizenzen/",
-              "text": "Die Wahl der Lizenz und damit die Entscheidung unter welchen Bedingungen die Daten weiterverwendet werden können, obliegt der datenbereitstellenden Behörde. Mit dem Handout bekommen Sie wichtige Hinweise, anhand derer Sie die richtige Lizenz für „Ihre“ Daten beim Schritt der Veröffentlichung auf dem Open Data Portal des Landes Berlin auswählen können.",
-              "image": "page/Datenlizenzen_v2.png"
             }
           ]
         },
@@ -108,7 +101,7 @@
               "source": "Lizenzwahl",
               "url": "/ressourcen/lizenzen/",
               "text": "Die Wahl der Lizenz und damit die Entscheidung unter welchen Bedingungen die Daten weiterverwendet werden können, obliegt der datenbereitstellenden Behörde. Mit dem Handout bekommen Sie wichtige Hinweise, anhand derer Sie die richtige Lizenz für „Ihre“ Daten beim Schritt der Veröffentlichung auf dem Open Data Portal des Landes Berlin auswählen können.",
-              "image": "page/Datenlizenzen_v2.png"
+              "image": "page/Datenlizenzen.png"
             }
           ]
         },
