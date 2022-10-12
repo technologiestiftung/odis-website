@@ -41,7 +41,7 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 						<img class="profile-image" src="/assets/images/page/profile-lisa.jpg">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Lisa Stubert</b></span>
-							<span><em>Leitung</em></span>
+							<span><em>Projektleitung</em></span>
 							<span>lisa.stubert@ts.berlin</span>
 							<span>030 209 69 99 43</span>
 						</div>
@@ -86,6 +86,14 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 							<span><b>Anna Meide</b></span>
 							<span><em>Praktikantin</em></span>
 							<span>anna.meide@ts.berlin</span>
+						</div>
+					</div>	
+					<div class="profile-wrapper mt-2">
+						<img class="profile-image" src="/assets/images/page/profile-hans.jpg">
+						<div class="profile-desc-wrapper-2">
+							<span><b>Hans Hack</b></span>
+							<span><em>Technology & Prototyping</em></span>
+							<span>hans.hack@ts.berlin</span>
 						</div>
 					</div>									
 					<div class="profile-wrapper mt-2">
