@@ -38,33 +38,34 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 
 <div class="profiles-wrapper">
 					<div class="profile-wrapper mt-2">
-						<div class="profile-image-2"></div>
-						<div class="profile-desc-wrapper-2">
-							<span><b>Victoria Boeck</b></span>
-							<span><em>Leitung (Elternzeit)</em></span>
-							<span>victoria.boeck@ts.berlin</span>
-							<span>030 209 69 99 41</span>
-						</div>
-					</div>
-					<div class="profile-wrapper mt-2">
-						<div class="profile-image-3"></div>
+						<img class="profile-image" src="/assets/images/page/profile-lisa.jpg">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Lisa Stubert</b></span>
-							<span><em>Leitung</em></span>
+							<span><em>Projektleitung</em></span>
 							<span>lisa.stubert@ts.berlin</span>
 							<span>030 209 69 99 43</span>
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
-						<div class="profile-image-6"></div>
+						<img class="profile-image" src="/assets/images/page/profile_tori.png">
+						<div class="profile-desc-wrapper-2">
+							<span><b>Victoria Boeck</b></span>
+							<span><em>Wissenschaftliche Mitarbeiterin</em></span>
+							<span>victoria.boeck@ts.berlin</span>
+							<span>030 209 69 99 41</span>
+						</div>
+					</div>
+					<div class="profile-wrapper mt-2">
+						<img class="profile-image" src="/assets/images/page/profile-klemens.jpg">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Klemens Maget</b></span>
 							<span><em>Wissenschaftlicher Mitarbeiter</em></span>
 							<span>klemens.maget@ts.berlin</span>
+							<span>030 209 69 99 42</span>
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
-						<div class="profile-image-4"></div>
+						<img class="profile-image" src="/assets/images/page/profile-ester.jpg">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Ester Scheck</b></span>
 							<span><em>Studentische Mitarbeiterin</em></span>
@@ -72,18 +73,34 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
-						<div class="profile-image-5"></div>
+						<img class="profile-image" src="/assets/images/page/profile-max.jpg">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Max B. Eckert</b></span>
 							<span><em>Wissenschaftlicher Mitarbeiter</em></span>
 							<span>max.eckert@ts.berlin</span>
 						</div>
-					</div>										
+					</div>	
 					<div class="profile-wrapper mt-2">
-						<div class="profile-image"></div>
+						<img class="profile-image" src="/assets/images/page/profile_anna.png">
+						<div class="profile-desc-wrapper-2">
+							<span><b>Anna Meide</b></span>
+							<span><em>Praktikantin</em></span>
+							<span>anna.meide@ts.berlin</span>
+						</div>
+					</div>	
+					<div class="profile-wrapper mt-2">
+						<img class="profile-image" src="/assets/images/page/profile-hans.jpg">
+						<div class="profile-desc-wrapper-2">
+							<span><b>Hans Hack</b></span>
+							<span><em>Technology & Prototyping</em></span>
+							<span>hans.hack@ts.berlin</span>
+						</div>
+					</div>									
+					<div class="profile-wrapper mt-2">
+						<img class="profile-image" src="/assets/images/page/profile_ben.png">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Dr. Benjamin Seibel</b></span>
-							<span><em>Abteilungsleitung CityLAB Berlin</em></span>
+							<span><em>Bereichsleitung CityLAB Berlin</em></span>
 							<span>benjamin.seibel@ts.berlin</span>
 							<span>030 209 69 99 40</span>
 						</div>
