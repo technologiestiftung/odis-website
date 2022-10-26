@@ -7,7 +7,7 @@ blogLink: https://ckan-filter-tool.onrender.com
 metaDescription: Geodaten automatisiert aus dem Datenportal filtern
 date: 2022-10-31
 visible: true
-indexImage: webtool3.png
+indexImage: webtool4.png
 heroImage: webtool1.png
 link: true
 ---
@@ -17,4 +17,4 @@ Im Berliner Open Data Portal sind Geodaten veröffentlicht, die noch nicht in de
 Die Abfrage des Datenregisters erfolgt über die CKAN-API. Dafür werden die Metadaten aller Datensatzeinträge für einen bestimmten Zeitraum nach verschiedenen Stichwörtern, durchsucht. Die Ergebnisse der Abfrage werden in einer Tabelle ausgegeben, die filter-, sortier- und editierbar ist. Durch die Spalte zur Priorisierung können die Ergebnisse außerdem bewertet werden. Das Tool macht bereits einen ersten automatischen Priorisierungsvorschlag basierend auf der räumlichen Verfügbarkeit, dem Vorhandensein eines Geoformates und eines klaren Raumbezugs.
 Zuletzt kann die Ergebnisliste als XLSX oder CSV-Datei für den weiteren Gebrauch und zum Teilen exportiert werden.
 
-Es gilt zu beachten, dass die automatische Abfrage nur eine erste Annäherung sein kann, die Ergebnisse sollten stets sorgfältig überprüft werden.
+Es gilt zu beachten, dass die automatische Abfrage nur eine erste Annäherung sein kann, die Ergebnisse sollten daher stets sorgfältig überprüft werden.
