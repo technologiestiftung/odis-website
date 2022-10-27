@@ -7,7 +7,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# Es beginnt mit dem Open-Data Klassentreffen
+## Es beginnt mit dem Open-Data Klassentreffen
 
 Zu Beginn des Open Data Programms auf der Messe lud der Arbeitskreis Open Data/Open API des Branchenverbands Bitkom zum Open Data Klassentreffen. Unter der Leitung und Moderation von Marie Jensen gaben verschiedende Akteure aus Zivilgesellschaft, Wirtschaft, Politik und Verbänden Impulse und Enblicke in die derzeitigen Herausforderungen für Open Data in Deutschland. Auch ODIS-Teamlead Lisa Stubert berichtete von den aktuellen Open Data Projekten in Berlin und stellte Thesen auf wohin die Reise in den nächsten Jahren hingehen könnte. Die anschließende Diskussion mit allen Vortragenden und dem Publikum machte nochmal deutlich, dass das Interesse an Open Data in den letzten Jahren gewachsen ist, was auch an der gut besuchten Veranstaltung deutlich wurde. Andererseits wird das Potenzial von Open Data vor allem für die Verwaltung und im Kontext von Smart Cities oder Smart Regions noch nicht gänzlich verstanden und Open Data wird bei all den Herausforderungen für die Kommunen noch häufig unterpriorisiert. Fazit: Es bleibt noch viel zu tun!
 
@@ -16,11 +16,13 @@ Zu Beginn des Open Data Programms auf der Messe lud der Arbeitskreis Open Data/O
 </center>
 <br>
 
-# Das Bundeskompetenzzentrum Open Data stellt sich vor
+# Bundeskompetenzzentrum Open Data & Govdata stellen sich vor
 Am zweiten Tag der SCCON stellte das [Kompetenzzentrum Open Data (CCOD)](https://www.bva.bund.de/DE/Services/Behoerden/Beratung/Beratungszentrum/OpenData/opendata_node.html)im Bundesverwaltungsamt seine Arbeit vor. Ähnlich wie die ODIS unterstützt das CCOD die Behörden bei der Umsetzung von Open Data von der Dateninventur bis zur Bereitstellung, erarbeitet Unterstützungsdokumente und bietet Netzwerktreffen an. Für uns als ODIS war es sehr interessant die Arbeit des CCOD auf Bundesebene besser kennenzulernen und über ähnliche Herausforderungen aber auch Erfolgsfaktoren zu diskutieren. 
 So sind mittlerweile auch in den Bundesebheörden Open Data-Beauftragte aktiv, die als Ansprechpersonen für das CCOD und natürlich in die Behörden hinein eine ganz tragende Rolle für die Open Data Aktivitäten spielen.
-
 Das CCOD bietet auf seiner [Webseite](https://www.bva.bund.de/DE/Services/Behoerden/Beratung/Beratungszentrum/OpenData/Handbuch/handbuch_node.html;jsessionid=586AA2149E985D3B136B7FA1CA4E4ECE.internet271) interessante Materialien an, darunter auch ein Handbuch Open Data. 
+
+Anschließend berichtete Christian Horn, Leiter der Geschäfts- und Koordinierungsstelle [GovData](https://www.govdata.de) von den aktuellen Entwicklungen beim Datenportal Deutschland. GovData bietet einen einheitlichen, zentralen Zugang zu Verwaltungsdaten aus Bund, Ländern und Kommunen mit dem Ziel, Daten an zentraler Stelle auffindbar zu machen. Immer noch gibt es bei der Zulieferung von Open Data jedoch weiße Flecken. So liefern bei weitem noch nicht alle der rund 11.000 Städte und Gemeinden Daten an GovData. Und auch auf Länderebene sind mit dem Saarland und Sachsen-Anhalt zwei Bundesländer nicht an GovData angeschloßen.
+Interessant war im Beitrag aber auch zu erfahren, dass eine Nutzer:innenbefragung von GovData ergab, dass in den nächsten Jahren mit einem deutlichen Anstieg an Open Data aus Forschungseinrichtungen, Bundesbehörden, Ländern und Kommunen zu rechnen ist. 
 
 
 # Spannender Einblick in die Open Data Aktivitäten Österreichs
