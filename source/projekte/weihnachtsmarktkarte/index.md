@@ -11,7 +11,7 @@ indexImage: placeholder.png
 heroImage: erfrischungskarte_hero.png
 ---
 
-Die Berliner Weihnachtsmarktkarte bietet allen Interessierten eine Übersicht über die Berliner Weihnachtsmärkte mit weiterführenden Informationen wie Öffnungszeiten, besondere Attraktionen oder Eintrittspreisen. So können Weihnachstmärkte erkundet werden und der Besuch unter Berücksichtigung spezifischer Interessen im Voraus geplant werden. Die Anwendung zeigt das Potenzial offener Daten insbesondere auch in der Kombination weiterer frei verfügbarer Daten. Damit ist die Anwendung ein ein Beispiel dafür, dass auch mit auf den ersten Blick vermeintlich unspektakulären Daten ein Mehrwert für die Stadtgesellschaft und auch für den Touristenstandort Berlin generiert werden kann. Die ODIS wünscht allen viel Spaß bei der Erkundung der Weihnachtsmärkte!
+Die Berliner Weihnachtsmarktkarte bietet allen Interessierten nicht nur einen Überblick über die vielen Berliner Weihnachtsmärkte. Durch die Möglichkeit nach Datum und Öffnungszeiten oder bestimmten Kategorien wie kostenlose Weihnachtsmärkte zu filtern, kann der Besuch mit Freunden oder Kollegen im Voraus geplant werden. Die Anwendung zeigt das Potenzial offener Daten insbesondere auch in der Kombination weiterer frei verfügbarer Daten wie zum Beispiel öffentlichen Toiletten in der Stadt. Damit ist die Anwendung ein weiteres Beispiel dafür, dass auch mit auf den ersten Blick vermeintlich unspektakulären Daten ein Mehrwert für die Stadtgesellschaft und auch für den Touristenstandort Berlin generiert werden kann. Die ODIS wünscht allen viel Spaß bei der Erkundung der Weihnachtsmärkte!
 
 ## Hintergrund
 
