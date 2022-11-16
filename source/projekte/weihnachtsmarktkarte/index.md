@@ -1,7 +1,7 @@
 ---
 layout: project
 tags: project
-title: Berliner Weihnachtsmärkte
+title: Weihnachtsmarktfinder
 blogLinkTitle: "Hier geht's zur Karte"
 blogLink: https://erfrischungskarte.odis-berlin.de/
 metaDescription: Eine Webkarte mit den Berliner Weihnachtsmärkten zum Erkunden, Planen und Teilen
