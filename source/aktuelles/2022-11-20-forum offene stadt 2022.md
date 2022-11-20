@@ -12,14 +12,20 @@ urlText: Zum Blogbeitrag
 
 Die Hansestadt ruft und ODIS folgt. In fast vollständiger Teamstärke reist das ODIS-Team zum Forum offene Stadt [Forum offene Stadt](https://koerber-stiftung.de/projekte/forum-offene-stadt/forum-offene-stadt-2022/) an die Elbe und nutzt dabei auch die Gelegenheit, um sich mit der Leitung von [GovData](https://www.govdata.de/) in der Senatskanzlei Hamburg auszutauschen. Neben dem aktuellen Stand zum Umzug von Govdata zur Fitko standen die Themen Data Literacy, das Hamburgische Transparenzgesetz sowie Linked Open Data in der Praxis im Fokus. Liebe Christians, wir freuen uns euch in Berlin bald zum Gegenbesuch begrüßen zu dürfen. 
 
-## Taiwan macht vor, wie eine gemeinsame digitale Transformation aussehen kann
-
-Audrey Tang, Taiwans erste Digitalministerin eröffnete das Forum offene Stadt per Videoschalte und setzte damit direkt zu Beginn der Veranstaltung ein starkes Zeichen für direkte, gelebte Kooperation zwischen Zivilgesellschaft und Verwaltung. Überwiegend junge Menschen aus der Techszene, allen voran das Kollektiv [g0v](https://g0v.tw) engagieren sich in beeindruckender Weise, um die junge Demokratie resilient zu machen und sich den Herausforderungen wie dem Klimawandel aber auch der direkten Bedrohung der jungen Demokratie in Taiwan durch China zu stellen. So ist im Inselstaat auf der einen Seite eine richtige Partizpiationskultur durch Onlinediskussionsplattformen wie [vTaiwan](https://info.vtaiwan.tw) und [Pol.is](https://pol.is/gov) sowie regelmäßigen offenen Ideationmeetings und Hackathons entstanden. Auf der anderen Seite ist die Regierung durchlässig gegenüber Vorschlägen und bindet die Gesellschaft in die Entscheidungsprozesse ein. Im Ergebnis kann die Zivilgesellschaft gesellschaftliche Themen auf die Agenda setzen und konkret an Lösungen mitarbeiten. 
-
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/ForumoffeneStadt1.jpg", caption:"Interessante Einblicke in 10 Jahre Open Data Österreich" %}
 </center>
 <br>
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/ForumoffeneStadt2.jpg", caption:"Interessante Einblicke in 10 Jahre Open Data Österreich" %}
+</center>
+<br>
+
+## Taiwan macht vor, wie eine gemeinsame digitale Transformation aussehen kann
+
+Audrey Tang, Taiwans erste Digitalministerin eröffnete das Forum offene Stadt per Videoschalte und setzte damit direkt zu Beginn der Veranstaltung ein starkes Zeichen für direkte, gelebte Kooperation zwischen Zivilgesellschaft und Verwaltung. Überwiegend junge Menschen aus der Techszene, allen voran das Kollektiv [g0v](https://g0v.tw) engagieren sich in beeindruckender Weise, um die junge Demokratie resilient zu machen und sich den Herausforderungen wie dem Klimawandel aber auch der direkten Bedrohung der jungen Demokratie in Taiwan durch China zu stellen. So ist im Inselstaat auf der einen Seite eine richtige Partizpiationskultur durch Onlinediskussionsplattformen wie [vTaiwan](https://info.vtaiwan.tw) und [Pol.is](https://pol.is/gov) sowie regelmäßigen offenen Ideationmeetings und Hackathons entstanden. Auf der anderen Seite ist die Regierung durchlässig gegenüber Vorschlägen und bindet die Gesellschaft in die Entscheidungsprozesse ein. Im Ergebnis kann die Zivilgesellschaft gesellschaftliche Themen auf die Agenda setzen und konkret an Lösungen mitarbeiten. 
+
+
 
 ## Deutschland verhaftet in alten Mustern
 
@@ -41,7 +47,13 @@ Auf einer Paneldiskussion stellten die Stadt Freiburg und das CityLAB Berlin ihr
 # Städte lernen voneinander durch offene Daten und Open Source
 Damit digitale Projekte nicht regionale Einzellösungen bleiben, braucht offene Daten und offene Softwaresysteme in der Verwaltung. Ein schönes Beispiel für ein gelungenes Open Source-Projekt ist [Stadnavi] (https://stadtnavi.de) aus der ländlich geprägten Stadt Herrenberg. Hier können sich Bürgerinnen über Mobilitätsangebote in Echtzeit informieren und sich zum Beispiel auch umweltfreundliche Wege von A nach B anzeigen lassen. Durch die Nutzung von Open Source Software können auch andere Städte und Kommunen die Anwendung verwenden, an individuelle Bedürfnisse anpassen und weiterentwickeln.
 
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/ForumoffeneStadt3.jpg", caption:"Interessante Einblicke in 10 Jahre Open Data Österreich" %}
+</center>
+<br>
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/ForumoffeneStadt4.jpg", caption:"Interessante Einblicke in 10 Jahre Open Data Österreich" %}
+</center>
+<br>
 
-
-{% include "macro-image-section-small.html", src:"/assets/images/Odis_meets_CDO.png",  caption:"Gleich getwittert: Das gemeinsame Gruppenfoto im Büro des CDO" %}
 
