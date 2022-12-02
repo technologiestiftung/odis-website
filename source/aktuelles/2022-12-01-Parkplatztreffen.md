@@ -48,7 +48,7 @@ Die genaue Methodik zum Project Car Tagger liegt in diesem [Githup-Repo](github.
 <br>
 
 ### Paperplanes (https://www.paper-planes.net/)
-
+Der Verein paper planes e.V. engagiert sich 
 vvdsv
 vdsvdvdv
 
@@ -61,6 +61,17 @@ Wir haben uns sehr gefreut, dass der CDO und sein Team uns zu einem ersten Austa
 ## Perspektiven aus der Berliner Verwaltung
 
 
+
+### SenUMVK startet mit der Datenerhebung
+
+
+
+
+### Das BA Xhain benötigt Parkplatzdaten
+
+
+
+
 ## Das Vernetzungstreffen kann nur der Anfang sein
 
- Nachdem ein erster Austausch und ein Überblick über die verschiedenen Aktivitäten rund um das Thema Parkplatdaten erfolgte, waren sich die Teilnehmer:innen einig, dass ein zweites Treffen wünschenswert ist, um vertieft gemeinsam zu überlegen, wie eine systematische Datenerfassung und Datennutzung möglich wird und um weiter im Austausch zu bleiben. Bei Brezeln und kühlen Getränken klang damit das erste Vernetuzungstreffen gemütlich aus. Die ODIS und das CityLAB freuen sich auf die Fortführung des Dialogs!
+ Nachdem ein erster Austausch und ein Überblick über die verschiedenen Aktivitäten rund um das Thema Parkplatdaten erfolgte, waren sich die Teilnehmer:innen einig, dass ein zweites Treffen wünschenswert ist, um vertieft gemeinsam zu überlegen, wie eine systematische Datenerfassung und Datennutzung möglich wird und um weiter im Austausch zu bleiben. Bei Brezeln und kühlen Getränken klang damit das erste Vernetzungstreffen gemütlich aus. Die ODIS und das CityLAB freuen sich auf die Fortführung des Dialogs!
