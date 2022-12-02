@@ -13,14 +13,14 @@ Unser **Handout** zeigt aus Anwender:innenperspektive auf, welche Einschränkung
 <br><br>
 
 <center>
-  <object data="/assets/file-download/Lizenzen_Handout_v4.pdf" type="application/pdf" class="pdf">
-      <embed src="/assets/file-download/Lizenzen_Handout_v4.pdf">
-          <p>Dieser Browser unterstützt keine PDF-Ansichten. Bitte laden Sie sich das PDF herunter, um es anzusehen. <a href="/assets/file-download/Lizenzen_Handout_v4.pdf">Download Handout</a>.</p>
+  <object data="/assets/file-download/Lizenzen_Handout.pdf" type="application/pdf" class="pdf">
+      <embed src="/assets/file-download/Lizenzen_Handout.pdf">
+          <p>Dieser Browser unterstützt keine PDF-Ansichten. Bitte laden Sie sich das PDF herunter, um es anzusehen. <a href="/assets/file-download/Lizenzen_Handout.pdf">Download Handout</a>.</p>
   </object>
 </center>
 <br>
 
-Download: [Handout zu Lizenzen als PDF](/assets/file-download/Lizenzen_Handout_v4.pdf)
+Download: [Handout zu Lizenzen als PDF](/assets/file-download/Lizenzen_Handout.pdf)
 
 
 ## Die ODIS empfiehlt CC-0
