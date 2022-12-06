@@ -39,7 +39,7 @@ Die Präsentation findet ihr [hier](https://docs.google.com/presentation/d/1fB2j
 ### Project Car Tagger
 Mitorganisator Hans Hack stellte ein weiteres Datenerhebungsprojekt vor: Car Tagger ist eim Tool, dass er programmiert hat, um fahrende oder parkende Autos anhand ihres Umrisses mit Satellitenbildern ausfindig zu machen und zu markieren. Ein Aufruf an die Community, sich zu beteiligen, führte schließlich dazu, dass mittlerweile 50% der Fläche Berlins ca. 500.000 Autos getagged wurden. Wenngelich auch hier wie in vielen Community-Projekten die Datenpflege als große Herausforderung besteht, kann das Tool aufgrund seiner Nachvollziehbarkeit und niedrigschwelligen Einstieg überall genutzt werden und somit eine weitere Datenquelle bieten. Die Daten stehen als offene Daten zur Verfügung. Eine spannende Visualiserung der Daten hat Hans in [dieser Anwendung](hhttps://hanshack.com/howmanycars/?viewRatio=false&zoom=13.084933259369187&lng=13.443490099742121&lat=52.47016553456325) vorgenommen, die das Verhältnis von parkenden und fahrenden Autos in Berlin anzeigt.
 
-Die Präsentation findet ihr [hier](https://docs.google.com/presentation/d/1Fl1ojF1nl01fnM8WdUI4JA4WP-k0fnCN-4FK7kwbLOY/edit#slide=id.g194b3b5c622_0_11/)
+Die Präsentation findet ihr [hier](https://docs.google.com/presentation/d/1Fl1ojF1nl01fnM8WdUI4JA4WP-k0fnCN-4FK7kwbLOY/edit#slide=id.g194b3b5c622_0_11/).
 Die genaue Methodik zum Project Car Tagger liegt in diesem [Githup-Repo](github.com/hanshack/car-tagging-data-berlin/) ab.
 
 <center>
@@ -48,19 +48,23 @@ Die genaue Methodik zum Project Car Tagger liegt in diesem [Githup-Repo](github.
 <br>
 
 ### Paperplanes (https://www.paper-planes.net/)
-Der Verein paper planes e.V. engagiert sich 
-vvdsv
-vdsvdvdv
+Etwas visionärer und futuristischer gestaltete sich der Vortrag von paper planes e.V. Der Verein stellt unter dem Leitbild der Stadt der kurzen Wege verschiedene Thesen auf, wie wir in Zukunft leben könnten. Dabei kommt dem öffentlichen Straßenraum eine besondere Rolle zuteil. Denn nach Ansicht von paper planes würde eine Befreiung der Straßen von Autos und damit natürlich auch von Parkplätzen die Chance bieten, das Zusammeneleben in der Stadt ganz neu zu gestalten. Einige Ideen werden im Berliner Stadtbild bereits erkennbar wie zum Beispiel Parklets, die Parkbuchten in Orte des Verweilens und Zusammenkommens umwandeln und damit Alternativen zu Parkräumen entstehen. Für paper planes wäre eine umfassende Datenlage zu Parkplätzen eine wichtige Grundlage für weitere Aktivitäten.
 
+[Hier](src:"/assets/file-download/preasentation_paperplanes.pdf") gehts zur Präsentation
 
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/paperplanes.png",  caption:"Parkplätze werden zu Begegnungsorten." %}
+</center>
+<br>
 
-### Pasymo – Partizipative System Modellierung, FH Potsdam (https://www.fh-potsdam.de/studium-weiterbildung/projekte/pasymo)
+### Pasymo – Partizipative System Modellierung
 
-Wir haben uns sehr gefreut, dass der CDO und sein Team uns zu einem ersten Austausch in die SennInnDS eingeladen hat. Im gemeinsamen Gespräch konnten wir nochmal vertieft unsere Arbeit vorstellen und anschließend bereits viele Themen besprechen und gemeinsame Maßnahmen und Ziele festhalten. 
+Ein Mobilitätsprojekz aus der Wissenschaft präsentierte Pasymo. Das Forschungsprojekt ist am Institut für angewandte Forschung (IaF) Urbane Zukunft der FH Potsdam angesiedelt mit dem Ziel gemeinsam mit städtischen Akteuren und Bürgerschaft eine Toolbox bestehend aus Modellen, Computersimulationen und Workshop-Konzepten zu entwickeln. Als besonders innovativ gestaltet sich der Ansatz Planungs- und Beteiligungsformate durch die Visualisierung von was-wäre-wenn Szenarien städtischer Entwicklungsprozesse zu ergänzen. Die Forschungsgruppe kann dabei auch auf ein Lastenrad zurückgreifen und mit dem Modell zu den Bürgern und politischen Entscheidungsträgern vor Ort gelangen. Auch für das Forschungsprojekt wäre eine gute Datenlage Grundlage für evidenzbasierte Politik und Stadtplanung
+
+[Hier](https://www.fh-potsdam.de/studium-weiterbildung/projekte/pasymo/) gehts zum Forschungsprojekt. 
 
 ## Perspektiven aus der Berliner Verwaltung
-
-
+Neben den Gruppen aus Zivilgesellschaft und Wissenschaft, die Daten erfassen oder benötigen, hat auch die Berliner Verwaltung hohes Interesse an einer umfangereichen und verlässlichen Datengrundlage. Dies wird durch die Vortragende aus der Senatsverwealtung für Umwelt, Mobilität, Verbraucher- und Klimaschutz sowie dem Bezirksamt Friedrichshain-Kreuzberg deutlich.
 
 ### SenUMVK startet mit der Datenerhebung
 
