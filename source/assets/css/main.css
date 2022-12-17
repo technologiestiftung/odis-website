@@ -125,11 +125,13 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
-
+/* if a css element is not known, look it up on mdn: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr*/
 hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+  border: 2px solid red;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
