@@ -10,7 +10,7 @@ urlText: Zum Blogbeitrag
 # Vernetzungstreffen zu Parkplatzdaten: Ehrenamt trifft auf Verwaltung
 
 1,24 Millionen Autos sind in Berlin zugelassen. Wenn sie nicht in einer Garage stehen, parken sie meist im öffentlichen Straßenraum. Eine gute Datengrundlage zum Thema ist wichtig, aber leider sehr lückenhaft. 
-Kein Wunder also, dass das Interesse am ersten Vernetzungstreffen zu Parkplatzdaten am 22. November 2022 groß war. Der Eventraum im [CityLAB Berlin](https://citylab-berlin.org/de/start/) füllte sich trotz später Uhrzeit bis auf den letzten Platz. Mehrere ehrenamtliche Initiativen sowie Vertreter:innen der Verwaltung folgten der Einladung von Hans Hack (ODIS/CityLAB) und Prof. Dr. Sebastian Meier (FH Potsdam). Die Teilnehmer:innen einte der Wunsch sich eine Übersicht über die bestehende Datenlage zu Parkplätzen und mögliche Anwendungsfälle auszutauschen. 
+Kein Wunder also, dass das Interesse am ersten Vernetzungstreffen zu Parkplatzdaten am 22. November 2022 groß war. Der Eventraum im [CityLAB Berlin](https://citylab-berlin.org/de/start/) füllte sich trotz später Uhrzeit bis auf den letzten Platz. Mehrere ehrenamtliche Initiativen sowie Vertreter:innen der Verwaltung folgten der Einladung von Hans Hack (ODIS/CityLAB) und Prof. Dr. Sebastian Meier (FH Potsdam). Die Teilnehmer:innen einte der Wunsch sich eine Übersicht über die bestehende Datenlage zu Parkplätzen zu verschaffen und über mögliche Anwendungsfälle auszutauschen. 
 
 ## Die ehrenamtlichen Initiativen stellen sich vor
 
