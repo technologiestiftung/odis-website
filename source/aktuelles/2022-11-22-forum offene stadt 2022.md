@@ -43,4 +43,9 @@ Damit digitale Projekte auch überregional ihr Potenzial entfalten können, brau
 <br><br>
 
 ## Videoaufzeichnungen der Veranstaltung
-Zu den vergangenen Foren Offene Stadt gibt es eine Auswahl an Videoaufzeichnungen, welche [hier](https://koerber-stiftung.de/projekte/forum-offene-stadt/forum-offene-stadt-rueckblicke/) abrufbar sind und bestimmt bald um Videos zum diesjährigen Event erweitert werden. Übrigens: Das Forum offene Stadt steht allen Interessierten offen und ist kostenfrei. Sollte unser Blogbeitrag Ihr Interesse geweckt haben, nehmen Sie doch nächstes Jahr auch daran teil!
+Der folgende Film gibt einen kleinen Einblick in das diesjährige Event und fasst Stimmen verschiedener Akteur:innen zusammen, darunter auch Lisa Stubert von der ODIS. Zu den vergangenen Foren gibt es außerdem eine Auswahl an Videoaufzeichnungen, welche [hier](https://koerber-stiftung.de/projekte/forum-offene-stadt/forum-offene-stadt-rueckblicke/) abrufbar sind und bestimmt bald um Videos zum diesjährigen Event erweitert werden. Übrigens: Das Forum offene Stadt steht allen Interessierten offen und ist kostenfrei. Sollte unser Blogbeitrag Ihr Interesse geweckt haben, nehmen Sie doch nächstes Jahr auch daran teil!
+
+<p style="text-align: center;">
+<iframe class="video-big" src="https://www.youtube.com/embed/4juVlMJH6s4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
