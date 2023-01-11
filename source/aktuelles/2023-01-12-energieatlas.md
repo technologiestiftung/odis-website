@@ -2,7 +2,7 @@
 layout: news
 tags: post
 title: "Mit offenen Daten durch den Winter: Der Berliner Energieatlas"
-metaDescription: Energieversorgung und -sicherheit beschäftigt spätestens seit diesem Winter ganz Berlin. Der Energieatlas der SenWEB bietet Bürger:innen, Verwaltung und Unternehmen zahlreiche Daten und Informationen zur Nutzung und Erzeugung von Energie in Berlin. Mit dem Energieatlas werden Daten in einer nutzer­freund­lichen Online-Oberfläche visualisiert, die durch verschiedene Darstellungs- und Analyse­funk­tionen einander gegenübergestellt und ausgewertet werden können. Auch der Download einiger Datensätze ist möglich.
+metaDescription: Energieversorgung und -sicherheit beschäftigt spätestens seit diesem Winter ganz Berlin. Der Energieatlas der SenWEB bietet Bürger:innen, Verwaltung und Unternehmen zahlreiche offene Daten und Informationen zur Nutzung und Erzeugung von Energie in Berlin. Mit dem Energieatlas werden Daten in einer nutzer­freund­lichen Online-Oberfläche visualisiert, die durch verschiedene Darstellungs- und Analyse­funk­tionen einander gegenübergestellt und ausgewertet werden können. 
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
