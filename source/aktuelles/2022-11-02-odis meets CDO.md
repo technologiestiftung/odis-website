@@ -9,7 +9,7 @@ urlText: Zum Blogbeitrag
 ---
 ## Zuständigkeitswechsel bei Open Data in der Berliner Verwaltung
 
-Bereits bevor die ODIS im Mai 2018 entstanden ist, lag das Thema Open Data in der Zuständigkeit der Senatsverwaltung für Wirtschaft, Energie und Betriebe. Nun ist das Thema Open Data zur Senatsverwaltung für Inneres, Digitalisierung und Sport gewechselt. Mitgewechselt ist auch Frau Betül Özdemir, die nun zusammen mit den Kolleg:innen aus der Abteilung 5 & 6 der SennInnDS unter der Leitung des Chief Digital Officers Dr. Ralf Kleindiek das Thema Open Data  weiter vorantreiben.
+Bereits bevor die ODIS im Mai 2018 entstanden ist, lag das Thema Open Data in der Zuständigkeit der Senatsverwaltung für Wirtschaft, Energie und Betriebe. Nun ist das Thema Open Data zur Senatsverwaltung für Inneres, Digitalisierung und Sport gewechselt. Mitgewechselt ist Frau Betül Özdemir, die nun in der Abteilung VI der SenInnDS unter der Leitung des Chief Digital Officers Dr. Ralf Kleindiek das Thema Open Data weiter vorantreiben.
 
 
 <center>
