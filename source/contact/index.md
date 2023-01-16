@@ -30,7 +30,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
         </div>
         <div class="form-field">
 			    <label for id="organisation">Organisation/Abteilung</label>
-          <input type="text" id="organisation" name="organisation" placeholder="Ihre Organisation/Abteilung"/>
+          <input type="text" id="organisation" name="organisation" placeholder="Ihre Organisation/Abteilung" pattern="^(?!.*[Ss]tandesamt).*$"  title="Bitte beachten Sie, dass wir nicht die ODiS, Online-Datenbank beim Standesamt, sind. Anfragen bzgl. Zugansdaten zu dieser Datenbank können wir leider nicht bearbeiten"/>
         </div>
         <div class="form-field">
           <label for id="email">E-Mail-Adresse*</label>
