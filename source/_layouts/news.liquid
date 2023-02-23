@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html>
 
-	{% include "head.html" %}
+{% include "head.html" %}
 
 <body>
+
+	<!--@todo klären was barba.js macht -->
 	<div id="barba-wrapper">
-		<div class="barba-container">
-
+		<div>
 			{% include "topnav.html" %}
+		</div>
 
 
-			<div class="section mt-6 mb-6">
-                <div class="pb-2">{{page.date | date: "%d.%m.%Y" }}</div>
-                {{ content }}
+		<!--header-->
+
+		<section class="bg-blue-500">
+
+			<div class="pb-2">
+				{{page.date | date: "%d.%m.%Y" }}
 			</div>
 
+			<div class="text-red-500">
+				{{ title }}
+			</div>
+
+			<div>
+				{{ metaDescription }}
+			</div>
+		</section>
+
+
+		<section class="flex">
+
+			<!--content-->
+			<div style="outline: 2px solid red;" class="mx-6 text-xl">
+
+				<div>
+					{{ content }}
+				</div>
+			</div>
+
+
+			<!--side navigation-->
+			<div style="outline: 2px solid blue" class="bg-anna"><!--liegt in tailwind.config.js-->
+				<p>inhalt 1 </p>
+			</div>
+		</section>
+
+		<section>
 			{% include "footer.html" %}
 			{% include "matomo.html" %}
-		</div>
+		</section>
+
+
 	</div>
+
+
+
+
+
 </body>
 
 </html>

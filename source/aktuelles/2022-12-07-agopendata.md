@@ -6,6 +6,7 @@ metaDescription: Nach dem Zuständigkeitswechsel von Open Data von der SenWEB zu
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
+
 ---
 # Die AG Open Data nimmt wieder Fahrt auf 
  Mit dem Zuständigkeitswechsel von der Senatsverwaltung für Wirtschaft, Energie und Betriebe (SenWEB) zur Senatsverwaltung für Inneres, Digitaliserung und Sport (SenInnDS), der Ende Oktober 2022 erfolgte, konnte auch die AG Open Data wieder zusammenkommen. Wie bereits zur ersten AG-Sitzung in diesem Jahr fand der Austausch im CityLAB Berlin statt. Neben bekannten Gesichtern kamen auch neue [behördliche Open Data Beauftragten](https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/open-data-beauftragte/) zusammen.
