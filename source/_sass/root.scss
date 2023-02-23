@@ -1,13 +1,19 @@
 // @import './reset.scss';
 // @import './vars.scss';
 // @import './bootstrap/bootstrap.scss';
-// @import './content.scss';
+@import './content.scss';
 // @import './dashboard.scss';
 // @import './nav.scss';
 
 // em{
 //     font-style: italic;
 // }
+
+h2 {
+    font-size: 4rem !important;
+    color: red
+
+}
 
 // h1{
 //     font-family: 'Clan Medium', sans-serif;

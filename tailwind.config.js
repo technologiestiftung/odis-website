@@ -6,7 +6,7 @@ module.exports = {
     content: ["./**/*.liquid"],
   },
   theme: {
-    colors: {anna:"#9bc95b"},
+    colors: {anna:"#9bc95b", blue:"blue"},
     extend: {},
   },
   plugins: [],
