@@ -14,18 +14,22 @@
 
 		<!--header-->
 
-		<section class="bg-blue-500  text-cyan-50">
+		<section class="bg-blue-500  text-cyan-50 flex justify-center">
 
-			<div class="pb-2">
-				{{page.date | date: "%d.%m.%Y" }}
-			</div>
+			<div class="flex flex-col w-1/2 outline my-20">
+				
+				<div class="text-sm">
+					{{page.date | date: "%d.%m.%Y" }}
+				</div>
 
-			<div class="text-red-500">
-				{{ title }}
-			</div>
+				<div class="text-4xl">
+					{{ title }}
+				</div>
 
-			<div>
-				{{ metaDescription }}
+				<div>
+					{{ metaDescription }}
+				</div>
+
 			</div>
 		</section>
 
@@ -33,7 +37,7 @@
 		<section class="flex">
 
 			<!--content-->
-			<div style="outline: 2px solid red;" class="mx-6 text-xl">
+			<div style="outline: 2px solid red;" class="w-4/5 pl-8 pr-24 mr-16 text-l">
 
 				<div>
 					{{ content }}
@@ -42,7 +46,7 @@
 
 
 			<!--side navigation-->
-			<div style="outline: 2px solid blue" class="bg-anna"><!--liegt in tailwind.config.js-->
+			<div style="outline: 2px solid blue" class="w-1/5"><!--liegt in tailwind.config.js-->
 				<p>Bericht zum Stand der OD-Strategie von SenInnDS</p>
 				<p>Musterdatenkatalog für Berlin</p>
 				<p>Neues von den OD-Beauftragten</p>
