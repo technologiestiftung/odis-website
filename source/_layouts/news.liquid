@@ -3,8 +3,10 @@
 
 {% include "head.html" %}
 
-<body>
+<body class="bg-cyan-50">
 
+	<!--@todo donnerstag - fonts zueinander gut setzen, beso. intro oben, img im root css stylen???, footer falls zeit -->
+	
 	<!--@todo klären was barba.js macht -->
 	<div id="barba-wrapper">
 		<div>
@@ -14,19 +16,19 @@
 
 		<!--header-->
 
-		<section class="bg-blue-500  text-cyan-50 flex justify-center font-clanProBolditalic">
+		<section class="bg-blue-500  text-cyan-50 flex justify-center">
 
-			<div class="flex flex-col w-1/2 outline my-20">
-				
-				<div class="text-sm">
+			<div class="flex flex-col w-1/2 my-20">
+
+				<div class="text-sm font-clanProBold pb-4">
 					{{page.date | date: "%d.%m.%Y" }}
 				</div>
 
-				<div class="text-4xl">
+				<div class="text-5xl font-clanProBold pb-4 leading-snug">
 					{{ title }}
 				</div>
 
-				<div>
+				<div class="font-clanProBook leading-relaxed">
 					{{ metaDescription }}
 				</div>
 
@@ -37,7 +39,8 @@
 		<section class="flex">
 
 			<!--content-->
-			<div style="outline: 2px solid red;" class="w-4/5 pl-8 pr-24 mr-16 text-l">
+			<div style="outline: 2px solid red;"
+				class="w-4/5 ml-60 mt-20 mr-40 text-l font-clanProNews leading-relaxed text-blue-900">
 
 				<div>
 					{{ content }}
@@ -46,11 +49,15 @@
 
 
 			<!--side navigation-->
-			<div style="outline: 2px solid blue" class="w-1/5"><!--liegt in tailwind.config.js-->
-				<p>Bericht zum Stand der OD-Strategie von SenInnDS</p>
-				<p>Musterdatenkatalog für Berlin</p>
-				<p>Neues von den OD-Beauftragten</p>
-				<p>Fazit: Mit Schwung ins neue Jahr!</p>
+			<div style="outline: 2px solid blue" class="w-1/5 mt-20 mr-60"><!--liegt in tailwind.config.js-->
+
+				<ul>
+					<li>Bericht zum Stand der OD-Strategie von SenInnDS</li>
+					<li>Musterdatenkatalog für Berlin</li>
+					<li>Neues von den OD-Beauftragten</li>
+					<li>Fazit: Mit Schwung ins neue Jahr!</li>
+				</ul>
+
 			</div>
 		</section>
 
