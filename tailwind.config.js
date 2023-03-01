@@ -22,9 +22,22 @@ module.exports = {
       },
     
     },
+
+    fontFamily: {
+        clanProMedium: [ 
+          'Clan Medium',
+          'ui-sans-serif',
+        ],
+
+        clanProBold: [ 
+          'Clan Bold',
+          'ui-sans-serif',
+        ],
+      },
       
     
       extend: {},
   },
+
   plugins: [],
 };
