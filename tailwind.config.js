@@ -6,8 +6,25 @@ module.exports = {
     content: ["./**/*.liquid"],
   },
   theme: {
-    colors: {anna:"#9bc95b", blue:"blue"},
-    extend: {},
+    
+    colors: {
+      red:"#E60032", 
+
+      blue: { 
+        "100": "#91A6E8",
+        "500": "#1E398F",
+        "900": "#91A6E8" 
+      },
+
+      cyan: { 
+        "50": "#FDFEFF",
+        "100": "#EDF8FE",
+      },
+    
+    },
+      
+    
+      extend: {},
   },
   plugins: [],
 };
