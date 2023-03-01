@@ -29,8 +29,38 @@ module.exports = {
           'ui-sans-serif',
         ],
 
+        clanProMediumitalic: [ 
+          'Clan Mediumitalic',
+          'ui-sans-serif',
+        ],
+
         clanProBold: [ 
           'Clan Bold',
+          'ui-sans-serif',
+        ],
+
+        clanProBolditalic: [ 
+          'Clan Bolditalic',
+          'ui-sans-serif',
+        ],
+
+        clanProBook: [ 
+          'Clan Book',
+          'ui-sans-serif',
+        ],
+
+        clanProBookitalic: [ 
+          'Clan Bookitalic',
+          'ui-sans-serif',
+        ],
+
+        clanProNews: [ 
+          'Clan News',
+          'ui-sans-serif',
+        ],
+
+        clanProNewsitalic: [ 
+          'Clan Newsitalic',
           'ui-sans-serif',
         ],
       },
