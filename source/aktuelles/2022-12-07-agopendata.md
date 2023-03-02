@@ -31,3 +31,5 @@ Susanne Langhammer hat zudem die Kommunikation in die Fachbereiche durch eine di
 ## Fazit: Mit Schwung ins neue Jahr!
 
 Auch in den persönlichen Gesprächen nach der Sitzung ist wieder deutlich geworden, wie wichtig der Austausch zwischen OD-Beauftragten, der ODIS und der federführenden Senatsverwaltung, aber auch zwischen den OD-Beauftragten selbst ist. Mit der geplanten Verabschiedung der Open Data-Strategie für 2023 stehen wichtige Weichenstellungen an, bei der die AG Open Data weiter das zentrale Gremium für die Berliner Verwaltung in diesem Themenbereich sein wird.
+
+<br><br><br><hr>
