@@ -43,12 +43,5 @@
         font-family: "Clan Newsitalic";
         src: url('/assets/fonts/clan-newsitalic.woff') format("woff");
     }
-    
-  
-  /*  html, body, #__next {
-      font-family: "Clan Book", sans-serif;
-      color: #222222;
-    }
-  */
 
   }

@@ -3,7 +3,7 @@ module.exports = {
   //content: ["source/_layouts/*.liquid"],
   purge: {
     enabled: true,
-    content: ["./**/*.liquid"],
+    content: ["./**/*.liquid", "./**/*.html"]
   },
   theme: {
     
