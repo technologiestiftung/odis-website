@@ -13,10 +13,9 @@
 			{% include "topnav.html" %}
 		</div>
 
-
 		<!--header-->
 
-		<section class="bg-blue-500  text-cyan-50 flex justify-center">
+		<section class="bg-blue-500 md:bg-red-500 text-cyan-50 flex justify-center">
 
 			<div class="flex flex-col w-1/2 my-20">
 
@@ -35,12 +34,12 @@
 			</div>
 		</section>
 
-
+		<!--content-->
+		
 		<section class="flex">
-
-			<!--content-->
+			
 			<div style="outline: 2px solid red;"
-				class="w-4/5 ml-60 mt-20 mr-40 text-l font-clanProNews leading-relaxed text-blue-900">
+				class="w-4/5 ml-10 md:ml-60 mt-20 mr-40 text-l font-clanProNews leading-relaxed text-blue-900">
 
 				<div>
 					{{ content }}
@@ -49,7 +48,7 @@
 
 
 			<!--side navigation-->
-			<div style="outline: 2px solid blue" class="w-1/5 mt-20 mr-60"><!--liegt in tailwind.config.js-->
+			<div style="outline: 2px solid blue" class="hidden md:visible w-1/5 mt-20 mr-60"><!--liegt in tailwind.config.js-->
 
 				<ul>
 					<li>Bericht zum Stand der OD-Strategie von SenInnDS</li>
@@ -61,7 +60,9 @@
 			</div>
 		</section>
 
-		<section>
+		<!--footer-->
+
+		<section style="outline: 2px solid red;">
 			{% include "footer.html" %}
 			{% include "matomo.html" %}
 		</section>
