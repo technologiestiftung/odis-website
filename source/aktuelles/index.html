@@ -1,93 +1,77 @@
 ---
 layout: default.liquid
 title: Aktuelles
-permalink: "aktuelles/{%if pagination.pageNumber != 0%}{% assign pg=pagination.pageNumber %}{{ pg  | plus: 1}}/{%endif%}index.html"
+permalink: "aktuelles/{%if pagination.pageNumber != 0%}{% assign pg=pagination.pageNumber %}{{ pg | plus:
+1}}/{%endif%}index.html"
 pagination:
-    data: collections.post
-    size: 8
-    enabled: true
-    alias: posts
-    reverse: true
-
-
+data: collections.post
+size: 8
+enabled: true
+alias: posts
+reverse: true
 ---
 
+<!--@todo wie hier den button stylen?-->
 
+<div>
+  <div>
+    <h1 class="text-5xl font-clanProBold pb-4 leading-snug">Aktuelles</h1>
+  </div>
 
+  {% for post in posts %} {% if post.data.visible== true %}
 
-<div class="blog-posts-wrapper">
-    <div class="blog-posts-intro">
-        <h3 class="headline-02 primary mb-1 mt-4">
-            Aktuelles
-        </h3>
+  <!--injection of single blog-->
+  <div>
+    <span>{{post.date | date: "%d.%m.%Y"}}</span>
 
-        <h3 class="headline-03 primary mb-1 mt-4">
-            Immer auf dem neusten Stand.
-        </h3>
-        <p>
-            Sie möchten über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden?
-            <br class="conditional-break">
-            Melden Sie sich für den ODIS Newsletter an!
-        </p>
-        <a href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343">
-            <button class="button-primary">Für den Newsletter anmelden</button>
-        </a>
-        <div class="blog-post">
-            <p class="mt-4">
-                Newsletter verpasst? Stöbern Sie im
-            </p>
-            <a class="blog-link mt-4"
-            href="{{"archiv"}}">Newsletter-Archiv</a>
-        </div>
-        <!-- <span class="headline-04 mb-12"> -->
-            <!-- Hier finden Sie die neusten Blogposts der Open Data Informationsstelle. -->
-        <!-- </span> -->
+    <div>
+      <h3>{{ post.data.title }}</h3>
+      <p>{{ post.data.metaDescription }}</p>
     </div>
-        {% for post in posts %}
-           {% if post.data.visible== true  %}
-            <div class="blog-post">
-                <span class="date-small">{{post.date | date: "%d.%m.%Y"}}</span>
-                <div style="margin-bottom: 2rem;">
-                    <h3 class="headline-03" style="margin-bottom: 1rem;">{{ post.data.title }}</h3>
-                    <p style="margin-top: 0rem;">{{ post.data.metaDescription }}</p>
-                </div>
-                {% if post.data.link %}
-                <a class="blog-link"
-                    href="{{post.data.link}}">{{post.data.urlText}}</a>
-                    {% else %}
-                    <a class="blog-link"
-                    href="{{post.url}}">{{post.data.urlText}}</a>
-                {% endif %}
-            </div>
-           {% endif %}
-        {% endfor %}
 
-        <div class="pagination">
-            <span>
-                {% if pagination.href.previous %}
-                <a href="{{ pagination.href.previous }}">&laquo; Neuere</a>
-                {% else %}
-                &laquo; Neuere
-                {% endif %}
-            </span>
-<!-- eleventy create numbered pagination -->
-            {% for page in pagination.pages %}
+    {% if post.data.link %}
 
-            <!-- {{ forloop.index  }} -->
-                {% if forloop.index0 == pagination.pageNumber %}
-                <span class="selected"><a href="#">{{ forloop.index}}</a></span>
-                {% else %}
-                <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
-                {% endif %}
-            {% endfor %}
+    <a class="blog-link" href="{{post.data.link}}">{{post.data.urlText}}</a>
 
+    {% else %}
 
-          <span>
-                {% if pagination.href.next %}
-                    <a href="{{ pagination.href.next }}">Ältere &raquo;</a>
-                {% else %}
-                    Ältere &raquo;
-                {% endif %}
-            </span>
-        </div>
+    <a class="blog-link" href="{{post.url}}">{{post.data.urlText}}</a>
 
+    {% endif %}
+  </div>
+
+  {% endif %} {% endfor %}
+
+  <!--pagination by eleventy-->
+  <div>
+    <span>
+      {% if pagination.href.previous %}
+
+      <a href="{{ pagination.href.previous }}">&laquo; Neuere</a>
+
+      {% else %} &laquo; Neuere {% endif %}
+    </span>
+
+    <!-- eleventy create numbered pagination -->
+
+    {% for page in pagination.pages %}
+
+    <!-- {{ forloop.index  }} -->
+
+    {% if forloop.index0 == pagination.pageNumber %}
+
+    <span class="selected"><a href="#">{{ forloop.index}}</a></span>
+
+    {% else %}
+
+    <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
+
+    {% endif %} {% endfor %}
+
+    <span>
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}">Ältere &raquo;</a>
+      {% else %} Ältere &raquo; {% endif %}
+    </span>
+  </div>
+</div>
