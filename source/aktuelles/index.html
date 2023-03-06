@@ -14,8 +14,14 @@ pagination:
 <!--@todo wie hier den button stylen?-->
 
 <div>
-  <div>
+  <div class="text-blue-500">
     <h1 class="text-5xl font-clanProBold pb-4 leading-snug">Aktuelles</h1>
+    <p class="">
+      Bei der ODIS ist viel los. Konferenzen, Vorträge, Workshops,
+      Weiterbildungen und Prototypenentwicklung gehören fest in unser
+      Tätigkeitsfeld. Hier in informieren wir Dich darüber was in letzter Zeit
+      bei uns los war.
+    </p>
   </div>
 
   {% for post in posts %} {% if post.data.visible== true %}
@@ -32,14 +38,14 @@ pagination:
     {% if post.data.link %}
 
     <!--externer link-->
-    <a class="border border-red-500" href="{{post.data.link}}"
-      >{{post.data.urlText}}</a
-    >
+    <a class="" href="{{post.data.link}}">{{post.data.urlText}}</a>
 
     {% else %}
 
     <!--interner link-->
-    <a class="border border-red-500" href="{{post.url}}"
+    <a
+      class="p-4 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)]"
+      href="{{post.url}}"
       >{{post.data.urlText}}</a
     >
 
