@@ -11,80 +11,107 @@ pagination:
   reverse: true
 ---
 
-<!--@todo wie hier den button stylen?-->
+<!--@todo -->
 
-<div>
-  <div class="text-blue-500">
-    <h1 class="text-5xl font-clanProBold pb-4 leading-snug">Aktuelles</h1>
-    <p class="">
-      Bei der ODIS ist viel los. Konferenzen, Vorträge, Workshops,
-      Weiterbildungen und Prototypenentwicklung gehören fest in unser
-      Tätigkeitsfeld. Hier in informieren wir Dich darüber was in letzter Zeit
-      bei uns los war.
-    </p>
-  </div>
+<div class="flex justify-center">
+  <div class="flex flex-col w-1/2">
+    <!-- header -->
+    <section class="text-blue-500 flex flex-col justify-center my-20">
+      <h1 class="text-5xl font-clanProBold pb-4 leading-snug">Aktuelles</h1>
+      <p class="">
+        Bei der ODIS ist viel los. Konferenzen, Vorträge, Workshops,
+        Weiterbildungen und Prototypenentwicklung gehören fest in unser
+        Tätigkeitsfeld. Hier informieren wir Dich darüber was in letzter Zeit
+        bei uns los war.
+      </p>
+    </section>
 
-  {% for post in posts %} {% if post.data.visible== true %}
+    {% for post in posts %} {% if post.data.visible== true %}
 
-  <!--injection of single blog-->
-  <div>
-    <span>{{post.date | date: "%d.%m.%Y"}}</span>
+    <!--single blog article -->
+    <section class="flex flex-col mb-24">
+      <div>{{post.date | date: "%d.%m.%Y"}}</div>
 
-    <div>
-      <h3>{{ post.data.title }}</h3>
-      <p>{{ post.data.metaDescription }}</p>
-    </div>
+      <div>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.metaDescription }}</p>
+      </div>
 
-    {% if post.data.link %}
+      {% if post.data.link %}
 
-    <!--externer link-->
-    <a class="" href="{{post.data.link}}">{{post.data.urlText}}</a>
+      <!--extern link button-->
+      <a class="" href="{{post.data.link}}">{{post.data.urlText}}</a>
 
-    {% else %}
+      {% else %}
 
-    <!--interner link-->
-    <a
-      class="p-4 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)]"
-      href="{{post.url}}"
-      >{{post.data.urlText}}</a
-    >
+      <!--intern link button-->
+      <a
+        class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40"
+        href="{{post.url}}"
+        >{{post.data.urlText}}</a
+      >
 
-    {% endif %}
-  </div>
-
-  {% endif %} {% endfor %}
-
-  <!--pagination by eleventy-->
-
-  <div>
-    <span>
-      {% if pagination.href.previous %}
-
-      <a href="{{ pagination.href.previous }}">&laquo; Neuere</a>
-
-      {% else %} &laquo; Neuere {% endif %}
-    </span>
-
-    <!-- eleventy create numbered pagination -->
-
-    {% for page in pagination.pages %}
-
-    <!-- {{ forloop.index  }} -->
-
-    {% if forloop.index0 == pagination.pageNumber %}
-
-    <span class="selected"><a href="#">{{ forloop.index}}</a></span>
-
-    {% else %}
-
-    <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
+      {% endif %}
+    </section>
 
     {% endif %} {% endfor %}
 
-    <span>
-      {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}">Ältere &raquo;</a>
-      {% else %} Ältere &raquo; {% endif %}
-    </span>
+    <!--pagination by eleventy-->
+    <section class="outline outline-2">
+      <span>
+        {% if pagination.href.previous %}
+
+        <a href="{{ pagination.href.previous }}">&laquo; Neuere</a>
+
+        {% else %} &laquo; Neuere {% endif %}
+      </span>
+
+      <!-- eleventy create numbered pagination -->
+
+      {% for page in pagination.pages %}
+
+      <!-- {{ forloop.index  }} -->
+
+      {% if forloop.index0 == pagination.pageNumber %}
+
+      <span class="selected"><a href="#">{{ forloop.index}}</a></span>
+
+      {% else %}
+
+      <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
+
+      {% endif %} {% endfor %}
+
+      <span>
+        {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}">Ältere &raquo;</a>
+        {% else %} Ältere &raquo; {% endif %}
+      </span>
+    </section>
+
+    <section class="bg-cyan-100 mt-40">
+      <div>
+        <h2>Immer up to date?</h2>
+        <p>
+          Immer auf dem neusten Stand: Du möchtest über Neuigkeiten und
+          Veranstaltungen zu Open Data in Berlin informiert werden? Melde dich
+          gerne für unseren ODIS-Newsletter an!
+        </p>
+        <a href="">Newsletter abbonieren</a>
+        <p>
+          Newsletter verpasst? Stöber einfach in unserem
+          <a href="">Newsletter-Archiv.</a>
+        </p>
+      </div>
+
+      <div class="mt-20">
+        <h3>Du brauchst noch Hilfe?</h3>
+        <p>
+          Du benötigst Unterstützung oder hast Feedback? Ruf uns gerne unter +49
+          (0) 30 209 69 99 43 an oder kontaktiere uns über das Kontaktformular.
+        </p>
+        <a href="">Zum Kontaktformular</a>
+      </div>
+    </section>
   </div>
 </div>
