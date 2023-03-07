@@ -2,33 +2,44 @@
 <html>
 	{% include "head.html" %}
 <body>
+
 	<div id="barba-wrapper">
-		<div class="barba-container">
-			{% include "topnav.html" %}
-            {% if heroImage %}
-            <div class="project-header bright">
-				<img class=" w-100 img-fluid" src="{{heroImage}}" alt="{{title}}">
-				<div class="gradient-overlay"></div>
-                <div>
-                    <div class="section" id="section">
-						<h1>{{ title }}</h1>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
 
-			<div class="section mt-5 mb-6">
-				{%- if blogLink -%}
-				<a class="blog-link" href="{{blogLink}}" target="_blank">{{blogLinkTitle}}</a>
-				{%- endif -%}
-				{{ content }}
-			</div>
+		{% include "topnav.html" %}
+
+		<div class="bg-blue-500 text-cyan-50">
+        {% if heroImage %}
 
 
-			{% include "footer.html" %}
-			{% include "matomo.html" %}
+        
+		
+		<h1 class="text-cyan-50">{{ title }}</h1>
+		<p>{{ metaDescription }}</p>
 		</div>
+		<img class="" src="{{heroImage}}" alt="{{title}}">
+
+		
+
+        {% endif %}
+
+		
+
+		<div>
+			{%- if blogLink -%}
+			<a class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40" href="{{blogLink}}" target="_blank">{{blogLinkTitle}}</a>
+			{%- endif -%}
+			{{ content }}
+		</div>
+
+
+		{% include "footer.html" %}
+		{% include "matomo.html" %}
 	</div>
+
+
+
+
+
 </body>
 
 </html>

@@ -2,13 +2,13 @@
 layout: project
 tags: project
 title: Berliner Weihnachtsmarkt-Finder
-blogLinkTitle: "Hier geht's zum Finder"
+blogLinkTitle: "Finder erkunden"
 blogLink: https://weihnachtsmaerkte.odis-berlin.de/
-metaDescription: Eine Webkarte mit den Berliner Weihnachtsmärkten zum Erkunden, Planen und Teilen
+metaDescription: Eine Webkarte mit Berliner Weihnachtsmärkten zum Erkunden, Planen und Teilen. Egal ob am heimischen Computer oder auf dem Smartphone unterwegs, die Applikation hilft Ihnen den richtigen Weihnachtsmarkt zu finden!
 date: 2022-11-24
 visible: true
 indexImage: weihnachtsmarktfinder_placeholder2.png
-heroImage: weihnachtsmarktfinder_hero.png
+heroImage: weihnachtsmarktfinder_placeholder2.png
 ---
 
 Welche Weihnachtsmärkte laden an welchen Tagen zum Besuch ein? Wo kann ich mit meinen Kolleg:innenen noch nach 19 Uhr auf eine Tasse Glühwein? Und wo ist der Eintritt kostenlos? Diese und viele weitere Fragen beantwortet der Berliner Weihnachtsmarkt-Finder, der auf offenen Daten basiert und uns in der Vorweihnachtszeit die Stadt auf neue Art und Weise erkunden lässt.
