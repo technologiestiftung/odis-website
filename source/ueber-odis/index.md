@@ -35,7 +35,8 @@ Kooperative Tätigkeitsbereiche
 
 ## Unser ODIS-Team
 
-<div class="">
+<div class="flex bg-blue-900">
+				<div class="flex flex-col bg-red-500">
 					<div class="flex">
 						<img class="rounded-full w-40 mr-16" src="/assets/images/page/profile-lisa.jpg">
 						<div class="flex flex-col">
@@ -54,56 +55,59 @@ Kooperative Tätigkeitsbereiche
 							<span>030 209 69 99 41</span>
 						</div>
 					</div>
-					<div class="">
-						<img class="rounded-full w-40" src="/assets/images/page/profile-klemens.jpg">
-						<div class="">
+					<div class="flex">
+						<img class="rounded-full w-40 mr-16" src="/assets/images/page/profile-klemens.jpg">
+						<div class="flex flex-col">
 							<span><b>Klemens Maget</b></span>
 							<span><em>Wissenschaftlicher Mitarbeiter</em></span>
 							<span>klemens.maget@ts.berlin</span>
 							<span>030 209 69 99 42</span>
 						</div>
 					</div>
-					<div class="">
-						<img class="rounded-full w-40" src="/assets/images/page/profile-ester.jpg">
-						<div class="">
+					<div class="flex">
+						<img class="rounded-full w-40 mr-16" src="/assets/images/page/profile-ester.jpg">
+						<div class="flex flex-col">
 							<span><b>Ester Scheck</b></span>
 							<span><em>Studentische Mitarbeiterin</em></span>
 							<span>ester.scheck@ts.berlin</span>
 						</div>
 					</div>
-					<div class="">
-						<img class="rounded-full w-40" src="/assets/images/page/profile-max.jpg">
-						<div class="">
+				</div>
+				<div class="flex flex-col bg-blue-100">	
+					<div class="flex">
+						<img class="rounded-full w-40 mr-16" src="/assets/images/page/profile-max.jpg">
+						<div class="flex flex-col">
 							<span><b>Max B. Eckert</b></span>
 							<span><em>Wissenschaftlicher Mitarbeiter</em></span>
 							<span>max.eckert@ts.berlin</span>
 						</div>
 					</div>	
-					<div class="">
-						<img class="rounded-full w-40" src="/assets/images/page/profile_anna.png">
-						<div class="">
+					<div class="flex">
+						<img class="rounded-full w-40 mr-16" src="/assets/images/page/profile_anna.png">
+						<div class="flex flex-col">
 							<span><b>Anna Meide</b></span>
 							<span><em>Praktikantin</em></span>
 							<span>anna.meide@ts.berlin</span>
 						</div>
 					</div>	
-					<div class="">
-						<img class="rounded-full w-40" src="/assets/images/page/profile-hans.jpg">
-						<div class="">
+					<div class="flex">
+						<img class="rounded-full w-40 mr-16" src="/assets/images/page/profile-hans.jpg">
+						<div class="flex flex-col">
 							<span><b>Hans Hack</b></span>
 							<span><em>Technology & Prototyping</em></span>
 							<span>hans.hack@ts.berlin</span>
 						</div>
 					</div>									
-					<div class="">
-						<img class="rounded-full w-40" src="/assets/images/page/profile_ben.png">
-						<div class="">
+					<div class="flex">
+						<img class="rounded-full w-40 mr-16" src="/assets/images/page/profile_ben.png">
+						<div class="flex flex-col">
 							<span><b>Dr. Benjamin Seibel</b></span>
 							<span><em>Bereichsleitung CityLAB Berlin</em></span>
 							<span>benjamin.seibel@ts.berlin</span>
 							<span>030 209 69 99 40</span>
 						</div>
 					</div>
+				</div>	
 </div>
 
 <br>
