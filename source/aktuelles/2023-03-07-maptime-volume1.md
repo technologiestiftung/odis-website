@@ -42,6 +42,6 @@ Mit Kiezcolors lässt sich ein gewünschter Ausschnitt Berlins mit dem entsprech
 Maptime: Es war uns eine Ehre und wir freuen uns schon aufs nächste Mal!
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/maptime_collage3.png", caption:"Gemütlicher Ausklang bei Pizza und Postakrtendruck" %}
+{% include "macro-image-section-small.html", src:"/assets/images/maptime_collage2.png", caption:"Gemütlicher Ausklang bei Pizza und Postkartendruck" %}
 </center>
 
