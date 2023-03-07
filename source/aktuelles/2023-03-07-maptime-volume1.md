@@ -13,12 +13,10 @@ Dabei versteht sich Maptime als offener Raum für Kartenenthusiasten, von Expert
 
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/maptime_publikum1.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
+{% include "macro-image-section-small.html", src:"/assets/images/maptime_collage1.png", caption:"Full House im CityLAB Berlin" %}
 </center>
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/maptime_publikum2.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
-</center>
+<br><br>
 
 
 
@@ -29,15 +27,13 @@ Anschließend stellte Thomas Tursics ein [Kartenprojekt](https://tursics.github.
 
 Ein weiteres spannendes Projekt stellte ein Absolvent der FH Potsdam vor, der sich mit verschwindenden Dörfern durch den Kohletagebau beschäftigt hat. Mit seiner [Datenvisualisierung](https://verschwundene-ortschaften.honigmitoe.de) erzählt Tim Hönig die Geschichte des Tagesbaus nach und erweckt zerstörte Ortschaften durch den Tagebau zumindest digital wieder zum Leben.
 
-Abschließend nahm [Michael Kreil](https://github.com/versatiles-org/versatiles) das Publikum mit zu einem Ausflug in die Welt der Programmierung. Er arbeitet derzeit an einer Technologie um u.a. freie Hintergrundkarten für alle anzubieten. Mit Opencloudtiles bietet er eine anwender:innenfreundliche Lösung frei von proprietären Hürden. 
+Abschließend nahm Michael Kreil das Publikum mit zu einem Ausflug in die Welt der Programmierung. Er arbeitet derzeit an einer Technologie um u.a. freie Hintergrundkarten für alle anzubieten. Mit [Opencloudtiles](https://pretalx.c3voc.de/hip-berlin-2022/talk/AFGUPH/) bietet er eine anwender:innenfreundliche Lösung frei von proprietären Hürden. 
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/maptime_publikum3.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
+{% include "macro-image-section-small.html", src:"/assets/images/maptime_collage3.png", caption:"Spannende Vorträge" %}
 </center>
+<br><br>
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/maptime_publikum4.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
-</center>
 
 ## Ausklang bei Pizza und Postkartendruck
 Hans Hack von ODIS entwickelte für den Abend ein besonderes  [Tool](https://kiezcolors.odis-berlin.de/#13/52.49899/13.3915)  zum Ausprobieren. 
@@ -46,11 +42,6 @@ Mit Kiezcolors lässt sich ein gewünschter Ausschnitt Berlins mit dem entsprech
 Maptime: Es war uns eine Ehre und wir freuen uns schon aufs nächste Mal!
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/maptime_pizza.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
+{% include "macro-image-section-small.html", src:"/assets/images/maptime_collage3.png", caption:"Gemütlicher Ausklang bei Pizza und Postakrtendruck" %}
 </center>
 
-
-{% include "macro-image-section-medium.html", src:"/assets/images/maptime_postkarte_makingof.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
-
-
-{% include "macro-image-section-medium.html", src:"/assets/images/maptime_Postkarte_ready2.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
