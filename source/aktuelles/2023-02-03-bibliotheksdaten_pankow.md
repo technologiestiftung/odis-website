@@ -10,7 +10,9 @@ urlText: Zum Blogbeitrag
 # Pankow veröffentlicht ersten Open-Data-Datensatz 
 Die Leitung der Janusz-Korczak-Bibliothek in Pankow begann im letzten Jahr mit dem Vorhaben Bibliotheksdaten als offene Daten bereitzustellen. Ziel der Bibliotheksleitung ist es mithilfe der offenen Daten gezieltere Analysen vornehmen zu können, um beispielsweise das Nutzungsverhalten oder die Reichweite der einzelnen Bibliotheksstandorte auszuwerten.  
 
-Neugierig darauf, welche spannenden Informationen in den Daten zu entdecken sind, haben wir als ODIS gemeinsam mit Karsten Gartner als Open-Data-Beauftragten des Bezirks umgehend bei der Aufbereitung, Anonymisierung und Bereitstellung der Daten unterstützt.
+Neugierig darauf, welche spannenden Informationen in den Daten zu entdecken sind, haben wir als ODIS gemeinsam mit Karsten Gartner als Open-Data-Beauftragten des Bezirks umgehend bei der Aufbereitung, Anonymisierung und Bereitstellung der Daten unterstützt. 
+
+Der Datensatz ist [hier](https://daten.berlin.de/datensaetze/ausleihen-öffentlichen-bibliotheken-pankow-2022) im Berliner Open Data Portal verlinkt.
 
 ## Von sensiblen Daten zu Open Data konformen Daten
 
@@ -21,9 +23,8 @@ Bei der ersten gemeinsamen Sichtung des Datensatzes zur Ausleihstatistik vor Ort
 - Wie kann eine erfolgreiche Anbindung an das Berliner Open Data Portal und eine jährliche Aktualisierung realisiert werden?
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_rohdatensatz.png", caption: "Der Rohdatensatz enthält sensible Daten z.B. zu Alter und Wohnort auf Ebene der Teilverkehrszellen". %}
+{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_rohdatensatz.pdf", caption: "Der Rohdatensatz enthält sensible Daten z.B. zu Alter und Wohnort auf Ebene der Teilverkehrszellen". %}
 </center>
-
 <br>
 <br>
 
