@@ -27,7 +27,7 @@ Anschließend stellte Thomas Tursics ein [Kartenprojekt](https://tursics.github.
 
 Ein weiteres spannendes Projekt stellte ein Absolvent der FH Potsdam vor, der sich mit verschwindenden Dörfern durch den Kohletagebau beschäftigt hat. Mit seiner [Datenvisualisierung](https://verschwundene-ortschaften.honigmitoe.de) erzählt Tim Hönig die Geschichte des Tagesbaus nach und erweckt zerstörte Ortschaften durch den Tagebau zumindest digital wieder zum Leben.
 
-Abschließend nahm Michael Kreil das Publikum mit zu einem Ausflug in die Welt der Programmierung. Er arbeitet derzeit an einer Technologie um u.a. freie Hintergrundkarten für alle anzubieten. Mit [Opencloudtiles](https://pretalx.c3voc.de/hip-berlin-2022/talk/AFGUPH/) bietet er eine anwender:innenfreundliche Lösung frei von proprietären Hürden. 
+Abschließend nahm Michael Kreil das Publikum mit zu einem Ausflug in die Welt der Programmierung. Er arbeitet derzeit an einer Technologie um u.a. freie Hintergrundkarten für alle anzubieten. Mit [Versatiles](https://github.com/versatiles-org) bietet er eine anwender:innenfreundliche Lösung frei von proprietären Hürden. 
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/maptime_collage3.png", caption:"Spannende Vorträge" %}
