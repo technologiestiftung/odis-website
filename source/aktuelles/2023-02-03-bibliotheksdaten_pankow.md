@@ -21,7 +21,7 @@ Bei der ersten gemeinsamen Sichtung des Datensatzes zur Ausleihstatistik vor Ort
 - Wie kann eine erfolgreiche Anbindung an das Berliner Open Data Portal und eine jährliche Aktualisierung realisiert werden?
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_rohdatensatz.png", caption:"Der Rohdatensatz enthält sensible Daten z.B. zu Alter und Wohnort auf Ebene der Teilverkehrszellen. %}
+{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_rohdatensatz.png", caption: "Der Rohdatensatz enthält sensible Daten z.B. zu Alter und Wohnort auf Ebene der Teilverkehrszellen". %}
 </center>
 
 <br>
