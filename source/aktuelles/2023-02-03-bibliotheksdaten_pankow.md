@@ -30,29 +30,29 @@ Bei der ersten gemeinsamen Sichtung des Datensatzes zur Ausleihstatistik vor Ort
 
 ### Anonymisierung  der Daten: Wie lassen sich Rückschlüsse auf die Nutzer:innen vermeiden?
 
-Zunächst haben wir einen Datensensibilitäts-Check durchgeführt und geprüft, ob aufgrund der räumlichen Ebene Rückschlüsse auf die einzelnen Nutzer:innen gezogen werden können, zum Beispiel auf das Alter oder das Geschlecht. Da es sich bei den zurgundeliegenden räumlichen Attributen um die kleinräumliche Einheit der Teilverkehrsräume (TVZ) handelt, in der zum Teil weniger als 100 Menschen gemeldet sind, haben wir eine grundlegende Anonymisierung der Daten vorgenommen, um Rückschlüsse zu vermeiden. 
+Zunächst haben wir einen Datensensibilitäts-Check durchgeführt und geprüft, ob aufgrund der räumlichen Ebene Rückschlüsse auf die einzelnen Nutzer:innen gezogen werden können, zum Beispiel auf das Alter oder das Geschlecht. Da es sich bei den zurgunde liegenden räumlichen Attributen um die kleinräumliche Einheit der Teilverkehrsräume (TVZ) handelt, in der zum Teil weniger als 100 Menschen gemeldet sind, haben wir eine grundlegende Anonymisierung der Daten vorgenommen, um Rückschlüsse zu vermeiden. 
 
 Für den Anonymisierungsprozess haben wir folgende Vorbereitungsschritte durchgeführt:
 - Anforderung der Bevölkerungsstatistik zu den TVZ vom Amt für Statistik Berlin Brandenburg 
 - Verschneidung zwischen TVZ/Bevölkerung mit dem Datensatz zur Ausleihstatistik
 - Bildung von Altersgruppen nach den Altersgruppenklassen des AfS und Löschung der Spalten mit konkreten Geburtsjahr und Alter.
 
-Anschließend untersuchten wir den Datensatz nach TVZ, in denen weniger als 100 Personen leben und  die entsprechenden Einträge auf *NaN* gesetzt. Dabei ergänzten wir den Datensatz um die Spalte Bezirk, um die Zuordnung der TVZ zum Bezirk zu behalten. Weiter wurden alle personenbezogenen Einträge  überprüft, ob eine bestimmte Merkmalskombination einer Person zugeordnet werden können. Traf dies zu, wurden schrittweise Spalten zu Altersgruppe, TVZ, Geschlecht, Benutzergruppe etc. auf *NaN* gesetzt 
+Anschließend untersuchten wir den Datensatz nach TVZ, in denen weniger als 100 Personen leben und haben die entsprechenden Einträge auf *NaN* gesetzt. Dabei ergänzten wir den Datensatz um die Spalte Bezirk, um die Zuordnung der TVZ zum Bezirk zu behalten. Weiter wurden alle personenbezogenen Einträge  überprüft, ob eine bestimmte Merkmalskombination einer Person zugeordnet werden können. Traf dies zu, wurden die Werte zu TVZ, Geschlecht, Altersgruppe und Benutzergruppe iterativ auf *NaN* gesetzt. Zusätzlich wurden die exakten Zeitstempel zu jeder Ausleihe auf Monatsangaben generalisiert.
 
-Die einzelnen Anonymisierungsschritte wurden automatisiert in einem Deepnote-Skript durchgeführt. Unser Vorgehen wurde vom bezirklichen Datenschutzbeauftragten positiv bewertet und der Datensatz zur Veröffentlichung freigegeben.
+Die einzelnen Anonymisierungsschritte wurden automatisiert in einem nicht öffentlichen [Deepnote-Skript](https://deepnote.com) durchgeführt. Unser Vorgehen wurde vom bezirklichen Datenschutzbeauftragten positiv bewertet und der Datensatz zur Veröffentlichung freigegeben.
 
 ### Aufwertung des Datensatzes 
 
-Weiter werteten wir den Datensatz auf, um Nutzer:innen die Weiterverarbeitung der Daten zu erleichtern. Redundante Spalten wurden rausgenommen und Codes z.B. für Mediennummern, Benutzergruppen oder Fächerstatistiken übersetzt. Gleichzeitig wollten wir den Datensatz bzw. die Beschreibung der Daten nur dort verändern, wo eine nachvollziehbare Übersetzung Sinn macht. So blieben zum Beispiel die Sigelnummern im Datensatz drin, die jeweils für einen Standort stehen. Dafür stellt die Stadtteilbibliothek eine Schlüsseltabelle auf dem Open Data Portal zum Downbload zur Verfügung um die Sigek einem Bibliotheksstanirt zurordnen zu können.
+Weiter werteten wir den Datensatz auf, um Nutzer:innen die Weiterverarbeitung der Daten zu erleichtern. Redundante Spalten wurden rausgenommen und Codes z.B. für Mediennummern, Benutzergruppen oder Fächerstatistiken übersetzt. Gleichzeitig wollten wir den Datensatz bzw. die Beschreibung der Daten nur dort verändern, wo eine nachvollziehbare Übersetzung Sinn macht. So blieben zum Beispiel die Sigelnummern im Datensatz drin, die jeweils für einen Standort stehen. Dafür stellt die Stadtteilbibliothek eine Schlüsseltabelle auf dem Open Data Portal zum Downbload zur Verfügung um die Sigel einem Bibliotheksstandort zuordnen zu können.
 
 ### Bereitstellung und Aktualisierung der Daten
 
 Mit über 1.5 Mio. Einträgen und einem Volumen von rund 300 MB ist der Datensatz größer als die üblichen Datensätze, die auf dem Open Data Portal veröffentlicht werden. So liegt das Upload-Maximum bei Imperia bei 30 MB. Dank einer Schul-Cloud des Bezirkes Pankow konnte der OD-Beauftragte Karsten Gartner den Datensatz hochladen und über die Datenrubrik auf dem Open Data Portal bereitstellen.
 
-Für eine anvisierte jährliche Aktualisierung des Datensatzes muss die Stadtteilbibliothek nur den aktualisierten Datensatz austauschen und im von der ODIS bereitstgesetllten Skript durchlaufen lassen, um die Anonymisierung und Aufbereitung der Daten durchzuführen.
+Für eine anvisierte jährliche Aktualisierung des Datensatzes kann die Stadtteilbibliothek nur den aktualisierten Datensatz austauschen und im von der ODIS bereitstgesetllten Skript durchlaufen lassen, um die Anonymisierung und Aufbereitung der Daten durchzuführen.
 
 ## Einblick in die Daten 
-Abschließend wollen wir euch einen ersten Einblick in die Daten nicht vorenthalten. Jeder Eintrag stellt einen Ausleih- oder Verlängerungsvorgang dar – sowohl erfolgreich als auch fehlgeschlagen und enthält vielfältige Informationen über den Ausleihvorgang, das Medium selbst oder über die Nutzer:innen.  So lässt sich durch Abfragen des Datensatzes schnell herausfinden, welche Sachbücher bei Kinder- und Jugendlichen gefragt sind, welche Bibliotheksstandorte am häufigsten genutzt oder wann Medien über den Jahresverlauf gesehen am meisten nachgefragt werden? 
+Abschließend wollen wir euch einen ersten Einblick in die Daten nicht vorenthalten. Jeder Eintrag stellt einen Ausleih- oder Verlängerungsvorgang dar – sowohl erfolgreich als auch fehlgeschlagen und enthält vielfältige Informationen über den Ausleihvorgang, das Medium selbst oder über die Nutzer:innen. So lässt sich durch Abfragen des Datensatzes schnell herausfinden, welche Sachbücher bei Kinder- und Jugendlichen gefragt sind, welche Bibliotheksstandorte am häufigsten genutzt oder wann Medien über den Jahresverlauf gesehen am meisten nachgefragt werden.
 
 Im Open Data Portal Eintrag des Datensatzes liegt auch eine Dokumentation der Bibliotheksdaten bei, die eine Beschreibung der Daten erleichtert.
 
