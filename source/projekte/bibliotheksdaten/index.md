@@ -7,7 +7,7 @@ blogLink: https://bibliotheksdaten.odis-berlin.de/pankow
 metaDescription: Ein interaktives Dashboard als Analysetool für offene Bibliotheksdaten
 date: 2023-03-14
 visible: true
-indexImage: placeholder_2.png
+indexImage: placeholder.png
 heroImage: bibdaten_hero.png
 ---
 
