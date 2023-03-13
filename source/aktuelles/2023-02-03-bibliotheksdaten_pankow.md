@@ -2,63 +2,58 @@
 layout: news
 tags: post
 title: "Wer liest was? Stadtteilbibliothek Pankow veröffentlicht ersten offenen Datensatz zu Bibliotheksdaten in Berlin"
-metaDescription: Im Zusammenspiel zwischen der Stadtteilbibliothek Pankow und ODIS konnte ein interessanter Datensatz auf dem Open Data Portal veröffentlicht werden, der Informationen zu allen über 1,5 Millionen getätigten Ausleihen und Verlängerungen in Pankower Bibliotheken im Jahr 2022 beinhaltet. Wir verraten welche Herausforderungen wir vor der Veröffentlichung meisterten und geben einen kurzen Einblick in den Datenschatz.
+metaDescription: In der Zusammenarbeit zwischen der Stadtteilbibliothek Pankow und ODIS konnte ein interessanter Datensatz auf dem Open Data Portal veröffentlicht werden, der Informationen zu allen über 1,5 Millionen getätigten Ausleihen und Verlängerungen in Pankower Bibliotheken im Jahr 2022 beinhaltet. Wir verraten, welche Herausforderungen wir vor der Veröffentlichung meisterten und geben einen kurzen Einblick in den Datenschatz.
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# Pankow veröffentlicht ersten Open-Data-Datensatz 
-Die Leitung der Janusz-Korczak-Bibliothek in Pankow begann im letzten Jahr mit dem Vorhaben Bibliotheksdaten als offene Daten bereitzustellen. Ziel der Bibliotheksleitung ist es mithilfe der offenen Daten gezieltere Analysen vornehmen zu können, um beispielsweise das Nutzungsverhalten oder die Reichweite der einzelnen Bibliotheksstandorte auszuwerten.  
+# Stadtteilbibliothek Pankow veröffentlicht ersten Open-Data-Datensatz 
+Die Leitung der Janusz-Korczak-Bibliothek in Pankow entschied sich im vergangenen Jahr, **Bibliotheksdaten als offene Daten bereitzustellen**. Ziel der Bibliotheksleitung ist es, mithilfe der offenen Daten **gezieltere Analysen** durchführen zu können, um beispielsweise das Nutzungsverhalten oder die Reichweite der einzelnen Bibliotheksstandorte auszuwerten. Wir waren natürlich neugierig darauf, welche spannenden Informationen in den Daten zu finden sind und unterstützten Tobias Weiß, den Leiter der Janusz-Korczak-Bibliothek, gemeinsam mit Karsten Gartner, dem Open-Data-Beauftragten des Bezirks, gerne bei der Aufbereitung, Anonymisierung und Bereitstellung der Daten.
 
-Neugierig darauf, welche spannenden Informationen in den Daten zu entdecken sind, haben wir als ODIS gemeinsam mit Karsten Gartner als Open-Data-Beauftragten des Bezirks umgehend bei der Aufbereitung, Anonymisierung und Bereitstellung der Daten unterstützt. 
+Der Datensatz ist seit Februar 2022 mit den nötigen Schlüsseltabellen und der Dokumentation im [Berliner Open Data Portal](https://daten.berlin.de/datensaetze/ausleihen-öffentlichen-bibliotheken-pankow-2022) abrufbar.
 
-Der Datensatz ist [hier](https://daten.berlin.de/datensaetze/ausleihen-öffentlichen-bibliotheken-pankow-2022) im Berliner Open Data Portal verlinkt.
-
-## Von sensiblen Daten zu Open Data konformen Daten
-
-Über das zentrale Verbundservicezentrum (VSZ) der Zentral- und Landesbibliothek (ZLB) erhält die Pankower Stadtteilbibliothek Statistiken über die Medienausleihungen im Bezirk. 
-Bei der ersten gemeinsamen Sichtung des Datensatzes zur Ausleihstatistik vor Ort kristallisierten sich drei zentrale Herausforderungen heraus:
-- Wie können die Daten so überarbeitet werden, dass keine Rückschlüsse auf die Benutzer:innen gezogen werden können, ohne gleichzeitig einen allzu hohen Informationsverlust zu riskieren.
-- Wie kann der mit Fachbegriffen und Codes gespickte Datensatz so aufgewertet werden, dass die Informationen von Nutzer:innen genutzt werden können? 
-- Wie kann eine erfolgreiche Anbindung an das Berliner Open Data Portal und eine jährliche Aktualisierung realisiert werden?
+## Von sensiblen, personenbezogenen Daten zu Open-Data-konformen Daten
+Über das zentrale Verbundservicezentrum (VSZ) der Zentral- und Landesbibliothek (ZLB) erhält die Pankower Stadtteilbibliothek Statistiken über die Medienausleihungen im Bezirk. Bei der ersten gemeinsamen Sichtung des Datensatzes zur Ausleihstatistik vor Ort kristallisierten sich drei zentrale Herausforderungen heraus:
+- Wie können die Daten so verändert werden, dass keine Rückschlüsse auf individuelle Bibliotheksnutzer:innen gezogen werden können, ohne gleichzeitig einen allzu hohen Informationsverlust zu riskieren?
+- Wie kann der mit Fachbegriffen und Codes gespickte Datensatz so aufgewertet werden, dass die Informationen verständlich und nutzbar sind?
+- Wie kann eine erfolgreiche Veröffentlichung im Berliner Open Data Portal und eine jährliche Aktualisierung realisiert werden?
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_rohdatensatz.pdf", caption: "Der Rohdatensatz enthält sensible Daten z.B. zu Alter und Wohnort auf Ebene der Teilverkehrszellen". %}
+{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_rohdatensatz.png", caption: "Der Rohdatensatz enthält personenbezogene Daten, zum Beispiel Alter und Wohnort auf Ebene der Teilverkehrszellen". %}
 </center>
 <br>
 <br>
 
-### Anonymisierung  der Daten: Wie lassen sich Rückschlüsse auf die Nutzer:innen vermeiden?
+### Anonymisierung der Daten
 
-Zunächst haben wir einen Datensensibilitäts-Check durchgeführt und geprüft, ob aufgrund der räumlichen Ebene Rückschlüsse auf die einzelnen Nutzer:innen gezogen werden können, zum Beispiel auf das Alter oder das Geschlecht. Da es sich bei den zurgunde liegenden räumlichen Attributen um die kleinräumliche Einheit der Teilverkehrsräume (TVZ) handelt, in der zum Teil weniger als 100 Menschen gemeldet sind, haben wir eine grundlegende Anonymisierung der Daten vorgenommen, um Rückschlüsse zu vermeiden. 
+Der **Schutz persönlicher Daten** ist selbstverständlich äußerst wichtig, doch er muss nicht automatisch gegen eine Veröffentlichung der Daten sprechen. Durch ein **Anonymisierungsverfahren** können die Daten so verändert werden, dass Rückschlüsse auf Individuen gar nicht mehr oder zumindest nur noch mit unverhältnismäßig hohem Aufwand möglich sind.
+Im Bibliotheksdatensatz sind die **Informationen zu Alter, Geschlecht, Geburtsjahr, Benutzergruppe und Wohnort** sensible, personenbezogene Daten. Da es sich bei den Angaben zum Wohnort um die kleinräumliche Einheit der Teilverkehrszellen (TVZ) handelt, in der zum Teil weniger als 100 Menschen gemeldet sind, ist diese Information besonders kritisch.
+Folgende Schritte der Datenverarbeitung haben wir zur Anonymisierung durchgeführt:
+- Ableiten des Bezirks auf Basis der TVZ und Löschen der Angabe zur TVZ, wenn dort zu wenige Menschen gemeldet sind (auf Basis eines Datensatzes des Amt für Statistik Berlin Brandenburg) 
+- Generalisierung der Angaben zu Alter und Geburtsjahr in Altersgruppen
+- Prüfen, dass es genügend Einträge zu allen Merkmalskombinationen der personenbezogenen Spalten gibt und ggf. Löschen von Informationen zu TVZ, Geschlecht, Altersgruppe oder Benutzergruppe, sodass es genügend Einträge zu allen Merkmalskombinationen gibt. Dies folgt dem Prinzip der k-Anonymität, nach dem mindestens eine bestimmte Anzahl von Einträgen im Datensatz vorhanden sein muss, die eine bestimmte Merkmalskombination teilen. Dadurch ist jede Person Teil einer größeren Gruppe und Einträge können nicht mehr einer einzelnen Person zugeordnet werden.
+- Generalisierung der exakten Zeitstempel zu jeder Ausleihe in Monatsangaben
 
-Für den Anonymisierungsprozess haben wir folgende Vorbereitungsschritte durchgeführt:
-- Anforderung der Bevölkerungsstatistik zu den TVZ vom Amt für Statistik Berlin Brandenburg 
-- Verschneidung zwischen TVZ/Bevölkerung mit dem Datensatz zur Ausleihstatistik
-- Bildung von Altersgruppen nach den Altersgruppenklassen des AfS und Löschung der Spalten mit konkreten Geburtsjahr und Alter.
+Durch Iterationen beim Löschen von Werten konnten wir dafür sorgen, dass nur so viele Informationen wie nötig aus dem Datensatz entfernt und auf *NaN* gesetzt wurden. Die einzelnen Anonymisierungsschritten haben wir in Form eines Python Skripts automatisert. Unser Vorgehen wurde vom bezirklichen Datenschutzbeauftragten positiv bewertet und der Datensatz zur Veröffentlichung freigegeben.
 
-Anschließend untersuchten wir den Datensatz nach TVZ, in denen weniger als 100 Personen leben und haben die entsprechenden Einträge auf *NaN* gesetzt. Dabei ergänzten wir den Datensatz um die Spalte Bezirk, um die Zuordnung der TVZ zum Bezirk zu behalten. Weiter wurden alle personenbezogenen Einträge  überprüft, ob eine bestimmte Merkmalskombination einer Person zugeordnet werden können. Traf dies zu, wurden die Werte zu TVZ, Geschlecht, Altersgruppe und Benutzergruppe iterativ auf *NaN* gesetzt. Zusätzlich wurden die exakten Zeitstempel zu jeder Ausleihe auf Monatsangaben generalisiert.
+### Aufwertung des Datensatzes
 
-Die einzelnen Anonymisierungsschritte wurden automatisiert in einem nicht öffentlichen [Deepnote-Skript](https://deepnote.com) durchgeführt. Unser Vorgehen wurde vom bezirklichen Datenschutzbeauftragten positiv bewertet und der Datensatz zur Veröffentlichung freigegeben.
-
-### Aufwertung des Datensatzes 
-
-Weiter werteten wir den Datensatz auf, um Nutzer:innen die Weiterverarbeitung der Daten zu erleichtern. Redundante Spalten wurden rausgenommen und Codes z.B. für Mediennummern, Benutzergruppen oder Fächerstatistiken übersetzt. Gleichzeitig wollten wir den Datensatz bzw. die Beschreibung der Daten nur dort verändern, wo eine nachvollziehbare Übersetzung Sinn macht. So blieben zum Beispiel die Sigelnummern im Datensatz drin, die jeweils für einen Standort stehen. Dafür stellt die Stadtteilbibliothek eine Schlüsseltabelle auf dem Open Data Portal zum Downbload zur Verfügung um die Sigel einem Bibliotheksstandort zuordnen zu können.
+Weiter werteten wir den Datensatz auf, um die **Nutzung der Daten zu erleichtern**. Redundante Spalten wurden gelöscht und Codes z.B. für Mediennummern, Benutzergruppen oder Fächerstatistiken übersetzt. Gleichzeitig wollten wir den Datensatz bzw. die Beschreibung der Daten nur dort verändern, wo eine nachvollziehbare Übersetzung Sinn macht. So blieben zum Beispiel die Sigelnummern im Datensatz enthalten, die jeweils für einen Bibliotheksstandort stehen. Dafür stellt die Stadtteilbibliothek Pankow eine Schlüsseltabelle auf dem Open Data Portal zum Download zur Verfügung.
 
 ### Bereitstellung und Aktualisierung der Daten
 
-Mit über 1.5 Mio. Einträgen und einem Volumen von rund 300 MB ist der Datensatz größer als die üblichen Datensätze, die auf dem Open Data Portal veröffentlicht werden. So liegt das Upload-Maximum bei Imperia bei 30 MB. Dank einer Schul-Cloud des Bezirkes Pankow konnte der OD-Beauftragte Karsten Gartner den Datensatz hochladen und über die Datenrubrik auf dem Open Data Portal bereitstellen.
+Mit über 1,5 Mio. Einträgen und einer **Dateigröße** von rund 300 MB ist der Datensatz größer als die üblichen Datensätze, die auf dem Open Data Portal veröffentlicht werden. So liegt das Upload-Maximum bei Imperia bei 30 MB. Dank einer Schul-Cloud des Bezirks Pankow konnte der Open-Data-Beauftragte Karsten Gartner den Datensatz hochladen und über die Datenrubrik auf dem Open Data Portal bereitstellen.
 
-Für eine anvisierte jährliche Aktualisierung des Datensatzes kann die Stadtteilbibliothek nur den aktualisierten Datensatz austauschen und im von der ODIS bereitstgesetllten Skript durchlaufen lassen, um die Anonymisierung und Aufbereitung der Daten durchzuführen.
+Für die **geplante, jährliche Veröffentlichung** des Datensatzes kann die Stadtteilbibliothek den neuen Datensatz durch das von uns entwickelte Skript jederzeit erneut automatisiert anonymisieren und aufbereiten.
 
-## Einblick in die Daten 
-Abschließend wollen wir euch einen ersten Einblick in die Daten nicht vorenthalten. Jeder Eintrag stellt einen Ausleih- oder Verlängerungsvorgang dar – sowohl erfolgreich als auch fehlgeschlagen und enthält vielfältige Informationen über den Ausleihvorgang, das Medium selbst oder über die Nutzer:innen. So lässt sich durch Abfragen des Datensatzes schnell herausfinden, welche Sachbücher bei Kinder- und Jugendlichen gefragt sind, welche Bibliotheksstandorte am häufigsten genutzt oder wann Medien über den Jahresverlauf gesehen am meisten nachgefragt werden.
-
-Im Open Data Portal Eintrag des Datensatzes liegt auch eine Dokumentation der Bibliotheksdaten bei, die eine Beschreibung der Daten erleichtert.
-
-Wir wünschen viel Vergnügen beim Stöbern durch die (digitale) Stadtteilbibliothek Pankow!
-
+Im Open Data Portal sind ist neben dem Datensatz und den Schlüsseltabellen auch eine Dokumentation bereitgestellt, die die einzelnen Spalten und Kategorien erklärt.
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_doku.png", caption:"Auszug aus der Dokumentation, bereitgestellt durch die Stadtteilbibliothek Pankow" %}
+{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_doku.png", caption:"Auszug aus der Dokumentation, bereitgestellt durch die Stadtteilbibliothek Pankow und veröffentlicht im Open Data Portal"%}
 </center>
+
+## Einblick in die Daten
+Welche Erkenntnisse lassen sich nun aus den Daten gewinnen? Jeder Eintrag stellt einen Ausleih- oder Verlängerungsvorgang dar – sowohl erfolgreiche als auch fehlgeschlagene. Darin enthalten sind vielfältige Informationen über den Ausleihvorgang, das Medium selbst oder über die Bibliotheksnutzer:innen. So lässt sich durch Abfragen des Datensatzes schnell herausfinden, welche Sachbücher bei Kinder- und Jugendlichen gefragt sind, welche Bibliotheksstandorte am häufigsten genutzt oder wann Medien über den Jahresverlauf gesehen am meisten nachgefragt werden. Ein paar dieser Analysen haben wir im Rahmen eines [Dashboards](../../projekte/bibliotheksdaten) visualisiert. Wir wünschen viel Vergnügen beim Stöbern durch die (digitale) Stadtteilbibliothek Pankow!
+
+
+
