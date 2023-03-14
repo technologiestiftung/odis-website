@@ -41,6 +41,8 @@ Durch Iterationen beim Löschen von Werten konnten wir dafür sorgen, dass nur s
 
 Weiter werteten wir den Datensatz auf, um die **Nutzung der Daten zu erleichtern**. Redundante Spalten wurden gelöscht und Codes z.B. für Mediennummern, Benutzergruppen oder Fächerstatistiken übersetzt. Gleichzeitig wollten wir den Datensatz bzw. die Beschreibung der Daten nur dort verändern, wo eine nachvollziehbare Übersetzung Sinn macht. So blieben zum Beispiel die Sigelnummern im Datensatz enthalten, die jeweils für einen Bibliotheksstandort stehen. Dafür stellt die Stadtteilbibliothek Pankow eine Schlüsseltabelle auf dem Open Data Portal zum Download zur Verfügung.
 
+Für die Sachgruppen und Untergruppen, die das Genre der Medien beschreiben, ist ebenfalls eine separate Schlüsseltabelle im Open Data Portal abrufbar. Die Sachgruppen folgen der [Systematik für Bibliotheken (SfB)](https://www.sfb-online.de/wiki/index.php?title=Sachgruppen%C3%BCbersicht) und tauchen meist als Kürzel im Datensatz auf. Bisher gab es keine maschinenlesbare Übersicht der Sachgruppen, weshalb wir mithilfe eines Scraping-Skripts eine Schlüsseltabelle als CSV erstellt haben.
+
 ### Bereitstellung und Aktualisierung der Daten
 
 Mit über 1,5 Mio. Einträgen und einer **Dateigröße** von rund 300 MB ist der Datensatz größer als die üblichen Datensätze, die auf dem Open Data Portal veröffentlicht werden. So liegt das Upload-Maximum bei Imperia bei 30 MB. Dank einer Schul-Cloud des Bezirks Pankow konnte der Open-Data-Beauftragte Karsten Gartner den Datensatz hochladen und über die Datenrubrik auf dem Open Data Portal bereitstellen.
