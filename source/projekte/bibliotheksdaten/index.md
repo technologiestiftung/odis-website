@@ -3,7 +3,7 @@ layout: project
 tags: project
 title: Dashboard der Stadtbibliothek Pankow
 blogLinkTitle: "Hier geht's zum Dashboard"
-blogLink: https://bibliotheksdaten.odis-berlin.de/pankow
+blogLink: https://bibliotheksdaten.odis-berlin.de/pankow/
 metaDescription: Ein interaktives Dashboard als Analysetool für offene Bibliotheksdaten
 date: 2023-03-14
 visible: true
@@ -17,7 +17,7 @@ Wir haben die Veröffentlichung dieses umfassenden Datensatzes zum Anlass genomm
 
 
 ## Hintergrund
-Die Leitung der Janusz-Korczak-Bibliothek in Pankow startete im vergangenen Jahr mit dem Vorhaben, **Bibliotheksdaten als offene Daten bereitzustellen**. In der Zusammenarbeit zwischen der Stadtteilbibliothek Pankow, dem bezirklichen Open-Data-Beauftragten Karsten Gartner und der ODIS konnte ein interessanter Datensatz auf dem Open Data Portal veröffentlicht werden, der Informationen zu über 1,5 Mio. Ausleihen und Verlängerungen in Pankower Bibliotheken im Jahr 2022 beinhaltet. Wie wir im Vorfeld der Veröffentlichung den Rohdatensatz aufbereitet und anonymsiert haben, um keine Rückschlüsse auf sensible Daten zuzulassen, ist in unserem [Blogpost](https://daten.berlin.de/datensaetze/ausleihen-%C3%B6ffentlichen-bibliotheken-pankow-2022) nachzulesen.
+Die Leitung der Janusz-Korczak-Bibliothek in Pankow startete im vergangenen Jahr mit dem Vorhaben, **Bibliotheksdaten als offene Daten bereitzustellen**. In der Zusammenarbeit zwischen der Stadtteilbibliothek Pankow, dem bezirklichen Open-Data-Beauftragten Karsten Gartner und der ODIS konnte ein interessanter Datensatz auf dem Open Data Portal veröffentlicht werden, der Informationen zu über 1,5 Mio. Ausleihen und Verlängerungen in Pankower Bibliotheken im Jahr 2022 beinhaltet. Wie wir im Vorfeld der Veröffentlichung den Rohdatensatz aufbereitet und anonymsiert haben, um keine Rückschlüsse auf sensible Daten zuzulassen, ist in unserem [Blogpost](../../aktuelles/2023-03-14-bibliotheksdaten_pankow) nachzulesen.
 
 ## Was zeigt das Dashboard?
 Das Dashboard zeigt exemplarisch, welche Auswertungen anhand der Daten möglich sind und betrachtet verschiedene Themenbereiche. Den Beginn macht eine Übersicht über die **absoluten Ausleihen und Verlängerungen im Jahr 2022** sowie den **beliebstesten 1.000 Ausleihungen**. Dabei fällt auf: Die beliebstesten Medien sind für Kinder. Eine Übersicht der **Ausleihen nach Medientypen** zeigt, dass die Bibliothek viel mehr im Angebot hat als Bücher. DVDs, Zeitschriften aber auch Audiomedien wie CDs und Tonie-Figuren gehören längst zum Bibliotheksangebot 
