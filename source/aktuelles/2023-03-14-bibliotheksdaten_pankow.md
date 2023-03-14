@@ -8,14 +8,15 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 # Stadtteilbibliothek Pankow veröffentlicht ersten Open-Data-Datensatz 
-Die Leitung der Janusz-Korczak-Bibliothek in Pankow entschied sich im vergangenen Jahr, **Bibliotheksdaten als offene Daten bereitzustellen**. Ziel der Bibliotheksleitung ist es, mithilfe der offenen Daten **gezieltere Analysen** durchführen zu können, um beispielsweise das Nutzungsverhalten oder die Reichweite der einzelnen Bibliotheksstandorte auszuwerten. Wir waren natürlich neugierig darauf, welche spannenden Informationen in den Daten zu finden sind und unterstützten Tobias Weiß, den Leiter der Janusz-Korczak-Bibliothek, gemeinsam mit Karsten Gartner, dem Open-Data-Beauftragten des Bezirks, gerne bei der Aufbereitung, Anonymisierung und Bereitstellung der Daten.
+Die Leitung der Janusz-Korczak-Bibliothek in Pankow entschied sich im vergangenen Jahr, **Bibliotheksdaten als offene Daten bereitzustellen**. Ziel der Bibliotheksleitung ist es, mithilfe der offenen Daten **gezieltere Analysen** durchführen zu können, um beispielsweise das Nutzungsverhalten oder die Reichweite der einzelnen Bibliotheksstandorte auszuwerten. Wir waren natürlich neugierig darauf, welche spannenden Informationen in den Daten zu finden sind und unterstützten Tobias Weiß, den Leiter der Bibliothek, gemeinsam mit Karsten Gartner, dem Open-Data-Beauftragten des Bezirks, gerne bei der Aufbereitung, Anonymisierung und Bereitstellung der Daten.
 
-Der Datensatz ist seit Februar 2022 mit den nötigen Schlüsseltabellen und der Dokumentation im [Berliner Open Data Portal](https://daten.berlin.de/datensaetze/ausleihen-öffentlichen-bibliotheken-pankow-2022) abrufbar.
+Der Datensatz ist seit Februar 2022 mit den nötigen Schlüsseltabellen und der Dokumentation im [Berliner Open Data Portal](https://daten.berlin.de/datensaetze/ausleihen-öffentlichen-bibliotheken-pankow-2022) abrufbar. Wie der Weg bis hin zur Veröffentlichung war, möchten wir in diesem Blogbeitrag aufzeigen.
+
 
 ## Von sensiblen, personenbezogenen Daten zu Open-Data-konformen Daten
 Über das zentrale Verbundservicezentrum (VSZ) der Zentral- und Landesbibliothek (ZLB) erhält die Pankower Stadtteilbibliothek Statistiken über die Medienausleihungen im Bezirk. Bei der ersten gemeinsamen Sichtung des Datensatzes zur Ausleihstatistik vor Ort kristallisierten sich drei zentrale Herausforderungen heraus:
 - Wie können die Daten so verändert werden, dass keine Rückschlüsse auf individuelle Bibliotheksnutzer:innen gezogen werden können, ohne gleichzeitig einen allzu hohen Informationsverlust zu riskieren?
-- Wie kann der mit Fachbegriffen und Codes gespickte Datensatz so aufgewertet werden, dass die Informationen verständlich und nutzbar sind?
+- Wie kann der mit Fachbegriffen und Codes gespickte Datensatz so aufgewertet werden, dass die Informationen verständlich und nutzbar werden?
 - Wie kann eine erfolgreiche Veröffentlichung im Berliner Open Data Portal und eine jährliche Aktualisierung realisiert werden?
 
 <center>
@@ -46,7 +47,7 @@ Mit über 1,5 Mio. Einträgen und einer **Dateigröße** von rund 300 MB ist der
 
 Für die **geplante, jährliche Veröffentlichung** des Datensatzes kann die Stadtteilbibliothek den neuen Datensatz durch das von uns entwickelte Skript jederzeit erneut automatisiert anonymisieren und aufbereiten.
 
-Im Open Data Portal sind ist neben dem Datensatz und den Schlüsseltabellen auch eine Dokumentation bereitgestellt, die die einzelnen Spalten und Kategorien erklärt.
+Im Open Data Portal ist neben dem Datensatz und den Schlüsseltabellen auch eine Dokumentation bereitgestellt, die die einzelnen Spalten und Kategorien erklärt.
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_doku.png", caption:"Auszug aus der Dokumentation, bereitgestellt durch die Stadtteilbibliothek Pankow und veröffentlicht im Open Data Portal"%}
@@ -55,5 +56,8 @@ Im Open Data Portal sind ist neben dem Datensatz und den Schlüsseltabellen auch
 ## Einblick in die Daten
 Welche Erkenntnisse lassen sich nun aus den Daten gewinnen? Jeder Eintrag stellt einen Ausleih- oder Verlängerungsvorgang dar – sowohl erfolgreiche als auch fehlgeschlagene. Darin enthalten sind vielfältige Informationen über den Ausleihvorgang, das Medium selbst oder über die Bibliotheksnutzer:innen. So lässt sich durch Abfragen des Datensatzes schnell herausfinden, welche Sachbücher bei Kinder- und Jugendlichen gefragt sind, welche Bibliotheksstandorte am häufigsten genutzt oder wann Medien über den Jahresverlauf gesehen am meisten nachgefragt werden. Ein paar dieser Analysen haben wir im Rahmen eines [Dashboards](../../projekte/bibliotheksdaten) visualisiert. Wir wünschen viel Vergnügen beim Stöbern durch die (digitale) Stadtteilbibliothek Pankow!
 
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_Dashboard.png", caption: "Das Dashboard zeigt verschiedene Analysen, zum Beispiel die Anzahl der Gesamtausleihen oder die Fächerstatistik". %}
+</center>
 
 
