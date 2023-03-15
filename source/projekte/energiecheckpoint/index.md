@@ -24,7 +24,7 @@ Die ODIS hat sich die vorhandenen offenen Daten angesehen und bemerkt, dass die 
 
 ## Was zeigt der EnergieCheckpoint?
 
-Der EnergieCheckpoint visualisiert die von der BIM Berliner Immobilienmanagement GmbH regelmäßig veröffentlichten Energieverbrauchsdaten und Einsparmaßnahmen für 386 Standorte wie Schulen, Feuerwehren oder Kultureinrichtungen.
+Der EnergieCheckpoint visualisiert die von der BIM Berliner Immobilienmanagement GmbH regelmäßig veröffentlichten Energieverbrauchsdaten und Einsparmaßnahmen für 383 Standorte wie Schulen, Feuerwehren oder Kultureinrichtungen.
 
 Mit einem Klick auf einen Standort erhalten Nutzer:innen Informationen zum Gebäudetyp, Wärme bzw. Energieverbrauch oder Art der Wärmeversorgung (Gas, Fernwärme etc.). Prinzipiell lassen sich die Verbrauchsinformationen über einen Button zwischen Wärme- und Stromverbrauch jederzeit umschalten. Die Ranking-Funktion erlaubt es, die Karte weiter zu explorieren und die Einrichtungen nacheinander durchzugehen. Es kann zur Liegenschaft mit dem nächsthohen bzw. nächstniedrigen Verbrauch gesprungen werden. Für ein besseres Verständnis wird der Stromverbrauch der einzelnen Standorte mit dem Verbrauch eines durchschnittlichen Fünfpersonenhaushalts verglichen. 
 Je Gebäude oder Gebäudeteile der Liegenschaft werden darüber hinaus Sanierungsdaten angezeigt, die Kosten und Flächen der Sanierungsvorhaben darstellen. Die farbige Fläche markiert die geschätzte Fläche der Liegenschaft, ist aber nur eine Annäherung, da sich Gebäude auch außerhalb der Fläche befinden können.
