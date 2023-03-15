@@ -2,7 +2,7 @@
 layout: project
 tags: project
 title: Berliner EnergieCheckpoint
-blogLinkTitle: "Hier geht's zur interaktiven Karte"
+blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://energiecheckpoint.odis-berlin.de
 metaDescription: Mit einer Webkarte Energieverbauch und Sanierungspotentiale öffentlicher Gebäude erkunden
 date: 2023-03-22
@@ -24,16 +24,16 @@ Die ODIS hat sich die vorhandenen offenen Daten angesehen und bemerkt, dass die 
 
 ## Was zeigt der EnergieCheckpoint?
 
-Der EnergieCheckpoint visualisiert die von der BIM Berliner Immobilienmanagement GmbH regelmäßig veröffentlichten Energieverbrauchsdaten und Einsparmaßnahmen für 386 Standorte. 
+Der EnergieCheckpoint visualisiert die von der BIM Berliner Immobilienmanagement GmbH regelmäßig veröffentlichten Energieverbrauchsdaten und Einsparmaßnahmen für 386 Standorte wie Schulen, Feuerwehren oder Kultureinrichtungen.
 
-Mit einem Klick auf einen Standort erhalten Nutzer:innen detaillierte Informationen wie Gebäudetyp, Wärme bzw. Energieverbrauch oder Art der Wärmeversorgung (Gas, Fernwärme etc.). Prinzipiell lassen sich die Verbrauchsinformationen sowohl für Wärme- als auch Stromverbrauch anzeigen. Die Ansicht kann jederzeit umgeschaltet werden. Die Ranking-Funktion erlaubt es, die Karte weiter zu explorieren und die Einrichtungen nacheinander durchzugehen. Es kann zur Liegenschaft mit dem nächsthohen bzw. nächstniedrigen Verbrauch gesprungen werden. Für ein besseres Verständnis wird der Stromverbrauch der einzelnen Standorte mit dem Verbrauch eines durchschnittlichen Fünfpersonenhaushalts verglichen. 
+Mit einem Klick auf einen Standort erhalten Nutzer:innen Informationen zum Gebäudetyp, Wärme bzw. Energieverbrauch oder Art der Wärmeversorgung (Gas, Fernwärme etc.). Prinzipiell lassen sich die Verbrauchsinformationen über einen Button zwischen Wärme- und Stromverbrauch jederzeit umschalten. Die Ranking-Funktion erlaubt es, die Karte weiter zu explorieren und die Einrichtungen nacheinander durchzugehen. Es kann zur Liegenschaft mit dem nächsthohen bzw. nächstniedrigen Verbrauch gesprungen werden. Für ein besseres Verständnis wird der Stromverbrauch der einzelnen Standorte mit dem Verbrauch eines durchschnittlichen Fünfpersonenhaushalts verglichen. 
 Je Gebäude oder Gebäudeteile der Liegenschaft werden darüber hinaus Sanierungsdaten angezeigt, die Kosten und Flächen der Sanierungsvorhaben darstellen. Die farbige Fläche markiert die geschätzte Fläche der Liegenschaft, ist aber nur eine Annäherung, da sich Gebäude auch außerhalb der Fläche befinden können.
 
 Mit verschiedenen Filterfunktionen lassen sich die die öffentlichen Einrichtungen nach bestimmten Merkmalen eingrenzen und anzeigen, wie zum Beispiel nach dem Gebäudetyp "Schulen", nach Gebäuden die über Gas beheizt werden oder nach Gebäude mit besonders hohem Einsparpotential. Die Filterauswahl lässt sich als CSV-Datei exportieren.
 
-Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf Erkunden in der Infobox eine neunteilige Tour angeboten, bei der die einzelnen Funktionen genauer erklärt und kontextualisiert werden. 
+Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf Erkunden in der Infobox eine neunteilige Tour angeboten, bei der die einzelnen Funktionen genauer erklärt und eingeordnet werden. 
 
-Die Anwendung ist so konzipiert, dass in der Ansicht zwischen der 2D-Perspektive und der Liegenschafts-Perspektive gewechselt und problemlos mit einem Smartphone bedient werden kann.
+Die Anwendung ist so konzipiert, dass in der Ansicht zwischen der 2D-Perspektive und der Liegenschafts-Perspektive gewechselt werden kann. Die Anwenung kann problemlos mit einem Smartphone bedient werden.
 
 ## Datengrundlage und Methode
 
@@ -42,8 +42,8 @@ Diese Anwendung basiert komplett auf (eingeschränkt) offenen Daten der BIM Berl
 Die verarbeiteten Daten und die Skripte zur Datenprozessierung sind in [diesem](https://github.com/technologiestiftung/energiekarte) Repository zu finden.
 
 
-## Hinweis zur eingeschränkten Aussagekraft der Sanierungsdaten
+### Hinweis zur eingeschränkten Aussagekraft der Sanierungsdaten
 
-Der Sanierungsfahrplan, der eine zielorientierte Abarbeitungsreihenfolge der erforderlichen Gebäudesanierungen aufzeigt, dient den Bezirken und der BIM als strategisches Instrument bei der Sanierungsplanung. Die hierin enthaltene Grobkostenschätzung stellt lediglich eine überschlägige informative Angabe zum Anteil der energetischen Sanierungskostenanteile dar und entspricht dem Stand der Erstellung des Sanierungsfahrplans. Über eine energetische Sanierung hinausgehende Sanierungs- und Modernisierungsbedarfe, die im Rahmen einer Gebäudesanierung mit umgesetzt werden, sind hier kostenseitig nicht enthalten. Gleiches gilt für Planungskosten sowie markt- bzw. inflationsbedingte Kostensteigerungen. Die tatsächlichen Sanierungskosten können somit abhängig vom Beginn und Umfang der konkreten Sanierungsmaßnahmen davon abweichen.
+*Der Sanierungsfahrplan, der eine zielorientierte Abarbeitungsreihenfolge der erforderlichen Gebäudesanierungen aufzeigt, dient den Bezirken und der BIM als strategisches Instrument bei der Sanierungsplanung. Die hierin enthaltene Grobkostenschätzung stellt lediglich eine überschlägige informative Angabe zum Anteil der energetischen Sanierungskostenanteile dar und entspricht dem Stand der Erstellung des Sanierungsfahrplans. Über eine energetische Sanierung hinausgehende Sanierungs- und Modernisierungsbedarfe, die im Rahmen einer Gebäudesanierung mit umgesetzt werden, sind hier kostenseitig nicht enthalten. Gleiches gilt für Planungskosten sowie markt- bzw. inflationsbedingte Kostensteigerungen. Die tatsächlichen Sanierungskosten können somit abhängig vom Beginn und Umfang der konkreten Sanierungsmaßnahmen davon abweichen.*
 
 
