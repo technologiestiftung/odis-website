@@ -13,7 +13,7 @@ heroImage: energiecheckpoint_hero.jpeg
 
 
 Wie hoch ist der jährliche Energieverbrauch des Friedrichstadtpalast? Welchen Beitrag zur Energieeinsparung kann die energetische Sanierung des Roten Rathauses leisten? Mit welchem Energieträger wird die Berliner Philharmonie versorgt? 
-Der Berliner EnergieCheckpoint öffnet Daten zu Energieverbrauch und Energieeinsparungen öffentlicher Gebäude am Beispiel der Daten der BIM Berliner Immobilien Management GmbH und visualisiert diese über einzelne Standorte auf einer Berlin-Karte. 
+Der **Berliner EnergieCheckpoint öffnet Daten zu Energieverbrauch und Energieeinsparungen öffentlicher Gebäude** am Beispiel der Daten der BIM Berliner Immobilien Management GmbH und visualisiert diese über einzelne Standorte auf einer Berlin-Karte. 
 
 ## Hintergrund
 
@@ -24,12 +24,12 @@ Die ODIS hat sich die vorhandenen offenen Daten angesehen und bemerkt, dass die 
 
 ## Was zeigt der EnergieCheckpoint?
 
-Der EnergieCheckpoint visualisiert die von der BIM Berliner Immobilienmanagement GmbH regelmäßig veröffentlichten Energieverbrauchsdaten und Einsparmaßnahmen für 383 Standorte wie Schulen, Feuerwehren oder Kultureinrichtungen.
+Der EnergieCheckpoint visualisiert die von der BIM Berliner Immobilienmanagement GmbH regelmäßig veröffentlichten Energieverbrauchsdaten und Einsparmaßnahmen für über 300 Standorte wie Schulen, Feuerwehren oder Kultureinrichtungen.
 
 Mit einem Klick auf einen Standort erhalten Nutzer:innen Informationen zum Gebäudetyp, Wärme bzw. Energieverbrauch oder Art der Wärmeversorgung (Gas, Fernwärme etc.). Prinzipiell lassen sich die Verbrauchsinformationen über einen Button zwischen Wärme- und Stromverbrauch jederzeit umschalten. Die Ranking-Funktion erlaubt es, die Karte weiter zu explorieren und die Einrichtungen nacheinander durchzugehen. Es kann zur Liegenschaft mit dem nächsthohen bzw. nächstniedrigen Verbrauch gesprungen werden. Für ein besseres Verständnis wird der Stromverbrauch der einzelnen Standorte mit dem Verbrauch eines durchschnittlichen Fünfpersonenhaushalts verglichen. 
 Je Gebäude oder Gebäudeteile der Liegenschaft werden darüber hinaus Sanierungsdaten angezeigt, die Kosten und Flächen der Sanierungsvorhaben darstellen. Die farbige Fläche markiert die geschätzte Fläche der Liegenschaft, ist aber nur eine Annäherung, da sich Gebäude auch außerhalb der Fläche befinden können.
 
-Mit verschiedenen Filterfunktionen lassen sich die die öffentlichen Einrichtungen nach bestimmten Merkmalen eingrenzen und anzeigen, wie zum Beispiel nach dem Gebäudetyp "Schulen", nach Gebäuden die über Gas beheizt werden oder nach Gebäude mit besonders hohem Einsparpotential. Die Filterauswahl lässt sich als CSV-Datei exportieren.
+Mit verschiedenen Filterfunktionen lassen sich die die öffentlichen Einrichtungen nach bestimmten Merkmalen eingrenzen und anzeigen, wie zum Beispiel nach dem Gebäudetyp "Schulen", nach Gebäuden die über Gas beheizt werden oder nach Gebäuden mit besonders hohem Einsparpotential. Die Filterauswahl lässt sich als CSV-Datei exportieren.
 
 Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf Erkunden in der Infobox eine neunteilige Tour angeboten, bei der die einzelnen Funktionen genauer erklärt und eingeordnet werden. 
 
@@ -37,7 +37,7 @@ Die Anwendung ist so konzipiert, dass in der Ansicht zwischen der 2D-Perspektive
 
 ## Datengrundlage und Methode
 
-Diese Anwendung basiert komplett auf (eingeschränkt) offenen Daten der BIM Berliner Immobilienmanagement GmbH, die jährlich unter [Berichte und Reports](https://www.bim-berlin.de/presse/publikationen/) die Energieverbrauchsübersicht und den Sanierungsfahrplan als PDF-Dateien veröffentlichen. Die Daten liegen (noch) nicht als maschinenlesbare Daten auf dem Berliner Datenportal bereit, weswegen wir in diesem Fall von eingeschränkt offenen Daten sprechen. Die aktuelle Energieverbrauchsübersicht liegt für 2020 vor, die Daten zum Sanierungsfahrplan haben den Stand 04.05.2022. Um die einzelnen Adresspunkte zu Grundstücken zuordnen zu können, haben wir offene Daten zu ALKIS verwendet. Für drei Adressen (Wallstr. 32’, WRD Feuerwehr SILB, Dorfstr. 3) konnten nur Sanierungsdaten angezeigt werden.
+**Diese Anwendung basiert komplett auf (eingeschränkt) offenen Daten der BIM Berliner Immobilienmanagement GmbH**, die jährlich unter [Berichte und Reports](https://www.bim-berlin.de/presse/publikationen/) die Energieverbrauchsübersicht und den Sanierungsfahrplan als PDF-Dateien veröffentlichen. Die Daten liegen (noch) nicht als maschinenlesbare Daten auf dem Berliner Datenportal bereit, weswegen wir in diesem Fall von eingeschränkt offenen Daten sprechen. Die aktuelle Energieverbrauchsübersicht liegt für 2020 vor, die Daten zum Sanierungsfahrplan haben den Stand 04.05.2022. Um die einzelnen Adresspunkte zu Grundstücken zuordnen zu können, haben wir offene Daten zu ALKIS verwendet. Für drei Adressen (Wallstr. 32’, WRD Feuerwehr SILB, Dorfstr. 3) konnten nur Sanierungsdaten angezeigt werden.
 
 Die verarbeiteten Daten und die Skripte zur Datenprozessierung sind in [diesem](https://github.com/technologiestiftung/energiekarte) Repository zu finden.
 
