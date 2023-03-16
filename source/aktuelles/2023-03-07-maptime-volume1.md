@@ -28,7 +28,7 @@ Thomas Tursics gab mit seinem [Kartenprojekt](https://tursics.github.io/schule-b
 
 
 ## Ausklang bei Pizza und Postkartendruck
-Hans Hack von ODIS entwickelte für den Abend ein besonderes zum Ausprobieren. Mit [Kiezcolors](https://kiezcolors.odis-berlin.de/#13/52.49899/13.3915) lässt sich ein gewünschter Ausschnitt Berlins mit dem entsprechenden Anteil der Flächennutzung (natürlich basierend auf offenen Daten) darstellen. Die Teilnehmer:innen konnten sich darauf baiserend bunte Postkarten ausdrucken und mit nach Hause nehmen. Auch die traditionelle Maptime-Pizza kam gut an und stärkte nochmal für die ausgelassenen Gespräche.
+Hans Hack von ODIS entwickelte für den Abend ein besonderes Tool zum Ausprobieren. Mit [Kiezcolors](https://kiezcolors.odis-berlin.de/#13/52.49899/13.3915) lässt sich ein gewünschter Ausschnitt Berlins mit dem entsprechenden Anteil der Flächennutzung (natürlich basierend auf offenen Daten) darstellen. Die Teilnehmer:innen konnten sich darauf baiserend bunte Postkarten ausdrucken und mit nach Hause nehmen. Auch die traditionelle Maptime-Pizza kam gut an und stärkte nochmal für die ausgelassenen Gespräche.
 
 Es war großartig, den Internationalen Open Data Day gemeinsam mit Maptime und zahlreichen Interessierten und Engagierten zu feiern. Wir freuen uns schon auf das nächste Mal!
 
