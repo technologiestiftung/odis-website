@@ -19,7 +19,8 @@ Der **Berliner EnergieCheckpoint öffnet Daten zu Energieverbrauch und Energieei
 
 Berlin möchte bis spätestens 2045 klimaneutral werden. Dazu ist im [Berliner Klimaschutz- und Energiewendegesetz (EWG Bln)](https://www.berlin.de/sen/uvk/klimaschutz/klimaschutzpolitik-in-berlin/energiewendegesetz/) als Ziel eine Reduktion der Kohlendioxidemissionen um mindestens 95% im Vergleich zum Jahr 1990 festgelegt. Öffentliche Gebäude wie Schulen und Kultureinrichtungen sollen durch Energieeinsparungen und Sanierungen eine Vorbildrolle einnehmen. Doch welche Gebäude verbrauchen wie viel Energie und welche Einsparpotentiale stecken in der Sanierung einzelner Gebäude? 
 
-Die ODIS hat sich die vorhandenen offenen Daten angesehen und bemerkt, dass die Datenlage in diesem Bereich in Bezug auf die Aktualität, Kontinuität und Maschinenlesbarkeit ausbaufähig ist. Mit der interaktiven Webkarte „Berliner EnergieCheckpoint“ haben wir daher eine prototypische Anwendung programmiert, die Aufmerksamkeit für das Energiewendegesetz und das Thema Energieeinsparung erzeugen und gleichzeitig als Gesprächsgrundlage zur Verbesserung der (offenen) Datenlage der behördlichen Stellen in den Bereichen Gebäudedaten und Energiemonitoring dienen kann.
+Die ODIS hat sich die vorhandenen offenen Daten angesehen und bemerkt, dass die Datenlage in diesem Bereich in Bezug auf die Aktualität, Kontinuität und Maschinenlesbarkeit ausbaufähig ist. 
+Mit der interaktiven Webkarte „Berliner EnergieCheckpoint“ haben wir daher eine prototypische Anwendung programmiert, die Aufmerksamkeit für das Energiewendegesetz und das Thema Energieeinsparung erzeugt und gleichzeitig als Gesprächsgrundlage zur Verbesserung der (offenen) Datenlage der behördlichen Stellen in den Bereichen Gebäudedaten und Energiemonitoring dienen kann.
 
 
 ## Was zeigt der EnergieCheckpoint?
@@ -27,6 +28,14 @@ Die ODIS hat sich die vorhandenen offenen Daten angesehen und bemerkt, dass die 
 Der EnergieCheckpoint visualisiert die von der BIM Berliner Immobilienmanagement GmbH regelmäßig veröffentlichten Energieverbrauchsdaten und Einsparmaßnahmen für über 300 Standorte wie Schulen, Feuerwehren oder Kultureinrichtungen.
 
 Mit einem Klick auf einen Standort erhalten Nutzer:innen Informationen zum Gebäudetyp, Wärme bzw. Energieverbrauch oder Art der Wärmeversorgung (Gas, Fernwärme etc.). 
+
+<center>
+{% include "macro-image-section-small.html", src:"Volksbuehne_waerme.png", caption:"Dieser Ausschnitt zeigt die Volksbühne, die einen Wärmevebrauch von über 1.500 kWh im Jahr aufweist." %}
+</center>
+
+<video>
+<source src="ranking_video.mov" " type="video">
+</video>
 
 Prinzipiell lassen sich die Verbrauchsinformationen über einen Button zwischen Wärme- und Stromverbrauch jederzeit umschalten. Die Ranking-Funktion erlaubt es, die Karte weiter zu explorieren und die Einrichtungen nacheinander durchzugehen. Es kann zur Liegenschaft mit dem nächsthohen bzw. nächstniedrigen Verbrauch gesprungen werden. Für ein besseres Verständnis wird der Stromverbrauch der einzelnen Standorte mit dem Verbrauch eines durchschnittlichen Fünfpersonenhaushalts verglichen. 
 Je Gebäude oder Gebäudeteile der Liegenschaft werden darüber hinaus Sanierungsdaten angezeigt, die Kosten und Flächen der Sanierungsvorhaben darstellen. Die farbige Fläche markiert die geschätzte Fläche der Liegenschaft, ist aber nur eine Annäherung, da sich Gebäude auch außerhalb der Fläche befinden können.
