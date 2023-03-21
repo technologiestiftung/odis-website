@@ -33,6 +33,12 @@ Mit einem Klick auf einen Standort erhalten Nutzer:innen Informationen zum Gebä
 {% include "macro-image-section-small.html", src:"Volksbuehne_waerme.png", caption:"Dieser Ausschnitt zeigt die Volksbühne, die einen Wärmevebrauch von über 1.500 kWh im Jahr aufweist." %}
 </center>
 
+
+<video src="ranking_video.mp4" width=320  height=240 controls poster="vorschaubild.jpg">
+Dies Video kann in Ihrem Browser nicht wiedergegeben werden.<br>
+Eine Download-Version steht unter <a href="URL">Link-Addresse</a> zum Abruf bereit. 
+</video>
+
 <video>
 <source src="ranking_video.mov" " type="video">
 </video>
