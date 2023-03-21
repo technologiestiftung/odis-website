@@ -26,29 +26,38 @@ Mit der interaktiven Webkarte „Berliner EnergieCheckpoint“ haben wir daher e
 ## Was zeigt der EnergieCheckpoint?
 
 Der EnergieCheckpoint visualisiert die von der BIM Berliner Immobilienmanagement GmbH regelmäßig veröffentlichten Energieverbrauchsdaten und Einsparmaßnahmen für über 300 Standorte wie Schulen, Feuerwehren oder Kultureinrichtungen.
-
 Mit einem Klick auf einen Standort erhalten Nutzer:innen Informationen zum Gebäudetyp, Wärme bzw. Energieverbrauch oder Art der Wärmeversorgung (Gas, Fernwärme etc.). 
 
 <center>
-{% include "macro-image-section-small.html", src:"Volksbuehne_waerme.png", caption:"Dieser Ausschnitt zeigt die Volksbühne, die einen Wärmevebrauch von über 1.500 kWh im Jahr aufweist." %}
+{% include "macro-image-section-small.html", src:"/assets/images/energiekarte_volksbuehne.png", caption:"Dieser Ausschnitt zeigt die Volksbühne, die einen Wärmevebrauch von über 1.500 kWh im Jahr aufweist." %}
+</center>
+<br>
+
+Prinzipiell lassen sich die Verbrauchsinformationen über einen Button zwischen Wärme- und Stromverbrauch jederzeit umschalten. Die Ranking-Funktion erlaubt es, die Karte weiter zu explorieren und die Einrichtungen nacheinander durchzugehen. Es kann zur Liegenschaft mit dem nächsthohen bzw. nächstniedrigen Verbrauch gesprungen werden. 
+
+<center>
+<video src="/assets/images/energiekarte_ranking_video.mov" type="video" width=400  height=400 loop="true" controls="true" autoplay="false"> 
+</video>
 </center>
 
-
-<video src="ranking_video.mp4" width=320  height=240 controls poster="vorschaubild.jpg">
-Dies Video kann in Ihrem Browser nicht wiedergegeben werden.<br>
-Eine Download-Version steht unter <a href="URL">Link-Addresse</a> zum Abruf bereit. 
-</video>
-
-<video>
-<source src="ranking_video.mov" " type="video">
-</video>
-
-Prinzipiell lassen sich die Verbrauchsinformationen über einen Button zwischen Wärme- und Stromverbrauch jederzeit umschalten. Die Ranking-Funktion erlaubt es, die Karte weiter zu explorieren und die Einrichtungen nacheinander durchzugehen. Es kann zur Liegenschaft mit dem nächsthohen bzw. nächstniedrigen Verbrauch gesprungen werden. Für ein besseres Verständnis wird der Stromverbrauch der einzelnen Standorte mit dem Verbrauch eines durchschnittlichen Fünfpersonenhaushalts verglichen. 
+Für ein besseres Verständnis wird der Stromverbrauch der einzelnen Standorte mit dem Verbrauch eines durchschnittlichen Fünfpersonenhaushalts verglichen. 
 Je Gebäude oder Gebäudeteile der Liegenschaft werden darüber hinaus Sanierungsdaten angezeigt, die Kosten und Flächen der Sanierungsvorhaben darstellen. Die farbige Fläche markiert die geschätzte Fläche der Liegenschaft, ist aber nur eine Annäherung, da sich Gebäude auch außerhalb der Fläche befinden können.
+
+
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/energiekarte_sanierungen.png", caption:"Für einzelne Gebäude, die einer Adresse annähernd zugeordnet werden können, existieren zudem Informationen zu Sanierungsfläche, Kosten und Einsparpotenzialen" %}
+</center>
+<br>
+
 
 Mit verschiedenen Filterfunktionen lassen sich die die öffentlichen Einrichtungen nach bestimmten Merkmalen eingrenzen und anzeigen, wie zum Beispiel nach dem Gebäudetyp "Schulen", nach Gebäuden die über Gas beheizt werden oder nach Gebäuden mit besonders hohem Einsparpotential. Die Filterauswahl lässt sich als CSV-Datei exportieren.
 
 Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf Erkunden in der Infobox eine neunteilige Tour angeboten, bei der die einzelnen Funktionen genauer erklärt und eingeordnet werden. 
+
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/energiekarte_tour.png", caption:"Ausschnitt aus der optionalen Tour, welche die Nutzer:innen die Anwendung in neun Schritten näher bringt" %}
+</center>
+<br>
 
 Die Anwendung ist so konzipiert, dass in der Ansicht zwischen der 2D-Perspektive und der Liegenschafts-Perspektive gewechselt werden kann. Die Anwenung kann problemlos mit einem Smartphone bedient werden.
 
