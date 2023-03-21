@@ -7,8 +7,8 @@ blogLink: https://energiecheckpoint.odis-berlin.de
 metaDescription: Mit einer Webkarte Energieverbauch und Sanierungspotentiale öffentlicher Gebäude erkunden
 date: 2023-03-22
 visible: true
-indexImage: energiecheckpoint_placeholder2.png
-heroImage: energiecheckpoint_hero.jpeg
+indexImage: energiekarte_projekte_kachel.png
+heroImage: energiekarte_desktop_screen.png
 ---
 
 
@@ -55,7 +55,7 @@ Mit verschiedenen Filterfunktionen lassen sich die die öffentlichen Einrichtung
 Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf Erkunden in der Infobox eine neunteilige Tour angeboten, bei der die einzelnen Funktionen genauer erklärt und eingeordnet werden. 
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/energiekarte_tour.png", caption:"Ausschnitt aus der optionalen Tour, welche die Nutzer:innen die Anwendung in neun Schritten näher bringt" %}
+{% include "macro-image-section-small.html", src:"/assets/images/energiekarte_joyride.png", caption:"Ausschnitt aus der optionalen Tour, welche die Nutzer:innen die Anwendung in neun Schritten näher bringt" %}
 </center>
 <br>
 
