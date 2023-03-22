@@ -7,7 +7,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# Einleitung
+# GTFS-Daten und die Berliner Tarifkarte
 Egal ob sich Berliner:innen morgens um 9 auf dem Weg zur Arbeit oder auf dem Nachhauseweg vom Club befinden, Dienste wie Google Maps, Jelbi, oder die Fahrplanauskunft der S-Bahn Berlin ermöglichen es ihnen, auf dem schnellsten Weg mit den öffentlichen Verkehrsmitteln von A nach B zu kommen. Dass dies reibungslos und kostenlos möglich ist, ist unter Anderem offenen Daten in einem einheitlichen Dateiformat zu verdanken: GTFS-Daten.
 
 ## Was sind GTFS-Daten?
