@@ -38,20 +38,12 @@ Während die Unterteilung Berlins in Tarifbereiche A und B eine verwaltungsrelev
 Die Karte lässt sich über folgenden Link auch in einem separaten Fenster öffnen: [tarifkarte.odis-berlin.de](https://tarifkarte.odis-berlin.de/)
 
 <br><br>
-<<<<<<< HEAD
-Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Die genaue Methodik und den zugrundliegenden Code zur Tarirfkarte findest du in unserem Github Repository.
-
-<br>
-Bei der Erstellung der Karte fiel auf, dass die GTFS-Daten keine Informationen enthalten, zu welchen Stadttarifen die Stationen gehören. Nach eigener Recherche fanden wir auf der Seite der VBB zwar ein PDF-Dokument mit den Informationen, allerdings ist die Datei nicht maschienenlesbar. Die ODIS hat bei der VBB angefragt, ob diese Informationen maschinenlesbar, offen und unter einer stabilen, sich nicht ändernden URL verfügbar sein können. Dank des Engagements des VBB API-Teams, welches auch die GTFS-Daten pflegt, sind die Informationen nun unter diesem Link abrufbar: 
-
-Danke VBB API-Team!
-=======
-Um die Visualisierung herzustellen, wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Der Code zum Projekt ist in unserem [Github Repository](https://github.com/technologiestiftung/tarifkarte) zu finden.
+Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Die genaue Methodik und den zugrundliegenden Code zur Tarirfkarte findest du in unserem [GitHub Repository](https://github.com/technologiestiftung/tarifkarte).
 
 <br>
 
 ## Anmerkung
-Im Laufe der Erstellung der Karte fiel auf, dass die bereitgestellten GTFS-Daten keine Informationen darüber enthalten, zu welchen Stadttarifen die einzelnen Stationen gehören. Zwar stießen wir nach eigener Recherche auf der Seite der VBB auf ein PDF, das die Informationen enthält, allerdings lässt sich die Datei im proprietären (und damit nicht offenen Format) nur schwer weiternutzen. Bei der Anfrage, ob diese Informationen maschinenlesbar, offen und unter einer stabilen URL (die sich nicht ändern sollte) veröffentlicht werden könnten, wurden wir uns vom VBB API Team unterstützt, welches auch die die GTFS Daten pflegt. Wir bedanken uns für das Engagement und freuen uns, dass die Informationen sich nun ebenfalls unter dem [diesem Link](https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/vbb-alle-zielorte.csv) aufrufen lassen.
-
-
->>>>>>> cab425f57345dbd599a54610664383755f397c5a
+Bei der Erstellung der Karte fiel auf, dass die bereitgestellten GTFS-Daten keine Informationen darüber enthalten, zu welchen Stadttarifen die einzelnen Stationen gehören. Zwar stießen wir nach eigener Recherche auf der Seite der VBB auf eine PDF, welches die Informationen enthält. Allerdings lässt sich die Datei im proprietären (und damit nicht offenen Format) nur schwer weiternutzen. Auf unsere Anfrage, ob diese Informationen maschinenlesbar, offen und unter einer stabilen, sich nicht ändernden URL eröffentlicht werden könnten, wurden wir vom VBB API-Team, welches auch die GTFS-Daten pflegt, unterstützt.
+Wir bedanken uns für das Engagement und freuen uns, dass die Informationen nun ebenfalls unter [diesem Link](https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/vbb-alle-zielorte.csv) abrufbar sind.
+<br>
+Danke VBB API-Team!
