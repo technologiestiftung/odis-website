@@ -35,12 +35,14 @@ Während die Unterteilung Berlins in Tarifbereiche A und B eine verwaltungsrelev
 
 <br>
 
-Die Karte läßt sich über folgenden Link auch in einem seperaten Fenster öffnen: [tarifkarte.odis-berlin.de](https://tarifkarte.odis-berlin.de/)
+Die Karte lässt sich über folgenden Link auch in einem separaten Fenster öffnen: [tarifkarte.odis-berlin.de](https://tarifkarte.odis-berlin.de/)
 
 <br><br>
-Um die Visualisierung herzustellen, wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Den Code zum Projekt findest du in unserem Github Repository
+Um die Visualisierung herzustellen, wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Der Code zum Projekt ist in unserem [Github Repository](https://github.com/technologiestiftung/tarifkarte) zu finden.
 
 <br>
-Bei der Erstellung der Karte viel auf, dass die GTFS Daten keine Informationen enthalten, zu welchen Stadttarifen die Stationen gehören. Nach eigener Recherche, fanden wir auf der Seite der VBB zwar ein PDF, wo die Informationen enthalten sind, allerdings ist die Datei nicht maschienenlesbar. Die ODIS hat bei der VBB angefragt, ob diese Informationen maschienenlesbar, offen und unter eine stabilen URL (also eine URL die sich nicht ändern sollte) verfügaber sein können. Dank des Engagements des VBB API Teams, welche auch die die GTFS Daten pflegen, finden sich nun die Informationen unter diesem Link:
 
-Danke VBB API Team!
+## Anmerkung
+Im Laufe der Erstellung der Karte fiel auf, dass die bereitgestellten GTFS-Daten keine Informationen darüber enthalten, zu welchen Stadttarifen die einzelnen Stationen gehören. Zwar stießen wir nach eigener Recherche auf der Seite der VBB auf ein PDF, das die Informationen enthält, allerdings lässt sich die Datei im proprietären (und damit nicht offenen Format) nur schwer weiternutzen. Bei der Anfrage, ob diese Informationen maschinenlesbar, offen und unter einer stabilen URL (die sich nicht ändern sollte) veröffentlicht werden könnten, wurden wir uns vom VBB API Team unterstützt, welches auch die die GTFS Daten pflegt. Wir bedanken uns für das Engagement und freuen uns, dass die Informationen sich nun ebenfalls unter dem [diesem Link](https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/vbb-alle-zielorte.csv) aufrufen lassen.
+
+
