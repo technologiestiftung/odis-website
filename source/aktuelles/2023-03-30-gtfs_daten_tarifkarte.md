@@ -37,8 +37,10 @@ Während die Unterteilung Berlins in Tarifbereiche A und B eine verwaltungsrelev
 
 Die Karte lässt sich über folgenden Link auch in einem separaten Fenster öffnen: [tarifkarte.odis-berlin.de](https://tarifkarte.odis-berlin.de/)
 
-<br><br>
-Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Die genaue Methodik und den zugrundliegenden Code zur Tarirfkarte findest du in unserem [GitHub Repository](https://github.com/technologiestiftung/tarifkarte).
+<br>
+Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Die genaue Methodik und den zugrundliegenden Code zur Tarirfkarte findest du in unserem 
+
+[GitHub Repository](https://github.com/technologiestiftung/tarifkarte).
 
 <br>
 
