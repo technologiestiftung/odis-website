@@ -44,6 +44,10 @@ Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestell
 
 <br>
 
+## Community
+
+Von [eigenen Dateiformaten](https://github.com/public-transport/friendly-public-transport-format) bis [Telegram Chatbots](https://github.com/derhuerst/vbb-telegram9) und ganze APIs; Anwendungen, die GTFS- und öffentliche Verkehrsdaten im weiteren Sinne benutzen, basieren vielerorts auf dem ehrenamtlichen Einsatz von Freiwilligen. Für eine beispielhafte Übersicht an Projekten, die in der Community entstanden sind, lohnt sich ein Blick auf die [GitHub Repositories](https://github.com/derhuerst) der jeweiligen Entwickler:innen.
+
 ## Anmerkung
 Bei der Erstellung der Karte fiel auf, dass die bereitgestellten GTFS-Daten keine Informationen darüber enthalten, zu welchen Stadttarifen die einzelnen Stationen gehören. Zwar stießen wir nach eigener Recherche auf der Seite der VBB auf eine PDF, welches die Informationen enthält. Allerdings lässt sich die Datei im proprietären (und damit nicht offenen Format) nur schwer weiternutzen. Auf unsere Anfrage, ob diese Informationen maschinenlesbar, offen und unter einer stabilen, sich nicht ändernden URL eröffentlicht werden könnten, wurden wir vom VBB API-Team, welches auch die GTFS-Daten pflegt, unterstützt.
 Wir bedanken uns für das Engagement und freuen uns, dass die Informationen nun ebenfalls unter [diesem Link](https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/vbb-alle-zielorte.csv) abrufbar sind.
