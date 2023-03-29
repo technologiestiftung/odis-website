@@ -24,6 +24,10 @@ GTFS-Daten (General Transit Feed Specification) bezeichnen ein offenes Format f�
 
 Wichtig ist die standardisierte Bereitstellung von Daten besonders für Entwickler:innen, die auf ein einheitliches Format angewiesen sind, um Apps und Dienste für den öffentlichen Nahverkehr zu programmieren. Immerhin besteht der Verkehrsverbund Berlin Brandenburg (VBB) aus einem Zusammenschluss von über 30 Verkehrsbetrieben mit über 13.000 Haltestellen in Berlin und Brandenburg. Ohne einheitliches Format und Bereitstellung wäre das Zusammentragen, Formatieren und regelmäßige Aktualisieren von Daten für den gesamten Verkehrsverbund erheblich aufwendiger.
 
+<iframe src="https://tarifkarte.odis-berlin.de/" style="height:70vh;width:100%;" title="Iframe Example"></iframe>
+
+<br><br>
+
 Neben der Integration von ÖPNV-Daten in bestehende Kartendienste und Routenplaner erlauben die offenen GTFS-Daten auch gänzlich neue Darstellungen und Analysen. Ein Beispiel liefert die [Tarifkarte der ODIS](https://tarifkarte.odis-berlin.de/), die eine Übersicht darüber ermöglicht, welche Gebiete des Berliner Umlands durch ein Ticket der Berliner Verkehrsbetriebe (BVG) abgedeckt sind.
 <br><br>
 
@@ -31,16 +35,7 @@ Neben der Integration von ÖPNV-Daten in bestehende Kartendienste und Routenplan
 
 Während die Unterteilung Berlins in Tarifbereiche A und B eine verwaltungsrelevante Gliederung der Stadt widerspiegelt, ist die Ausbreitung der äußeren Tarifzone C in das Brandenburger Umland weniger klar definiert. Der Tarifbereich A der BVG mit ihrer ringförmigen S-Bahn-Strecke umschließt seit dem späten 19. Jahrhundert den gemeinhin als Innenstadt definierten Stadtkern Berlins. Die Tarifzone B wiederum verläuft entlang der Grenze des Landes Berlin. Die äußerste Tarifzone C erschließt das Umland Berlins laut [offiziellen Informationen der BVG](https://www.bvg.de/de/abos-und-tickets/tarifzonen-und-tarifbestimmungen) in einem ca. 15km weiten Radius. Ein genauerer Blick auf die Karte zeigt jedoch, dass die genaue Grenze sehr unterschiedlich verläuft. Während die Tarifzone im Norden und Nordosten Berlins, beispielsweise bei Strausberg fast 20km erreicht, liegt sie im Osten und Südosten, zum Beispiel bei Erkner, deutlich unter 15km.
 
-<iframe src="https://tarifkarte.odis-berlin.de/" style="height:70vh;width:100%;" title="Iframe Example"></iframe>
-
-<br>
-
-Die Karte lässt sich über folgenden Link auch in einem separaten Fenster öffnen: [tarifkarte.odis-berlin.de](https://tarifkarte.odis-berlin.de/)
-
-<br>
-Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Die genaue Methodik und den zugrundliegenden Code zur Tarirfkarte findest du in unserem 
-
-[GitHub Repository](https://github.com/technologiestiftung/tarifkarte).
+Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Die genaue Methodik und den zugrundliegenden Code zur Tarifkarte findest du in unserem [GitHub Repository](https://github.com/technologiestiftung/tarifkarte).
 
 <br>
 
@@ -48,7 +43,10 @@ Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestell
 
 Von [eigenen Dateiformaten](https://github.com/public-transport/friendly-public-transport-format) bis [Telegram Chatbots](https://github.com/derhuerst/vbb-telegram9) und ganze APIs; Anwendungen, die GTFS- und öffentliche Verkehrsdaten im weiteren Sinne benutzen, basieren vielerorts auf dem ehrenamtlichen Einsatz von Freiwilligen. Für eine beispielhafte Übersicht an Projekten, die in der Community entstanden sind, lohnt sich ein Blick auf die [GitHub Repositories](https://github.com/derhuerst) der jeweiligen Entwickler:innen.
 
+<br>
+
 ## Anmerkung
+
 Bei der Erstellung der Karte fiel auf, dass die bereitgestellten GTFS-Daten keine Informationen darüber enthalten, zu welchen Stadttarifen die einzelnen Stationen gehören. Zwar stießen wir nach eigener Recherche auf der Seite der VBB auf eine PDF, welches die Informationen enthält. Allerdings lässt sich die Datei im proprietären (und damit nicht offenen Format) nur schwer weiternutzen. Auf unsere Anfrage, ob diese Informationen maschinenlesbar, offen und unter einer stabilen, sich nicht ändernden URL eröffentlicht werden könnten, wurden wir vom VBB API-Team, welches auch die GTFS-Daten pflegt, unterstützt.
 Wir bedanken uns für das Engagement und freuen uns, dass die Informationen nun ebenfalls unter [diesem Link](https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/vbb-alle-zielorte.csv) abrufbar sind.
 <br>
