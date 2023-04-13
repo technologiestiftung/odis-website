@@ -41,7 +41,7 @@ Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestell
 
 ## Community
 
-Von [eigenen Dateiformaten](https://github.com/public-transport/friendly-public-transport-format) bis [Telegram Chatbots](https://github.com/derhuerst/vbb-telegram9) und ganze APIs; Anwendungen, die GTFS- und öffentliche Verkehrsdaten im weiteren Sinne benutzen, basieren vielerorts auf dem ehrenamtlichen Einsatz von Freiwilligen. Für eine beispielhafte Übersicht an Projekten, die in der Community entstanden sind, lohnt sich ein Blick auf die [GitHub Repositories](https://github.com/derhuerst) der jeweiligen Entwickler:innen.
+Von [eigenen Dateiformaten](https://github.com/public-transport/friendly-public-transport-format) bis [Telegram Chatbots](https://github.com/derhuerst/vbb-telegram) und ganze APIs; Anwendungen, die GTFS- und öffentliche Verkehrsdaten im weiteren Sinne benutzen, basieren vielerorts auf dem ehrenamtlichen Einsatz von Freiwilligen. Für eine beispielhafte Übersicht an Projekten, die in der Community entstanden sind, lohnt sich ein Blick auf die [GitHub Repositories](https://github.com/derhuerst) der jeweiligen Entwickler:innen.
 
 <br>
 
