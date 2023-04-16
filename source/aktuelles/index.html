@@ -11,13 +11,11 @@ pagination:
   reverse: true
 ---
 
-<!--@todo anständig responsiv machen-->
-
 <div class="flex flex-col items-center text-blue-900">
-  <div class="flex flex-col w-1/2">
+  <div class="flex flex-col w-4/5 md:w-1/2 xl:w-2/5">
     <!-- header -->
     <section class="text-blue-500 flex flex-col justify-center my-20">
-      <h1 class="text-5xl font-clanProBold pb-4 leading-snug text-blue-500">Aktuelles</h1>
+      <h1 class="text-4xl md:text-5xl font-clanProBold pb-4 leading-snug text-blue-500">Aktuelles</h1>
       <p class="font-clanProNews leading-7 text-lg">
         Bei der ODIS ist viel los. Konferenzen, Vorträge, Workshops,
         Weiterbildungen und Prototypenentwicklung gehören fest in unser
@@ -30,20 +28,20 @@ pagination:
 
     <!--single blog article -->
     <section class="flex flex-col mb-24">
-      <div class="text-sm font-clanProBold pb-4 text-grey-500">
+      <div class="text-md font-clanProMedium pb-1 text-grey-500">
         {{post.date | date: "%d.%m.%Y"}}
       </div>
 
       <div>
         <h3>{{ post.data.title }}</h3>
-        <p>{{ post.data.metaDescription }}</p>
+        <p class="font-clanProBook">{{ post.data.metaDescription }}</p>
       </div>
 
       {% if post.data.link %}
 
       <!--extern link button-->
       <a
-        class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40"
+        class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40 font-clanProBook"
         href="{{post.data.link}}"
         >{{post.data.urlText}}</a
       >

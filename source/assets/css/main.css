@@ -1,17 +1,18 @@
 h1 {
   font-family: "Clan Bold";
-  font-size: 3rem !important;
+  font-size: 3rem;
   color: #0C163B;
   padding-bottom: 20px;
-  line-height: 1.7;
+  line-height: 1.375;
 }
 
 h2 {
   font-family: "Clan Bold";
-  font-size: 2rem !important;
+  font-size: 1.9rem !important;
   color: #0C163B;
   padding-bottom: 20px;
   padding-top: 40px;
+  line-height: 1.25;
 }
 
 h3 {
@@ -20,6 +21,7 @@ h3 {
   color: #0C163B;
   padding-bottom: 20px;
   padding-top: 20px;
+  line-height: 1.25;
 }
 
 /*# sourceMappingURL=main.css.map */

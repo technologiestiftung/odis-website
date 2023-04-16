@@ -1,63 +1,48 @@
 <!DOCTYPE html>
 <html>
 
-{% include "head.html" %}
+	{% include "head.html" %}
 
-<body class="bg-cyan-50">
+	<body class="bg-cyan-50">
 
-	<!--@todo donnerstag - fonts zueinander gut setzen, beso. intro oben, img im root css stylen??? -->
-	<!--@todo responsiv machen -->
-	<!--@todo wie iframe ansteuern? -->
-	<!--@todo klären was barba.js macht -->
-	<div id="barba-wrapper">
-		<div>
-			{% include "topnav.html" %}
-		</div>
+		<!--@todo donnerstag - fonts zueinander gut setzen, beso. intro oben, img im root css stylen??? -->
+		<!--@todo wie iframe ansteuern? -->
+		
+		{% include "topnav.html" %}
 
-		<!--header-->
-
-		<section class="md:bg-blue-500 bg-red-500 text-cyan-50 flex justify-center">
-
-			<div class="flex flex-col w-1/2 my-20">
-
+		<section class="bg-blue-500 text-cyan-50 flex justify-center">
+			<div class="flex flex-col w-4/5 md:w-1/2 xl:w-2/5 my-20">
 				<div class="text-sm font-clanProBold pb-4 text-blue-100">
 					{{page.date | date: "%d.%m.%Y" }}
 				</div>
-
-				<div class="text-5xl font-clanProBold pb-4 leading-snug">
+				<h1 class="text-4xl lg:text-5xl font-clanProBold pb-4 text-cyan-50">
 					{{ title }}
-				</div>
-
-				<div class="font-clanProNews leading-7 text-lg">
+				</h1>
+				<div class="font-clanProNews text-lg">
 					{{ metaDescription }}
 				</div>
-
 			</div>
 		</section>
 
 		<!--content-->
 		
-		<section class="flex">
-			
-			<div class="w-4/5 ml-10 md:ml-60 mt-20 mr-40 text-l font-clanProNews leading-7 text-blue-900">
-
-				<div>
+		<section>	
+			<div class="flex justify-center">
+			<div class="w-4/5 md:w-1/2 xl:w-2/5 mt-20 lg:ml-40 text-l font-clanProNews leading-7 text-blue-900">
 					{{ content }}
-				</div>
 			</div>
 
-
 			<!--side navigation-->
-			<div class="w-1/5 mt-20 mr-60 text-sm"><!-- md:visible/hidden bei mobile??? liegt in tailwind.config.js-->
-
+			<div class="w-1/5 mt-20 ml-20 text-sm hidden lg:flex"><!-- md:visible/hidden bei mobile??? liegt in tailwind.config.js-->
 				<ul>
+					<li class="mb-6 font-clanProMedium text-grey-500">Inhalte:</li>
 					<li class="mb-4 text-grey-500">Bericht zum Stand der OD-Strategie von SenInnDS</li>
 					<li class="mb-4 text-grey-500">Musterdatenkatalog für Berlin</li>
 					<li class="mb-4 text-grey-500">Neues von den OD-Beauftragten</li>
 					<li class="mb-4 text-grey-500">Fazit: Mit Schwung ins neue Jahr!</li>
 				</ul>
-
 			</div>
+			</div>	
 		</section>
 
 		<!--footer-->
@@ -65,9 +50,7 @@
 			{% include "footer.html" %}
 			{% include "matomo.html" %}
 		</section>
-
-	</div>
-
-</body>
+			
+	</body>
 
 </html>
