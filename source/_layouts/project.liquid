@@ -1,34 +1,79 @@
 <!DOCTYPE html>
 <html>
 	{% include "head.html" %}
-<body>
-	<div id="barba-wrapper">
-		<div class="barba-container">
-			{% include "topnav.html" %}
-            {% if heroImage %}
-            <div class="project-header bright">
-				<img class=" w-100 img-fluid" src="{{heroImage}}" alt="{{title}}">
-				<div class="gradient-overlay"></div>
-                <div>
-                    <div class="section" id="section">
-						<h1>{{ title }}</h1>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
 
-			<div class="section mt-5 mb-6">
-				{%- if blogLink -%}
-				<a class="blog-link" href="{{blogLink}}" target="_blank">{{blogLinkTitle}}</a>
-				{%- endif -%}
-				{{ content }}
+<body>
+
+	<div id="barba-wrapper">
+
+		{% include "topnav.html" %}
+
+		<div class="flex flex-col items-center bg-cyan-50">
+			<!--header-->
+			<div class="bg-blue-500 text-cyan-50 py-20 flex flex-col items-center">
+				<div class="w-1/2">
+					{% if heroImage %}
+					<h1 class="text-cyan-50">{{ title }}</h1>
+					<p class="font-clanProNews leading-7 text-lg">{{ metaDescription }}</p>
+				</div>
 			</div>
 
+			<!--image & button-->
+			<div class="flex flex-col items-center mt-16">
+				<img class="mb-8" src="{{heroImage}}" alt="{{title}}">
 
-			{% include "footer.html" %}
-			{% include "matomo.html" %}
+				{% endif %}
+			
+				<!--button-->
+				<div>
+					{%- if blogLink -%}
+					<a class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40" href="{{blogLink}}" target="_blank">{{blogLinkTitle}}</a>
+					{%- endif -%}
+					
+				</div>
+			
+			</div>
+
+			<!--content & side navigation-->
+			<section class="flex">
+				
+				<div class="w-4/5 ml-10 md:ml-60 mt-20 mr-40 text-l font-clanProNews leading-7 text-blue-900">
+
+					<div>
+						{{ content }}
+					</div>
+				</div>
+
+
+				<!--side navigation-->
+				<!--@todo - diese inhalte aus metadata in der md verfügbar machen-->
+				<div class="w-1/5 mt-20 mr-60 text-sm"><!-- md:visible/hidden bei mobile??? liegt in tailwind.config.js-->
+
+					<p class="mb-4 text-grey-500"> <strong>Jahr</strong> <br> 2023</p>
+					<p class="mb-4 text-grey-500"> <strong>Projektstatus</strong> <br> abgeschlossen</p>
+					<p class="mb-4 text-grey-500"> <strong>Datensatz</strong> <br> Die Datengrundlage bildet eine jährlich aktualisierte Excel-Tabelle, die im Open Data Portal abgelegt wird. Datensatz: 2023 Berliner Weihnachtsmärkte.  </p>
+					<p class="mb-4 text-grey-500"> <strong>GitHub</strong> <br> Projekt GitHub Repository</p>
+					<p class="mb-4 text-grey-500"> <strong>Kooperationspartner</strong> <br> SenWPG</p>
+					<img src="/assets/images/logo-senweb.png" alt="logo">
+
+						
+
+				</div>
+			</section>
+
+			<!--footer-->
+			<section>
+				{% include "footer.html" %}
+				{% include "matomo.html" %}
+			</section>
 		</div>
+
 	</div>
+
+
+
+
+
 </body>
 
 </html>

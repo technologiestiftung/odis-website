@@ -1,3 +1,6 @@
+
+<!--@todo brauchen ein anderes layout als default liquid-->
+
 <!DOCTYPE html>
 <html>
 
@@ -12,13 +15,16 @@
 			{% if page.url== '/' %}
 			{{ content }}
 			{% else %}
-			<div class="section mt-6 mb-6">
+			<div>
 				{{ content }}
 			</div>
 			{% endif %}
-
-			{% include "footer.html" %}
-			{% include "matomo.html" %}
+			
+			<!--footer-->
+			<section>
+				{% include "footer.html" %}
+				{% include "matomo.html" %}
+			</section>
 		</div>
 	</div>
 </body>
