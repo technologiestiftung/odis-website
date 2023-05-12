@@ -61,11 +61,11 @@ pagination:
     {% endif %} {% endfor %}
 
     <!--pagination by eleventy-->
-    <section class="outline outline-2">
+    <section class="flex justify-between w-4/5 mx-auto">
       <span>
         {% if pagination.href.previous %}
 
-        <a href="{{ pagination.href.previous }}">&laquo; Neuere</a>
+        <a class="font-clanProNews" href="{{ pagination.href.previous }}">&laquo; Neuere</a>
 
         {% else %} &laquo; Neuere {% endif %}
       </span>
@@ -78,7 +78,7 @@ pagination:
 
       {% if forloop.index0 == pagination.pageNumber %}
 
-      <span class="selected"><a href="#">{{ forloop.index}}</a></span>
+      <span class="selected font-clanProBold"><a href="#">{{ forloop.index}}</a></span>
 
       {% else %}
 
@@ -88,7 +88,7 @@ pagination:
 
       <span>
         {% if pagination.href.next %}
-        <a href="{{ pagination.href.next }}">Ältere &raquo;</a>
+        <a class="font-clanProNews" href="{{ pagination.href.next }}">Ältere &raquo;</a>
         {% else %} Ältere &raquo; {% endif %}
       </span>
     </section>
