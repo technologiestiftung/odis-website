@@ -44,4 +44,8 @@
         src: url('/assets/fonts/clan-newsitalic.woff') format("woff");
     }
 
+    html {
+        font-family: "Clan Book";
+    }
+
   }
