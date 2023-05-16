@@ -31,9 +31,9 @@ Anschließend kamen aus dem Plenum weitere Erfahrungsberichte und Hinweise zu Da
 ## Kerndatensätze-Mapping mit der ODIS
 In einem interaktiven Workshop-Format lud die ODIS schließlich die OD-Beauftragten ein gemeinsam eine Veröffentlichungspraxis für die Öffnung der Berliner Kerndatensätze zu erarbeiten. Berlins Kerndatensätze beschreiben Datensätze, die ein besonderes Potenzial für die Stadtgesellschaft haben. Mittlerweile liegen bereits einige als offene Daten vor, ein Großteil der Datensätze ist jedoch noch nicht frei zugänglich.
 Dazu bereitete die ODIS ein Workshop-Format vor, in dem die Beteiligten der AG Open Data in einem World-Café Format an drei Tischen folgende zentrale Fragestellungen erarbeiteten:
-•	Tisch 1: Welche Datensätze lassen sich welcher Behörde zuordnen? 
-•	Tisch 2: Wie könnte ein idealer Veröffentlichungsprozess aussehen? 
-•	Tisch 3: Welche Unterstützung brauchen wir? 
+- Tisch 1: Welche Datensätze lassen sich welcher Behörde zuordnen? 
+- Tisch 2: Wie könnte ein idealer Veröffentlichungsprozess aussehen? 
+- Tisch 3: Welche Unterstützung brauchen wir? 
 
 Die Ergebnisse aus den einzelnen Stationen wurde von der ODIS aufbereiten und den OD-Beauftragten zur Verfügung gestellt. Die OD-Beauftragten sollen auf dieser Grundlage die Öffnung der Kerndatensätze in ihren Behörden anstoßen und begleiten.
 
