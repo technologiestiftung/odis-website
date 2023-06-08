@@ -4,6 +4,18 @@
       "title": "ODIS-Ressourcen",
       "groups": [
         {
+          "question": "Wie finde ich einen Einstieg zu Open Data?",
+          "sublinks": [
+            {
+              "title": "Einstieg Open Data in der Verwaltung",
+              "source": "Open-Data in der Verwaltung",
+              "url": "/ressourcen/einstiegopendata/",
+              "text": "Durch Open Data werden maschinenlesbare und strukturierte Informationen zur freien Verwendung bereitgestellt. Welche Vorteile ergeben sich durch die Bereitstellung offener Daten für die Verwaltung selbst? Wie ist die Bereistellung rechtlich geregelt? Und wie gelingt ein Einstieg in die Bereistellung offener Daten in Berlin? Die ODIS gibt einen ersten Einstieg in die Welt der offenen Daten",
+              "image": "page/process-01.svg"
+            }
+          ]
+        },
+        {
           "question": "Welche Daten besitze ich?",
           "sublinks": [
             {
@@ -28,7 +40,7 @@
               "image": "page/process-02.svg"
             }
           ]
-        },
+        }, 
         {
           "question": "Was sind Metadaten?",
           "sublinks": [
