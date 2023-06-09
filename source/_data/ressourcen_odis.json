@@ -4,14 +4,14 @@
       "title": "ODIS-Ressourcen",
       "groups": [
         {
-          "question": "Wie finde ich einen Einstieg zu Open Data?",
+          "question": "Was ist Open Data?",
           "sublinks": [
             {
-              "title": "Einstieg Open Data in der Verwaltung",
-              "source": "Open-Data in der Verwaltung",
+              "title": "Einstiegshandout zu Open Data in der Verwaltung",
+              "source": "Open Data in der Verwaltung",
               "url": "/ressourcen/einstiegopendata/",
-              "text": "Durch Open-Data werden Informationen strukturiert zur freien Verwendung bereitgestellt. Welche Vorteile ergeben sich durch die Bereitstellung offener Daten für die Verwaltung und weitere Akteure? Was gibt es bei der Veröffentlichung zu beachten und wer kann unterstützen? Die ODIS gibt einen ersten Einstieg in die Welt der offenen Daten",
-              "image": "page/process-05.svg"
+              "text": "Durch Open Data werden Informationen strukturiert zur freien Verwendung bereitgestellt. Welche Vorteile ergeben sich durch die Bereitstellung offener Daten für die Verwaltung und weitere Akteure? Was gibt es bei der Veröffentlichung zu beachten und wer kann unterstützen?",
+              "image": "page/process-01.svg"
             }
           ]
         },
@@ -124,7 +124,7 @@
               "title": "Video-Tutorials zur Datenvisualisierung",
               "source": "Datenvisualisierung",
               "url": "/ressourcen/datenvisualisierung/",
-              "text": "Open-Data ist kein Selbstzweck an sich, sondern dient in erster Linie dazu, Informationen einer breiten Masse zugänglich zu machen. Gut gemachte Datenvisualisierungen sind ein wichtiges Mittel, um Beobachtungen, Analysen und Erkenntnisse aus Daten auf einfache Art und Weise zu präsentieren. Sehen Sie hier was es dabei zu beachten gibt und wie sie mittels des kostenlosen Visualisierungs-Tools Datawrapper eigene Graphen und Karten erstellen können.",
+              "text": "Open Data ist kein Selbstzweck an sich, sondern dient in erster Linie dazu, Informationen einer breiten Masse zugänglich zu machen. Gut gemachte Datenvisualisierungen sind ein wichtiges Mittel, um Beobachtungen, Analysen und Erkenntnisse aus Daten auf einfache Art und Weise zu präsentieren. Sehen Sie hier was es dabei zu beachten gibt und wie sie mittels des kostenlosen Visualisierungs-Tools Datawrapper eigene Graphen und Karten erstellen können.",
               "image": "page/process-03.svg"
             }
           ]
