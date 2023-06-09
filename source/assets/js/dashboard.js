@@ -166,14 +166,16 @@ function makeChart(value) {
   var ctx = document.getElementById("chartOne").getContext("2d");
   ctx.canvas.height = 200;
   var authorDict = {
-    "Senatsverwaltung für Stadtentwicklung und Wohnen Berlin": "SenSW",
+    "Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen Berlin": "SenSBW",
     "Senatsverwaltung für Gesundheit und Soziales Berlin": "SenGeSoz",
-    "Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin": "SenUVK",
+    "Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt Berlin": "SenMVKU",
+    "Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz Berlin":"SenUMVK",
     "Senatsverwaltung für Gesundheit, Pflege und Gleichstellung Berlin":
       "SenGPG",
     "Amt für Statistik Berlin-Brandenburg": "AfSBB",
     "Stromnetz Berlin GmbH": "Stromnetz",
-    "VBB - Verkehrsverbund Berlin-Brandenburg GmbH": "VBB"
+    "VBB - Verkehrsverbund Berlin-Brandenburg GmbH": "VBB",
+    "Senatsverwaltung für Stadtentwicklung und Wohnen Berlin": "SenSW"
   };
 
   var authorNames = value.map(el => authorDict[el.key]);
