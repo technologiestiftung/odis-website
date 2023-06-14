@@ -108,4 +108,4 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 				</div>
 
 <br>
-Die ODIS wird von der Berliner Senatsverwaltung für Wirtschaft, Energie und Betriebe gefördert und von der Technologiestiftung Berlin betrieben.  
+Die ODIS wird von der Senatskanzlei Berlin gefördert und von der Technologiestiftung Berlin betrieben.  
