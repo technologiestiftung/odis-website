@@ -36,7 +36,13 @@ Die Gender Data Gap lässt sich als geschlechterbezogene Datenlücke übersetzen
 - **Daten, die Themen behandeln, die insbesondere Mädchen und Frauen betreffen**, zum Beispiel Sorgearbeit oder weibliche Gesundheit.
 - **Daten, die die Wirkung des sozialen Geschlechts (Gender) und von Geschlechternormen auf die Geschlechter untersuchen.**
 
-Das nicht zufällige sondern strukturell bedingte Fehlen von Daten in diesen Kategorien beschreibt die Gender Data Gap.
+
+Das nicht zufällige sondern strukturell bedingte Fehlen von Daten in diesen Kategorien beschreibt die Gender Data Gap. Wie ein Datensatz aus der ersten Kategorie, den geschlechterdifferenzierten Daten, aussehen kann, zeigt das nachfolgende Beispiel aus dem Open Data Portal.
+
+<center><iframe title="Beispieldatensatz: Genderstatistik KünstlerInnenförderung 2014                      " aria-label="Tabelle" id="datawrapper-chart-9dSQu" src="https://datawrapper.dwcdn.net/9dSQu/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="454" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script></center>
+
+<br><br>
 
 ## Vorgehen und Analyse
 
