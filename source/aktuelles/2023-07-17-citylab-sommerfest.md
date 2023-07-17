@@ -9,9 +9,9 @@ urlText: Zum Blogbeitrag
 ---
 # Rückblick zu Open Data beim CityLAB Sommerfest
 
-Panel Talks, mehrere Bühnen, Workshops und paralleles Programm rund um Verwaltungsinnovation, gepaart mit Sonnenschein, einer einladenden Location, gutem Essen und noch besseren Gesprächen – das war das [CityLAB Sommerfest 2023]( https://citylab-berlin.org/de/events/citylab-sommerfest-2023/). Natürlich durfte bei der ganztägigen Konferenz am 29.06. im Von Greifswald auch das Thema Open Data nicht fehlen. 
+Panel Talks, mehrere Bühnen, Workshops und paralleles Programm rund um Verwaltungsinnovation, gepaart mit Sonnenschein, einer einladenden Location, gutem Essen und noch besseren Gesprächen – das war das [CityLAB Sommerfest 2023]( https://citylab-berlin.org/de/events/citylab-sommerfest-2023/). Natürlich durfte bei der ganztägigen Konferenz am 29.06. im *Von Greifswald* auch das Thema Open Data nicht fehlen. 
 
-Der Tag startete mit einem Open Data Frühstück. Hier trafen sich neue und alte Bekannte aus Verwaltung, Wissenschaft, Wirtschaft und Zivilgesellschaft, um sich bei Kaffee und Sandwiches kennenzulernen und auszutauschen. Einen Input gab die zentrale Open Data Beauftragte Betül Özdemir, mit ihrem Vortrag „Bürgerinnen und Bürger informieren und zu mehr Beteiligung anregen – Das geht mit Open Data und Civic Tech“. Dabei berichtete sie auch von einer Initiative bei der Interessierte ihre [Civic Tech Projekt einreichen]( https://mein.berlin.de/projekte/civic-tech-projekte-aus-berlin-mit-open-data/) und bei einem zukünftigen digitalen Open Data Lunch den Verwaltungsbeschäftigten vorstellen können. 
+Der Tag startete mit einem Open Data Frühstück. Hier trafen sich neue und alte Bekannte aus Verwaltung, Wissenschaft, Wirtschaft und Zivilgesellschaft, um sich bei Kaffee und Sandwiches kennenzulernen und auszutauschen. Einen Input gab die zentrale Open Data Verantwortliche Betül Özdemir, mit ihrem Vortrag „Bürgerinnen und Bürger informieren und zu mehr Beteiligung anregen – Das geht mit Open Data und Civic Tech“. Dabei berichtete sie auch von einer Initiative bei der Interessierte ihre [Civic Tech Projekt einreichen]( https://mein.berlin.de/projekte/civic-tech-projekte-aus-berlin-mit-open-data/) und bei einem zukünftigen digitalen Open Data Lunch den Verwaltungsbeschäftigten vorstellen können. 
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/sommerfest2023_klemens.jpg" %}
@@ -29,7 +29,7 @@ Später auf der Hauptbühne berichtete Francesca Bria, Präsidentin des italieni
 
 <br>
 
-In einer anschließenden interaktiven Session der „The New Hanse“ Projekt-Gruppe waren wir als ODIS geladen und präsentierten in einem Impulsvortrag unsere Erfahrungen im Bereich Datenveröffentlichung und aktuelle Projekte aus Berlin. Darauf folgend kamen die Berliner und Hamburger Akteur:innen an Thementischen zusammen, um den Austausch weiter zu vertiefen, bevor nicht viel später mit Musik und Drinks schließlich das Abendprogramm eingeleitet wurde.
+In einer anschließenden interaktiven Session der „The New Hanse“ Projekt-Gruppe präsentierten wir als ODIS in einem Impulsvortrag unsere Erfahrungen im Bereich Datenveröffentlichung und aktuelle Projekte aus Berlin. Darauf folgend kamen die Berliner und Hamburger Akteur:innen an Thementischen zusammen, um den Austausch weiter zu vertiefen, bevor nicht viel später mit Musik und Drinks schließlich das Abendprogramm eingeleitet wurde.
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/sommerfest2023_session.jpg" %}
