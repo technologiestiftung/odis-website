@@ -24,7 +24,9 @@ Dennoch überzeugte die Projektgruppe mit einem niedrigschwellligen Angebot für
 ## Potenzialflächen für Bienen in Berlin
 
 Eine ganz andere Perspektive nahmen die Studierenden der zweiten Gruppe ein. Sie widmete sich dem Thema der ökologischen Nachhaltigkeit in der Stadt und analysierte Flächenpotenziale für Honigbienen also Standorte, die dank Flachdächer begrünt werden können und damit Bienen einen Lebensraum bieten. Gerade in in dicht besideleten Städten stellt die Population von Bienen eine wichtige Grundlage für Artenvielfalt und Diversität in der Stadt dar. Die Projektgruppe kombinierte dabei die Unternehmensdaten der IHK Berlin mit Daten zu Gründächern aus dem Berliner Umweltatlas sowie Block- und Blockteilflächen aus dem Informationssystem Stadt und Umwelt (ISU5).
-Mithilfe der Datenverschneidung konnte am Beispiel des Bezirks Pankow nachgewiesen werden, wo geeignete Flächen liegen und ob Unternehmen in der direkten Nachbarschaft sind. Bei der Umsetzung des Projekts konnte aufgrund der unterschiedlichen IDs der Datensätze maximal die Ebene der Stadtteilebene als räumliche Darstellungsebene gewählt werden. Für eine Weiterentwiklung oder Weiternutzung hat die Projektgruppe weitere Ideen identifiziert. So könnte die Anwendung zum Beispiel bei einer Förderung von grünen Flachdächer einen ersten Überblick über Potenzialflächen bieten. 
+Mithilfe der Datenverschneidung konnte am Beispiel des Bezirks Pankow nachgewiesen werden, wo geeignete Flächen liegen und ob Unternehmen in der direkten Nachbarschaft sind, die dann branchenspezifisch angesprochen werden können.
+
+Bei der Umsetzung des Projekts konnte aufgrund der unterschiedlichen IDs der Datensätze maximal die Ebene der Stadtteilebene als räumliche Darstellungsebene gewählt werden. Für eine Weiterentwiklung oder Weiternutzung hat die Projektgruppe weitere Ideen identifiziert. So könnte die Anwendung zum Beispiel bei einer Förderung von grünen Flachdächer einen ersten Überblick über Potenzialflächen bieten. 
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/Bienen_IHK.jpg", caption:"Ein Kartentool für das Potenzial von Flachdächern, vorgestellt von Studierenden der HWR" %}
@@ -33,31 +35,15 @@ Mithilfe der Datenverschneidung konnte am Beispiel des Bezirks Pankow nachgewies
 
 ## Datenbasierte Raumanalyse für Ansiedlungen 
 
-Einen ähnlichen Use-Case wie Projektgruppe 1 verfolgte auch die dritte Studierendegruppe.
+Einen ähnlichen Use-Case wie Projektgruppe 1 verfolgte auch die dritte Studierendengruppe. Sie hat ein Skript geschrieben mit dem Gebiete analysiert werden können, die sich für Ansiedlungen bestimmter Branchen anbieten. Dabei nutzen die Studierenden weitere Daten wie Kindergartenstandorte, die Kriminalitätsstatistik der Berliner Polizei und ÖPNV-Bahnhöfe, um die Standortfindung um weitere Nachhaltigkeitsfaktoren anzureichern. Denn je besser zum Beispiel ein Gebiet mit (Fernverkehrs-)Bahnhöfen versorgt ist, desto eher ist die Erreichbarkeit des Standorts zum Beispiel für Pendler gewährleistet. Herausgekommen ist damit ein Tool, dass auf Bezirksregionsebene Gebiete anhand der individuellen Präferenz auflistetet und so eine erste Bewertung der Gebiete für eine Unternehemensgründung vornimmt. 
 
-- mobilität (fachkräftemangel
-- Familienfreundlichkeit (Kinder))kriminallität
-- unternehmenssituation
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/Scoring_IHK.jpg", caption:"Verschiedene Faktoren können für die Standortwahl wichtig sein. Mithilfe eines Scorings, dass die Studierenden entwickelt haben, können Stadtgebiete analysiert werden und erste Bewertungen vorgenommen werden" %}
+</center>
+<br>
 
-für jeden sind unterschiedliche faktoren wichtig
-
-score berechnen: formel, die 
-- 
-- 
-mit einem skript umgesetzt
-gebiete analysieren weniger einzelne standorte
-- auf verschiedene branchen anwendbar
-
-
-datensätze:
-- offene daten zu kriminalitätsstatistik
-- kindergärtenstandorte
-- LOR Bezirksregionen
-- 
-
-mehr apis
-
-
+## Fazit: Wer Daten teilt, ermöglicht innovative Anwendungen
+Die Vorstellung der Projekte hat mal wieder gezeigt: Offene Daten ermöglichen vielfältige Anwendungsfälle und können für konkrete Lösungen von Fragestellungen genutzt werden. Die IHK Berlin hat mit der Veröffentlichung des Gewerbedatensatzes eine Schatztruhe geöffnet. Auch wir als ODIS entwickeln derzeit ein Tool basierend auf diesen Daten. So übernehmen wir gerne das Fazit der IHK Berlin: Wer teilt, gewinnt!
 
 <br><br>
 
