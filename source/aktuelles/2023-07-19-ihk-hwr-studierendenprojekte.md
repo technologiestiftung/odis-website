@@ -16,7 +16,7 @@ Die erste Projektgruppe stellte als Use Case die Standortsuche einer Unternehmer
 Dennoch überzeugte die Projektgruppe mit dem Konzept für ein niedrigschwellliges Angebot für Unternehmer:innen, um eine erste Übersicht über geeignete Standorte zu gewinnen. Perspektivisch kann ein solches Tool auch der IHK Berlin oder Akteur:innen der Wirtschaftsförderung helfen, Unternehmen bei der Ansidelung zu unterstützen.
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/datalunchr.jpg", caption:"Wie können Unternehmer:innen einen geeigneten Standort finden? Die Projektgruppe gibt ein Blick in ihr Tool" %}
+{% include "macro-image-section-small.html", src:"/assets/images/datalunchr.jpg", caption:"Wie können Unternehmer:innen einen geeigneten Standort finden? Die Projektgruppe gibt Einblick in ihr Tool" %}
 </center>
 <br>
 
