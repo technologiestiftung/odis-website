@@ -1,6 +1,6 @@
 ---
 layout: news
-title: "Wer teilt, gewinnt. Student:innen der HWR stellen Projekte basierend auf IHK-Gewerbedatensatz vor"
+title: "Wer teilt, gewinnt! Student:innen der HWR stellen Projekte basierend auf IHK-Gewerbedatensatz vor"
 metaDescription: Die IHK Berlin hat Studierende des Masterstudiengangs Digitale Transformation an der Hochschule für Wirtschaft und Recht (HWR) eingeladen, mit dem IHK-Datensatz eigenständig Projekte zu entwickeln. Wir als ODIS waren bei der Vorstellung im Ludwig-Erhard-Haus dabei und konnten uns von den spannenden Ideen ein Bild machen. Bei der Vorstellung der Projektgruppen zeigte sich wieder einmal, welch vielfältige und kreative Anwendungsfälle mit offenen Daten möglich sind und wie wichtig eine hohe Datenqualität, leichter Zugang zu Daten und die Aktualität von Daten sind.
 categories: aktuelles
 visible: true
