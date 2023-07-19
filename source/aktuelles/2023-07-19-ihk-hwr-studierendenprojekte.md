@@ -38,7 +38,7 @@ Bei der Umsetzung des Projekts konnte aufgrund der unterschiedlichen IDs der Dat
 Einen ähnlichen Use Case wie Projektgruppe 1 verfolgte auch die dritte Studierendengruppe. Als Teil ihres Konzept haben sie ein Datenverarbeitungsskript entwickelt, anhand dessen Gebiete analysiert werden können, die sich für Ansiedlungen bestimmter Branchen anbieten. Dabei nutzen die Studierenden weitere Daten wie Kindergartenstandorte und ÖPNV-Bahnhöfe, um die Standortfindung um weitere Faktoren anzureichern. Je besser ein Gebiet zum Beispiel mit (Fernverkehrs-)Bahnhöfen versorgt ist, desto eher ist die Erreichbarkeit des Standorts für die Mitarbeiter:innen gewährleistet. Herausgekommen ist damit ein Tool, das auf Bezirksregionsebene Gebiete anhand der individuellen Präferenz hierarchisiert und so eine erste Bewertung der Gebiete für eine Unternehmensgründung vornimmt. 
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/Scoring_IHK.jpg", caption:"Verschiedene Faktoren können für die Standortwahl wichtig sein. Mithilfe eines Datenanalyseskripts, dass die Studierenden entwickelt haben, können Stadtgebiete analysiert werden und erste Bewertungen vorgenommen werden" %}
+{% include "macro-image-section-small.html", src:"/assets/images/Scoring_IHK.jpg", caption:"Verschiedene Faktoren können für die Standortwahl wichtig sein. Mithilfe eines Datenanalyseskripts, das die Studierenden entwickelt haben, können Stadtgebiete analysiert werden und erste Bewertungen vorgenommen werden" %}
 </center>
 <br>
 
