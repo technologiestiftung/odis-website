@@ -84,7 +84,7 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 						<img class="profile-image" src="/assets/images/page/profile_anna.png">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Anna Meide</b></span>
-							<span><em>Praktikantin</em></span>
+							<span><em>UI- & UX-Design</em></span>
 							<span>anna.meide@ts.berlin</span>
 						</div>
 					</div>	
