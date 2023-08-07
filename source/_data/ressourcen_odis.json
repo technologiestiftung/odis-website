@@ -76,6 +76,13 @@
               "url": "/ressourcen/datenschutz/",
               "text": "Die Veröffentlichung von Daten setzt voraus, dass die Offenlegung nach dem geltenden (Datenschutz-)Recht zulässig ist. Mit dieser Checkliste können Sie prüfen, ob Ihre Daten unter Einhaltung des Datenschutzes veröffentlicht werden können.",
               "image": "page/process-07.svg"
+            },
+            {
+              "title": "How To zur Anonymisierung",
+              "source": "Anonymisierung",
+              "url": "/ressourcen/anonymisierung/",
+              "text": "Datensätze mit personenbezogenen Informationen dürfen nur als Open Data bereitgestellt werden, wenn sie vorab anonymisiert wurden und dadurch Rückschlüsse auf Personen unmöglich sind. Eine Einleitung und viele Hinweise geben wir in diesem How To.",
+              "image": "page/anonymisation.svg"
             }
           ]
         },
