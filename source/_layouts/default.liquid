@@ -7,13 +7,9 @@
   {% include "head.html" %}
   <body>
     {% include "topnav.html" %}
-    {% if page.url == '/' %}
-      {{ content }}
-    {% else %}
-      <main>
-        {{ content }}
-      </main>
-    {% endif %}
+    <main>
+			{{ content }}
+		</main>
     {% include "footer.html" %}
     {% include "matomo.html" %}
   </body>
