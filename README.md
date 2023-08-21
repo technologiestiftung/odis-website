@@ -6,7 +6,7 @@ Repository for the website of Berlins Open Data Informationsstelle (ODIS).
 
 ## Setup
 
-This site is build with eleventy. Make sure Node.js >+ 14 is installed on your system. Best way to do this is using [nvm](https://github.com/nvm-sh/nvm).
+This site is build with eleventy. Make sure Node.js >+ 14 is installed on your system. Better yet, you use the Node version defined in `.nvmrc` to make sure you're in sync with the latest update. Best way to install Node is using [nvm](https://github.com/nvm-sh/nvm).
 
 ### Installation of Node.js, npm and Eleventy dependencies (once)
 
