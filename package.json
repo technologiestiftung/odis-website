@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:css && eleventy",
     "css": "npx tailwindcss -i ./source/assets/css/tailwind.css -o ./_site/assets/css/tailwind.css",
-    "build:css": "npm run css",
+    "build:css": "npm run css -- --minify",
     "dev:css": "npm run css -- --watch",
     "predev": "npm run build",
     "dev": "npm-run-all -p dev:css dev:eleventy ",
