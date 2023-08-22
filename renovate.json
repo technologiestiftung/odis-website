@@ -1,5 +1,13 @@
 {
-  "extends": [
-    "@inpyjamas"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["github>technologiestiftung/renovate-config"],
+	"baseBranches": ["staging"],
+  "packageRules": [
+    {
+      "groupName": "devDependencies-non-major",
+      "automerge": false,
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch", "minor"]
+    }
   ]
 }
