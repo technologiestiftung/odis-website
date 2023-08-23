@@ -1,79 +1,88 @@
-<!DOCTYPE html>
-<html>
-	{% include "head.html" %}
+---
+layout: default
+---
 
-<body>
+<div class="flex flex-col items-center bg-cyan-50">
+	{% comment %}
+	header
+	{% endcomment %}
+  <div class="bg-blue-500 text-cyan-50 py-20 flex flex-col items-center">
+    <div class="w-1/2">
+      {% if heroImage %}
+        <h1 class="text-cyan-50">{{ title }}</h1>
+        <p class="font-clanProNews leading-7 text-lg">{{ metaDescription }}</p>
+      </div>
+    </div>
 
-	<div id="barba-wrapper">
+		{% comment %}
+		image & button
+		{% endcomment %}
+    <div class="flex flex-col items-center mt-16">
+      <img
+        class="mb-8"
+        src="{{heroImage}}"
+        alt="{{title}}">
 
-		{% include "topnav.html" %}
+    {% endif %}
 
-		<div class="flex flex-col items-center bg-cyan-50">
-			<!--header-->
-			<div class="bg-blue-500 text-cyan-50 py-20 flex flex-col items-center">
-				<div class="w-1/2">
-					{% if heroImage %}
-					<h1 class="text-cyan-50">{{ title }}</h1>
-					<p class="font-clanProNews leading-7 text-lg">{{ metaDescription }}</p>
-				</div>
-			</div>
+    {% comment %}
+		button
+		{% endcomment %}
+    <div>
+      {%- if blogLink -%}
+        <a
+          class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40"
+          href="{{blogLink}}"
+          target="_blank">{{ blogLinkTitle }}</a>
+      {%- endif -%}
 
-			<!--image & button-->
-			<div class="flex flex-col items-center mt-16">
-				<img class="mb-8" src="{{heroImage}}" alt="{{title}}">
+    </div>
 
-				{% endif %}
-			
-				<!--button-->
-				<div>
-					{%- if blogLink -%}
-					<a class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40" href="{{blogLink}}" target="_blank">{{blogLinkTitle}}</a>
-					{%- endif -%}
-					
-				</div>
-			
-			</div>
+  </div>
 
-			<!--content & side navigation-->
-			<section class="flex">
-				
-				<div class="w-4/5 ml-10 md:ml-60 mt-20 mr-40 text-l font-clanProNews leading-7 text-blue-900">
+	{% comment %}
+	content & side navigation
+	{% endcomment %}
+  <section class="flex">
 
-					<div>
-						{{ content }}
-					</div>
-				</div>
+    <div class="w-4/5 ml-10 md:ml-60 mt-20 mr-40 text-l font-clanProNews leading-7 text-blue-900">
 
-
-				<!--side navigation-->
-				<!--@todo - diese inhalte aus metadata in der md verfügbar machen-->
-				<div class="w-1/5 mt-20 mr-60 text-sm"><!-- md:visible/hidden bei mobile??? liegt in tailwind.config.js-->
-
-					<p class="mb-4 text-grey-500"> <strong>Jahr</strong> <br> 2023</p>
-					<p class="mb-4 text-grey-500"> <strong>Projektstatus</strong> <br> abgeschlossen</p>
-					<p class="mb-4 text-grey-500"> <strong>Datensatz</strong> <br> Die Datengrundlage bildet eine jährlich aktualisierte Excel-Tabelle, die im Open Data Portal abgelegt wird. Datensatz: 2023 Berliner Weihnachtsmärkte.  </p>
-					<p class="mb-4 text-grey-500"> <strong>GitHub</strong> <br> Projekt GitHub Repository</p>
-					<p class="mb-4 text-grey-500"> <strong>Kooperationspartner</strong> <br> SenWPG</p>
-					<img src="/assets/images/logo-senweb.png" alt="logo">
-
-						
-
-				</div>
-			</section>
-
-			<!--footer-->
-			<section>
-				{% include "footer.html" %}
-				{% include "matomo.html" %}
-			</section>
-		</div>
-
-	</div>
+      <div>
+        {{ content }}
+      </div>
+    </div>
 
 
+		{% comment %}
+		side navigation
+		{% endcomment %}
+		{% comment %}
+		@todo - diese inhalte aus metadata in der md verfügbar machen
+		{% endcomment %}
+    <div class="w-1/5 mt-20 mr-60 text-sm">
+			{% comment %}
+			md:visible/hidden bei mobile??? liegt in tailwind.config.js
+			{% endcomment %}
+      <p class="mb-4 text-grey-500">
+        <strong>Jahr</strong>
+        <br> 2023</p>
+      <p class="mb-4 text-grey-500">
+        <strong>Projektstatus</strong>
+        <br> abgeschlossen</p>
+      <p class="mb-4 text-grey-500">
+        <strong>Datensatz</strong>
+        <br> Die Datengrundlage bildet eine jährlich aktualisierte Excel-Tabelle, die im Open Data Portal abgelegt wird. Datensatz: 2023 Berliner Weihnachtsmärkte.
+      </p>
+      <p class="mb-4 text-grey-500">
+        <strong>GitHub</strong>
+        <br> Projekt GitHub Repository</p>
+      <p class="mb-4 text-grey-500">
+        <strong>Kooperationspartner</strong>
+        <br> SenWPG</p>
+      <img src="/assets/images/logo-senweb.png" alt="logo">
 
 
 
-</body>
-
-</html>
+    </div>
+  </section>
+</div>

@@ -6,16 +6,12 @@
     "start": "eleventy --serve --quiet",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:css && eleventy",
-    "build:css": "npm run dev:sass && npm run dev:postcss",
+    "css": "npx tailwindcss -i ./source/assets/css/tailwind.css -o ./_site/assets/css/tailwind.css",
+    "build:css": "npm run css -- --minify",
+    "dev:css": "npm run css -- --watch",
     "predev": "npm run build",
-    "dev": "npm-run-all -p dev:sass:watch dev:postcss:watch dev:tailwind dev:eleventy ",
-    "dev:tailwind": "npx tailwindcss -i ./source/assets/css/tailwind.css -c tailwind.config.js -o ./_site/assets/css/tailwind.css --watch",
-    "dev:eleventy": "eleventy --serve --quiet --incremental",
-    "dev:css": "npm run dev:sass && npm run dev:postcss",
-    "dev:sass": "sass --quiet source/assets/css/main.scss --load-path=source/_sass/ source/assets/css/main.css",
-    "dev:sass:watch": "npm run dev:sass -- --watch",
-    "dev:postcss": "postcss source/assets/css/main.css --output source/assets/css/main.min.css",
-    "dev:postcss:watch": "npm run dev:postcss -- --watch"
+    "dev": "npm-run-all -p dev:css dev:eleventy ",
+    "dev:eleventy": "eleventy --serve --quiet --incremental"
   },
   "repository": {
     "type": "git",
@@ -36,15 +32,10 @@
   "devDependencies": {
     "@11ty/eleventy": "2.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
-    "autoprefixer": "10.4.2",
-    "cssnano": "5.1.0",
     "eslint": "8.10.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
     "npm-run-all": "4.1.5",
-    "postcss": "8.4.7",
-    "postcss-cli": "10.0.0",
-    "sass": "1.49.9",
     "tailwindcss": "3.2.4"
   }
 }

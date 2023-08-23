@@ -1,32 +1,16 @@
-
-<!--@todo brauchen ein anderes layout als default liquid-->
+{% comment %}
+@todo brauchen ein anderes layout als default liquid
+{% endcomment %}
 
 <!DOCTYPE html>
-<html>
-
-	{% include "head.html" %}
-
-<body>
-	<div id="barba-wrapper">
-		<div class="barba-container">
-
-			{% include "topnav.html" %}
-
-			{% if page.url== '/' %}
+<html lang="de">
+  {% include "head.html" %}
+  <body>
+    {% include "topnav.html" %}
+    <main>
 			{{ content }}
-			{% else %}
-			<div>
-				{{ content }}
-			</div>
-			{% endif %}
-			
-			<!--footer-->
-			<section>
-				{% include "footer.html" %}
-				{% include "matomo.html" %}
-			</section>
-		</div>
-	</div>
-</body>
-
+		</main>
+    {% include "footer.html" %}
+    {% include "matomo.html" %}
+  </body>
 </html>

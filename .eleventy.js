@@ -18,9 +18,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("source/assets/allris/allris_streets.html");
   eleventyConfig.addPassthroughCopy("source/assets/fonts/");
-  eleventyConfig.addPassthroughCopy("source/assets/css/*.css");
   eleventyConfig.addPassthroughCopy("source/assets/js/*.js");
-  eleventyConfig.addPassthroughCopy("source/assets/css/**/*.css.map");
 
   // grundsicherung files
   eleventyConfig.addPassthroughCopy(

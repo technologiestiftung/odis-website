@@ -6,7 +6,7 @@ Repository for the website of Berlins Open Data Informationsstelle (ODIS).
 
 ## Setup
 
-This site is build with eleventy. Make sure Node.js >+ 14 is installed on your system. Best way to do this is using [nvm](https://github.com/nvm-sh/nvm).
+This site is build with eleventy. Make sure Node.js >+ 14 is installed on your system. Better yet, you use the Node version defined in `.nvmrc` to make sure you're in sync with the latest update. Best way to install Node is using [nvm](https://github.com/nvm-sh/nvm).
 
 ### Installation of Node.js, npm and Eleventy dependencies (once)
 
@@ -66,7 +66,7 @@ npm run build
 
 ## Content
 
-All page source data is stores in `/sources`folder. The posts for the sections `Aktuelles` and `Veranstaltungen` are stored as posts in the folders `aktuelles` and `veranstaltung` and filtered via the `tags` variable in front matter (Veranstaltungen is tag `event` and Aktuelles is tag `post`). All pages for the projects section are stored in the folder `/source/projekte` and need the tag `project`. Posts and pages need to have to flag `visible: true` to be rendered on the page. The links in the section `Ressourcen` are stored as a json data file in the folder `/source/_data`.
+All page source data is stores in `/sources`folder. The posts for the sections `Aktuelles` and `Veranstaltungen` (deprecated, see below) are stored as posts in the folders `aktuelles` and `veranstaltung` and filtered via the `tags` variable in front matter (Veranstaltungen is tag `event` and Aktuelles is tag `post`). All pages for the projects section are stored in the folder `/source/projekte` and need the tag `project`. Posts and pages need to have to flag `visible: true` to be rendered on the page. The links in the section `Ressourcen` are stored as a json data file in the folder `/source/_data`.
 
 ### Adding posts for "Aktuelles"
 
@@ -87,30 +87,9 @@ visible: true/false
 Lorem ipsum....
 ```
 
-### Adding posts for "Veranstaltungen"
+### Veranstaltungen (deprecated)
 
-All posts for section "Veranstaltungen" should be stored in `/veranstaltungen`. To add a new post simple create a new markdown file (`.md`) in this folder.
-
-Specify the site `title`, `metaDescription` and `tags` in the front matter section. The `tags` needs to be set to `event`. In adition to that we can add also need to specify a short `description` that will be shown in the "Veranstaltungen" overview page.
-The fields `time`, `web`, `mail` and `adresse` are optional and appear in the summary section of the page.
-
-```
----
-layout: event
-tags: event
-title:  "Testveranstaltung 2019"
-metaDescription: Lorem ipsum...
-description: Lorem ipsum dolor sit amet...
-visible: true/false
-time: 12:15 Uhr
-web: https://example.de
-mail: info@event.com
-adresse: Platz der Luftbrücke 4, Gebäude H2rund, 12101 Berlin
----
-
-# Headline
-Lorem ipsum....
-```
+Veranstaltungen, while part of the initial concept, are no longer presented on the website. The past events still exist in order to not break links linking to one of the old events. However, everything in `source/veranstaltungen` and the layout `source/_layouts/event.liquid` can be considered deprecated and do no longer need to be maintained/extended.
 
 ### Adding posts for "Projekte"
 
@@ -269,6 +248,10 @@ Or you use html and you can use {% renderTemplate %} and {% renderFile %} tags: 
 * I am a list
 {% endrenderTemplate %}
 ```
+
+## CSS
+
+We use TailwindCSS for the styling of the website. The [Tailwind CLI tool](https://tailwindcss.com/docs/installation) is responsible for watching all CSS changes in development mode and it builds and minifies CSS for production. Find the relevant scripts in `./package.json`. As common with Tailwind, there is a `./tailwind.config.js` which configures everything necessary.
 
 ## Contributors ✨
 
