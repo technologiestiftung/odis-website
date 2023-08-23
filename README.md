@@ -270,6 +270,10 @@ Or you use html and you can use {% renderTemplate %} and {% renderFile %} tags: 
 {% endrenderTemplate %}
 ```
 
+## CSS
+
+We use TailwindCSS for the styling of the website. The [Tailwind CLI tool](https://tailwindcss.com/docs/installation) is responsible for watching all CSS changes in development mode and it builds and minifies CSS for production. Find the relevant scripts in `./package.json`. As common with Tailwind, there is a `./tailwind.config.js` which configures everything necessary.
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
