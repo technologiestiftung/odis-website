@@ -1,0 +1,16 @@
+<ul aria-label="Von ODIS für wichtig befundene Datensätze">
+  {% for dataset in highlighted_datasets %}
+    <li>
+      <h3>{{ dataset.title }}</h3>
+      <p>{{ dataset.description }}</p>
+      {% if dataset.url %}
+        <a href="{{ dataset.url  }}">Zum Datensatz</a>
+        {% if dataset.example_usage %}
+          <a href="{{ dataset.example_usage  }}">Beispiel-Anwendung</a>
+        {% endif %}
+      {% else %}
+        <p>Datensatz geschlossen</p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

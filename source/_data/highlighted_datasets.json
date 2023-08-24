@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Berliner Haushalt",
+    "description": "Offene Haushaltsdaten bilden eine wichtige Grundlage für eine Diskussion von Verwaltung und Zivilgesellschaft darüber, wie Steuergelder effektiv eingesetzt werden.",
+    "url": "https://daten.berlin.de/datensaetze/doppelhaushalt-20222023",
+    "example_usage": "https://haushaltsdaten.odis-berlin.de"
+  },
+  {
+    "title": "Barrierefreiheit",
+    "description": "Offene Daten zum barrierefreien Ausbau von öffentlichen Gebäuden machen Hürden für die breite Stadtgesellschaft sichtbar, können Veränderungen anstoßen und die Stadt gerechter gestalten."
+  },
+  {
+    "title": "Fahrraddiebstähle",
+    "description": "Datensätze zu Kriminalitätsstatistiken schaffen Transparenz, schärfen das Bewusstsein für Verbrechen in verschiedenen Stadtteilen, und können das Vertrauen von Bürger:innen in Behörden und Polizei stärken.",
+    "url": "https://daten.berlin.de/datensaetze/fahrraddiebstahl-berlin"
+  }
+]
