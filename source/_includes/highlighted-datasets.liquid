@@ -1,6 +1,11 @@
-<ul aria-label="Von ODIS für wichtig befundene Datensätze">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<ul class="sr-only" aria-label="Von ODIS für wichtig befundene Datensätze" id="highlighted-datasets">
   {% for dataset in highlighted_datasets %}
-    <li>
+    <li data-highlighted-dataset-index="{{ forloop.index }}">
       <h3>{{ dataset.title }}</h3>
       <p>{{ dataset.description }}</p>
       {% if dataset.url %}
@@ -15,3 +20,21 @@
     </li>
   {% endfor %}
 </ul>
+
+<div class="swiper my-12 w-full h-full">
+  <div class="swiper-wrapper">
+    {% for dataset in highlighted_datasets %}
+      <div class="swiper-slide">
+        <img class="w-full h-auto" src="{{ dataset.image_path  }}" aria-hidden="true">
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<div id="highlighted"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="/assets/js/slider.js"></script>
