@@ -89,8 +89,10 @@ function getAuthorCount(data) {
       uniqueAuthors[data[i].author] = true; 
     }
   }
+
   var authorCount = Object.keys(uniqueAuthors).length; 
   return authorCount;
+
 }
 
 // function getHighscores(data, item, amount) {
