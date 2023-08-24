@@ -4,6 +4,18 @@
       "title": "ODIS-Ressourcen",
       "groups": [
         {
+          "question": "Was ist Open Data?",
+          "sublinks": [
+            {
+              "title": "Einstiegshandout zu Open Data in der Verwaltung",
+              "source": "Open Data in der Verwaltung",
+              "url": "/ressourcen/einstiegopendata/",
+              "text": "Durch Open Data werden Informationen strukturiert zur freien Verwendung bereitgestellt. Welche Vorteile ergeben sich durch die Bereitstellung offener Daten für die Verwaltung und weitere Akteure? Was gibt es bei der Veröffentlichung zu beachten und wer kann unterstützen?",
+              "image": "page/process-01.svg"
+            }
+          ]
+        },
+        {
           "question": "Welche Daten besitze ich?",
           "sublinks": [
             {
@@ -28,7 +40,7 @@
               "image": "page/process-02.svg"
             }
           ]
-        },
+        }, 
         {
           "question": "Was sind Metadaten?",
           "sublinks": [
@@ -112,7 +124,7 @@
               "title": "Video-Tutorials zur Datenvisualisierung",
               "source": "Datenvisualisierung",
               "url": "/ressourcen/datenvisualisierung/",
-              "text": "Open-Data ist kein Selbstzweck an sich, sondern dient in erster Linie dazu, Informationen einer breiten Masse zugänglich zu machen. Gut gemachte Datenvisualisierungen sind ein wichtiges Mittel, um Beobachtungen, Analysen und Erkenntnisse aus Daten auf einfache Art und Weise zu präsentieren. Sehen Sie hier was es dabei zu beachten gibt und wie sie mittels des kostenlosen Visualisierungs-Tools Datawrapper eigene Graphen und Karten erstellen können.",
+              "text": "Open Data ist kein Selbstzweck an sich, sondern dient in erster Linie dazu, Informationen einer breiten Masse zugänglich zu machen. Gut gemachte Datenvisualisierungen sind ein wichtiges Mittel, um Beobachtungen, Analysen und Erkenntnisse aus Daten auf einfache Art und Weise zu präsentieren. Sehen Sie hier was es dabei zu beachten gibt und wie sie mittels des kostenlosen Visualisierungs-Tools Datawrapper eigene Graphen und Karten erstellen können.",
               "image": "page/process-03.svg"
             }
           ]
