@@ -7,6 +7,7 @@ const targetEl = document.getElementById("highlighted");
 const INITIAL_SLIDE_INDEX = 1;
 
 const swiper = new Swiper(".swiper", {
+  a11y: false,
   slidesPerView: 1.4,
   initialSlide: INITIAL_SLIDE_INDEX,
   centeredSlides: true,

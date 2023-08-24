@@ -21,7 +21,7 @@
   {% endfor %}
 </ul>
 
-<div class="swiper my-12 w-full h-full">
+<div class="swiper my-12 w-full h-full" aria-hidden="true">
   <div class="swiper-wrapper">
     {% for dataset in highlighted_datasets %}
       <div class="swiper-slide">
@@ -34,7 +34,7 @@
   <div class="swiper-button-next"></div>
 </div>
 
-<div id="highlighted"></div>
+<div id="highlighted" aria-hidden="true"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/assets/js/slider.js"></script>
