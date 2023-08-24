@@ -146,7 +146,12 @@
     "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/covid-19-berlin-fallzahlen-und-indikatoren-gesamt%C3%BCbersicht'>daten.berlin.de</a>"
   ],
-  ["Gesundheit", "Apotheken", "Standorte aller Apotheken", "Nein", ""],
+  [
+    "Gesundheit",
+    "Apotheken",
+    "Standorte aller Apotheken",
+    "Ja",
+    "<a target='_blank' href='https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_apotheken@senstadt&bbox=388357,5818589,394934,5822471'>fbinter.stadt-berlin.de</a>"],
   [
     "Gesundheit",
     "Ärzte",
@@ -669,8 +674,8 @@
     "Wirtschaft und Finanzen",
     "Gewerbemeldungen",
     "Auflistung der Gewerbemeldungen (Anmeldung, Abmeldung, Ummeldung, Sonstige Änderung) ",
-    "Nein",
-    ""
+    "Teilweise",
+    "<a target='_blank' href='https://daten.berlin.de/datensaetze/gewerbedaten-der-ihk-berlin'>daten.berlin.de</a>"
   ],
   [
     "Wirtschaft und Finanzen",
