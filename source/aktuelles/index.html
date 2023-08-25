@@ -11,11 +11,15 @@ pagination:
   reverse: true
 ---
 
-<div class="flex flex-col items-center text-blue-900">
+<div class="flex flex-col items-center text-blue-darker">
   <div class="flex flex-col w-4/5 md:w-1/2 xl:w-2/5">
     <!-- header -->
-    <section class="text-blue-500 flex flex-col justify-center my-20">
-      <h1 class="text-4xl md:text-5xl font-clanProBold pb-4 leading-snug text-blue-500">Aktuelles</h1>
+    <section class="text-blue flex flex-col justify-center my-20">
+      <h1
+        class="text-4xl md:text-5xl font-clanProBold pb-4 leading-snug text-blue"
+      >
+        Aktuelles
+      </h1>
       <p class="font-clanProNews leading-7 text-lg">
         Bei der ODIS ist viel los. Konferenzen, Vorträge, Workshops,
         Weiterbildungen und Prototypenentwicklung gehören fest in unser
@@ -27,7 +31,7 @@ pagination:
 
     <!--single blog article -->
     <section class="flex flex-col mb-24">
-      <div class="text-md font-clanProMedium pb-1 text-grey-500">
+      <div class="text-md font-clanProMedium pb-1 text-red-[#9FA3B2]">
         {{post.date | date: "%d.%m.%Y"}}
       </div>
 
@@ -40,7 +44,7 @@ pagination:
 
       <!--extern link button-->
       <a
-        class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40 font-clanProNews"
+        class="p-4 mt-8 border-2 border-blue bg-white drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40 font-clanProNews"
         href="{{post.data.link}}"
         >{{post.data.urlText}}</a
       >
@@ -49,7 +53,7 @@ pagination:
 
       <!--intern link button-->
       <a
-        class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-44 font-clanProNews"
+        class="p-4 mt-8 border-2 border-blue bg-white drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-44 font-clanProNews"
         href="{{post.url}}"
         >{{post.data.urlText}}</a
       >
@@ -64,7 +68,9 @@ pagination:
       <span>
         {% if pagination.href.previous %}
 
-        <a class="font-clanProNews" href="{{ pagination.href.previous }}">&laquo; Neuere</a>
+        <a class="font-clanProNews" href="{{ pagination.href.previous }}"
+          >&laquo; Neuere</a
+        >
 
         {% else %} &laquo; Neuere {% endif %}
       </span>
@@ -77,7 +83,9 @@ pagination:
 
       {% if forloop.index0 == pagination.pageNumber %}
 
-      <span class="selected font-clanProBold"><a href="#">{{ forloop.index}}</a></span>
+      <span class="selected font-clanProBold"
+        ><a href="#">{{ forloop.index}}</a></span
+      >
 
       {% else %}
 
@@ -87,7 +95,9 @@ pagination:
 
       <span>
         {% if pagination.href.next %}
-        <a class="font-clanProNews" href="{{ pagination.href.next }}">Ältere &raquo;</a>
+        <a class="font-clanProNews" href="{{ pagination.href.next }}"
+          >Ältere &raquo;</a
+        >
         {% else %} Ältere &raquo; {% endif %}
       </span>
     </section>
@@ -96,22 +106,23 @@ pagination:
 
 <!-- newsletter & kontakt-->
 
-<section class="flex flex-col items-center bg-cyan-100 my-40 py-20">
+<section class="flex flex-col items-center bg-blue-light100 my-40 py-20">
   <!--newsletter-->
   <div class="w-1/2">
     <h2>Immer up to date?</h2>
     <p class="mb-8">
-      Du möchtest über Neuigkeiten und
-      Veranstaltungen zu Open Data in Berlin informiert werden? Melde dich
-      für unseren ODIS-Newsletter an!
+      Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin
+      informiert werden? Melde dich für unseren ODIS-Newsletter an!
     </p>
     <a
-      class="p-4 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40 font-clanProNews"
+      class="p-4 border-2 border-blue bg-white drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40 font-clanProNews"
       href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343"
       >Newsletter abonnieren</a
     >
     <p class="mt-16">
-      Newsletter verpasst? Stöber einfach in unserem <a class="font-clanProNews" href="/aktuelles/archiv">Newsletter-Archiv</a>!
+      Newsletter verpasst? Stöber einfach in unserem
+      <a class="font-clanProNews" href="/aktuelles/archiv">Newsletter-Archiv</a
+      >!
     </p>
   </div>
 
@@ -120,7 +131,9 @@ pagination:
     <h3>Du brauchst noch Hilfe?</h3>
     <p class="mb-4">
       Du benötigst Unterstützung oder hast Feedback? Kontaktiere uns!
-    </p>  
-    <a href="/kontakt" class="border-b-8 border-blue-500 pb-2 font-clanProNews">Zum Kontaktformular</a>
+    </p>
+    <a href="/kontakt" class="border-b-8 border-blue pb-2 font-clanProNews"
+      >Zum Kontaktformular</a
+    >
   </div>
 </section>
