@@ -11,7 +11,13 @@
     "dev:css": "npm run css -- --watch",
     "predev": "npm run build",
     "dev": "npm-run-all -p dev:css dev:eleventy ",
-    "dev:eleventy": "eleventy --serve --quiet --watch"
+    "dev:eleventy": "eleventy --serve --quiet --watch",
+    "prettier": "prettier . --check --ignore-path .lintignore",
+    "prettier:fix": "prettier . --write --ignore-path .lintignore",
+    "eslint": "eslint . --ignore-path .lintignore",
+    "eslint:fix": "eslint . --fix --ignore-path .lintignore",
+    "lint": "run-s prettier eslint",
+    "lint:fix": "run-s prettier:fix eslint:fix"
   },
   "repository": {
     "type": "git",
@@ -32,10 +38,13 @@
   "devDependencies": {
     "@11ty/eleventy": "2.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
+    "@shopify/prettier-plugin-liquid": "1.2.2",
     "eslint": "8.10.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
     "npm-run-all": "4.1.5",
+    "prettier": "3.0.2",
+    "prettier-plugin-tailwindcss": "0.5.3",
     "tailwindcss": "3.2.4"
   }
 }
