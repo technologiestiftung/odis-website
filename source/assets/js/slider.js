@@ -2,8 +2,6 @@ const highlightedDatasetsList = document
   .getElementById("highlighted-datasets")
   .querySelectorAll(`div[data-highlighted-dataset-index]`);
 
-console.log(highlightedDatasetsList);
-
 const INITIAL_SLIDE_INDEX = 1;
 
 const swiper = new Swiper(".swiper", {
@@ -27,7 +25,7 @@ swiper.on("transitionEnd", function () {
   [...highlightedDatasetsList].forEach((element) => {
     const isActive =
       element.dataset.highlightedDatasetIndex ===
-      `${Number(swiper.activeIndex + 1)}`;
+      `${Number(swiper.activeIndex)}`;
 
     element.classList.toggle("hidden", !isActive);
   });

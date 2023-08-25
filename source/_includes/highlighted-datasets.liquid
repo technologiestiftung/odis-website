@@ -15,7 +15,7 @@
   <div class="flex flex-wrap gap-y-4">
     <div id="highlighted-datasets" class="w-full">
       {% for dataset in highlighted_datasets %}
-        <div data-highlighted-dataset-index="{{ forloop.index }}" class="hidden px-12 relative">
+        <div data-highlighted-dataset-index="{{ forloop.index | minus: 1 }}" class="hidden px-12 relative">
           <h2 class="text-xl font-bold text-blue-500">{{ dataset.title }}</h2>
           <div class="absolute -top-12 left-1/2 -translate-x-1/2 text-center w-full px-12 text-sm">
             {% if dataset.url %}
