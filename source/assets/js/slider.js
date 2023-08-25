@@ -1,13 +1,12 @@
 const highlightedDatasetsList = document
   .getElementById("highlighted-datasets")
-  .querySelectorAll("li");
+  .querySelectorAll(`div[data-highlighted-dataset-index]`);
 
-const targetEl = document.getElementById("highlighted");
+console.log(highlightedDatasetsList);
 
 const INITIAL_SLIDE_INDEX = 1;
 
 const swiper = new Swiper(".swiper", {
-  a11y: false,
   slidesPerView: 1.4,
   initialSlide: INITIAL_SLIDE_INDEX,
   centeredSlides: true,
@@ -16,18 +15,20 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  a11y: {
+    nextSlideMessage: "Nächster Datensatz",
+    prevSlideMessage: "Vorheriger Datensatz",
+  },
 });
 
-const firstEl = [...highlightedDatasetsList][INITIAL_SLIDE_INDEX];
-targetEl.innerHTML = firstEl.innerHTML;
+[...highlightedDatasetsList][INITIAL_SLIDE_INDEX].classList.remove("hidden");
 
 swiper.on("transitionEnd", function () {
-  const el = [...highlightedDatasetsList].find((eli) => {
-    return (
-      eli.dataset.highlightedDatasetIndex ===
-      `${Number(swiper.activeIndex + 1)}`
-    );
-  });
+  [...highlightedDatasetsList].forEach((element) => {
+    const isActive =
+      element.dataset.highlightedDatasetIndex ===
+      `${Number(swiper.activeIndex + 1)}`;
 
-  targetEl.innerHTML = el.innerHTML;
+    element.classList.toggle("hidden", !isActive);
+  });
 });

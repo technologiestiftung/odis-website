@@ -39,3 +39,19 @@
     @apply font-sans;
   }
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin-top: 0;
+  @apply text-blue-500;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-2xl;
+}
