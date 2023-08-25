@@ -4,23 +4,21 @@ module.exports = {
   theme: {
     colors: {
       red: {
-        500: "#E60032",
+        DEFAULT: "#E60032",
+        dark: "#C42C3A",
       },
-
       blue: {
-        100: "#91A6E8",
-        500: "#1E398F",
-        900: "#0C163B",
+        ultralight: "#EDF8FE",
+        light: "#BEE4F8",
+        medium: "#4C64CD",
+        DEFAULT: "#20378B",
+        dark: "#172763",
+        darker: "#0C163B",
       },
-
-      cyan: {
-        50: "#FDFEFF",
-        100: "#EDF8FE",
-      },
-
       grey: {
-        500: "#9FA3B2",
+        light: "#D1DBE0",
       },
+      white: "#FFFFFF",
     },
     fontFamily: {
       sans: [
