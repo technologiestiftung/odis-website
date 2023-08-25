@@ -3,49 +3,39 @@
 @tailwind utilities;
 
 @layer base {
-
-    @font-face {
-      font-family: "Clan Medium";
-      src: url('/assets/fonts/clan-medium.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Mediumitalic";
-        src: url('/assets/fonts/clan-mediumitalic.woff') format("woff");
-      }
-  
-    @font-face {
-        font-family: "Clan Book";
-        src: url('/assets/fonts/clan-book.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Bookitalic";
-        src: url('/assets/fonts/clan-bookitalic.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Bold";
-        src: url('/assets/fonts/clan-bold.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Bolditalic";
-        src: url('/assets/fonts/clan-bolditalic.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan News";
-        src: url('/assets/fonts/clan-news.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Newsitalic";
-        src: url('/assets/fonts/clan-newsitalic.woff') format("woff");
-    }
-
-    html {
-        font-family: "Clan Book";
-    }
-
+  @font-face {
+    font-family: "Clan";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/clan-book.woff") format("woff");
+    font-display: swap;
   }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: italic;
+    font-weight: 400;
+    src: url("/assets/fonts/clan-bookitalic.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/clan-bold.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: italic;
+    font-weight: 700;
+    src: url("/assets/fonts/clan-bolditalic.woff") format("woff");
+    font-display: swap;
+  }
+
+  html {
+    @apply font-sans;
+  }
+}
