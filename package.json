@@ -11,7 +11,7 @@
     "dev:css": "npm run css -- --watch",
     "predev": "npm run build",
     "dev": "npm-run-all -p dev:css dev:eleventy ",
-    "dev:eleventy": "eleventy --serve --quiet --incremental"
+    "dev:eleventy": "eleventy --serve --quiet --watch"
   },
   "repository": {
     "type": "git",
