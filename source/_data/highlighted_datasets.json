@@ -16,5 +16,22 @@
     "description": "Datensätze zu Kriminalitätsstatistiken schaffen Transparenz, schärfen das Bewusstsein für Verbrechen in verschiedenen Stadtteilen, und können das Vertrauen von Bürger:innen in Behörden und Polizei stärken.",
     "url": "https://daten.berlin.de/datensaetze/fahrraddiebstahl-berlin",
     "image_path": "/assets/images/illustrations/theft.svg"
+  },
+  {
+    "title": "Wartezeiten in der öffentlichen Verwaltung",
+    "description": "Offene Daten und Statistiken über Wartezeiten, Auslastung oder bearbeiteten Anträgen schaffen Transparenz und gewähren einen Überblick, von dem sich Handlungsoptionen wie Personalplanung oder Terminvergabe ableiten lassen.",
+    "image_path": "/assets/images/illustrations/clock.svg"
+  },
+  {
+    "title": "Wasserqualität",
+    "description": "Offene Daten zu Berliner Badestellen ermöglichen es, sich tagesaktuell über die Qualität der Badegewässer zu informieren, damit einem sicheren und hygienischen Badespaß nichts mehr im Wege steht.",
+    "url": "https://www.badestellen.berlin.de/",
+    "example_usage": "https://www.badestellen.berlin.de/",
+    "image_path": "/assets/images/illustrations/bathing.svg"
+  },
+  {
+    "title": "Mobilität",
+    "description": "Ob mit der S-Bahn, dem Auto, Fahrrad oder zu Fuß; Daten darüber, wie Berliner:innen von A nach B kommen, können Verhaltensmuster entschlüsseln und so bei der Stadtplanung hilfreich sein.",
+    "image_path": "/assets/images/illustrations/traffic.svg"
   }
 ]
