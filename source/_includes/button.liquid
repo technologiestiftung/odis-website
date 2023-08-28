@@ -1,0 +1,50 @@
+<{{ tag | default: 'a' }}
+  class="
+    {% if class %}{{ class }} {% endif %}
+    {% if variant == 'primary' or variant == blank %}
+      font-bold
+      {% if inverted %}
+        shadow-primary-inv bg-bg text-links
+      {% else %}
+        shadow-primary
+      {% endif %}
+    {% endif %}
+    {% if variant == 'secondary' %}
+      {% if inverted %}
+        shadow-secondary-inv bg-bg-inv text-links-inv
+      {% else %}
+        shadow-secondary
+      {% endif %}
+    {% endif %}
+    {% if inverted %}
+      border-line-inv
+    {% else %}
+      border-line text-links bg-bg
+    {% endif %}
+    inline-block py-4 px-6 mt-8 border-2
+  "
+
+  {% if id %}
+    id="{{id}}"
+  {% endif %}
+  {% if href %}
+    href="{{href}}"
+  {% endif %}
+  {% if rel %}
+    rel="{{rel}}"
+  {% endif %}
+  {% if target %}
+    target="{{target}}"
+  {% endif %}
+  {% if title %}
+    title="{{title}}"
+  {% endif %}
+  {% if download %}
+    download="{{download}}"
+  {% endif %}
+  {% if ariaLabel %}
+    aria-label="{{ariaLabel}}"
+  {% endif %}
+>
+  {{ text }}
+</{{ tag | default: 'a' }}>

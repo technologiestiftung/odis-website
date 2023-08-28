@@ -64,12 +64,12 @@
 
     --line: var(--blue);
     --line-dark: var(--blue-dark);
-    --line-inv: var(--blue-light);
+    --line-inv: var(--white);
     --line-dark-inv: var(--blue-light);
 
     --shadow-primary: var(--blue);
     --shadow-secondary: var(--blue-light);
-    --shadow-primary-inv: var(--blue-dark);
+    --shadow-primary-inv: var(--blue-darker);
     --shadow-secondary-inv: var(--blue-dark);
   }
 
