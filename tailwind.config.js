@@ -78,7 +78,28 @@ module.exports = {
         "sans-serif",
       ],
     },
+    boxShadow: getShadows(),
+    dropShadow: getShadows()
   },
-
   plugins: [],
 };
+
+function getShadows() {
+  return {
+    ...getColorVariants("primary"),
+    ...getColorVariants("secondary"),
+    ...getColorVariants("primary-inv"),
+    ...getColorVariants("secondary-inv"),
+  };
+}
+
+function getColorVariants(variant) {
+  return {
+    [`${variant}-sm`]: `4px 4px 0 var(--shadow-${variant})`,
+    [`${variant}`]: `8px 8px 0 var(--shadow-${variant})`,
+    [`${variant}-md`]: `16px 16px 0 var(--shadow-${variant})`,
+    [`${variant}-lg`]: `24px 24px 0 var(--shadow-${variant})`,
+    [`${variant}-xl`]: `32px 32px 0 var(--shadow-${variant})`,
+    [`${variant}-2xl`]: `40px 40px 0 var(--shadow-${variant})`,
+  };
+}
