@@ -1,13 +1,12 @@
 ---
 layout: default
 ---
-
-<section class="bg-blue text-white flex justify-center" aria-label="Zusammenfassung">
+<section class="bg-bg-inv text-text-inv flex justify-center" aria-label="Zusammenfassung">
   <div class="flex flex-col w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/5 my-20">
-    <div class="text-sm font-clanProBold pb-4 text-white">
-      {{ page.date | date: "%d.%m.%Y" }}
+    <div class="text-sm font-clanProBold pb-4">
+      {{ page.date | date: '%d.%m.%Y' }}
     </div>
-    <h1 class="text-4xl lg:text-5xl font-clanProBold pb-4 text-white">
+    <h1 class="text-4xl lg:text-5xl font-clanProBold pb-4 text-headlines-inv">
       {{ title }}
     </h1>
     <div class="font-clanProNews text-lg">
@@ -18,7 +17,7 @@ layout: default
 
 <section aria-label="Beitrag">
   <div class="flex justify-center">
-    <div class="w-4/5 lg:w-1/2 xl:w-2/5 mt-20 lg:ml-40 text-l font-clanProNews leading-7 text-blue-darker">
+    <div class="w-4/5 lg:w-1/2 xl:w-2/5 mt-20 lg:ml-40 text-l font-clanProNews leading-7 text-text">
       {{ content }}
     </div>
     <div class="w-1/5 mt-20 ml-20 text-sm hidden lg:flex">
