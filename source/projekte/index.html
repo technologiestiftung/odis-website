@@ -15,14 +15,10 @@ title: Projekte
     sort: 'date' | reverse %} {% for post in itemsSorted %} {%- if
     post.data.visible == true -%}
 
-    <div class="bg-red mb-40">
+    <div class="bg-links-active mb-40">
       <a href="{{post.url}}" title="{{ post.data.title }}">
         <div>
-          <img
-            class=""
-            src="{{post.url}}/{{post.data.indexImage}}"
-            alt="{{ post.data.title }}"
-          />
+          <img class="" src="{{post.url}}/{{post.data.indexImage}}" alt="{{ post.data.title }}" />
         </div>
 
         <div>

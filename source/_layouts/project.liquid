@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<div class="flex flex-col items-center bg-white">
+<div class="flex flex-col items-center bg-bg">
 	{% comment %}
 	header
 	{% endcomment %}
-  <div class="bg-blue text-white py-20 flex flex-col items-center">
+  <div class="bg-bg-inv text-text-inv py-20 flex flex-col items-center">
     <div class="w-1/2">
       {% if heroImage %}
-        <h1 class="text-white">{{ title }}</h1>
+        <h1 class="text-headlines-inv">{{ title }}</h1>
         <p class="font-clanProNews leading-7 text-lg">{{ metaDescription }}</p>
       </div>
     </div>
@@ -31,7 +31,7 @@ layout: default
     <div>
       {%- if blogLink -%}
         <a
-          class="p-4 mt-8 border-2 border-blue bg-white drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40"
+          class="p-4 mt-8 border-2 border-line bg-bg drop-shadow-primary w-40"
           href="{{blogLink}}"
           target="_blank">{{ blogLinkTitle }}</a>
       {%- endif -%}
@@ -45,7 +45,7 @@ layout: default
 	{% endcomment %}
   <section class="flex">
 
-    <div class="w-4/5 ml-10 md:ml-60 mt-20 mr-40 text-l font-clanProNews leading-7 text-blue-darker">
+    <div class="w-4/5 ml-10 md:ml-60 mt-20 mr-40 text-l font-clanProNews leading-7 text-text">
 
       <div>
         {{ content }}

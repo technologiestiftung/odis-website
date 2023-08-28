@@ -35,7 +35,71 @@
     font-display: swap;
   }
 
+  :root {
+    --blue-darker: #0C163B;
+    --blue-dark: #172763;
+    --blue: #20378B;
+    --blue-medium: #4C64CD;
+    --blue-light: #BEE4F8;
+    --blue-ultralight: #EDF8FE;
+    --white: #ffffff;
+    --gray-light: #D1DBE0;
+    --red: #E60032;
+    --red-dark: #C42C3A;
+
+    --bg: var(--white);
+    --bg-alt: var(--blue-ultralight);
+    --bg-inv: var(--blue);
+
+    --text: var(--blue-darker);
+    --text-inv: var(--blue-ultralight);
+
+    --links: var(--blue-dark);
+    --links-inv: var(--blue-light);
+    --links-active: var(--red);
+
+    --headlines: var(--blue);
+    --headlines-inv: var(--blue-light);
+    --links-active-inv: var(--red);
+
+    --line: var(--blue);
+    --line-dark: var(--blue-dark);
+    --line-inv: var(--blue-light);
+    --line-dark-inv: var(--blue-light);
+
+    --shadow-primary: var(--blue);
+    --shadow-secondary: var(--blue-light);
+    --shadow-primary-inv: var(--blue-dark);
+    --shadow-secondary-inv: var(--blue-dark);
+  }
+
+  /* To apply dark mode, apply the [data-applied-mode='dark'] to the <html /> tag and add this CSS */
+  :root[data-applied-mode='dark'] {
+    --bg: var(--blue-darker);
+    --bg-alt: var(--blue);
+    --bg-inv: var(--blue-ultralight);
+
+    --text: var(--blue-ultralight);
+    --text-inv: var(--blue-darker);
+
+    --links: var(--blue-light);
+    --links-inv: var(--blue);
+
+    --headlines: var(--blue-light);
+    --headlines-inv: var(--blue-dark);
+
+    --line: var(--blue-light);
+    --line-dark: var(--blue-light);
+    --line-inv: var(--blue-dark);
+    --line-dark-inv: var(--blue-darker);
+
+    --shadow-primary: var(--blue-dark);
+    --shadow-secondary: var(--blue-dark);
+    --shadow-primary-inv: var(--blue-light);
+    --shadow-secondary-inv: var(--blue-light);
+  }
+
   html {
-    @apply font-sans;
+    @apply font-sans text-text bg-bg;
   }
 }
