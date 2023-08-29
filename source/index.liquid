@@ -4,7 +4,7 @@ title: Open Data Informationsstelle Berlin
 ---
 <div class="flex flex-col items-center">
   <!-- header -->
-  <section class="flex flex-col w-1/2 text-text">
+  <section class="flex flex-col items-start w-1/2 text-text">
     <h1 class="text-headlines">
       Offene Daten <br>
       für ein offenes Berlin
@@ -16,11 +16,10 @@ title: Open Data Informationsstelle Berlin
       Daten begleiten uns jeden Tag.
     </p>
 
-    <a
-      class="p-4 mt-8 border-2 border-line bg-bg shadow-primary w-40"
-      href=""
-      >Über ODIS
-    </a>
+    {% include 'button.liquid', text: 'Über ODIS' %}
+    {% include 'button.liquid', text: 'Über ODIS', variant: 'secondary' %}
+    <br>
+    {% include 'text-link.liquid', text: 'Über ODIS' %}
   </section>
 
   <!-- map -->
@@ -95,17 +94,13 @@ title: Open Data Informationsstelle Berlin
         </div>
       </div>
 
-      <a
-        class="p-4 mt-8 border-2 border-line bg-bg drop-shadow-primary w-40"
-        href=""
-        >ODIS Blog erkunden</a
-      >
+      {% include 'button.liquid', text: 'ODIS Blog erkunden' %}
     </div>
   </div>
 
   <!-- aktuelles von der odis -->
   <div class="bg-bg-inv flex justify-center py-20">
-    <div class="flex flex-col w-1/2">
+    <div class="flex flex-col w-1/2 items-start">
       <h2 class="text-headlines-inv">Aktuelles von der ODIS</h2>
       <p class="text-text-inv 20">
         Die seit 2018 bestehende Open Data Informationsstelle unterstüzt die Berliner Verwaltung bei der Bereitstellung
@@ -121,11 +116,10 @@ title: Open Data Informationsstelle Berlin
         >
         <img src="/assets/images/platzhalter.png" alt="project card">
       </div>
-      <a
-        class="p-4 mt-8 border-2 border-line-inv bg-bg-inv drop-shadow-primary-inv text-links-inv w-60"
-        href=""
-        >Alle Projekte ansehen</a
-      >
+      {% include 'button.liquid', text: 'Alle Projekte ansehen', inverted: true %}
+      {% include 'button.liquid', text: 'Alle Projekte ansehen', inverted: true, variant: 'secondary' %}
+      <br>
+      {% include 'text-link.liquid', text: 'Über ODIS', inverted: true %}
     </div>
   </div>
 </div>

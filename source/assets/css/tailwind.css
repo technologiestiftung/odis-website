@@ -69,7 +69,7 @@
 
     --shadow-primary: var(--blue);
     --shadow-secondary: var(--blue-light);
-    --shadow-primary-inv: var(--blue-dark);
+    --shadow-primary-inv: var(--blue-darker);
     --shadow-secondary-inv: var(--blue-dark);
   }
 
