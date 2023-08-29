@@ -82,15 +82,6 @@ module.exports = {
     },
     boxShadow: getShadows(),
     dropShadow: getShadows(),
-
-    extend: {
-      lineHeight: {
-        14: "3.5rem",
-      },
-      fontSize: {
-        "3.5xl": "2rem",
-      },
-    },
   },
   plugins: [
     require("@tailwindcss/container-queries"),
