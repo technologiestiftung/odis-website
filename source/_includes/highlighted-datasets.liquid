@@ -43,10 +43,10 @@
             class="my-2"
           >{{ dataset.description }}</p>
           {% if dataset.example_usage %}
-            <a href="{{ dataset.example_usage  }}" class="underline">Beispiel-Anwendung</a>
+            {% render "button", text: "Beispiel-Anwendung", href: dataset.example_usage, target: "_blank", class: "w-full text-center !mt-4" %}
           {% endif %}
           {% unless dataset.url %}
-            <a href="/journey" class="underline">Wie ODIS Daten öffnet</a>
+            {% render "button", text: "Wie ODIS Daten öffnet", href: "/journey", class: "w-full text-center !mt-4" %}
           {% endunless %}
         </div>
       {% endfor %}
