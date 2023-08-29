@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./**/*.{liquid,html}"],
   theme: {
@@ -81,7 +83,17 @@ module.exports = {
     boxShadow: getShadows(),
     dropShadow: getShadows()
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/container-queries"),
+    require("tailwindcss-touch")(),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".text-balance": {
+          "text-wrap": "balance",
+        },
+      });
+    }),
+  ],
 };
 
 function getShadows() {
