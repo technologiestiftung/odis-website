@@ -5,7 +5,7 @@
   </div>
 
   <div class="swiper mb-4 w-full h-full lg:hidden" aria-hidden="true">
-    <div class="swiper-wrapper" aria-hidden="true">
+    <div class="swiper-wrapper flex flex-nowrap items-end" aria-hidden="true">
       {% for dataset in highlighted_datasets %}
         {% if dataset.image_path %}
           <div class="swiper-slide">
