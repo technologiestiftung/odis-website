@@ -2,48 +2,42 @@
 layout: default.liquid
 title: Open Data Informationsstelle Berlin
 ---
-
 <div class="flex flex-col items-center">
-  <!--header-->
-  <section class="flex flex-col w-1/2 text-blue-500">
-    <h1 class="text-blue-500">
-      Offene Daten <br />
+  <!-- header -->
+  <section class="flex flex-col items-start w-1/2 text-text">
+    <h1 class="text-headlines">
+      Offene Daten <br>
       für ein offenes Berlin
     </h1>
 
     <p>
-      Offene Daten nutzen uns allen. Sei es in der Wissensvermittlung zur
-      Stadtverwaltung, bei der Schaffung politischer Transparenz, in der
-      Erleichterung von Alltagsaufgaben oder der Entwicklung von neuen
-      Geschäftsmodellen. Offene Daten begleiten uns jeden Tag.
+      Offene Daten nutzen uns allen. Sei es in der Wissensvermittlung zur Stadtverwaltung, bei der Schaffung politischer
+      Transparenz, in der Erleichterung von Alltagsaufgaben oder der Entwicklung von neuen Geschäftsmodellen. Offene
+      Daten begleiten uns jeden Tag.
     </p>
 
-    <a
-      class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40"
-      href=""
-      >Über ODIS
-    </a>
+    {% include 'button.liquid', text: 'Über ODIS' %}
+    {% include 'button.liquid', text: 'Über ODIS', variant: 'secondary' %}
+    <br>
+    {% include 'text-link.liquid', text: 'Über ODIS' %}
   </section>
 
   {% include "highlighted-datasets.liquid" %}
 
-  <!--open data reise-->
-  <div class="bg-cyan-100 flex justify-center py-60 -mb-40 -z-10">
+  <!-- open data reise -->
+  <div class="flex justify-center py-60 -mt-60 -mb-40 -z-10">
     <div class="flex flex-col w-1/2">
       <h2>
-        Open Data Reise <br />
+        Open Data Reise <br>
         unsere fünf Stationen zum Ziel
       </h2>
 
       <p>
-        Welches Potential liegt in meiner Exceltabelle? In welcher Abteilung
-        werden eigentlich welche Daten erhoben? Und wie müssen Daten
-        aufgearbeitet werden, damit sie möglichst wertvoll sind und fehlerfrei
-        genutzt werden können? Wer sich mit Daten aus und für die Verwaltung
-        beschäftigt, setzt sich zunehmend mit Fragen einer modernen und
-        effizienten verwaltung auseinander. Auf unserer Datenreise stellen wir
-        in fünf aufeinanderfolgenden Modulen dafür Wissensgrundlagen und
-        Werkzeuge bereit.
+        Welches Potential liegt in meiner Exceltabelle? In welcher Abteilung werden eigentlich welche Daten erhoben? Und
+        wie müssen Daten aufgearbeitet werden, damit sie möglichst wertvoll sind und fehlerfrei genutzt werden können?
+        Wer sich mit Daten aus und für die Verwaltung beschäftigt, setzt sich zunehmend mit Fragen einer modernen und
+        effizienten verwaltung auseinander. Auf unserer Datenreise stellen wir in fünf aufeinanderfolgenden Modulen
+        dafür Wissensgrundlagen und Werkzeuge bereit.
       </p>
     </div>
   </div>
@@ -53,27 +47,24 @@ title: Open Data Informationsstelle Berlin
       class="w-1/4"
       src="/assets/images/illustrations/01_modul.svg"
       alt="Modul Nummer eins"
-    />
+    >
 
     <p>Modul 1 von 5</p>
     <h3>Datenpotentiale verstehen</h3>
     <p class="w-1/2">
-      Zu Beginn der Reise stellt sich die Frage, wozu offene Daten gut sind und
-      welches Potenzial in ihnen liegt. Das erste Modul zeigt
-      Nutzungspotenziale.
+      Zu Beginn der Reise stellt sich die Frage, wozu offene Daten gut sind und welches Potenzial in ihnen liegt. Das
+      erste Modul zeigt Nutzungspotenziale.
     </p>
   </div>
 
-  <!--open data community zahlen-->
-  <div class="bg-cyan-100 flex justify-center py-20">
+  <!-- open data community zahlen -->
+  <div class="flex justify-center py-20">
     <div class="w-1/2">
       <h2>Open Data Community</h2>
       <p>
-        Offene Daten werden von vielen Organisationen in unterschiedlichsten
-        Kategorien bereitgestellt. Mit der Open-Data-Rechtsverordnung und dem
-        zunehmenden Bewusstsein für offenen Daten wächst das breite Open Data
-        Angebot. Lasst uns gemeinsam Daten öffnen, damit das Angebot an
-        Anwendungen wächst, die uns allen zugute kommen.
+        Offene Daten werden von vielen Organisationen in unterschiedlichsten Kategorien bereitgestellt. Mit der
+        Open-Data-Rechtsverordnung und dem zunehmenden Bewusstsein für offenen Daten wächst das breite Open Data
+        Angebot. Lasst uns gemeinsam Daten öffnen, damit das Angebot an Anwendungen wächst, die uns allen zugute kommen.
       </p>
 
       <div class="flex py-20">
@@ -93,23 +84,18 @@ title: Open Data Informationsstelle Berlin
         </div>
       </div>
 
-      <a
-        class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40"
-        href=""
-        >ODIS Blog erkunden</a
-      >
+      {% include 'button.liquid', text: 'ODIS Blog erkunden' %}
     </div>
   </div>
 
-  <!--aktuelles von der odis-->
-  <div class="bg-blue-500 flex justify-center py-20">
-    <div class="flex flex-col w-1/2">
-      <h2 class="text-cyan-50">Aktuelles von der ODIS</h2>
-      <p class="text-cyan-50 pb-20">
-        Die seit 2018 bestehende Open Data Informationsstelle unterstüzt die
-        Berliner Verwaltung bei der Bereitstellung von offenen Daten,
-        veranstaltet Netzwerktreffen und Wissenstransfer und entwickelt Open
-        Data Prototypen und Tools.
+  <!-- aktuelles von der odis -->
+  <div class="bg-bg-inv flex justify-center py-20">
+    <div class="flex flex-col w-1/2 items-start">
+      <h2 class="text-headlines-inv">Aktuelles von der ODIS</h2>
+      <p class="text-text-inv 20">
+        Die seit 2018 bestehende Open Data Informationsstelle unterstüzt die Berliner Verwaltung bei der Bereitstellung
+        von offenen Daten, veranstaltet Netzwerktreffen und Wissenstransfer und entwickelt Open Data Prototypen und
+        Tools.
       </p>
 
       <div class="flex">
@@ -117,30 +103,28 @@ title: Open Data Informationsstelle Berlin
           class="mr-20"
           src="/assets/images/platzhalter.png"
           alt="project card"
-        />
-        <img src="/assets/images/platzhalter.png" alt="project card" />
+        >
+        <img src="/assets/images/platzhalter.png" alt="project card">
       </div>
-      <a
-        class="p-4 mt-8 border-2 border-cyan-50 bg-blue-500 drop-shadow-[8px_8px_0_rgba(255,255,255,1)] text-cyan-50 w-60"
-        href=""
-        >Alle Projekte ansehen</a
-      >
+      {% include 'button.liquid', text: 'Alle Projekte ansehen', inverted: true %}
+      {% include 'button.liquid', text: 'Alle Projekte ansehen', inverted: true, variant: 'secondary' %}
+      <br>
+      {% include 'text-link.liquid', text: 'Über ODIS', inverted: true %}
     </div>
   </div>
 </div>
 
-<!-- newsletter & kontakt-->
-<section class="flex flex-col items-center bg-cyan-100 my-40 py-20">
-  <!--newsletter-->
+<!-- newsletter & kontakt -->
+<section class="flex flex-col items-center my-40 py-20">
+  <!-- newsletter -->
   <div class="w-1/2">
     <h2>Immer up to date?</h2>
     <p class="mb-8">
-      Immer auf dem neusten Stand: Du möchtest über Neuigkeiten und
-      Veranstaltungen zu Open Data in Berlin informiert werden? Melde dich gerne
-      für unseren ODIS-Newsletter an!
+      Immer auf dem neusten Stand: Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert
+      werden? Melde dich gerne für unseren ODIS-Newsletter an!
     </p>
     <a
-      class="p-4 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40"
+      class="p-4 border-2 border-line bg-bg drop-shadow-primary w-40"
       href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343"
       >Newsletter abbonieren</a
     >
@@ -150,13 +134,13 @@ title: Open Data Informationsstelle Berlin
     </p>
   </div>
 
-  <!--kontakt-->
+  <!-- kontakt -->
   <div class="mt-20 w-1/2">
     <h3>Du brauchst noch Hilfe?</h3>
     <p>
-      Du benötigst Unterstützung oder hast Feedback? Ruf uns gerne unter +49 (0)
-      30 209 69 99 43 an oder kontaktiere uns über das Kontaktformular.
+      Du benötigst Unterstützung oder hast Feedback? Ruf uns gerne unter +49 (0) 30 209 69 99 43 an oder kontaktiere uns
+      über das Kontaktformular.
     </p>
-    <a href="" class="border-b-8 border-blue-500 pb-2">Zum Kontaktformular</a>
+    <a href="" class="border-b-8 border-line pb-2">Zum Kontaktformular</a>
   </div>
 </section>

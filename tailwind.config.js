@@ -1,48 +1,118 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./**/*.{liquid,html}"],
   theme: {
     colors: {
-      red: {
-        500: "#E60032",
+      // USE THESE SEMANIC COLORS
+      bg: {
+        DEFAULT: "var(--bg)",
+        alt: "var(--bg-alt)",
+        inv: "var(--bg-inv)",
       },
+      text: {
+        DEFAULT: "var(--text)",
+        inv: "var(--text-inv)",
+      },
+      links: {
+        DEFAULT: "var(--links)",
+        inv: "var(--links-inv)",
+        active: "var(--links-active)",
+        "active-inv": "var(--links-active-inv)",
+      },
+      headlines: {
+        DEFAULT: "var(--headlines)",
+        inv: "var(--headlines-inv)",
+      },
+      line: {
+        DEFAULT: "var(--line)",
+        dark: "var(--line-dark)",
+        inv: "var(--line-inv)",
+        "dark-inv": "var(--line-dark-inv)",
+      },
+      shadow: {
+        primary: {
+          DEFAULT: "var(--shadow-primary)",
+          inv: "var(--shadow-primary-inv)",
+        },
+        secondary: {
+          DEFAULT: "var(--shadow-secondary)",
+          inv: "var(--shadow-secondary-inv)",
+        },
+      }
 
-      blue: {
-        100: "#91A6E8",
-        500: "#1E398F",
-        900: "#0C163B",
-      },
-
-      cyan: {
-        50: "#FDFEFF",
-        100: "#EDF8FE",
-      },
-
-      grey: {
-        500: "#9FA3B2",
-      },
+      // AVOID USING PRIMITIVE COLORS DIRECTLY, RATHER USE SEMANTIC COLORS (SEE ABOVE)
+      // If you still need to, use the css variable directly (eg. var(--red))
+      // ...or uncomment the following lines to use with tailwind (avoid this if possible)
+      // red: {
+      //   DEFAULT: "var(--red)",
+      //   dark: "var(--red-dark)",
+      // },
+      // blue: {
+      //   ultralight: "var(--blue-ultralight)",
+      //   light: "var(--blue-light)",
+      //   medium: "var(--blue-medium)",
+      //   DEFAULT: "var(--blue)",
+      //   dark: "var(--blue-dark)",
+      //   darker: "var(--blue-darker)",
+      // },
+      // grey: {
+      //   light: "var(--grey-light)",
+      // },
+      // white: "var(--white)",
     },
-    extend: {
-      fontFamily: {
-        sans: [
-          "Clan",
-          "ui-sans-serif",
-          "Calibri",
-          "Segoe UI",
-          "Roboto",
-          "Oxygen",
-          "Ubuntu",
-          "Cantarell",
-          "Fira Sans",
-          "Droid Sans",
-          "Helvetica Neue",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ],
-      },
+    fontFamily: {
+      sans: [
+        "Clan",
+        "ui-sans-serif",
+        "Calibri",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "sans-serif",
+      ],
     },
+    boxShadow: getShadows(),
+    dropShadow: getShadows()
   },
-
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/container-queries"),
+    require("tailwindcss-touch")(),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".text-balance": {
+          "text-wrap": "balance",
+        },
+      });
+    }),
+  ],
 };
+
+function getShadows() {
+  return {
+    none: "0 0 0 transparent",
+    ...getColorVariants("primary"),
+    ...getColorVariants("secondary"),
+    ...getColorVariants("primary-inv"),
+    ...getColorVariants("secondary-inv"),
+  };
+}
+
+function getColorVariants(variant) {
+  return {
+    [`${variant}-sm`]: `4px 4px 0 var(--shadow-${variant})`,
+    [`${variant}`]: `8px 8px 0 var(--shadow-${variant})`,
+    [`${variant}-md`]: `12px 12px 0 var(--shadow-${variant})`,
+    [`${variant}-lg`]: `16px 16px 0 var(--shadow-${variant})`,
+    [`${variant}-xl`]: `18px 18px 0 var(--shadow-${variant})`,
+    [`${variant}-2xl`]: `24px 24px 0 var(--shadow-${variant})`,
+  };
+}
