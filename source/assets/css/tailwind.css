@@ -103,8 +103,15 @@
     @apply font-sans text-text bg-bg;
   }
 
+  .paragraph,
+  .paragraph-lg {
+    @apply leading-relaxed max-w-prose;
+  }
   .paragraph {
-    @apply leading-relaxed mb-4 max-w-prose;
+    @apply mb-4;
+  }
+  .paragraph-lg {
+    @apply text-xl mb-6;
   }
   
   .headline-xxl,
@@ -119,12 +126,12 @@
   }
 
   .headline-xxl {
-    @apply text-5xl mb-8 leading-tight;
+    @apply leading-tight text-5xl mb-4;
   }
   .headline-xl {
-    @apply text-3xl mb-6;
+    @apply leading-tight text-3xl mb-4;
   }
   .headline-lg {
-    @apply text-xl mb-4;
+    @apply text-xl mb-2;
   }
 }
