@@ -102,4 +102,12 @@
   html {
     @apply font-sans text-text bg-bg;
   }
+
+  .text-stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .text-stroke-blue {
+    -webkit-text-stroke-color: var(--line);
+  }
 }
