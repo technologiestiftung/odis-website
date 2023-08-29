@@ -1,5 +1,6 @@
 [
   {
+    "id": "budget",
     "title": "Berliner Haushalt",
     "description": "Offene Haushaltsdaten bilden eine wichtige Grundlage für eine Diskussion von Verwaltung und Zivilgesellschaft darüber, wie Steuergelder effektiv eingesetzt werden.",
     "url": "https://daten.berlin.de/datensaetze/doppelhaushalt-20222023",
@@ -7,22 +8,26 @@
     "image_path": "/assets/images/illustrations/money.svg"
   },
   {
+    "id": "a11y",
     "title": "Barrierefreiheit",
     "description": "Offene Daten zum barrierefreien Ausbau von öffentlichen Gebäuden machen Hürden für die breite Stadtgesellschaft sichtbar, können Veränderungen anstoßen und die Stadt gerechter gestalten.",
     "image_path": "/assets/images/illustrations/a11y.svg"
   },
   {
+    "id": "theft",
     "title": "Fahrraddiebstähle",
     "description": "Datensätze zu Kriminalitätsstatistiken schaffen Transparenz, schärfen das Bewusstsein für Verbrechen in verschiedenen Stadtteilen, und können das Vertrauen von Bürger:innen in Behörden und Polizei stärken.",
     "url": "https://daten.berlin.de/datensaetze/fahrraddiebstahl-berlin",
     "image_path": "/assets/images/illustrations/theft.svg"
   },
   {
+    "id": "waiting-time",
     "title": "Wartezeiten in der öffentlichen Verwaltung",
     "description": "Offene Daten und Statistiken über Wartezeiten, Auslastung oder bearbeiteten Anträgen schaffen Transparenz und gewähren einen Überblick, von dem sich Handlungsoptionen wie Personalplanung oder Terminvergabe ableiten lassen.",
     "image_path": "/assets/images/illustrations/clock.svg"
   },
   {
+    "id": "bathing",
     "title": "Wasserqualität",
     "description": "Offene Daten zu Berliner Badestellen ermöglichen es, sich tagesaktuell über die Qualität der Badegewässer zu informieren, damit einem sicheren und hygienischen Badespaß nichts mehr im Wege steht.",
     "url": "https://www.badestellen.berlin.de/",
@@ -30,6 +35,7 @@
     "image_path": "/assets/images/illustrations/bathing.svg"
   },
   {
+    "id": "traffic",
     "title": "Mobilität",
     "description": "Ob mit der S-Bahn, dem Auto, Fahrrad oder zu Fuß; Daten darüber, wie Berliner:innen von A nach B kommen, können Verhaltensmuster entschlüsseln und so bei der Stadtplanung hilfreich sein.",
     "image_path": "/assets/images/illustrations/traffic.svg"
