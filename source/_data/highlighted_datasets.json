@@ -39,5 +39,27 @@
     "title": "Mobilität",
     "description": "Ob mit der S-Bahn, dem Auto, Fahrrad oder zu Fuß; Daten darüber, wie Berliner:innen von A nach B kommen, können Verhaltensmuster entschlüsseln und so bei der Stadtplanung hilfreich sein.",
     "image_path": "/assets/images/illustrations/traffic.svg"
+  },
+  {
+    "id": "defibrillators",
+    "title": "Defibrillatoren",
+    "description": "Kritische Gesundheitsinfrastruktur, wie beispielsweise Defibrillatoren im öffentlichen Raum, entscheidet im Ernstfall über Leben und Tod. Mit einer Veröffentlichung als offene Daten können Standorte nahtlos in Anwendungen und Karten für Rettungskräfte und Zivilgesellschaft integriert werden, womit wertvolle Zeit gespart und im Zweifel Leben gerettet werden können."
+  },
+  {
+    "id": "sports",
+    "title": "Sportstätten",
+    "description": "Sportstätten als Orte der Begegnung und körperlicher Aktivität bilden einen wichtigen Baustein für eine lebenswerte Stadt und die Gesundheit ihrer Bewohner:innen. Öffentliche Belegungspläne sowie Daten zur Auslastung von öffentlichen Sportstätten können dabei helfen, sportliche Angebote in Kiezen zu koordinieren und die Vereinslandschaft in Berlin zu stärken."
+  },
+  {
+    "id": "savings",
+    "title": "Grundsicherung",
+    "description": "Über 89.000 Menschen in Berlin beziehen Grundsicherung zur Sicherung ihres Lebensunterhalts. Die Empfänger:innen sind dabei nicht gleichmäßig über die Stadt verteilt – einige Stadtgebiete in Berlin haben einen höheren Anteil als andere. Verwaltung und Sozialhilfeinitiativen können Offene Daten und Kartenanwendungen dazu nutzen,  Unterstützungsangebote an Orten mit erhöhtem Bedarf zu positionieren und somit soziale Infrastrukturen besser zu planen.",
+    "url": "https://www.sozial-informations-system.de/datasets/ts1700199029202112-xlsx/?lang=de",
+    "example_usage": "https://odis-berlin.de/projekte/grundsicherung/"
+  },
+  {
+    "id": "solar",
+    "title": "Solarenergie",
+    "description": "Necessitatibus voluptas praesentium id enim. Quam eligendi asperiores nihil non. Cumque rerum veniam labore. Occaecati et voluptas ad ut."
   }
 ]

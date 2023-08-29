@@ -6,12 +6,14 @@
   <div class="swiper mb-4 w-full h-full lg:hidden" aria-hidden="true">
     <div class="swiper-wrapper" aria-hidden="true">
       {% for dataset in highlighted_datasets %}
-        <div class="swiper-slide">
-          <img
-            class="w-full h-auto"
-            src="{{ dataset.image_path  }}"
-            aria-hidden="true">
-        </div>
+        {% if dataset.image_path %}
+          <div class="swiper-slide">
+            <img
+              class="w-full h-auto"
+              src="{{ dataset.image_path  }}"
+              aria-hidden="true">
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
