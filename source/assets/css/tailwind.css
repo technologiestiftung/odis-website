@@ -102,4 +102,29 @@
   html {
     @apply font-sans text-text bg-bg;
   }
+
+  .paragraph {
+    @apply leading-relaxed mb-4 max-w-prose;
+  }
+  
+  .headline-xxl,
+  .headline-xl,
+  .headline-lg {
+    @apply text-headlines font-bold text-balance max-w-prose;
+  }
+  .headline-xxl.inverted,
+  .headline-xl.inverted,
+  .headline-lg.inverted {
+    @apply text-headlines-inv;
+  }
+
+  .headline-xxl {
+    @apply text-5xl mb-8 leading-tight;
+  }
+  .headline-xl {
+    @apply text-3xl mb-6;
+  }
+  .headline-lg {
+    @apply text-xl mb-4;
+  }
 }
