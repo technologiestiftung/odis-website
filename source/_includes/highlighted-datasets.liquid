@@ -29,13 +29,13 @@
         >
           <h2
             id="{{ dataset.id }}-title"
-            class="text-xl font-bold text-blue-500"
+            class="text-xl font-bold text-headlines"
           >{{ dataset.title }}</h2>
           <div class="absolute -top-12 left-1/2 -translate-x-1/2 text-center lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:text-left lg:px-0 lg:my-2 w-full px-12 text-sm">
             {% if dataset.url %}
-              <a href="{{ dataset.url  }}" class="font-bold text-blue-500 uppercase tracking-wider">Zum Datensatz</a>
+              <a href="{{ dataset.url  }}" class="font-bold text-links uppercase tracking-wider">Zum Datensatz</a>
             {% else %}
-              <p class="text-red-500 font-bold uppercase tracking-wider">Datensatz geschlossen</p>
+              <p class="text-[var(--red)] font-bold uppercase tracking-wider">Datensatz geschlossen</p>
             {% endif %}
           </div>
           <p
