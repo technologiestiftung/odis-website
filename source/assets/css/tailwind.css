@@ -55,3 +55,27 @@
 .swiper-button-prev::after {
   @apply text-2xl;
 }
+
+.tippy-box[data-theme~="light-border"] {
+  @apply p-2 rounded-none border !border-blue-500;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="top"]
+  > .tippy-arrow::after {
+  @apply !border-t-blue-500;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="bottom"]
+  > .tippy-arrow::after {
+  @apply !border-b-blue-500;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="left"]
+  > .tippy-arrow::after {
+  @apply !border-l-blue-500;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="right"]
+  > .tippy-arrow::after {
+  @apply !border-r-blue-500;
+}

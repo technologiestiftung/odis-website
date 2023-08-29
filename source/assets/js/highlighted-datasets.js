@@ -60,11 +60,13 @@ wimmelbildGroups.forEach((group) => {
 
   if (infoElement) {
     tippy(group, {
+      theme: "light-border",
       interactive: true,
       delay: 100,
       content: infoElement.innerHTML,
       allowHTML: true,
       offset: 0,
+      placement: "bottom",
       // We can't use tippy's aria features because our setup with triggers within an SVG
       // messes up the aria connections and focus handling.
       aria: {
