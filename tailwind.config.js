@@ -98,6 +98,7 @@ module.exports = {
 
 function getShadows() {
   return {
+    none: "0 0 0 transparent",
     ...getColorVariants("primary"),
     ...getColorVariants("secondary"),
     ...getColorVariants("primary-inv"),
@@ -109,9 +110,9 @@ function getColorVariants(variant) {
   return {
     [`${variant}-sm`]: `4px 4px 0 var(--shadow-${variant})`,
     [`${variant}`]: `8px 8px 0 var(--shadow-${variant})`,
-    [`${variant}-md`]: `16px 16px 0 var(--shadow-${variant})`,
-    [`${variant}-lg`]: `24px 24px 0 var(--shadow-${variant})`,
-    [`${variant}-xl`]: `32px 32px 0 var(--shadow-${variant})`,
-    [`${variant}-2xl`]: `40px 40px 0 var(--shadow-${variant})`,
+    [`${variant}-md`]: `12px 12px 0 var(--shadow-${variant})`,
+    [`${variant}-lg`]: `16px 16px 0 var(--shadow-${variant})`,
+    [`${variant}-xl`]: `18px 18px 0 var(--shadow-${variant})`,
+    [`${variant}-2xl`]: `24px 24px 0 var(--shadow-${variant})`,
   };
 }
