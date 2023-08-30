@@ -40,7 +40,7 @@ module.exports = {
           DEFAULT: "var(--shadow-secondary)",
           inv: "var(--shadow-secondary-inv)",
         },
-      }
+      },
 
       // AVOID USING PRIMITIVE COLORS DIRECTLY, RATHER USE SEMANTIC COLORS (SEE ABOVE)
       // If you still need to, use the css variable directly (eg. var(--red))
@@ -81,7 +81,7 @@ module.exports = {
       ],
     },
     boxShadow: getShadows(),
-    dropShadow: getShadows()
+    dropShadow: getShadows(),
   },
   plugins: [
     require("@tailwindcss/container-queries"),
