@@ -4,19 +4,27 @@ layout: default
 {% comment %}
   AVAILABLE VARIABLES
   -------------------
-    tags: Project tags
-    title: Project title
-    blogLinkTitle: Title of blog post link
-    blogLink: Link to blog post
-    metaDescription: Project meta description
-    date: Date of project
-    finishDate: Project planed finish date
-    indexImage: Path to index image
-    heroImage: Path to hero image
-    mobileImage: Path to mobile image
-    content: Project content
-    projectUrlWithoutProtocol: Project URL without protocol (https://)
-    finishDate: Project finish date
+    tags: Project tags (required)
+    title: Project title (required)
+    blogLinkTitle: Title of blog post link (optional)
+    blogLink: Link to blog post (optional)
+    metaDescription: Project meta description (required)
+    date: Date of project (optional)
+    finishDate: Project planed finish date (optional)
+    heroImage: Path to hero image (required)
+    mobileImage: Path to mobile image (optional)
+    showImageInMockup: Whether to show the hero image in a web mockup (optional)
+    projectUrlWithoutProtocol: Project URL without protocol (https://) (optional if not showImageInMockup if false)
+    datasetDescription: Description of what the dataset represents (optional)
+    datasetLinkText: Text for the link to the dataset (optional)
+    datasetLink: Link to the dataset (optional)
+    gitHubLink: Link to the GitHub repository (optional)
+    partners: List of partners (optional)
+      - name: Name of the partner (required)
+        url: URL of the partner (required)
+        logoPath: Path to the partner logo (optional)
+
+    content: Project markdown content
 {% endcomment %}
 
 {% render 'project-header',
@@ -93,18 +101,20 @@ layout: default
               {% for partner in partners %}
                 <li>
                   <p class="paragraph">{{ partner.name }}</p>
-                  <a
-                    href="{{ partner.url }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Partner Webseite: {{ partner.name }}"
-                  >
-                    <img
-                      src="{{partner.logoPath}}"
-                      alt="Logo von {{ partner.name }}"
-                      class="max-w-[min(220px,75%)]"
+                  {% if partner.logoPath %}
+                    <a
+                      href="{{ partner.url }}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Partner Webseite: {{ partner.name }}"
                     >
-                  </a>
+                      <img
+                        src="{{partner.logoPath}}"
+                        alt="Logo von {{ partner.name }}"
+                        class="max-w-[min(220px,75%)]"
+                      >
+                    </a>
+                  {% endif %}
                 </li>
               {% endfor %}
             </ul>

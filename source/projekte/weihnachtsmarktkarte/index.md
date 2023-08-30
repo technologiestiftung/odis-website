@@ -11,9 +11,9 @@ visible: true
 indexImage: weihnachtsmarktfinder_placeholder2.png
 heroImage: xmap_desktop_screen.png
 mobileImage: xmap_mobile_screen.png
-projectUrlWithoutProtocol: "weihnachtsmaerkte.odis-berlin.de"
 showImageInMockup: true
-datasetDescription: Die Datengrundlage bildet eine jährlich aktualisierte Excel-Tabelle, die im Open Data Portal abgelegt wird. 
+projectUrlWithoutProtocol: "weihnachtsmaerkte.odis-berlin.de"
+datasetDescription: Die Datengrundlage bildet eine jährlich aktualisierte Excel-Tabelle, die im Open Data Portal abgelegt wird.
 datasetLinkText: 2023 Berliner Weihnachtsmärkte
 datasetLink: https://daten.berlin.de/datensaetze/berliner-weihnachtsm%C3%A4rkte-2021
 gitHubLink: https://github.com/technologiestiftung/weihnachtsmarktkarte
