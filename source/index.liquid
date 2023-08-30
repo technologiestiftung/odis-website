@@ -5,10 +5,7 @@ title: Open Data Informationsstelle Berlin
 <div class="flex flex-col items-center">
   <!-- header -->
   <section class="flex flex-col items-start text-text">
-    <h1 class="headline-xxl">
-      Offene Daten <br>
-      für ein offenes Berlin
-    </h1>
+    {% render 'heading', tag: 'h1', size: 'xxl', text: 'Offene Daten<br />für ein offenes Berlin' %}
 
     <p class="paragraph-lg">
       Offene Daten nutzen uns allen. Sei es in der Wissensvermittlung zur Stadtverwaltung, bei der Schaffung politischer
@@ -37,10 +34,7 @@ title: Open Data Informationsstelle Berlin
   <!-- open data reise -->
   <div class="flex justify-stretch py-60 -mt-60 -mb-40 -z-10">
     <div class="flex flex-col">
-      <h2 class="headline-xl">
-        Open Data Reise <br>
-        unsere fünf Stationen zum Ziel
-      </h2>
+      {% render 'heading', text: 'Open Data Reise<br />unsere fünf Stationen zum Ziel' %}
 
       <p class="paragraph">
         Welches Potential liegt in meiner Exceltabelle? In welcher Abteilung werden eigentlich welche Daten erhoben? Und
@@ -60,7 +54,7 @@ title: Open Data Informationsstelle Berlin
     >
 
     <p class="paragraph w-auto inline-block">Modul 1 von 5</p>
-    <h3 class="headline-lg">Datenpotentiale verstehen</h3>
+    {% render 'heading', tag: 'h3', size: 'lg', text: 'Datenpotentiale verstehen' %}
     <p class="w-1/2">
       Zu Beginn der Reise stellt sich die Frage, wozu offene Daten gut sind und welches Potenzial in ihnen liegt. Das
       erste Modul zeigt Nutzungspotenziale.
@@ -70,7 +64,7 @@ title: Open Data Informationsstelle Berlin
   <!-- open data community zahlen -->
   <div class="flex justify-center py-20">
     <div>
-      <h2 class="headline-xl">Open Data Community</h2>
+      {% render 'heading', text: 'Open Data Community' %}
       <p class="paragraph">
         Offene Daten werden von vielen Organisationen in unterschiedlichsten Kategorien bereitgestellt. Mit der
         Open-Data-Rechtsverordnung und dem zunehmenden Bewusstsein für offenen Daten wächst das breite Open Data
@@ -101,7 +95,7 @@ title: Open Data Informationsstelle Berlin
   <!-- aktuelles von der odis -->
   <div class="bg-bg-inv flex justify-center py-20">
     <div class="flex flex-col w-1/2 items-start">
-      <h2 class="headline-xl inverted">Aktuelles von der ODIS</h2>
+      {% render 'heading', text: 'Aktuelles von der ODIS' %}
       <p class="text-text-inv 20">
         Die seit 2018 bestehende Open Data Informationsstelle unterstüzt die Berliner Verwaltung bei der Bereitstellung
         von offenen Daten, veranstaltet Netzwerktreffen und Wissenstransfer und entwickelt Open Data Prototypen und
@@ -128,7 +122,7 @@ title: Open Data Informationsstelle Berlin
 <section class="flex flex-col items-center my-40 py-20">
   <!-- newsletter -->
   <div class="w-1/2">
-    <h2 class="headline-xl">Immer up to date?</h2>
+    {% render 'heading', text: 'Immer up to date?' %}
     <p class="mb-8">
       Immer auf dem neusten Stand: Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert
       werden? Melde dich gerne für unseren ODIS-Newsletter an!
@@ -146,7 +140,7 @@ title: Open Data Informationsstelle Berlin
 
   <!-- kontakt -->
   <div class="mt-20 w-1/2">
-    <h3 class="headline-lg">Du brauchst noch Hilfe?</h3>
+    {% render 'heading', text: 'Du brauchst noch Hilfe?', tag: 'h3', size: 'lg' %}
     <p class="paragraph">
       Du benötigst Unterstützung oder hast Feedback? Ruf uns gerne unter +49 (0) 30 209 69 99 43 an oder kontaktiere uns
       über das Kontaktformular.
