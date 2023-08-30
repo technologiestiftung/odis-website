@@ -5,7 +5,7 @@ title: Open Data Informationsstelle Berlin
 <div class="flex flex-col items-center">
   <!-- header -->
   <section class="grid grid-cols-12">
-    <div class="col-start-4 col-span-6 flex flex-col gap-8">
+    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col gap-8">
       <h1 class="text-headlines text-5xl font-bold">
         Offene Daten <br>
         für ein offenes Berlin
@@ -36,7 +36,7 @@ title: Open Data Informationsstelle Berlin
   </div>
 
   <!-- open data reise -->
-  <div class="bg-cyan-100 flex justify-center py-60 -mt-60 -mb-40 -z-10">
+  <div class="flex justify-center py-60 -mt-60 -mb-40 -z-10">
     <div class="flex flex-col w-1/2">
       <h2>
         Open Data Reise <br>
@@ -70,7 +70,7 @@ title: Open Data Informationsstelle Berlin
 
   <!-- open data community zahlen -->
   <section class="grid grid-cols-12 bg-bg-alt">
-    <div class="col-start-4 col-span-6 flex flex-col gap-8 py-20">
+    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col gap-8 py-20">
       <h2 class="text-4xl leading-10 font-bold text-headlines">Open Data Community</h2>
       <p>
         Offene Daten werden von vielen Organisationen in unterschiedlichsten Kategorien bereitgestellt. Mit der
@@ -78,28 +78,24 @@ title: Open Data Informationsstelle Berlin
         Angebot. Lasst uns gemeinsam Daten öffnen, damit das Angebot an Anwendungen wächst, die uns allen zugute kommen.
       </p>
 
-      <div class="flex self-center py-20">
-        <div class="flex flex-col items-center mr-20">
+      <div class="flex flex-col gap-12 lg:flex-row lg:self-center lg:py-20 lg:gap-20">
+        <div class="flex flex-col items-center">
           <p class="text-lg text-center text-headlines font-bold">
             Bereitstellende <br>
             Institutionen
           </p>
-          {% comment %} Note: the classes text-stroke-xy is not part of tailwind {% endcomment %}
-          <div class="text-7xl font-bold text-bg text-stroke-2 text-stroke-line">
+          <div class="text-7xl font-bold text-bg text-stroke-2 text-stroke-line border-b-8 border-b-line">
             <span class="drop-shadow-primary-sm">78</span>
-            <div class="w-full border-t-[0.5rem] border-t-line"></div>
           </div>
         </div>
 
-        <div class="flex flex-col items-center mr-20">
+        <div class="flex flex-col items-center">
           <p class="text-lg text-center text-headlines font-bold">
             Berlins <br>
             Datensätze
           </p>
-          {% comment %} Note: the classes text-stroke-xy is not part of tailwind {% endcomment %}
-          <div class="text-7xl font-bold text-bg text-stroke-2 text-stroke-line">
+          <div class="text-7xl font-bold text-bg text-stroke-2 text-stroke-line border-b-8 border-b-line">
             <span class="drop-shadow-primary-sm">2.963</span>
-            <div class="w-full border-t-[0.5rem] border-t-line"></div>
           </div>
         </div>
 
@@ -108,10 +104,8 @@ title: Open Data Informationsstelle Berlin
             Letzter <br>
             Monat
           </p>
-          {% comment %} Note: the classes text-stroke-xy is not part of tailwind {% endcomment %}
-          <div class="text-7xl font-bold text-bg text-stroke-2 text-stroke-line">
+          <div class="text-7xl font-bold text-bg text-stroke-2 text-stroke-line border-b-8 border-b-line">
             <span class="drop-shadow-primary-sm">+214</span>
-            <div class="w-full border-t-[0.5rem] border-t-line"></div>
           </div>
         </div>
       </div>
@@ -124,7 +118,7 @@ title: Open Data Informationsstelle Berlin
 
   <!-- aktuelles von der odis -->
   <section class="grid grid-cols-12 bg-bg-inv">
-    <div class="col-start-4 col-span-6 flex flex-col gap-2 py-20">
+    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col gap-2 py-20">
       <h2 class="text-headlines-inv text-4xl font-bold">Aktuelles von der ODIS</h2>
       <p class="text-text-inv pb-20">
         Die seit 2018 bestehende Open Data Informationsstelle unterstüzt die Berliner Verwaltung bei der Bereitstellung
@@ -150,7 +144,7 @@ title: Open Data Informationsstelle Berlin
   <!-- newsletter & kontakt -->
   <section class="grid grid-cols-12 py-24">
     <!-- newsletter -->
-    <div class="col-start-4 col-span-6 flex flex-col gap-8 mb-16">
+    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col gap-8 mb-16">
       <h2 class="text-4xl text-headlines font-bold">Immer up to date?</h2>
       <p>
         Immer auf dem neusten Stand: Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert
@@ -172,7 +166,7 @@ title: Open Data Informationsstelle Berlin
 
     <!-- kontakt -->
 
-    <div class="col-start-3 flex items-start justify-end pr-3">
+    <div class="hidden lg:col-start-3 lg:flex items-start justify-end pr-3">
       <img
         src="assets/images/illustrations/flipboard_with_infinite_sign.svg"
         alt="flipboard mit Unendlichkeitszeichen"
@@ -181,7 +175,7 @@ title: Open Data Informationsstelle Berlin
       >
     </div>
 
-    <div class="col-start-4 col-span-6 flex flex-col gap-2 max-w-[34.5rem]">
+    <div class="col-start-2 lg:col-start-4 col-span-6 flex flex-col gap-2 max-w-[34.5rem]">
       <h3 class="text-lg text-headlines font-bold">Du brauchst noch Hilfe?</h3>
       <p>
         Du benötigst Unterstützung oder hast Feedback? Ruf uns gerne unter +49 (0) 30 209 69 99 43 an oder kontaktiere
