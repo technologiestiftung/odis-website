@@ -10,6 +10,7 @@ layout: default
     blogLink: Link to blog post
     metaDescription: Project meta description
     date: Date of project
+    finishDate: Project planed finish date
     indexImage: Path to index image
     heroImage: Path to hero image
     mobileImage: Path to mobile image
@@ -28,24 +29,32 @@ layout: default
   projectUrlWithoutProtocol: projectUrlWithoutProtocol
 %}
 
-<section class="pb-64">
-  <div class="container max-w-6xl mx-auto grid xl:grid-cols-12 px-4 sm:px-6">
-    <div class="xl:col-start-1 xl:col-span-6 prose">
+<section class="pb-64 px-4 sm:px-6">
+  <div
+    class="
+      container max-w-6xl mx-auto grid
+      md:grid-cols-12 md:gap-8
+      px-4 sm:px-6
+    "
+  >
+    <div class="md:col-span-8 xl:col-start-1 xl:col-span-6 prose ">
       {{ content }}
     </div>
-    <aside class="xl:col-start-10 xl:col-span-3 py-4 flex flex-col gap-6">
+    <aside class="md:col-start-9 md:col-span-4 xl:col-start-10 xl:col-span-3 py-4 flex flex-col gap-6">
       <dl class="sticky w-full top-6">
         <dt class="headline-lg">Jahr</dt>
         <dd class="mb-8">{{ date | date: '%Y' }}</dd>
 
-        <dt class="headline-lg">Projektschluss</dt>
-        <dd class="mb-8">
-          {% if finishDate < now %}
-            Abgeschlossen
-          {% else %}
-            {{ finishDate | date: '%d.%m.%Y' }} (geplant)
-          {% endif %}
-        </dd>
+        {% if finishDate %}
+          <dt class="headline-lg">Projektschluss</dt>
+          <dd class="mb-8">
+            {% if finishDate < now %}
+              Abgeschlossen
+            {% else %}
+              {{ finishDate | date: '%d.%m.%Y' }} (geplant)
+            {% endif %}
+          </dd>
+        {% endif %}
 
         {% if datasetDescription %}
           <dt class="headline-lg">Datensatz</dt>
@@ -91,6 +100,7 @@ layout: default
                     <img
                       src="{{partner.logoPath}}"
                       alt="Logo von {{ partner.name }}"
+                      class="max-w-[min(220px,75%)]"
                     >
                   </a>
                 </li>
