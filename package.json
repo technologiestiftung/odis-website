@@ -40,6 +40,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
     "@shopify/prettier-plugin-liquid": "1.2.2",
     "@tailwindcss/container-queries": "0.1.1",
+    "@tailwindcss/typography": "0.5.9",
     "eslint": "8.10.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",

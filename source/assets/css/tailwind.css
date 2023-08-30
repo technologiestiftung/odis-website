@@ -36,16 +36,16 @@
   }
 
   :root {
-    --blue-darker: #0C163B;
+    --blue-darker: #0c163b;
     --blue-dark: #172763;
-    --blue: #20378B;
-    --blue-medium: #4C64CD;
-    --blue-light: #BEE4F8;
-    --blue-ultralight: #EDF8FE;
+    --blue: #20378b;
+    --blue-medium: #4c64cd;
+    --blue-light: #bee4f8;
+    --blue-ultralight: #edf8fe;
     --white: #ffffff;
-    --gray-light: #D1DBE0;
-    --red: #E60032;
-    --red-dark: #C42C3A;
+    --gray-light: #d1dbe0;
+    --red: #e60032;
+    --red-dark: #c42c3a;
 
     --bg: var(--white);
     --bg-alt: var(--blue-ultralight);
@@ -74,7 +74,7 @@
   }
 
   /* To apply dark mode, apply the [data-applied-mode='dark'] to the <html /> tag and add this CSS */
-  :root[data-applied-mode='dark'] {
+  :root[data-applied-mode="dark"] {
     --bg: var(--blue-darker);
     --bg-alt: var(--blue);
     --bg-inv: var(--blue-ultralight);
@@ -103,34 +103,57 @@
     @apply font-sans text-text bg-bg;
   }
 
+  .prose p,
   .paragraph,
   .paragraph-lg {
     @apply leading-relaxed max-w-prose;
   }
+  .prose p,
   .paragraph {
     @apply mb-4;
   }
+  .prose p.lead,
   .paragraph-lg {
     @apply text-xl mb-6;
   }
-  
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6,
   .headline-xxl,
   .headline-xl,
   .headline-lg {
     @apply text-headlines font-bold text-balance max-w-prose;
   }
+  .prose-invert h1,
+  .prose-invert h2,
+  .prose-invert h3,
+  .prose-invert h4,
+  .prose-invert h5,
+  .prose-invert h6,
   .headline-xxl.inverted,
   .headline-xl.inverted,
   .headline-lg.inverted {
     @apply text-headlines-inv;
   }
 
+  .prose h1,
   .headline-xxl {
     @apply leading-tight text-5xl mb-4;
   }
+
+  .prose h2,
   .headline-xl {
     @apply leading-tight text-3xl mb-4;
   }
+
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6,
   .headline-lg {
     @apply text-xl mb-2;
   }
