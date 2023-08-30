@@ -33,19 +33,71 @@ layout: default
     <div class="xl:col-start-1 xl:col-span-6 prose">
       {{ content }}
     </div>
-    <aside class="xl:col-start-9 xl:col-span-4 py-4 flex flex-col gap-6">
-      <dl>
+    <aside class="xl:col-start-10 xl:col-span-3 py-4 flex flex-col gap-6">
+      <dl class="sticky w-full top-6">
         <dt class="headline-lg">Jahr</dt>
-        <dd class="mb-6">{{ date | date: '%Y' }}</dd>
+        <dd class="mb-8">{{ date | date: '%Y' }}</dd>
 
         <dt class="headline-lg">Projektschluss</dt>
-        <dd class="mb-6">
+        <dd class="mb-8">
           {% if finishDate < now %}
             Abgeschlossen
           {% else %}
             {{ finishDate | date: '%d.%m.%Y' }} (geplant)
           {% endif %}
         </dd>
+
+        {% if datasetDescription %}
+          <dt class="headline-lg">Datensatz</dt>
+          <dd class="mb-8">
+            <p class="paragraph">{{ datasetDescription }}</p>
+            {% if datasetLink and datasetLinkText %}
+              {% render 'text-link',
+                target: '_blank',
+                rel: 'noopener noreferrer',
+                text: datasetLinkText,
+                href: datasetLink
+              %}
+            {% endif %}
+          </dd>
+        {% endif %}
+
+        {% if gitHubLink %}
+          <dt class="headline-lg">GitHub</dt>
+          <dd class="mb-8">
+            {%
+              render 'text-link',
+              target: '_blank',
+              rel: 'noopener noreferrer',
+              text: 'Code auf GitHub',
+              href: gitHubLink,
+            %}
+          </dd>
+        {% endif %}
+
+        {% if partners.length > 0 %}
+          <dt class="headline-lg">Partner</dt>
+          <dd class="mb-8">
+            <ul class="flex flex-col gap-4">
+              {% for partner in partners %}
+                <li>
+                  <p class="paragraph">{{ partner.name }}</p>
+                  <a
+                    href="{{ partner.url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Partner Webseite: {{ partner.name }}"
+                  >
+                    <img
+                      src="{{partner.logoPath}}"
+                      alt="Logo von {{ partner.name }}"
+                    >
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </dd>
+        {% endif %}
       </dl>
     </aside>
   </div>
