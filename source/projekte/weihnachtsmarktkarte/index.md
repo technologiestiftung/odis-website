@@ -27,7 +27,11 @@ partners:
 
 Welche Weihnachtsmärkte laden an welchen Tagen zum Besuch ein? Wo kann ich mit meinen Kolleg:innenen noch nach 19 Uhr auf eine Tasse Glühwein? Und wo ist der Eintritt kostenlos? Diese und viele weitere Fragen beantwortet der Berliner Weihnachtsmarkt-Finder, der auf offenen Daten basiert und uns in der Vorweihnachtszeit die Stadt auf neue Art und Weise erkunden lässt. Die ODIS wünscht allen viel Spaß beim Besuch der Berliner Weihnachtsmärkte!
 
+## Konzept
+
 Alle Jahre wieder veröffentlicht die Senatsverwaltung für Wirtschaft, Energie und Betriebe (SenWEB) einen [offenen Datensatz zu den Berliner Weihnachtsmärkten](https://daten.berlin.de/datensaetze/berliner-weihnachtsmärkte-2021). Bislang existiert aber keine umfassende Übersicht zu Weihnachtsmärkten in Berlin, die es Interessierten erlaubt, das Angebot nach bestimmten Informationen oder persönlichen Bedürfnissen zu filtern und sich diese auf einer Karte anzeigen zu lassen. Auf dem [Hauptstadtportal Berlin](https://www.berlin.de/weihnachtsmarkt/) kann zwar nach Weihnachtsmärkten gesucht werden, die Informationen sind aber nur unter einzelnen Artikeln nachlesbar.
+
+
 
 ## Was zeigt der Weihnachts&shy;markt-Finder?
 
