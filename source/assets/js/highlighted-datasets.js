@@ -15,12 +15,12 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     480: {
       slidesPerView: 1.8,
-      spaceBetween: 40
+      spaceBetween: 40,
     },
     640: {
       slidesPerView: 2.2,
-      spaceBetween: 48
-    }
+      spaceBetween: 48,
+    },
   },
   initialSlide: INITIAL_SLIDE_INDEX,
   centeredSlides: true,
@@ -34,10 +34,13 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-const initialInfoElement = [...highlightedDatasetsList][INITIAL_SLIDE_INDEX]
+const initialInfoElement = [...highlightedDatasetsList][INITIAL_SLIDE_INDEX];
+const initialSlide = swiper.slides[INITIAL_SLIDE_INDEX];
 
-initialInfoElement.classList.remove("hidden");
-alignHorizontally(initialInfoElement, swiper.slides[INITIAL_SLIDE_INDEX])
+if (initialInfoElement && initialSlide) {
+  initialInfoElement.classList.remove("hidden");
+  alignHorizontally(initialInfoElement, initialSlide);
+}
 
 swiper.on("transitionEnd", function (swiper) {
   [...highlightedDatasetsList].forEach((element) => {
@@ -48,22 +51,22 @@ swiper.on("transitionEnd", function (swiper) {
     element.classList.toggle("hidden", !isActive);
 
     if (isActive) {
-      const activeSlide = swiper.slides[swiper.activeIndex]
-      alignHorizontally(element, activeSlide)
+      const activeSlide = swiper.slides[swiper.activeIndex];
+      alignHorizontally(element, activeSlide);
     }
   });
 });
 
 /**
  * Aligns two elements horizontally by taking the positioning of the referenceElement and applying its left offset as a horizontal padding to the targetElement.
- * @param {HTMLElement} targetElement 
- * @param {HTMLElement} referenceElement 
+ * @param {HTMLElement} targetElement
+ * @param {HTMLElement} referenceElement
  */
 function alignHorizontally(targetElement, referenceElement) {
-  const referenceOffset = referenceElement.getBoundingClientRect().left
+  const referenceOffset = referenceElement.getBoundingClientRect().left;
 
-  targetElement.style.paddingLeft = `${referenceOffset}px`
-  targetElement.style.paddingRight = `${referenceOffset}px`
+  targetElement.style.paddingLeft = `${referenceOffset}px`;
+  targetElement.style.paddingRight = `${referenceOffset}px`;
 }
 
 /*
@@ -85,7 +88,7 @@ wimmelbildGroups.forEach((group) => {
 
 wimmelbildGroups.forEach((group) => {
   const infoElement = [...highlightedDatasetsList].find(
-    (element) => element.dataset.highlightedDatasetId === group.id
+    (element) => element.dataset.highlightedDatasetId === group.id,
   );
 
   if (infoElement) {
