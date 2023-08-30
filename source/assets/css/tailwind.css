@@ -102,15 +102,4 @@
   html {
     @apply font-sans text-text bg-bg;
   }
-
-  .paragraph,
-  .paragraph-lg {
-    @apply leading-relaxed max-w-prose;
-  }
-  .paragraph {
-    @apply mb-4;
-  }
-  .paragraph-lg {
-    @apply text-xl mb-6;
-  }
 }
