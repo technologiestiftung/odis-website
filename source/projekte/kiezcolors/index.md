@@ -9,6 +9,9 @@ date: 2023-06-12
 visible: true
 indexImage: kiezcolors_projekte_kachel.png
 heroImage: kiezcolors_desktop_screen.png
+mobileImage: kiezcolors_mobile_screen.png
+projectUrlWithoutProtocol: "kiezcolors.odis-berlin.de"
+showImageInMockup: true
 ---
 
 Wie viel Platz brauchen wir eigentlich, um zu wohnen, uns fortzubewegen und mal tief durchzuatmen? Eine gerechte Nutzung der Fläche in Städten kann dazu beitragen, dass wir glücklicher und gesünder leben.

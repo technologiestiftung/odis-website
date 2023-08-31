@@ -102,6 +102,48 @@
   html {
     @apply font-sans text-text bg-bg;
   }
+
+  .prose p {
+    @apply leading-relaxed max-w-prose;
+  }
+  .prose p {
+    @apply mb-4;
+  }
+  .prose p.lead {
+    @apply text-xl mb-6;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-headlines font-bold text-balance max-w-prose;
+  }
+  .prose-invert h1,
+  .prose-invert h2,
+  .prose-invert h3,
+  .prose-invert h4,
+  .prose-invert h5,
+  .prose-invert h6 {
+    @apply text-headlines-inv;
+  }
+
+  .prose h1 {
+    @apply leading-tight text-5xl mb-4;
+  }
+
+  .prose h2 {
+    @apply leading-tight text-3xl mb-4;
+  }
+
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-xl mb-2;
+  }
 }
 
 @layer utilities {

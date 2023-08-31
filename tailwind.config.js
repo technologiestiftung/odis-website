@@ -84,6 +84,7 @@ module.exports = {
     dropShadow: getShadows(),
   },
   plugins: [
+    require("@tailwindcss/typography"),
     require("@tailwindcss/container-queries"),
     require("tailwindcss-touch")(),
     plugin(function ({ addUtilities }) {
