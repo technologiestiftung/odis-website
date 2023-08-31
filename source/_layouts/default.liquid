@@ -4,19 +4,13 @@
 
 <!DOCTYPE html>
 <html lang="de">
-  {% if external_libs and external_libs contains "swiper" %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  {% endif %}
-  {% include "head.html" %}
+  {% render "head.liquid", external_libs: external_libs %}
   <body>
-  {% if external_libs and external_libs contains "swiper" %}
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  {% endif %}
     {% include "topnav.html" %}
     <main>
       {{ content }}
     </main>
-    {% include "footer.html" %}
-    {% include "matomo.html" %}
+    {% render "footer.html" %}
+    {% render "matomo.html" %}
   </body>
 </html>
