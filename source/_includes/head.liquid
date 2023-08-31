@@ -24,7 +24,12 @@
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
 
-  <title>{{ title }} - {{ config.title }}</title>
+  <title>
+    {% unless title == base_title %}
+      {{ title }} -
+    {% endunless %}
+    {{ base_title }}
+  </title>
 
   {% render "meta.html" %}
 
