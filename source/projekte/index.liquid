@@ -30,36 +30,36 @@ title: Projekte
       gap-y-12 xl:gap-y-16
     "
   >
-    {% assign items = collections.project %}
-    {% assign itemsSorted = items | sort: 'date' | reverse %}
-    {% for post in itemsSorted %}
-      {% if post.data.visible == true %}
-        {% capture heroImage %}{{post.url}}{{post.data.heroImage}}{% endcapture %}
-        {% if post.data.mobileImage %}
-          {% capture mobileImage %}{{post.url}}{{post.data.mobileImage}}{% endcapture %}
+    {% assign projects = collections.project %}
+    {% assign projectsSorted = projects | sort: 'date' | reverse %}
+    {% for project in projectsSorted %}
+      {% if project.data.visible == true %}
+        {% capture heroImage %}{{project.url}}{{project.data.heroImage}}{% endcapture %}
+        {% if project.data.mobileImage %}
+          {% capture mobileImage %}{{project.url}}{{project.data.mobileImage}}{% endcapture %}
         {% else %}
           {% assign mobileImage = false %}
         {% endif %}
-        <a href="{{post.url}}" title="{{ post.data.title }}" class="col-span-12 lg:col-span-6">
+        <a href="{{project.url}}" title="{{ project.data.title }}" class="col-span-12 lg:col-span-6">
           {%
             render 'project-mockups',
             heroImage: heroImage,
             mobileImage: mobileImage,
-            showImageInMockup: post.data.showImageInMockup,
-            projectUrlWithoutProtocol: post.data.projectUrlWithoutProtocol,
+            showImageInMockup: project.data.showImageInMockup,
+            projectUrlWithoutProtocol: project.data.projectUrlWithoutProtocol,
           %}
           {%
             render 'heading',
-            text: post.data.title,
+            text: project.data.title,
             size: 'lg',
           %}
           {%
             render 'paragraph',
-            text: post.data.metaDescription,
+            text: project.data.metaDescription,
           %}
           {%
             render 'button',
-            text: 'Projekt Ansehen',
+            text: 'Projekt ansehen',
             tag: 'span',
             variant: 'secondary'
           %}
