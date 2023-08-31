@@ -1,16 +1,16 @@
 {% comment %}
-@todo brauchen ein anderes layout als default liquid
+  @todo brauchen ein anderes layout als default liquid
 {% endcomment %}
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-  {% include "head.html" %}
+  {% include 'head.html' %}
   <body>
-    {% include "topnav.html" %}
+    {% include 'topnav.html' %}
     <main>
-			{{ content }}
-		</main>
-    {% include "footer.html" %}
-    {% include "matomo.html" %}
+      {{ content }}
+    </main>
+    {% include 'footer.liquid' %}
+    {% include 'matomo.html' %}
   </body>
 </html>
