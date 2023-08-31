@@ -12,7 +12,7 @@
 
   <title>{{ title }} - {{config.title}}</title>
 
-  {% include "meta.html" %}
+  {% render "meta.html" %}
 
   <link rel="stylesheet" href="/assets/css/datatables.css" />
   <link
@@ -20,7 +20,11 @@
     rel="stylesheet"
   />
 
+  {% if external_libs and external_libs contains "swiper" %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  {% endif %}
+
   <link href="/assets/css/tailwind.css" rel="stylesheet" />
 
-  {% include "js.html" %}
+  {% render "js.liquid", external_libs: external_libs %}
 </head>
