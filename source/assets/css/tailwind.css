@@ -7,7 +7,7 @@
     font-family: "Clan";
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/clan-book.woff") format("woff");
+    src: url("/assets/fonts/clan-news.woff") format("woff");
     font-display: swap;
   }
 
@@ -15,7 +15,7 @@
     font-family: "Clan";
     font-style: italic;
     font-weight: 400;
-    src: url("/assets/fonts/clan-bookitalic.woff") format("woff");
+    src: url("/assets/fonts/clan-newsitalic.woff") format("woff");
     font-display: swap;
   }
 
@@ -36,16 +36,16 @@
   }
 
   :root {
-    --blue-darker: #0C163B;
+    --blue-darker: #0c163b;
     --blue-dark: #172763;
-    --blue: #20378B;
-    --blue-medium: #4C64CD;
-    --blue-light: #BEE4F8;
-    --blue-ultralight: #EDF8FE;
+    --blue: #20378b;
+    --blue-medium: #4c64cd;
+    --blue-light: #bee4f8;
+    --blue-ultralight: #edf8fe;
     --white: #ffffff;
-    --gray-light: #D1DBE0;
-    --red: #E60032;
-    --red-dark: #C42C3A;
+    --gray-light: #d1dbe0;
+    --red: #e60032;
+    --red-dark: #c42c3a;
 
     --bg: var(--white);
     --bg-alt: var(--blue-ultralight);
@@ -74,7 +74,7 @@
   }
 
   /* To apply dark mode, apply the [data-applied-mode='dark'] to the <html /> tag and add this CSS */
-  :root[data-applied-mode='dark'] {
+  :root[data-applied-mode="dark"] {
     --bg: var(--blue-darker);
     --bg-alt: var(--blue);
     --bg-inv: var(--blue-ultralight);
@@ -101,6 +101,16 @@
 
   html {
     @apply font-sans text-text bg-bg;
+  }
+}
+
+@layer utilities {
+  .text-stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .text-stroke-line {
+    -webkit-text-stroke-color: var(--line);
   }
 }
 
