@@ -14,6 +14,7 @@ layout: default
 {% endcomment %}
 {% capture formattedDate %}{{ page.date | date: '%d.%m.%Y' }}{% endcapture %}
 
+<script defer type="text/javascript" src="/assets/js/tableOfContents.js"></script>
 <section class="bg-bg-alt py-16 px-4 sm:px-6">
   <div class="container max-w-6xl mx-auto grid md:grid-cols-12 px-4 sm:px-6 gap-8">
     <div class="md:col-span-8 xl:col-start-1 xl:col-span-6">
@@ -32,6 +33,11 @@ layout: default
         text: metaDescription,
         size: 'lg',
       %}
+      {%
+        render 'paragraph',
+        text: metaDescription,
+        size: 'lg',
+      %}
     </div>
   </div>
 </section>
@@ -44,107 +50,11 @@ layout: default
       px-4 sm:px-6
     "
   >
-    <div class="md:col-span-8 xl:col-start-1 xl:col-span-6 prose ">
+    <div class="md:col-span-8 xl:col-start-1 xl:col-span-6 prose" id="toc-content">
       {{ content }}
     </div>
     <aside class="md:col-start-9 md:col-span-4 xl:col-start-10 xl:col-span-3 py-4 flex flex-col gap-6">
-      <dl class="sticky w-full top-6">
-        {% if date %}
-          {%
-            render 'heading',
-            tag: 'dt',
-            text: 'Jahr',
-            size: 'lg',
-          %}
-          <dd class="mb-8">{{ date | date: '%Y' }}</dd>
-        {% endif %}
-
-        {% if finishDate %}
-          {%
-            render 'heading',
-            tag: 'dt',
-            text: 'Projektabschluss',
-            size: 'lg',
-          %}
-          <dd class="mb-8">
-            {% if finishDate < now %}
-              Abgeschlossen
-            {% else %}
-              {{ finishDate | date: '%d.%m.%Y' }} (geplant)
-            {% endif %}
-          </dd>
-        {% endif %}
-
-        {% if datasetDescription %}
-          {%
-            render 'heading',
-            tag: 'dt',
-            text: 'Datensatz',
-            size: 'lg',
-          %}
-          <dd class="mb-8">
-            {% render 'paragraph', text: datasetDescription %}
-            {% if datasetLink and datasetLinkText %}
-              {% render 'text-link',
-                target: '_blank',
-                rel: 'noopener noreferrer',
-                text: datasetLinkText,
-                href: datasetLink
-              %}
-            {% endif %}
-          </dd>
-        {% endif %}
-
-        {% if gitHubLink %}
-          {%
-            render 'heading',
-            tag: 'dt',
-            text: 'GitHub',
-            size: 'lg',
-          %}
-          <dd class="mb-8">
-            {%
-              render 'text-link',
-              target: '_blank',
-              rel: 'noopener noreferrer',
-              text: 'Code auf GitHub',
-              href: gitHubLink,
-            %}
-          </dd>
-        {% endif %}
-
-        {% if partners.length > 0 %}
-          {%
-            render 'heading',
-            tag: 'dt',
-            text: 'Partner',
-            size: 'lg',
-          %}
-          <dd class="mb-8">
-            <ul class="flex flex-col gap-4">
-              {% for partner in partners %}
-                <li>
-                  {% render 'paragraph', text: partner.name %}
-                  {% if partner.logoPath %}
-                    <a
-                      href="{{ partner.url }}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="Partner Webseite: {{ partner.name }}"
-                    >
-                      <img
-                        src="{{partner.logoPath}}"
-                        alt="Logo von {{ partner.name }}"
-                        class="max-w-[min(220px,75%)]"
-                      >
-                    </a>
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-          </dd>
-        {% endif %}
-      </dl>
+      <dl class="sticky w-full top-6" id="toc-target"></dl>
     </aside>
   </div>
 </section>
