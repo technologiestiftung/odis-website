@@ -107,6 +107,19 @@ wimmelbildGroups.forEach((group) => {
         expanded: false,
       },
       appendTo: document.getElementById("wimmelbild-container"),
+      onTrigger(instance) {
+        instance.reference.setAttribute("transform", "translate(0,-10)");
+        wimmelbildGroups.forEach((group) => {
+          if (group.id === instance.reference.id) return;
+          group.style.filter = "brightness(1.4) saturate(50%)";
+        });
+      },
+      onUntrigger(instance) {
+        instance.reference.setAttribute("transform", "translate(0,0)");
+        wimmelbildGroups.forEach((group) => {
+          group.style.filter = "brightness(1) saturate(100%)";
+        });
+      },
     });
   }
 });
