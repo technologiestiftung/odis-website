@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   {% endif %}
   {% include "head.html" %}
+  <body>
   {% if external_libs and external_libs contains "swiper" %}
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   {% endif %}
-  <body>
     {% include "topnav.html" %}
     <main>
       {{ content }}
