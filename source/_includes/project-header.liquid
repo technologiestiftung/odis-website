@@ -1,13 +1,14 @@
 {% comment %}
   AVAILABLE VARIABLES
   -------------------
-    title: Project title
-    buttonTitle: Title of button
-    buttonLink: Link of button
-    description: Project description
-    heroImage: Path to hero image
-    mobileImage: Path to mobile image
-    projectUrlWithoutProtocol: Project URL without protocol (https://)
+    title: Title of the project (required)
+    heroImage: Path to hero image (required)
+    buttonTitle: Title of button (optional)
+    buttonLink: Link of button (optional)
+    showImageInMockup: Whether to show a window header mockup (optional)
+    mobileImage: Path to mobile image (optional)
+    projectUrlWithoutProtocol: Project URL without protocol (https://) (optional if showImageInMockup is false)
+    class: Optional additional classes to add to the container (optional)
 {% endcomment %}
 <section class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64 px-4 sm:px-6">
   <div class="container max-w-6xl mx-auto grid md:grid-cols-12 px-4 sm:px-6 gap-8">
@@ -27,67 +28,15 @@
   </div>
 </section>
 <section class="pb-24 px-4 sm:px-6 -mt-32 sm:-mt-56">
-  <div class="container max-w-6xl mx-auto grid xl:grid-cols-12 relative pb-20 sm:pb-24 @container">
-    <div
-      class="absolute w-full h-[calc(100%-13rem+2cqw)] sm:h-[calc(100%-20rem+2cqw)] bg-shadow-secondary mix-blend-darken top-32 sm:top-56 left-[2cqw]"
-    ></div>
-    <div class="p-0.5 bg-line-dark md:col-span-12 relative @container/mockup">
-      {% comment %} DESKTOP MOCKUP {% endcomment %}
-      {% if showImageInMockup %}
-        <div class="h-10 @xl/mockup:h-12 bg-line-dark relative">
-          <ul
-            aria-hidden="true"
-            class="absolute top-5 @xl/mockup:top-6 left-4 -translate-y-1/2 flex gap-2 origin-left scale-75 @xl/mockup:scale-100"
-          >
-            <li class="w-3 h-3 rounded-full bg-[var(--red)]"></li>
-            <li class="w-3 h-3 rounded-full bg-[var(--blue-light)]"></li>
-            <li class="w-3 h-3 rounded-full bg-[var(--white)]"></li>
-          </ul>
-          <span class="absolute top-5 @xl/mockup:top-6 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-2 text-text-inv text-xs @xl/mockup:text-sm">
-            {{ projectUrlWithoutProtocol }}
-          </span>
-        </div>
-      {% endif %}
-      <img
-        class="w-full h-auto"
-        src="{{ heroImage }}"
-        alt="Screenshot für das Projekt: '{{ title }}'"
-      >
-    </div>
-    {% if mobileImage %}
-      <div class="absolute left-0 right-0 bottom-0 grid grid-cols-12 gap-8 px-4 sm:px-6 items-end">
-        <div class="col-start-1 col-span-7">
-          {% if buttonLink and buttonTitle %}
-            {%
-              render 'button',
-              text: buttonTitle,
-              href: buttonLink,
-              target: '_blank',
-              rel: 'noopener noreferrer',
-            %}
-          {% endif %}
-        </div>
-        <div
-          class="h-auto col-start-8 col-span-5 md:col-start-9 md:col-span-4 xl:col-start-10 xl:col-span-3 relative @container/mockup"
-          aria-label="Mobile mockup"
-        >
-          <div
-            aria-hidden="true"
-            class="absolute w-full h-[calc(5rem+7cqw)] sm:h-[calc(6rem+7cqw)] rounded-b-[20cqw] bg-shadow-secondary mix-blend-darken -bottom-[7cqw] -right-[7cqw]"
-          ></div>
-          <div class="relative">
-            <img
-              src="{{ mobileImage }}"
-              alt="Mobile screenshot für das Projekt: '{{ title }}'"
-              class="w-[calc(100%-6cqw)] h-[calc(100%-6cqw)] rounded-[10cqw] absolute z-10 top-[3cqw] left-[3cqw] object-fill"
-            >
-            {%
-              render 'mobile-mockup',
-              class: 'w-full h-auto z-20 relative',
-            %}
-          </div>
-        </div>
-      </div>
-    {% endif %}
-  </div>
+  {%
+    render 'project-mockups',
+    heroImage: heroImage,
+    mobileImage: mobileImage,
+    projectUrlWithoutProtocol: projectUrlWithoutProtocol,
+    showImageInMockup: showImageInMockup,
+    projectUrlWithoutProtocol: projectUrlWithoutProtocol,
+    buttonLink: buttonLink,
+    buttonTitle: buttonTitle,
+    class: 'container max-w-6xl mx-auto',
+  %}
 </section>
