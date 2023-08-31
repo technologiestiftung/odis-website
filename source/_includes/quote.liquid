@@ -19,17 +19,14 @@
       />
     </svg>
   </span>
-  <blockquote
-    aria-label="Quote content"
-    class="text-xl col-span-8 text-center"
-  >
+  <blockquote class="text-xl col-span-8 text-center">
     <p>{{ text }}</p>
     {% if authorName %}
       <footer class="mt-6 flex flex-col gap-3 items-center">
           {% if authorAvatar %}
             <img
               src="{{authorAvatar}}"
-              alt="Avatar of {{ authorName }}"
+              alt="Avatar von {{ authorName }}"
               class="w-12 h-12 object-fill rounded-full"
             >
           {% endif %}
@@ -43,7 +40,7 @@
             {% if authorLogo %}
               <img
                 src="{{authorLogo}}"
-                alt="Logo of the company of {{ authorName }}"
+                alt="Logo von {{ authorName }}"
                 class="max-w-[12rem] mt-4"
               >
             {% endif %}
