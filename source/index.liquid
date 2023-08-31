@@ -6,16 +6,11 @@ title: Open Data Informationsstelle Berlin
   <!-- header -->
   <section class="grid grid-cols-12">
     <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col gap-8">
-      <h1 class="text-headlines text-5xl font-bold">
-        Offene Daten <br>
-        für ein offenes Berlin
-      </h1>
-
-      <p class="text-xl">
-        Offene Daten nutzen uns allen. Sei es in der Wissensvermittlung zur Stadtverwaltung, bei der Schaffung
-        politischer Transparenz, in der Erleichterung von Alltagsaufgaben oder der Entwicklung von neuen
-        Geschäftsmodellen. Offene Daten begleiten uns jeden.
-      </p>
+      {% render 'heading', tag: 'h1', size: 'xxl', text: 'Offene Daten<br />für ein offenes Berlin' %}
+      {% render 'paragraph',
+        text: 'Offene Daten nutzen uns allen. Sei es in der Wissensvermittlung zur Stadtverwaltung, bei der Schaffung politischer Transparenz, in der Erleichterung von Alltagsaufgaben oder der Entwicklung von neuen Geschäftsmodellen. Offene Daten begleiten uns jeden.',
+        size: 'lg'
+      %}
 
       <div class="flex justify-start">
         {% render 'button', text: 'Über ODIS' %}
@@ -36,47 +31,45 @@ title: Open Data Informationsstelle Berlin
   </div>
 
   <!-- open data reise -->
-  <div class="flex justify-center py-60 -mt-60 -mb-40 -z-10">
-    <div class="flex flex-col w-1/2">
-      <h2>
-        Open Data Reise <br>
-        unsere fünf Stationen zum Ziel
-      </h2>
-
-      <p>
-        Welches Potential liegt in meiner Exceltabelle? In welcher Abteilung werden eigentlich welche Daten erhoben? Und
-        wie müssen Daten aufgearbeitet werden, damit sie möglichst wertvoll sind und fehlerfrei genutzt werden können?
-        Wer sich mit Daten aus und für die Verwaltung beschäftigt, setzt sich zunehmend mit Fragen einer modernen und
-        effizienten verwaltung auseinander. Auf unserer Datenreise stellen wir in fünf aufeinanderfolgenden Modulen
-        dafür Wissensgrundlagen und Werkzeuge bereit.
-      </p>
+  <div class="flex justify-stretch py-60 -mt-60 -mb-40 -z-10">
+    <div class="flex flex-col">
+      {% render 'heading', text: 'Open Data Reise<br />unsere fünf Stationen zum Ziel' %}
+      {%
+        render 'paragraph',
+        text: 'Welches Potential liegt in meiner Exceltabelle? In welcher Abteilung werden eigentlich welche Daten erhoben? Und wie müssen Daten aufgearbeitet werden, damit sie möglichst wertvoll sind und fehlerfrei genutzt werden können?  Wer sich mit Daten aus und für die Verwaltung beschäftigt, setzt sich zunehmend mit Fragen einer modernen und effizienten verwaltung auseinander. Auf unserer Datenreise stellen wir in fünf aufeinanderfolgenden Modulen dafür Wissensgrundlagen und Werkzeuge bereit.',
+      %}
     </div>
   </div>
 
-  <div class="flex flex-col w-1/2 items-center mb-20">
+  <div class="flex flex-col justify-center items-center mb-20 w-full">
     <img
       class="w-1/4"
       src="/assets/images/illustrations/01_modul.svg"
       alt="Modul Nummer eins"
     >
 
-    <p>Modul 1 von 5</p>
-    <h3>Datenpotentiale verstehen</h3>
-    <p class="w-1/2">
-      Zu Beginn der Reise stellt sich die Frage, wozu offene Daten gut sind und welches Potenzial in ihnen liegt. Das
-      erste Modul zeigt Nutzungspotenziale.
-    </p>
+    {%
+      render  'paragraph',
+      text: 'Modul 1 von 5',
+      class: 'inline-block'
+    %}
+    {% render 'heading', tag: 'h3', size: 'lg', text: 'Datenpotentiale verstehen' %}
+    {%
+      render  'paragraph',
+      text: 'Zu Beginn der Reise stellt sich die Frage, wozu offene Daten gut sind und welches Potenzial in ihnen liegt. Das erste Modul zeigt Nutzungspotenziale.',
+      class: 'w-1/2'
+    %}
   </div>
 
   <!-- open data community zahlen -->
-  <section class="grid grid-cols-12 bg-bg-alt">
-    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col gap-8 py-20">
-      <h2 class="text-4xl leading-10 font-bold text-headlines">Open Data Community</h2>
-      <p>
-        Offene Daten werden von vielen Organisationen in unterschiedlichsten Kategorien bereitgestellt. Mit der
-        Open-Data-Rechtsverordnung und dem zunehmenden Bewusstsein für offenen Daten wächst das breite Open Data
-        Angebot. Lasst uns gemeinsam Daten öffnen, damit das Angebot an Anwendungen wächst, die uns allen zugute kommen.
-      </p>
+  <section class="grid grid-cols-12 bg-bg-alt w-full">
+    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col py-20">
+      {% render 'heading', text: 'Open Data Community' %}
+      {%
+        render  'paragraph',
+        text: 'Offene Daten werden von vielen Organisationen in unterschiedlichsten Kategorien bereitgestellt. Mit der Open-Data-Rechtsverordnung und dem zunehmenden Bewusstsein für offenen Daten wächst das breite Open Data Angebot. Lasst uns gemeinsam Daten öffnen, damit das Angebot an Anwendungen wächst, die uns allen zugute kommen.',
+        class: 'w-1/2'
+      %}
 
       <div class="flex flex-col gap-12 lg:flex-row lg:self-center lg:py-20 lg:gap-20">
         <div class="flex flex-col items-center">
@@ -117,14 +110,13 @@ title: Open Data Informationsstelle Berlin
   </section>
 
   <!-- aktuelles von der odis -->
-  <section class="grid grid-cols-12 bg-bg-inv">
+  <section class="grid grid-cols-12 bg-bg-inv w-full">
     <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col gap-2 py-20">
-      <h2 class="text-headlines-inv text-4xl font-bold">Aktuelles von der ODIS</h2>
-      <p class="text-text-inv pb-20">
-        Die seit 2018 bestehende Open Data Informationsstelle unterstüzt die Berliner Verwaltung bei der Bereitstellung
-        von offenen Daten, veranstaltet Netzwerktreffen und Wissenstransfer und entwickelt Open Data Prototypen und
-        Tools.
-      </p>
+      {% render 'heading', text: 'Aktuelles von der ODIS', inverted: true %}
+      {% render 'paragraph',
+        text: 'Die seit 2018 bestehende Open Data Informationsstelle unterstüzt die Berliner Verwaltung bei der Bereitstellung von offenen Daten, veranstaltet Netzwerktreffen und Wissenstransfer und entwickelt Open Data Prototypen und Tools.',
+        class: 'text-text-inv pb-20'
+      %}
 
       <div class="flex">
         <img
@@ -136,7 +128,12 @@ title: Open Data Informationsstelle Berlin
       </div>
 
       <div class="flex justify-center">
-        {% render 'button.liquid', text: 'Alle Projekte ansehen', inverted: true %}
+        {%
+          render 'button.liquid',
+          text: 'Alle Projekte ansehen',
+          inverted: true,
+          class: 'mt-8'
+        %}
       </div>
     </div>
   </section>
@@ -144,16 +141,14 @@ title: Open Data Informationsstelle Berlin
   <!-- newsletter & kontakt -->
   <section class="grid grid-cols-12 py-24">
     <!-- newsletter -->
-    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col gap-8 mb-16">
-      <h2 class="text-4xl text-headlines font-bold">Immer up to date?</h2>
-      <p>
-        Immer auf dem neusten Stand: Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert
-        werden? Melde dich gerne für unseren ODIS-Newsletter an!
-      </p>
-      <div class="flex justify-start">
-        {% render 'button', text: 'Newsletter Abonnieren' %}
-      </div>
-      <p>
+    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col mb-16 items-start">
+      {% render 'heading', text: 'Immer up to date?' %}
+      {%
+        render 'paragraph',
+        text: 'Immer auf dem neusten Stand: Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden? Melde dich gerne für unseren ODIS-Newsletter an!'
+      %}
+      {% render 'button', text: 'Newsletter Abonnieren', class: 'mt-2' %}
+      <p class="mt-6">
         Newsletter verpasst? Stöber einfach in unserem
         <a
           class="text-links underline"
@@ -176,11 +171,11 @@ title: Open Data Informationsstelle Berlin
     </div>
 
     <div class="col-start-2 lg:col-start-4 col-span-6 flex flex-col gap-2 max-w-[34.5rem]">
-      <h3 class="text-lg text-headlines font-bold">Du brauchst noch Hilfe?</h3>
-      <p>
-        Du benötigst Unterstützung oder hast Feedback? Ruf uns gerne unter +49 (0) 30 209 69 99 43 an oder kontaktiere
-        uns über das Kontaktformular.
-      </p>
+      {% render 'heading', text: 'Du brauchst noch Hilfe?', tag: 'h3', size: 'lg' %}
+      {% render 'paragraph',
+        text: 'Du benötigst Unterstützung oder hast Feedback? Ruf uns gerne unter +49 (0) 30 209 69 99 43 an oder kontaktiere uns
+        über das Kontaktformular.'
+      %}
       <div class="flex justify-start mt-2">
         {% render 'text-link', text: 'Zum Kontaktformular' %}
       </div>
