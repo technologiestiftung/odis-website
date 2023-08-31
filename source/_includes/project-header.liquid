@@ -12,12 +12,17 @@
 <section class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64 px-4 sm:px-6">
   <div class="container max-w-6xl mx-auto grid md:grid-cols-12 px-4 sm:px-6 gap-8">
     <div class="md:col-span-8 xl:col-start-1 xl:col-span-6">
-      <h1 class="headline-xxl text-headlines-inv">
-        {{ title }}
-      </h1>
-      <p class="paragraph-lg text-balance">
-        {{ description }}
-      </p>
+      {%
+        render 'heading',
+        text: title,
+        size: 'xxl',
+        inverted: true,
+      %}
+      {%
+        render 'paragraph',
+        text: description,
+        size: 'lg',
+      %}
     </div>
   </div>
 </section>

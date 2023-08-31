@@ -58,12 +58,22 @@ layout: default
     <aside class="md:col-start-9 md:col-span-4 xl:col-start-10 xl:col-span-3 py-4 flex flex-col gap-6">
       <dl class="sticky w-full top-6">
         {% if date %}
-          <dt class="headline-lg">Jahr</dt>
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: 'Jahr',
+            size: 'lg',
+          %}
           <dd class="mb-8">{{ date | date: '%Y' }}</dd>
         {% endif %}
 
         {% if finishDate %}
-          <dt class="headline-lg">Projektschluss</dt>
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: 'Projektabschluss',
+            size: 'lg',
+          %}
           <dd class="mb-8">
             {% if finishDate < now %}
               Abgeschlossen
@@ -74,9 +84,14 @@ layout: default
         {% endif %}
 
         {% if datasetDescription %}
-          <dt class="headline-lg">Datensatz</dt>
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: 'Datensatz',
+            size: 'lg',
+          %}
           <dd class="mb-8">
-            <p class="paragraph">{{ datasetDescription }}</p>
+            {% render 'paragraph', text: datasetDescription %}
             {% if datasetLink and datasetLinkText %}
               {% render 'text-link',
                 target: '_blank',
@@ -89,7 +104,12 @@ layout: default
         {% endif %}
 
         {% if gitHubLink %}
-          <dt class="headline-lg">GitHub</dt>
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: 'GitHub',
+            size: 'lg',
+          %}
           <dd class="mb-8">
             {%
               render 'text-link',
@@ -102,12 +122,17 @@ layout: default
         {% endif %}
 
         {% if partners.length > 0 %}
-          <dt class="headline-lg">Partner</dt>
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: 'Partner',
+            size: 'lg',
+          %}
           <dd class="mb-8">
             <ul class="flex flex-col gap-4">
               {% for partner in partners %}
                 <li>
-                  <p class="paragraph">{{ partner.name }}</p>
+                  {% render 'paragraph', text: partner.name %}
                   {% if partner.logoPath %}
                     <a
                       href="{{ partner.url }}"
