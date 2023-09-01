@@ -2,7 +2,7 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  content: ["./**/*.{liquid,html}"],
+  content: ["./**/*.{liquid,html,js}"],
   theme: {
     colors: {
       // USE THESE SEMANIC COLORS
@@ -82,8 +82,14 @@ module.exports = {
     },
     boxShadow: getShadows(),
     dropShadow: getShadows(),
+    extend: {
+      transitionTimingFunction: {
+        "out-extreme": "cubic-bezier(.12,.98,.13,.98)",
+      },
+    },
   },
   plugins: [
+    require("@tailwindcss/typography"),
     require("@tailwindcss/container-queries"),
     require("tailwindcss-touch")(),
     plugin(function ({ addUtilities }) {

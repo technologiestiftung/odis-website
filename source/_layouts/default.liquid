@@ -4,7 +4,7 @@
 
 <!doctype html>
 <html lang="de">
-  {% include 'head.html' %}
+  {% render "head.liquid", external_libs: external_libs, title: title, base_title: config.title %}
   <body>
     {% include 'topnav.html' %}
     <main>
