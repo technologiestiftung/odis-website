@@ -58,50 +58,59 @@ layout: default
     </div>
     <aside class="md:col-start-9 md:col-span-4 xl:col-start-10 xl:col-span-3 py-4 flex flex-col gap-6">
       <dl class="sticky w-full top-6">
-        {% if date %}
+        {% if period %}
           {%
             render 'heading',
             tag: 'dt',
-            text: 'Jahr',
+            text: 'Umsetzung',
             size: 'lg',
           %}
-          <dd class="mb-8">{{ date | date: '%Y' }}</dd>
+          <dd class="mb-8">{% render 'paragraph', text: period %}</dd>
         {% endif %}
 
-        {% if finishDate %}
+        {% if status %}
           {%
             render 'heading',
             tag: 'dt',
-            text: 'Projektabschluss',
+            text: 'Projektstatus',
             size: 'lg',
           %}
           <dd class="mb-8">
-            {% if finishDate < now %}
-              Abgeschlossen
+            {% render 'paragraph', text: status %}
+          </dd>
+        {% endif %}
+
+        {% if datasets.length > 0 %}
+          {% if datasets.length > 1 %}
+            {%
+              render 'heading',
+              tag: 'dt',
+              text: 'Datensätze',
+              size: 'lg',
+            %}
             {% else %}
-              {{ finishDate | date: '%d.%m.%Y' }} (geplant)
-            {% endif %}
-          </dd>
-        {% endif %}
-
-        {% if datasetDescription %}
-          {%
-            render 'heading',
-            tag: 'dt',
-            text: 'Datensatz',
-            size: 'lg',
-          %}
+            {%
+              render 'heading',
+              tag: 'dt',
+              text: 'Datensatz',
+              size: 'lg',
+            %}
+          {% endif %}
           <dd class="mb-8">
-            {% render 'paragraph', text: datasetDescription %}
-            {% if datasetLink and datasetLinkText %}
-              {% render 'text-link',
-                target: '_blank',
-                rel: 'noopener noreferrer',
-                text: datasetLinkText,
-                href: datasetLink
-              %}
-            {% endif %}
+            <ul class="flex flex-col gap-4">
+              {% for dataset in datasets %}
+                <li>
+                  {% render 'text-link',
+                    target: '_blank',
+                    rel: 'noopener noreferrer',
+                    text: dataset.linkText,
+                    href: dataset.link
+                  %}
+                </li>
+              {% endfor %}
+            </ul>    
           </dd>
+          
         {% endif %}
 
         {% if gitHubLink %}
