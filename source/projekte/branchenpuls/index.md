@@ -17,13 +17,11 @@ Berlin ist Hauptstadt, Start-Up-Metropole, Exzellenzcluster, Stadt der Kreativen
 
 ## Hintergrund
 
-Die ODIS hat sich die vorhandenen offenen Daten angesehen und bemerkt, dass die Datenlage in diesem Bereich in Bezug auf die Aktualität, Kontinuität und Maschinenlesbarkeit ausbaufähig ist. 
-Mit der interaktiven Webkarte „Berliner EnergieCheckpoint“ haben wir daher eine prototypische Anwendung programmiert, die Aufmerksamkeit für das Energiewendegesetz und das Thema Energieeinsparung erzeugt und gleichzeitig als Gesprächsgrundlage zur Verbesserung der (offenen) Datenlage der behördlichen Stellen in den Bereichen Gebäudedaten und Energiemonitoring dienen kann.
-
+Die IHK Berlin hat erstmals Informationen über ihre Mitgliedsunternehmen als Open Data bereitgestellt. Damit will sie selbst einen Beitrag zum Open Data Angebot des Landes Berlin leisten und dazu anregen, die offenen Daten zu nutzen. Mit Unterstützung der ODIS wurde der Datensatz sukzessive verbessert und aufbereitet. Auf Basis des Datenstandes von Juli 2023 hat die ODIS anschließend ein Tool entwickelt, um den Datensatz leichter nutzbar und durchsuchbar zu machen. Der Branchenpuls bildet aber nicht nur eine Momentaufnahme der Mitgliederstruktur der IHK Berlin ab, sondern soll in Zukunft, wenn der Datensatz eine gewisse Zeitreihe aufweisen kann, Entwicklungen in der Berliner Wirtschaft nachvollziehbar machen. So kann der Branchenpuls Aussagen über wirtschaftspolitische oder gesellschaftliche Entwicklungen treffen und Zusammenhänge zwischen Standortfaktoren und zum Beispiel Neuansiedlungen oder Neustrukturierungen in der Berliner Wirtschaft abbilden und Diskussionsräume für Wirtschaft und Stadtgesellschaft öffnen.
 
 ## Was zeigt der BranchenPuls?
 
-. Die Filterauswahl lässt sich als CSV-Datei exportieren.
+Die Standorte, als Punkte bzw. bei kleiner Zoomstufe als Heatmap dargestellt, entsprechen dem Sitz des Mitgliedsunternehmes inklusive deren Betriebsstätten der IHK Berlin. Die Unternehmen können nach Informationen wie Branchen- und Gewerbetyp, Beschäftigtenzahl oder Unternehmensalter gefiltert werden. Außerdem ist eine räumliche Differenzierung auf Ebene der Bezirke, Prognoseraum und Planungsraum der Lebensweltlich orientierten Räume (offizielle in Berlin verwendete Raumeinheiten) möglich. Durch die Zeitraumauswahl ist darüber hinaus eine zeitliche Entwicklung erkundbar. Dazu können mehrere Ansichten geöffnet und miteinander verglichen werden. Die Filterauswahl lässt sich als CSV-Datei exportieren.
 
 Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf "Tour starten" in der Infobox eine zehnteilige Tour angeboten, bei der die einzelnen Funktionen genauer erklärt und eingeordnet werden. 
 
