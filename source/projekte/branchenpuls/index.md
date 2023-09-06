@@ -26,7 +26,7 @@ Die Standorte, als Punkte bzw. bei kleiner Zoomstufe als Heatmap dargestellt, en
 Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf "Tour starten" in der Infobox eine zehnteilige Tour angeboten, bei der die einzelnen Funktionen genauer erklärt und eingeordnet werden. 
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/energiekarte_joyride.png", caption:"Ausschnitt aus der optionalen Tour, welche die Nutzer:innen die Anwendung in neun Schritten näher bringt" %}
+{% include "macro-image-section-small.html", src:"/assets/images/branchenpuls_joyride.png", caption:"Ausschnitt aus der optionalen Tour, welche die Nutzer:innen den Branchenpuls in zehn Schritten näher bringt" %}
 </center>
 <br>
 
