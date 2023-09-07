@@ -4,7 +4,7 @@ tags: project
 title: Branchenpuls
 blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://www.branchenpuls.berlin
-metaDescription: Exploriere die Berliner Gewerbelandschaft vom Bezirk bis zum Kiez 
+metaDescription: Exploriere Berlins Gewerbelandschaft vom Bezirk bis zum Kiez 
 date: 2023-09-30
 visible: true
 indexImage: branchenpuls-projektkachel.png
@@ -13,11 +13,11 @@ heroImage: branchenpuls-header.png
 
 
 Berlin ist Hauptstadt, Start-Up-Metropole, Exzellenzcluster, Stadt der Kreativen und vorallem eines: immer im Wandel. Entsprechend vielfältig und dynamisch ist auch die Berliner Wirtschaft. Doch in welchen Kiezen konzentrieren sich bestimmte Branchen? Wo dominieren ältere Unternehmen, wo siedeln sich neue an? Wie entwickelt sich die Gewerbelandschaft im Lauf der Zeit?
-**Mit dem Branchenpuls ist ein Explorationstool entstanden, das eine Erkundung der Berliner Gewerbelandschaft ermöglicht - von der räumlichen Verteilung bestimmter Branchentypen bis zur zeitlichen Entwicklung der Gewerbelandschaft.** Dafür stützt sich der Branchenpuls auf einen offenen Datensatz der IHK Berlin mit Standort- und Strukturinformationen von den über 350.000 Mitgliedsunternehmen inklusive deren Betriebsstätten der IHK Berlin.
+**Mit dem Branchenpuls ist ein Explorationstool entstanden, das eine Erkundung der Berliner Gewerbelandschaft ermöglicht - von der räumlichen Verteilung bestimmter Branchentypen bis zur zeitlichen Entwicklung der Gewerbelandschaft.** Dafür stützt sich der Branchenpuls auf einen offenen Datensatz der IHK Berlin mit Standort- und Strukturinformationen von den über 350.000 Mitgliedsunternehmen inklusive deren Betriebsstätten.
 
 ## Hintergrund
 
-Die IHK Berlin hat erstmals Informationen über ihre Mitgliedsunternehmen als Open Data bereitgestellt. Damit will sie selbst einen Beitrag zum Open Data Angebot des Landes Berlin leisten und dazu anregen, die offenen Daten zu nutzen. Mit Unterstützung der ODIS wurde der Datensatz sukzessive verbessert und aufbereitet. Auf Basis des Datenstandes von Juli 2023 hat die ODIS anschließend ein Tool entwickelt, um den Datensatz leichter nutzbar und durchsuchbar zu machen. Der Branchenpuls bildet aber nicht nur eine Momentaufnahme der Mitgliederstruktur der IHK Berlin ab, sondern soll in Zukunft, wenn der Datensatz eine gewisse Zeitreihe aufweisen kann, Entwicklungen in der Berliner Wirtschaft nachvollziehbar machen. So kann der Branchenpuls Aussagen über wirtschaftspolitische oder gesellschaftliche Entwicklungen treffen und Zusammenhänge zwischen Standortfaktoren und zum Beispiel Neuansiedlungen oder Neustrukturierungen in der Berliner Wirtschaft abbilden und Diskussionsräume für Wirtschaft und Stadtgesellschaft öffnen.
+Die IHK Berlin hat Informationen über ihre Mitgliedsunternehmen als Open Data bereitgestellt. Damit will sie selbst einen Beitrag zum Open Data Angebot des Landes Berlin leisten und dazu anregen, die offenen Daten zu nutzen. Mit Unterstützung der ODIS wurde der Datensatz sukzessive optimiert und im Juli 2023 veröffentlicht. Auf Basis dieses Datenstandes hat die ODIS anschließend ein Tool entwickelt, um den Datensatz leichter nutzbar und durchsuchbar zu machen. Der Branchenpuls bildet aber nicht nur eine Momentaufnahme der Mitgliederstruktur der IHK Berlin ab, sondern soll mit der Zeit Entwicklungen in der Berliner Wirtschaft nachvollziehbar machen. So kann der Branchenpuls Aussagen über wirtschaftspolitische oder gesellschaftliche Entwicklungen treffen und Zusammenhänge zwischen Standortfaktoren und zum Beispiel Neuansiedlungen oder Neustrukturierungen in der Berliner Wirtschaft abbilden und Diskussionsräume für Wirtschaftsakteure und Stadtgesellschaft öffnen.
 
 ## Was zeigt der BranchenPuls?
 
