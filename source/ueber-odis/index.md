@@ -65,21 +65,13 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
-						<img class="profile-image" src="/assets/images/page/profile-ester.jpg">
-						<div class="profile-desc-wrapper-2">
-							<span><b>Ester Scheck</b></span>
-							<span><em>Studentische Mitarbeiterin</em></span>
-							<span>ester.scheck@ts.berlin</span>
-						</div>
-					</div>
-					<!--<div class="profile-wrapper mt-2">
 						<img class="profile-image" src="/assets/images/page/profile-max.jpg">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Max B. Eckert</b></span>
 							<span><em>Wissenschaftlicher Mitarbeiter</em></span>
 							<span>max.eckert@ts.berlin</span>
 						</div>
-					</div>	-->
+					</div>
 					<div class="profile-wrapper mt-2">
 						<img class="profile-image" src="/assets/images/page/profile_anna.png">
 						<div class="profile-desc-wrapper-2">
