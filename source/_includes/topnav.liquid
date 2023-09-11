@@ -1,0 +1,53 @@
+<nav class="container max-w-6xl mx-auto flex flex-wrap justify-between px-10">
+  <div class="flex py-5 items-center block md:hidden">
+    <button class="motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4" id="menu-button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-7 w-7 cursor-pointer text-links hover:text-links-active"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="flex py-5">
+    <a class="motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4 hover:text-links-active" href="/" aria-label="Zur Startseite">
+      {% render 'odis_logo.html' %}
+    </a>
+  </div>
+
+  <div class="hidden w-full md:flex md:w-auto" id="menu">
+    <ul class="grid md:flex md:justify-between md:items-center gap-4 pb-5 md:pt-5">
+      {% for nav_item in nav_items %}
+        {% assign is_current_page = page.url contains nav_item.slug %}
+        <li>
+          <a
+            {% if is_current_page %}
+            aria-current="true"
+            {% endif %}
+            class="p-2 font-bold text-links hover:text-links-active aria-current:text-links-active motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4"
+            href="{{ nav_item.slug | prepend: "/"  }}">{{ nav_item.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const button = document.querySelector("#menu-button");
+  const menu = document.querySelector("#menu");
+
+  button.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+  button.addEventListener("keypress", (event) => {
+    if (event.code !== "Enter" || event.code !== "Space") return
+
+    menu.classList.toggle("hidden");
+  });
+</script>
