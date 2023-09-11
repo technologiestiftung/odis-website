@@ -1,18 +1,7 @@
 <nav class="container max-w-6xl mx-auto flex flex-wrap justify-between px-10">
   <div class="flex py-5 items-center md:hidden">
-    <button class="motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4" id="menu-button">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-7 w-7 cursor-pointer text-links hover:text-links-active"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
+    <button class="h-7 w-7 text-links hover:text-links-active motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4" id="menu-button">
+      {% render 'hamburger.liquid' %}
     </button>
   </div>
 
