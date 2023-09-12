@@ -52,7 +52,7 @@ title: Kontakt
       method="POST"
       data-netlify="true"
       action="/sucess">
-      <fieldset class="pt-6" name="kontaktdaten">
+      <fieldset class="block mt-6" name="kontaktdaten">
         {% render 'heading', text: 'Kontaktdaten', tag: 'legend', size: 'lg' %}
         <div class="grid grid-cols-2 gap-2 lg:w-2/3">
           <label for="anrede">Anrede</label>
@@ -94,7 +94,7 @@ title: Kontakt
         </div>
       </fieldset>
       <fieldset
-        class="pt-8"
+        class="block mt-8"
         name="anfragenthema"
         aria-describedby="anfragenthema-hint">
         {% render 'heading', text: 'Thema der Anfrage', tag: 'legend', size: 'lg' %}
@@ -174,7 +174,7 @@ title: Kontakt
           </div>
         </div>
       </fieldset>
-      <fieldset class="pt-8" name="message">
+      <fieldset class="block mt-8" name="message">
         {% render 'heading', text: 'Beschreibung zur Anfrage', tag: 'legend', size: 'lg', id: 'message-legend' %}
         <textarea
           class="w-full lg:w-2/3"
@@ -184,7 +184,7 @@ title: Kontakt
           aria-labelledby="message-legend"></textarea>
       </fieldset>
     </fieldset>
-    <fieldset class="pt-8" name="datenschutz">
+    <fieldset class="block mt-8" name="datenschutz">
       {% render 'heading', text: 'Datenschutz und Newsletter', tag: 'legend', size: 'lg' %}
       <div class="flex pb-2">
         <input
