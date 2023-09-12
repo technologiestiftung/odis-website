@@ -74,21 +74,15 @@ layout: default
         {% endif %}
 
         {% if datasets.length > 0 %}
-          {% if datasets.length > 1 %}
-            {%
-              render 'heading',
-              tag: 'dt',
-              text: 'Datensätze',
-              size: 'lg',
-            %}
-            {% else %}
-            {%
-              render 'heading',
-              tag: 'dt',
-              text: 'Datensatz',
-              size: 'lg',
-            %}
-          {% endif %}
+          {% capture dataset_label %}
+            {% if datasets.length > 1 %}Datensätze{% else %}Datensatz{% endif %}
+          {% endcapture %}
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: dataset_label,
+            size: 'lg',
+          %}
           <dd class="mb-8">
             <ul class="flex flex-col gap-4">
               {% for dataset in datasets %}
