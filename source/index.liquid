@@ -40,6 +40,7 @@ external_libs:
       alt="Modul Nummer eins"
     >
 
+
     {%
       render  'paragraph',
       text: 'Modul 1 von 5',
@@ -52,54 +53,6 @@ external_libs:
       class: 'w-1/2'
     %}
   </div>
-
-  <!-- open data community zahlen -->
-  <section class="grid grid-cols-12 bg-bg-alt w-full">
-    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col py-20">
-      {% render 'heading', text: 'Open Data Community' %}
-      {%
-        render  'paragraph',
-        text: 'Offene Daten werden von vielen Organisationen in unterschiedlichsten Kategorien bereitgestellt. Mit der Open-Data-Rechtsverordnung und dem zunehmenden Bewusstsein für offenen Daten wächst das breite Open Data Angebot. Lasst uns gemeinsam Daten öffnen, damit das Angebot an Anwendungen wächst, die uns allen zugute kommen.',
-        class: 'w-1/2'
-      %}
-
-      <div class="flex flex-col gap-12 lg:flex-row lg:self-center lg:py-20 lg:gap-20">
-        <div class="flex flex-col items-center">
-          <p class="text-lg text-center text-headlines font-bold">
-            Bereitstellende <br>
-            Institutionen
-          </p>
-          <div class="text-7xl font-bold text-bg text-stroke-2 text-stroke-line border-b-8 border-b-line">
-            <span class="drop-shadow-primary-sm">78</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <p class="text-lg text-center text-headlines font-bold">
-            Berlins <br>
-            Datensätze
-          </p>
-          <div class="text-7xl font-bold text-bg text-stroke-2 text-stroke-line border-b-8 border-b-line">
-            <span class="drop-shadow-primary-sm">2.963</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <p class="text-lg text-center text-headlines font-bold">
-            Letzter <br>
-            Monat
-          </p>
-          <div class="text-7xl font-bold text-bg text-stroke-2 text-stroke-line border-b-8 border-b-line">
-            <span class="drop-shadow-primary-sm">+214</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex justify-center">
-        {% render 'button.liquid', text: 'ODIS Blog erkunden' %}
-      </div>
-    </div>
-  </section>
 
   <!-- aktuelles von der odis -->
   <section class="grid grid-cols-12 bg-bg-inv w-full">
