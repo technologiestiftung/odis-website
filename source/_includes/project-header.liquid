@@ -1,0 +1,42 @@
+{% comment %}
+  AVAILABLE VARIABLES
+  -------------------
+    title: Title of the project (required)
+    heroImage: Path to hero image (required)
+    buttonTitle: Title of button (optional)
+    buttonLink: Link of button (optional)
+    showImageInMockup: Whether to show a window header mockup (optional)
+    mobileImage: Path to mobile image (optional)
+    projectUrlWithoutProtocol: Project URL without protocol (https://) (optional if showImageInMockup is false)
+    class: Optional additional classes to add to the container (optional)
+{% endcomment %}
+<section class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64 px-4 sm:px-6">
+  <div class="container max-w-6xl mx-auto grid md:grid-cols-12 px-4 sm:px-6 gap-8">
+    <div class="md:col-span-8 xl:col-start-1 xl:col-span-6">
+      {%
+        render 'heading',
+        text: title,
+        size: 'xxl',
+        inverted: true,
+      %}
+      {%
+        render 'paragraph',
+        text: description,
+        size: 'lg',
+      %}
+    </div>
+  </div>
+</section>
+<section class="pb-24 px-4 sm:px-6 -mt-32 sm:-mt-56">
+  {%
+    render 'project-mockups',
+    heroImage: heroImage,
+    mobileImage: mobileImage,
+    projectUrlWithoutProtocol: projectUrlWithoutProtocol,
+    showImageInMockup: showImageInMockup,
+    projectUrlWithoutProtocol: projectUrlWithoutProtocol,
+    buttonLink: buttonLink,
+    buttonTitle: buttonTitle,
+    class: 'container max-w-6xl mx-auto',
+  %}
+</section>

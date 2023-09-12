@@ -3,49 +3,196 @@
 @tailwind utilities;
 
 @layer base {
-
-    @font-face {
-      font-family: "Clan Medium";
-      src: url('/assets/fonts/clan-medium.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Mediumitalic";
-        src: url('/assets/fonts/clan-mediumitalic.woff') format("woff");
-      }
-  
-    @font-face {
-        font-family: "Clan Book";
-        src: url('/assets/fonts/clan-book.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Bookitalic";
-        src: url('/assets/fonts/clan-bookitalic.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Bold";
-        src: url('/assets/fonts/clan-bold.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Bolditalic";
-        src: url('/assets/fonts/clan-bolditalic.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan News";
-        src: url('/assets/fonts/clan-news.woff') format("woff");
-    }
-
-    @font-face {
-        font-family: "Clan Newsitalic";
-        src: url('/assets/fonts/clan-newsitalic.woff') format("woff");
-    }
-
-    html {
-        font-family: "Clan Book";
-    }
-
+  @font-face {
+    font-family: "Clan";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/clan-news.woff") format("woff");
+    font-display: swap;
   }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: italic;
+    font-weight: 400;
+    src: url("/assets/fonts/clan-newsitalic.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/clan-bold.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: italic;
+    font-weight: 700;
+    src: url("/assets/fonts/clan-bolditalic.woff") format("woff");
+    font-display: swap;
+  }
+
+  :root {
+    --blue-darker: #0c163b;
+    --blue-dark: #172763;
+    --blue: #20378b;
+    --blue-medium: #4c64cd;
+    --blue-light: #bee4f8;
+    --blue-ultralight: #edf8fe;
+    --white: #ffffff;
+    --gray-light: #d1dbe0;
+    --red: #e60032;
+    --red-dark: #c42c3a;
+
+    --bg: var(--white);
+    --bg-alt: var(--blue-ultralight);
+    --bg-inv: var(--blue);
+
+    --text: var(--blue-darker);
+    --text-inv: var(--blue-ultralight);
+
+    --links: var(--blue-dark);
+    --links-inv: var(--blue-light);
+    --links-active: var(--red);
+
+    --headlines: var(--blue);
+    --headlines-inv: var(--blue-light);
+    --links-active-inv: var(--red);
+
+    --line: var(--blue);
+    --line-dark: var(--blue-dark);
+    --line-inv: var(--blue-light);
+    --line-dark-inv: var(--blue-light);
+
+    --shadow-primary: var(--blue);
+    --shadow-secondary: var(--blue-light);
+    --shadow-primary-inv: var(--blue-darker);
+    --shadow-secondary-inv: var(--blue-dark);
+  }
+
+  /* To apply dark mode, apply the [data-applied-mode='dark'] to the <html /> tag and add this CSS */
+  :root[data-applied-mode="dark"] {
+    --bg: var(--blue-darker);
+    --bg-alt: var(--blue);
+    --bg-inv: var(--blue-ultralight);
+
+    --text: var(--blue-ultralight);
+    --text-inv: var(--blue-darker);
+
+    --links: var(--blue-light);
+    --links-inv: var(--blue);
+
+    --headlines: var(--blue-light);
+    --headlines-inv: var(--blue-dark);
+
+    --line: var(--blue-light);
+    --line-dark: var(--blue-light);
+    --line-inv: var(--blue-dark);
+    --line-dark-inv: var(--blue-darker);
+
+    --shadow-primary: var(--blue-dark);
+    --shadow-secondary: var(--blue-dark);
+    --shadow-primary-inv: var(--blue-light);
+    --shadow-secondary-inv: var(--blue-light);
+  }
+
+  html {
+    @apply font-sans text-text bg-bg;
+  }
+
+  .prose p {
+    @apply leading-relaxed max-w-prose;
+  }
+  .prose p {
+    @apply mb-4;
+  }
+  .prose p.lead {
+    @apply text-xl mb-6;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-headlines font-bold text-balance max-w-prose;
+  }
+  .prose-invert h1,
+  .prose-invert h2,
+  .prose-invert h3,
+  .prose-invert h4,
+  .prose-invert h5,
+  .prose-invert h6 {
+    @apply text-headlines-inv;
+  }
+
+  .prose h1 {
+    @apply leading-tight text-5xl mb-4;
+  }
+
+  .prose h2 {
+    @apply leading-tight text-3xl mb-4;
+  }
+
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-xl mb-2;
+  }
+}
+
+@layer utilities {
+  .text-stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .text-stroke-line {
+    -webkit-text-stroke-color: var(--line);
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin-top: 0;
+  @apply text-links;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-2xl;
+}
+
+.tippy-box[data-theme~="light-border"] {
+  border-color: var(--blue-medium) !important;
+  @apply p-3 rounded-none border !shadow-none;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="top"]
+  > .tippy-arrow::after {
+  border-top-color: var(--blue-medium) !important;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="bottom"]
+  > .tippy-arrow::after {
+  border-bottom-color: var(--blue-medium) !important;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="left"]
+  > .tippy-arrow::after {
+  border-left-color: var(--blue-medium) !important;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="right"]
+  > .tippy-arrow::after {
+  border-right-color: var(--blue-medium) !important;
+}

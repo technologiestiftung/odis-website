@@ -1,88 +1,155 @@
 ---
 layout: default
 ---
+{% comment %}
+  AVAILABLE VARIABLES
+  -------------------
+    tags: Project tags (required)
+    title: Project title (required)
+    blogLinkTitle: Title of blog post link (optional)
+    blogLink: Link to blog post (optional)
+    metaDescription: Project meta description (required)
+    date: Date of project (optional)
+    finishDate: Project planed finish date (optional)
+    heroImage: Path to hero image (required)
+    mobileImage: Path to mobile image (optional)
+    showImageInMockup: Whether to show the hero image in a web mockup (optional)
+    projectUrlWithoutProtocol: Project URL without protocol (https://) (optional if not showImageInMockup if false)
+    datasetDescription: Description of what the dataset represents (optional)
+    datasetLinkText: Text for the link to the dataset (optional)
+    datasetLink: Link to the dataset (optional)
+    gitHubLink: Link to the GitHub repository (optional)
+    partners: List of partners (optional)
+      - name: Name of the partner (required)
+        url: URL of the partner (required)
+        logoPath: Path to the partner logo (optional)
 
-<div class="flex flex-col items-center bg-cyan-50">
-	{% comment %}
-	header
-	{% endcomment %}
-  <div class="bg-blue-500 text-cyan-50 py-20 flex flex-col items-center">
-    <div class="w-1/2">
-      {% if heroImage %}
-        <h1 class="text-cyan-50">{{ title }}</h1>
-        <p class="font-clanProNews leading-7 text-lg">{{ metaDescription }}</p>
-      </div>
+    content: Project markdown content
+{% endcomment %}
+
+{% render 'project-header',
+  title: title,
+  buttonTitle: blogLinkTitle,
+  buttonLink: blogLink,
+  description: metaDescription,
+  mobileImage: mobileImage,
+  heroImage: heroImage,
+  showImageInMockup: showImageInMockup,
+  projectUrlWithoutProtocol: projectUrlWithoutProtocol
+%}
+
+<section class="pb-64 px-4 sm:px-6">
+  <div
+    class="
+      container max-w-6xl mx-auto grid
+      md:grid-cols-12 md:gap-8
+      px-4 sm:px-6
+    "
+  >
+    <div class="md:col-span-8 xl:col-start-1 xl:col-span-6 prose ">
+      {{ content }}
     </div>
+    <aside class="md:col-start-9 md:col-span-4 xl:col-start-10 xl:col-span-3 py-4 flex flex-col gap-6">
+      <dl class="sticky w-full top-6">
+        {% if period %}
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: 'Umsetzung',
+            size: 'lg',
+          %}
+          <dd class="mb-8">{% render 'paragraph', text: period %}</dd>
+        {% endif %}
 
-		{% comment %}
-		image & button
-		{% endcomment %}
-    <div class="flex flex-col items-center mt-16">
-      <img
-        class="mb-8"
-        src="{{heroImage}}"
-        alt="{{title}}">
+        {% if status %}
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: 'Projektstatus',
+            size: 'lg',
+          %}
+          <dd class="mb-8">
+            {% render 'paragraph', text: status %}
+          </dd>
+        {% endif %}
 
-    {% endif %}
+        {% if datasets.length > 0 %}
+          {% capture dataset_label %}
+            {% if datasets.length > 1 %}Datensätze{% else %}Datensatz{% endif %}
+          {% endcapture %}
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: dataset_label,
+            size: 'lg',
+          %}
+          <dd class="mb-8">
+            <ul class="flex flex-col gap-4">
+              {% for dataset in datasets %}
+                <li>
+                  {% render 'text-link',
+                    target: '_blank',
+                    rel: 'noopener noreferrer',
+                    text: dataset.linkText,
+                    href: dataset.link
+                  %}
+                </li>
+              {% endfor %}
+            </ul>    
+          </dd>
+          
+        {% endif %}
 
-    {% comment %}
-		button
-		{% endcomment %}
-    <div>
-      {%- if blogLink -%}
-        <a
-          class="p-4 mt-8 border-2 border-blue-500 bg-cyan-50 drop-shadow-[8px_8px_0_rgba(30,57,143,1)] w-40"
-          href="{{blogLink}}"
-          target="_blank">{{ blogLinkTitle }}</a>
-      {%- endif -%}
+        {% if gitHubLink %}
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: 'GitHub',
+            size: 'lg',
+          %}
+          <dd class="mb-8">
+            {%
+              render 'text-link',
+              target: '_blank',
+              rel: 'noopener noreferrer',
+              text: 'Code auf GitHub',
+              href: gitHubLink,
+            %}
+          </dd>
+        {% endif %}
 
-    </div>
-
+        {% if partners.length > 0 %}
+          {%
+            render 'heading',
+            tag: 'dt',
+            text: 'Partner',
+            size: 'lg',
+          %}
+          <dd class="mb-8">
+            <ul class="flex flex-col gap-4">
+              {% for partner in partners %}
+                <li>
+                  {% render 'paragraph', text: partner.name %}
+                  {% if partner.logoPath %}
+                    <a
+                      href="{{ partner.url }}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Partner Webseite: {{ partner.name }}"
+                    >
+                      <img
+                        src="{{partner.logoPath}}"
+                        alt="Logo von {{ partner.name }}"
+                        class="max-w-[min(220px,75%)]"
+                      >
+                    </a>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </dd>
+        {% endif %}
+      </dl>
+    </aside>
   </div>
-
-	{% comment %}
-	content & side navigation
-	{% endcomment %}
-  <section class="flex">
-
-    <div class="w-4/5 ml-10 md:ml-60 mt-20 mr-40 text-l font-clanProNews leading-7 text-blue-900">
-
-      <div>
-        {{ content }}
-      </div>
-    </div>
-
-
-		{% comment %}
-		side navigation
-		{% endcomment %}
-		{% comment %}
-		@todo - diese inhalte aus metadata in der md verfügbar machen
-		{% endcomment %}
-    <div class="w-1/5 mt-20 mr-60 text-sm">
-			{% comment %}
-			md:visible/hidden bei mobile??? liegt in tailwind.config.js
-			{% endcomment %}
-      <p class="mb-4 text-grey-500">
-        <strong>Jahr</strong>
-        <br> 2023</p>
-      <p class="mb-4 text-grey-500">
-        <strong>Projektstatus</strong>
-        <br> abgeschlossen</p>
-      <p class="mb-4 text-grey-500">
-        <strong>Datensatz</strong>
-        <br> Die Datengrundlage bildet eine jährlich aktualisierte Excel-Tabelle, die im Open Data Portal abgelegt wird. Datensatz: 2023 Berliner Weihnachtsmärkte.
-      </p>
-      <p class="mb-4 text-grey-500">
-        <strong>GitHub</strong>
-        <br> Projekt GitHub Repository</p>
-      <p class="mb-4 text-grey-500">
-        <strong>Kooperationspartner</strong>
-        <br> SenWPG</p>
-      <img src="/assets/images/logo-senweb.png" alt="logo">
-
-
-
-    </div>
-  </section>
-</div>
+</section>
