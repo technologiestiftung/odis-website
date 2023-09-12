@@ -7,136 +7,214 @@ title: Kontakt
   <div class="container max-w-6xl mx-auto grid md:grid-cols-12 px-4 sm:px-6 gap-8">
     <div class="md:col-span-8 xl:col-start-1 xl:col-span-6">
       {%
-        render 'heading',
-        tag: 'h1',
-        text: 'Kontakt',
-        size: 'xxl',
-        inverted: true,
-      %}
+         render 'heading',
+         tag: 'h1',
+         text: 'Kontakt',
+         size: 'xxl',
+         inverted: true, %}
       {%
-        render 'paragraph',
-        text: 'Du hast eine Frage, benötigst Unterstützung bei deinem Open-Data-Vorhaben oder hast eine Projektidee? Dann kontaktiere uns.',
-        size: 'lg',
-      %}
+         render 'paragraph',
+         text: 'Du hast eine Frage, benötigst Unterstützung bei deinem Open-Data-Vorhaben oder hast eine Projektidee? Dann kontaktiere uns.',
+         size: 'lg', %}
     </div>
   </div>
 </div>
 
 <div class="pb-24 px-4 sm:px-6 lg:-mt-56">
-  <div
-    class="
-      container max-w-6xl mx-auto px-4 sm:px-6 pt-20
-    "
-  >
-  <div class="hidden lg:col-start-3 lg:flex items-start justify-end pr-3 pb-12">
-    <img
-      src="/assets/images/illustrations/odis_icon_contact.svg"
-      aria-hidden="true"
-      loading="lazy"
-      class="grow max-w-[220px]"
-    >
+  <div class="container max-w-6xl mx-auto px-4 sm:px-6 pt-20">
+    <div class="hidden lg:col-start-3 lg:flex items-start justify-end pr-3 pb-12">
+      <img
+        src="/assets/images/illustrations/odis_icon_contact.svg"
+        aria-hidden="true"
+        loading="lazy"
+        class="grow max-w-[220px]">
     </div>
-  {% render 'heading', text: 'Wir freuen uns darauf mit dir in Kontakt zu kommen!' %}
-  {%
-    render  'paragraph',
-    text: 'Egal ob Open-Data-Erstgespräch, spezifische Fragestellung, lockerer Austausch und Anfrage für ein gemeinsames Projekt: Du kannst uns eine Mail an das ODIS-Postfach schicken, 
-    die einzelnen Teammitglieder telefonisch erreichen oder das unten stehende Kontaktformular nutzen. Das Unterstützungsangebot der ODIS wird über eine Zuwendung der Berliner Senatskanzlei finanziert.',
-    class: ''
-  %}
-  <div class="flex justify-start mt-6">
-    {% render 'text-link', text: 'Mail an ODIS', href:"mailto:odis@ts.berlin" %}
-  </div>
-  <div class="flex justify-start mt-4">
-    {% render 'text-link', text: 'Team und Telefonnummern', href:"/ueber-odis#team" %}
-  </div>
-  </div>
+    {% render 'heading', text: 'Wir freuen uns darauf mit dir in Kontakt zu kommen!' %}
+    {%
+       render 'paragraph',
+       text: 'Egal ob Open-Data-Erstgespräch, spezifische Fragestellung, lockerer Austausch und Anfrage für ein gemeinsames Projekt: Du kannst uns eine Mail an das ODIS-Postfach schicken,
+       die einzelnen Teammitglieder telefonisch erreichen oder das unten stehende Kontaktformular nutzen. Das Unterstützungsangebot der ODIS wird über eine Zuwendung der Berliner Senatskanzlei finanziert.',
+       class: '' %}
+    <div class="flex justify-start mt-6">
+      {% render 'text-link', text: 'Mail an ODIS', href: "mailto:odis@ts.berlin" %}
+    </div>
+    <div class="flex justify-start mt-4">
+      {% render 'text-link', text: 'Team und Telefonnummern', href: "/ueber-odis#team" %}
+    </div>
   </div>
 
-<div class="pb-24 px-4 sm:px-6 bg-bg-alt">
-  <div
-    class="
-      container max-w-6xl mx-auto px-4 sm:px-6 pt-20
-    "
-  >
-  {% render 'heading', text: 'Kontaktformular' %}
-  <form name="contact" method="POST" data-netlify="true" action="/sucess">
-  <fieldset class="pt-6" name="kontaktdaten">
-    {% render 'heading', text: 'Kontaktdaten', tag: 'legend', size: 'lg' %}
-    <div class="grid grid-cols-2 gap-2 lg:w-2/3">
-        <label for="anrede">Anrede</label>
-        <select class="w-1/2 md:w-1/5" name="anrede" id="anrede">
-          <option value="">-</option>
-          <option value="Frau">Frau</option>
-          <option value="Herr">Herr</option>
-          <option value="Divers">Divers</option>
-        </select>
-        <label for id="name">Name<span aria-hidden="true">*</span></label>
-        <input class="md:w-4/5 italic text-sm pl-2" type="text" id="name" name="name" placeholder="Vor- und Nachname" required>
-        <label for id="organisation">Organisation/Abteilung</label>
-        <input class="md:w-4/5 italic text-sm pl-2" type="text" id="organisation" name="organisation" placeholder="Organisation und ggf. Abteilung" pattern="^(?!.*[Ss]tandesamt).*$"  title="Bitte beachten Sie, dass wir nicht die ODiS, Online-Datenbank beim Standesamt, sind. Anfragen bzgl. Zugansdaten zu dieser Datenbank können wir leider nicht bearbeiten"/>
-        <label for id="email">E-Mail-Adresse<span aria-hidden="true">*</span></label>
-        <input class="md:w-4/5 italic text-sm pl-2" type="email" id="email" name="email" placeholder="E-Mail-Adresse">
-    </div>
-  </fieldset>
-  <fieldset class="pt-8" name="anfragenthema" aria-describedby="anfragenthema-hint">
-    {% render 'heading', text: 'Thema der Anfrage', tag: 'legend', size: 'lg' %}
-    <p id="anfragenthema-hint" class="text-sm pb-3 italic">Mehrfachauswahl möglich</p>
-    <div class="md:grid grid-cols-2 gap-2 lg:w-2/3">
-    <div>
-      <input type="checkbox" id="erstgespräch" name="anfrage" value="erstgespräch" class="min-w-[20px] h-6 mr-2">
-      <label for="erstgespräch">Erstgespräch Open Data</label>
-    </div>
-    <div>
-      <input type="checkbox" id="bereitstellung" name="anfrage" value="bereitstellung" class="min-w-[20px] h-6 mr-2">
-      <label for="bereitstellung">Fragen zur Datenbereitstellung</label>
-    </div>
-    <div>
-      <input type="checkbox" id="visualisierung" name="anfrage" value="visualisierung" class="min-w-[20px] h-6 mr-2">
-      <label for="visualisierung">Fragen zur Datenvisualisierung</label>
-    </div>
-    <div>
-      <input type="checkbox" id="datenquali" name="anfrage" value="datenquali" class="min-w-[20px] h-6 mr-2">
-      <label for="datenquali">Fragen zur Datenqualität</label>
-    </div>
-    <div>
-      <input type="checkbox" id="od-portal" name="anfrage" value="od-portal" class="min-w-[20px] h-6 mr-2">
-      <label for="od-portal">Fragen zum Open Data Portal</label>
-    </div>
-    <div>
-      <input type="checkbox" id="datensuche" name="anfrage" value="datensuche" class="min-w-[20px] h-6 mr-2">
-      <label for="datensuche">Suche nach Daten</label>
-    </div>
-    <div>
-      <input type="checkbox" id="prototyp" name="anfrage" value="prototyp" class="min-w-[20px] h-6 mr-2">
-      <label for="prototyp">Projektvorschlag</label>
-     </div>
-    <div>
-      <input type="checkbox" id="sonstiges" name="anfrage" value="sonstiges" class="min-w-[20px] h-6 mr-2">
-       <label for="sonstiges">Sonstiges</label>
-    </div>
-    </div>
-  </fieldset>
-  <fieldset class="pt-8" name="message">
-    {% render 'heading', text: 'Beschreibung zur Anfrage', tag: 'legend', size: 'lg', id: 'message-legend' %}
-    <textarea class="w-full lg:w-2/3" id="message" name="message" rows="8" aria-labelledby="message-legend"></textarea>
-  </fieldset>
-  </fieldset>
-  <fieldset class="pt-8" name="datenschutz">
-    {% render 'heading', text: 'Datenschutz und Newsletter', tag: 'legend', size: 'lg' %}
-    <div class="flex pb-2">
-      <input type="checkbox" id="DSV" name="datenschutz" value="DSV" class="min-w-[20px] h-6 mr-2" required>
-      <label class="lg:w-2/3" for="DSV">Ich habe die <a class="italic underline" href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a> gelesen und erkenne diese ausdrücklich an.<span aria-hidden="true">*</span></label>
-    </div>
-    <div class="flex">
-      <input type="checkbox" id="speicherung" name="datenschutz" value="speicherung" class="min-w-[20px] h-6 mr-2" required>
-      <label class="lg:w-2/3" for="speicherung">Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.<span aria-hidden="true">*</span></label>
-    </div>
-  </fieldset>
-  <p class="text-sm italic pt-6" aria-hidden="true"> * Angabe notwendig</p>
-  <div class="flex justify-center pt-6">
-    {% render 'button.liquid', text: 'Anfrage abschicken', type:'submit', tag: 'button' %}
+  <div class="pb-24 px-4 sm:px-6 bg-bg-alt">
+    <div class="container max-w-6xl mx-auto px-4 sm:px-6 pt-20">
+      {% render 'heading', text: 'Kontaktformular' %}
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        action="/sucess">
+        <fieldset class="pt-6" name="kontaktdaten">
+          {% render 'heading', text: 'Kontaktdaten', tag: 'legend', size: 'lg' %}
+          <div class="grid grid-cols-2 gap-2 lg:w-2/3">
+            <label for="anrede">Anrede</label>
+            <select
+              class="w-1/2 md:w-1/5"
+              name="anrede"
+              id="anrede">
+              <option value="">-</option>
+              <option value="Frau">Frau</option>
+              <option value="Herr">Herr</option>
+              <option value="Divers">Divers</option>
+            </select>
+            <label for id="name">Name<span aria-hidden="true">*</span>
+            </label>
+            <input
+              class="md:w-4/5 italic text-sm pl-2"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Vor- und Nachname"
+              required>
+            <label for id="organisation">Organisation/Abteilung</label>
+            <input
+              class="md:w-4/5 italic text-sm pl-2"
+              type="text"
+              id="organisation"
+              name="organisation"
+              placeholder="Organisation und ggf. Abteilung"
+              pattern="^(?!.*[Ss]tandesamt).*$"
+              title="Bitte beachten Sie, dass wir nicht die ODiS, Online-Datenbank beim Standesamt, sind. Anfragen bzgl. Zugansdaten zu dieser Datenbank können wir leider nicht bearbeiten" />
+            <label for id="email">E-Mail-Adresse<span aria-hidden="true">*</span>
+            </label>
+            <input
+              class="md:w-4/5 italic text-sm pl-2"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-Mail-Adresse">
+          </div>
+        </fieldset>
+        <fieldset
+          class="pt-8"
+          name="anfragenthema"
+          aria-describedby="anfragenthema-hint">
+          {% render 'heading', text: 'Thema der Anfrage', tag: 'legend', size: 'lg' %}
+          <p id="anfragenthema-hint" class="text-sm pb-3 italic">Mehrfachauswahl möglich</p>
+          <div class="md:grid grid-cols-2 gap-2 lg:w-2/3">
+            <div>
+              <input
+                type="checkbox"
+                id="erstgespräch"
+                name="anfrage"
+                value="erstgespräch"
+                class="min-w-[20px] h-6 mr-2">
+              <label for="erstgespräch">Erstgespräch Open Data</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="bereitstellung"
+                name="anfrage"
+                value="bereitstellung"
+                class="min-w-[20px] h-6 mr-2">
+              <label for="bereitstellung">Fragen zur Datenbereitstellung</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="visualisierung"
+                name="anfrage"
+                value="visualisierung"
+                class="min-w-[20px] h-6 mr-2">
+              <label for="visualisierung">Fragen zur Datenvisualisierung</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="datenquali"
+                name="anfrage"
+                value="datenquali"
+                class="min-w-[20px] h-6 mr-2">
+              <label for="datenquali">Fragen zur Datenqualität</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="od-portal"
+                name="anfrage"
+                value="od-portal"
+                class="min-w-[20px] h-6 mr-2">
+              <label for="od-portal">Fragen zum Open Data Portal</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="datensuche"
+                name="anfrage"
+                value="datensuche"
+                class="min-w-[20px] h-6 mr-2">
+              <label for="datensuche">Suche nach Daten</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="prototyp"
+                name="anfrage"
+                value="prototyp"
+                class="min-w-[20px] h-6 mr-2">
+              <label for="prototyp">Projektvorschlag</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="sonstiges"
+                name="anfrage"
+                value="sonstiges"
+                class="min-w-[20px] h-6 mr-2">
+              <label for="sonstiges">Sonstiges</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="pt-8" name="message">
+          {% render 'heading', text: 'Beschreibung zur Anfrage', tag: 'legend', size: 'lg', id: 'message-legend' %}
+          <textarea
+            class="w-full lg:w-2/3"
+            id="message"
+            name="message"
+            rows="8"
+            aria-labelledby="message-legend"></textarea>
+        </fieldset>
+      </fieldset>
+      <fieldset class="pt-8" name="datenschutz">
+        {% render 'heading', text: 'Datenschutz und Newsletter', tag: 'legend', size: 'lg' %}
+        <div class="flex pb-2">
+          <input
+            type="checkbox"
+            id="DSV"
+            name="datenschutz"
+            value="DSV"
+            class="min-w-[20px] h-6 mr-2"
+            required>
+          <label class="lg:w-2/3" for="DSV">Ich habe die
+            <a class="italic underline" href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a>
+            gelesen und erkenne diese ausdrücklich an.<span aria-hidden="true">*</span>
+          </label>
+        </div>
+        <div class="flex">
+          <input
+            type="checkbox"
+            id="speicherung"
+            name="datenschutz"
+            value="speicherung"
+            class="min-w-[20px] h-6 mr-2"
+            required>
+          <label class="lg:w-2/3" for="speicherung">Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.<span aria-hidden="true">*</span>
+          </label>
+        </div>
+      </fieldset>
+      <p class="text-sm italic pt-6" aria-hidden="true">
+        * Angabe notwendig</p>
+      <div class="flex justify-center pt-6">
+        {% render 'button.liquid', text: 'Anfrage abschicken', type: 'submit', tag: 'button' %}
+      </div>
+    </form>
   </div>
-</form>
 </div>
-</div>
-
