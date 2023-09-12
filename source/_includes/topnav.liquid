@@ -6,7 +6,10 @@
   </div>
 
   <div class="flex py-5">
-    <a class="motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4 hover:text-links-active" href="/" aria-label="Zur Startseite">
+    <a
+      class="motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4 text-shadow-primary hover:text-links-active"
+      href="/"
+      aria-label="Zur Startseite">
       {% render 'odis_logo.html' %}
     </a>
   </div>
@@ -35,7 +38,12 @@
   button.addEventListener("click", () => menu.classList.toggle("hidden"));
 
   button.addEventListener("keypress", (event) => {
-    if (event.code !== "Enter" || event.code !== "Space") return
+    if (event.code !== "Enter" || event.code !== "Space") 
+      return
+
+
+    
+
 
     menu.classList.toggle("hidden");
   });
