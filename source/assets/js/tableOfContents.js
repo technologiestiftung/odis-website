@@ -25,7 +25,7 @@ function createTableOfContents(containerId, targetId) {
       .toLowerCase();
     const headingLink = document.createElement("a");
     headingLink.setAttribute("id", slug);
-    headingLink.setAttribute("class", "anchor");
+    headingLink.setAttribute("class", "no-underline");
     headingLink.appendChild(heading.cloneNode(true));
     heading.parentNode.replaceChild(headingLink, heading);
 
