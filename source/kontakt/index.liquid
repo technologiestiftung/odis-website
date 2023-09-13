@@ -20,6 +20,19 @@ topics:
     label: "Sonstiges"
 ---
 
+{% capture focus_classes %}
+  transition motion-reduce:transition-none
+  focus-visible:outline-none focus-visible:ring-4
+  focus-visible:ring-links/50
+  focus-visible:ring-offset-2
+{% endcapture %}
+
+{% capture input_tag_classes %}
+  italic text-sm 
+  inline-block px-3 py-2
+  {{ focus_classes }}
+{% endcapture %}
+
 <div class="bg-bg-inv text-text-inv pt-16 pb-20 px-4 sm:px-6">
   <div class="container max-w-6xl mx-auto grid md:grid-cols-12 px-4 sm:px-6 gap-8">
     <div class="md:col-span-8 xl:col-start-1 xl:col-span-6">
@@ -71,43 +84,52 @@ topics:
       action="/sucess">
       <fieldset class="block mt-6" name="kontaktdaten">
         {% render 'heading', text: 'Kontaktdaten', tag: 'legend', size: 'lg' %}
-        <div class="grid grid-cols-2 gap-2 lg:w-2/3">
-          <label for="anrede">Anrede</label>
-          <select
-            class="w-1/2 md:w-1/5"
-            name="anrede"
-            id="anrede">
-            <option value="" aria-label="Keine Auswahl">-</option>
-            <option value="Frau">Frau</option>
-            <option value="Herr">Herr</option>
-            <option value="Divers">Divers</option>
-          </select>
-          <label for="name">Name<span aria-hidden="true">*</span>
-          </label>
-          <input
-            class="md:w-4/5 italic text-sm pl-2"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Vor- und Nachname"
-            required>
-          <label for="organisation">Organisation/Abteilung</label>
-          <input
-            class="md:w-4/5 italic text-sm pl-2"
-            type="text"
-            id="organisation"
-            name="organisation"
-            placeholder="Organisation und ggf. Abteilung"
-            pattern="^(?!.*[Ss]tandesamt).*$"
-            title="Bitte beachten Sie, dass wir nicht die ODiS, Online-Datenbank beim Standesamt, sind. Anfragen bzgl. Zugansdaten zu dieser Datenbank können wir leider nicht bearbeiten." />
-          <label for="email">E-Mail-Adresse<span aria-hidden="true">*</span>
-          </label>
-          <input
-            class="md:w-4/5 italic text-sm pl-2"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="E-Mail-Adresse">
+        <div class="grid grid-cols-1 gap-5 lg:w-2/3">
+          <div class="grid grid-cols-1 gap-2">
+            <label for="anrede">Anrede</label>
+            <select
+              class="w-1/2 md:w-1/5 bg-bg px-3 py-2 {{ focus_classes }}"
+              name="anrede"
+              id="anrede">
+              <option value="" aria-label="Keine Auswahl">-</option>
+              <option value="Frau">Frau</option>
+              <option value="Herr">Herr</option>
+              <option value="Divers">Divers</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-1 gap-2">
+            <label for="name">Name<span aria-hidden="true">*</span>
+            </label>
+            <input
+              class="{{ input_tag_classes }}"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Vor- und Nachname"
+              required>
+          </div>
+          <div class="grid grid-cols-1 gap-2">
+            <label for="organisation">Organisation/Abteilung</label>
+            <input
+              class="{{ input_tag_classes }}"
+              type="text"
+              id="organisation"
+              name="organisation"
+              placeholder="Organisation und ggf. Abteilung"
+              pattern="^(?!.*[Ss]tandesamt).*$"
+              title="Bitte beachten Sie, dass wir nicht die ODiS, Online-Datenbank beim Standesamt, sind. Anfragen bzgl. Zugansdaten zu dieser Datenbank können wir leider nicht bearbeiten." />
+          </div>
+          <div class="grid grid-cols-1 gap-1">
+            <label for="email">E-Mail-Adresse<span aria-hidden="true">*</span>
+            </label>
+            <input
+              class="{{ input_tag_classes }}"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-Mail-Adresse">
+          </div>
+
         </div>
       </fieldset>
       <fieldset
@@ -116,15 +138,15 @@ topics:
         aria-describedby="anfragenthema-hint">
         {% render 'heading', text: 'Thema der Anfrage', tag: 'legend', size: 'lg' %}
         <p id="anfragenthema-hint" class="text-sm pb-3 italic">Mehrfachauswahl möglich</p>
-        <div class="md:grid grid-cols-2 gap-2 lg:w-2/3">
+        <div class="mt-2 grid md:grid-cols-2 gap-3 lg:w-2/3">
           {% for topic in topics %}
-            <div>
+            <div class="flex items-center gap-2">
               <input
                 type="checkbox"
                 id="{{ topic.key }}"
                 name="anfrage"
                 value="{{ topic.key }}"
-                class="min-w-[20px] h-6 mr-2">
+                class="w-6 h-6 -translate-y-0.5 {{ focus_classes }}">
               <label for="{{ topic.key }}">{{ topic.label }}</label>
             </div>
           {% endfor %}
@@ -133,7 +155,7 @@ topics:
       <fieldset class="block mt-8" name="message">
         {% render 'heading', text: 'Beschreibung zur Anfrage', tag: 'legend', size: 'lg', id: 'message-legend' %}
         <textarea
-          class="w-full lg:w-2/3"
+          class="w-full lg:w-2/3 px-3 py-2 {{ focus_classes }}"
           id="message"
           name="message"
           rows="8"
@@ -142,26 +164,26 @@ topics:
     </fieldset>
     <fieldset class="block mt-8" name="datenschutz">
       {% render 'heading', text: 'Datenschutz', tag: 'legend', size: 'lg' %}
-      <div class="flex pb-2">
+      <div class="flex items-start gap-3">
         <input
           type="checkbox"
           id="DSV"
           name="datenschutz"
           value="DSV"
-          class="min-w-[20px] h-6 mr-2"
+          class="w-6 h-6 flex-shrink-0 {{ focus_classes }}"
           required>
         <label class="lg:w-2/3" for="DSV">Ich habe die
-          <a class="italic underline" href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a>
+          <a class="italic underline {{ focus_classes }}" href="https://www.technologiestiftung-berlin.de/datenschutz">Datenschutzbestimmungen</a>
           gelesen und erkenne diese ausdrücklich an.<span aria-hidden="true">*</span>
         </label>
       </div>
-      <div class="flex">
+      <div class="mt-3 flex items-start gap-3">
         <input
           type="checkbox"
           id="speicherung"
           name="datenschutz"
           value="speicherung"
-          class="min-w-[20px] h-6 mr-2"
+          class="w-6 h-6 flex-shrink-0 {{ focus_classes }}"
           required>
         <label class="lg:w-2/3" for="speicherung">Ich bin damit einverstanden, dass meine angegebenen Daten zum Zweck der Kontaktaufnahme und Vorbereitung zum Gespräch gespeichert werden dürfen.<span aria-hidden="true">*</span>
         </label>
