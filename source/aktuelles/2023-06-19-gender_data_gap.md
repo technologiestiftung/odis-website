@@ -6,8 +6,6 @@ categories: aktuelles
 visible: true
 tags: post
 urlText: Zum Blogbeitrag
-heroImagePath: /assets/images/sommerfest2023_klemens.jpg
-heroImageAltText: "dfsdflökl kdlkjksdbfkj kljfkdlskdf kdhfkjsh"
 ---
 ## Gender Data und Open Data Berlin
 
