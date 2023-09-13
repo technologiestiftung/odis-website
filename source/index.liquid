@@ -106,24 +106,6 @@ external_libs:
 
     <!-- kontakt -->
 
-    <div class="hidden lg:col-start-3 lg:flex items-start justify-end pr-3">
-      <img
-        src="assets/images/illustrations/flipboard_with_infinite_sign.svg"
-        alt="flipboard mit Unendlichkeitszeichen"
-        loading="lazy"
-        class="grow max-w-[72px]"
-      >
-    </div>
-
-    <div class="col-start-2 lg:col-start-4 col-span-6 flex flex-col gap-2 max-w-[34.5rem]">
-      {% render 'heading', text: 'Du brauchst noch Hilfe?', tag: 'h3', size: 'lg' %}
-      {% render 'paragraph',
-        text: 'Du benötigst Unterstützung oder hast Feedback? Ruf uns gerne unter +49 (0) 30 209 69 99 43 an oder kontaktiere uns
-        über das Kontaktformular.'
-      %}
-      <div class="flex justify-start mt-2">
-        {% render 'text-link', text: 'Zum Kontaktformular' %}
-      </div>
-    </div>
+    {% render 'contact' %}
   </section>
 </div>

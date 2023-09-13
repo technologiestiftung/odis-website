@@ -1,0 +1,17 @@
+<div class="hidden lg:col-start-3 lg:flex items-start justify-end pr-3">
+  <img
+    src="/assets/images/illustrations/odis_icon_contact.svg"
+    aria-hidden="true"
+    loading="lazy"
+    class="grow max-w-[72px]">
+</div>
+
+<div class="col-start-2 lg:col-start-4 col-span-6 flex flex-col gap-2 max-w-[34.5rem]">
+  {% render 'heading', text: 'Du brauchst noch Hilfe?', tag: 'h3', size: 'lg' %}
+  {% render 'paragraph'
+   , text: 'Du hast eine Frage, benötigst Unterstützung bei deinem Open-Data-Vorhaben oder hast eine Projektidee? Dann kontaktiere uns.
+   ' %}
+  <div class="flex justify-start mt-2">
+    {% render 'text-link', text: 'Zum Kontaktformular', href: "kontakt" %}
+  </div>
+</div>
