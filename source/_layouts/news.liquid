@@ -52,9 +52,11 @@ content: Blog article markdown content
                   container max-w-6xl mx-auto grid
                   md:grid-cols-12 md:gap-8
                 ">
-    <aside class="md:col-start-9 xl:col-start-10 md:col-span-3 py-4 flex flex-col gap-6 pl-6 md:pl-0 order-first md:order-last">
-      <dl class="sticky w-full top-6" id="toc-target"></dl>
-    </aside>
+    <div class="md:col-start-9 xl:col-start-10 md:col-span-3 py-4 flex flex-col gap-6 pl-6 md:pl-0 order-first md:order-last">
+      <div class="sticky w-full top-6" id="toc-target">
+        <span id="toc-label" class="font-bold text-headlines">Auf dieser Seite</span>
+      </div>
+    </div>
     <div class="md:col-span-7 pl-6 prose" id="toc-content">
       {{ content }}
     </div>
