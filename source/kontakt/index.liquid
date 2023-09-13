@@ -1,6 +1,23 @@
 ---
 layout: default.liquid
 title: Kontakt
+topics:
+  - key: "erstgespräch"
+    label: "Erstgespräch Open Data"
+  - key: "bereitstellung"
+    label: "Fragen zur Datenbereitstellung"
+  - key: "visualisierung"
+    label: "Fragen zur Datenvisualisierung"
+  - key: "datenquali"
+    label: "Datenqualität"
+  - key: "od-portal"
+    label: "Fragen zum Open Data Portal"
+  - key: "datensuche"
+    label: "Suche nach Daten"
+  - key: "prototyp"
+    label: "Projektvorschlag"
+  - key: "sonstiges"
+    label: "Sonstiges"
 ---
 
 <div class="bg-bg-inv text-text-inv pt-16 pb-20 px-4 sm:px-6">
@@ -100,78 +117,17 @@ title: Kontakt
         {% render 'heading', text: 'Thema der Anfrage', tag: 'legend', size: 'lg' %}
         <p id="anfragenthema-hint" class="text-sm pb-3 italic">Mehrfachauswahl möglich</p>
         <div class="md:grid grid-cols-2 gap-2 lg:w-2/3">
-          <div>
-            <input
-              type="checkbox"
-              id="erstgespräch"
-              name="anfrage"
-              value="erstgespräch"
-              class="min-w-[20px] h-6 mr-2">
-            <label for="erstgespräch">Erstgespräch Open Data</label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              id="bereitstellung"
-              name="anfrage"
-              value="bereitstellung"
-              class="min-w-[20px] h-6 mr-2">
-            <label for="bereitstellung">Fragen zur Datenbereitstellung</label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              id="visualisierung"
-              name="anfrage"
-              value="visualisierung"
-              class="min-w-[20px] h-6 mr-2">
-            <label for="visualisierung">Fragen zur Datenvisualisierung</label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              id="datenquali"
-              name="anfrage"
-              value="datenquali"
-              class="min-w-[20px] h-6 mr-2">
-            <label for="datenquali">Fragen zur Datenqualität</label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              id="od-portal"
-              name="anfrage"
-              value="od-portal"
-              class="min-w-[20px] h-6 mr-2">
-            <label for="od-portal">Fragen zum Open Data Portal</label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              id="datensuche"
-              name="anfrage"
-              value="datensuche"
-              class="min-w-[20px] h-6 mr-2">
-            <label for="datensuche">Suche nach Daten</label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              id="prototyp"
-              name="anfrage"
-              value="prototyp"
-              class="min-w-[20px] h-6 mr-2">
-            <label for="prototyp">Projektvorschlag</label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              id="sonstiges"
-              name="anfrage"
-              value="sonstiges"
-              class="min-w-[20px] h-6 mr-2">
-            <label for="sonstiges">Sonstiges</label>
-          </div>
+          {% for topic in topics %}
+            <div>
+              <input
+                type="checkbox"
+                id="{{ topic.key }}"
+                name="anfrage"
+                value="{{ topic.key }}"
+                class="min-w-[20px] h-6 mr-2">
+              <label for="{{ topic.key }}">{{ topic.label }}</label>
+            </div>
+          {% endfor %}
         </div>
       </fieldset>
       <fieldset class="block mt-8" name="message">
