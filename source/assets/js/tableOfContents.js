@@ -1,9 +1,10 @@
-const contentContainerId = "toc-content";
-const targetId = "toc-target";
+const CONTENT_CONTAINER_ID = "toc-content";
+const TARGET_ID = "toc-target";
+const TOC_LABEL_ELEMENT_ID = "toc-label";
 
 const headings = getContentHeadings();
 
-const tocNav = createTocNav("toc-label");
+const tocNav = createTocNav(TOC_LABEL_ELEMENT_ID);
 const list = createList();
 tocNav.appendChild(list);
 
@@ -12,7 +13,7 @@ headings.forEach((heading) => {
   replaceContentHeadingWithAnchorHeading(heading);
 });
 
-const target = document.getElementById(targetId);
+const target = document.getElementById(TARGET_ID);
 target.appendChild(tocNav);
 
 /**
@@ -20,7 +21,7 @@ target.appendChild(tocNav);
  * @returns NodeListOf<Element>
  */
 function getContentHeadings() {
-  const contentContainer = document.getElementById(contentContainerId);
+  const contentContainer = document.getElementById(CONTENT_CONTAINER_ID);
   return contentContainer.querySelectorAll("h2, h3, h4, h5, h6");
 }
 
