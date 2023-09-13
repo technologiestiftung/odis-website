@@ -2,7 +2,7 @@
   AVAILABLE VARIABLES:
   - tag: The HTML tag to use (optional: defaults to 'h2')
   - text: The text to display (required)
-  - size: The size of the text (optional: defaults to 'xxl')
+  - size: The size of the text (optional: defaults to 'xl')
     - One of: 'xxl', 'xl', 'lg'
   - inverted: Whether or not the text should be inverted (optional: defaults to false)
   - class: Any additional classes to add to the tag (optional)
@@ -26,11 +26,11 @@
       text-headlines
     {% endif %}
     {% if size == 'xxl' %}
-      leading-tight text-5xl mb-4
+      text-3xl md:text-4xl lg:text-5xl mb-4
     {% elsif size == 'lg' %}
-      text-xl mb-2
+      text-lg lg:text-xl mb-2
     {% else %}
-      leading-tight text-3xl mb-4
+      leading-tight text-xl md:text-2xl lg:text-3xl mb-4
     {% endif %}
   "
   {% if id %}

@@ -16,9 +16,9 @@
 <{{ tag }}
   class="
     {{ class }}
-    leading-relaxed max-w-prose
+    max-w-prose
     {% if size == 'lg' %}
-      text-xl mb-6
+      text-lg lg:text-xl !leading-relaxed mb-6
     {% else %}
       text-base mb-4
     {% endif %}
