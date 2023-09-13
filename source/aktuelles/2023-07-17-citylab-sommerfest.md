@@ -7,7 +7,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# Rückblick zu Open Data beim CityLAB Sommerfest
+## Rückblick zu Open Data beim CityLAB Sommerfest
 
 Panel Talks, mehrere Bühnen, Workshops und paralleles Programm rund um Verwaltungsinnovation, gepaart mit Sonnenschein, einer einladenden Location, gutem Essen und noch besseren Gesprächen – das war das [CityLAB Sommerfest 2023]( https://citylab-berlin.org/de/events/citylab-sommerfest-2023/). Natürlich durfte bei der ganztägigen Konferenz am 29.06. im *Von Greifswald* auch das Thema Open Data nicht fehlen. 
 
