@@ -68,6 +68,14 @@ function createListItem() {
 function appendTocEntry(heading, listElement) {
   const link = document.createElement("a");
   link.setAttribute("href", "#" + slugify(heading.textContent));
+  link.classList.add(
+    "inline-block",
+    "motion-safe:transition",
+    "focus-visible:outline-none",
+    "focus-visible:ring-4",
+    "focus-visible:ring-links/50",
+    "focus-visible:ring-offset-4",
+  );
 
   const text = document.createTextNode(heading.textContent);
   link.appendChild(text);
