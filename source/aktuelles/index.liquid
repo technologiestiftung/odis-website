@@ -11,83 +11,76 @@ pagination:
   reverse: true
 ---
 
-<div class="flex flex-col items-center text-text">
-  <div class="flex flex-col w-4/5 md:w-1/2 xl:w-2/5">
-    <!-- header -->
-    <section class="flex flex-col justify-center my-20">
-      <h1 class="text-4xl md:text-5xl font-clanProBold pb-4 leading-snug text-headlines">
-        Aktuelles
-      </h1>
-      <p class="font-clanProNews leading-7 text-lg">
-        Bei der ODIS ist viel los. Konferenzen, Vorträge, Workshops,
-        Weiterbildungen und Prototypenentwicklung gehören fest in unser
-        Tätigkeitsfeld. Hier informieren wir über neue Aktivitäten.
-      </p>
-    </section>
+<div class="container mx-auto flex flex-col items-center text-text">
+  <div class="py-16 px-4 sm:px-0">
+    <h1 class="text-4xl md:text-5xl font-clanProBold pb-4 leading-snug text-headlines">
+      Aktuelles
+    </h1>
+    <p class="font-clanProNews leading-7 text-lg">
+      Bei der ODIS ist viel los. Konferenzen, Vorträge, Workshops, Weiterbildungen und Prototypenentwicklung gehören fest in unser Tätigkeitsfeld. Hier informieren wir über neue Aktivitäten.
+    </p>
+  </div>
 
-    {% for post in posts %} {% if post.data.visible== true %}
-
-    <!--single blog article -->
-    <section class="flex flex-col mb-24">
-      <div class="text-md font-clanProMedium pb-1 text-red-[#9FA3B2]">
-        {{post.date | date: "%d.%m.%Y"}}
-      </div>
-
-      <div>
-        <h3>{{ post.data.title }}</h3>
-        <p class="font-clanProBook">{{ post.data.metaDescription }}</p>
-      </div>
-
-      {% if post.data.link %}
-
-      <!--extern link button-->
-      <a class="p-4 mt-8 border-2 border-line bg-bg drop-shadow-primary w-40 font-clanProNews"
-        href="{{post.data.link}}">{{post.data.urlText}}</a>
-
-      {% else %}
-
-      <!--intern link button-->
-      <a class="p-4 mt-8 border-2 border-line bg-bg drop-shadow-primary w-44 font-clanProNews"
-        href="{{post.url}}">{{post.data.urlText}}</a>
-
+  <div class="py-8 px-4 sm:px-0">
+    {% for post in posts %}
+      {% if post.data.visible == true %}
+        <article>
+          <div class="">
+            {{ post.date | date: "%d.%m.%Y" }}
+          </div>
+          <div>
+            <h2>{{ post.data.title }}</h2>
+            <p class="">{{ post.data.metaDescription }}</p>
+          </div>
+          {% if post.data.link %}
+            <a class="" href="{{post.data.link}}">{{ post.data.urlText }}</a>
+          {% else %}
+            <a class="" href="{{post.url}}">{{ post.data.urlText }}</a>
+          {% endif %}
+        </article>
       {% endif %}
-    </section>
+    {% endfor %}
+  </div>
 
-    {% endif %} {% endfor %}
-
-    <!--pagination by eleventy-->
-    <section class="flex justify-between w-4/5 mx-auto">
-      <span>
-        {% if pagination.href.previous %}
+  <!--pagination by eleventy-->
+  <section class="flex justify-between w-4/5 mx-auto">
+    <span>
+      {% if pagination.href.previous %}
 
         <a class="font-clanProNews" href="{{ pagination.href.previous }}">&laquo; Neuere</a>
 
-        {% else %} &laquo; Neuere {% endif %}
-      </span>
+      {% else %}
+        &laquo; Neuere
+      {% endif %}
+    </span>
 
-      <!-- eleventy create numbered pagination -->
+    <!-- eleventy create numbered pagination -->
 
-      {% for page in pagination.pages %}
+    {% for page in pagination.pages %}
 
       <!-- {{ forloop.index  }} -->
 
       {% if forloop.index0 == pagination.pageNumber %}
 
-      <span class="selected font-clanProBold"><a href="#">{{ forloop.index}}</a></span>
+        <span class="selected font-clanProBold">
+          <a href="#">{{ forloop.index }}</a>
+        </span>
 
       {% else %}
 
-      <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
+        <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
 
-      {% endif %} {% endfor %}
+      {% endif %}
+    {% endfor %}
 
-      <span>
-        {% if pagination.href.next %}
+    <span>
+      {% if pagination.href.next %}
         <a class="font-clanProNews" href="{{ pagination.href.next }}">Ältere &raquo;</a>
-        {% else %} Ältere &raquo; {% endif %}
-      </span>
-    </section>
-  </div>
+      {% else %}
+        Ältere &raquo;
+      {% endif %}
+    </span>
+  </section>
 </div>
 
 <!-- newsletter & kontakt-->
@@ -100,8 +93,7 @@ pagination:
       Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin
       informiert werden? Melde dich für unseren ODIS-Newsletter an!
     </p>
-    <a class="p-4 border-2 border-line bg-bg drop-shadow-primary w-40 font-clanProNews"
-      href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343">Newsletter
+    <a class="p-4 border-2 border-line bg-bg drop-shadow-primary w-40 font-clanProNews" href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343">Newsletter
       abonnieren</a>
     <p class="mt-16">
       Newsletter verpasst? Stöber einfach in unserem
