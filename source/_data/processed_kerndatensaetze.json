@@ -73,7 +73,7 @@
     "Bevölkerung und Gesellschaft",
     "Menschen mit Behinderung",
     "Anzahl Menschen mit Behinderung nach Behinderungsgrad, Art der Behinderung, Geschlecht und Alter",
-    "Ja",
+    "Nein",
     "<a target='_blank' href='https://www.statistik-berlin-brandenburg.de/menschen-mit-behinderung'>statistik-berlin-brandenburg.de</a>"
   ],
   [
@@ -143,7 +143,7 @@
     "Gesundheit (COVID-19)",
     "Auslastung von Intensivbetten",
     "Daten zu freien und belegten Intensivbetten in den Berliner Krankenhäusern sowie zur Art der Belegung",
-    "Teilweise",
+    "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/covid-19-berlin-fallzahlen-und-indikatoren-gesamt%C3%BCbersicht'>daten.berlin.de</a>"
   ],
   [
@@ -198,7 +198,7 @@
     "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Angemeldete Versammlungen (Demos)",
     "Eine Datenbank von angemeldeten Demos in Berlin mit Name der organisierenden Organization/Person, gemeldeten Zweck der Demo, gemeldeten Ort oder Route, Datum usw. ",
-    "Teilweise",
+    "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/versammlungen-im-land-berlin'>daten.berlin.de</a>"
   ],
   [
@@ -212,7 +212,7 @@
     "Justiz, Rechtssystem und öffentliche Sicherheit",
     "Fahrraddiebstähle",
     "Angabe von genauen Standorten der Fahrraddiebstähle",
-    "Teilweise",
+    "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/fahrraddiebstahl-berlin'>daten.berlin.de</a>"
   ],
   [
@@ -310,7 +310,7 @@
     "Stadtentwicklung und Wohnen",
     "Baufertigstellungen",
     "Baufertigstellungen von neuen Gebäuden, mit Angaben zu Standort, Gebäudeart, Baustoffart, usw. ",
-    "Teilweise",
+    "Ja",
     "<a target='_blank' href='https://daten.berlin.de/search/node/Baufertigstellungen'>daten.berlin.de</a>"
   ],
   [
@@ -388,7 +388,7 @@
     "Verwaltungsgebiete (administrative Gebietseinheiten)",
     "Flächen der Stadtgebiete, Bezirke und Lebensweltlich orientierte Räume (LOR) von Berlin",
     "Ja",
-    "<a target='_blank' href='https://daten.berlin.de/datensaetze/lebensweltlich-orientierte-r%C3%A4ume-lor-bezirksregionen-wfs'>daten.berlin.de</a>"
+    "<a target='_blank' href='https://daten.berlin.de/datensaetze/lebensweltlich-orientierte-räume-lor-planungsräume-01012021-wfs'>daten.berlin.de</a>"
   ],
   [
     "Stadtentwicklung und Wohnen",
@@ -408,7 +408,7 @@
     "Stadtentwicklung und Wohnen",
     "Wohnungseigentum",
     "Historische Daten zu Anzahl von Mietwohnungen und Eigentumswohnungen, aufgeschlüsselt nach Bezirk oder spezifischer",
-    "Ja",
+    "Teilweise",
     "<a target='_blank' href='https://www.statistik-berlin-brandenburg.de/bevoelkerung/zensus/zensus_2011'>statistik-berlin-brandenburg.de</a>"
   ],
   [
@@ -471,7 +471,7 @@
     "Stadtraum",
     "Straßenverzeichnis",
     "Auskünfte aus dem öffentlichen Straßenverzeichnis (als Flächengeometrie) zu allen öffentlichen gewidmeten Straßen, inklusive Angaben wie Breite der Straße",
-    "Teilweise",
+    "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/detailnetz-stra%C3%9Fenabschnitte-wfs'>daten.berlin.de</a>"
   ],
   [
@@ -507,13 +507,13 @@
     "Klimabilanz",
     "Angaben zu verschiedenen Energie-Indikatoren wie CO2 Gesamt, CO2 pro Kopf, Energie nach Bereichsverbrauch, usw.",
     "Ja",
-    "<a target='_blank' href='https://daten.berlin.de/datensaetze/energieatlas-berlin'>daten.berlin.de</a>"
+    "<a target='_blank' href='https://daten.berlin.de/datensaetze?title=CO2&field_license_tid=All&field_publisher_tid=All&field_geo_granularity_tid=All&field_temporal_granularity_tid=All&field_geo_coverage_tid=All&state=open'>daten.berlin.de</a>"
   ],
   [
     "Umwelt",
     "Lärm",
     "Lärmbelastung verschiedener Stadtteile",
-    "Teilweise",
+    "Ja",
     "<a target='_blank' href='https://daten.berlin.de/search/node/l%C3%A4rmkarte'>daten.berlin.de</a>"
   ],
   [
@@ -555,7 +555,7 @@
     "Verkehr",
     "Haltestellen",
     "Standorte Haltestellen und informationen zu Linien, die dort halten",
-    "Teilweise",
+    "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/koordinaten-der-zugangsm%C3%B6glichkeiten-zu-stationen-0'>daten.berlin.de</a>"
   ],
   [
@@ -591,21 +591,21 @@
     "ÖPNV Echtzeitfahrdaten",
     "Echtzeitdaten für die ÖPNV-Flotte des Verbundraums als standardisierter Datensatz",
     "Ja",
-    "<a target='_blank' href='https://daten.berlin.de/datensaetze/vbb-fahrplandaten-api-0'>daten.berlin.de</a>"
+    "<a target='_blank' href='https://daten.berlin.de/datensaetze/vbb-fahrplandaten-api'>daten.berlin.de</a>"
   ],
   [
     "Verkehr",
     "ÖPNV Fahrplan",
     "Sollfahrplan für ÖPNV in Berlin",
     "Ja",
-    "<a target='_blank' href='https://daten.berlin.de/datensaetze/vbb-fahrplandaten-gtfs-bereichsscharf-und-mastscharf'>daten.berlin.de</a>"
+    "<a target='_blank' href='https://daten.berlin.de/datensaetze/vbb-fahrplandaten-api'>daten.berlin.de</a>"
   ],
   [
     "Verkehr",
     "ÖPNV Liniennetz",
     "Das gesamte ÖPNV Liniennetz",
     "Ja",
-    "<a target='_blank' href='https://daten.berlin.de/datensaetze/vbb-fahrplandaten-gtfs-bereichsscharf-und-mastscharf'>daten.berlin.de</a>"
+    "<a target='_blank' href='https://daten.berlin.de/datensaetze/vbb-fahrplandaten-gtfs'>daten.berlin.de</a>"
   ],
   [
     "Verkehr",
@@ -625,7 +625,7 @@
     "Verkehr",
     "Parkraum (Bewirtschaftung)",
     "Informationen zu Preisen, Uhrzeiten, Zuständigkeit, Bewohnerparken und Flächengeometrien",
-    "Teilweise",
+    "Ja",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/parkraumbewirtschaftung-wfs'>daten.berlin.de</a>"
   ],
   [
@@ -646,7 +646,7 @@
     "Wirtschaft und Finanzen",
     "Wirtschaftsleistung",
     "Bruttoinlandsprodukt, wirtschaftliche Kennzahlen",
-    "Ja",
+    "Teilweise",
     "<a target='_blank' href='https://daten.berlin.de/datensaetze/bruttoinlandsprodukt-berlin-1991-2020'>daten.berlin.de</a>"
   ],
   [
@@ -702,7 +702,7 @@
     "Wirtschaft und Finanzen",
     "Landesgrundbesitz (Vermögen)",
     "Daten, möglichst georeferenziert, zu allen Grundstücke die Berlin gehören",
-    "Teilweise",
+    "Nein",
     "<a target='_blank' href='https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_es_stwbg@senstadt'>fbinter.stadt-berlin.de</a>"
   ],
   [
@@ -717,6 +717,6 @@
     "Solarenergie",
     "Potenziale für Solarenergie auf Dächern und registrierte Solarthermie- und Photovoltaikanlagen",
     "Ja",
-    "<a target='_blank' href='https://daten.berlin.de/datensaetze/energieatlas-berlin'>daten.berlin.de</a>"
+    "<a target='_blank' href='https://daten.berlin.de/datensaetze/solaranlagen-summe-der-st-anlagen-pro-postleitzahl-umweltatlas-wfs'>daten.berlin.de</a>"
   ]
 ]
