@@ -55,49 +55,32 @@ pagination:
       {% endif %}
     {% endfor %}
   </div>
-
-  <!--pagination by eleventy-->
-  <section class="flex justify-between w-4/5 mx-auto">
-    <span>
-      {% if pagination.href.previous %}
-
-        <a class="font-clanProNews" href="{{ pagination.href.previous }}">&laquo; Neuere</a>
-
-      {% else %}
-        &laquo; Neuere
-      {% endif %}
-    </span>
-
-    <!-- eleventy create numbered pagination -->
-
-    {% for page in pagination.pages %}
-
-      <!-- {{ forloop.index  }} -->
-
-      {% if forloop.index0 == pagination.pageNumber %}
-
-        <span class="selected font-clanProBold">
-          <a href="#">{{ forloop.index }}</a>
-        </span>
-
-      {% else %}
-
-        <a href="{{ pagination.links[forloop.index0] }}">{{ forloop.index }}</a>
-
-      {% endif %}
-    {% endfor %}
-
-    <span>
-      {% if pagination.href.next %}
-        <a class="font-clanProNews" href="{{ pagination.href.next }}">Ältere &raquo;</a>
-      {% else %}
-        Ältere &raquo;
-      {% endif %}
-    </span>
-  </section>
 </div>
 
-<!-- newsletter & kontakt-->
+{% capture focus_classes %}
+  transition motion-reduce:transition-none
+  focus-visible:outline-none focus-visible:ring-4
+  focus-visible:ring-links/50
+  focus-visible:ring-offset-2
+{% endcapture %}
+
+<nav
+  aria-label="Pagination"
+  class="mt-12 px-4 md:px-6 container mx-auto max-w-6xl"
+>
+  <ul class="w-full flex gap-4 justify-center">
+    {% for page in pagination.pages %}
+      <a
+        href="{{ pagination.links[forloop.index0] }}"
+        class="text-links font-bold px-3 pt-2 pb-1 motion-safe:transition hover-hover:hover:bg-bg-alt aria-current:text-[var(--red)] aria-current:border border-links-inv {{ focus_classes }}"
+        aria-label="Seite {{ forloop.index }}"
+        {% if forloop.index0 == pagination.pageNumber %}  
+          aria-current="true"
+        {% endif %}
+      >{{ forloop.index }}</a>
+    {% endfor %}
+  </ul>
+</nav>
 
 <section class="flex flex-col items-center my-40 py-20">
   <!--newsletter-->
