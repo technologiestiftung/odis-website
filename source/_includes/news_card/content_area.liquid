@@ -1,0 +1,16 @@
+{% capture primary_color_classes %}
+  {% if card_theme == 'normal' %}
+    text-headlines
+  {% else %}
+    text-headlines-inv
+  {% endif %}
+{% endcapture %}
+
+{% render 'heading', size: 'lg', text: title, class: primary_color_classes %}
+<p class="line-clamp-7">{{ description }}</p>
+<div class="order-first text-sm {{ primary_color_classes }} flex justify-between gap-3">
+  {% if author %}
+    <address class="not-italic">{{ author }}</address>
+  {% endif %}
+  <time datetime="{{ date | date: "%Y-%m-%d" }}" class="justify-self-end">{{ date | date: "%d.%m.%Y" }}</time>
+</div>

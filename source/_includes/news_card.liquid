@@ -6,42 +6,70 @@ AVAILABLE VARIABLES:
 - post_link (required)
 - post_link_text (optional)
 - author (optional)
-- background_image_path (optional)
+- theme: one of 'normal' or 'inverted', defaults to 'normal' (optional)
+- image_path (optional)
 - class (optional)
 {% endcomment %}
+
+{% assign card_theme = theme | default: 'normal' | strip %}
+
+{% capture padding_classes %}px-7 pt-7 pb-10{% endcapture %}
 
 {% capture article_classes %}
   {{ class }}
   relative
   grid items-start
-  {% if background_image_path %}
+  {% if image_path %}
     grid-rows-[200px,auto]
   {% else %}
     grid-rows-[0px,auto]
   {% endif %}
-  px-7 pt-7 pb-10
-  text-text-inv
-  bg-bg-inv bg-blend-luminosity bg-center
+  {% if card_theme == 'normal' %}
+    bg-bg-alt text-text
+    {% if image_path %}
+      p-0
+    {% else %}
+      {{ padding_classes }}
+    {% endif %}
+  {% else %}
+    text-text-inv
+    bg-bg-inv bg-blend-luminosity bg-center
+    {{ padding_classes }}
+  {% endif %}
 {% endcapture %}
 
 {% assign link_text = post_link_text | default: 'Zum Beitrag' %}
 
-<article class="{{ article_classes }}"
-  {% if background_image_path %}
-    style="background-image: url({{ background_image_path }});"
-  {% endif %}>
-  {% if background_image_path %}
-    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-bg-inv from-50% opacity-95"></div>
+{% capture content_area_wrapper_classes %}
+  {% if card_theme == 'normal' and image_path %}
+    {{ padding_classes }}
   {% endif %}
-  <div class="row-start-2 grid gap-3 z-10">
-    {% render 'heading', size: 'lg', text: title, class: 'text-headlines-inv' %}
-    <p class="line-clamp-7">{{ description }}</p>
-    <div class="order-first text-headlines-inv text-sm flex justify-between gap-3">
-      {% if author %}
-        <address class="not-italic">{{ author }}</address>
+{% endcapture %}
+
+<article class="{{ article_classes }}"
+  {% if card_theme == 'inverted' and image_path %}
+    style="background-image: url({{ image_path }});"
+  {% endif %}>
+  {% if card_theme == 'normal' %}
+    {% if image_path %}
+      <div
+        style="background-image: url({{ image_path }});"
+        class="h-full bg-center bg-cover"
+      ></div>
+    {% endif %}
+  {% else %}
+    {% if image_path %}
+      {% render 'news_card/blue_gradient.liquid', class: 'absolute top-0 left-0 w-full h-full' %}
+    {% endif %}
+  {% endif %}
+  <div class="row-start-2 grid gap-3 z-10 {{ content_area_wrapper_classes }}">
+    {% render 'news_card/content_area.liquid', title: title, description: description, author: author, date: date, card_theme: card_theme %}
+    <div class="w-max">
+      {% if card_theme == 'normal' %}
+        {% render 'button', href: post_link, text: link_text, variant: 'secondary' %}
+      {% else %}
+        {% render 'text-link', text: link_text, href: post_link, class: 'text-text-inv' %}
       {% endif %}
-      <time datetime="{{ date | date: "%Y-%m-%d" }}" class="justify-self-end">{{ date | date: "%d.%m.%Y" }}</time>
-    </div>
-    {% render 'text-link', text: link_text, href: post_link, class: 'text-text-inv' %}
+      </div>
   </div>
 </article>

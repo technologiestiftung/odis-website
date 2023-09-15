@@ -26,15 +26,24 @@ pagination:
       {% if post.data.visible == true %}
 
       {% capture post_link %}{{ post.data.link | default: post.url }}{% endcapture %}
+        {% capture theme %}
+          {% if post.data.link %}
+            inverted
+          {% else %}
+            normal
+          {% endif %}
+        {% endcapture %}
+        {% assign variable = value %}
 
       {% render 'news_card.liquid',
           title: post.data.title,
           description: post.data.metaDescription,
           post_link: post_link,
           post_link_text: post.data.urlText,
-          date: page.date,
+          date: post.date,
           author: post.data.author,
-          background_image_path: post.data.heroImagePath %}
+          image_path: post.data.heroImagePath,
+          theme: theme %}
       {% endif %}
     {% endfor %}
   </div>
