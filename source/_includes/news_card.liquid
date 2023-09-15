@@ -42,6 +42,6 @@ AVAILABLE VARIABLES:
       {% endif %}
       <time datetime="{{ date | date: "%Y-%m-%d" }}" class="justify-self-end">{{ date | date: "%d.%m.%Y" }}</time>
     </div>
-    {% render 'text-link', text: link_text, href: link, class: 'text-text-inv' %}
+    {% render 'text-link', text: link_text, href: post_link, class: 'text-text-inv' %}
   </div>
 </article>
