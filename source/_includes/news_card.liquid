@@ -8,10 +8,13 @@ AVAILABLE VARIABLES:
 - author (optional)
 - theme: one of 'normal' or 'inverted', defaults to 'normal' (optional)
 - image_path (optional)
+- image_alt_text (optional)
 - class (optional)
 {% endcomment %}
 
 {% assign card_theme = theme | default: 'normal' | strip %}
+
+{% assign has_accessible_image = image_path and image_alt_text %}
 
 {% capture padding_classes %}px-7 pt-7 pb-10{% endcapture %}
 
@@ -19,7 +22,7 @@ AVAILABLE VARIABLES:
   {{ class }}
   relative
   grid items-start
-  {% if image_path %}
+  {% if has_accessible_image %}
     grid-rows-[200px,auto]
   {% else %}
     grid-rows-[0px,auto]
@@ -47,18 +50,21 @@ AVAILABLE VARIABLES:
 {% endcapture %}
 
 <article class="{{ article_classes }}"
-  {% if card_theme == 'inverted' and image_path %}
+  {% if card_theme == 'inverted' and has_accessible_image %}
     style="background-image: url({{ image_path }});"
   {% endif %}>
   {% if card_theme == 'normal' %}
-    {% if image_path %}
+    {% if has_accessible_image %}
       <div
         style="background-image: url({{ image_path }});"
         class="h-full bg-center bg-cover"
+        role="img"
+        aria-label="{{ image_alt_text }}"
       ></div>
     {% endif %}
   {% else %}
-    {% if image_path %}
+    {% if has_accessible_image %}
+      <div class="sr-only" role="img" aria-label="{{ image_alt_text }}"></div>
       {% render 'news_card/blue_gradient.liquid', class: 'absolute top-0 left-0 w-full h-full' %}
     {% endif %}
   {% endif %}
