@@ -21,23 +21,20 @@ pagination:
     </p>
   </div>
 
-  <div class="py-8 px-4 sm:px-0">
+  <div class="py-8 px-4 sm:px-0 grid md:grid-cols-2 gap-6">
     {% for post in posts %}
       {% if post.data.visible == true %}
-        <article>
-          <div class="">
-            {{ post.date | date: "%d.%m.%Y" }}
-          </div>
-          <div>
-            <h2>{{ post.data.title }}</h2>
-            <p class="">{{ post.data.metaDescription }}</p>
-          </div>
-          {% if post.data.link %}
-            <a class="" href="{{post.data.link}}">{{ post.data.urlText }}</a>
-          {% else %}
-            <a class="" href="{{post.url}}">{{ post.data.urlText }}</a>
-          {% endif %}
-        </article>
+
+      {% capture post_link %}{{ post.data.link | default: post.url }}{% endcapture %}
+
+      {% render 'news_card.liquid',
+          title: post.data.title,
+          description: post.data.metaDescription,
+          post_link: post_link,
+          post_link_text: post.data.urlText,
+          date: page.date,
+          author: post.data.author,
+          background_image_path: post.data.heroImagePath %}
       {% endif %}
     {% endfor %}
   </div>
