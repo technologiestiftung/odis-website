@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 
 ---
-# ODIS beim ersten kommunalen Open Data Barcamp
+## ODIS beim ersten kommunalen Open Data Barcamp
 
 Nach der langen pandemiebedingten Auszeit von Präsenzveranstaltungen luden die Bertelsmann Stiftung und das Deutsche Institut für Urbanistik (Difu) am 11. Mai 2022 zum [ersten kommunalen Open Data Barcamp](https://blog-smartcountry.de/das-erste-kommunale-open-data-barcamp/) nach Bochum ein, was wir uns als ODIS nicht entgehen ließen.
 

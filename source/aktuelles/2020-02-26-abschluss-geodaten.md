@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 
-# Startschuss für die Fortsetzung des Projekts zur bezirklichen Geodatenkoordination
+## Startschuss für die Fortsetzung des Projekts zur bezirklichen Geodatenkoordination
 
 Die Berliner Verwaltung stellt Geodaten über den [FIS-Broker](https://fbinter.stadt-berlin.de/fb/index.jsp) als Open Data bereit. Neben Datensätzen die gesammelt erfasst und verwaltet werden, also räumlich das gesamte Stadtgebiet Berlin abdecken, gibt es eine Vielzahl weiterer Geodaten die dezentral in der Verantwortlichkeit der Bezirke liegen. Somit sind nicht nur die Hauptverwaltungen Datenlieferanten, sondern auch alle Bezirksverwaltungen die unabhängig voneinander Geodaten für Ihren Bezirk erheben. Dies führt dazu, dass die einzelnen bezirklichen Datensätze in einigen Fällen eine starke schematische Heterogenität untereinander aufweisen und sich nur mit einem hohen Arbeitsaufwand zusammenführen lassen.
 <br><br>

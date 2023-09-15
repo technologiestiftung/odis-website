@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 
-# Im Spotlight: § 7 der Open-Data-Rechtsverordnung
+## Im Spotlight: § 7 der Open-Data-Rechtsverordnung
 
 _In einer Reihe von Blogposts wird die Open Data Informationsstelle einige Paragraphen der Open-Data-Rechtsverordnung näher beleuchten und erläutern, welche Auswirkungen die Verordnung auf die Arbeit von Verwaltungsmitarbeiter:innen hat._
 
