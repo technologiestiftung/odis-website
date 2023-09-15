@@ -26,14 +26,16 @@ pagination:
       {% if post.data.visible == true %}
 
       {% capture post_link %}{{ post.data.link | default: post.url }}{% endcapture %}
-        {% capture theme %}
-          {% if post.data.link %}
-            inverted
-          {% else %}
-            normal
-          {% endif %}
-        {% endcapture %}
-        {% assign variable = value %}
+      {% assign top_directory = post.data.link | split: '/' | slice: 1, 2 | first %}
+      {% capture theme %}
+        {% if top_directory == 'projekte' or top_directory ==  'ressourcen' %}
+          normal
+        {% elsif post.data.link %}
+          inverted
+        {% else %}
+          normal
+      {% endif %}
+      {% endcapture %}
 
       {% render 'news_card.liquid',
           title: post.data.title,
@@ -43,6 +45,7 @@ pagination:
           date: post.date,
           author: post.data.author,
           image_path: post.data.heroImagePath,
+          image_alt_text: post.data.heroImageAltText,
           theme: theme %}
       {% endif %}
     {% endfor %}
