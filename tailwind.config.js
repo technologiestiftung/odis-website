@@ -89,6 +89,9 @@ module.exports = {
       aria: {
         current: 'current="true"',
       },
+      lineClamp: {
+        7: "7",
+      },
     },
   },
   plugins: [
