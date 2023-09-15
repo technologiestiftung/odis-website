@@ -7,7 +7,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# Internationaler Open Data Day: Maptime zu Gast im CityLAB
+## Internationaler Open Data Day: Maptime zu Gast im CityLAB
 Ein offener Raum für Kartenenthusiast:innen, von Expert:in bis Newbie, um gemeinsam spannenden Projekten zu lauschen, an Karten zu arbeiten oder Mitstreiter:innen zu gewinnen: das will die Veranstaltungsreihe Maptime bieten und das ist auch für uns als ODIS eine große Freude. Als wir deshalb bei den Organisator:innen von Maptime anklopften, um anlässlich des Open Data Days 2023 eine Veranstaltung zu planen, war schnell klar: **ODIS und Maptime: It´s a match**. Und so folgten am 06. März über 50 Teilnehmer:innen der Einladung ins CityLAB zu „Mapping Open Data Berlin“.
 
 <center>
