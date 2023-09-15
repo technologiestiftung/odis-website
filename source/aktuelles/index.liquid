@@ -12,7 +12,7 @@ pagination:
 ---
 
 <div class="container mx-auto">
-  <div class="py-16 px-4 md:px-0">
+  <div class="py-16 px-4 md:px-6">
     {%
       render 'heading',
       text: 'Aktuelles',
@@ -26,7 +26,7 @@ pagination:
     %}
   </div>
 
-  <div class="py-8 px-4 md:px-0 grid md:grid-cols-2 gap-6">
+  <div class="py-8 px-4 md:px-6 grid md:grid-cols-2 gap-6">
     {% for post in posts %}
       {% if post.data.visible == true %}
 
