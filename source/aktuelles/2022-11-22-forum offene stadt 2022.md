@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 
-# Moin, Moin – ODIS auf dem Forum Offene Stadt
+## Moin, Moin – ODIS auf dem Forum Offene Stadt
 
 Die Hansestadt ruft! In fast vollständiger Teamstärke reiste das ODIS-Team zum [Forum Offene Stadt](https://koerber-stiftung.de/projekte/forum-offene-stadt/forum-offene-stadt-2022/) der Körber Stiftung an die Elbe und nutzte dabei auch die Gelegenheit, sich mit der Leitung von [GovData](https://www.govdata.de/) in der Senatskanzlei Hamburg auszutauschen. 
 

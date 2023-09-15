@@ -7,7 +7,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# ODIS goes Shopping Mall - Zu Besuch im offenen Lernlabor "Mall anders"
+## ODIS goes Shopping Mall - Zu Besuch im offenen Lernlabor "Mall anders"
 *In einer Wilmersdorfer Shopping Mall ist ein besonderer Ort entstanden: Aus den Resten eines verlassenen Ladengeschäftes erschuf die Berlin University Alliance, ein Zusammenschluss der Berliner Universitäten, einen Raum an dem Menschen aus Wissenschaft, Kunst, Wirtschaft, Politik und Zivilgesellschaft Einblick in ihre Themen und Projekte geben und zum offenen Austausch einladen.* 
 
 Auch die Open Data Informationsstelle wurde eingeladen und hat die Gelegenheit genutzt, um das Thema Open Data aus dem gewohnten Umfeld herauszuheben. 

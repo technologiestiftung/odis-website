@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 
-# Statistiken zum Berliner Open-Data-Portal
+## Statistiken zum Berliner Open-Data-Portal
 
 BerlinOnline veröffentlicht monatlich aktuelle <a href="https://daten.berlin.de/datensaetze/zugriffsstatistik-datenberlinde">Zugriffsstatistiken</a> zum Open-Data-Portal der Hauptstadt. Im Folgenden geben wir einen kleinen Einblick in die Entwicklung des Portals seit 2013, zeigen Trends und fassen die wesentlichen Einsichten zusammen.
 

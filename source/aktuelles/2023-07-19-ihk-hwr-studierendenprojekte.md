@@ -7,7 +7,8 @@ visible: true
 tags: post
 urlText: Zum Blogbeitrag
 ---
-# Offene Daten als Basis für nachhaltige Anwendungsfälle 
+## Offene Daten als Basis für nachhaltige Anwendungsfälle 
+
 Mit der Öffnung des [Gewerbedatensatzes](https://daten.berlin.de/datensaetze/gewerbedaten-der-ihk-berlin) im April 2023 leistete die IHK Berlin Pionierarbeit. Jeden Monat veröffentlicht die IHK seitdem Daten der Mitgliedsunternehmen, darunter Standort, Branche, Alter oder Beschäftigtengrößen, als Open Data. Auf Einladung der IHK Berlin haben Studierende der Hochschule für Wirtschaft und Recht (HWR) mit den Daten experimentiert und Projektideen entwickelt, die am 17.Juli 2023 im Ludwig-Erhard Haus der IHK Berlin vorgestellt wurden. Das Ziel war dabei, auf Grundlage der offenen Daten der IHK Berlin praktische Anwendungsfälle zu entwickeln, die konkrete Lösungen für den Wirtschaftsstandort Berlin bereithalten. Wir stellen die drei Projekte kurz vor.
 
 ## Ein Tool für die Standortanalyse 

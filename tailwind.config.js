@@ -86,6 +86,9 @@ module.exports = {
       transitionTimingFunction: {
         "out-extreme": "cubic-bezier(.12,.98,.13,.98)",
       },
+      aria: {
+        current: 'current="true"',
+      },
     },
   },
   plugins: [
