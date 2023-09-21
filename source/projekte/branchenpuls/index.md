@@ -16,7 +16,7 @@ Berlin ist Hauptstadt, Startup-Metropole, Exzellenzcluster, Stadt der Kreativen 
 **Mit dem Branchenpuls ist ein Explorationstool entstanden, das eine Erkundung der Berliner Gewerbelandschaft ermöglicht - von der räumlichen Verteilung bestimmter Branchentypen bis zur zeitlichen Entwicklung der Gewerbelandschaft.** Dafür stützt sich der Branchenpuls auf einen offenen Datensatz der IHK Berlin mit Standort- und Strukturinformationen von den über 350.000 Mitgliedsunternehmen inklusive deren Betriebsstätten.
 
 
-Hinweis: Der Branchenpuls befindet sich noch in einer frühen Beta-Version und wird im Austausch mit interessierten Akteuren stetig weiterentwickelt.
+Hinweis: Der Branchenpuls befindet sich noch in einer frühen Beta-Version und soll im Austausch mit interessierten Akteur:innen weiterentwickelt werden.
 
 
 ## Hintergrund
@@ -37,11 +37,11 @@ Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf "Tour s
 Die Anwendung ist so konzipiert, dass in der Ansicht zwischen der 2D-Perspektive und der Liegenschafts-Perspektive gewechselt werden kann. Die Anwendung kann problemlos mit einem Smartphone bedient werden.
 
 ## Datengrundlage und Methode
- Die dem Branchenpuls zugrundeliegenden Daten werden von der IHK Berlin seit Juli 2023 als offene Daten veröffentlicht. Die Daten können über das zentrale [Berliner Datenportal](https://daten.berlin.de/datensaetze/gewerbedaten-der-ihk-berlin) heruntergeladen werden. Die IHK Berlin fragt die Informationen von ihren Mitgliedsunternehmen ab und aktualisiert die Daten monatlich. Bei Fragen zu den Daten wende dich an den Bereich [Datenmanagement](https://www.ihk.de/berlin/service-und-beratung/digitalisierung/open-data-5691102)  bei der IHK Berlin. 
+ Die dem Branchenpuls zugrundeliegenden Daten werden von der IHK Berlin seit Juli 2023 als offene Daten veröffentlicht. Die Daten können über das zentrale [Berliner Datenportal](https://daten.berlin.de/datensaetze/gewerbedaten-der-ihk-berlin) heruntergeladen werden. Die IHK Berlin fragt die Informationen von ihren Mitgliedsunternehmen ab und aktualisiert die Daten monatlich. Bei Fragen zu den Daten wende dich an den Bereich [Datenmanagement](https://www.ihk.de/berlin/service-und-beratung/digitalisierung/opendata-branchenpuls?shortUrl=%2Fbranchenpuls)  bei der IHK Berlin. 
 
 Die verarbeiteten Daten und die Skripte zur Datenprozessierung sind in [diesem](https://github.com/technologiestiftung/branchenpuls) Repository zu finden.
 
 ### Hinweis zur eingeschränkten Aussagekraft der Gewerbedaten
 
-*Der Datensatz beinhaltet Standort- und Strukturinformationen von den über 350.000 Mitgliedsunternehmen inklusive deren Betriebsstätten der IHK Berlin. Darin enthalten sind neben den Geokoordinaten, auch Angaben zur Branche, Beschäftigtengröße und Alter des Unternehmens, wie sie der IHK bei der Anmeldung der Unternehmens gemeldet wurden. Aufgrund unregelmäßiger Aktualisierungsintervalle einzelner Daten, können Informationen vereinzelt nicht mehr aktuell oder veraltet sein. Die IHK Berlin verweist auf ein [FAQ](https://www.ihk.de/berlin/service-und-beratung/digitalisierung/open-data-5691102), in dem detaillierter auf die Datenqualität eingegangen wird.*
+*Der Datensatz beinhaltet Standort- und Strukturinformationen von den über 350.000 Mitgliedsunternehmen inklusive deren Betriebsstätten der IHK Berlin. Darin enthalten sind neben den Geokoordinaten, auch Angaben zur Branche, Beschäftigtengröße und Alter des Unternehmens, wie sie der IHK bei der Anmeldung der Unternehmens gemeldet wurden. Aufgrund unregelmäßiger Aktualisierungsintervalle einzelner Daten, können Informationen vereinzelt nicht mehr aktuell oder veraltet sein. Die IHK Berlin verweist auf ein [FAQ](https://www.ihk.de/berlin/service-und-beratung/digitalisierung/faqs-gewerbedatensatz-5927056), in dem detaillierter auf die Datenqualität eingegangen wird.*
 
