@@ -1,7 +1,7 @@
 ---
 layout: news
 title: "Mit dem Datawrapper-Tool Informationen veranschaulichen und greifbar machen"
-metaDescription: Die Unterrepräsentanz von Frauen und frauenspezifischen Daten in Datensätzen wird zunehmend kritisch gesehen, da sie konkrete Benachteiligung in einer Vielzahl von Lebenssituationen manifestiert. Besteht auch bei den offenen Daten Berlins eine sogenannter Gender Data Gap? In diesem Blogpost nähern wir uns dieser Frage und stellen die Ergebnisse unserer Metadatenanalyse zu genderspezifischen, offenen Daten Berlins vor.
+metaDescription: 
 categories: aktuelles
 visible: true
 tags: post
@@ -9,7 +9,14 @@ urlText: Zum Blogbeitrag
 ---
 # Eine Visualisierung sagt mehr als 1000 Worte
 
+
+
 Aus Daten können wir eine ganze Menge lernen. Große Excel-Listen mit einer Vielzahl an Daten und Tabellenblättern sind für Menschen jedoch oftmals auf Anhieb schwer zu verstehen. Um Zusammenhänge und zentrale Erkenntnisse hervorzuheben, die in Daten stecken, können Visualisierungen helfen. Mithilfe von grafischen Elementen sind Daten so visuell schneller erfassbar und auch abstraktere Informationen lassen sich leichter veranschaulichen. Visualisierungen bieten außerdem die Möglichkeit, durch ihre Gestaltung die Aufmerksamkeit der Lesenden gezielt auf wichtige Aussagen zu lenken. 
+
+<center>
+{% include "macro-image-section-small.html", src:"/assets/images/datawrapperschulung1.jpg", caption:"Schulung zur Software Datawrapper am 20.10.2023 in der Verwaltungsakademie Berlin." %}
+</center>
+<br>
 
 ## Hintergrund
 
@@ -17,11 +24,7 @@ Aus Daten können wir eine ganze Menge lernen. Große Excel-Listen mit einer Vie
 
 Morgens mit dem Auto ins Büro, abends wieder nach Hause – ein recht simples Mobilitätsverhalten, auf das jahrzehntelang die Verkehrsplanung in den meisten westlichen Städten ausgerichtet war. Dieser Alltag funktioniert aber nicht unbedingt für alle Stadtbewohner:innen. Wie man unterwegs ist und welche Anforderungen sich daraus an die Stadt ergeben, hat nicht zuletzt auch etwas mit dem sozialen Geschlecht (Gender) zu tun – mit klassischen Mann-Frau-Rollenbildern, Erwartungen & Normen, sowie gesellschaftlichen Strukturen. Frauen und insbesondere Mütter legen tendenziell die meisten Wege zurück, unter anderem für Erwerbsarbeit, Kinderbetreuung, Pflege von Angehörigen und Einkauf. Sie nutzen dabei überwiegend öffentliche Verkehrsmittel und Fußwege, welche lange in der Planung vernachlässigt wurden. Unter den Stichworten *feministische Stadtplanung* und *Gender Planning* wurde in den vergangenen Jahren dazu geforscht und berichtet, wie Städte so gestaltet werden können, dass sie für alle Bewohner:innen gut funktionieren [1,2,3]. Auch in Berlin verfolgt die Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen mit dem Konzept des *Gender Mainstreaming* das Ziel, die unterschiedlichen Lebensbedingungen und Bedürfnisse möglichst aller Berliner:innen zu berücksichtigen [4].
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/datawrapperschulung1.jpg", caption:"Cover des Berliner Handbuchs zu Gender Mainstreaming in der Stadtentwicklung, Senatsverwaltung für Stadtentwicklung, 2011" %}
-</center>
-<br>
-source/assets/images/datawrapperschulung1.jpg
+
 ### Die Bedeutung von Daten 
 
 Diese Ungleichheit wird nicht nur in der Stadtplanung wirksam, sondern auch in weiteren zentralen Lebensbereichen wie der medizinischen Versorgung oder der politischen Teilhabe. Daten spielen in diesem Zusammenhang eine wichtige Rolle! **Durch geschlechterspezifische Daten kann Geschlechter(un)gerechtigkeit gemessen und sichtbar gemacht werden.** Dadurch werden Handlungsbedarfe sichtbar und konkrete Ziele für die Gleichstellung der Geschlechter können formuliert und gemessen werden. Datenerhebungen und Datenanalysen, die nach Geschlechtern differenzieren, können außerdem zeigen, ob und wie sich die Bedürfnisse und Lebensrealitäten der Geschlechter unterscheiden. Unterschiedliche Bedürfnisse ergeben sich dabei nicht unbedingt direkt aus dem biologischen Geschlecht, sondern auch aus Normen, gesellschaftlichen Erwartungen und strukturellen Faktoren. Nur wenn der Status Quo bekannt ist und man die unterschiedlichen Bedürfnisse und Lebensrealitäten versteht, können Politik, Wirtschaft und andere Organisationen und Institutionen zielgruppen- und gendergerechter handeln. Auch die Senatsverwaltung für Arbeit, Soziales, Gleichstellung, Integration, Vielfalt und Antidiskriminierung verweist auf ihrer Website darauf, dass „geschlechterdifferenzierte Daten […] für die Gleichstellungspolitik des Senats von zentraler Bedeutung“ sind [5].
