@@ -1,14 +1,16 @@
 ---
 layout: news
 title: "Räumliche Analysen mit öffentlichen Bibliotheksdaten. ODIS lädt Bibliotheksmitarbeitende zur QGIS-Schulung ein"
-metaDescription: 
+metaDescription: Am 11. Oktober hat die ODIS im CityLAB Mitarbeitende aus Berliner Bibliotheken zu einer Schulung zum Geoinformationssystem QGIS begrüßt. 
 categories: aktuelles
 visible: true
 tags: post
 urlText: Zum Blogbeitrag
 ---
+
 # Räumliche Analysen mit öffentlichen Bibliotheksdaten. ODIS lädt Bibliotheksmitarbeitende zur QGIS-Schulung ein 
 Am 11. Oktober 2023 waren einige Mitarbeitende aus verschiedenen Berliner Bibliotheken für eine Schulung rund um die Software QGIS im CityLAB Berlin zu Besuch. Die Schulung war in diesem Fall ausschließlich Mitarbeitenden der Berliner Bibliotheken vorbehalten, da wir mit den offenen Bibliotheksdaten der Stadtteilbibliothek Pankow arbeiten wollten, die seit diesem Jahr als offene Daten zur Verfügung stehen.
+
 
 ## Einführung in QGIS – ein mächtiges Tool für die Arbeit mit räumlichen Daten
 
