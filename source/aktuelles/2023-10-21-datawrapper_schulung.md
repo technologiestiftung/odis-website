@@ -1,7 +1,7 @@
 ---
 layout: news
 title: "Mit dem Datawrapper-Tool Informationen veranschaulichen und greifbar machen"
-metaDescription: Erfolgreich Schulung zur Software Datawrapper in der Verwaltungsakademie durchgeführt. 
+metaDescription: Zum ersten Mal hat die ODIS in der Verwaltungsakademie Berlin eine Schulung zum Thema "Visualisierungen mit Datawrapper" angeboten.  
 categories: aktuelles
 visible: true
 tags: post
