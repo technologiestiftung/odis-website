@@ -47,15 +47,6 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
-						<img class="profile-image" src="/assets/images/page/profile_tori.png">
-						<div class="profile-desc-wrapper-2">
-							<span><b>Victoria Boeck</b></span>
-							<span><em>Wissenschaftliche Mitarbeiterin</em></span>
-							<span>victoria.boeck@ts.berlin</span>
-							<span>030 209 69 99 41</span>
-						</div>
-					</div>
-					<div class="profile-wrapper mt-2">
 						<img class="profile-image" src="/assets/images/page/profile-klemens.jpg">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Klemens Maget</b></span>
@@ -87,7 +78,15 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 							<span><em>Technology & Prototyping</em></span>
 							<span>hans.hack@ts.berlin</span>
 						</div>
-					</div>									
+					</div>	
+						<div class="profile-wrapper mt-2">
+						<img class="profile-image" src="/assets/images/page/profile-johanna.jpeg">
+						<div class="profile-desc-wrapper-2">
+							<span><b>Johanna Hidding</b></span>
+							<span><em>Praktikantin</em></span>
+							<span>johanna.hidding@ts.berlin</span>
+						</div>
+					</div>								
 					<div class="profile-wrapper mt-2">
 						<img class="profile-image" src="/assets/images/page/profile_ben.png">
 						<div class="profile-desc-wrapper-2">
