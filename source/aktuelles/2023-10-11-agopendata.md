@@ -1,7 +1,7 @@
 ---
 layout: news
 title: "Neues von und für die Open Data Beauftragten: Die AG Open Data im Oktober zu Gast im CityLAB"
-metaDescription: Die Unterrepräsentanz von Frauen und frauenspezifischen Daten in Datensätzen wird zunehmend kritisch gesehen, da sie konkrete Benachteiligung in einer Vielzahl von Lebenssituationen manifestiert. Besteht auch bei den offenen Daten Berlins eine sogenannter Gender Data Gap? In diesem Blogpost nähern wir uns dieser Frage und stellen die Ergebnisse unserer Metadatenanalyse zu genderspezifischen, offenen Daten Berlins vor.
+metaDescription: Regelmäßig kommen die Open Data Beauftragten aus den Berliner Senatsverwaltungen und Bezirken zur AG Open Data zusammen. Im CityLAB Berlin tauschten sich die Beauftragten aus und erfuhren Neues zur Open Data Strategie, lernten den Open Data Knowledge Hub kennen und diskutierten zur Öffnung der Berliner Kerndatensätze.
 categories: aktuelles
 visible: true
 tags: post
