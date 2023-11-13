@@ -6,5 +6,5 @@ metaDescription: Unter Federführung der Senatsverwaltung für Finanzen und der 
 categories: aktuelles
 visible: true
 link: https://twitter.com/senfin/status/1709972355638763786
-urlText: Zur Meldung auf X (ehemals Twitter) 
+urlText: Zur Meldung auf X
 ---
