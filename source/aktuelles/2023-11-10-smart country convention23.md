@@ -1,7 +1,7 @@
 ---
 layout: news
-title: "Open Data nimmt an Fahrt auf: Unsere Eindrücke von der Smart Country Convention"
-metaDescription: Wenn sich in Berlin auf der Smart Country Convention Expert:innen und Aussteller aus der Verwaltungsmodernisierung und -digitalisierung zusammenfinden, kommt man am Thema Open Data nicht vorbei. Ob auf Panels zu Smart City oder ganz konkret in den einzelnen Open-Data-Formaten, zunehmend wird deutlicher. In der Verwaltung schlummert ein enomer Datenschatz, der die Grundlage für Smart City & KI-Anwendungen bildet und letzendlich zu einer Stärkung von Transparenz und demokratischen Strukuren führt. Wir waren 3 Tage auf der Smart Country Convention und berichten von unseren Highlights.
+title: "Open Data nimmt Fahrt auf: Unsere Eindrücke von der Smart Country Convention"
+metaDescription: Wenn sich in Berlin auf der Smart Country Convention Expert:innen und Aussteller aus der Verwaltungsmodernisierung und -digitalisierung zusammenfinden, kommt man am Thema Open Data nicht vorbei. Ob auf Panels zu Smart City oder ganz konkret in den einzelnen Open-Data-Formaten, zunehmend wird deutlich. In der Verwaltung schlummert ein enomer Datenschatz, den es zu befreien gilt, als Grundlage für Smart City & KI-Anwendungen und zur Stärkung von Transparenz und demokratischen Strukuren. Wir waren alle 3 Tage auf der Smart Country Convention und berichten von unseren Highlights.
 categories: aktuelles
 visible: true
 tags: post
