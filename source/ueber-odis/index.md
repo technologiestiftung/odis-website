@@ -87,7 +87,15 @@ vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen [Ressourcen
 							<span><em>Technology & Prototyping</em></span>
 							<span>hans.hack@ts.berlin</span>
 						</div>
-					</div>									
+					</div>		
+					<div class="profile-wrapper mt-2">
+						<img class="profile-image" src="/assets/images/page/Profile_Johanna_Hidding_JPG">
+						<div class="profile-desc-wrapper-2">
+							<span><b>Johanna Hidding</b></span>
+							<span><em>Praktikantin</em></span>
+							<span>johanna.hidding@ts.berlin</span>
+						</div>
+					</div>								
 					<div class="profile-wrapper mt-2">
 						<img class="profile-image" src="/assets/images/page/profile_ben.png">
 						<div class="profile-desc-wrapper-2">
