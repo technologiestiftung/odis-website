@@ -43,7 +43,7 @@ Auf Bundesebene versucht man, so berichtete das BMI, derzeit auf verschiedenen W
 So wichtig und unvermeidbar diese Diskussion ist, steht für uns als ODIS fest: Die Datenfreigabe *by default* muss der erste Schritt sein, denn ohne Daten keine Anwendungsfälle und erst mit guten Daten kommt man auf gute Use-Cases. Open-Data muss, um langfristig erfolgreich sein, darüber hinaus aber mehr sein als eine Datengrundlage für Dashboards: Open Data bildet vielmehr die Grundlage für bessere Datenqualität, gesteigerte Datenkompetenz in der Verwaltung, eine neue Kultur des Datenteilens und kollaborativen Arbeitens und wird so zu einem wichtigen Baustein für eine moderne, datengetriebene Verwaltung, an dem kein Vorbeikommen ist.
 
 <center>
-{% include "macro-image-section-small.html", src:"/assets/images/opendatadilemma_sccon2.jpg", caption:" Auf der Bühne diskutierten Open-Data-Experten darüber wie die Koalition der Open-Data-Willigen erweitert werden kann." %}
+{% include "macro-image-section-small.html", src:"/assets/images/opendatadilemma_sccon2.jpg", caption:" Auf der Bühne diskutieren die Experten darüber, wie noch mehr Verwaltungen für Open Data begeistert werden können." %}
 </center>
 <br>
 
