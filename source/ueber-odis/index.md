@@ -47,15 +47,6 @@ Als Open Data Informationsstelle liegt unserer primärer Auftrag darin, für die
 						</div>
 					</div>
 					<div class="profile-wrapper mt-2">
-						<img class="profile-image" src="/assets/images/page/profile_tori.png">
-						<div class="profile-desc-wrapper-2">
-							<span><b>Victoria Boeck</b></span>
-							<span><em>Wissenschaftliche Mitarbeiterin</em></span>
-							<span>victoria.boeck@ts.berlin</span>
-							<span>030 209 69 99 41</span>
-						</div>
-					</div>
-					<div class="profile-wrapper mt-2">
 						<img class="profile-image" src="/assets/images/page/profile-klemens.jpg">
 						<div class="profile-desc-wrapper-2">
 							<span><b>Klemens Maget</b></span>
