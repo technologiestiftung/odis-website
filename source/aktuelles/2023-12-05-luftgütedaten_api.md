@@ -2,33 +2,37 @@
 layout: news
 tags: post
 title: "Analysen mit Luftgütedaten: Beispielhafte Abfragen an eine API-Schnittstelle"
-metaDescription: Seit Mai 2022 übermittelt die zuständige SenMVKU Luftgütemessdaten über eine offene API-Schnittstelle an das Berliner Open Data Portal. Wir haben uns intensiv mit den Daten beschäftigt und beispielhaft aufgezigt wie die API abgefragt werden kann, um mit den Luftgütedaten zu arbeiten.
+metaDescription: Seit Mai 2022 übermittelt die zuständige SenMVKU Luftgütemessdaten über eine offene API-Schnittstelle an das Berliner Open-Data-Portal. Wir haben uns intensiv mit den Daten beschäftigt und beispielhaft aufgezigt wie die API abgefragt werden kann, um mit den Luftgütedaten zu arbeiten.
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
 # Datenanalysen dank APIs: Das Beispiel der Berliner Luftgütedaten
-Hohe Luftqualität ist eine zentrale Voraussetzung für eine lebenswerte Stadt und steht in direktem Zusammenhang mit der Gesundheit ihrer Bewohner:innen. Die Belastung der Luft in Städten hängt dabei von einer Vielzahl von Faktoren ab, die sowohl von Menschen beeinflusst werden als auch von witterungsbedingten natürlichen Faktoren. Auf Länder-, Bundes-, und europäischer Ebene zielen zahlreiche Programme auf eine stetige Verbesserung der Luftqualität ab, wie zum Beispiel Fahrverbote, bessere Filteranlagen und die Regulierung von Industrie und Gewerbe. Um Programme genau zu steuern und ihren Erfolg abschätzen zu können, ist eine solide Datengrundlage und damit einhergehende regelmäßige und genaue Messungen wichtig. Wir zeigen in diesem Blogpost auf, wie mit den offenen Luftgütedaten dank einer API-Schnittstelle diese Daten abgefragt und weiterverwendet werden können.
+Hohe Luftqualität ist eine zentrale Voraussetzung für eine lebenswerte Stadt und steht in direktem Zusammenhang mit der Gesundheit ihrer Bewohner:innen. Die Belastung der Luft in Städten hängt dabei von einer Vielzahl von Faktoren ab, die sowohl von Menschen beeinflusst werden als auch von natürlichen Faktoren. 
 
-## Luftgütedaten als wichtiger Kontrollwert zur Einhaltung von Grenzwerten 
+Auf Länder-, Bundes-, und europäischer Ebene zielen zahlreiche Programme auf eine stetige Verbesserung der Luftqualität ab, wie zum Beispiel Fahrverbote, bessere Filteranlagen und die Regulierung von Industrie und Gewerbe. Um Programme genau zu steuern und ihren Erfolg abschätzen zu können, ist eine solide Datengrundlage und damit einhergehende regelmäßige und genaue Messungen wichtig. 
+Wir zeigen in diesem Blogpost auf, wie dank einer API-Schnittstelle Luftgütedaten abgefragt und weiterverwendet werden können.
+
+## Luftgütedaten: Ein wichtiger Kontrollwert zur Einhaltung von Grenzwerten 
 
 Wie stark die Luft belastet ist, wird seit 1975 durch das Berliner Luftgüte-Messnetz (BLUME) kontinuierlich gemessen. Das Messnetz aus 17 ortsfesten Messstationen erhebt an Hauptverkehrsstraßen, in Wohngebieten und an den Rändern bzw. Wäldern der Stadt Daten über die Luftqualität. Aus jeder Station werden alle fünf Minuten die Werte diverser Schadstoffe, wie Feinstaub, Stickstoffe und Schwefelmono- und dioxide, zur Messzentrale übertragen und daraus die Stunden- und Tageswerte als Basis für die weitere Auswertung berechnet. 
 
 Eine kontinuierliche Messung der Berliner Luftqualität dient damit nicht nur der Information der Öffentlichkeit, sondern ist ganz konkrete Grundlage für die Ursachenermittelung der Luftverunreinigung und der Verfolgung der Wirksamkeit von Maßnahmen zur Luftreinhaltung. Darüber hinaus muss das Land Berlin auf Grundlage europäischen und nationalen Rechts Grenzwerte einhalten. Für Komponenten wie Feinstaub, Ozon oder Stickstoff gibt es EU-weite [Immisionsgrenzwerte und Schwellenwerte.](https://www.umweltbundesamt.at/umweltthemen/luft/daten-luft/luft-grenzwerte)
 
- Das Land Berlin will mit einer neuen Luftreinhaltestrategie 2030 daher ambitioniertere Ziele analog zu den WHO-Empfehlungen erreichen. Die Überwachung der Luftqualität wird dabei weiter eine wichtige Rolle einnehmen.
+ Das Land Berlin will mit einer neuen [Luftreinhaltestrategie 2030.](https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1133068.php) daher ambitioniertere Ziele analog zu den WHO-Empfehlungen erreichen. Die Überwachung der Luftqualität wird dabei weiter eine wichtige Rolle einnehmen.
 
 ## Luftgütemessdaten als offene Datenschnittstelle abrufbar
 
-Seit Mai 2022 übermittelt die zuständige Senatsverwaltung Mobilität, Verkehr, Klimaschutz und Umwelt (SenMVKU) die Luftgütemessdaten an das Berliner Open Data Portal über eine offene API-Schnittstelle und betreibt darüber hinaus den Internetauftritt des Luftgütemessnetzes unter [https://luftdaten.berlin.de.](https://luftdaten.berlin.de/) Auf der Webseite stellt die SenMVKU einige Übersichten zum aktuellen Luftqualitätsindex, den täglichen Messwerten und der jährlichen Anzahl von Grenzwertüberschreitungen zur Verfügung. Diese Daten stehen als CSV-Download zur Verfügung und können direkt im Browser visualisiert werden.
+Seit Mai 2022 übermittelt die zuständige Senatsverwaltung Mobilität, Verkehr, Klimaschutz und Umwelt (SenMVKU) die Luftgütemessdaten an das Berliner Open-Data-Portal über eine offene API-Schnittstelle und betreibt darüber hinaus den Internetauftritt des Luftgütemessnetzes unter [https://luftdaten.berlin.de.](https://luftdaten.berlin.de/) Auf der Webseite stellt die SenMVKU einige Übersichten zum aktuellen Luftqualitätsindex, den täglichen Messwerten und der jährlichen Anzahl von Grenzwertüberschreitungen zur Verfügung. Diese Daten stehen als CSV-Download zur Verfügung und können direkt im Browser visualisiert werden.
 
-<iframe src="https://luftdaten.berlin.de/station/mc010" height="600" width="1000" title="Die interaktive Ansicht der Daten, die beispielshaft von einer der Messstationen erhoben werden."></iframe>
+<iframe src="https://luftdaten.berlin.de/station/mc010" height="600" width="1000" title= "Die interaktive Ansicht der Daten, die beispielshaft von einer der Messstationen erhoben werden."></iframe>
 <br>
 <br>
 
-Weitaus interessanter für Datenverarbeitende ist die Programmierschnittstelle, über die Daten heruntergeladen werden können. Eine Schnittstelle bietet sich im Falle der Luftdaten aus mehreren Gründen an: Aus Sicht der Datenbereitstellenden ist eine automatisierte Art, die Daten zusammenzuführen, wichtig. Viele Datensätze und Statistiken, die sich beispielweise im Open Data Portal finden, werden von Mitarbeitenden in der Verwaltung einzeln zusammengetragen, abgespeichert und hochgeladen.
 
-Im Falle der Luftqualität wäre ein händisches Zusammentragen aller Stationsdaten jedoch sehr zeitintensiv und zugleich anfällig für Fehler. Da alle 17 Stationen stündliche Werte für bis zu 9 Schadstoffe bereitstellen, generiert das Luftgütemessnetz bereits nach einem Tag mehr als hundert individuelle Werte. Aus Sicht der Datennutzenden bietet eine automatisierte Schnittstelle die Möglichkeit, die Daten für bestimmte Zeiträume, Messtationen oder Schadstoffe herunterzuladen, und somit Zeit und Rechenleistung zu sparen, da keine einzelne, sehr große Datei mit überflüssigen Informationen heruntergeladen werden muss. Besonders hilfreich ist die automatisierte Datenbereitstellung auch für Programmierer:innen, die Apps oder Webseiten betreiben und eine regelmäßige Aktualisierung der Daten benötigen. So kann eine automatisierte Abfrage der Daten einmal konfiguriert werden und die Werte automatisch aktualisieren.
+Weitaus interessanter für Datenverarbeitende ist die Programmierschnittstelle, über die Daten heruntergeladen werden können. Eine Schnittstelle bietet sich im Falle der Luftdaten aus mehreren Gründen an: Aus Sicht der Datenbereitstellenden ist eine automatisierte Art, die Daten zusammenzuführen, wichtig. Viele Datensätze und Statistiken, die sich beispielweise im Open-Data-Portal finden, werden von Mitarbeitenden in der Verwaltung einzeln zusammengetragen, abgespeichert und hochgeladen.
+
+Im Falle der Luftqualität wäre ein händisches Zusammentragen aller Stationsdaten jedoch sehr zeitintensiv und zugleich anfällig für Fehler. Da alle 17 Stationen stündliche Werte für bis zu neun Schadstoffe bereitstellen, generiert das Luftgütemessnetz bereits nach einem Tag mehr als hundert individuelle Werte. Aus Sicht der Datennutzenden bietet eine automatisierte Schnittstelle die Möglichkeit, die Daten für bestimmte Zeiträume, Messtationen oder Schadstoffe herunterzuladen, und somit Zeit und Rechenleistung zu sparen, da keine einzelne, sehr große Datei mit überflüssigen Informationen heruntergeladen werden muss. Besonders hilfreich ist die automatisierte Datenbereitstellung auch für Programmierer:innen, die Apps oder Webseiten betreiben und eine regelmäßige Aktualisierung der Daten benötigen. So kann eine automatisierte Abfrage der Daten einmal konfiguriert werden und die Werte automatisch aktualisieren.
 
 ## Mit einer REST-API den Austausch von Informationen ermöglichen
 
@@ -41,6 +45,8 @@ Die einheitlichen Standards ermöglichen es also Entwicklern, Dokumente und Info
 ## Das Berliner Luftgütemessnetz (BLUME): API-Abfragen generieren
 
 Für die Luftgüte-API steht eine Dokumentation, also eine Art digitale Gebrauchsanweisung bereit, die die Funktionsweise der API erläutert. Gleichzeitig stellt sie ein grafisches Interface zur Verfügung, mit der sich diverse Messwerte abfragen lassen. So können beispielsweise stündliche Werte zu einzelnen Komponenten wie Ozon oder Feinstaub aus einzelnen Stationen abgefragt werden. Über [https://luftdaten.berlin.de/api/doc](https://luftdaten.berlin.de/api/doc) können Nutzer:innen die Dokumentation der Schnittstelle aufrufen und eigene Anfragen generieren. Durch eine graphische Benutzeroberfläche ist sie direkt im Browser bedienbar und so auch für Nutzer:innen ohne Programmierkenntnisse zugänglich. Um eine GET-Request, also eine HTTP-Anfrage, zu generieren und Informationen abzurufen, ist es hilfreich sich zunächst mit der Übersicht der verfügbaren Elemente vertraut zu machen.
+
+### Beispielabfragen der API-Schnittstelle
 
 Unter dem ersten Dropdown-Menüs des Reiters “Kernkomponenten” und der dazugehörigen URL [api/components ](https://luftdaten.berlin.de//api/components) lässt sich eine Übersicht über die gemessenen Komponenten generieren. Um eine GET-Request zu stellen, wählen Nutzer:innen ‘Try It Out’ aus, setzen das Parameter ‘active’ auf TRUE und klicken ´Execute´. Unter ‘Request URL’ wird eine URL generiert, die den Inhalt der Abfrage liefert. 
 
@@ -56,15 +62,14 @@ Der Inhalt dieser URL kann separat im Browser aufgerufen oder direkt unter ‘Se
 </center>
 <br>
 
-Um beispielsweise die Messwerte einer bestimmten Station abzufragen, machen wir uns zunächst mit den verschiedenen Messtationen und ihren Metadaten vertraut. So können wir im Untermenü ‘Stationen’ (/api/stations) wahlweise eine Liste aller Stationen und der erhobenen Komponenten anzeigen oder über eine binäre ja/nein bzw. TRUE/FALSE Eingabe eine Auswahl von Messtationen abrufen. Dafür wählen wir aus, ob wir nur spezielle, aktive, inaktive, oder alle Arten von Stationen abfragen wollen. Zusätzlich können wir mit stationgroup_codes[] ein bestimmtes Wort eintragen, wie beispielsweise ‘suburb’ (Vorort) für Messtationen außerhalb des dichter besiedelten Stadtkerns von Berlin. 
+Um beispielsweise die Messwerte einer bestimmten Station abzufragen, machen wir uns zunächst mit den verschiedenen Messtationen und ihren Metadaten vertraut. So können wir im Untermenü ‘Stationen’ (/api/stations) wahlweise eine Liste aller Stationen und der erhobenen Komponenten anzeigen oder über eine binäre ja/nein bzw. TRUE/FALSE Eingabe eine Auswahl von Messtationen abrufen. Dafür wählen wir aus, ob wir nur spezielle, aktive, inaktive, oder alle Arten von Stationen abfragen wollen. Zusätzlich können wir mit *stationgroup_codes[]* ein bestimmtes Wort eintragen, wie beispielsweise ‘suburb’ (Vorort) für Messtationen außerhalb des dichter besiedelten Stadtkerns von Berlin. 
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/luftgüte_api_stations.png", caption:"Die obige Auswahl liefert die Werte für aktive Messtationen in Vororten" %}
 </center>
 <br>
 
-Die resultierende URL spiegelt die verschiedenen Elemente unserer [Abfrage bzw. Request](https://luftdaten.berlin.de/api/stations?active=true&include_hidden=true&stationgroup_codes%5B%5D=suburb) wider:  und kann auch direkt in den Browser eingegeben, geteilt oder weiterverschickt werden. Der erste Eintrag beispielsweise zeigt Informationen zur Messtation in Marienfelde, mitsamt Stations-ID (“mc027”), Adresse ("12307 Berlin, Schichauweg 60”), gemessenen Komponenten, und einem Link zu einem kurzen [Informationsblatt](https://www.stadtentwicklung.berlin.de/umwelt/umweltatlas/extra/3_12/d312_MC027.htm) über die Messtation auf der Seite der Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen.
-
+Die resultierende URL spiegelt die verschiedenen Elemente unserer [Abfrage bzw. Request](https://luftdaten.berlin.de/api/stations?active=true&include_hidden=true&stationgroup_codes%5B%5D=suburb) wider und kann auch direkt in den Browser eingegeben, geteilt oder weiterverschickt werden. Der erste Eintrag beispielsweise zeigt Informationen zur Messtation in Marienfelde, mitsamt Stations-ID (“mc027”), Adresse ("12307 Berlin, Schichauweg 60”), den gemessenen Komponenten, und einem Link zu einem kurzen [Informationsblatt](https://www.stadtentwicklung.berlin.de/umwelt/umweltatlas/extra/3_12/d312_MC027.htm) über die Messtation auf der Seite der SenSBW.
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/luftgüte_browser.png", caption:"Darstellung des Inhalts der Abfrage im Browser (Mozilla Firefox)" %}
 </center>
@@ -74,9 +79,213 @@ Bisher haben wir uns hauptsächlich über die Metadaten, also die Struktur der D
 
 Die angefragten Daten werden als .json-Datei herausgegeben und können nun von Datenverarbeitenden beispielsweise in Visualisierungen eingebunden werden. In ihrer Rohform sehen die Daten mitsamt Zeitstempel so aus:
 
-
-
+```
+[
+  {
+    "datetime": "2023-10-25T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 12
+  },
+  {
+    "datetime": "2023-10-24T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": null
+  },
+  {
+    "datetime": "2023-10-23T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": null
+  },
+  {
+    "datetime": "2023-10-22T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 4
+  },
+  {
+    "datetime": "2023-10-21T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-20T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 9
+  },
+  {
+    "datetime": "2023-10-19T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 13
+  },
+  {
+    "datetime": "2023-10-18T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 21
+  },
+  {
+    "datetime": "2023-10-17T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 15
+  },
+  {
+    "datetime": "2023-10-16T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 8
+  },
+  {
+    "datetime": "2023-10-15T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 2
+  },
+  {
+    "datetime": "2023-10-14T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 3
+  },
+  {
+    "datetime": "2023-10-13T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-12T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-11T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 6
+  },
+  {
+    "datetime": "2023-10-10T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-09T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-08T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-07T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-06T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-05T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-04T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-03T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 4
+  },
+  {
+    "datetime": "2023-10-02T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-01T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  }
+]
+```
 
 Die resultierenden Daten können nun auf verschiedene Weise weiterverarbeitet oder visualisiert werden. So funktioniert zum Beispiel die eingangs verlinkte Visualisierung verschiedener Stationen des Berliner Luftgütemessnetzes. Durch das Ausfüllen von Werten unter [https://luftdaten.berlin.de/station/mc027#station-data](https://luftdaten.berlin.de/station/mc027#station-data) generieren Nutzer:innen eine jeweilige API-Abfrage, die sofort als Diagramm angezeigt wird und deren zugrunde liegenden Daten als Excel-Datei heruntergeladen werden können. 
+
+## Fazit: Nach ein wenig Einarbeitungszeit eröffnen sich viele Möglichkeiten
 
 Abschließend zeigt dieses kurze Beispiel, dass sich per API bereitgestellte Daten praktisch und effizient herunterladen und weiterverarbeiten lassen. Zwar erfordert jede API anfänglich eine gewisse Zeit zur Einarbeitung. Sobald man sich allerdings mit dem Aufbau und der Funktionsweise der API vertraut gemacht hat, folgen alle Abfragen einem ähnlichen Schema. Dies spart besonders Zeit für die Datennutzer:innen, die Daten speziell für ihre Zwecke herunterladen können. Gleichzeitig können APIs allerdings auch die datenbereitstellenden Stellen entlasten, da interessierte Personen nicht einzelne Anfragen für Zeiträume und Stationen verfassen müssen, die unter Umständen manuell erfüllt und beantwortet werden.
