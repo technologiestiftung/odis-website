@@ -4,6 +4,7 @@ title: Kontakt
 ---
 
 # Kontakt
+
 <br>
 Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben? Dann kontaktieren Sie uns gerne über unser Kontaktformular. Alternativ schreiben Sie uns eine Mail an <a href="mailto:odis@ts.berlin">odis@ts.berlin</a>.
 
@@ -114,7 +115,7 @@ Sie haben eine Frage oder benötigen Unterstützung bei Ihrem Open-Data-Vorhaben
       </div>
       <div class="checkbox">
         <input type="checkbox" id="newsletter" name="newsletter" value="newsletter-ja">
-        <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden. Weitere Informationen und die Datenschutzbestimmungen <a href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343">hier</a>.</label>
+        <label for="newsletter"> Ich möchte mit dem ODIS-Newsletter über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden. Weitere Informationen und die Datenschutzbestimmungen <a href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-t9stf1hf-10dv&_ga=2.39832739.1628233919.1701885056-587004395.1700833794">hier</a>.</label>
       </div>
     </fieldset>
     <fieldset name="submit">
