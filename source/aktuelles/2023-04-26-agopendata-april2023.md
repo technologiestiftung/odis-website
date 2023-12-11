@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 
-# Die AG Open Data wird immer mehr zum Mitmachgremium
+## Die AG Open Data wird immer mehr zum Mitmachgremium
 Nachdem die AG Open Data aufgrund der Corona-Pandemie lange Zeit eine Online-Veranstaltung war, entwickelt sie sich immer mehr zu einer Präsenzveranstaltung, in der Input von den jeweiligen OD-Beauftragten und der direkte Austausch Fahrt aufnimmt und sich als Mittelpunkt des Arbeitsgremiums etabliert. Besonders erfreulich waren in diesem Zusammenhang die Präsentationen und Impulse durch die OD-Beauftragten.
 
 ## Bericht zu den Open Data Aktivitäten im Land Berlin 2022

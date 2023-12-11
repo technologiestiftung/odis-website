@@ -22,12 +22,8 @@ function createTableOfContents(containerId, targetId) {
   const container = document.getElementById(containerId);
   const headings = container.querySelectorAll("h2, h3, h4, h5, h6");
   const toc = document.createElement("nav");
-  const title = document.createElement("h2");
   toc.setAttribute("id", "toc");
   toc.setAttribute("aria-label", "Table of Contents");
-  title.innerHTML = "Was Sie hier erwartet";
-  title.classList.add("text-xl", "font-bold", "mb-4", "text-headlines");
-  toc.appendChild(title);
 
   let currentLevel = 0;
   const lists = [];

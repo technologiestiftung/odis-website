@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 
-# Die neue Berliner Open-Data-Rechtsverordnung ist da
+## Die neue Berliner Open-Data-Rechtsverordnung ist da
 
 Am 24. Juli wurde die neue Rechtsverordnung zu Open Data im Berliner Gesetz- und Verordnungsblatt veröffentlicht und damit ein neues Kapitel in der Open-Data-Strategie des Landes Berlin. Die Rechtsverordnung, die den § 13 Absatz 2 des Berliner E-Government-Gesetzes von 2016 umsetzt, gilt für alle Behörden “der unmittelbaren Landesverwaltung”, das umfasst die Senatsverwaltungen und ihre nachgeordneten Behörden, sowie die einzelne Bezirksverwaltungen. Die komplette Verordnung ist <a href="https://www.berlin.de/sen/justiz/service/gesetze-und-verordnungen/2020/ausgabe-nr-35-vom-24-7-2020-s-617-632.pdf" target="blank">hier</a> zu lesen.
 

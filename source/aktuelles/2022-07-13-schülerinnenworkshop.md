@@ -7,7 +7,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# Schülerinnen-Workshop zu Open Data
+## Schülerinnen-Workshop zu Open Data
 Anfang des Jahres erreichte uns eine Anfrage einer für uns eher ungewöhnlichen Zielgruppe: Die 11. Klässler:innen  eines Gymnasiums aus Charlottenburg-Wilmersdorf plante sich im Rahmen einer Projektwoche mit dem Thema Open Data auseinanderzusetzen. Während das Thema "Schutz persönlicher Daten" teil des Lehrplans ist, kommen die Vorteile offener Daten im Unterricht bisher zu kurz. Wir versetzten uns gedanklich zurück in unsere Schulzeit und fragten uns: Wie können wir das Thema Open Data so aufbereiten, dass wir die Schüler:innen dafür begeistern können? Wir namen die kleine Herrausforderung an und luden zu einem Workshop in die Räume der Technologiestiftung Berlin ein. Herausgekommen ist ein dreistündiger Workshop.
 
 ## Das Berliner Open Data Portal spielerisch kennenlernen

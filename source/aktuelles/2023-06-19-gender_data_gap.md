@@ -7,7 +7,7 @@ visible: true
 tags: post
 urlText: Zum Blogbeitrag
 ---
-# Gender Data und Open Data Berlin
+## Gender Data und Open Data Berlin
 
 Die Unterrepräsentanz von Frauen und frauenspezifischen Daten in Datensätzen wird zunehmend kritisch gesehen, da sie konkrete Benachteiligung in einer Vielzahl von Lebenssituationen manifestiert.
 In diesem Blogpost betrachten wir die Bedeutung von Gender Data insgesamt und klären: **Was ist die Gender Data Gap und warum sind geschlechtsspezifische Daten wichtig? Besteht auch bei den offenen Daten Berlins eine Gender Data Gap?** Dazu haben wir im Rahmen dieses kleinen Forschungsprojekts einige Metadatenanalysen durchgeführt und die interessanten Erkenntnissen zusammengefasst.

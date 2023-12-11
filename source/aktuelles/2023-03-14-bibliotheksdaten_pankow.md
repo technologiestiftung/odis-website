@@ -7,7 +7,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# Stadtteilbibliothek Pankow veröffentlicht ersten Open-Data-Datensatz 
+## Stadtteilbibliothek Pankow veröffentlicht ersten Open-Data-Datensatz 
 Die Leitung der Janusz-Korczak-Bibliothek in Pankow entschied sich im vergangenen Jahr, **Bibliotheksdaten als offene Daten bereitzustellen**. Ziel der Bibliotheksleitung ist es, mithilfe der offenen Daten **gezieltere Analysen** durchführen zu können, um beispielsweise das Nutzungsverhalten oder die Reichweite der einzelnen Bibliotheksstandorte auszuwerten. Wir waren natürlich neugierig darauf, welche spannenden Informationen in den Daten zu finden sind und unterstützten Tobias Weiß, den Leiter der Bibliothek, gemeinsam mit Karsten Gartner, dem Open-Data-Beauftragten des Bezirks, gerne bei der Aufbereitung, Anonymisierung und Bereitstellung der Daten.
 
 Der Datensatz ist seit Februar 2022 mit den nötigen Schlüsseltabellen und der Dokumentation im [Berliner Open Data Portal](https://daten.berlin.de/datensaetze/ausleihen-öffentlichen-bibliotheken-pankow-2022) abrufbar. Wie der Weg bis hin zur Veröffentlichung war, möchten wir in diesem Blogbeitrag aufzeigen.

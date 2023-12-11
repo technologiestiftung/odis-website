@@ -8,7 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 ---
 
-# Willkommen auf der neuen ODIS-Seite!
+## Willkommen auf der neuen ODIS-Seite!
 
 Wir freuen uns sehr, unsere neue Webpräsenz vorzustellen. Wir haben die ODIS-Seite mit dem Ziel überarbeitet, Inhalte zu offenen Daten bereitzustellen und unsere Open-Data-Projekte sichtbarer zu machen.
 

@@ -4,20 +4,27 @@ layout: default
 {% comment %}
   AVAILABLE VARIABLES
   -------------------
-    tags: Blog article tags (required)
-    title: Blog article title (required)
-    metaDescription: Blog article meta description (required)
-    categories: Blog article categories (required)
-    date: Date of blog article (required)
+  tags: Blog article tags (required)
+  title: Blog article title (required)
+  metaDescription: Blog article meta description (required)
+  categories: Blog article categories (required)
+  date: Date of blog article (required)
+  heroImagePath: Path to hero image if existent
+  heroImageAltText: Description of hero image (required if hero image exists)
 
-    content: Blog article markdown content
+  content: Blog article markdown content
 {% endcomment %}
-{% capture formattedDate %}{{ page.date | date: '%d.%m.%Y' }}{% endcapture %}
+{%- capture formattedDate %}
+  {{ page.date | date: '%d.%m.%Y' }}{% endcapture %}
 
-<script defer type="text/javascript" src="/assets/js/tableOfContents.js"></script>
-<section class="bg-bg-alt py-16 px-4 sm:px-6">
-  <div class="container max-w-6xl mx-auto grid md:grid-cols-12 px-4 sm:px-6 gap-8">
-    <div class="md:col-span-8 xl:col-start-1 xl:col-span-6">
+<script
+  defer
+  type="text/javascript"
+  src="/assets/js/tableOfContents.js"
+></script>
+<section class="bg-bg-alt" aria-label="Einführung">
+  <div class="container max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <div class="col-span-1 lg:col-span-8 py-10 pl-6 pr-6">
       {%
         render 'paragraph',
         text: formattedDate,
@@ -25,6 +32,7 @@ layout: default
       %}
       {%
         render 'heading',
+        tag: 'h1',
         text: title,
         size: 'xxl',
       %}
@@ -33,28 +41,27 @@ layout: default
         text: metaDescription,
         size: 'lg',
       %}
-      {%
-        render 'paragraph',
-        text: metaDescription,
-        size: 'lg',
-      %}
     </div>
+    {% if heroImagePath and heroImageAltText %}
+      <div
+        class="h-72 lg:h-[108%] col-span-1 lg:col-span-4 bg-cover bg-center"
+        style="background-image: url({{ heroImagePath }});"
+        role="figure"
+        aria-label="{{ heroImageAltText }}"
+      ></div>
+    {% endif %}
   </div>
 </section>
 
-<section class="pt-16 pb-64 px-4 sm:px-6">
-  <div
-    class="
-      container max-w-6xl mx-auto grid
-      md:grid-cols-12 md:gap-8
-      px-4 sm:px-6
-    "
-  >
-    <div class="md:col-span-8 xl:col-start-1 xl:col-span-6 prose prose-a:focusable prose-button:foculable" id="toc-content">
+<section class="pt-4 md:pt-16 pb-64" aria-label="Beitrag">
+  <div class="container max-w-6xl mx-auto grid md:grid-cols-12 md:gap-8">
+    <div class="md:col-start-9 xl:col-start-10 md:col-span-3 py-4 flex flex-col gap-6 pl-6 md:pl-0 order-first md:order-last">
+      <div class="sticky w-full top-6" id="toc-target">
+        <span id="toc-label" class="font-bold text-headlines">Auf dieser Seite</span>
+      </div>
+    </div>
+    <div class="md:col-span-7 pl-6 prose prose-a:focusable" id="toc-content">
       {{ content }}
     </div>
-    <aside class="md:col-start-9 md:col-span-4 xl:col-start-10 xl:col-span-3 py-4 flex flex-col gap-6">
-      <dl class="sticky w-full top-6" id="toc-target"></dl>
-    </aside>
   </div>
 </section>
