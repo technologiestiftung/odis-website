@@ -1,9 +1,7 @@
 node_modules
 _site
-source/assets/js/bootstrap.min.js
-source/assets/js/bootstrap.min.js.map
-source/assets/js/Chart.bundle.min.js
-source/assets/js/d3.v5.min.js
-source/assets/js/datatables.min.js
-source/assets/js/jquery.js
-source/assets/js/wordcloud2.js
+source/assets/js/**/*.js
+source/**/*.{chunk,min}.js
+source/**/*.js.map
+source/projekte/grundsicherung/js/app.*.js
+source/projekte/grundsicherung/js/*.chunk.js

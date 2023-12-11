@@ -18,99 +18,142 @@
 <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
 
 <script>
-  const dimensions = ({  
-    height:520,
-    width:460,  
+  const dimensions = {
+    height: 520,
+    width: 460,
     margin: {
-        top: 5,
-        right: 10,
-        bottom: 0,
-        left: 10,
-      } 
-  })
+      top: 5,
+      right: 10,
+      bottom: 0,
+      left: 10,
+    },
+  };
 
-  d3.csv("/assets/charts/word_counts.csv", function(data) {
-
+  d3.csv("/assets/charts/word_counts.csv", function (data) {
     var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
-    const svg = d3.select("#radialchart")
-    .append("svg")
-      .attr("width", dimensions.width + dimensions.margin.left + dimensions.margin.right)
-      .attr("height", dimensions.height + dimensions.margin.top + dimensions.margin.bottom)
-    .append("g")
-      .attr("transform", "translate(" + dimensions.width / 2 + "," + ( 550/1.8)+")");
-    
-    const x = d3.scaleBand()
-        .range([0, 2 * Math.PI])    
-        .align(0)                 
-        .domain(data.map(d => d.Word));
-    
+    const svg = d3
+      .select("#radialchart")
+      .append("svg")
+      .attr(
+        "width",
+        dimensions.width + dimensions.margin.left + dimensions.margin.right,
+      )
+      .attr(
+        "height",
+        dimensions.height + dimensions.margin.top + dimensions.margin.bottom,
+      )
+      .append("g")
+      .attr(
+        "transform",
+        "translate(" + dimensions.width / 2 + "," + 550 / 1.8 + ")",
+      );
+
+    const x = d3
+      .scaleBand()
+      .range([0, 2 * Math.PI])
+      .align(0)
+      .domain(data.map((d) => d.Word));
+
     const innerRadius = 90;
     const outerRadius = Math.min(dimensions.width, dimensions.height);
-    
-    const y = d3.scaleLinear()
-        .range([innerRadius, outerRadius])   
-        .domain([0, 4500]); 
-    
-    svg.append("g")
+
+    const y = d3
+      .scaleLinear()
+      .range([innerRadius, outerRadius])
+      .domain([0, 4500]);
+
+    svg
+      .append("g")
       .selectAll("path")
       .data(data)
       .enter()
       .append("path")
-        .attr("fill", "#2e91d2")
-        .attr("d", d3.arc()    
-            .innerRadius(innerRadius)
-            .outerRadius(d => y(d['Value']))
-            .startAngle(d => x(d.Word))
-            .endAngle(d => x(d.Word) + x.bandwidth())
-            .padAngle(0.02)
-            .padRadius(innerRadius))
-      .on("mouseover", function(d,i) {
-        d3.select(this)
-          .attr("fill", "red");
+      .attr("fill", "#2e91d2")
+      .attr(
+        "d",
+        d3
+          .arc()
+          .innerRadius(innerRadius)
+          .outerRadius((d) => y(d["Value"]))
+          .startAngle((d) => x(d.Word))
+          .endAngle((d) => x(d.Word) + x.bandwidth())
+          .padAngle(0.02)
+          .padRadius(innerRadius),
+      )
+      .on("mouseover", function (d, i) {
+        d3.select(this).attr("fill", "red");
         tooltip
-        .style("left", d3.event.pageX - 50 + "px")
-        .style("top", d3.event.pageY - 70 + "px")
-        .style("display", "inline-block")
-        .html('Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' + d.Word + '</span>: <span style="font-weight:bold">'+ d.Value + '</span>');
+          .style("left", d3.event.pageX - 50 + "px")
+          .style("top", d3.event.pageY - 70 + "px")
+          .style("display", "inline-block")
+          .html(
+            'Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' +
+              d.Word +
+              '</span>: <span style="font-weight:bold">' +
+              d.Value +
+              "</span>",
+          );
       })
-      .on("mouseout", function(d, i) {
-        d3.select(this)
-          .attr("fill", "#2e91d2");
-        tooltip
-        .style("display", "None")
-      })
+      .on("mouseout", function (d, i) {
+        d3.select(this).attr("fill", "#2e91d2");
+        tooltip.style("display", "None");
+      });
 
-    svg.append("g")
-    .selectAll("g")
-    .data(data)
-    .enter()
-    .append("g")
-      .attr("text-anchor", function(d) { return (x(d.Word) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start"; })
-      .attr("transform", function(d) { return "rotate(" + ((x(d.Word) + x.bandwidth() / 2) * 180 / Math.PI - 90) + ")"+"translate(" + (y(d['Value'])+10) + ",0)"; })
-    .append("text")
-      .text(function(d){return(d.Word)})
-      .attr("transform", function(d) { return (x(d.Word) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)"; })
+    svg
+      .append("g")
+      .selectAll("g")
+      .data(data)
+      .enter()
+      .append("g")
+      .attr("text-anchor", function (d) {
+        return (x(d.Word) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) <
+          Math.PI
+          ? "end"
+          : "start";
+      })
+      .attr("transform", function (d) {
+        return (
+          "rotate(" +
+          (((x(d.Word) + x.bandwidth() / 2) * 180) / Math.PI - 90) +
+          ")" +
+          "translate(" +
+          (y(d["Value"]) + 10) +
+          ",0)"
+        );
+      })
+      .append("text")
+      .text(function (d) {
+        return d.Word;
+      })
+      .attr("transform", function (d) {
+        return (x(d.Word) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) <
+          Math.PI
+          ? "rotate(180)"
+          : "rotate(0)";
+      })
       .style("font-size", "11px")
       .attr("alignment-baseline", "middle")
-    .on("mouseover", function(d,i) {
-      d3.select(this)
-        .attr("fill", "red");
-      tooltip
-      .style("left", d3.event.pageX - 50 + "px")
-      .style("top", d3.event.pageY - 70 + "px")
-      .style("display", "inline-block")
-      .html('Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' + d.Word + '</span>: <span style="font-weight:bold">'+ d.Value + '</span>');
+      .on("mouseover", function (d, i) {
+        d3.select(this).attr("fill", "red");
+        tooltip
+          .style("left", d3.event.pageX - 50 + "px")
+          .style("top", d3.event.pageY - 70 + "px")
+          .style("display", "inline-block")
+          .html(
+            'Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' +
+              d.Word +
+              '</span>: <span style="font-weight:bold">' +
+              d.Value +
+              "</span>",
+          );
       })
-    .on("mouseout", function(d, i) {
-      d3.select(this)
-        .attr("fill", "black");
-      tooltip
-      .style("display", "None")
-    })
-
-  })
+      .on("mouseout", function (d, i) {
+        d3.select(this).attr("fill", "black");
+        tooltip.style("display", "None");
+      });
+  });
 </script>
 
 <!-- Create a div where the graph will take place -->
-<div id="radialchart" style="display: flex;justify-content: center;"></div>
+<div id="radialchart" style="display: flex; justify-content: center"></div>
