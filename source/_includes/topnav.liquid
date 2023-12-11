@@ -1,0 +1,55 @@
+<nav class="container max-w-6xl mx-auto flex flex-wrap justify-between px-10">
+  <div class="flex py-5 items-center md:hidden">
+    <button class="h-7 w-7 text-links hover:text-links-active motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4" id="menu-button">
+      {% render 'icons/hamburger.liquid' %}
+    </button>
+  </div>
+
+  <div class="flex py-5">
+    <a
+      class="motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4 text-shadow-primary hover:text-links-active"
+      href="/"
+      aria-label="Zur Startseite">
+      {% render 'odis_logo.html' %}
+    </a>
+  </div>
+
+  <div class="hidden w-full md:flex md:w-auto" id="menu">
+    <ul class="grid md:flex md:justify-between md:items-center gap-4 pb-5 md:pt-5">
+      {% for nav_item in nav_items %}
+        {% comment %}
+          We want to highlight the nav item, even when we are on a subpage.
+          That's why we do the filtering for current_top_directory.
+        {% endcomment %}
+        {% assign current_top_directory = page.url | remove_first: '/'  | split: '/' | first %}
+        {% assign page_is_in_current_top_directory = current_top_directory == nav_item.slug %}
+        <li>
+          <a
+            {% if page_is_in_current_top_directory %}
+            aria-current="true"
+            {% endif %}
+            class="p-2 font-bold text-links hover:text-links-active aria-current:text-links-active motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4"
+            href="{{ nav_item.slug | prepend: "/"  }}">{{ nav_item.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const button = document.querySelector("#menu-button");
+  const menu = document.querySelector("#menu");
+
+  button.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+  button.addEventListener("keypress", (event) => {
+    if (event.code !== "Enter" || event.code !== "Space") 
+      return
+
+
+    
+
+
+    menu.classList.toggle("hidden");
+  });
+</script>

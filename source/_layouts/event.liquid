@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
-{% include "head.html" %}
+{% include "head.liquid" %}
 
-<body>
+  <body>
     <div>
         <div>
 
-            {% include "topnav.html" %}
+            {% include "topnav.liquid" %}
 
             <div class="section mt-6 mb-6">
                 {{ content }}
@@ -38,12 +38,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 pb-3">
+                  <strong class="d-block">Email:</strong> <a href="mailto:{{mail }}">{{ mail }}</a>
+                </div>
+              </div>
             </div>
-
-            {% include "footer.html" %}
-            {% include "matomo.html" %}
+          </div>
         </div>
-    </div>
-</body>
 
+        {% include 'footer.liquid' %}
+        {% include 'matomo.html' %}
+      </div>
+    </div>
+  </body>
 </html>

@@ -7,7 +7,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# Beteiligungsprozess zur Open Data Strategie beendet - Die Kernergebnisse
+## Beteiligungsprozess zur Open Data Strategie beendet - Die Kernergebnisse
 
 10 Jahre nach der ersten Open Data Strategie entwickelt das Land Berlin eine neue Strategie, um Impulse für die zukünftige Ausrichtung des Landes im Bereich Open Data zu erarbeiten. Beauftragt von der Senatsverwaltung für Wirtschaft, Energie und Betriebe (SenWEB) hat die Open Knowledge Foundation (OKF) in den letzten Monaten einen breiten Beteiligungsprozess zur Weiterentwicklung von Open Data in Berlin durchgeführt. Mit Ende der Beteiligung pausiert der Strategieprozess zunächst. Drei der wichtigsten Kernergebnisse haben wir in diesem Blogpost zusammengefasst.
 

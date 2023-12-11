@@ -9,3 +9,8 @@
   publish = "_site"
 
   command = "npm ci && npm run build"
+
+[[redirects]]
+  from = "/contact"
+  to = "/kontakt"
+  status = 301

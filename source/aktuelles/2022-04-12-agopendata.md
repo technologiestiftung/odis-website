@@ -7,7 +7,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 ---
-# Die AG Open Data als Vernetzungsformat der OD-Beauftragten
+## Die AG Open Data als Vernetzungsformat der OD-Beauftragten
 Bereits seit einem Jahr tagt die AG Open Data als zentrales Gremium der [behördlichen Open Data Beauftragten](https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/open-data-beauftragte/). Damit Verwaltungsdaten als Open Data veröffentlicht werden und auch in guter nutzbarer Qualität vorliegen, kommt den Open Data Beauftragten eine Schlüsselrolle zu. Sie sind in erster Linie Ansprechspersonen für Verwaltungsmitarbeiter:innen der jeweiligen Behörden. Sie initiieren, koordinieren und unterstützen Maßnahmen zur Bereitstellung offener Daten.  
 Mittlerweile hat die Mehrheit der Berliner Senatsverwaltungen und Bezirke Open Data Beauftragte, die im Rahmen der AG Open Data einmal im Quartal zusammenkommen. Sebastian Askar, Open Data Beauftragter des Landes Berlin, leitet die AG, die aufgrund der Corona-Pandemie bislang nur virtuell zusammen kommen konnte.
 

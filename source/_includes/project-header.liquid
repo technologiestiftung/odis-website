@@ -1,13 +1,14 @@
 {% comment %}
   AVAILABLE VARIABLES
   -------------------
-    title: Project title
-    buttonTitle: Title of button
-    buttonLink: Link of button
-    description: Project description
-    heroImage: Path to hero image
-    mobileImage: Path to mobile image
-    projectUrlWithoutProtocol: Project URL without protocol (https://)
+    title: Title of the project (required)
+    heroImage: Path to hero image (required)
+    buttonTitle: Title of button (optional)
+    buttonLink: Link of button (optional)
+    showImageInMockup: Whether to show a window header mockup (optional)
+    mobileImage: Path to mobile image (optional)
+    projectUrlWithoutProtocol: Project URL without protocol (https://) (optional if showImageInMockup is false)
+    class: Optional additional classes to add to the container (optional)
 {% endcomment %}
 <section class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64 px-4 sm:px-6">
   <div class="container max-w-6xl mx-auto grid md:grid-cols-12 px-4 sm:px-6 gap-8">
@@ -27,83 +28,15 @@
   </div>
 </section>
 <section class="pb-24 px-4 sm:px-6 -mt-32 sm:-mt-56">
-  <div class="container max-w-6xl mx-auto grid xl:grid-cols-12 relative pb-20 sm:pb-24 @container">
-    <div
-      class="absolute w-full h-[calc(100%-13rem+2cqw)] sm:h-[calc(100%-20rem+2cqw)] bg-shadow-secondary mix-blend-darken top-32 sm:top-56 left-[2cqw]"
-    ></div>
-    <div class="p-0.5 bg-line-dark md:col-span-12 relative @container/mockup">
-      {% comment %} DESKTOP MOCKUP {% endcomment %}
-      {% if showImageInMockup %}
-        <div class="h-10 @xl/mockup:h-12 bg-line-dark relative">
-          <ul
-            aria-hidden="true"
-            class="absolute top-5 @xl/mockup:top-6 left-4 -translate-y-1/2 flex gap-2 origin-left scale-75 @xl/mockup:scale-100"
-          >
-            <li class="w-3 h-3 rounded-full bg-[var(--red)]"></li>
-            <li class="w-3 h-3 rounded-full bg-[var(--blue-light)]"></li>
-            <li class="w-3 h-3 rounded-full bg-[var(--white)]"></li>
-          </ul>
-          <span class="absolute top-5 @xl/mockup:top-6 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-2 text-text-inv text-xs @xl/mockup:text-sm">
-            {{ projectUrlWithoutProtocol }}
-          </span>
-        </div>
-      {% endif %}
-      <img
-        class="w-full h-auto"
-        src="{{ heroImage }}"
-        alt="Screenshot für das Projekt: '{{ title }}'"
-      >
-    </div>
-    {% if mobileImage %}
-      <div class="absolute left-0 right-0 bottom-0 grid grid-cols-12 gap-8 px-4 sm:px-6 items-end">
-        <div class="col-start-1 col-span-7">
-          {% if buttonLink and buttonTitle %}
-            {%
-              render 'button',
-              text: buttonTitle,
-              href: buttonLink,
-              target: '_blank',
-              rel: 'noopener noreferrer',
-            %}
-          {% endif %}
-        </div>
-        <div
-          class="h-auto col-start-8 col-span-5 md:col-start-9 md:col-span-4 xl:col-start-10 xl:col-span-3 relative @container/mockup"
-          aria-label="Mobile mockup"
-        >
-          <div
-            aria-hidden="true"
-            class="absolute w-full h-[calc(5rem+7cqw)] sm:h-[calc(6rem+7cqw)] rounded-b-[20cqw] bg-shadow-secondary mix-blend-darken -bottom-[7cqw] -right-[7cqw]"
-          ></div>
-          <div class="relative">
-            <img
-              src="{{ mobileImage }}"
-              alt="Mobile screenshot für das Projekt: '{{ title }}'"
-              class="w-[calc(100%-6cqw)] h-[calc(100%-6cqw)] rounded-[10cqw] absolute z-10 top-[3cqw] left-[3cqw] object-fill"
-            >
-            <svg
-              class="w-full h-auto z-20 relative"
-              viewBox="0 0 257 504"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                stroke="var(--white)"
-                d="M37.617 10.5h181.838l.222.007c.196.006.487.02.858.046.741.052 1.805.158 3.082.37 2.556.426 5.957 1.275 9.352 2.969 3.392 1.693 6.77 4.224 9.3 8.011 2.528 3.785 4.231 8.852 4.231 15.654v428.902l-.001.055-.005.222c-.007.196-.02.485-.047.855a33.148 33.148 0 0 1-.372 3.075c-.426 2.551-1.277 5.944-2.974 9.332-1.696 3.385-4.233 6.755-8.029 9.28-3.792 2.523-8.872 4.222-15.689 4.222H37.6l-.055-.001-.1-.002a23.045 23.045 0 0 1-.98-.05 32.921 32.921 0 0 1-3.082-.371c-2.556-.425-5.957-1.274-9.352-2.968-3.392-1.693-6.77-4.224-9.3-8.011-2.528-3.785-4.231-8.852-4.231-15.654V37.486l.007-.222c.006-.196.02-.485.046-.855.053-.74.159-1.801.372-3.075.426-2.551 1.277-5.944 2.974-9.332 1.696-3.385 4.233-6.755 8.029-9.28C25.72 12.2 30.8 10.5 37.617 10.5Z"
-                opacity=".1"
-              />
-              <path
-                fill="var(--line-dark)"
-                d="M237.74 4.65C228.54.05 219.38 0 219 0H38C18.4 0 9.05 10.48 4.65 19.26.05 28.46 0 37.61 0 38v428c0 19.6 10.48 28.95 19.26 33.35 9.2 4.6 18.35 4.65 18.74 4.65h181c19.6 0 28.95-10.48 33.35-19.26 4.6-9.2 4.65-18.35 4.65-18.74V38c0-19.6-10.48-28.95-19.26-33.35ZM247 465.98c0 .07-.09 7.45-3.74 14.56C238.68 489.47 230.51 494 219 494H38.02c-.07 0-7.45-.09-14.56-3.74C14.53 485.68 10 477.51 10 466V38.02c0-.07.09-7.45 3.74-14.56C18.32 14.53 26.49 10 38 10h29c0 4.57 0 6.86.44 8.75 1.46 6.33 6.4 11.27 12.73 12.73 1.89.44 4.18.44 8.75.44h78.82c4.57 0 6.86 0 8.75-.44 6.33-1.46 11.27-6.4 12.73-12.73.44-1.89.44-4.18.44-8.75h29.33c.07 0 7.45.09 14.56 3.74 8.93 4.58 13.46 12.75 13.46 24.26v427.98H247Z"
-              />
-              <path
-                fill="var(--line)"
-                d="M94.83 16.96c0-1.1.9-2 2-2h46c1.1 0 2 .9 2 2s-.9 2-2 2h-46c-1.1 0-2-.9-2-2Zm59 0c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4-4-1.79-4-4Z"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    {% endif %}
-  </div>
+  {%
+    render 'project-mockups',
+    heroImage: heroImage,
+    mobileImage: mobileImage,
+    projectUrlWithoutProtocol: projectUrlWithoutProtocol,
+    showImageInMockup: showImageInMockup,
+    projectUrlWithoutProtocol: projectUrlWithoutProtocol,
+    buttonLink: buttonLink,
+    buttonTitle: buttonTitle,
+    class: 'container max-w-6xl mx-auto',
+  %}
 </section>
