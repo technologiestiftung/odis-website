@@ -99,8 +99,10 @@
     --shadow-secondary-inv: var(--blue-light);
   }
 
+  body,
   html {
     @apply font-sans text-text bg-bg;
+    scroll-behavior: smooth;
   }
 
   .prose p {
@@ -129,6 +131,20 @@
   .prose-invert h6 {
     @apply text-headlines-inv;
   }
+  .prose a > h1,
+  .prose a > h2,
+  .prose a > h3,
+  .prose a > h4,
+  .prose a > h5,
+  .prose a > h6,
+  .prose-invert a > h1,
+  .prose-invert a > h2,
+  .prose-invert a > h3,
+  .prose-invert a > h4,
+  .prose-invert a > h5,
+  .prose-invert a > h6 {
+    color: inherit;
+  }
 
   .prose h1 {
     @apply leading-tight text-5xl mb-4;
@@ -142,7 +158,15 @@
   .prose h4,
   .prose h5,
   .prose h6 {
-    @apply text-xl mb-2;
+    @apply text-xl mb-2 mt-0 pt-6;
+  }
+}
+
+@layer components {
+  .focusable {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-links;
+    @apply focus-visible:ring-offset-8 focus-visible:ring-offset-bg;
+    border-radius: 1px;
   }
 }
 

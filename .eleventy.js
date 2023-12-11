@@ -1,5 +1,8 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const markdownIt = require("markdown-it");
+const adjustHeadingLevel = require("./_eleventy/adjustHeadingLevel");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -22,7 +25,7 @@ module.exports = function (eleventyConfig) {
 
   // grundsicherung files
   eleventyConfig.addPassthroughCopy(
-    "source/projekte/grundsicherung/src/fonts/*"
+    "source/projekte/grundsicherung/src/fonts/*",
   );
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/js/*");
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/public/*");
@@ -30,6 +33,12 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy(
   // "source/projekte/grundsicherung/config.json"
   // );
+  const mardownItInstance = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+  }).use(adjustHeadingLevel, { firstLevel: 2 });
+  eleventyConfig.setLibrary("md", mardownItInstance);
 
   // Return your Object options:
   return {

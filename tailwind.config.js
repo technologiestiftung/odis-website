@@ -2,7 +2,7 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  content: ["./**/*.{liquid,html}"],
+  content: ["./**/*.{liquid,html,js}"],
   theme: {
     colors: {
       // USE THESE SEMANIC COLORS
