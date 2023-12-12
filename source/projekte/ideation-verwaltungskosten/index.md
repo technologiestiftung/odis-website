@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Was kostet wo wie viel?
 metaDescription: Ideation für eine interaktive Visualisierung offener Verwaltungsdaten
 date: 2022-03-28

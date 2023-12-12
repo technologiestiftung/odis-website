@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: "Digitale Bezirksregionenprofile"
 visibleLink: false
 blogLinkTitle: "Hier geht's zum Projekt"

@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Data Dive – Barrierefreiheit
 blogLinkTitle: "Hier geht's zum ausführlichen Bericht"
 blogLink: https://lab.technologiestiftung-berlin.de/projects/datadive-accessibility/de/

@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Wahlbezirke Editor
 blogLinkTitle: "Hier geht's zum Tool"
 blogLink: https://wahlbezirke.odis-berlin.de/

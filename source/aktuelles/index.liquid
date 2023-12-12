@@ -35,17 +35,22 @@ pagination:
       {% endif %}
       {% endcapture %}
 
-        {% render 'news_card',
-          title: post.data.title,
-          description: post.data.metaDescription,
-          post_link: post_link,
-          post_link_text: post.data.urlText,
-          date: post.date,
-          author: post.data.author,
-          image_path: post.data.heroImagePath,
-          image_alt_text: post.data.heroImageAltText,
-          theme: theme
-        %}
+        {% if post.data.tags contains 'project' %}
+          <div>Project</div>
+        {% else %}
+          {% render 'news_card',
+            title: post.data.title,
+            description: post.data.metaDescription,
+            post_link: post_link,
+            post_link_text: post.data.urlText,
+            date: post.date,
+            author: post.data.author,
+            image_path: post.data.heroImagePath,
+            image_alt_text: post.data.heroImageAltText,
+            theme: theme,
+            tags: post.data.tags
+          %}
+        {% endif %}
       {% endif %}
     {% endfor %}
   </div>

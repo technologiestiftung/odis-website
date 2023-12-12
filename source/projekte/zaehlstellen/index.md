@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Fahrradzählstellen
 blogLinkTitle: "Hier gehts zur interaktiven Visualisierung"
 blogLink: https://lab.technologiestiftung-berlin.de/projects/bikerides/de/

@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Kiezcolors
 blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://kiezcolors.odis-berlin.de/

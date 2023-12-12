@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Berliner EnergieCheckpoint
 blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://energiecheckpoint.odis-berlin.de

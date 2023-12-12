@@ -6,7 +6,7 @@ blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://haushaltsdaten.odis-berlin.de/
 metaDescription: Interaktive Visualisierung zu den geplanten Ausgaben und Einnahmen des Landes Berlin
 date: 2022-09-14
-tags: project
+tags: ['project','post']
 visible: true
 indexImage: haushaltsdaten_thumbnail.png
 heroImage: haushaltsdaten_hero.png
