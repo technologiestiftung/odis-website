@@ -7,4 +7,6 @@ categories: aktuelles
 visible: true
 link: https://citylab-berlin.org/de/events/citylab-sommerfest-2023/
 urlText: Zu Programm und Anmeldung
+heroImagePath: /assets/images/CLB-Sommerfest-2023-Sched-mobileicon-1024x1024px-02.jpg
+heroImageAltText: Rubik’s Würfel in der Größe von zwei Personen mit illustrierten Silhouetten, die seine Teile drehen
 ---

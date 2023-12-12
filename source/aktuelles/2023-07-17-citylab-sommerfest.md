@@ -6,6 +6,8 @@ metaDescription: Ende Juni haben wir das CityLAB Sommerfest gefeiert und die ODI
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
+heroImagePath: /assets/images/sommerfest2023_bria.jpg
+heroImageAltText: Francesca Bria beim Panel „Governing AI and Data democratically putting it at the service of People and the Planet“ (Foto bei Florian Reimann)
 ---
 
 ## Rückblick zu Open Data beim CityLAB Sommerfest

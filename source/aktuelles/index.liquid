@@ -35,7 +35,7 @@ pagination:
       {% endif %}
       {% endcapture %}
 
-        {% render 'news_card.liquid',
+        {% render 'news_card',
           title: post.data.title,
           description: post.data.metaDescription,
           post_link: post_link,

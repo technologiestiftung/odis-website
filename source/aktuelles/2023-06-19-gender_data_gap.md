@@ -6,6 +6,8 @@ categories: aktuelles
 visible: true
 tags: post
 urlText: Zum Blogbeitrag
+heroImagePath: /assets/images/gender-mainstreaming-berlin.png
+heroImageAltText: Cover des Berliner Handbuchs zu Gender Mainstreaming in der Stadtentwicklung, Senatsverwaltung für Stadtentwicklung, 2011
 ---
 
 ## Gender Data und Open Data Berlin

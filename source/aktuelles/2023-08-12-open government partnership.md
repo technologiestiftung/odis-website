@@ -7,4 +7,6 @@ categories: aktuelles
 visible: true
 link: https://www.open-government-deutschland.de/resource/blob/1567548/2203222/ceb9c802f7fb0f078c56d012c0f9d204/vorentwurf-nap-4-kommentierung-data.pdf?download=1
 urlText: Zum Entwurf des 4. NAP
+heroImagePath: /assets/images/aktionsplan23-24-entwurf.png
+heroImageAltText: Die erste Seite des PDF Dokuments "Vierter Nationaler Aktionsplan 2023 – 2025 im Rahmen der Teilnahme an der Open Government Partnership"
 ---

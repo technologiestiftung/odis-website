@@ -1,15 +1,15 @@
-{% comment %} 
-AVAILABLE VARIABLES:
-- title: (required)
-- description (required)
-- date (required)
-- post_link (required)
-- post_link_text (optional)
-- author (optional)
-- theme: one of 'normal' or 'inverted', defaults to 'normal' (optional)
-- image_path (optional)
-- image_alt_text (optional)
-- class (optional)
+{% comment %}
+  AVAILABLE VARIABLES:
+  - title: (required)
+  - description (required)
+  - date (required)
+  - post_link (required)
+  - post_link_text (optional)
+  - author (optional)
+  - theme: one of 'normal' or 'inverted', defaults to 'normal' (optional)
+  - image_path (optional)
+  - image_alt_text (optional)
+  - class (optional)
 {% endcomment %}
 
 {% assign card_theme = theme | default: 'normal' | strip %}
@@ -20,15 +20,13 @@ AVAILABLE VARIABLES:
 
 {% capture article_classes %}
   {{ class }}
+  @container
   relative
   grid items-start
-  {% if has_accessible_image %}
-    grid-rows-[250px,auto]
-  {% else %}
-    grid-rows-[0px,auto]
-  {% endif %}
+  grid-rows-[250px,minmax(auto,1fr)]
+  border
   {% if card_theme == 'normal' %}
-    bg-bg-alt text-text
+    bg-bg-alt text-text border-bg-alt
     {% if image_path %}
       p-0
     {% else %}
@@ -36,7 +34,7 @@ AVAILABLE VARIABLES:
     {% endif %}
   {% else %}
     text-text-inv
-    bg-bg-inv bg-blend-luminosity bg-center
+    bg-bg-inv bg-top border-bg-inv bg-no-repeat bg-cover @md:bg-contain
     {{ padding_classes }}
   {% endif %}
 {% endcapture %}
@@ -49,33 +47,47 @@ AVAILABLE VARIABLES:
   {% endif %}
 {% endcapture %}
 
-<article class="{{ article_classes }}"
+<article class="{{ article_classes }}">
+  {% if card_theme == 'normal' and has_accessible_image %}
+    <div
+      style="background-image: url({{ image_path }});"
+      class="h-full bg-top bg-cover relative"
+      role="img"
+      aria-label="{{ image_alt_text }}"
+    >
+      <div class="absolute inset-0 bg-bg-inv mix-blend-screen opacity-50"></div>
+    </div>
+  {% endif %}
   {% if card_theme == 'inverted' and has_accessible_image %}
-    style="background-image: url({{ image_path }});"
-  {% endif %}>
-  {% if card_theme == 'normal' %}
-    {% if has_accessible_image %}
+    <div class="h-full">
       <div
+        class="absolute top-0 left-0 w-full h-1/2 bg-top bg-cover"
         style="background-image: url({{ image_path }});"
-        class="h-full bg-center bg-cover"
         role="img"
         aria-label="{{ image_alt_text }}"
       ></div>
-    {% endif %}
-  {% else %}
-    {% if has_accessible_image %}
-      <div class="sr-only" role="img" aria-label="{{ image_alt_text }}"></div>
-      {% render 'news_card/blue_gradient.liquid', class: 'absolute top-0 left-0 w-full h-full' %}
-    {% endif %}
+    </div>
   {% endif %}
-  <div class="row-start-2 grid gap-3 z-10 {{ content_area_wrapper_classes }}">
-    {% render 'news_card/content_area.liquid', title: title, description: description, author: author, date: date, card_theme: card_theme %}
-    <div class="w-max">
+  <div class="row-start-2 h-full grid grid-rows-[auto,1fr] gap-6 z-10 {{ content_area_wrapper_classes }}">
+    <div class="flex flex-col gap-2">
+      {% render 'news_card/content_area.liquid',
+        title: title,
+        description: description,
+        author: author,
+        date: date,
+        card_theme: card_theme
+      %}
+    </div>
+    <div class="flex flex-col justify-end items-start">
       {% if card_theme == 'normal' %}
         {% render 'button', href: post_link, text: link_text, variant: 'secondary' %}
       {% else %}
         {% render 'text-link', text: link_text, href: post_link, class: 'text-text-inv' %}
       {% endif %}
-      </div>
+    </div>
   </div>
+  {% if card_theme == 'inverted' %}
+    <div class="sr-only" role="img" aria-label="{{ image_alt_text }}"></div>
+    {% render 'news_card/blue_gradient.liquid', class: 'absolute top-0 left-0 w-full h-full' %}
+  {% endif %}
 </article>
