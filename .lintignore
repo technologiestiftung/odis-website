@@ -3,5 +3,6 @@ _site
 source/assets/js/**/*.js
 source/**/*.{chunk,min}.js
 source/**/*.js.map
+source/**/*.geojson
 source/projekte/grundsicherung/js/app.*.js
 source/projekte/grundsicherung/js/*.chunk.js
