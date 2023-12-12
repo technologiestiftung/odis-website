@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
 
   // grundsicherung files
   eleventyConfig.addPassthroughCopy(
-    "source/projekte/grundsicherung/src/fonts/*"
+    "source/projekte/grundsicherung/src/fonts/*",
   );
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/js/*");
   eleventyConfig.addPassthroughCopy("source/projekte/grundsicherung/public/*");
