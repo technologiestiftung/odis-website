@@ -1,12 +1,31 @@
 {% capture primary_color_classes %}
   {% if card_theme == 'normal' %}
-    text-headlines
+    text-links
+    group-focus-visible:ring-links
+    group-focus-visible:ring-offset-bg-alt
+    group-focus-visible:bg-bg-alt
   {% else %}
-    text-headlines-inv
+    text-links-inv
+    group-focus-visible:ring-links-inv
+    group-focus-visible:ring-offset-bg-inv
+    group-focus-visible:bg-bg-inv
   {% endif %}
+  group-hover:text-links-active
+  group-focus-visible:ring-2
+  group-focus-visible:ring-offset-8
 {% endcapture %}
 
-{% render 'heading', size: 'lg', text: title, class: primary_color_classes %}
+<a
+  href="{{ post_link }}"
+  title="{{ post_link_text }}"
+  {% if card_theme == 'inverted' %}
+    rel="noopener noreferrer"
+    target="_blank"
+  {% endif %}
+  class="group outline-none"
+>
+  {% render 'heading', size: 'lg', text: title, class: primary_color_classes %}
+</a>
 <p class="line-clamp-7">{{ description }}</p>
 <div class="order-first text-sm {{ primary_color_classes }} flex justify-between gap-3">
   {% if author %}
