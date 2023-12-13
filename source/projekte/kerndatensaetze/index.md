@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Kerndatensätze
 blogLinkTitle: "Hier geht's zur Publikation"
 blogLink: /assets/file-download/ODIS_Kerndatensaetze.pdf

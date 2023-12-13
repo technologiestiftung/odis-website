@@ -12,11 +12,14 @@
 {% endcomment %}
 {% assign shadowType = shadowType | default: 'full' %}
 
-<div class="{{ class }} grid xl:grid-cols-12 relative @container w-full">
-  <div class="
-    p-0.5 bg-line-dark col-span-12 relative @container/mockup w-full
-    shadow-secondary @lg:shadow-secondary-md @2xl:shadow-secondary-lg @5xl:shadow-secondary-2xl
-  ">
+<div class="{{ class }} grid @xl:grid-cols-12 relative @container w-full">
+  <div
+    class="
+      p-0.5 bg-line-dark col-span-12 relative @container/mockup w-full
+      shadow-secondary @lg:shadow-secondary-md @2xl:shadow-secondary-lg @5xl:shadow-secondary-2xl
+      @2xl:col-start-2 @2xl:col-span-10
+    "
+  >
     {% comment %} DESKTOP MOCKUP {% endcomment %}
     {% if showImageInMockup %}
       <div class="h-10 @xl/mockup:h-12 bg-line-dark relative">
@@ -33,7 +36,7 @@
         </span>
       </div>
     {% endif %}
-    <img 
+    <img
       class="
         w-full h-auto object-cover
         {% if showImageInMockup %}
@@ -44,12 +47,13 @@
       "
       src="{{ heroImage }}"
       alt="Screenshot für das Projekt: '{{ title }}'"
-    />
+    >
   </div>
-  <div class="grid grid-cols-12 col-span-12 gap-8 px-4 @sm:px-6 items-end relative">
+  <div class="grid grid-cols-12 col-span-12 items-end relative">
     <div
       class="
-        col-start-1 col-span-7 pt-6
+        col-start-1 col-span-7 pt-6 pl-4 @sm:pl-6
+        @2xl:col-start-2 @2xl:col-span-5
         {% if buttonLink and buttonLinkTitle %}
           min-h-[5rem]
         {% else %}
@@ -58,8 +62,7 @@
       "
     >
       {% if buttonLink and buttonTitle %}
-        {%
-          render 'button',
+        {% render 'button',
           text: buttonTitle,
           href: buttonLink,
           target: '_blank',
@@ -70,7 +73,7 @@
     </div>
     {% if mobileImage != blank %}
       <div
-        class="h-full col-start-9 col-span-4 @xl:col-start-10 @xl:col-span-3 relative @container/mockup"
+        class="h-full col-start-9 col-span-4 @2xl:col-start-9 @2xl:col-span-3 relative @container/mockup mr-4 @sm:mr-6"
       >
         <div
           aria-hidden="true"

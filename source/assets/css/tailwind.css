@@ -156,6 +156,16 @@
   }
 }
 
+@layer components {
+  .grid-container {
+    @apply container mx-auto grid grid-cols-12 gap-4 @sm:gap-6 px-4 @sm:px-6;
+  }
+
+  .grid-container > * {
+    @apply col-start-1 col-span-12 @lg:col-start-2 @lg:col-span-10;
+  }
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   position: relative;

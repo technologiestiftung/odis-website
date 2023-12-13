@@ -1,4 +1,4 @@
-{% comment %} 
+{% comment %}
   AVAILABLE VARIABLES:
   - tag: The HTML tag to use (optional: defaults to 'p')
   - text: The text to display (required)
@@ -17,6 +17,7 @@
   class="
     {{ class }}
     max-w-prose
+    hyphenate
     {% if size == 'lg' %}
       text-lg lg:text-xl !leading-relaxed mb-6
     {% else %}

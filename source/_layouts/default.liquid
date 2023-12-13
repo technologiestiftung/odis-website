@@ -4,9 +4,9 @@
 
 <!doctype html>
 <html lang="de">
-  {% render "head.liquid", external_libs: external_libs, title: title, base_title: config.title %}
-  <body>
-    {% include "topnav.liquid" %}
+  {% render 'head.liquid', external_libs: external_libs, title: title, base_title: config.title %}
+  <body class="@container">
+    {% include 'topnav.liquid' %}
     <main>
       {{ content }}
     </main>

@@ -6,6 +6,8 @@ categories: aktuelles
 visible: true
 tags: post
 urlText: Zum Blogbeitrag
+heroImagePath: /assets/images/Bienen_IHK.jpg
+heroImageAltText: Student:innen der HWR stellen Projekte auf ein Screen vor
 ---
 
 ## Offene Daten als Basis für nachhaltige Anwendungsfälle

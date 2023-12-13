@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Dashboard der Stadtbibliothek Pankow
 blogLinkTitle: "Hier geht's zum Dashboard"
 blogLink: https://bibliotheksdaten.odis-berlin.de/pankow/

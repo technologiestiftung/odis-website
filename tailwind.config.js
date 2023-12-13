@@ -87,18 +87,31 @@ module.exports = {
         "out-extreme": "cubic-bezier(.12,.98,.13,.98)",
       },
       aria: {
-        current: "current=\"true\"",
+        current: 'current="true"',
+      },
+      lineClamp: {
+        7: "7",
       },
     },
   },
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/container-queries"),
+    require("@tailwindcss/line-clamp"),
     require("tailwindcss-touch")(),
     plugin(function ({ addUtilities }) {
       addUtilities({
         ".text-balance": {
           "text-wrap": "balance",
+        },
+        ".text-pretty": {
+          "text-wrap": "pretty",
+        },
+        ".hyphenate": {
+          "hyphenate-limit-after": "1",
+          "hyphenate-limit-before": "3",
+          "-webkit-hyphens": "auto",
+          hyphens: "auto",
         },
       });
     }),
