@@ -36,7 +36,10 @@ pagination:
       {% endcapture %}
 
         {% if post.data.tags contains 'project' %}
-          <div>Project</div>
+          {%
+            render 'project-thumbnail',
+            project: post,
+          %}
         {% else %}
           {% render 'news_card',
             title: post.data.title,

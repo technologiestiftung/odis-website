@@ -26,33 +26,10 @@ title: Projekte
       {% assign projects = collections.project %}
       {% assign projectsSorted = projects | sort: 'date' | reverse %}
       {% for project in projectsSorted %}
-        {% if project.data.visible == true %}
-          {% capture heroImage %}{{project.url}}{{project.data.heroImage}}{% endcapture %}
-          {% if project.data.mobileImage %}
-            {% capture mobileImage %}{{project.url}}{{project.data.mobileImage}}{% endcapture %}
-          {% else %}
-            {% assign mobileImage = false %}
-          {% endif %}
-          <a href="{{project.url}}" title="{{ project.data.title }}">
-            {%
-              render 'project-mockups',
-              heroImage: heroImage,
-              mobileImage: mobileImage,
-              showImageInMockup: project.data.showImageInMockup,
-              projectUrlWithoutProtocol: project.data.projectUrlWithoutProtocol,
-            %}
-            {%
-              render 'heading',
-              text: project.data.title,
-              size: 'lg',
-            %}
-            {%
-              render 'paragraph',
-              text: project.data.metaDescription,
-            %}
-            {% render 'button', text: 'Projekt ansehen', tag: 'span', variant: 'secondary' %}
-          </a>
-        {% endif %}
+        {%
+          render 'project-thumbnail',
+          project: project,
+        %}
       {% endfor %}
     </div>
   </div>
