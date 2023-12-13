@@ -7,4 +7,6 @@ categories: aktuelles
 visible: true
 link: https://opendata.okfn.de/books/open-data-in-der-praxis/page/lisa-stubert-klemens-maget-open-data-informationsstelle-berlin
 urlText: Zum Interview
+heroImagePath: /assets/images/odis-flyer-din-neu.jpeg
+heroImageAltText: Odis double sided flyer with some icons ans the text "Komm mit auf die open data journey"
 ---

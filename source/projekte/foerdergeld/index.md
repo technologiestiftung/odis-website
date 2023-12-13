@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Förderdaten Recherchetool
 blogLinkTitle: "Hier geht's zum interaktiven Recherchetool"
 blogLink: http://zuwendungsdatenbank.lab.technologiestiftung-berlin.de/

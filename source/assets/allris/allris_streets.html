@@ -1,18 +1,13 @@
 <!doctype html>
 <html>
+
   <head>
     <meta charset="utf-8" />
     <title>
       Erwähnungen von Straßennamen in BVV-Sitzungen in Treptow-Köpenick
     </title>
-    <meta
-      name="viewport"
-      content="initial-scale=1,maximum-scale=1,user-scalable=no"
-    />
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet" />
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
     <link rel="stylesheet" href="/assets/css/main.css" />
     <style>
@@ -20,6 +15,7 @@
         margin: 0;
         padding: 0;
       }
+
       #map {
         position: absolute;
         top: 0;
@@ -30,6 +26,7 @@
       h5 {
         font-size: 16px;
       }
+
       h6 {
         font-size: 12px;
       }
@@ -40,6 +37,7 @@
           12px/20px "Clan Book",
           sans-serif;
       }
+
       .session {
         margin-bottom: 20px;
         font:
@@ -53,14 +51,12 @@
       }
 
       .colors {
-        background: linear-gradient(
-          to right,
-          #909cc6,
-          #00accf,
-          #2e91d2,
-          #2a49af,
-          #213a8f
-        );
+        background: linear-gradient(to right,
+            #909cc6,
+            #00accf,
+            #2e91d2,
+            #2a49af,
+            #213a8f);
         margin-bottom: 2px;
       }
 
@@ -79,7 +75,8 @@
       }
     </style>
   </head>
-  <body>
+
+  <body class="@container">
     <div id="map"></div>
     <div id="console">
       <div class="session">
@@ -205,14 +202,14 @@
           .setLngLat(coordinates)
           .setHTML(
             "<h5>" +
-              e.features[0].properties.streetName +
-              "</h5>" +
-              '<a style="margin-bottom:0px">Anzahl Erwähnungen: </a><p style="margin-bottom:2px">' +
-              e.features[0].properties.freq +
-              "</p>" +
-              '<a style="margin-bottom:0px">Häufige im Zusammenhang stehende Begriffe: </a><p style="margin-bottom:0px">' +
-              FreqWordsSel +
-              "</p>",
+            e.features[0].properties.streetName +
+            "</h5>" +
+            '<a style="margin-bottom:0px">Anzahl Erwähnungen: </a><p style="margin-bottom:2px">' +
+            e.features[0].properties.freq +
+            "</p>" +
+            '<a style="margin-bottom:0px">Häufige im Zusammenhang stehende Begriffe: </a><p style="margin-bottom:0px">' +
+            FreqWordsSel +
+            "</p>",
           )
 
           .addTo(map);
@@ -229,4 +226,5 @@
       });
     </script>
   </body>
+
 </html>

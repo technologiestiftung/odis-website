@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Berliner Badestellen
 blogLinkTitle: "Hier geht's zum Projekt"
 blogLink: https://www.badegewaesser-berlin.de/

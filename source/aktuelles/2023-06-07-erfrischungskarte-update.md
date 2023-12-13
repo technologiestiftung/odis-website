@@ -7,4 +7,6 @@ categories: aktuelles
 visible: true
 link: https://www.technologiestiftung-berlin.de/blog/erfrischungskarte-update
 urlText: Zum Interview
+heroImagePath: /assets/images/csm_Image_from_iOS_aa0067f110.jpg
+heroImageAltText: A man sitting on a concrete step next to green grass and nature using a laptop
 ---

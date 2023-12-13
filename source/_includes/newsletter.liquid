@@ -1,0 +1,31 @@
+{% comment %}
+  AVAILABLE VARIABLES:
+  - class: Any additional classes to add to the tag (optional)
+{% endcomment %}
+<div class="{{class}} bg-bg-alt mt-40 py-20">
+  <!-- newsletter & kontakt -->
+  <section class="container mx-auto px-4 sm:px-6 gap-4 sm:gap-6 grid grid-cols-12">
+    <!-- newsletter -->
+    <div class="col-start-1 col-span-12 sm:col-start-3 lg:col-start-2 sm:col-span-9 lg:col-span-10 flex flex-col mb-16 items-start max-w-[34.5rem]">
+      {% render 'heading', text: 'Immer up to date?' %}
+      {% render 'paragraph',
+        text: 'Immer auf dem neusten Stand: Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden? Melde dich gerne für unseren ODIS-Newsletter an!'
+      %}
+      {% render 'button', text: 'Newsletter Abonnieren', class: 'mt-2' %}
+      <p class="mt-6">
+        Newsletter verpasst?<br>
+        Stöber einfach in unserem
+        <a
+          class="text-links hover:text-links-active focusable underline"
+          href="/aktuelles/archiv/"
+        >
+          Newsletter-Archiv.
+        </a>
+      </p>
+    </div>
+
+    <!-- kontakt -->
+
+    {% render 'contact' %}
+  </section>
+</div>

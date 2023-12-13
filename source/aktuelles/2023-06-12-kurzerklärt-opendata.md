@@ -7,4 +7,6 @@ categories: aktuelles
 visible: true
 link: /ressourcen/einstiegopendata/
 urlText: Zum Kurz erklärt
+heroImagePath: /assets/images/open-data-in-der-berliner-verwaltung.png
+heroImageAltText: Die erste PDF-Seite der Ressource "Open Data in der Berliner Verwaltung"
 ---
