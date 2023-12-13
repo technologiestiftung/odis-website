@@ -1,4 +1,13 @@
-<div>
-  <img class="img-fluid" src="{{ src }}" alt="{{ caption }}" />
-  <div class="mt-2">{{ caption }}</div>
-</div>
+<figure class="mt-10">
+  <img src="{{ src }}" alt="{{ caption }}" class="
+      mb-0 max-w-full sm:w-screen sm:max-w-[100vw]
+      sm:ml-[calc((var(--marginSize)+(var(--gridGap)*2)+var(--columnSize))*-1)]
+    " />
+  <figcaption class="
+      mt-2 text-xs opacity-70 transition-opacity
+      hover:opacity-100 focus-visible:opacity-100
+      focusable
+    " tabindex="0">
+    {{ caption }}
+  </figcaption>
+</figure>

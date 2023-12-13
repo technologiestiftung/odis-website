@@ -20,9 +20,7 @@ Mit der Kiezcolors Webanwendung, kann die Verteilung der Flächennutzung in eine
 
 **Die Anwendung basiert komplett auf offenen Flächennutzungsdaten (ALKIS) aus dem [Geoportal der Stadt Berlin](https://fbinter.stadt-berlin.de/fb/).** Der Code zur Anwendung ist in [diesem](https://github.com/technologiestiftung/kiezcolors/) Repository zu finden. Die Anwendung entstand unter anderem für das Kiezlabor - ein Projekt des CityLABs, das im Rahmen der Strategie Gemeinsam Digital: Berlin realisiert wurde.
 
-<center>
 <span style="max-width:500px; display: inline-block;">
 {% include "macro-image-section-small-shadow.html", src:"/assets/images/postcard_kiezcolors.png", caption:"Beispiel Poskarte" %}
 </span>
-</center>
 <br>

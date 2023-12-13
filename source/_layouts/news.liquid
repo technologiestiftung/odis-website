@@ -22,50 +22,74 @@ layout: default
   type="text/javascript"
   src="/assets/js/tableOfContents.js"
 ></script>
-<section class="bg-bg-alt" aria-label="Einführung">
-  <div class="container max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
-    <div class="col-span-1 lg:col-span-8 py-10 pl-6 pr-6">
-      {%
-        render 'paragraph',
-        text: formattedDate,
-        class: 'opacity-70',
-      %}
-      {%
-        render 'heading',
-        tag: 'h1',
-        text: title,
-        size: 'xxl',
-      %}
-      {%
-        render 'paragraph',
-        text: metaDescription,
-        size: 'lg',
-      %}
+<div class="w-screen overflow-x-hidden pb-[8%]">
+  <section class="bg-bg-alt" aria-label="Einführung">
+    <div class="grid-container">
+      <div class="lg:col-start-2 lg:col-span-5 py-10">
+        {%
+          render 'paragraph',
+          text: formattedDate,
+          class: 'opacity-70',
+        %}
+        {%
+          render 'heading',
+          tag: 'h1',
+          text: title,
+          size: 'xxl',
+        %}
+        {%
+          render 'paragraph',
+          text: metaDescription,
+          size: 'lg',
+        %}
+      </div>
+      {% if heroImagePath and heroImageAltText %}
+        <div
+          class="h-72 lg:h-[108%] row-start-1 row-end-2 col-span-12 lg:col-start-8 lg:col-span-4 relative"
+          role="figure"
+          aria-label="{{ heroImageAltText }}"
+        >
+          <div
+            class="
+              absolute top-0 bg-cover bg-center
+              w-[110vw] h-full
+              -left-6
+              sm:left-[calc((1.5rem+var(--marginSize))*-1)]
+              lg:left-0
+              lg:w-[calc(100%+var(--marginSize)+10px)]
+            "
+            style="background-image: url({{ heroImagePath }});"
+          ></div>
+          <div
+            class="
+              absolute top-0 bg-cover bg-center
+              w-[110vw] h-full
+              -left-6
+              pointer-events-none
+              sm:left-[calc((1.5rem+var(--marginSize))*-1)]
+              lg:left-0
+              lg:w-[calc(100%+var(--marginSize)+10px)]
+              bg-bg-inv mix-blend-screen opacity-50
+            "
+            aria-hidden="true"
+          ></div>
+        </div>
+      {% endif %}
     </div>
-    {% if heroImagePath and heroImageAltText %}
-      <div
-        class="h-72 lg:h-[108%] col-span-1 lg:col-span-4 bg-cover bg-center"
-        style="background-image: url({{ heroImagePath }});"
-        role="figure"
-        aria-label="{{ heroImageAltText }}"
-      ></div>
-    {% endif %}
-  </div>
-</section>
+  </section>
+</div>
 
-<section class="pt-4 md:pt-16 pb-64" aria-label="Beitrag">
-  <div
-    class="
-      container max-w-6xl mx-auto grid
-      md:grid-cols-12 md:gap-8
-    "
-  >
-    <div class="md:col-start-9 xl:col-start-10 md:col-span-3 py-4 flex flex-col gap-6 pl-6 md:pl-0 order-first md:order-last">
-      <div class="sticky w-full top-6" id="toc-target">
+<section aria-label="Beitrag">
+  <div class="grid-container">
+    <div class="pt-16 flex flex-col gap-6 order-first lg:order-last lg:col-start-9 lg:col-span-3 z-0">
+      <div class="sticky w-full top-6 lg:pb-48" id="toc-target">
         <span id="toc-label" class="font-bold text-headlines">Auf dieser Seite</span>
       </div>
     </div>
-    <div class="md:col-span-7 pl-6 prose prose-a:focusable" id="toc-content">
+    <div
+      class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10"
+      id="toc-content"
+    >
       {{ content }}
     </div>
   </div>
