@@ -38,18 +38,12 @@ layout: default
   projectUrlWithoutProtocol: projectUrlWithoutProtocol
 %}
 
-<section class="pb-64 px-4 sm:px-6">
-  <div
-    class="
-      container max-w-6xl mx-auto grid
-      md:grid-cols-12 md:gap-8
-      px-4 sm:px-6
-    "
-  >
-    <div class="md:col-span-8 xl:col-start-1 xl:col-span-6 prose ">
+<section class="pb-64">
+  <div class="grid-container">
+    <div class="md:col-span-6 md:col-start-2 prose pl-4 sm:pl-6">
       {{ content }}
     </div>
-    <aside class="md:col-start-9 md:col-span-4 xl:col-start-10 xl:col-span-3 py-4 flex flex-col gap-6">
+    <aside class="md:col-start-9 md:col-span-3 py-4 flex flex-col gap-6">
       <dl class="sticky w-full top-6">
         {% if period %}
           {%
@@ -95,9 +89,8 @@ layout: default
                   %}
                 </li>
               {% endfor %}
-            </ul>    
+            </ul>
           </dd>
-          
         {% endif %}
 
         {% if gitHubLink %}

@@ -6,10 +6,10 @@ title: Datenqualität und Maschinenlesbarkeit
 # Datenqualität und Maschinenlesbarkeit offener Daten
 
 Eine Datenveröffentlichung ist kein Selbstzweck. Die Idee von Open Data ist, dass Ihre Daten von anderen betrachtet, ausgewertet und gegebenfalls sogar auf vielfältige Art und Weise weiterverarbeitet werden können.
-Datennutzer:innen wird diese Weiterverarbeitung erleichtert, wenn die Daten in guter Qualität bereitgestellt werden. Doch was bedeutet das?  
+Datennutzer:innen wird diese Weiterverarbeitung erleichtert, wenn die Daten in guter Qualität bereitgestellt werden. Doch was bedeutet das?
 
 Datenqualität hat viele Facetten. Ein wichtiger Aspekt für offene Datensätze ist, dass diese maschinenlesbar sind, also von einem Computer bzw. von Software verarbeitet werden können.
-In diesem Video-Tutorial fokussieren wir uns auf Maschinenlesbarkeit tabellarischer Daten und die beiden Dateiformate **CSV** und **XLSX** (Excel).  
+In diesem Video-Tutorial fokussieren wir uns auf Maschinenlesbarkeit tabellarischer Daten und die beiden Dateiformate **CSV** und **XLSX** (Excel).
 
 #### Im Videotutorial sehen Sie:
 
@@ -26,7 +26,7 @@ In diesem Video-Tutorial fokussieren wir uns auf Maschinenlesbarkeit tabellarisc
 
 #### Alles auf einen Blick - Der Datenqualitäts-Spickzettel
 
-Eine Zusammenfassung unserer Empfehlungen für maschinenlesbare, offene Daten finden Sie in unserem Handout, welches Sie [hier](/assets/file-download/Handout_Maschinenlesbarkeit.pdf) herunterladen können. 
+Eine Zusammenfassung unserer Empfehlungen für maschinenlesbare, offene Daten finden Sie in unserem Handout, welches Sie [hier](/assets/file-download/Handout_Maschinenlesbarkeit.pdf) herunterladen können.
 
 <center>
   <object data="/assets/file-download/Handout_Maschinenlesbarkeit.pdf" type="application/pdf" class="pdf">
@@ -36,7 +36,6 @@ Eine Zusammenfassung unserer Empfehlungen für maschinenlesbare, offene Daten fi
 </center>
 <br>
 <br>
-
 
 #### Expert:in werden - Der NQDM Leitfaden für qualitativ hochwertige Daten und Metadaten
 

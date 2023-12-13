@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Prüftool für Geodaten
 blogLinkTitle: "Hier geht's zum Schema-Validator"
 blogLink: http://odis-berlin.de/projekte/xml-validator/tool

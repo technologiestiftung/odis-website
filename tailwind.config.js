@@ -89,16 +89,29 @@ module.exports = {
       aria: {
         current: 'current="true"',
       },
+      lineClamp: {
+        7: "7",
+      },
     },
   },
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/container-queries"),
+    require("@tailwindcss/line-clamp"),
     require("tailwindcss-touch")(),
     plugin(function ({ addUtilities }) {
       addUtilities({
         ".text-balance": {
           "text-wrap": "balance",
+        },
+        ".text-pretty": {
+          "text-wrap": "pretty",
+        },
+        ".hyphenate": {
+          "hyphenate-limit-after": "1",
+          "hyphenate-limit-before": "3",
+          "-webkit-hyphens": "auto",
+          hyphens: "auto",
         },
       });
     }),

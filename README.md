@@ -100,7 +100,7 @@ Specify the site `title`, `metaDescription` in the front matter section. In adit
 ```
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title:  Kita-Suche in Berlin
 metaDescription: Lorem ipsum...
 date: 2019-12-24
@@ -153,7 +153,7 @@ Please find comments in yaml-file below and follow.
 
 ```yaml
 ---
-tags: project
+tags: ['project','post']
 title: "Grundsicherung" #add individual project name
 blogLinkTitle: "Hier geht's zu den HG Infos"
 #blogLink: /aktuelles

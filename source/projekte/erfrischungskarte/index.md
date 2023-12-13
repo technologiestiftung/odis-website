@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Erfrischungskarte
 blogLinkTitle: "Hier geht's zur Karte"
 blogLink: https://erfrischungskarte.odis-berlin.de/

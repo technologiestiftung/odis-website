@@ -6,7 +6,10 @@ categories: aktuelles
 visible: true
 tags: post
 urlText: Zum Blogbeitrag
+heroImagePath: /assets/images/gender-mainstreaming-berlin.png
+heroImageAltText: Cover des Berliner Handbuchs zu Gender Mainstreaming in der Stadtentwicklung, Senatsverwaltung für Stadtentwicklung, 2011
 ---
+
 ## Gender Data und Open Data Berlin
 
 Die Unterrepräsentanz von Frauen und frauenspezifischen Daten in Datensätzen wird zunehmend kritisch gesehen, da sie konkrete Benachteiligung in einer Vielzahl von Lebenssituationen manifestiert.
@@ -14,28 +17,30 @@ In diesem Blogpost betrachten wir die Bedeutung von Gender Data insgesamt und kl
 
 ## Hintergrund
 
-### Eine Stadt für Alle? 
+### Eine Stadt für Alle?
 
-Morgens mit dem Auto ins Büro, abends wieder nach Hause – ein recht simples Mobilitätsverhalten, auf das jahrzehntelang die Verkehrsplanung in den meisten westlichen Städten ausgerichtet war. Dieser Alltag funktioniert aber nicht unbedingt für alle Stadtbewohner:innen. Wie man unterwegs ist und welche Anforderungen sich daraus an die Stadt ergeben, hat nicht zuletzt auch etwas mit dem sozialen Geschlecht (Gender) zu tun – mit klassischen Mann-Frau-Rollenbildern, Erwartungen & Normen, sowie gesellschaftlichen Strukturen. Frauen und insbesondere Mütter legen tendenziell die meisten Wege zurück, unter anderem für Erwerbsarbeit, Kinderbetreuung, Pflege von Angehörigen und Einkauf. Sie nutzen dabei überwiegend öffentliche Verkehrsmittel und Fußwege, welche lange in der Planung vernachlässigt wurden. Unter den Stichworten *feministische Stadtplanung* und *Gender Planning* wurde in den vergangenen Jahren dazu geforscht und berichtet, wie Städte so gestaltet werden können, dass sie für alle Bewohner:innen gut funktionieren [1,2,3]. Auch in Berlin verfolgt die Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen mit dem Konzept des *Gender Mainstreaming* das Ziel, die unterschiedlichen Lebensbedingungen und Bedürfnisse möglichst aller Berliner:innen zu berücksichtigen [4].
+Morgens mit dem Auto ins Büro, abends wieder nach Hause – ein recht simples Mobilitätsverhalten, auf das jahrzehntelang die Verkehrsplanung in den meisten westlichen Städten ausgerichtet war. Dieser Alltag funktioniert aber nicht unbedingt für alle Stadtbewohner:innen. Wie man unterwegs ist und welche Anforderungen sich daraus an die Stadt ergeben, hat nicht zuletzt auch etwas mit dem sozialen Geschlecht (Gender) zu tun – mit klassischen Mann-Frau-Rollenbildern, Erwartungen & Normen, sowie gesellschaftlichen Strukturen. Frauen und insbesondere Mütter legen tendenziell die meisten Wege zurück, unter anderem für Erwerbsarbeit, Kinderbetreuung, Pflege von Angehörigen und Einkauf. Sie nutzen dabei überwiegend öffentliche Verkehrsmittel und Fußwege, welche lange in der Planung vernachlässigt wurden. Unter den Stichworten _feministische Stadtplanung_ und _Gender Planning_ wurde in den vergangenen Jahren dazu geforscht und berichtet, wie Städte so gestaltet werden können, dass sie für alle Bewohner:innen gut funktionieren [1,2,3]. Auch in Berlin verfolgt die Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen mit dem Konzept des _Gender Mainstreaming_ das Ziel, die unterschiedlichen Lebensbedingungen und Bedürfnisse möglichst aller Berliner:innen zu berücksichtigen [4].
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/gender-mainstreaming-berlin.png", caption:"Cover des Berliner Handbuchs zu Gender Mainstreaming in der Stadtentwicklung, Senatsverwaltung für Stadtentwicklung, 2011" %}
 </center>
 <br>
 
-### Die Bedeutung von Daten 
+### Die Bedeutung von Daten
 
 Diese Ungleichheit wird nicht nur in der Stadtplanung wirksam, sondern auch in weiteren zentralen Lebensbereichen wie der medizinischen Versorgung oder der politischen Teilhabe. Daten spielen in diesem Zusammenhang eine wichtige Rolle! **Durch geschlechterspezifische Daten kann Geschlechter(un)gerechtigkeit gemessen und sichtbar gemacht werden.** Dadurch werden Handlungsbedarfe sichtbar und konkrete Ziele für die Gleichstellung der Geschlechter können formuliert und gemessen werden. Datenerhebungen und Datenanalysen, die nach Geschlechtern differenzieren, können außerdem zeigen, ob und wie sich die Bedürfnisse und Lebensrealitäten der Geschlechter unterscheiden. Unterschiedliche Bedürfnisse ergeben sich dabei nicht unbedingt direkt aus dem biologischen Geschlecht, sondern auch aus Normen, gesellschaftlichen Erwartungen und strukturellen Faktoren. Nur wenn der Status Quo bekannt ist und man die unterschiedlichen Bedürfnisse und Lebensrealitäten versteht, können Politik, Wirtschaft und andere Organisationen und Institutionen zielgruppen- und gendergerechter handeln. Auch die Senatsverwaltung für Arbeit, Soziales, Gleichstellung, Integration, Vielfalt und Antidiskriminierung verweist auf ihrer Website darauf, dass „geschlechterdifferenzierte Daten […] für die Gleichstellungspolitik des Senats von zentraler Bedeutung“ sind [5].
 
 ### Daten sind mehr als Zahlen
+
 Wichtig ist auch: Daten sind nicht nur Zahlen. Sie spiegeln immer auch Werte, Erfahrungen und Perspektiven der Menschen wider, die die Daten erheben und Datensysteme entwickeln. **Damit haben Daten auch das Potenzial, Machtstrukturen und Normen zu verinnerlichen und weiterzugeben.** Die historische und bis heute bestehende Über-Repräsentanz männlicher Perspektiven zeigt sich auch im Bereich Daten. Dabei ist die Annahme, alles Männliche sei die Norm und allgemeingültig, sowohl Grund als auch Folge der sogenannten Gender Data Gap. Zahlreiche Beispiele für diese Gender Data Gap und die Folgen davon führt Caroline Criado-Perez in ihrem Buch "Unsichtbare Frauen. Wie eine von Daten beherrschte Welt die Hälfte der Bevölkerung ignoriert" aus [6]. Welche unterschiedlichen Bedürfnisse ergeben sich aus dem unterschiedlichen Mobilitätsverhalten von Frauen und Männern bezüglich Infrastruktur, Winterdienst etc.? Profitieren Mädchen und Jungen gleichermaßen von Fördergeldern, zum Beispiel für Sportvereine? Gender Data versucht, Antworten auf solche Fragen zu liefern und damit eine Daten- und Entscheidungsgrundlage für mehr Gleichberechtigung zu geben.
 
 ### Was ist die Gender Data Gap?
+
 Die Gender Data Gap lässt sich als geschlechterbezogene Datenlücke übersetzen. Sie bezieht sich auf drei verschiedene Arten von Gender Data:
+
 - **Daten, die geschlechterdifferenziert erhoben und analysiert werden** und dadurch Unterschiede zwischen den Geschlechtern sichtbar machen können.
 - **Daten, die Themen behandeln, die insbesondere Mädchen und Frauen betreffen**, zum Beispiel Sorgearbeit oder weibliche Gesundheit.
 - **Daten, die die Wirkung des sozialen Geschlechts (Gender) und von Geschlechternormen auf die Geschlechter untersuchen.**
-
 
 Das nicht zufällige sondern strukturell bedingte Fehlen von Daten in diesen Kategorien beschreibt die Gender Data Gap. Wie ein Datensatz aus der ersten Kategorie, den geschlechterdifferenzierten Daten, aussehen kann, zeigt das nachfolgende Beispiel aus dem Open Data Portal.
 
@@ -58,14 +63,13 @@ Im ersten Schritt wurden die **3.227 Metadateneinträge aus dem Datenportal dana
 </script></center>
 <br>
 
-
-Anschließend wurden der Titel, die Beschreibung sowie die Tags der Metadateneinträge nach bestimmten Gender-Stichworten durchsucht: „Frau“ oder „Mann“, „weiblich“ oder „männlich“, „Gender“ und „Geschlecht“. Knapp 42%, also 334 der 803 Metadateneinträge, weisen eine solche Gender-Referenz auf. Im Hinterkopf ist bei dieser Zahl zu behalten, dass wir nur die Metadateneinträge untersucht haben und nicht die Datensätze selbst. Es ist also davon auszugehen, dass noch weitere Datensätze einen Gender-Bezug aufweisen, dies jedoch nicht aus den Metadaten erkennbar ist. 
+Anschließend wurden der Titel, die Beschreibung sowie die Tags der Metadateneinträge nach bestimmten Gender-Stichworten durchsucht: „Frau“ oder „Mann“, „weiblich“ oder „männlich“, „Gender“ und „Geschlecht“. Knapp 42%, also 334 der 803 Metadateneinträge, weisen eine solche Gender-Referenz auf. Im Hinterkopf ist bei dieser Zahl zu behalten, dass wir nur die Metadateneinträge untersucht haben und nicht die Datensätze selbst. Es ist also davon auszugehen, dass noch weitere Datensätze einen Gender-Bezug aufweisen, dies jedoch nicht aus den Metadaten erkennbar ist.
 
 <center><iframe title="Anzahl der Metadateneinträge mit und ohne Gender-Referenz" aria-label="Pie Chart" id="datawrapper-chart-tNOqG" src="https://datawrapper.dwcdn.net/tNOqG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 60% !important; border: none;" height="591" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script></center>
 <br>
 
-Ist ein Umfang von 42% Metadateneinträgen mit Gender-Referenz nun viel oder wenig? Das ist an dieser Stelle schwer zu beurteilen, denn es erfordert nicht-vorhandene Richtwerte oder Vergleichswerte anderer Open Data Portale. Es ist jedoch davon auszugehen, dass 100% nicht anzustreben sind, da es nicht bei allen Datensätzen zu natürlichen Personen sinnvoll oder möglich ist, das Geschlecht unter Berücksichtigung der Selbstbestimmung zu bestimmen und zu erheben. Aufschlussreicher als diese einfache Zahl ist es deshalb, die Eigenschaften der Metadateneinträge genauer zu untersuchen. 
+Ist ein Umfang von 42% Metadateneinträgen mit Gender-Referenz nun viel oder wenig? Das ist an dieser Stelle schwer zu beurteilen, denn es erfordert nicht-vorhandene Richtwerte oder Vergleichswerte anderer Open Data Portale. Es ist jedoch davon auszugehen, dass 100% nicht anzustreben sind, da es nicht bei allen Datensätzen zu natürlichen Personen sinnvoll oder möglich ist, das Geschlecht unter Berücksichtigung der Selbstbestimmung zu bestimmen und zu erheben. Aufschlussreicher als diese einfache Zahl ist es deshalb, die Eigenschaften der Metadateneinträge genauer zu untersuchen.
 
 Welche **Art von Gender-Referenz** tritt eigentlich am häufigsten bei den Metadateneinträgen auf? 'Geschlecht' ist mit Abstand der häufigste Begriff, der auf eine Gender-Referenz hinweist. Fast 98% der Gender-Referenzen beruhen auf dem Tag ‚Geschlecht‘ oder mehrfachen Referenzen. Bei den Metadateneinträgen mit mehrfachen Referenzen überwiegt ebenso das Stichwort 'Geschlecht' im Titel oder als Tag. Die Stichwörter ‚Frau/Mann' kommen am seltensten vor: im Titel eines Metadateneintrags nur einmal, in der Beschreibung oder den Tags überhaupt nicht. Sehr selten kommt auch ‚Gender’ vor und nur in Kombination mit anderen Gender-Referenzen.
 
@@ -73,8 +77,6 @@ Welche **Art von Gender-Referenz** tritt eigentlich am häufigsten bei den Metad
 </script></center>
 <br>
 <br>
-
-
 
 <center><iframe title="Anzahl verschiedener Gender-Referenzen in der Übersicht" aria-label="Tabelle" id="datawrapper-chart-pOcAF" src="https://datawrapper.dwcdn.net/pOcAF/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="601" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script></center>
@@ -85,7 +87,6 @@ In weiteren Analysen haben wir außerdem die Kategorien, Herausgeber:innen und T
 <center><iframe title="Anzahl der Metadateneinträge in verschiedenen Kategorien" aria-label="Balken (gestapelt)" id="datawrapper-chart-dNC0c" src="https://datawrapper.dwcdn.net/dNC0c/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="463" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script></center>
 <br>
-
 
 Bei den **Herausgeber:innen der Datensätze** über natürliche Personen zeigt sich eine ähnliche Richtung wie bei den Kategorien. Die Mehrheit der Metadateneinträge insgesamt und dabei 326 der 334 Metadateneinträge mit Gender-Referenz wurde von der Senatsverwaltung für Gesundheit, Pflege und Gleichstellung angelegt, was mit den Kategorien Gesundheit und Sozialleistungen zusammen passt. Insgesamt mehr als 300 Datensätze zu natürlichen Personen wurden vom Amt für Statistik Berlin-Brandenburg und von der Senatsverwaltung für Stadtentwicklung und Wohnen veröffentlicht, jedoch hat davon nur einer bzw. keiner davon eine Gender-Referenz im Metadateneintrag.
 
@@ -104,7 +105,7 @@ Ein Blick auf die Top 15 Tags der Metadateneinträge mit Gender-Referenz kann ei
 </script></center>
 <br>
 
-Sortiert nach den häufigsten Tags bei Metadateneinträgen ohne Gender-Referenz zeigen sich Potenziale, wo vielleicht noch mehr Gender Data eingebunden werden könnte. Die häufigsten Tags ‚LOR‘, ‚Geodaten‘, ‚Karten‘ und ‚Planungsräume‘ weisen auf Daten mit Raumbezug hin. 
+Sortiert nach den häufigsten Tags bei Metadateneinträgen ohne Gender-Referenz zeigen sich Potenziale, wo vielleicht noch mehr Gender Data eingebunden werden könnte. Die häufigsten Tags ‚LOR‘, ‚Geodaten‘, ‚Karten‘ und ‚Planungsräume‘ weisen auf Daten mit Raumbezug hin.
 Allerdings kann auch hier wieder das Harvesting ein Grund für in diesem Fall eine fehlende Gender-Referenz sein. Geodaten werden vom FIS-Broker geharvested, möglicherweise gibt es im FIS-Broker weniger Tags und keinen ‚Geschlecht-Tag‘.
 
 <center><iframe title="Anzahl der Metadateneinträge nach verwendeter Tags, Top 15 ohne Gender-Referenz" aria-label="Balken (gestapelt)" id="datawrapper-chart-1k84m" src="https://datawrapper.dwcdn.net/1k84m/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="501" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
@@ -127,7 +128,7 @@ Das **Python-Skript zur Abfrage und Auswertung der Metadateneinträge** sowie er
 
 ## Quellen
 
-1  Peteranderl, Sonja (2020) [Feministische Stadtplanung.  Ampelfrauen sind erst der Anfang](https://www.spiegel.de/ausland/stadtplanung-wie-koennte-eine-feministische-stadt-aussehen-a-c4b7370d-81ee-4fc8-8965-84312028aaa3)
+1 Peteranderl, Sonja (2020) [Feministische Stadtplanung. Ampelfrauen sind erst der Anfang](https://www.spiegel.de/ausland/stadtplanung-wie-koennte-eine-feministische-stadt-aussehen-a-c4b7370d-81ee-4fc8-8965-84312028aaa3)
 
 2 Jannaschk, Julia (2021) [Feministische Stadtplanung: Eine bessere Stadt für alle](https://www.watson.de/leben/analyse/530137340-feministische-stadtplanung-eine-bessere-stadt-fuer-alle)
 

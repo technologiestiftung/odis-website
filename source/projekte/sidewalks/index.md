@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: project
+tags: ['project','post']
 title: Berliner Gehwegbreiten
 blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://gehwege.citylab-berlin.org/info

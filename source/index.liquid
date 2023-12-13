@@ -20,7 +20,7 @@ external_libs:
     </div>
   </section>
 
-  {% include "highlighted-datasets.liquid" %}
+  {% include 'highlighted-datasets.liquid' %}
 
   <!-- open data reise -->
   <div class="flex justify-stretch py-60 -mt-60 -mb-40 -z-10">
@@ -40,15 +40,9 @@ external_libs:
       alt="Modul Nummer eins"
     >
 
-
-    {%
-      render  'paragraph',
-      text: 'Modul 1 von 5',
-      class: 'inline-block'
-    %}
+    {% render 'paragraph', text: 'Modul 1 von 5', class: 'inline-block' %}
     {% render 'heading', tag: 'h3', size: 'lg', text: 'Datenpotentiale verstehen' %}
-    {%
-      render  'paragraph',
+    {% render 'paragraph',
       text: 'Zu Beginn der Reise stellt sich die Frage, wozu offene Daten gut sind und welches Potenzial in ihnen liegt. Das erste Modul zeigt Nutzungspotenziale.',
       class: 'w-1/2'
     %}
@@ -73,39 +67,9 @@ external_libs:
       </div>
 
       <div class="flex justify-center">
-        {%
-          render 'button.liquid',
-          text: 'Alle Projekte ansehen',
-          inverted: true,
-          class: 'mt-8'
-        %}
+        {% render 'button.liquid', text: 'Alle Projekte ansehen', inverted: true, class: 'mt-8' %}
       </div>
     </div>
   </section>
-
-  <!-- newsletter & kontakt -->
-  <section class="grid grid-cols-12 py-24">
-    <!-- newsletter -->
-    <div class="col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col mb-16 items-start">
-      {% render 'heading', text: 'Immer up to date?' %}
-      {%
-        render 'paragraph',
-        text: 'Immer auf dem neusten Stand: Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin informiert werden? Melde dich gerne für unseren ODIS-Newsletter an!'
-      %}
-      {% render 'button', text: 'Newsletter Abonnieren', class: 'mt-2' %}
-      <p class="mt-6">
-        Newsletter verpasst? Stöber einfach in unserem
-        <a
-          class="text-links underline"
-          href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-pugsca5z-1c6s&_ga=2.134197321.677887372.1591186343-1970435231.1591186343"
-        >
-          Newsletter-Archiv.
-        </a>
-      </p>
-    </div>
-
-    <!-- kontakt -->
-
-    {% render 'contact' %}
-  </section>
 </div>
+{% render 'newsletter' %}

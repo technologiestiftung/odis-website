@@ -1,0 +1,43 @@
+{% comment %}
+  AVAILABLE VARIABLES
+  -------------------
+    project: Project object
+      url: URL of the project
+      data: Project data
+        visible: Whether to show the project (required)
+        metaDescription: Meta description of the project (required)
+        title: Title of the project (required)
+        heroImage: Path to hero image (required)
+        buttonTitle: Title of button (optional)
+        buttonLink: Link of button (optional)
+        showImageInMockup: Whether to show a window header mockup (optional)
+        mobileImage: Path to mobile image (optional)
+        projectUrlWithoutProtocol: Project URL without protocol (https://) (optional if showImageInMockup is false)
+{% endcomment %}
+{% if project.data.visible == true %}
+  {% capture heroImage %}{{project.url}}{{project.data.heroImage}}{% endcapture %}
+  {% if project.data.mobileImage %}
+    {% capture mobileImage %}{{project.url}}{{project.data.mobileImage}}{% endcapture %}
+  {% else %}
+    {% assign mobileImage = false %}
+  {% endif %}
+  <a href="{{project.url}}" title="{{ project.data.title }}">
+    {%
+      render 'project-mockups',
+      heroImage: heroImage,
+      mobileImage: mobileImage,
+      showImageInMockup: project.data.showImageInMockup,
+      projectUrlWithoutProtocol: project.data.projectUrlWithoutProtocol,
+    %}
+    {%
+      render 'heading',
+      text: project.data.title,
+      size: 'lg',
+    %}
+    {%
+      render 'paragraph',
+      text: project.data.metaDescription,
+    %}
+    {% render 'button', text: 'Projekt ansehen', tag: 'span', variant: 'secondary' %}
+  </a>
+{% endif %}
