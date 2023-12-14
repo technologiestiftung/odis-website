@@ -72,7 +72,7 @@ layout: default.liquid
       <div class="not-prose mt-6">
         <ul class="grid grid-cols-3 sm:grid-cols-6 gap-x-6 gap-y-4">
           {% for workArea in workAreas %}
-            <li class="col-span-3 flex flex-col gap-4">
+            <li class="col-span-3 flex sm:flex-col gap-4 items-start">
               <img src="{{ workArea.image }}" alt="{{ workArea.imageAlt }}" class="w-[72px]">
               {%
                 render 'paragraph',
