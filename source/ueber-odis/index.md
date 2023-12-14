@@ -5,6 +5,23 @@ intro: Seit 2018 begleiten wir als Open Data Informationsstelle (ODIS) die Stadt
 missionTitle: Unsere Mision
 missionText: <strong>Auf Augenhöhe mit der Berliner Verwaltung.</strong> Als Open Data Informationsstelle liegt unserer primärer Auftrag darin, für die Berliner Verwaltung Ansprechpartnerin rund um alle Fragen zum Thema Open Data zu sein. Wir sehen uns dabei als Begleiterin und Unterstützerin auf Augenhöhe mit der Berliner Verwaltung.
 teamTitle: Unser ODIS-Team
+introImage: /assets/images/page/island-puzzle.svg
+introImageAlt: Eine Illustration einer Berlin-Karte als verschiedene Puzzlestücke. Jedes Puzzlestück repräsentiert nicht nur einen Stadtteil, sondern auch einen Datensatz oder Aspekt der Arbeit mit offenen Daten.
+moodImage: /assets/images/page/mood-image.jpg
+moodImageAlt: Projektleiterin Lisa-Stubert hält ein Vortrag auf der CityLAB Sommerfest Bühne 2023
+workAreas:
+  - content: <strong>Wir arbeiten</strong> eng mit den mit den behördlichen Open Data Beauftragten zusammen, vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen Ressourcen zum Kompetenzaufbau und Wissenstransfer bereit.
+    image: /assets/images/page/wir-arbeiten.svg
+    imageAlt: An icon of sorts
+  - content: <strong>Wir unterstützen</strong> die Behörden im Data-Governance mit dem Fokus auf Open Data mithilfe geeigneter Methoden.
+    image: /assets/images/page/wir-unterstuetzen.svg
+    imageAlt: An icon of sorts
+  - content: <strong>Wir entwickeln</strong> Open Data Anwendungen und Prototypen gemeinsam mit der Berliner Verwaltung um Informationen greifbar zu machen und mit Daten Neues zu schaffen.
+    image: /assets/images/page/wir-entwickeln.svg
+    imageAlt: An icon of sorts
+  - content: <strong>Wir fördern</strong> als Informations- und Vernetzungsstelle den Austausch mit und zwischen dem Open Data Ökosystem aus Wirtschaft, Zivilgesellschaft, Verwaltung und Wissenschaft.
+    image: /assets/images/page/wir-foerdern.svg
+    imageAlt: An icon of sorts
 team:
   - name: Lisa Stubert
     image: /assets/images/page/profile-lisa.jpg
