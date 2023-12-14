@@ -8,6 +8,8 @@ tags: post
 urlText: Zum Blogbeitrag
 heroImagePath: /assets/images/gender-mainstreaming-berlin.png
 heroImageAltText: Cover des Berliner Handbuchs zu Gender Mainstreaming in der Stadtentwicklung, Senatsverwaltung für Stadtentwicklung, 2011
+author: Klemens Maget
+readingTime: 10-20
 ---
 
 ## Gender Data und Open Data Berlin
@@ -21,9 +23,8 @@ In diesem Blogpost betrachten wir die Bedeutung von Gender Data insgesamt und kl
 
 Morgens mit dem Auto ins Büro, abends wieder nach Hause – ein recht simples Mobilitätsverhalten, auf das jahrzehntelang die Verkehrsplanung in den meisten westlichen Städten ausgerichtet war. Dieser Alltag funktioniert aber nicht unbedingt für alle Stadtbewohner:innen. Wie man unterwegs ist und welche Anforderungen sich daraus an die Stadt ergeben, hat nicht zuletzt auch etwas mit dem sozialen Geschlecht (Gender) zu tun – mit klassischen Mann-Frau-Rollenbildern, Erwartungen & Normen, sowie gesellschaftlichen Strukturen. Frauen und insbesondere Mütter legen tendenziell die meisten Wege zurück, unter anderem für Erwerbsarbeit, Kinderbetreuung, Pflege von Angehörigen und Einkauf. Sie nutzen dabei überwiegend öffentliche Verkehrsmittel und Fußwege, welche lange in der Planung vernachlässigt wurden. Unter den Stichworten _feministische Stadtplanung_ und _Gender Planning_ wurde in den vergangenen Jahren dazu geforscht und berichtet, wie Städte so gestaltet werden können, dass sie für alle Bewohner:innen gut funktionieren [1,2,3]. Auch in Berlin verfolgt die Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen mit dem Konzept des _Gender Mainstreaming_ das Ziel, die unterschiedlichen Lebensbedingungen und Bedürfnisse möglichst aller Berliner:innen zu berücksichtigen [4].
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/gender-mainstreaming-berlin.png", caption:"Cover des Berliner Handbuchs zu Gender Mainstreaming in der Stadtentwicklung, Senatsverwaltung für Stadtentwicklung, 2011" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/gender-mainstreaming-berlin.png", caption:"Cover des Berliner Handbuchs zu Gender Mainstreaming in der Stadtentwicklung, Senatsverwaltung für Stadtentwicklung, 2011" %}
+
 <br>
 
 ### Die Bedeutung von Daten
@@ -44,8 +45,8 @@ Die Gender Data Gap lässt sich als geschlechterbezogene Datenlücke übersetzen
 
 Das nicht zufällige sondern strukturell bedingte Fehlen von Daten in diesen Kategorien beschreibt die Gender Data Gap. Wie ein Datensatz aus der ersten Kategorie, den geschlechterdifferenzierten Daten, aussehen kann, zeigt das nachfolgende Beispiel aus dem Open Data Portal.
 
-<center><iframe title="Beispieldatensatz: Genderstatistik KünstlerInnenförderung 2014                      " aria-label="Tabelle" id="datawrapper-chart-9dSQu" src="https://datawrapper.dwcdn.net/9dSQu/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="454" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script></center>
+<iframe title="Beispieldatensatz: Genderstatistik KünstlerInnenförderung 2014                      " aria-label="Tabelle" id="datawrapper-chart-9dSQu" src="https://datawrapper.dwcdn.net/9dSQu/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="454" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
 
 <br><br>
 
@@ -59,39 +60,45 @@ Die Metadaten, welche sich über die CKAN-API des Datenregisters abrufen lassen,
 
 Im ersten Schritt wurden die **3.227 Metadateneinträge aus dem Datenportal danach gefiltert, ob sie natürliche Personen betreffen** oder nicht, denn geschlechtsbezogene Daten machen am meisten Sinn bei Daten zu natürlichen Personen. Auf den 803 übrig geliebenen Metadateneinträgen, die natürliche Personen beschreiben, basieren alle weiteren Analysen. Dies schließt knapp ein Viertel aller Metadateneinträge mit ein.
 
-<center><iframe title="Anzahl von Metadateneinträgen" aria-label="Torten-diagramm" id="datawrapper-chart-PJPXl" src="https://datawrapper.dwcdn.net/PJPXl/1/" scrolling="no" frameborder="0" style="width: 00; min-width: 60% !important; border: none;" height="421" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script></center>
+<iframe title="Anzahl von Metadateneinträgen" aria-label="Torten-diagramm" id="datawrapper-chart-PJPXl" src="https://datawrapper.dwcdn.net/PJPXl/1/" scrolling="no" frameborder="0" style="width: 00; min-width: 60% !important; border: none;" height="421" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
 <br>
 
 Anschließend wurden der Titel, die Beschreibung sowie die Tags der Metadateneinträge nach bestimmten Gender-Stichworten durchsucht: „Frau“ oder „Mann“, „weiblich“ oder „männlich“, „Gender“ und „Geschlecht“. Knapp 42%, also 334 der 803 Metadateneinträge, weisen eine solche Gender-Referenz auf. Im Hinterkopf ist bei dieser Zahl zu behalten, dass wir nur die Metadateneinträge untersucht haben und nicht die Datensätze selbst. Es ist also davon auszugehen, dass noch weitere Datensätze einen Gender-Bezug aufweisen, dies jedoch nicht aus den Metadaten erkennbar ist.
 
-<center><iframe title="Anzahl der Metadateneinträge mit und ohne Gender-Referenz" aria-label="Pie Chart" id="datawrapper-chart-tNOqG" src="https://datawrapper.dwcdn.net/tNOqG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 60% !important; border: none;" height="591" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script></center>
+<iframe title="Anzahl der Metadateneinträge mit und ohne Gender-Referenz" aria-label="Pie Chart" id="datawrapper-chart-tNOqG" src="https://datawrapper.dwcdn.net/tNOqG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 60% !important; border: none;" height="591" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
 <br>
 
 Ist ein Umfang von 42% Metadateneinträgen mit Gender-Referenz nun viel oder wenig? Das ist an dieser Stelle schwer zu beurteilen, denn es erfordert nicht-vorhandene Richtwerte oder Vergleichswerte anderer Open Data Portale. Es ist jedoch davon auszugehen, dass 100% nicht anzustreben sind, da es nicht bei allen Datensätzen zu natürlichen Personen sinnvoll oder möglich ist, das Geschlecht unter Berücksichtigung der Selbstbestimmung zu bestimmen und zu erheben. Aufschlussreicher als diese einfache Zahl ist es deshalb, die Eigenschaften der Metadateneinträge genauer zu untersuchen.
 
 Welche **Art von Gender-Referenz** tritt eigentlich am häufigsten bei den Metadateneinträgen auf? 'Geschlecht' ist mit Abstand der häufigste Begriff, der auf eine Gender-Referenz hinweist. Fast 98% der Gender-Referenzen beruhen auf dem Tag ‚Geschlecht‘ oder mehrfachen Referenzen. Bei den Metadateneinträgen mit mehrfachen Referenzen überwiegt ebenso das Stichwort 'Geschlecht' im Titel oder als Tag. Die Stichwörter ‚Frau/Mann' kommen am seltensten vor: im Titel eines Metadateneintrags nur einmal, in der Beschreibung oder den Tags überhaupt nicht. Sehr selten kommt auch ‚Gender’ vor und nur in Kombination mit anderen Gender-Referenzen.
 
-<center><iframe title="Anzahl von Gender-Referenzen nach Art der Referenz" aria-label="Pie Chart" id="datawrapper-chart-qjdZS" src="https://datawrapper.dwcdn.net/qjdZS/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 60% !important; border: none;" height="429" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script></center>
+<iframe title="Anzahl von Gender-Referenzen nach Art der Referenz" aria-label="Pie Chart" id="datawrapper-chart-qjdZS" src="https://datawrapper.dwcdn.net/qjdZS/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 60% !important; border: none;" height="429" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
 <br>
 <br>
 
-<center><iframe title="Anzahl verschiedener Gender-Referenzen in der Übersicht" aria-label="Tabelle" id="datawrapper-chart-pOcAF" src="https://datawrapper.dwcdn.net/pOcAF/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="601" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script></center>
+{% capture chart %}
+
+<iframe title="Anzahl verschiedener Gender-Referenzen in der Übersicht" aria-label="Tabelle" id="datawrapper-chart-pOcAF" src="https://datawrapper.dwcdn.net/pOcAF/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="601" data-external="1"></iframe>
+{% endcapture %}
+{% render "macro-content-section", content: chart, class: "px-4 sm:px-6"  %}
+
+<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
 <br>
 
 In weiteren Analysen haben wir außerdem die Kategorien, Herausgeber:innen und Tags der Metadateneinträge mit und ohne Gender-Referenz untersucht. Im Berliner Open Data Portal gibt es insgesamt 22 **Kategorien**, von denen 14 mit den Metadateneinträgen zu Datensätzen über natürliche Personen abgedeckt werden. Einige der Metadateneinträge sind keiner Kategorie zugeordnet. Die Mehrheit der Metadateneinträge mit Gender-Referenz, nämlich 325 Einträge, sind den beiden Kategorien Gesundheit und Sozialleistungen zugeordnet. Es zeigt sich, dass es auch in den Kategorien Demographie, sowie Geographie und Stadtplanung über 100 Metadateneinträge zu Datensätzen, die natürliche Personen beschreiben, gibt, unter diesen jedoch keiner bzw. nur einer eine Gender-Referenz aufweist.
 
-<center><iframe title="Anzahl der Metadateneinträge in verschiedenen Kategorien" aria-label="Balken (gestapelt)" id="datawrapper-chart-dNC0c" src="https://datawrapper.dwcdn.net/dNC0c/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="463" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script></center>
+<iframe title="Anzahl der Metadateneinträge in verschiedenen Kategorien" aria-label="Balken (gestapelt)" id="datawrapper-chart-dNC0c" src="https://datawrapper.dwcdn.net/dNC0c/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="463" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
 <br>
 
 Bei den **Herausgeber:innen der Datensätze** über natürliche Personen zeigt sich eine ähnliche Richtung wie bei den Kategorien. Die Mehrheit der Metadateneinträge insgesamt und dabei 326 der 334 Metadateneinträge mit Gender-Referenz wurde von der Senatsverwaltung für Gesundheit, Pflege und Gleichstellung angelegt, was mit den Kategorien Gesundheit und Sozialleistungen zusammen passt. Insgesamt mehr als 300 Datensätze zu natürlichen Personen wurden vom Amt für Statistik Berlin-Brandenburg und von der Senatsverwaltung für Stadtentwicklung und Wohnen veröffentlicht, jedoch hat davon nur einer bzw. keiner davon eine Gender-Referenz im Metadateneintrag.
 
-<center><iframe title="Anzahl der Metadateneinträge nach Herausgeber:in" aria-label="Balken (gestapelt)" id="datawrapper-chart-v8RDa" src="https://datawrapper.dwcdn.net/v8RDa/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script></center>
+<iframe title="Anzahl der Metadateneinträge nach Herausgeber:in" aria-label="Balken (gestapelt)" id="datawrapper-chart-v8RDa" src="https://datawrapper.dwcdn.net/v8RDa/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
 <br>
 
 Zum einen macht es thematisch natürlich Sinn, dass die Einträge von der Senatsverwaltung für Wissenschaft, Gesundheit und Pflege viele Datensätze zu natürlichen Personen und mit Gender-Referenz haben. Diese Datensätze korrelieren auch mit den beiden Kategorien Gesundheit und Sozialleistungen. Aber um das einzuordnen, müssen wir uns auch ein bisschen die **Hintergründe des Open Data Portals** anschauen. Das Gesundheits- und Sozialinformationssystem (GSI) von der Senatsverwaltung für Wissenschaft, Gesundheit und Pflege ist über einen Harvester angebunden. So wurden Datensätze aus dem GSI nach Themen gebündelt automatisch in das Open Data Portal übertragen. Dieser Harvesting-Prozess könnte auch dazu führen, dass überdurchschnittlich viele und standardisierte Tags vergeben wurden. Bei vielen anderen Datensätzen findet der Metadateneintrag händisch statt. Umfang und Aussagekraft von Titel, Beschreibung und Tags hängen somit stark von dem Wissen und der Bereitschaft der Person ab, die den Eintrag anlegt.
@@ -101,15 +108,15 @@ Im letzten Schritt haben wir uns die **Top 15 Tags der Metadateneinträge** ange
 
 Ein Blick auf die Top 15 Tags der Metadateneinträge mit Gender-Referenz kann einen ersten Eindruck davon geben, wovon die Datensätze handeln. Dabei steht selbstverständlich 'Geschlecht' weit vorne, aber auch ‚GSI‘, ‚Gesundheitsberichterstattung‘, ‚Indikator‘, ‚Altersgruppen‘ sowie ‚Regionalvergleich‘ und ‚Kinder‘. Die Top 15 weisen somit überwiegend einen starken Fokus auf Gesundheit und soziale Faktoren auf.
 
-<center><iframe title="Anzahl der Metadateneinträge nach verwendeter Tags, Top 15 mit Gender-Referenz" aria-label="Balken (gestapelt)" id="datawrapper-chart-C09he" src="https://datawrapper.dwcdn.net/C09he/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="501" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script></center>
+<iframe title="Anzahl der Metadateneinträge nach verwendeter Tags, Top 15 mit Gender-Referenz" aria-label="Balken (gestapelt)" id="datawrapper-chart-C09he" src="https://datawrapper.dwcdn.net/C09he/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="501" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
 <br>
 
 Sortiert nach den häufigsten Tags bei Metadateneinträgen ohne Gender-Referenz zeigen sich Potenziale, wo vielleicht noch mehr Gender Data eingebunden werden könnte. Die häufigsten Tags ‚LOR‘, ‚Geodaten‘, ‚Karten‘ und ‚Planungsräume‘ weisen auf Daten mit Raumbezug hin.
 Allerdings kann auch hier wieder das Harvesting ein Grund für in diesem Fall eine fehlende Gender-Referenz sein. Geodaten werden vom FIS-Broker geharvested, möglicherweise gibt es im FIS-Broker weniger Tags und keinen ‚Geschlecht-Tag‘.
 
-<center><iframe title="Anzahl der Metadateneinträge nach verwendeter Tags, Top 15 ohne Gender-Referenz" aria-label="Balken (gestapelt)" id="datawrapper-chart-1k84m" src="https://datawrapper.dwcdn.net/1k84m/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="501" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script></center>
+<iframe title="Anzahl der Metadateneinträge nach verwendeter Tags, Top 15 ohne Gender-Referenz" aria-label="Balken (gestapelt)" id="datawrapper-chart-1k84m" src="https://datawrapper.dwcdn.net/1k84m/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="501" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
 <br>
 
 ### Fazit

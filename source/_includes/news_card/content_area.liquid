@@ -27,10 +27,20 @@
 >
   {% render 'heading', size: 'lg', text: title, class: primary_color_classes %}
 </a>
+{% if author or readingTime %}
+  <p class="-mt-2 mb-2 flex gap-x-2 flex-wrap opacity-70">
+    {% if author %}
+      <span>Von {{ author }}</span>
+    {% endif %}
+    {% if author and readingTime %}
+      <span class="opacity-50 scale-150">·</span>
+    {% endif %}
+    {% if readingTime %}
+      <span>{{ readingTime }} Minuten</span>
+    {% endif %}
+  </p>
+{% endif %}
 <p class="line-clamp-7">{{ description }}</p>
-<div class="order-first text-sm {{ primary_color_classes }} flex justify-between gap-3">
-  {% if author %}
-    <address class="not-italic">{{ author }}</address>
-  {% endif %}
+<div class="order-first text-sm {{ primary_color_classes }} flex gap-2 opacity-70">
   <time datetime="{{ date | date: "%Y-%m-%d" }}" class="justify-self-end">{{ date | date: '%d.%m.%Y' }}</time>
 </div>

@@ -11,7 +11,7 @@ pagination:
   reverse: true
 ---
 <div class="grid-container">
-  <div class="pt-16 px-4 sm:px-6 max-w-[55ch]">
+  <div class="pt-16 max-w-[50ch]">
     {% render 'heading', text: 'Aktuelles', size: 'xxl', tag: 'h1' %}
     {% render 'paragraph',
       text: 'Bei der ODIS ist viel los. Konferenzen, Vorträge, Workshops, Weiterbildungen und Proto&shy;typen&shy;entwicklung gehören fest in unser Tätigkeitsfeld. Hier informieren wir über neue Aktivitäten.',
@@ -48,6 +48,7 @@ pagination:
             post_link_text: post.data.urlText,
             date: post.date,
             author: post.data.author,
+            readingTime: post.data.readingTime,
             image_path: post.data.heroImagePath,
             image_alt_text: post.data.heroImageAltText,
             theme: theme,

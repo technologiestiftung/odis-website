@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: ['project','post']
+tags: ["project", "post"]
 title: Was kostet wo wie viel?
 metaDescription: Ideation für eine interaktive Visualisierung offener Verwaltungsdaten
 date: 2022-03-28
@@ -21,9 +21,9 @@ Informationen darüber bereitzustellen, wo wieviel öffentliche Gelder ausgegebe
 
 Ein Blick in die Broschüre zeigt aber: Die Übersichtlichkeit und Anordnung der Daten sowie die Vergleichbarkeit zwischen Verwaltungseinheiten und Themenfeldern werden einer modernen, digitalen Datenpräsentation nicht gerecht. Aus Open-Data-Sicht problematisch: Die Informationen sind zwar von jeder und jedem einsehbar, liegen aber nicht im eigentlichen Sinne als offene Daten vor. Die reine Veröffentlichung von Daten im PDF-Format erschwert die Weiterverarbeitung. Potentiell interessierte Nutzer:innen, die die Daten für eigene Analysen oder Präsentationsformen verwenden möchten, müssen die Daten umständlich aus der PDF extrahieren oder gar abtippen.
 
- <center><a href="https://www.berlin.de/sen/finanzen/haushalt/downloads/wkwwv_hv_2017.pdf">
-{% include "macro-image-section-small.html", src:"broschüre.png", caption:"Ausschnitt aus der PDF-Broschüre 'Was kostet wo wie viel?'" %}</a>
-</center>
+ <a href="https://www.berlin.de/sen/finanzen/haushalt/downloads/wkwwv_hv_2017.pdf">
+{% render "macro-image-section-small", src:"broschüre.png", caption:"Ausschnitt aus der PDF-Broschüre 'Was kostet wo wie viel?'" %}</a>
+
 <br>
 
 ### Das Vorgehen
@@ -50,8 +50,7 @@ Im nächsten Schritt entschieden wir uns dafür, eine Variante zur Datenpräsent
 Der Wireframe zeigt den konkreten Aufbau, Grafiken und Textbausteine, sowie erste leichte Andeutungen von Design-Elementen (er ist allerdings kein fertiger Designentwurf) für eine Homepage und eine thematische Unterseite für das von SenFin bereitgestellte Datenthema „Bauen, Wohnen, Vermessen und Verkehr”. Die Anwendung kann also für sich alleine stehen, z.B. als eigenständige Website. Die Besucher der Seite werden dabei vom „Groben ins Feine” durch die Daten geführt. Alle Graphen sind interaktiv: Schieberegler und klickbare Karten bieten die Möglichkeit, sowohl die Veränderungen der Kosten über die Zeit als auch im Vergleich zwischen den Bezirken zu betrachten und zu vergleichen. Kurze, präzise Texte setzen die Informationen in den nötigen Kontext und verweisen auf weiterführende Informationen.
 Besonders wichtig ist es aus unserer Sicht, die Daten als Open Data maschinenlesbar zur Verfügung zu stellen. Dies könnte über eine separate Datenbank im Backend realisiert werden. Über eine Programmierschnittstelle werden die Daten in das Frontend geladen, können aber ebenso von interessierten Nutzer:innen mittels eigener Programmcodes abgefragt oder auch als csv-Dateien über Download-Buttons heruntergeladen werden.
 
- <center>
-{% include "macro-image-section-small.html", src:"wireframe2.png", caption:"Ausschnitt aus dem Wireframe für die interaktiven Datenvisualisierungen" %} </center>
+{% render "macro-image-section-small", src:"wireframe2.png", caption:"Ausschnitt aus dem Wireframe für die interaktiven Datenvisualisierungen" %}
 <br>
 
 ### Wie geht’s weiter?

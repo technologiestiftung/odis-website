@@ -80,18 +80,19 @@ module.exports = {
         "sans-serif",
       ],
     },
-    boxShadow: getShadows(),
-    dropShadow: getShadows(),
     extend: {
       transitionTimingFunction: {
         "out-extreme": "cubic-bezier(.12,.98,.13,.98)",
       },
       aria: {
-        current: 'current="true"',
+        //prettier-ignore
+        current: "current=\"true\"",
       },
       lineClamp: {
         7: "7",
       },
+      boxShadow: getShadows(),
+      dropShadow: getShadows(),
     },
   },
   plugins: [
