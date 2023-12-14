@@ -1,0 +1,130 @@
+---
+layout: default.liquid
+---
+<section class="bg-bg-inv text-text-inv py-16">
+  <div class="grid-container">
+    <div class="max-w-[50ch] lg:col-start-2 lg:col-span-6">
+      {%
+        render 'heading',
+        text: title,
+        size: 'xxl',
+        inverted: true,
+      %}
+      {%
+        render 'paragraph',
+        text: intro,
+        size: 'lg',
+      %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-bg text-text py-16">
+  <div class="grid-container">
+    <div class="prose lg:col-start-2 lg:col-span-6">
+      {{ content }}
+    </div>
+  </div>
+</section>
+
+<section class="bg-bg-alt text-text py-16">
+  <div class="grid-container">
+    <div class="prose lg:col-start-2 lg:col-span-6">
+      {%
+        render 'heading',
+        text: missionTitle,
+        size: 'xl',
+        tag: 'h2',
+      %}
+      {%
+        render 'paragraph',
+        text: missionText,
+      %}
+      {%
+        render 'heading',
+        text: 'Tätigkeitsbereiche',
+        size: 'lg',
+        tag: 'h3',
+      %}
+      <div class="not-prose">
+        <ul>
+          <li class="pb-8">
+            <strong>Wir Kooperieren</strong> mit
+            <a
+              href="https://www.berlin.de/sen/wirtschaft/digitalisierung/open-data/open-data-beauftragte"
+              >behördlichen Open Data Beauftragten
+            </a>
+            , vernetzen die zuständigen Ansprechpersonen zu Open Data und stellen
+            <a href="https://odis-berlin.de/ressourcen">Ressourcen zum Kompetenzaufbau und Wissenstransfer </a>bereit.
+          </li>
+          <li class="pb-8">
+            <strong>Wir unterstützen</strong> die Behörden im Data-Governance mit dem Fokus auf Open Data mithilfe
+            geeigneter Methoden.
+          </li>
+          <li class="pb-8">
+            <strong>Wir entwickeln</strong>
+            <a href="https://odis-berlin.de/projekte">Open Data Anwendungen und Prototypen</a>
+            gemeinsam mit der Berliner Verwaltung, um Informationen greifbar zu machen und mit Daten Neues zu schaffen.
+          </li>
+          <li class="pb-8">
+            <strong>Wir fördern</strong> als Informations- und Vernetzungsstelle den Austausch mit und zwischen dem Open
+            Data Ökosystem aus Wirtschaft, Zivilgesellschaft, Verwaltung und Wissenschaft.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-bg text-text pt-16 pb-6">
+  <div class="grid-container">
+    <div class="lg:col-start-2 lg:col-span-6">
+      {%
+        render 'heading',
+        text: teamTitle,
+        size: 'xl',
+        tag: 'h2',
+      %}
+    </div>
+  </div>
+</section>
+<section class="bg-bg text-text pb-6">
+  <div class="grid-container">
+    <!-- right side -->
+    <ul class="lg:col-start-1 lg:col-span-8 grid grid-cols-4 lg:grid-cols-8 gap-x-6 gap-y-12">
+      {% for member in team %}
+        <li class="col-span-4 grid">
+          <address class="grid grid-cols-4 gap-6 items-center lg:items-start">
+            <img
+              class="rounded-full w-40 col-span-1 lg:scale-110"
+              src="{{ member.image }}"
+              alt="Portraitbild von {{ member.name }}"
+            >
+            <div class="flex flex-col col-span-3">
+              <strong>{{ member.name }}</strong>
+              <span class="mb-0.5">{{ member.role }}</span>
+              {% if member.email %}
+                {% render 'text-link', text: member.email, href: "mailto:{{ member.email }}", class: "no-underline" %}
+              {% endif %}
+              {% if member.phone %}
+                {% render 'text-link', text: member.phone, href: "tel:{{ member.phone }}", class: "no-underline" %}
+              {% endif %}
+            </div>
+          </address>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="bg-bg text-text pt-16 pb-6">
+  <div class="grid-container">
+    <div class="lg:col-start-2 lg:col-span-6">
+      <hr class="opacity-50">
+      <p class="mt-4 pb-16 text-sm opacity-70">
+        Die ODIS wird von der Berliner Senatsverwaltung für Wirtschaft, Energie und Betriebe gefördert und von der
+        Technologiestiftung Berlin betrieben.
+      </p>
+    </div>
+  </div>
+</section>
