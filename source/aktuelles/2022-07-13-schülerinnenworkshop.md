@@ -23,13 +23,10 @@ Als Highlight des Workshops bekammen die Schüler:innen die Aufgabe, ein eigenes
 
 Für uns war der Workshop mit den Schüler:innen eine interessante Erfahrung und wir hoffen den:die ein odere andere:n für Open Data begeistert zu haben.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/schülerinnenworkshop1.jpg", caption:"Einblick aus dem 3-stündigen Open-Data-Workshop in den Räumen der Technologiestiftung" %}
-</center>
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/schülerinnenworkshop2.jpg", caption: "Papier-Prototypen der Schüler:innen für Anwendungen mit offen Fahrraddiebstahl-Daten"%}
-</center>
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/schülerinnenworkshop3.png", caption:"Die Ergebnise der Gruppenarbeiten werden vorgestellt" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/schülerinnenworkshop1.jpg", caption:"Einblick aus dem 3-stündigen Open-Data-Workshop in den Räumen der Technologiestiftung" %}
+
+{% render "macro-image-section-small", src:"/assets/images/schülerinnenworkshop2.jpg", caption: "Papier-Prototypen der Schüler:innen für Anwendungen mit offen Fahrraddiebstahl-Daten"%}
+
+{% render "macro-image-section-small", src:"/assets/images/schülerinnenworkshop3.png", caption:"Die Ergebnise der Gruppenarbeiten werden vorgestellt" %}
+
 <br>

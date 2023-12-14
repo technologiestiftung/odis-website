@@ -116,6 +116,8 @@
   @media (min-width: 1536px) {
     body {
       --containerWidth: 1536px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
     }
   }
 
@@ -266,7 +268,7 @@
 @layer components {
   .focusable {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-links;
-    @apply focus-visible:ring-offset-8 focus-visible:ring-offset-bg;
+    @apply focus-visible:ring-offset-8 focus-visible:ring-offset-bg focus-visible:bg-bg;
   }
 }
 

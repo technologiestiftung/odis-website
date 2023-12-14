@@ -8,6 +8,7 @@ visible: true
 urlText: Zum Blogbeitrag
 heroImagePath: /assets/images/sommerfest2023_bria.jpg
 heroImageAltText: Francesca Bria beim Panel „Governing AI and Data democratically putting it at the service of People and the Planet“ (Foto bei Florian Reimann)
+readingTime: 10
 ---
 
 # Rückblick zu Open Data beim CityLAB Sommerfest
@@ -16,23 +17,23 @@ Panel Talks, mehrere Bühnen, Workshops und paralleles Programm rund um Verwaltu
 
 Der Tag startete mit einem Open Data Frühstück. Hier trafen sich neue und alte Bekannte aus Verwaltung, Wissenschaft, Wirtschaft und Zivilgesellschaft, um sich bei Kaffee und Sandwiches kennenzulernen und auszutauschen. Einen Input gab die zentrale Open Data Verantwortliche Betül Özdemir, mit ihrem Vortrag „Bürgerinnen und Bürger informieren und zu mehr Beteiligung anregen – Das geht mit Open Data und Civic Tech“. Dabei berichtete sie auch von einer Initiative bei der Interessierte ihre [Civic Tech Projekt einreichen](https://mein.berlin.de/projekte/civic-tech-projekte-aus-berlin-mit-open-data/) und bei einem zukünftigen digitalen Open Data Lunch den Verwaltungsbeschäftigten vorstellen können.
 
-{% include "macro-image-section-small.html", src:"/assets/images/sommerfest2023_klemens.jpg" %}
+{% render "macro-image-section", src:"/assets/images/sommerfest2023_klemens.jpg" %}
 
-{% include "macro-image-section-small.html", src:"/assets/images/sommerfest2023_betuel.jpg", caption:"Moderator Klemens Maget und Betül Özdemir als Vortragende beim Open Data Frühstück (Fotos: Florian Reimann)" %}
+{% render "macro-image-section-small", src:"/assets/images/sommerfest2023_betuel.jpg", caption:"Moderator Klemens Maget und Betül Özdemir als Vortragende beim Open Data Frühstück (Fotos: Florian Reimann)" %}
 
 <br>
 
 Später auf der Hauptbühne berichtete Francesca Bria, Präsidentin des italienischen Innovationsfonds und Direktorin des Programms ["The New Hanse"](https://thenew.institute/en/programs/the-new-hanse), von Fortschritten bei der demokratischen Bereitstellung von Daten. In einem Interview mit Geraldine de Bastion, Mitgründerin und CEO von Konnektiv, bot Bria an, die Erkenntnisse aus ihrer Zusammenarbeit mit der Stadt Hamburg im Bereich digitaler Demokratie, Datennutzung und Nachhaltigkeit auch auf Berlin zu übertragen. Dieser Vorschlag erntete spontanen Applaus und zeigt das begeisterte Interesse an ihren Ideen.
 
-{% include "macro-image-section-small.html", src:"/assets/images/sommerfest2023_bria.jpg", caption:"Francesca Bria beim Panel „Governing AI and Data democratically putting it at the service of People and the Planet“ (Foto: Florian Reimann)" %}
+{% render "macro-image-section-small", src:"/assets/images/sommerfest2023_bria.jpg", caption:"Francesca Bria beim Panel „Governing AI and Data democratically putting it at the service of People and the Planet“ (Foto: Florian Reimann)" %}
 
 <br>
 
 In einer anschließenden interaktiven Session der „The New Hanse“ Projekt-Gruppe präsentierten wir als ODIS in einem Impulsvortrag unsere Erfahrungen im Bereich Datenveröffentlichung und aktuelle Projekte aus Berlin. Darauf folgend kamen die Berliner und Hamburger Akteur:innen an Thementischen zusammen, um den Austausch weiter zu vertiefen, bevor nicht viel später mit Musik und Drinks schließlich das Abendprogramm eingeleitet wurde.
 
-{% include "macro-image-section-small.html", src:"/assets/images/sommerfest2023_session.jpg" %}
+{% render "macro-image-section-small", src:"/assets/images/sommerfest2023_session.jpg" %}
 
-{% include "macro-image-section-small.html", src:"/assets/images/sommerfest2023_lisa.jpg", caption:"ODIS bei der Data Sharing Session der “The New Hanse” Projektgruppe um Francesca Bria (Fotos: Florian Reimann)" %}
+{% render "macro-image-section-small", src:"/assets/images/sommerfest2023_lisa.jpg", caption:"ODIS bei der Data Sharing Session der “The New Hanse” Projektgruppe um Francesca Bria (Fotos: Florian Reimann)" %}
 
 <br>
 

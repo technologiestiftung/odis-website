@@ -11,11 +11,47 @@ layout: default
   date: Date of blog article (required)
   heroImagePath: Path to hero image if existent
   heroImageAltText: Description of hero image (required if hero image exists)
+  author: Blog article author (optional)
+  readingTime: Blog article reading time (optional)
 
   content: Blog article markdown content
 {% endcomment %}
-{%- capture formattedDate %}
-  {{ page.date | date: '%d.%m.%Y' }}{% endcapture %}
+{% capture preTitle %}
+<a href="/aktuelles" class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M19 12H5M12 19l-7-7 7-7"/>
+  </svg>
+  Zurück
+</a>
+<span aria-hidden="true" class="scale-150 opacity-50">·</span>
+<time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="opacity-70">
+  {{ page.date | date: '%d.%m.%Y' }}
+</time>
+{% endcapture %}
+
+{% capture authorAndReadingTime %}
+{% if author %}
+  <span class="inline not-italic">
+    Von {{ author }}
+  </span>
+{% endif %}
+{% if author and readingTime %}
+  <span aria-hidden="true" class="opacity-50">·</span>
+{% endif %}
+{% if readingTime %}
+  <span>{{ readingTime }} Minuten</span>
+{% endif %}
+{% endcapture %}
 
 <script
   defer
@@ -28,8 +64,8 @@ layout: default
       <div class="lg:col-start-2 lg:col-span-5 py-10">
         {%
           render 'paragraph',
-          text: formattedDate,
-          class: 'opacity-70',
+          text: preTitle,
+          class: 'flex gap-x-3 flex-wrap',
         %}
         {%
           render 'heading',
@@ -37,6 +73,13 @@ layout: default
           text: title,
           size: 'xxl',
         %}
+        {% if author or readingTime %}
+          {%
+            render 'paragraph',
+            text: authorAndReadingTime,
+            class: 'opacity-70 flex gap-x-3 flex-wrap',
+          %}
+        {% endif %}
         {%
           render 'paragraph',
           text: metaDescription,
@@ -45,7 +88,7 @@ layout: default
       </div>
       {% if heroImagePath and heroImageAltText %}
         <div
-          class="h-72 lg:h-[108%] row-start-1 row-end-2 col-span-12 lg:col-start-8 lg:col-span-4 relative"
+          class="aspect-video lg:aspect-auto lg:h-[108%] row-start-1 row-end-2 col-span-12 lg:col-start-8 lg:col-span-4 relative"
           role="figure"
           aria-label="{{ heroImageAltText }}"
         >
@@ -54,9 +97,9 @@ layout: default
               absolute top-0 bg-cover bg-center
               w-[110vw] h-full
               -left-6
-              sm:left-[calc((1.5rem+var(--marginSize))*-1)]
+              sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
               lg:left-0
-              lg:w-[calc(100%+var(--marginSize)+10px)]
+              lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]
             "
             style="background-image: url({{ heroImagePath }});"
           ></div>
@@ -66,9 +109,9 @@ layout: default
               w-[110vw] h-full
               -left-6
               pointer-events-none
-              sm:left-[calc((1.5rem+var(--marginSize))*-1)]
+              sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
               lg:left-0
-              lg:w-[calc(100%+var(--marginSize)+10px)]
+              lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]
               bg-bg-inv mix-blend-screen opacity-50
             "
             aria-hidden="true"

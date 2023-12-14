@@ -16,9 +16,8 @@ urlText: Zum Blogbeitrag
 
 Mit einer Online-Beteiligung und vier Stakeholder:innen-Workshops, die mit Unterstützung der ODIS als Präsenzveranstaltungen stattfanden, wurde das Berliner Open Data Ökosystem adressiert. Verwaltung, Wirtschaft, Zivilgesellschaft und Wissenschaft waren eingeladen mit zu diskutieren und wertvolle Hinweise und Impulse für die zukünftige Ausrichtung und Ausgestaltung von Open Data in Berlin einzubringen. In den Workshops skizzierten die Stakeholder-Gruppen mithilfe der Wardley-Mapping-Methode die wesentlichen Erfolgsfaktoren für eine 5\* Open Data Landschaft und erarbeiteten notwendige Schritte dorthin. Die Dokumentationen bzw. Ergebnisprotokolle der einzelnen Workshops sind auf der [öffentlichen Informationsseite zur Open Data Strategie](https://strategie.odis-berlin.de/) einsehbar.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/foto_highlights_beteiligungsworkshops.png", caption:" Eindrücke aus den vier Beteiligungsworkshops" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/foto_highlights_beteiligungsworkshops.png", caption:" Eindrücke aus den vier Beteiligungsworkshops" %}
+
 <br>
  
 ## Die Ergebnisse: Open Data als Spiegelbild einer modernen Verwaltung 
@@ -32,9 +31,8 @@ Da derzeit auf Landesebene organisatorische Umstrukturierungen stattfinden und d
 
 Im Zuge des Beteiligungsprozesses wurde ebenfalls deutlich, dass es in der Vergangenheit zumeist schon als Erfolg bewertet wurde, wenn PDF- oder Excel-Dateien offen bereitgestellt wurden. Doch der Aufwand für die Verwaltungsmitarbeiter:innen, einzelne Daten zu veröffentlichen und zu pflegen, steht oftmals einem geringen Nutzen gegenüber. Für viele Nutzer:innengruppen haben diese einzelnen Datensätze, die oftmals veraltet oder unvollständig sind, wenig Weiterverarbeitungswert. Um dieses Dilemma aufzulösen, sollten in Zukunft Prozesse in der Verwaltung so umgestaltet werden, dass es zu Effizienzgewinnen durch Automatisierungen kommt. Dies ist nur möglich, wenn Datensätze miteinander sprechen lernen oder mit anderen Worten: durch Linked Open Data. Datensätze müssen so angelegt werden, dass sie möglichst offen kompatibel, gut beschrieben und eindeutig identifizierbar sind. Nur so können Verknüpfungen automatisch generiert werden. Ein weiterer Vorteil von Linked Open ist die Berücksichtigung unterschiedlicher IT-Systeme, was insbesondere der zweistufigen Verwaltung in Berlin Rechnung trägt.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/5_sterne_modell.png", caption:" Das 5* Open Data Modell nach Tim Berners-Lee" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/5_sterne_modell.png", caption:" Das 5* Open Data Modell nach Tim Berners-Lee" %}
+
 <br>
 
 #### 3. Der Data Hub ist ein wichtiger Baustein auf dem Weg zu Linked Open Data

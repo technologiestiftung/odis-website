@@ -22,9 +22,8 @@ Der Datensatz ist seit Februar 2022 mit den nötigen Schlüsseltabellen und der 
 - Wie kann der mit Fachbegriffen und Codes gespickte Datensatz so aufgewertet werden, dass die Informationen verständlich und nutzbar werden?
 - Wie kann eine erfolgreiche Veröffentlichung im Berliner Open Data Portal und eine jährliche Aktualisierung realisiert werden?
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_rohdatensatz.png", caption: "Der Rohdatensatz enthält personenbezogene Daten, zum Beispiel Alter und Wohnort auf Ebene der Teilverkehrszellen". %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/Bibliotheksdaten_auszug_rohdatensatz.png", caption: "Der Rohdatensatz enthält personenbezogene Daten, zum Beispiel Alter und Wohnort auf Ebene der Teilverkehrszellen". %}
+
 <br>
 <br>
 
@@ -55,14 +54,10 @@ Für die **geplante, jährliche Veröffentlichung** des Datensatzes kann die Sta
 
 Im Open Data Portal ist neben dem Datensatz und den Schlüsseltabellen auch eine Dokumentation bereitgestellt, die die einzelnen Spalten und Kategorien erklärt.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_auszug_doku.png", caption:"Auszug aus der Dokumentation, bereitgestellt durch die Stadtteilbibliothek Pankow und veröffentlicht im Open Data Portal"%}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/Bibliotheksdaten_auszug_doku.png", caption:"Auszug aus der Dokumentation, bereitgestellt durch die Stadtteilbibliothek Pankow und veröffentlicht im Open Data Portal"%}
 
 ## Einblick in die Daten
 
 Welche Erkenntnisse lassen sich nun aus den Daten gewinnen? Jeder Eintrag stellt einen Ausleih- oder Verlängerungsvorgang dar – sowohl erfolgreiche als auch fehlgeschlagene. Darin enthalten sind vielfältige Informationen über den Ausleihvorgang, das Medium selbst oder über die Bibliotheksnutzer:innen. So lässt sich durch Abfragen des Datensatzes schnell herausfinden, welche Sachbücher bei Kinder- und Jugendlichen gefragt sind, welche Bibliotheksstandorte am häufigsten genutzt oder wann Medien über den Jahresverlauf gesehen am meisten nachgefragt werden. Ein paar dieser Analysen haben wir im Rahmen eines [Dashboards](../../projekte/bibliotheksdaten) visualisiert. Wir wünschen viel Vergnügen beim Stöbern durch die (digitale) Stadtteilbibliothek Pankow!
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/Bibliotheksdaten_Dashboard.png", caption: "Das Dashboard zeigt verschiedene Analysen, zum Beispiel die Anzahl der Gesamtausleihen oder die Fächerstatistik". %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/Bibliotheksdaten_Dashboard.png", caption: "Das Dashboard zeigt verschiedene Analysen, zum Beispiel die Anzahl der Gesamtausleihen oder die Fächerstatistik". %}
