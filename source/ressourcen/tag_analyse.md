@@ -17,9 +17,8 @@ Tags können für Nutzer:innen ebenfalls nützlich sein, um zusammenhängende Da
 
 Betrachtet man die Gesamtheit der Tags im Berliner Datenportal, kann man außerdem ein paar Rückschlüsse über den Stand von Open Data in Berlin ziehen. Es gibt verschiedene Möglichkeiten, die Tags des Portals zu analysieren. Eine davon ist zu schauen, welche Tags oft in Zusammenhang miteinander benutzt werden, um Themencluster aus dem Datenportal zu erkennen. Wir haben eine [Netzwerkanalyse von häufigen Tags im Berliner Datenportal](../projekte/tag_analyse/) durchgeführt und die Ergebnisse in einem interaktiven Graphen visualisiert.
 
-<center>
-  <a href="../../projekte/tag_analyse/">{% include "macro-image-section.html", src:"/assets/images/tag_analyse.png"%}</a>
-</center>
+<a href="../../projekte/tag_analyse/">{% render "macro-image-section", src:"/assets/images/tag_analyse.png"%}</a>
+
 <br>
 
 ## Wie wähle ich effektive Tags als Datenbereitsteller:in?

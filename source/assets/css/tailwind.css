@@ -71,6 +71,54 @@
     --shadow-secondary: var(--blue-light);
     --shadow-primary-inv: var(--blue-darker);
     --shadow-secondary-inv: var(--blue-dark);
+
+    --containerWidth: 100vw;
+    --gridGap: 1.5rem;
+    --marginSize: minmax(1.5rem, (100vw - var(--containerWidth)) / 2);
+    --columnSize: minmax(
+      0,
+      (var(--containerWidth) - (13 * var(--gridGap))) / 12
+    );
+  }
+
+  @media (min-width: 640px) {
+    body {
+      --containerWidth: 640px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  @media (min-width: 768px) {
+    body {
+      --containerWidth: 768px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    body {
+      --containerWidth: 1024px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    body {
+      --containerWidth: 1280px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    body {
+      --containerWidth: 1536px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
   }
 
   /* To apply dark mode, apply the [data-applied-mode='dark'] to the <html /> tag and add this CSS */
@@ -99,8 +147,10 @@
     --shadow-secondary-inv: var(--blue-light);
   }
 
+  body,
   html {
     @apply font-sans text-text bg-bg;
+    scroll-behavior: smooth;
   }
 
   .prose p {
@@ -129,6 +179,20 @@
   .prose-invert h6 {
     @apply text-headlines-inv;
   }
+  .prose a > h1,
+  .prose a > h2,
+  .prose a > h3,
+  .prose a > h4,
+  .prose a > h5,
+  .prose a > h6,
+  .prose-invert a > h1,
+  .prose-invert a > h2,
+  .prose-invert a > h3,
+  .prose-invert a > h4,
+  .prose-invert a > h5,
+  .prose-invert a > h6 {
+    color: inherit;
+  }
 
   .prose h1 {
     @apply leading-tight text-5xl mb-4;
@@ -138,11 +202,73 @@
     @apply leading-tight text-3xl mb-4;
   }
 
-  .prose h3,
+  .prose h3 {
+    @apply text-xl mb-2 mt-0 pt-6;
+  }
+
   .prose h4,
   .prose h5,
   .prose h6 {
-    @apply text-xl mb-2;
+    @apply text-lg mb-1 mt-0 pt-4;
+  }
+
+  .prose h5,
+  .prose h6 {
+    @apply uppercase tracking-widest leading-5;
+  }
+
+  .prose h6 {
+    @apply font-normal;
+  }
+
+  .prose a > h1,
+  .prose-invert a > h1 {
+    @apply mt-0 pt-8;
+  }
+
+  .prose a > h2,
+  .prose-invert a > h2 {
+    @apply mt-0 pt-6;
+  }
+
+  .prose a > h3,
+  .prose-invert a > h3 {
+    @apply mt-0 pt-5;
+  }
+
+  .prose a > h4,
+  .prose a > h5,
+  .prose a > h6,
+  .prose-invert a > h4,
+  .prose-invert a > h5,
+  .prose-invert a > h6 {
+    @apply mt-0 pt-4;
+  }
+
+  .prose a:first-of-type > h1,
+  .prose a:first-of-type > h2,
+  .prose a:first-of-type > h3,
+  .prose a:first-of-type > h4,
+  .prose a:first-of-type > h5,
+  .prose a:first-of-type > h6,
+  .prose-invert a:first-of-type > h1,
+  .prose-invert a:first-of-type > h2,
+  .prose-invert a:first-of-type > h3,
+  .prose-invert a:first-of-type > h4,
+  .prose-invert a:first-of-type > h5,
+  .prose-invert a:first-of-type > h6 {
+    @apply mt-0 pt-0;
+  }
+
+  .prose center {
+    @apply text-left;
+  }
+}
+
+@layer components {
+  .focusable {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-links;
+    @apply focus-visible:ring-offset-8 focus-visible:ring-offset-bg focus-visible:bg-bg;
   }
 }
 

@@ -20,7 +20,7 @@ Mit dem Zuständigkeitswechsel ist fortan Betül Özdemir für Open Data im Land
 
 Knud Möller von BerlinOnline stellte das Projekt [Musterdatenkatalog](https://www.bertelsmann-stiftung.de/de/unsere-projekte/smart-country/musterdatenkatalog) für das Open Data Portal vor. Als Gemeinschaftsprojekt der Bertelsmann-Stiftung, GovData, KDZ – Zentrum für Verwaltungsforschung und der Open Knowledge Foundation Deutschland soll eine Übersicht über offene Daten in Deutschland entstehen, die dabei hilft offene Daten der Kommunen untereinander vergleichbar zu machen. Auch die Daten auf dem Berliner Open Data Portal sollen zukünftig dieser Idee folgen. Für die Umsetzung im Land Berlin hat BerlinOnline bereits die technischen Voraussetzungen vorangetrieben. Ein Rollout steht im Q1 2023 an. Zukünftig kann dann beim Einstellen eines neuen Datensatzes im Berliner Datenportal die Zuordnung zu einer klaren nischenspezifischen thematischen Kategorie in den Metadaten erfolgen. Offen bleibt noch die Frage, wie eine händische Anpassung der bereits veröffentlichten Datensätze an die neue Kategorisierung umgesetzt werden kann. Für die neu zu veröffentlichenden Datensätze in 2023 sollen die neuen Kategorisierungen in der Datenrubrik und im Datenregister ausgewählt werden.
 
-{% include "macro-image-section-small.html", src:"/assets/images/agopendata_dez_22.jpg", caption:"Arbeitssitzung der AG Open Data im CityLAB Berlin" %}
+{% render "macro-image-section-small", src:"/assets/images/agopendata_dez_22.jpg", caption:"Arbeitssitzung der AG Open Data im CityLAB Berlin" %}
 
 <br>
   

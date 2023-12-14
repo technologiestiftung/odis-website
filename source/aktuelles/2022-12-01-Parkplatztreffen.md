@@ -21,27 +21,24 @@ Kein Wunder also, dass das Interesse am ersten Vernetzungstreffen zu Parkplatzda
 
 Die ehrenamtlich aktive OpenStreetMap-Community nutzt ein "Subtraktives Modell" als Datenerhebungsmethodik. Dabei werden verschiedene Elemente wie Parkstreifen, Einfahrten, Parkverbote oder Haltestellen auf Fahrbahnen getagged auf denen nicht geparkt werden darf. Darauf aufbauend wird ein Parkraummodell erstellt und die Daten visualisiert. Am [Beispiel des Bezirks Neukölln](https://strassenraumkarte.osm-berlin.org/about) konnte die OSM-Community 40.000 Stellplätze ermitteln. Nach eigenen Angaben liegt die Datenqualität mit der gewählten Methodik bei 80%. Die Daten stehen offen zur Verfügung und sind unter anderem als GeoJSON exportierbar.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/OSMCommunity.png",  caption:"Ausschnitt aus dem OSM-Tool" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/OSMCommunity.png",  caption:"Ausschnitt aus dem OSM-Tool" %}
+
 <br>
 
 #### Parkplatz Transform - Mit einer App zu mehr Flächengerechtigkeit
 
 Aus der Annahme heraus, dass Parkraum im öffentlichen Raum einen deutlich zu hohen Stellenwert genießt und eine Transformation von Parkraum hin zu öffentlich nutzbaren Raum notwendig ist, gründete sich 2019 die ehrenamtliche, parteiübergreifende Initiative [Parkplatz Transform](https://www.xtransform.org/). Aufgrund fehlender Parkplatzdaten hat man mit Freiwilligen und lokalen Initiativen auf der Straße Kartierungen organisiert und mithilfe einer App dokumentiert. So konnte eine umfassende Datenbank erstellt werden. Innerhalb des S-Bahnrings wurde so eine Gesamtzahl von 229.249 Kfz-Parkplätzen ermittelt! Parkplatz Transform stellt die offenen Daten und das Kartierungstool auf dieser [Webseite](app.xtransform.org/) bereit.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/Parkplatztransform.png",  caption:"Mithilfe der Daten lassen sich zum Beispiel Aussagen über das Verhältnis von Grünfläche und Parkraum treffen" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/Parkplatztransform.png",  caption:"Mithilfe der Daten lassen sich zum Beispiel Aussagen über das Verhältnis von Grünfläche und Parkraum treffen" %}
+
 <br>
 
 #### Project Car Tagger - Mit Satellitenbilder Fahrzeuge taggen
 
 Mitorganisator Hans Hack stellte ein weiteres Datenerhebungsprojekt vor: Das selbst programmierte Tool Car Tagger kann fahrende oder parkende Autos anhand ihres Umrisses mit Satellitenbildern ausfindig machen und markieren. Ein Aufruf an die Community, sich zu beteiligen, führte schließlich dazu, dass auf mittlerweile 50% der Fläche Berlins ca. 500.000 Autos getagged wurden. Wenngleich auch hier wie in vielen Community-Projekten die Datenpflege eine große Herausforderung darstellt, kann das Tool aufgrund seiner Nachvollziehbarkeit und niedrigschwelligen Einstiegs überall genutzt werden und somit eine weitere Datenquelle bieten. Die Daten stehen als offene Daten zur Verfügung. Eine spannende Visualisierung der Daten hat Hans in [dieser Anwendung](https://hanshack.com/howmanycars/?viewRatio=false&zoom=13.084933259369187&lng=13.443490099742121&lat=52.47016553456325) vorgenommen, die das Verhältnis von parkenden und fahrenden Autos in Berlin zeigt. Die genaue Methodik zum Project Car Tagger ist auf [Github](https://github.com/hanshack/car-tagging-data-berlin/) zu finden.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/ParkendeAutos.png",  caption:"Meist sind Autos gar nicht in Bewegung, wie der Kartenausschnit exemplarisch zeigt" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/ParkendeAutos.png",  caption:"Meist sind Autos gar nicht in Bewegung, wie der Kartenausschnit exemplarisch zeigt" %}
+
 <br>
 
 #### Paper planes - Mit Parkplatzdaten den Straßenraum neu gestalten
@@ -60,9 +57,8 @@ Neben den Gruppen aus Zivilgesellschaft und Wissenschaft, die Daten erfassen ode
 
 Mit einer [Parkraumkartierung und Parkdatenanalyse](https://testfeldstadtverkehr.berlin/euvm/parkdatenanalyse/) durch einen externen Dienstleister will die Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz (SenUMVK) die Datenlücke sukzessive schließen. Dafür soll eine Kartierung von öffentlichen Parkplätzen innerhalb des S-Bahn Rings und angrenzender Gebiete erfolgen, sowie eine Erfassung von Auslastung, Parkverhalten und Parksuchverkehr vor und nach Einführung von neuen Parkzonen. Gerade mit den dynamischen Daten zum Beispiel zum Parksuchverkehr soll so die Grundlage geschaffen werden, verkehrspolitische Maßnahmen wie zum Beispiel die Einführung von Parkzonen zu bewerten. Aber auch für angrenzende Themen wie die Messung der Luftqualität sollen die Daten herangezogen werden. Aus Open-Data-Sicht erfreulich: Die Kartierungsdaten sollen auf der Digitalen Plattform Stadtverkehr ab März 2023 frei zugänglich zur Verfügung gestellt werden. Und auch die Analysedaten rund um die Einführung der neuen Parkzonen werden 2023 erhoben und voraussichtlich bis Mitte 2024 veröffentlicht.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/SenUMVK_Parkplatztreffen.png",  caption:"Der gesamte Bereich innerhalb sowie einige Bereiche außerhalb des S-Bahnrings werden kartiert. Teile von Charlottenburg-Wilmersdorf wurden bereits vom zuständigen Bezirk von einem externen Dienstleister kartiert." %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/SenUMVK_Parkplatztreffen.png",  caption:"Der gesamte Bereich innerhalb sowie einige Bereiche außerhalb des S-Bahnrings werden kartiert. Teile von Charlottenburg-Wilmersdorf wurden bereits vom zuständigen Bezirk von einem externen Dienstleister kartiert." %}
+
 <br>
 
 #### Auch die Bezirke benötigen Parkplatzdaten

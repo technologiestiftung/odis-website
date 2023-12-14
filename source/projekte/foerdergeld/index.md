@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: ['project','post']
+tags: ["project", "post"]
 title: Förderdaten Recherchetool
 blogLinkTitle: "Hier geht's zum interaktiven Recherchetool"
 blogLink: http://zuwendungsdatenbank.lab.technologiestiftung-berlin.de/
@@ -15,4 +15,4 @@ Jahr für Jahr werden werden mehr als 1 Milliarde Euro Fördergelder in Berlin a
 
 Das Tool nutzt die [offenen Daten der Senatsverwaltung für Finanzen](https://daten.berlin.de/datensaetze/zuwendungsdatenbank). Im Datensatz enthalten sind Angaben zu Geldempfängern, Geldgebern, dem Zweck der Zuwendung, dem thematischen Bereich der Zuwendung und der Höhe der Zuwendung.
 
-<center>{% include "macro-image-section-small.html", src:"foerdergeld_screenshot.png", caption:"Das Recherchetool für Förderdaten" %}</center>
+{% render "macro-image-section-small", src:"foerdergeld_screenshot.png", caption:"Das Recherchetool für Förderdaten" %}

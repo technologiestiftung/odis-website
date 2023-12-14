@@ -153,7 +153,7 @@ Please find comments in yaml-file below and follow.
 
 ```yaml
 ---
-tags: ['project','post']
+tags: ["project", "post"]
 title: "Grundsicherung" #add individual project name
 blogLinkTitle: "Hier geht's zu den HG Infos"
 #blogLink: /aktuelles
@@ -206,8 +206,8 @@ If you want a specialized layout you can use the macros included in `source/_inc
 - macro-image-section.html
 
 ```html
-{% include "macro-image-section.html", src:"cat.png" caption:"Here is a picture
-of a cat" %}
+{% render "macro-image-section", src:"cat.png" caption:"Here is a picture of a
+cat" %}
 ```
 
 Hint: include file names need to be quoted.

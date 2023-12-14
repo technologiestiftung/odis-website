@@ -21,9 +21,8 @@ Audrey Tang, Taiwans erste Digitalministerin, eröffnete das Forum Offene Stadt 
 
 Im Glanz des Positivbeispiels steht die Bundesrepublik bei der digitalen Transformation noch im Schatten des Inselstaates, soviel wurde auch in der anschließenden Paneldiskussion deutlich. Nicht nur das eben nicht vorhandene Digitalministerium, auch die weiterhin stark vertikal organisierte, politische Landschaft mit einzelnen Ressorthoheiten und ausgeprägtem Silodenken und -handeln scheinen die digitale Transformation in Deutschland zumindest nicht anzutreiben. Hinzu kommt eine oft recht späte Einbindung der Gesellschaft, wenn die strategischen und politischen Ziele bereits festgelegt wurden und partizipative Elemente nur mehr bei der Umsetzung eingebaut werden. Hier wird deutlich, dass der Zivilgesellschaft nur zu selten zugetraut wird, dass sie sich konstruktiv engagiert. Besonders kritisiert wurde in der Paneldiskussion dabei auch die kaum vorhandene Fehlerkultur in der Verwaltung, die es aber braucht, um auch aus misslungen Digitalprojekten zu lernen und es beim nächsten Mal besser machen zu können.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/odis-forum-offene-stadt-2022.jpg", caption:"Team ODIS auf dem Forum offene Stadt" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/odis-forum-offene-stadt-2022.jpg", caption:"Team ODIS auf dem Forum offene Stadt" %}
+
 <br>
 
 ## Das Forum offene Stadt diskutiert neue Wege

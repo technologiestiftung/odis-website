@@ -19,9 +19,7 @@ Der Prototyp ist bisher nur für den Bezirk Tempelhof-Schöneberg funktionsfähi
 
 Dabei äußerten die Teilnehmer:innen viele Anforderungen und Vorstellungen an ein künftiges Tool, die auf einem digitalen Notizboard zusammengetragen wurden (siehe Bild unten). Dazu gehört unter anderem der Wunsch, zusätzliche lokale Informationen, wie Wahlbeteiligung, Wahllokale, und natürliche Grenzen, wie Straßen, oder Gewässer in das Tool zu integrieren. Bezüglich der technischen Anforderungen betonten die Teilnehmer:innen den Bedarf, Adresslisten sowie Straßenverzeichnisse aus .xlsx Dateien importieren zu können, sowie Exportmöglichkeiten von Kartenausschnitten in .jpg und .pdf-Dateiformaten zur Verfügung zu stellen. Die ansprechende und unmittelbare grafische Darstellung von Neuzuschnitten wurde als große Verbesserung hervorgehoben und bestärkte gleichzeitig den Wunsch nach einem einheitlichen Verfahren, das von allen Bezirksämtern genutzt wird.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/wahlbezirke_workshop.png", caption:"Einblick in einen Teil des Miro-Boards zur Sammlung von Anforderungen an das Tool beim digitalen Workshop" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/wahlbezirke_workshop.png", caption:"Einblick in einen Teil des Miro-Boards zur Sammlung von Anforderungen an das Tool beim digitalen Workshop" %}
 
 <br>
 

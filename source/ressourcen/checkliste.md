@@ -10,12 +10,12 @@ Die Checkliste ist in zwei Themenbereiche unterteilt: Auf der ersten Seite geht 
 
 Wir empfehlen die Checkliste für jeden potentiell veröffentlichenswerten Datensatz separat durchzugehen. Die Checkliste dient als Übersicht, Sie können sie als eine langfristige Gedankenstütze ausdrucken und weiterreichen oder in der digitalen Version verwenden. Zu einigen Checkpunkten finden Sie in der digitalen Version Direktlinks zu weiterführenden Erläuterungen.
 
-<center>
+
   <object data="/assets/file-download/open_data_checkliste.pdf" type="application/pdf" class="pdf">
       <embed src="/assets/file-download/open_data_checkliste.pdf">
           <p>Dieser Browser unterstützt keine PDF-Ansichten. Bitte laden sich das PDF runter, um es anzusehen. <a href="/assets/file-download/open_data_checkliste.pdf">Download Open-Data-Checkliste</a>.</p>
   </object>
-</center>
+
 <br>
 
 ## Download

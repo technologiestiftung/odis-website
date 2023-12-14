@@ -24,6 +24,4 @@ Zum Abschluss der Veranstaltung berichtete Betül Özdemir von SenWEB zum aktuel
 
 Das Fazit der AG Open Data war deutlich: Die Präsenzveranstaltung hat den Teilnehmer:innen sichtlich Spaß gemacht. Es hat gut getan die Kolleg:innen persönlich zu treffen und besser kennenzulernen. Auch der interaktive Part wurde positiv hervorgehoben und soll weiter Bestandteil der AG Open Data sein. Insgesamt ist eine stärkere Vernetzung unter den Open Data Beauftragten gewünscht. Die ODIS hat eine Vielzahl an wichtigen Anregungen mitgenommen und freut sich auf die nächste AG Open Data.
 
-<center>
-{% include "macro-image-section-small.html", src:"/assets/images/Gruppenfoto_AGopendata2.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
-</center>
+{% render "macro-image-section-small", src:"/assets/images/Gruppenfoto_AGopendata2.jpg", caption:"Gruppenfoto der AG Open Data vor dem CityLAB Berlin" %}
