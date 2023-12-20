@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{% comment %}
+  AVAILABLE VARIABLES
+  -------------------
+    tags: Module tags (required)
+    number: Module number (required)
+    title: Module title (required)
+    metaDescription: Module meta description (required)
+    introText: Module intro text (required)
+    icon: Module icon (required)
+    methods: Module methods (required)
+      - name: Method name (required)
+        description: Method description (required)
+        icon: Method icon (required)
+        link: Method link (required)
+    furtherLinksTitle: Further links title (required)
+    furtherLinksText: Further links text (required)
+    furtherLinks: Further links (required)
+      - title: Further link title (required)
+        link: Further link link (required)
+
+    content: Module markdown content
+{% endcomment %}
+
+Number: {{ number }}
+<br>
+Title: {{ title }}
+<br>
+Meta Description: {{ metaDescription }}
+<br>
+Intro Text: {{ introText }}
+<br>
+Methods:
+<br>
+{% for method in methods %}
+  Method name: {{ method.name }}
+  <br>
+  Method description: {{ method.description }}
+  <br>
+  Method icon: {{ method.icon }}
+  <br>
+  Method link: {{ method.link }}
+  <br>
+{% endfor %}
+<br>
+Further Links Title: {{ furtherLinksTitle }}
+<br>
+Further Links Text: {{ furtherLinksText }}
+<br>
+Further Links:
+<br>
+{% for link in furtherLinks %}
+  Link title: {{ link.title }}
+  <br>
+  Link link: {{ link.link }}
+  <br>
+{% endfor %}
+<br>
+{{ content }}
