@@ -153,11 +153,8 @@
     scroll-behavior: smooth;
   }
 
-  .prose p {
-    @apply leading-relaxed max-w-prose;
-  }
-  .prose p {
-    @apply mb-4;
+  .prose :where(p):not(:where([class~="not-prose"] *)) {
+    @apply leading-relaxed max-w-prose mb-4;
   }
   .prose p.lead {
     @apply text-xl mb-6;
