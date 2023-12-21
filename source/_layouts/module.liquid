@@ -24,6 +24,63 @@ layout: default
     content: Module markdown content
 {% endcomment %}
 
+<section class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16">
+  <div class="grid-container">
+    <div
+      class="@lg:col-start-1 @lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)]"
+      style="-webkit-text-stroke: 1px var(--text-inv);text-stroke: 1px var(--text-inv);"
+    >
+      {{ number }}.
+    </div>
+    <div class="lg:col-start-2 lg:col-span-5">
+      {%
+        render 'heading',
+        text: title,
+        size: 'xxl',
+        inverted: true,
+      %}
+      {%
+        render 'paragraph',
+        text: introText,
+        size: 'lg',
+      %}
+    </div>
+    <div class="@lg:col-start-8 @lg:col-span-3 relative">
+      <img
+        src="{{ icon }}"
+        alt="Illustration für das Modul {{ number }}."
+        class="absolute bottom-0 left-0 w-full translate-y-[calc(50%+2rem)]"
+      >
+    </div>
+  </div>
+</section>
+
+{% assign modules = collections.module %}
+{% assign modulesSorted = modules | sort: 'number' %}
+<section>
+  <div class="grid-container">
+    <div class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 pt-16">
+      {% render 'modules-stepper', sortedModules: modulesSorted, number: number %}
+    </div>
+  </div>
+</section>
+
+<section aria-label="Beitrag">
+  <div class="grid-container">
+    <div class="pt-16 flex flex-col gap-6 order-first lg:order-last lg:col-start-9 lg:col-span-3 z-0">
+      <div class="sticky w-full top-6 lg:pb-48" id="toc-target">
+        <span id="toc-label" class="font-bold text-headlines">Auf dieser Seite</span>
+      </div>
+    </div>
+    <div
+      class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10"
+      id="toc-content"
+    >
+      {{ content }}
+    </div>
+  </div>
+</section>
+
 Number: {{ number }}
 <br>
 Title: {{ title }}

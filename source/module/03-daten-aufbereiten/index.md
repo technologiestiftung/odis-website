@@ -1,11 +1,11 @@
 ---
 layout: module
 tags: module
-number: 2
-title: Identifizieren, Beschreiben
-introText: Mit einer Dateninventur werden eindeutige Zuständigkeiten innerhalb der Behörde für Datensätze klar und transparent.Mit einer Dateninventur werden innerhalb der Behörde für Datensätze
-metaDescription: Mit einer Dateninventur werden eindeutige Zuständigkeiten innerhalb der Behörde für Datensätze klar und transparent.
-icon: /assets/images/modules/module-2.svg
+number: 3
+title: Daten vorbereiten
+introText: Mit einer Dateninventur werden eindeutige Zuständigkeiten innerhalb der Behörde für Datensätze klar und transparent.der Behörde für Datensätze klar und transparent.
+metaDescription: Mit einer Dateninventur werden eindeutige Zuständigkeiten innerhalb der Behörde für Datensätze klar und transparent.der Behörde für Datensätze klar und transparent.
+icon: /assets/images/modules/module-3.svg
 methods:
   - name: Dateninventur Handout
     description: "Mit einer Dateninventur werden eindeutige Zuständigkeiten innerhalb der Behörde für Datensätze klar und transparent. Gegenüber anderen Behörden und Datenutzer:innen gibt es eine Ansprechperson, die Fragen zum Datensatz beanmtworten kann."

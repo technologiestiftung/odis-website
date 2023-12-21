@@ -5,7 +5,7 @@ number: 1
 title: Datenpotenziale verstehen
 introText: Mit einer Dateninventur werden eindeutige Zuständigkeiten innerhalb der Behörde für Datensätze klar und transparent.
 metaDescription: Mit einer Dateninventur werden eindeutige Zuständigkeiten innerhalb der Behörde für Datensätze klar und transparent.
-icon: /assets/images/modules/01-datenpotenziale-verstehen.svg
+icon: /assets/images/modules/module-1.svg
 methods:
   - name: Dateninventur Handout
     description: Mit einer Dateninventur werden eindeutige Zuständigkeiten innerhalb der Behörde für Datensätze klar und transparent. Gegenüber anderen Behörden und Datenutzer:innen gibt es eine Ansprechperson, die Fragen zum Datensatz beanmtworten kann.
