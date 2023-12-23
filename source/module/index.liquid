@@ -5,16 +5,19 @@ subtitle: Unsere 5 Module für deine offenen Daten
 introTitle: Unsere 5 Module auf einen Blick
 introText: "In einer Senats- oder Bezirksverwaltung werden auf unterschiedliche Weise Daten generiert: In Fachverfahren, über eigene Erhebungen oder durch Beauftragungen an externe Dienstleister. Kaum ein Vorgehen in der Verwaltung kommt mittlerweile ohne Daten aus. Und oftmals werden Daten aus der Verwaltung angefragt. Zum Beispiel aus der Zivilgesellschaft, von anderen Behörden oder benachbarten Abteilungen und natürlich von Presse und Medien."
 ---
-<h1>Hello</h1>
-<section class="pb-24 -mt-32 sm:-mt-56">
+<section class="py-16 bg-bg-alt">
   <div class="grid-container">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 gap-y-12 xl:gap-y-16">
+    <ul class="flex flex-col gap-8">
       {% assign modules = collections.module %}
       {% assign modulesSorted = modules | sort: 'number' %}
       {% for module in modulesSorted %}
-        <h2>{{ module.data.title }}</h2>
-        <h3>{{ module.data.introText }}</h3>
+        <li>
+          <a href="{{ module.url }}" title="{{ module.data.title }}">
+            <h2 class="font-bold">{{ module.data.title }}</h2>
+            <p>{{ module.data.introText }}</p>
+          </a>
+        </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </section>

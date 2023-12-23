@@ -49,7 +49,7 @@ layout: default
       <img
         src="{{ icon }}"
         alt="Illustration für das Modul {{ number }}."
-        class="absolute bottom-0 left-0 w-full translate-y-[calc(50%+2rem)]"
+        class="absolute bottom-0 left-0 w-full translate-y-[calc(50%+1rem)]"
       >
     </div>
   </div>
@@ -65,15 +65,20 @@ layout: default
   </div>
 </section>
 
+<script
+  defer
+  type="text/javascript"
+  src="/assets/js/tableOfContents.js"
+></script>
 <section aria-label="Beitrag">
   <div class="grid-container">
-    <div class="pt-16 flex flex-col gap-6 order-first lg:order-last lg:col-start-9 lg:col-span-3 z-0">
-      <div class="sticky w-full top-6 lg:pb-48" id="toc-target">
+    <div class="py-16 flex flex-col gap-6 order-first lg:order-last lg:col-start-9 lg:col-span-3 z-0">
+      <div class="sticky w-full top-6 lg:pb-16" id="toc-target">
         <span id="toc-label" class="font-bold text-headlines">Auf dieser Seite</span>
       </div>
     </div>
     <div
-      class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10"
+      class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable py-16 relative z-10"
       id="toc-content"
     >
       {{ content }}
@@ -81,27 +86,24 @@ layout: default
   </div>
 </section>
 
-Number: {{ number }}
-<br>
-Title: {{ title }}
-<br>
-Meta Description: {{ metaDescription }}
-<br>
-Intro Text: {{ introText }}
-<br>
-Methods:
-<br>
-{% for method in methods %}
-  Method name: {{ method.name }}
-  <br>
-  Method description: {{ method.description }}
-  <br>
-  Method icon: {{ method.icon }}
-  <br>
-  Method link: {{ method.link }}
-  <br>
-{% endfor %}
-<br>
+<section aria-labels="Methoden" class="bg-bg-alt py-16">
+  <div class="grid-container">
+    <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:col-span-10 lg:col-start-2">
+      <div>
+        {% render 'heading', size: 'xl', text: 'Methodenbox' %}
+        {% render 'paragraph',
+          text: 'Die Erfassung aller vorliegenden Datensätze und das Sammeln von Informationen und Zuständigkeiten zu diesen Daten ist häufig eine komplexe Aufgabe, bei der es ratsam ist, ein möglichst organisiertes Vorgehen zu verfolgen. Die hier vorgestellten Ressourcen helfen dabei den Mehrwert einer Dateninventur zu begreifen und unterstützen konkret bei einem Dateninventurprozess.'
+        %}
+      </div>
+    </div>
+    <ul class="grid grid-cols-10 gap-4 sm:gap-6">
+      {% for method in methods %}
+        {% render 'method-thumbnail', method: method %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
 Further Links Title: {{ furtherLinksTitle }}
 <br>
 Further Links Text: {{ furtherLinksText }}
@@ -115,4 +117,3 @@ Further Links:
   <br>
 {% endfor %}
 <br>
-{{ content }}

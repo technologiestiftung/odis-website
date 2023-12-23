@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: ['project','post']
+tags: ["project", "post"]
 title: Berliner Weihnachts&shy;markt-Finder
 blogLinkTitle: "Anwendung erkunden"
 blogLink: https://weihnachtsmaerkte.odis-berlin.de/
