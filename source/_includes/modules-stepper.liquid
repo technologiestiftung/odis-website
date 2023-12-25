@@ -8,6 +8,12 @@
     {% unless uniqueNumbers contains module.data.number %}
       {% assign uniqueNumbers = uniqueNumbers | append: module.data.number | append: ' ' %}
       {% assign active = module.data.number == number %}
+      {% assign isNext = module.data.number == nextNumber %}
+      {% assign showLarge = false %}
+      {% assign activeAndNext = active and nextNumber == null %}
+      {% if activeAndNext or isNext %}
+        {% assign showLarge = true %}
+      {% endif %}
       <a
         href="{{ module.url }}"
         tabindex="{% if active %}-1{% else %}0{% endif %}"
@@ -15,21 +21,25 @@
         class="
           w-10 h-10 flex place-content-center place-items-center
           relative z-20 focusable rounded-full group
+          no-underline
         "
       >
         <span
           class="
-            flex place-content-center place-items-center text-bg
+            flex place-content-center place-items-center
             aspect-square rounded-full border-2 border-line
+            {% if showLarge %} w-10 {% else %} w-5 {% endif %}
             {% if active %}
-              bg-links-active w-10
+              bg-links-active text-bg
             {% else %}
-              bg-bg w-5 group-hover:bg-links-active
+              bg-bg text-links-active font-bold
             {% endif %}
+            group-hover:bg-links-active
+            group-hover:text-bg
             transition-colors
           "
         >
-          {% if active %}{{ number }}{% endif %}
+          {% if activeAndNext or isNext %}{{ number }}{% endif %}
         </span>
       </a>
     {% endunless %}

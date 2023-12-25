@@ -18,9 +18,15 @@ function slugifyGerman(string) {
   );
 }
 
-function createTableOfContents(containerId, targetId) {
-  const container = document.getElementById(containerId);
-  const headings = container.querySelectorAll("h2, h3, h4, h5, h6");
+function createTableOfContents(contentClass, targetId) {
+  const content = [...document.querySelectorAll(contentClass)];
+  const headings = content.reduce(
+    (acc, tocContentNode) => [
+      ...acc,
+      ...tocContentNode.querySelectorAll("h2, h3, h4, h5, h6"),
+    ],
+    [],
+  );
   const toc = document.createElement("nav");
   toc.setAttribute("id", "toc");
   toc.setAttribute("aria-label", "Table of Contents");
@@ -101,4 +107,4 @@ function createTableOfContents(containerId, targetId) {
   target.appendChild(toc);
 }
 
-createTableOfContents("toc-content", "toc-target");
+createTableOfContents(".toc-content", "toc-target");

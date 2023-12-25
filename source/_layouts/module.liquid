@@ -78,8 +78,7 @@ layout: default
       </div>
     </div>
     <div
-      class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable py-16 relative z-10"
-      id="toc-content"
+      class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable py-16 relative z-10"
     >
       {{ content }}
     </div>
@@ -88,7 +87,7 @@ layout: default
 
 <section aria-labels="Methoden" class="bg-bg-alt py-16">
   <div class="grid-container">
-    <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:col-span-10 lg:col-start-2">
+    <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:col-span-10 lg:col-start-2 toc-content">
       <div>
         {% render 'heading', size: 'xl', text: 'Methodenbox' %}
         {% render 'paragraph',
@@ -104,16 +103,45 @@ layout: default
   </div>
 </section>
 
-Further Links Title: {{ furtherLinksTitle }}
-<br>
-Further Links Text: {{ furtherLinksText }}
-<br>
-Further Links:
-<br>
-{% for link in furtherLinks %}
-  Link title: {{ link.title }}
-  <br>
-  Link link: {{ link.link }}
-  <br>
+<section aria-label="{{ furtherLinksTitle }}">
+  <div class="grid-container">
+    <div
+      class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-24 relative z-10"
+    >
+      <div>
+        {% render 'heading', size: 'xl', text: furtherLinksTitle %}
+        {% render 'paragraph', text: furtherLinksText %}
+      </div>
+      <ul class="flex flex-col gap-8 p-0">
+        {% for link in furtherLinks %}
+          {% render 'text-link', href: link.link, text: link.title, ref: 'noreferrer nofollow' %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% assign nextNumber = number | plus: 1 %}
+{% assign nextModule = null %}
+
+{% for module in modulesSorted %}
+  {% if module.data.number == nextNumber %}
+    {% assign nextModule = module %}
+    {% break %}
+  {% endif %}
 {% endfor %}
-<br>
+
+{% if nextModule.data.number <= modulesSorted.size %}
+  <section aria-label="Nächster Modul" class="bg-bg-alt py-16">
+    <div class="grid-container">
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10"
+      >
+        {% render 'heading', size: 'xl', text: 'Zur nächsten Station', tag: 'h2' %}
+        {% render 'modules-stepper', sortedModules: modulesSorted, number: number, nextNumber: nextNumber %}
+        {% render 'heading', size: 'lg', text: nextModule.data.title, tag: 'h3' %}
+        {% render 'paragraph', text: nextModule.data.introText %}
+      </div>
+    </div>
+  </section>
+{% endif %}
