@@ -132,15 +132,30 @@ layout: default
 {% endfor %}
 
 {% if nextModule.data.number <= modulesSorted.size %}
-  <section aria-label="Nächster Modul" class="bg-bg-alt py-16">
+  <section aria-label="Nächster Modul" class="bg-bg-alt pt-16 pb-4 not-prose">
     <div class="grid-container">
       <div
         class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10"
       >
         {% render 'heading', size: 'xl', text: 'Zur nächsten Station', tag: 'h2' %}
         {% render 'modules-stepper', sortedModules: modulesSorted, number: number, nextNumber: nextNumber %}
+      </div>
+    </div>
+  </section>
+  <section aria-label="Nächster Modul" class="bg-bg-alt pb-16 not-prose">
+    <div class="grid-container">
+      <div
+        class="@lg:col-start-1 @lg:col-span-1 text-4xl lg:text-5xl text-bg font-bold drop-shadow-[6px_4px_0px_var(--shadow-secondary)] lg:text-right"
+        style="-webkit-text-stroke: 2px var(--line);text-stroke: 2px var(--line);"
+      >
+        {{ nextNumber }}.
+      </div>
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10"
+      >
         {% render 'heading', size: 'lg', text: nextModule.data.title, tag: 'h3' %}
         {% render 'paragraph', text: nextModule.data.introText %}
+        {% render 'button', href: '/module/', text: 'Alle module' %}
       </div>
     </div>
   </section>

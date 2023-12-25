@@ -39,7 +39,8 @@
             transition-colors
           "
         >
-          {% if activeAndNext or isNext %}{{ number }}{% endif %}
+          {% if activeAndNext %}{{ number }}{% endif %}
+          {% if isNext %}{{ nextNumber }}{% endif %}
         </span>
       </a>
     {% endunless %}
