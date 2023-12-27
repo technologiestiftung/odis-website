@@ -24,10 +24,10 @@ layout: default
     content: Module markdown content
 {% endcomment %}
 
-<section class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16">
+<section class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16 mb-[20vmin] lg:mb-0">
   <div class="grid-container">
     <div
-      class="@lg:col-start-1 @lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)]"
+      class="lg:col-start-1 lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)]"
       style="-webkit-text-stroke: 1px var(--text-inv);text-stroke: 1px var(--text-inv);"
     >
       {{ number }}.
@@ -45,11 +45,11 @@ layout: default
         size: 'lg',
       %}
     </div>
-    <div class="@lg:col-start-8 @lg:col-span-3 relative">
+    <div class="lg:col-start-8 lg:col-span-3 relative flex justify-center items-center">
       <img
         src="{{ icon }}"
         alt="Illustration für das Modul {{ number }}."
-        class="absolute bottom-0 left-0 w-full translate-y-[calc(50%+1rem)]"
+        class="absolute top-0 lg:top-auto lg:bottom-0 left-0 w-full lg:translate-y-[calc(50%+1rem)] max-w-sm"
       >
     </div>
   </div>
