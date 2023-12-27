@@ -261,24 +261,28 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://github.com/Lisa-Stubert"><img src="https://avatars.githubusercontent.com/u/61182572?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Lisa-Stubert</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=Lisa-Stubert" title="Code">💻</a> <a href="https://github.com/technologiestiftung/odis-website/commits?author=Lisa-Stubert" title="Documentation">📖</a> <a href="#content-Lisa-Stubert" title="Content">🖋</a></td>
-    <td align="center"><a href="https://fabianmoronzirfas.me/"><img src="https://avatars.githubusercontent.com/u/315106?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Fabian Morón Zirfas</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=ff6347" title="Code">💻</a> <a href="#content-ff6347" title="Content">🖋</a> <a href="https://github.com/technologiestiftung/odis-website/commits?author=ff6347" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/ester-t-s"><img src="https://avatars.githubusercontent.com/u/91192024?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Ester</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=ester-t-s" title="Code">💻</a> <a href="#content-ester-t-s" title="Content">🖋</a> <a href="https://github.com/technologiestiftung/odis-website/commits?author=ester-t-s" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/rgb3000"><img src="https://avatars.githubusercontent.com/u/5826403?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Ralph Schulz</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=rgb3000" title="Code">💻</a></td>
-    <td align="center"><a href="http://toridykes.com/"><img src="https://avatars.githubusercontent.com/u/12991433?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Tori Boeck</b></sub></a><br /><a href="#content-tori-d" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/julizet"><img src="https://avatars.githubusercontent.com/u/52455010?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Julia Zet</b></sub></a><br /><a href="#content-julizet" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/m-b-e"><img src="https://avatars.githubusercontent.com/u/36029603?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Max B. Eckert</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=m-b-e" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/KlemensM"><img src="https://avatars.githubusercontent.com/u/98896505?v=4?s=64" width="64px;" alt=""/><br /><sub><b>KlemensM</b></sub></a><br /><a href="#content-KlemensM" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/AlexandraKapp"><img src="https://avatars.githubusercontent.com/u/18367515?v=4?s=64" width="64px;" alt=""/><br /><sub><b>AlexandraKapp</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=AlexandraKapp" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/evelynebrie"><img src="https://avatars.githubusercontent.com/u/32559774?v=4?s=64" width="64px;" alt=""/><br /><sub><b>evelynebrie</b></sub></a><br /><a href="#content-evelynebrie" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/TDesjardins"><img src="https://avatars.githubusercontent.com/u/1841306?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Tino Desjardins</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/issues?q=author%3ATDesjardins" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/dnsos"><img src="https://avatars.githubusercontent.com/u/15640196?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Dennis Ostendorf</b></sub></a><br /><a href="#maintenance-dnsos" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/bnjmnsbl"><img src="https://avatars.githubusercontent.com/u/11134234?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Benjamin Seibel</b></sub></a><br /><a href="#content-bnjmnsbl" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/vogelino"><img src="https://avatars.githubusercontent.com/u/2759340?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Lucas Vogel</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=vogelino" title="Documentation">📖</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="12.5%"><a href="http://annameide.com/"><img src="https://citylab-berlin.org/wp-content/uploads/2022/09/anna-meide_portait-1.jpg?s=64" width="64px;" alt="Anna Meide"/><br /><sub><b>Anna Meide</b></sub></a><br /><a href="#design-annameide" title="Design">🎨</a> <a href="https://github.com/technologiestiftung/odis-website/commits?author=annameide" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://citylab-berlin.org/de/blog/die-koepfe-des-citylab-ana-jerdeva/"><img src="https://citylab-berlin.org/wp-content/uploads/2023/02/ana_portrait-1.jpg?s=64" width="64px;" alt="Anastasia Jerdeva"/><br /><sub><b>Anastasia Jerdeva</b></sub></a><br /><a href="#design-anajerdeva" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://vogelino.com"><img src="https://avatars.githubusercontent.com/u/2759340?v=4?s=64" width="64px;" alt="Lucas Vogel"/><br /><sub><b>Lucas Vogel</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=vogelino" title="Code">💻</a> <a href="#design-vogelino" title="Design">🎨</a> <a href="https://github.com/technologiestiftung/odis-website/commits?author=vogelino" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/Lisa-Stubert"><img src="https://avatars.githubusercontent.com/u/61182572?v=4?s=64" width="64px;" alt="Lisa-Stubert"/><br /><sub><b>Lisa-Stubert</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=Lisa-Stubert" title="Code">💻</a> <a href="https://github.com/technologiestiftung/odis-website/commits?author=Lisa-Stubert" title="Documentation">📖</a> <a href="#content-Lisa-Stubert" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://fabianmoronzirfas.me/"><img src="https://avatars.githubusercontent.com/u/315106?v=4?s=64" width="64px;" alt="Fabian Morón Zirfas"/><br /><sub><b>Fabian Morón Zirfas</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=ff6347" title="Code">💻</a> <a href="#content-ff6347" title="Content">🖋</a> <a href="https://github.com/technologiestiftung/odis-website/commits?author=ff6347" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/ester-t-s"><img src="https://avatars.githubusercontent.com/u/91192024?v=4?s=64" width="64px;" alt="Ester"/><br /><sub><b>Ester</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=ester-t-s" title="Code">💻</a> <a href="#content-ester-t-s" title="Content">🖋</a> <a href="https://github.com/technologiestiftung/odis-website/commits?author=ester-t-s" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/rgb3000"><img src="https://avatars.githubusercontent.com/u/5826403?v=4?s=64" width="64px;" alt="Ralph Schulz"/><br /><sub><b>Ralph Schulz</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=rgb3000" title="Code">💻</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/dnsos"><img src="https://avatars.githubusercontent.com/u/15640196?v=4?s=64" width="64px;" alt="Dennis Ostendorf"/><br /><sub><b>Dennis Ostendorf</b></sub></a><br /><a href="#maintenance-dnsos" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="12.5%"><a href="http://toridykes.com/"><img src="https://avatars.githubusercontent.com/u/12991433?v=4?s=64" width="64px;" alt="Tori Boeck"/><br /><sub><b>Tori Boeck</b></sub></a><br /><a href="#content-tori-d" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/julizet"><img src="https://avatars.githubusercontent.com/u/52455010?v=4?s=64" width="64px;" alt="Julia Zet"/><br /><sub><b>Julia Zet</b></sub></a><br /><a href="#content-julizet" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/KlemensM"><img src="https://avatars.githubusercontent.com/u/98896505?v=4?s=64" width="64px;" alt="Klemens Maget"/><br /><sub><b>Klemens Maget</b></sub></a><br /><a href="#content-KlemensM" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/evelynebrie"><img src="https://avatars.githubusercontent.com/u/32559774?v=4?s=64" width="64px;" alt="evelynebrie"/><br /><sub><b>evelynebrie</b></sub></a><br /><a href="#content-evelynebrie" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/bnjmnsbl"><img src="https://avatars.githubusercontent.com/u/11134234?v=4?s=64" width="64px;" alt="Benjamin Seibel"/><br /><sub><b>Benjamin Seibel</b></sub></a><br /><a href="#content-bnjmnsbl" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/m-b-e"><img src="https://avatars.githubusercontent.com/u/36029603?v=4?s=64" width="64px;" alt="Max B. Eckert"/><br /><sub><b>Max B. Eckert</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=m-b-e" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/AlexandraKapp"><img src="https://avatars.githubusercontent.com/u/18367515?v=4?s=64" width="64px;" alt="AlexandraKapp"/><br /><sub><b>AlexandraKapp</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/commits?author=AlexandraKapp" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://github.com/TDesjardins"><img src="https://avatars.githubusercontent.com/u/1841306?v=4?s=64" width="64px;" alt="Tino Desjardins"/><br /><sub><b>Tino Desjardins</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-website/issues?q=author%3ATDesjardins" title="Bug reports">🐛</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
@@ -290,13 +294,13 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## Credits
 
-<table>
+<table style="background:white;">
   <tr>
     <td>
       <a href="https://odis-berlin.de">
         <br />
         <br />
-        <img width="200" src="https://logos.citylab-berlin.org/logo-odis-berlin.svg" />
+        <img width="200" src="https://logos.citylab-berlin.org/logo-odis-berlin-black.svg" />
       </a>
     </td>
     <td>

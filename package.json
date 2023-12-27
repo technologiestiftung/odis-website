@@ -17,7 +17,9 @@
     "eslint": "eslint . --ignore-path .lintignore",
     "eslint:fix": "eslint . --fix --ignore-path .lintignore",
     "lint": "run-s prettier eslint",
-    "lint:fix": "run-s prettier:fix eslint:fix"
+    "lint:fix": "run-s prettier:fix eslint:fix",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "repository": {
     "type": "git",
@@ -45,6 +47,7 @@
     "@shopify/prettier-plugin-liquid": "1.2.2",
     "@tailwindcss/container-queries": "0.1.1",
     "@tailwindcss/typography": "0.5.9",
+    "all-contributors-cli": "6.26.1",
     "eslint": "8.10.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
