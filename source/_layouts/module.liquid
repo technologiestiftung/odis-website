@@ -1,0 +1,189 @@
+---
+layout: default
+---
+{% comment %}
+  AVAILABLE VARIABLES
+  -------------------
+    tags: Module tags (required)
+    number: Module number (required)
+    title: Module title (required)
+    metaDescription: Module meta description (required)
+    introText: Module intro text (required)
+    icon: Module icon (required)
+    methods: Module methods (required)
+      - name: Method name (required)
+        description: Method description (required)
+        icon: Method icon (required)
+        link: Method link (required)
+    furtherLinksTitle: Further links title (required)
+    furtherLinksText: Further links text (required)
+    furtherLinks: Further links (required)
+      - title: Further link title (required)
+        link: Further link link (required)
+
+    content: Module markdown content
+{% endcomment %}
+
+<section class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16 mb-[20vmin] lg:mb-0">
+  <div class="grid-container">
+    <div
+      class="lg:col-start-1 lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)] row-start-2"
+      style="-webkit-text-stroke: 1px var(--text-inv);text-stroke: 1px var(--text-inv);"
+    >
+      {{ number }}.
+    </div>
+    <div class="lg:col-start-2 lg:col-span-5 row-start-1">
+      <a
+        href="/module"
+        class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Übersicht
+      </a>
+    </div>
+    <div class="lg:col-start-2 lg:col-span-5 row-start-2">
+      {%
+        render 'heading',
+        text: title,
+        size: 'xxl',
+        inverted: true,
+      %}
+      {%
+        render 'paragraph',
+        text: introText,
+        size: 'lg',
+      %}
+    </div>
+    <div class="lg:col-start-8 lg:col-span-3 relative flex justify-center items-center row-start-3">
+      <img
+        src="{{ icon }}"
+        alt="Illustration für das Modul {{ number }}."
+        class="absolute top-0 lg:top-auto lg:bottom-0 left-0 w-full lg:translate-y-[calc(50%+1rem)] max-w-sm"
+      >
+    </div>
+  </div>
+</section>
+
+{% assign modules = collections.module %}
+{% assign modulesSorted = modules | sort: 'number' %}
+<section>
+  <div class="grid-container">
+    <div class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 pt-16">
+      {% render 'modules-stepper', sortedModules: modulesSorted, number: number %}
+    </div>
+  </div>
+</section>
+
+<script
+  defer
+  type="text/javascript"
+  src="/assets/js/tableOfContents.js"
+></script>
+<section aria-label="Beitrag">
+  <div class="grid-container">
+    <div class="py-16 flex flex-col gap-6 order-first lg:order-last lg:col-start-9 lg:col-span-3 z-0">
+      <div class="sticky w-full top-6 lg:pb-16" id="toc-target">
+        <span id="toc-label" class="font-bold text-headlines">Auf dieser Seite</span>
+      </div>
+    </div>
+    <div
+      class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable py-16 relative z-10"
+    >
+      {{ content }}
+    </div>
+  </div>
+</section>
+
+<section aria-labels="Methoden" class="bg-bg-alt py-16">
+  <div class="grid-container">
+    <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:col-span-10 lg:col-start-2 toc-content">
+      <div>
+        {% render 'heading', size: 'xl', text: 'Methodenbox' %}
+        {% render 'paragraph',
+          text: 'Die Erfassung aller vorliegenden Datensätze und das Sammeln von Informationen und Zuständigkeiten zu diesen Daten ist häufig eine komplexe Aufgabe, bei der es ratsam ist, ein möglichst organisiertes Vorgehen zu verfolgen. Die hier vorgestellten Ressourcen helfen dabei den Mehrwert einer Dateninventur zu begreifen und unterstützen konkret bei einem Dateninventurprozess.'
+        %}
+      </div>
+    </div>
+    <ul class="grid grid-cols-10 gap-4 sm:gap-6">
+      {% for method in methods %}
+        {% render 'method-thumbnail', method: method %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section aria-label="{{ furtherLinksTitle }}">
+  <div class="grid-container">
+    <div
+      class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-24 relative z-10"
+    >
+      <div>
+        {% render 'heading', size: 'xl', text: furtherLinksTitle %}
+        {% render 'paragraph', text: furtherLinksText %}
+      </div>
+      <ul class="flex flex-col gap-8 p-0">
+        {% for link in furtherLinks %}
+          {% render 'text-link', href: link.link, text: link.title, ref: 'noreferrer nofollow' %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% assign nextNumber = number | plus: 1 %}
+{% assign nextModule = null %}
+
+{% for module in modulesSorted %}
+  {% if module.data.number == nextNumber %}
+    {% assign nextModule = module %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if nextModule.data.number <= modulesSorted.size %}
+  <section aria-label="Nächster Modul" class="bg-bg-alt pt-16 pb-4 not-prose">
+    <div class="grid-container">
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10"
+      >
+        {% render 'heading', size: 'xl', text: 'Zur nächsten Station', tag: 'h2' %}
+        {% render 'modules-stepper', sortedModules: modulesSorted, number: number, nextNumber: nextNumber %}
+      </div>
+    </div>
+  </section>
+  <section aria-label="Nächster Modul" class="bg-bg-alt pb-16 not-prose">
+    <div class="grid-container">
+      <div
+        class="@lg:col-start-1 @lg:col-span-1 text-4xl lg:text-5xl text-bg font-bold drop-shadow-[6px_4px_0px_var(--shadow-secondary)] lg:text-right"
+        style="-webkit-text-stroke: 2px var(--line);text-stroke: 2px var(--line);"
+      >
+        {{ nextNumber }}.
+      </div>
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10"
+      >
+        {% render 'heading', size: 'lg', text: nextModule.data.title, tag: 'h3' %}
+        {% render 'paragraph', text: nextModule.data.introText %}
+        {% render 'button', href: '/module/', text: 'Alle module' %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+<section aria-label="Kontakt" class="py-16">
+  <div class="grid-container">
+    {% render 'contact' %}
+  </div>
+</section>
