@@ -1,0 +1,125 @@
+{% comment %}
+  AVAILABLE VARIABLES
+  -------------------
+  module:
+    url: Module URL (required)
+    data:
+      number: Module number (required)
+      title: Module title (required)
+      introText: Module intro text (required)
+      icon: Module icon (required)
+      position: "left" or "right" (default: "left")
+  modulesSorted: All modules sorted by number
+{% endcomment %}
+
+<section class="bg-bg group/section">
+  <div class="grid-container">
+    <a
+      href="{{ module.url }}"
+      title="{{ module.data.title }}"
+      class="group/link p-px @lg:col-span-10 outline-none"
+    >
+      <div
+        class="
+          p-16 -mx-16 grid grid-cols-10 gap-4 sm:gap-6 transition-colors group-hover:bg-bg-alt
+          group-focus-visible/link:bg-bg-alt group-focus-visible/link:ring-2 group-focus-visible/link:ring-line
+          relative
+        "
+      >
+        <div
+          class="
+            col-span-3 @lg:col-span-1 flex justify-center items-start z-10 relative
+            {% if position == 'right' %}
+              @lg:order-3
+            {% endif %}
+          "
+        >
+          <span class="w-8 aspect-square rounded-full text-bg bg-links-active flex place-items-center place-content-center font-bold text-lg">
+            {{ module.data.number }}
+          </span>
+        </div>
+        <img
+          src="{{ module.data.icon }}"
+          alt="Module icon illustration for module '{{ module.data.title }}'"
+          class="
+            col-span-9 @lg:col-span-3 z-10 relative
+            {% if position == 'right' %}
+              @lg:order-2
+            {% endif %}
+          "
+        >
+        <div
+          class="
+            col-span-12 lg:col-span-5 z-10 relative
+            {% if position == 'right' %}
+              @lg:order-1
+            {% endif %}
+          "
+        >
+          {% render 'heading', text: module.data.title, tag: 'h3', size: 'lg' %}
+          {% render 'paragraph', text: module.data.introText, class: 'mb-6' %}
+          {% render 'button', text: 'Erfahre mehr', tag: 'span' %}
+        </div>
+        <div class="col-span-1 hidden lg:block" aria-hidden="true"></div>
+        <div
+          class="
+            absolute -inset-y-[2px] group-first:top-16 inset-x-[calc((var(--columnSize)/2)+4rem)]
+            z-0 group-focus-visible/link:opacity-0 transition-opacity pointer-events-none
+            {% if module.data.number == 1 %}
+              top-16
+            {% endif %}
+            {% if module.data.number == modulesSorted.size %}
+              bottom-[calc(100%-4rem)]
+            {% endif %}
+          "
+          aria-hidden="true"
+        >
+          <div
+            class="
+              w-full h-full relative grid grid-cols-2 gap-[-1px]
+              {% if module.data.number != modulesSorted.size %}
+                grid-rows-2
+              {% endif %}
+            "
+          >
+            <div
+              class="
+                {% if position == "left" %}
+                  border-2 border-line border-dashed border-r-0 border-b-0
+                  {% if module.data.number != 1 %}
+                    rounded-tl-[64px]
+                  {% else %}
+                    border-t-0
+                  {% endif %}
+                {% endif %}
+              "
+            ></div>
+            <div
+              class="
+                {% if position == "right" %}
+                border-2 border-line border-dashed border-l-0 border-b-0 rounded-tr-[64px]
+                {% endif %}
+              "
+            ></div>
+            {% if module.data.number != modulesSorted.size %}
+              <div
+                class="
+                  {% if position == "left" %}
+                    border-2 border-line border-dashed border-r-0 border-t-0 rounded-bl-[64px]
+                  {% endif %}
+                "
+              ></div>
+              <div
+                class="
+                  {% if position == "right" %}
+                    border-2 border-line border-dashed border-l-0 border-t-0 rounded-br-[64px]
+                  {% endif %}
+                "
+              ></div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>

@@ -5,19 +5,59 @@ subtitle: Unsere 5 Module für deine offenen Daten
 introTitle: Unsere 5 Module auf einen Blick
 introText: "In einer Senats- oder Bezirksverwaltung werden auf unterschiedliche Weise Daten generiert: In Fachverfahren, über eigene Erhebungen oder durch Beauftragungen an externe Dienstleister. Kaum ein Vorgehen in der Verwaltung kommt mittlerweile ohne Daten aus. Und oftmals werden Daten aus der Verwaltung angefragt. Zum Beispiel aus der Zivilgesellschaft, von anderen Behörden oder benachbarten Abteilungen und natürlich von Presse und Medien."
 ---
-<section class="py-16 bg-bg-alt">
+<section class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16">
   <div class="grid-container">
-    <ul class="flex flex-col gap-8">
-      {% assign modules = collections.module %}
-      {% assign modulesSorted = modules | sort: 'number' %}
-      {% for module in modulesSorted %}
-        <li>
-          <a href="{{ module.url }}" title="{{ module.data.title }}">
-            <h2 class="font-bold">{{ module.data.title }}</h2>
-            <p>{{ module.data.introText }}</p>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+    <div class="lg:col-start-2 lg:col-span-5">
+      {%
+        render 'heading',
+        text: title,
+        size: 'xxl',
+        inverted: true,
+      %}
+      {%
+        render 'paragraph',
+        text: subtitle,
+        size: 'lg',
+      %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-bg text-text py-16">
+  <div class="grid-container">
+    <div class="lg:col-start-2 lg:col-span-5">
+      {%
+        render 'heading',
+        text: introTitle,
+        size: 'xl',
+        tag:'h2',
+      %}
+      {%
+        render 'paragraph',
+        text: introText,
+      %}
+    </div>
+  </div>
+</section>
+
+{% assign modules = collections.module %}
+{% assign modulesSorted = modules | sort: 'number' %}
+
+<div>
+  {% for module in modulesSorted %}
+    {% assign moduloRest = forloop.index | modulo: 2 %}
+    {% assign isOdd = moduloRest == 1 %}
+    {% if isOdd %}
+      {% assign position = 'left' %}
+    {% else %}
+      {% assign position = 'right' %}
+    {% endif %}
+    {% render 'module-thumbnail', module: module, position: position, modulesSorted: modulesSorted %}
+  {% endfor %}
+</div>
+
+<section aria-label="Kontakt" class="py-16 bg-bg-alt mt-16">
+  <div class="grid-container">
+    {% render 'contact' %}
   </div>
 </section>
