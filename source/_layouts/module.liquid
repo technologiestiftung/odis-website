@@ -27,12 +27,33 @@ layout: default
 <section class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16 mb-[20vmin] lg:mb-0">
   <div class="grid-container">
     <div
-      class="lg:col-start-1 lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)]"
+      class="lg:col-start-1 lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)] row-start-2"
       style="-webkit-text-stroke: 1px var(--text-inv);text-stroke: 1px var(--text-inv);"
     >
       {{ number }}.
     </div>
-    <div class="lg:col-start-2 lg:col-span-5">
+    <div class="lg:col-start-2 lg:col-span-5 row-start-1">
+      <a
+        href="/module"
+        class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Übersicht
+      </a>
+    </div>
+    <div class="lg:col-start-2 lg:col-span-5 row-start-2">
       {%
         render 'heading',
         text: title,
@@ -45,7 +66,7 @@ layout: default
         size: 'lg',
       %}
     </div>
-    <div class="lg:col-start-8 lg:col-span-3 relative flex justify-center items-center">
+    <div class="lg:col-start-8 lg:col-span-3 relative flex justify-center items-center row-start-3">
       <img
         src="{{ icon }}"
         alt="Illustration für das Modul {{ number }}."
