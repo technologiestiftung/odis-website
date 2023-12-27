@@ -1,0 +1,136 @@
+{% comment %}
+  AVAILABLE VARIABLES
+  -------------------
+  module:
+    url: Module URL (required)
+    data:
+      number: Module number (required)
+      title: Module title (required)
+      introText: Module intro text (required)
+      icon: Module icon (required)
+      position: "left" or "right" (default: "left")
+  modulesSorted: All modules sorted by number
+{% endcomment %}
+
+<section class="bg-bg group/section">
+  <div class="grid-container">
+    <a
+      href="{{ module.url }}"
+      title="{{ module.data.title }}"
+      class="group/link p-px lg:col-span-10 outline-none"
+    >
+      <div
+        class="
+          p-16 -mx-16 grid grid-cols-10 gap-4 sm:gap-6 transition-colors group-hover:bg-bg-alt
+          group-focus-visible/link:bg-bg-alt group-focus-visible/link:ring-2 group-focus-visible/link:ring-line
+          relative
+        "
+      >
+        <div
+          class="
+            col-span-1 flex justify-center items-start z-10 relative
+            {% if position == 'right' %}
+              sm:order-2 lg:order-3
+            {% endif %}
+          "
+        >
+          <span class="relative w-8 aspect-square">
+            <span
+              class="
+                w-8 aspect-square rounded-full text-bg bg-links-active flex
+                place-items-center place-content-center font-bold text-lg left-4 -translate-x-1/2 top-0 absolute
+              "
+            >
+              {{ module.data.number }}
+            </span>
+          </span>
+        </div>
+        <img
+          src="{{ module.data.icon }}"
+          alt="Module icon illustration for module '{{ module.data.title }}'"
+          class="
+            col-span-8 sm:col-span-8 sm:col-start-2 z-10 relative
+            {% if position == 'right' %}
+              sm:order-1 lg:order-2 lg:col-span-3
+            {% else %}
+              lg:col-span-2
+            {% endif %}
+          "
+        >
+        <div
+          class="
+            col-span-11 sm:col-span-8 col-start-2 sm:col-start-2 lg:col-span-5 z-10 relative pl-4 sm:pl-0
+            {% if position == 'right' %}
+              sm:order-3 lg:order-1
+            {% endif %}
+          "
+        >
+          {% render 'heading', text: module.data.title, tag: 'h3', size: 'lg' %}
+          {% render 'paragraph', text: module.data.introText, class: 'mb-6' %}
+          {% render 'button', text: 'Erfahre mehr', tag: 'span' %}
+        </div>
+        <div class="col-span-1 hidden lg:block" aria-hidden="true"></div>
+        <div
+          class="
+            absolute -inset-y-[2px] group-first:top-16 left-16 sm:inset-x-[calc((var(--columnSize)/2)+4rem)]
+            z-0 group-focus-visible/link:opacity-0 transition-opacity pointer-events-none
+            {% if module.data.number == 1 %}
+              top-16
+            {% endif %}
+            {% if module.data.number == modulesSorted.size %}
+              bottom-[calc(100%-4rem)]
+            {% endif %}
+          "
+          aria-hidden="true"
+        >
+          <div
+            class="
+              border-l-2 border-line border-dashed sm:border-l-0
+              ml-4 sm:ml-0
+              w-full h-full relative grid grid-cols-2 gap-[-1px]
+              {% if module.data.number != modulesSorted.size %}
+                grid-rows-2
+              {% endif %}
+            "
+          >
+            <div
+              class="
+                {% if position == "left" %}
+                  sm:border-2 sm:border-line sm:border-dashed sm:border-r-0 sm:border-b-0
+                  {% if module.data.number != 1 %}
+                    rounded-tl-[64px]
+                  {% else %}
+                    sm:border-t-0
+                  {% endif %}
+                {% endif %}
+              "
+            ></div>
+            <div
+              class="
+                {% if position == "right" %}
+                sm:border-2 sm:border-line sm:border-dashed sm:border-l-0 sm:border-b-0 rounded-tr-[64px]
+                {% endif %}
+              "
+            ></div>
+            {% if module.data.number != modulesSorted.size %}
+              <div
+                class="
+                  {% if position == "left" %}
+                    sm:border-2 sm:border-line sm:border-dashed sm:border-r-0 sm:border-t-0 rounded-bl-[64px]
+                  {% endif %}
+                "
+              ></div>
+              <div
+                class="
+                  {% if position == "right" %}
+                    sm:border-2 sm:border-line sm:border-dashed sm:border-l-0 sm:border-t-0 rounded-br-[64px]
+                  {% endif %}
+                "
+              ></div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>

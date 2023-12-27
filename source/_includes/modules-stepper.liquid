@@ -1,0 +1,48 @@
+<nav class="inline-flex relative gap-4">
+  <span
+    aria-hidden="true"
+    class="z-10 absolute left-4 w-[calc(100%-2rem)] top-1/2 -translate-y-1/2 h-[2px] bg-line"
+  ></span>
+  {% assign uniqueNumbers = '' %}
+  {% for module in sortedModules %}
+    {% unless uniqueNumbers contains module.data.number %}
+      {% assign uniqueNumbers = uniqueNumbers | append: module.data.number | append: ' ' %}
+      {% assign active = module.data.number == number %}
+      {% assign isNext = module.data.number == nextNumber %}
+      {% assign showLarge = false %}
+      {% assign activeAndNext = active and nextNumber == null %}
+      {% if activeAndNext or isNext %}
+        {% assign showLarge = true %}
+      {% endif %}
+      <a
+        href="{{ module.url }}"
+        tabindex="{% if active %}-1{% else %}0{% endif %}"
+        aria-label="Go to module {{ module.data.number }}"
+        class="
+          w-10 h-10 flex place-content-center place-items-center
+          relative z-20 focusable rounded-full group
+          no-underline
+        "
+      >
+        <span
+          class="
+            flex place-content-center place-items-center
+            aspect-square rounded-full border-2 border-line
+            {% if showLarge %} w-10 {% else %} w-5 {% endif %}
+            {% if active %}
+              bg-links-active text-bg
+            {% else %}
+              bg-bg text-links-active font-bold
+            {% endif %}
+            group-hover:bg-links-active
+            group-hover:text-bg
+            transition-colors
+          "
+        >
+          {% if activeAndNext %}{{ number }}{% endif %}
+          {% if isNext %}{{ nextNumber }}{% endif %}
+        </span>
+      </a>
+    {% endunless %}
+  {% endfor %}
+</nav>
