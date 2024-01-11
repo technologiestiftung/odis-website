@@ -10,12 +10,12 @@ heroImage: hero_image.png
 datatable: true
 ---
 
-## Offene Daten bereitstellen und präsentieren: Von der PDF zur Storytelling-Anwendung
+### Offene Daten bereitstellen und präsentieren: Von der PDF zur Storytelling-Anwendung
 
 Der Betrieb von Bildungseinrichtungen, die Instandhaltung der Infrastruktur oder die Verfolgung von Straftaten: Im alltäglichen Leben der Berliner Bürger:innen übernimmt die Verwaltung eine Vielzahl wichtiger Aufgaben. Im Jahr 2021 beispielsweise konnten Hauptverwaltungen und Bezirke mit rund 32 Mrd. Euro für ihre Dienstleistungen aus dem Haushalt planen.  
 <br>
 
-### Die Ausgangslage
+#### Die Ausgangslage
 
 Informationen darüber bereitzustellen, wo wieviel öffentliche Gelder ausgegeben werden, ist ein wichtiger Aspekt im Sinne einer transparent agierenden Verwaltung. Die Senatsverwaltung für Finanzen (SenFin) veröffentlicht daher seit dem Jahr 2000 jährlich die Broschüre [„Was kostet wo wie viel?”](https://www.berlin.de/sen/finanzen/haushalt/downloads/artikel.6347.php) zum Download im Internet. Darin werden auf knapp 70 PDF-Seiten Verwaltungskosten aufgeschlüsselt nach Bezirken und Fachbereichen dargestellt.
 
@@ -26,7 +26,7 @@ Ein Blick in die Broschüre zeigt aber: Die Übersichtlichkeit und Anordnung der
 
 <br>
 
-### Das Vorgehen
+#### Das Vorgehen
 
 Vor diesem Hintergrund haben wir mit der SenFin die Bereitstellung von offenen, maschinenlesbaren Verwaltungsdaten in Kombination mit ansprechenden Präsentationsformen diskutiert. Gemeinsam haben wir einen Vorschlag für eine alternative Darstellungen der Broschüre „Was kostet wo wie viel?“ und eine integrierte Bereitstellung von Daten in offenen Dateiformaten erarbeitet.
 
@@ -45,7 +45,7 @@ Die erste Grundlage für die Überlegungen zur Datenpräsentation bildete eine A
 Im nächsten Schritt entschieden wir uns dafür, eine Variante zur Datenpräsentation mittels „Storytelling” weiter auszuarbeiten. Das Storytelling bietet den Vorteil, dass Informationen besser in einen größeren Kontext gesetzt werden und die Betrachter:innen praktisch mittels eines roten Fadens durch die Daten geführt werden. Im Gegensatz zu einem simplen Daten-Dashboard, erfordert es allerdings deutlich mehr Arbeit in der Konzeption und im Design. Dafür wurde die Story, also die Wahl und Anordnung verschiedene Elemente zur Datenpräsentation (Graphen, Texte, Karten), grob skizziert. Mit Unterstützung eines Interface-Designers der Technologiestiftung Berlin wurde daraus ein sogenannter Wireframe erstellt.  
 <br>
 
-### Das Ergebnis
+#### Das Ergebnis
 
 Der Wireframe zeigt den konkreten Aufbau, Grafiken und Textbausteine, sowie erste leichte Andeutungen von Design-Elementen (er ist allerdings kein fertiger Designentwurf) für eine Homepage und eine thematische Unterseite für das von SenFin bereitgestellte Datenthema „Bauen, Wohnen, Vermessen und Verkehr”. Die Anwendung kann also für sich alleine stehen, z.B. als eigenständige Website. Die Besucher der Seite werden dabei vom „Groben ins Feine” durch die Daten geführt. Alle Graphen sind interaktiv: Schieberegler und klickbare Karten bieten die Möglichkeit, sowohl die Veränderungen der Kosten über die Zeit als auch im Vergleich zwischen den Bezirken zu betrachten und zu vergleichen. Kurze, präzise Texte setzen die Informationen in den nötigen Kontext und verweisen auf weiterführende Informationen.
 Besonders wichtig ist es aus unserer Sicht, die Daten als Open Data maschinenlesbar zur Verfügung zu stellen. Dies könnte über eine separate Datenbank im Backend realisiert werden. Über eine Programmierschnittstelle werden die Daten in das Frontend geladen, können aber ebenso von interessierten Nutzer:innen mittels eigener Programmcodes abgefragt oder auch als csv-Dateien über Download-Buttons heruntergeladen werden.
@@ -53,7 +53,7 @@ Besonders wichtig ist es aus unserer Sicht, die Daten als Open Data maschinenles
 {% render "macro-image-section-small", src:"wireframe2.png", caption:"Ausschnitt aus dem Wireframe für die interaktiven Datenvisualisierungen" %}
 <br>
 
-### Wie geht’s weiter?
+#### Wie geht’s weiter?
 
 Das Storytelling-Mockup wurde dem Projektteam der SenFin vorgestellt und soll nun als Grundlage dienen, um intern weiter über die Bereitstellung von Open Data und eine moderne Datenpräsentation für Bürger:innen und weitere Zielpersonen zu diskutieren und Veränderungen anzustoßen. Es handelt sich dabei nicht um ein komplett fertiges Konzept oder einen Anforderungskatalog, sondern eher um eine Entscheidungshilfe, um weiter zu überlegen, welche Präsentationsform letztendlich gewünscht ist und ganz konkrete Anforderungen an die Umsetzung zu definieren. Dieser Ansatz kann auch als Anregung für viele andere Datenprojekte und Themen in der Berliner Verwaltung dienen.
 

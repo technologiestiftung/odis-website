@@ -8,7 +8,7 @@ date: 2022-02-18
 visible: false
 ---
 
-# In 10 Schritten zum maschinenlesbaren Organigramm
+## In 10 Schritten zum maschinenlesbaren Organigramm
 
 <br/>
 
@@ -16,7 +16,7 @@ Das [Organigramm-Tool](https://organigramme.odis-berlin.de) hat zum Ziel, die Er
 
 <br/>
 
-#### Getting started: Wir führen Sie in 10 einfachen Schritten durch das Tool
+##### Getting started: Wir führen Sie in 10 einfachen Schritten durch das Tool
 
 <br/>
 

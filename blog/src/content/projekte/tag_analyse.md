@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: ['project','post']
+tags: ["project", "post"]
 title: Netzwerkanalyse von Metadaten-Tags
 blogLinkTitle:
 blogLink:
@@ -34,7 +34,7 @@ eine Netzwerkanalyse identifiziert. {% endrenderTemplate %}
 <br />
 <br />
 
-{% renderTemplate "md" %} ## Auswertung Aus der Analyse lassen sich einige
+{% renderTemplate "md" %} ### Auswertung Aus der Analyse lassen sich einige
 interessante Korrelationen zur Häufigkeit und Verwendung von Tags ableiten. Der
 Graph teilt sich optisch in zwei große Bereiche auf, die nur über wenige Tags
 miteinander verknüpft sind. Der eine Bereich ist der rund um die Knotenpunkte

@@ -1,6 +1,6 @@
 ---
 layout: project
-tags: ['project','post']
+tags: ["project", "post"]
 title: Kerndatensätze
 blogLinkTitle: "Hier geht's zur Publikation"
 blogLink: /assets/file-download/ODIS_Kerndatensaetze.pdf
@@ -12,13 +12,13 @@ heroImage: home_globe.png
 datatable: true
 ---
 
-## Das Potenzial von Daten für eine Stadt
+### Das Potenzial von Daten für eine Stadt
 
 Daten haben das Potenzial, diverse Dimensionen einer Stadt zu transformieren – mit Daten können zum Beispiel Dienstleistungen und Prozesse verbessert, neue Geschäftsmodelle entwickelt und eine bessere Lebensqualität für die Bürger:innen der Stadt geschafft werden. Diese Potenziale können aber nur realisiert werden, wenn die dafür nötigen Daten überhaupt existieren – und wenn sie auch tatsächlich zugänglich und nutzbar sind.
 
 Welche Daten sind für eine Stadt eigentlich relevant? Die Antwort hängt vom Blickwinkel ab: Geht es beispielsweise um die Bedürfnisse der Privatwirtschaft oder um den Bedarf von Bürger:innen nach mehr Transparenz? Um diese diversen Perspektiven auf Daten zu kombinieren und eine (mögliche) Antwort auf die Frage "Welche offene Daten braucht eine Stadt wie Berlin?" anzubieten, hat ODIS eine Liste von 100 sogenannten „Kerndatensätzen“ erstellt.
 
-## Über die Liste
+### Über die Liste
 
 Kerndatensätze sind Datensätze, die wir als besonders wertvoll für Berlin bewertet haben, weil sie einen großen Mehrwert für ein breites Publikum liefern können. Für diese Liste wurden die Bedarfe und Interessen der Wirtschaft, der Wissenschaft, der Zivilgesellschaft und der Verwaltung selbst betrachtet. Die Liste ist allerdings keine abgeschlossene Aufzählung, sondern eher eine Orientierungshilfe um herauszufinden, wo wir als Stadt eigentlich anfangen und welche Datensätze wir unbedingt (noch) veröffentlichen sollten.
 

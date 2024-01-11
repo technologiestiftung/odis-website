@@ -18,14 +18,14 @@ readingTime: 10-20
 date: 2023-06-19
 ---
 
-## Gender Data und Open Data Berlin
+### Gender Data und Open Data Berlin
 
 Die Unterrepräsentanz von Frauen und frauenspezifischen Daten in Datensätzen wird zunehmend kritisch gesehen, da sie konkrete Benachteiligung in einer Vielzahl von Lebenssituationen manifestiert.
 In diesem Blogpost betrachten wir die Bedeutung von Gender Data insgesamt und klären: **Was ist die Gender Data Gap und warum sind geschlechtsspezifische Daten wichtig? Besteht auch bei den offenen Daten Berlins eine Gender Data Gap?** Dazu haben wir im Rahmen dieses kleinen Forschungsprojekts einige Metadatenanalysen durchgeführt und die interessanten Erkenntnissen zusammengefasst.
 
-## Hintergrund
+### Hintergrund
 
-### Eine Stadt für Alle?
+#### Eine Stadt für Alle?
 
 Morgens mit dem Auto ins Büro, abends wieder nach Hause – ein recht simples Mobilitätsverhalten, auf das jahrzehntelang die Verkehrsplanung in den meisten westlichen Städten ausgerichtet war. Dieser Alltag funktioniert aber nicht unbedingt für alle Stadtbewohner:innen. Wie man unterwegs ist und welche Anforderungen sich daraus an die Stadt ergeben, hat nicht zuletzt auch etwas mit dem sozialen Geschlecht (Gender) zu tun – mit klassischen Mann-Frau-Rollenbildern, Erwartungen & Normen, sowie gesellschaftlichen Strukturen. Frauen und insbesondere Mütter legen tendenziell die meisten Wege zurück, unter anderem für Erwerbsarbeit, Kinderbetreuung, Pflege von Angehörigen und Einkauf. Sie nutzen dabei überwiegend öffentliche Verkehrsmittel und Fußwege, welche lange in der Planung vernachlässigt wurden. Unter den Stichworten _feministische Stadtplanung_ und _Gender Planning_ wurde in den vergangenen Jahren dazu geforscht und berichtet, wie Städte so gestaltet werden können, dass sie für alle Bewohner:innen gut funktionieren [1,2,3]. Auch in Berlin verfolgt die Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen mit dem Konzept des _Gender Mainstreaming_ das Ziel, die unterschiedlichen Lebensbedingungen und Bedürfnisse möglichst aller Berliner:innen zu berücksichtigen [4].
 
@@ -33,15 +33,15 @@ Morgens mit dem Auto ins Büro, abends wieder nach Hause – ein recht simples M
 
 <br>
 
-### Die Bedeutung von Daten
+#### Die Bedeutung von Daten
 
 Diese Ungleichheit wird nicht nur in der Stadtplanung wirksam, sondern auch in weiteren zentralen Lebensbereichen wie der medizinischen Versorgung oder der politischen Teilhabe. Daten spielen in diesem Zusammenhang eine wichtige Rolle! **Durch geschlechterspezifische Daten kann Geschlechter(un)gerechtigkeit gemessen und sichtbar gemacht werden.** Dadurch werden Handlungsbedarfe sichtbar und konkrete Ziele für die Gleichstellung der Geschlechter können formuliert und gemessen werden. Datenerhebungen und Datenanalysen, die nach Geschlechtern differenzieren, können außerdem zeigen, ob und wie sich die Bedürfnisse und Lebensrealitäten der Geschlechter unterscheiden. Unterschiedliche Bedürfnisse ergeben sich dabei nicht unbedingt direkt aus dem biologischen Geschlecht, sondern auch aus Normen, gesellschaftlichen Erwartungen und strukturellen Faktoren. Nur wenn der Status Quo bekannt ist und man die unterschiedlichen Bedürfnisse und Lebensrealitäten versteht, können Politik, Wirtschaft und andere Organisationen und Institutionen zielgruppen- und gendergerechter handeln. Auch die Senatsverwaltung für Arbeit, Soziales, Gleichstellung, Integration, Vielfalt und Antidiskriminierung verweist auf ihrer Website darauf, dass „geschlechterdifferenzierte Daten […] für die Gleichstellungspolitik des Senats von zentraler Bedeutung“ sind [5].
 
-### Daten sind mehr als Zahlen
+#### Daten sind mehr als Zahlen
 
 Wichtig ist auch: Daten sind nicht nur Zahlen. Sie spiegeln immer auch Werte, Erfahrungen und Perspektiven der Menschen wider, die die Daten erheben und Datensysteme entwickeln. **Damit haben Daten auch das Potenzial, Machtstrukturen und Normen zu verinnerlichen und weiterzugeben.** Die historische und bis heute bestehende Über-Repräsentanz männlicher Perspektiven zeigt sich auch im Bereich Daten. Dabei ist die Annahme, alles Männliche sei die Norm und allgemeingültig, sowohl Grund als auch Folge der sogenannten Gender Data Gap. Zahlreiche Beispiele für diese Gender Data Gap und die Folgen davon führt Caroline Criado-Perez in ihrem Buch "Unsichtbare Frauen. Wie eine von Daten beherrschte Welt die Hälfte der Bevölkerung ignoriert" aus [6]. Welche unterschiedlichen Bedürfnisse ergeben sich aus dem unterschiedlichen Mobilitätsverhalten von Frauen und Männern bezüglich Infrastruktur, Winterdienst etc.? Profitieren Mädchen und Jungen gleichermaßen von Fördergeldern, zum Beispiel für Sportvereine? Gender Data versucht, Antworten auf solche Fragen zu liefern und damit eine Daten- und Entscheidungsgrundlage für mehr Gleichberechtigung zu geben.
 
-### Was ist die Gender Data Gap?
+#### Was ist die Gender Data Gap?
 
 Die Gender Data Gap lässt sich als geschlechterbezogene Datenlücke übersetzen. Sie bezieht sich auf drei verschiedene Arten von Gender Data:
 
@@ -56,9 +56,9 @@ Das nicht zufällige sondern strukturell bedingte Fehlen von Daten in diesen Kat
 
 <br><br>
 
-## Vorgehen und Analyse
+### Vorgehen und Analyse
 
-### Gender Data im Berliner Open Data Portal
+#### Gender Data im Berliner Open Data Portal
 
 Sowohl die Potenziale von Open Data als auch von Gender Data können besser ausgeschöpft werden, wenn beide Konzepte zusammengedacht werden. In der [Berliner Open Data Strategie](https://www.berlin.de/sen/wirtschaft/digitalisierung/assets/open-data-strategie.pdf) von 2012 und der Open Data Verordnung gibt es keine Forderung nach geschlechtsspezifischen Daten, dennoch sind Gender und Geschlecht Teil von Datensätzen im Open Data Portal. In einem Forschungsprojekt im Rahmen ihres Praktikums bei der ODIS hat sich Ester Scheck damit beschäftigt, welche Rolle Gender Data im Open Data Portal Berlin spielt. **Auf Basis der Metadaten wurde der Anteil von Gender Data an den offenen Daten Berlins untersucht.** Zeitpunkt der Metadatenabfrage war der 17. Mai 2023.
 
@@ -125,7 +125,7 @@ Allerdings kann auch hier wieder das Harvesting ein Grund für in diesem Fall ei
 </script>
 <br>
 
-### Fazit
+#### Fazit
 
 Die Analyse hat gezeigt, was durch die CKAN-API möglich ist und wie Open Data erkundet werden kann. Dadurch haben wir ein erstes Gefühl für das Thema 'Geschlecht' im Open Data Portal Berlin bekommen. Man sollte jedoch unbedingt berücksichtigen, dass es eine reine **Metadatenanalyse** ist und letztlich vor allem die große **Bedeutung guter und standardisierter Metadaten** aufzeigt. Verlässlichere Erkenntnisse könnten über die Analyse der Datensätze selbst erlangt werden. Zudem könnten in diesem Schritt weitere Merkmale analysiert werden, zum Beispiel die Vollständigkeit der Datensätze und die Kategorisierung von Geschlecht / Gender und auch, ob nicht-binäre Geschlechter beachtet werden.
 Außerdem wurden nur Metadateneinträge aus dem Open Data Portal Berlin und somit nur ein Teil der für Berlin verfügbaren offenen Daten untersucht. Daneben gibt es noch weitere Datensysteme, zum Beispiel vom Amt für Statistik Berlin-Brandenburg oder das neue Sozial-Informations-System der Senatsverwaltung für Arbeit, Soziales, Gleichstellung, Integration, Vielfalt und Antidiskriminierung, die aktuell noch nicht automatisiert an das Open Data Portal Berlin angebunden sind und eine große Anzahl weiterer Datensätze über natürliche Personen beinhalten.
@@ -133,13 +133,13 @@ Schließlich sei im Fazit nochmal darauf hingewiesen, wie wichtig ausführliche 
 
 <br><br>
 
-## Skript und Methodik
+### Skript und Methodik
 
 Das **Python-Skript zur Abfrage und Auswertung der Metadateneinträge** sowie ergänzende Hinweise zur Methodik lassen sich [hier](https://deepnote.com/workspace/odis-projekte-e67947f6-34e6-483f-b431-0bef2e0d8e2b/project/Gender-Data-Gap-und-Open-Data-Berlin-e46ceed5-629c-4348-843d-38bd4e9c160c/notebook/notebook-84a527e408d948f1aaa76501b00e3807) einsehen und herunterladen. Das Skript kann leicht für andere Datenportale, die auf CKAN basieren, angepasst und angewendet werden. Die **interaktiven Visualisierungen** und Tabellen haben wir mit dem Datawrapper-Online-Tool erstellt. **Datawrapper** ist ein kostenloser Service mit dem sehr schnell ansprechende Datenvisualisierungen erstellt werden können, ohne dass Programmier- oder andere technische Vorkenntnisse benötigt werden. Wie das geht, zeigen wir in einer [Tutorialreihe](/ressourcen/datenvisualisierung).
 
 <br><br>
 
-## Quellen
+### Quellen
 
 1 Peteranderl, Sonja (2020) [Feministische Stadtplanung. Ampelfrauen sind erst der Anfang](https://www.spiegel.de/ausland/stadtplanung-wie-koennte-eine-feministische-stadt-aussehen-a-c4b7370d-81ee-4fc8-8965-84312028aaa3)
 

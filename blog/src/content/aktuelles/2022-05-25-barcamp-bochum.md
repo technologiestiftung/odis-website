@@ -12,15 +12,15 @@ urlText: Zum Blogbeitrag
 date: 2022-05-25
 ---
 
-## ODIS beim ersten kommunalen Open Data Barcamp
+### ODIS beim ersten kommunalen Open Data Barcamp
 
 Nach der langen pandemiebedingten Auszeit von Präsenzveranstaltungen luden die Bertelsmann Stiftung und das Deutsche Institut für Urbanistik (Difu) am 11. Mai 2022 zum [ersten kommunalen Open Data Barcamp](https://blog-smartcountry.de/das-erste-kommunale-open-data-barcamp/) nach Bochum ein, was wir uns als ODIS nicht entgehen ließen.
 
-## Endlich wieder in den Austausch kommen
+### Endlich wieder in den Austausch kommen
 
 Zwar war der persönliche Austausch in den einzelnen Sessions und in den Pausen zu Beginn noch etwas ungewohnt, aber je länger das Barcamp andauerte umso erfrischender und gelöster waren die Begegnungen. Schnell kamen wir mit Wissenschaftlern, sowie bekannten Vertretern aus anderen Städten und aus der Open Data Community ins Gespräch. So zog ein Kollege aus Offenbach am Main sein Fazit zur Veranstaltung mit der Bitte um eine Fortsetzung solcher überregionalen Vernetzungstreffen. Aus der Berliner Sicht war es interessant zu erfahren, dass viele andere Kommunen im Bereich Open Data noch einen weiten und durchaus steinigen Weg vor sich haben. Während sich Open Data in Berlin im Wesentlichen etabliert hat und auch von einer aktiven Community getragen wird, beginnen manche Kommunen erst langsam damit, sich organisatorisch aufzustellen und fachlich dem Thema zu nähern. Entsprechend häufig konnte die ODIS auf bereits etablierte Prozesse und Errungenschaften wie die Open Data Rechtsverordnung, die Open Data Strategie und natürlich das Open Data Portal hinweisen und Erfahrungen aus der Berliner Perspektive teilen.
 
-## Das Barcamp-Format überrascht positiv
+### Das Barcamp-Format überrascht positiv
 
 Als sehr gelungen haben wir das Veranstaltungsformat Barcamp wahrgenommen. Dabei konnten die Teilnehmer:innen das Programm maßgeblich selbst mitgestalten. Zu Beginn der Veranstaltung stellten einzelne Teilnehmer:innen Sessions vor. Einige hatten schon Ideen mitgebracht, andere reagierten spontan und luden zu Austauschrunden ein. Am Ende konnten die Teilnehmer:innen aus 15 unterschiedlichen Themen wählen. Auch die einzelnen Beiträge selbst waren sehr informativ und interaktiv gestaltet. Die Vorträge wurden bewusst kurz gehalten und der interkommunale Erfahrungsaustausch stand im Vordergrund. Einen guten Einblick in die Stimmung beim Barcamp gibt auch dieser kleine Promotion-Film der Bertelsmann Stiftung:
 

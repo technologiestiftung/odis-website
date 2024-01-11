@@ -1,83 +1,83 @@
 ---
-title: 'Markdown Style Guide'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 01 2022'
-heroImage: '/blog-placeholder-1.jpg'
+title: "Markdown Style Guide"
+description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+pubDate: "Jul 01 2022"
+heroImage: "/blog-placeholder-1.jpg"
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
-## Headings
+### Headings
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-# H1
+## H1
 
-## H2
+### H2
 
-### H3
+#### H3
 
-#### H4
+##### H4
 
-##### H5
+###### H5
 
-###### H6
+####### H6
 
-## Paragraph
+### Paragraph
 
 Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
 
 Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
 
-## Images
+### Images
 
-#### Syntax
+##### Syntax
 
 ```markdown
 ![Alt text](./full/or/relative/path/of/image)
 ```
 
-#### Output
+##### Output
 
 ![blog placeholder](/blog-placeholder-about.jpg)
 
-## Blockquotes
+### Blockquotes
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
-### Blockquote without attribution
+#### Blockquote without attribution
 
-#### Syntax
+##### Syntax
 
 ```markdown
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
 > **Note** that you can use _Markdown syntax_ within a blockquote.
 ```
 
-#### Output
+##### Output
 
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
 > **Note** that you can use _Markdown syntax_ within a blockquote.
 
-### Blockquote with attribution
+#### Blockquote with attribution
 
-#### Syntax
+##### Syntax
 
 ```markdown
 > Don't communicate by sharing memory, share memory by communicating.<br>
 > — <cite>Rob Pike[^1]</cite>
 ```
 
-#### Output
+##### Output
 
 > Don't communicate by sharing memory, share memory by communicating.<br>
 > — <cite>Rob Pike[^1]</cite>
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
-## Tables
+### Tables
 
-#### Syntax
+##### Syntax
 
 ```markdown
 | Italics   | Bold     | Code   |
@@ -85,15 +85,15 @@ The blockquote element represents content that is quoted from another source, op
 | _italics_ | **bold** | `code` |
 ```
 
-#### Output
+##### Output
 
 | Italics   | Bold     | Code   |
 | --------- | -------- | ------ |
 | _italics_ | **bold** | `code` |
 
-## Code Blocks
+### Code Blocks
 
-#### Syntax
+##### Syntax
 
 we can use 3 backticks ``` in new line and write snippet and close with 3 backticks on new line and to highlight language specific syntac, write one word of language name after first 3 backticks, for eg. html, javascript, css, markdown, typescript, txt, bash
 
@@ -127,11 +127,11 @@ Output
 </html>
 ```
 
-## List Types
+### List Types
 
-### Ordered List
+#### Ordered List
 
-#### Syntax
+##### Syntax
 
 ```markdown
 1. First item
@@ -139,15 +139,15 @@ Output
 3. Third item
 ```
 
-#### Output
+##### Output
 
 1. First item
 2. Second item
 3. Third item
 
-### Unordered List
+#### Unordered List
 
-#### Syntax
+##### Syntax
 
 ```markdown
 - List item
@@ -155,15 +155,15 @@ Output
 - And another item
 ```
 
-#### Output
+##### Output
 
 - List item
 - Another item
 - And another item
 
-### Nested list
+#### Nested list
 
-#### Syntax
+##### Syntax
 
 ```markdown
 - Fruit
@@ -175,7 +175,7 @@ Output
   - Cheese
 ```
 
-#### Output
+##### Output
 
 - Fruit
   - Apple
@@ -185,9 +185,9 @@ Output
   - Milk
   - Cheese
 
-## Other Elements — abbr, sub, sup, kbd, mark
+### Other Elements — abbr, sub, sup, kbd, mark
 
-#### Syntax
+##### Syntax
 
 ```markdown
 <abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
@@ -201,7 +201,7 @@ Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the ses
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
 ```
 
-#### Output
+##### Output
 
 <abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
 

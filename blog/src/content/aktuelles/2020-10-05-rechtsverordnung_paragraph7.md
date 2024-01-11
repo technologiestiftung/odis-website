@@ -10,14 +10,14 @@ urlText: Zum Blogbeitrag
 date: 2020-10-05
 ---
 
-## Im Spotlight: § 7 der Open-Data-Rechtsverordnung
+### Im Spotlight: § 7 der Open-Data-Rechtsverordnung
 
 _In einer Reihe von Blogposts wird die Open Data Informationsstelle einige Paragraphen der Open-Data-Rechtsverordnung näher beleuchten und erläutern, welche Auswirkungen die Verordnung auf die Arbeit von Verwaltungsmitarbeiter:innen hat._
 
 Open Data ist kein alleinstehendes Thema in der gesamten Digitalstrategie des Landes Berlin: Überall wo technische Infrastruktur verwaltet, modernisiert oder neu beschafft wird – oder wo Verwaltungsabläufe oder Prozesse optimiert oder neu entwickelt werden – ist zukünftig zu prüfen, ob diese Infrastruktur oder diese Abläufe für die Bereitstellung von Open Data relevant sind. Dies soll vor allem dazu dienen, den Aufwand für zukünftige Veröffentlichungen zu reduzieren, in dem Open Data von vornherein mitgedacht wird. Dieses Ziel wird durch den § 7 der Open-Data-Rechtsverordnung mit dem Titel “Anforderungen an Verwaltungsabläufe und die technische Infrastruktur” verfolgt. Der Inhalt des Paragraphen wird im Folgenden näher erläutert.
 <br><br>
 
-#### Open Data bei der Modernisierung berücksichtigen
+##### Open Data bei der Modernisierung berücksichtigen
 
 Die Rechtsverordnung benennt zwei konkrete Szenarien, bei denen eine Anpassung zum Zweck der vereinfachten Datenbereitstellung durchgeführt werden muss:
 
@@ -48,7 +48,7 @@ Beispielsweise könnte eine solche Formulierung so aussehen:
 
 Wenn Sie Unterstützung bei der Formulierung einer solchen Klausel benötigen, kontaktieren Sie gerne die ODIS.
 
-#### Open Data braucht die passende IT-Infrastruktur
+##### Open Data braucht die passende IT-Infrastruktur
 
 <span style="color:#213A8F">
 <em>"Die zur Umsetzung von allgemein zugänglichen Datenbeständen (Open Data) notwendigen Anforderungen sind in der zentralen IKT-Architektur geregelt." <br>(Absatz 3 aus § 7 der Open-Data-Rechtsverordnung)</em>

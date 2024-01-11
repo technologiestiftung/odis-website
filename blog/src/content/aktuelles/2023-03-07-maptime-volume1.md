@@ -11,7 +11,7 @@ urlText: Zum Blogbeitrag
 date: 2023-03-07
 ---
 
-## Internationaler Open Data Day: Maptime zu Gast im CityLAB
+### Internationaler Open Data Day: Maptime zu Gast im CityLAB
 
 Ein offener Raum für Kartenenthusiast:innen, von Expert:in bis Newbie, um gemeinsam spannenden Projekten zu lauschen, an Karten zu arbeiten oder Mitstreiter:innen zu gewinnen: das will die Veranstaltungsreihe Maptime bieten und das ist auch für uns als ODIS eine große Freude. Als wir deshalb bei den Organisator:innen von Maptime anklopften, um anlässlich des Open Data Days 2023 eine Veranstaltung zu planen, war schnell klar: **ODIS und Maptime: It´s a match**. Und so folgten am 06. März über 50 Teilnehmer:innen der Einladung ins CityLAB zu „Mapping Open Data Berlin“.
 
@@ -19,7 +19,7 @@ Ein offener Raum für Kartenenthusiast:innen, von Expert:in bis Newbie, um gemei
 
 <br><br>
 
-## Von verschwundenen Ortschaften und 16 Mbit/s im Klassenzimmer
+### Von verschwundenen Ortschaften und 16 Mbit/s im Klassenzimmer
 
 Nach der Begrüßung durch ODIS und Sebastian Meier als Mitorganisator der Maptime stellte Anna Meide **aktuelle Open-Data Projekte der ODIS** vor. Mit einem Dashboard zu Daten aus der Pankower Stadtteilbibliothek und einer Anwendung über Energieverbrauchsdaten öffentlicher Gebäude präsentierte die ODIS erste Einblicke in zwei Produkte, die in Kürze veröffentlicht werden - gespannt sein lohnt sich!
 
@@ -29,7 +29,7 @@ Thomas Tursics gab mit seinem [Kartenprojekt](https://tursics.github.io/schule-b
 
 <br><br>
 
-## Ausklang bei Pizza und Postkartendruck
+### Ausklang bei Pizza und Postkartendruck
 
 Hans Hack von ODIS entwickelte für den Abend ein besonderes Tool zum Ausprobieren. Mit [Kiezcolors](https://kiezcolors.odis-berlin.de/#13/52.49899/13.3915) lässt sich ein gewünschter Ausschnitt Berlins mit dem entsprechenden Anteil der Flächennutzung (natürlich basierend auf offenen Daten) darstellen. Die Teilnehmer:innen konnten sich darauf baiserend bunte Postkarten ausdrucken und mit nach Hause nehmen. Auch die traditionelle Maptime-Pizza kam gut an und stärkte nochmal für die ausgelassenen Gespräche.
 

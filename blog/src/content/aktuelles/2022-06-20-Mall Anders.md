@@ -13,7 +13,7 @@ urlText: Zum Blogbeitrag
 date: 2022-06-20
 ---
 
-## ODIS goes Shopping Mall - Zu Besuch im offenen Lernlabor "Mall anders"
+### ODIS goes Shopping Mall - Zu Besuch im offenen Lernlabor "Mall anders"
 
 _In einer Wilmersdorfer Shopping Mall ist ein besonderer Ort entstanden: Aus den Resten eines verlassenen Ladengeschäftes erschuf die Berlin University Alliance, ein Zusammenschluss der Berliner Universitäten, einen Raum an dem Menschen aus Wissenschaft, Kunst, Wirtschaft, Politik und Zivilgesellschaft Einblick in ihre Themen und Projekte geben und zum offenen Austausch einladen._
 
@@ -24,7 +24,7 @@ Vom 13. bis 15. Juni waren das [CityLAB Berlin](https://citylab-berlin.org/de/st
 
 <br>
 
-## Interaktives Programm
+### Interaktives Programm
 
 Die Ausstellung brachte den Besucher:innen das Thema Open Data näher und lud sie zum Mitmachen ein. Zum Einstieg fragten wir mithilfe einer Abstimmung die Besucher:innen nach ihrem Wissensstand über Open Data. Das Ergebnis, ein analoges Balkendiagramm, nach drei Tagen und einer Vielzahl an interessierten Besucher:innen: Die klare Mehrheit hat von offenen Daten noch nichts gehört, findet das Thema aber spannend und zeigte sich insbesondere von unseren präsentierten Anwendungsbeispielen beeindruckt.
 

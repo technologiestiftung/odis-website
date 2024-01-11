@@ -12,7 +12,7 @@ urlText: Zum Video
 date: 2020-06-25
 ---
 
-## Vortrag "Open Data und Resilient Cities" beim Sommerfest des CityLAB Berlin
+### Vortrag "Open Data und Resilient Cities" beim Sommerfest des CityLAB Berlin
 
 Anlässlich seines einjährigen Jubiläums hat das Innovationslabor [CityLAB Berlin](https://www.citylab-berlin.org) am 19. Juni Verwaltungsmitarbeiter:innen und Interessierte der Zivilgesellschaft zum digitalen Sommerfest eingeladen. In verschiedenen Keynotes und Workshops mit insgesamt 24 Speaker:innen wurde zu Themen wie Verwaltungsinnovation, Data Science, zivilgesellschaftliches Engagement und nachhaltige Städte informiert und diskutiert.
 

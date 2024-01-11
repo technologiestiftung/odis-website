@@ -13,7 +13,7 @@ urlText: Zum Blogbeitrag
 date: 2023-01-12
 ---
 
-## Mit offenen Daten durch den Winter
+### Mit offenen Daten durch den Winter
 
 Niedrige Temperaturen und steigende Preise: Eine sichere und erschwingliche Energieversorgung beschäftigt ganz Berlin. Trotz der Dringlichkeit des Themas auch in Hinblick auf das **Ziel das Land bis spätestens 2045 klimaneutral umzubauen**, ist die Datenlage bislang überschaubar. Dabei drängen sich für Politik, Privathaushalte und Unternehmen wichtige Fragen auf:
 <br><br>
@@ -26,9 +26,9 @@ Auf diese und weitere Fragen können offene Daten Antworten liefen. Ein eindrüc
 <br><br>
 Um den Einstieg zu erleichtern, haben wir in diesem Blogpost **drei Themenbereiche** herausgesucht und laden Leser:innen ein, die Plattform zu erkunden.
 
-## 1. Energieerzeugung
+### 1. Energieerzeugung
 
-### Fernwärme
+#### Fernwärme
 
 Berlin steht europaweit an erster Stelle, was Fernwärme betrifft. Durch ein rund 1.900 km langes Netzwerk aus Rohren wird fast die Hälfte aller Berliner Haushalte mit heißem Wasser versorgt, das in Kraftwerken generiert wird. Die mit fossilen oder regenerativen Energieträgern wie Gas, Kohle, Müll oder Holz befeuerten Kraftwerke kombinieren Strom- und Wärmeerzeugung, sodass die bei der Stromerzeugung generierte Wärme in heißes Wasser umgewandelt wird. Diese Fernwärme wird in ein Netz eingespeist über das Haushalte dann heißes Wasser beziehen. Über die Auswahl der Layer ‘Energienetze’ > ‘Fernwärme’ können sich Nutzer:innen eine interaktive Kartendarstellung des Fernwärmenetzes anzeigen lassen und beispielsweise überprüfen, ob ihr Kiez an das Fernwärmenetz angeschlossen ist.
 
@@ -36,7 +36,7 @@ Berlin steht europaweit an erster Stelle, was Fernwärme betrifft. Durch ein run
 <br>
 <br>
 
-### Berliner Kraftwerke und ihre Verbrauchsdaten
+#### Berliner Kraftwerke und ihre Verbrauchsdaten
 
 19 über das Berliner Stadtgebiet verteilte Kraftwerke generieren Strom und Wärme für die rund 3,7 Mio. Menschen in der Hauptstadt. Neben den wichtigsten Energieträgern Erdgas und Kohle werden auch Holz und Müll verbrannt, um Strom und Dampf sowie Warmwasser zu generieren. So verbrennt beispielsweise das Müllheizkraftwerk Ruhleben jährlich rund 537.000 Tonnen Abfall, während für den Betrieb der Heizkraftwerke Reuter beziehungsweise Reuter-West über 1 Millionen Tonnen Steinkohle benötigt werden. Um alle Anlagen in Berlin anzuzeigen, können Nutzer:innen im Thema ‘Energieerzeugung’ den Punkt ‘Brennstoffeinsatz für genehmigungsbedürftige Anlagen’ auswählen.
 
@@ -47,7 +47,7 @@ In der Karte sind 78 Anlagen mit (Block-)Heizkraftwerken und Heizwerke mit ihrem
   <br>
   <br>
 
-## 2. Energieverbrauch
+### 2. Energieverbrauch
 
 Verbraucht mein Viertel oder Gebäudeblock überdurchschnittlich viel Energie im Vergleich zu benachbarten Gebieten? Faktoren wie gewerbliche Nutzung oder Bevölkerungsdichte wirken sich maßgeblich auf Verbrauchsstatistiken aus. Für einen allgemeinen Überblick erlaubt die Rubrik ‘Energieverbräuche’ eine Zusammenfassung des Gas- und Fernwärmeverbrauches im Jahr 2021 auf Ebene des Bezirks, der Postleitzahl oder des Gebäudeblocks. Unter anderem fällt auf, dass Gebäudeblöcke mit vorwiegend gewerblicher Nutzung, wie der Potsdamer Platz (18284,57 MWh) oder der Alexanderplatz (8188,57 MWh) bis zu viermal so hohe Stromverbräuche aufweisen wie benachbarte Wohngebiete. Im Alltag begegnet uns die Maßeinheit MWh (Megawattstunde) eher selten, welche die Energiemenge je Stunde bezeichnet. Zur Einordnung: Für einen Zwei-Personen-Haushalt wird durchschnittlich mit einem Verbrauch von etwa 3.500 kWh pro Jahr gerechnet, das sind 3,5 MWh.
 
@@ -56,7 +56,7 @@ Verbraucht mein Viertel oder Gebäudeblock überdurchschnittlich viel Energie im
 <br>
 <br>
 
-## 3. Ausblick: Die Zukunft alternativer Energien in Berlin?
+### 3. Ausblick: Die Zukunft alternativer Energien in Berlin?
 
 Neben einer Bestandsaufnahme von städtischer Energieversorgung und -verbrauch erlaubt der Energieatlas unter anderem auch einen Ausblick auf die Zukunft erneuerbarer Energien wie Solarenergie für die Hauptstadt. Nicht zuletzt aufgrund steigender Strompreise stoßen dezentrale Alternativen zur Stromerzeugung wie Solarpanels auf Dächern auf steigendes Interesse. Doch ob sich eine Installation von Photovoltaik lohnt ist von einer Reihe von Faktoren abhängig, wie Sonneneinstrahlung, Schatten, Ausrichtung und Neigung der Dachfläche.
 
@@ -69,7 +69,7 @@ Im Rahmen einer Potenzialanalyse wurden geeignete Dachflächen innerhalb des Ber
 
 Eignet sich Ihr Gebäude für die Installation von Solarpanels? Wie viel Gas und Strom wurde in Ihrem Block oder Bezirk verbraucht? Finden Sie es heraus! Über eine Adresssuche lassen sich Werte für bestimmte Häuserzüge anzeigen. Alternativ kann Berlin frei über die Kartenansicht erkundet werden. Laut Projektverantwortlichen bietet der Energieatlas ein “dynamisches Instrument, das kontinuierlich gepflegt, weiterentwickelt und verbessert werden soll".
 
-## Mit den Daten arbeiten
+### Mit den Daten arbeiten
 
 Sie möchten die Daten des Energieatlas nutzen, weiterverarbeiten und in eigene Projekte integrieren? Da alle Datensätze im Atlas offen sind, ist das mit ein paar grundlegenden Programmierkenntnissen problemlos möglich. Über den Reiter "OGC-Dienste" am unteren Rand der Karte lassen sich die Links zu den verschiedenen Layern anzeigen. Anders als rein tabellarische Daten handelt es sich bei den Daten zur Energieversorgung um Geodaten, welche über sogenannte WFS- und WMS-Dienste zur Verfügung gestellt werden. Wie man diese Dienste nutzen bzw. Daten herunterladen kann, das erklärt [unser Blogpost](https://lab.technologiestiftung-berlin.de/projects/fisbroker-to-qgis/de/). Weitere offene Datensätze finden Sie auf dem [Berliner Datenportal](www.daten.berlin.de).
 

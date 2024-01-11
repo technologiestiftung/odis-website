@@ -13,11 +13,11 @@ urlText: Zum Blogbeitrag
 date: 2023-04-26
 ---
 
-## Die AG Open Data wird immer mehr zum Mitmachgremium
+### Die AG Open Data wird immer mehr zum Mitmachgremium
 
 Nachdem die AG Open Data aufgrund der Corona-Pandemie lange Zeit eine Online-Veranstaltung war, entwickelt sie sich immer mehr zu einer Präsenzveranstaltung, in der Input von den jeweiligen OD-Beauftragten und der direkte Austausch Fahrt aufnimmt und sich als Mittelpunkt des Arbeitsgremiums etabliert. Besonders erfreulich waren in diesem Zusammenhang die Präsentationen und Impulse durch die OD-Beauftragten.
 
-## Bericht zu den Open Data Aktivitäten im Land Berlin 2022
+### Bericht zu den Open Data Aktivitäten im Land Berlin 2022
 
 Im Anschluss an die Begrüßung stellte Betül Özdemir mit dem Jahresbericht Open Data 2022 verschiedene Kennzahlen zu den Open Data Aktivitäten in Berlin in 2022 vor. Darin wird deutlich, dass weitere Fortschritte in Hinblick auf die Umsetzung der Open Data Rechtsverordnung erreicht werden konnten. Unter anderem konnten zum Beispiel weitere Fachverfahren aus den Berliner Behörden an das Open Data Portal angebunden werden. Auch die Benennung weiterer Open Data Beauftragter im Land ist ein Erfolg des letzten Jahres. Der Jahresbericht wurde an die OD-Beteiligten verteilt.
 
@@ -25,17 +25,17 @@ Im Anschluss an die Begrüßung stellte Betül Özdemir mit dem Jahresbericht Op
 
 <br>
 
-## Eine Informationsseite zu Open Data für das BA Mitte
+### Eine Informationsseite zu Open Data für das BA Mitte
 
 Anschließend stellte Jennifer Stege als OD-Beauftragte des Bezirks Mitte eine Informationsseite zu Open Data vor, die die Mitarbeiter:innen im Beschäftigtenportal auffinden können. Die Seite enthält allgemeine Informationen zu Open Data, Ansprechpersonen im Bezirk, Unterstützungsmaterialien sowie ein FAQ-Bereich. Jennifer Stege berichtet über Motivation und Vorgehensweise sowie Hürden im Hinblick auf die Erstellung der Seite. Sie betont dabei, dass sie viele wertvolle Hinweise und Texte bereits aus anderen Bezirken oder von der ODIS übernehmen konnte, was die Arbeit erleichterte.  
 Aus dem Plenum kam die Rückmeldung, dass eine solche Informationsseite sehr wertvoll ist, um das Thema Open Data sowie die Ansprechpersonen innerhalb der Behörde besser kommunizieren zu können.
 
-## Erfahrungen zu Dateninventuren aus dem BA Charlottenburg-Wilmersdorf
+### Erfahrungen zu Dateninventuren aus dem BA Charlottenburg-Wilmersdorf
 
 Ein weiterer wertvoller Beitrag kam von Daniel Reimann, OD-Beauftragter im BA Charlottenburg-Wilmersdorf. Er stieß in den letzten Jahren Dateninventuren im Bezirk an, um eine Übersicht über Datenbestände und Ansprechpersonen aufzubauen. Die Ergebnisse der Dateninventuren führte er in einer Datenbibliothek zusammen, die über das Imperia-Modul Simple Search angelegt werden kann. Der Vorteil liegt darin, dass die Informationen gefiltert und durchsucht werden können. Zudem erstellte er ein Formular, mit dem die datenhaltenden Personen die Metadaten eingeben können und zentral in die Datenbibliothek einfließen.
 Anschließend kamen aus dem Plenum weitere Erfahrungsberichte und Hinweise zu Dateninventuren. So wurde berichtet, dass das Ausfüllen von Dateninformationsblättern bzw. Abfragen zu Dateninventuren sehr zeitaufwendig sind für die datenhaltenden Stellen, oft werden nur die ersten Spalten ausgefüllt.
 
-## Kerndatensätze-Mapping mit der ODIS
+### Kerndatensätze-Mapping mit der ODIS
 
 In einem interaktiven Workshop-Format lud die ODIS schließlich die OD-Beauftragten ein, gemeinsam eine Veröffentlichungspraxis für die Öffnung der Berliner Kerndatensätze zu erarbeiten. Berlins Kerndatensätze beschreiben Datensätze, die ein besonderes Potenzial für die Stadtgesellschaft haben. Mittlerweile liegen bereits einige als offene Daten vor, ein Großteil der Datensätze ist jedoch noch nicht frei zugänglich.
 Dazu bereitete die ODIS ein Workshop-Format vor, in dem die Beteiligten der AG Open Data in einem World-Café Format an drei Tischen folgende zentrale Fragestellungen erarbeiteten:
