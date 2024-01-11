@@ -7,6 +7,7 @@ import NewsCard from "../../components/NewsCard.astro";
 import Pagination from "../../components/Pagination.astro";
 import type { Page, GetStaticPaths } from "astro";
 import ProjectThumbnail from "../../components/ProjectThumbnail.astro";
+import NewsletterLane from "../../components/NewsletterLane.astro";
 
 type Project = CollectionEntry<"projekte">;
 type Aktuelles = CollectionEntry<"aktuelles">;
@@ -98,7 +99,7 @@ const firstPath = "aktuelles";
     </div>
   </div>
 
-  <nav aria-label="Pagination" class="mt-12 mb-16 grid-container">
+  <nav aria-label="Pagination" class="mt-12 grid-container">
     <Pagination
       length={page.lastPage}
       currentUrl={page.url.current}
@@ -110,5 +111,5 @@ const firstPath = "aktuelles";
     />
   </nav>
 
-  <!-- {% render 'newsletter' %} -->
+  <NewsletterLane />
 </DefaultLayout>
