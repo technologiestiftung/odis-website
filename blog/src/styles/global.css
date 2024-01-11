@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Clan";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/clan-news.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: italic;
+    font-weight: 400;
+    src: url("/fonts/clan-newsitalic.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/clan-bold.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: italic;
+    font-weight: 700;
+    src: url("/fonts/clan-boldItalic.woff") format("woff");
+    font-display: swap;
+  }
+
+  :root {
+    --blue-darker: #0c163b;
+    --blue-dark: #172763;
+    --blue: #20378b;
+    --blue-medium: #4c64cd;
+    --blue-light: #bee4f8;
+    --blue-ultralight: #edf8fe;
+    --white: #ffffff;
+    --gray-light: #d1dbe0;
+    --red: #e60032;
+    --red-dark: #c42c3a;
+
+    --bg: var(--white);
+    --bg-alt: var(--blue-ultralight);
+    --bg-inv: var(--blue);
+
+    --text: var(--blue-darker);
+    --text-inv: var(--blue-ultralight);
+
+    --links: var(--blue-dark);
+    --links-inv: var(--blue-light);
+    --links-active: var(--red);
+
+    --headlines: var(--blue);
+    --headlines-inv: var(--blue-light);
+    --links-active-inv: var(--red);
+
+    --line: var(--blue);
+    --line-dark: var(--blue-dark);
+    --line-inv: var(--blue-light);
+    --line-dark-inv: var(--blue-light);
+
+    --shadow-primary: var(--blue);
+    --shadow-secondary: var(--blue-light);
+    --shadow-primary-inv: var(--blue-darker);
+    --shadow-secondary-inv: var(--blue-dark);
+
+    --containerWidth: 100vw;
+    --gridGap: 1.5rem;
+    --marginSize: minmax(1.5rem, (100vw - var(--containerWidth)) / 2);
+    --columnSize: minmax(
+      0,
+      (var(--containerWidth) - (13 * var(--gridGap))) / 12
+    );
+  }
+
+  @media (min-width: 640px) {
+    body {
+      --containerWidth: 640px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  @media (min-width: 768px) {
+    body {
+      --containerWidth: 768px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    body {
+      --containerWidth: 1024px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    body {
+      --containerWidth: 1280px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    body {
+      --containerWidth: 1536px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  /* To apply dark mode, apply the [data-applied-mode='dark'] to the <html /> tag and add this CSS */
+  :root[data-applied-mode="dark"] {
+    --bg: var(--blue-darker);
+    --bg-alt: var(--blue);
+    --bg-inv: var(--blue-ultralight);
+
+    --text: var(--blue-ultralight);
+    --text-inv: var(--blue-darker);
+
+    --links: var(--blue-light);
+    --links-inv: var(--blue);
+
+    --headlines: var(--blue-light);
+    --headlines-inv: var(--blue-dark);
+
+    --line: var(--blue-light);
+    --line-dark: var(--blue-light);
+    --line-inv: var(--blue-dark);
+    --line-dark-inv: var(--blue-darker);
+
+    --shadow-primary: var(--blue-dark);
+    --shadow-secondary: var(--blue-dark);
+    --shadow-primary-inv: var(--blue-light);
+    --shadow-secondary-inv: var(--blue-light);
+  }
+
+  body,
+  html {
+    @apply font-sans text-text bg-bg;
+    scroll-behavior: smooth;
+  }
+
+  .prose :where(p):not(:where([class~="not-prose"] *)) {
+    @apply leading-relaxed max-w-prose mb-4;
+  }
+  .prose p.lead {
+    @apply text-xl mb-6;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-headlines font-bold text-balance max-w-prose;
+  }
+  .prose-invert h1,
+  .prose-invert h2,
+  .prose-invert h3,
+  .prose-invert h4,
+  .prose-invert h5,
+  .prose-invert h6 {
+    @apply text-headlines-inv;
+  }
+  .prose a > h1,
+  .prose a > h2,
+  .prose a > h3,
+  .prose a > h4,
+  .prose a > h5,
+  .prose a > h6,
+  .prose-invert a > h1,
+  .prose-invert a > h2,
+  .prose-invert a > h3,
+  .prose-invert a > h4,
+  .prose-invert a > h5,
+  .prose-invert a > h6 {
+    color: inherit;
+  }
+
+  .prose h1 {
+    @apply leading-tight text-5xl mb-4;
+  }
+
+  .prose h2 {
+    @apply leading-tight text-3xl mb-4;
+  }
+
+  .prose h3 {
+    @apply text-xl mb-2 mt-0 pt-6;
+  }
+
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-lg mb-1 mt-0 pt-4;
+  }
+
+  .prose h5,
+  .prose h6 {
+    @apply uppercase tracking-widest leading-5;
+  }
+
+  .prose h6 {
+    @apply font-normal;
+  }
+
+  .prose a > h1,
+  .prose-invert a > h1 {
+    @apply mt-0 pt-8;
+  }
+
+  .prose a > h2,
+  .prose-invert a > h2 {
+    @apply mt-0 pt-6;
+  }
+
+  .prose a > h3,
+  .prose-invert a > h3 {
+    @apply mt-0 pt-5;
+  }
+
+  .prose a > h4,
+  .prose a > h5,
+  .prose a > h6,
+  .prose-invert a > h4,
+  .prose-invert a > h5,
+  .prose-invert a > h6 {
+    @apply mt-0 pt-4;
+  }
+
+  .prose a:first-of-type > h1,
+  .prose a:first-of-type > h2,
+  .prose a:first-of-type > h3,
+  .prose a:first-of-type > h4,
+  .prose a:first-of-type > h5,
+  .prose a:first-of-type > h6,
+  .prose-invert a:first-of-type > h1,
+  .prose-invert a:first-of-type > h2,
+  .prose-invert a:first-of-type > h3,
+  .prose-invert a:first-of-type > h4,
+  .prose-invert a:first-of-type > h5,
+  .prose-invert a:first-of-type > h6 {
+    @apply mt-0 pt-0;
+  }
+
+  .prose center {
+    @apply text-left;
+  }
+}
+
+@layer components {
+  .focusable {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-links;
+    @apply focus-visible:ring-offset-8 focus-visible:ring-offset-bg focus-visible:bg-bg;
+  }
+}
+
+@layer utilities {
+  .text-stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .text-stroke-line {
+    -webkit-text-stroke-color: var(--line);
+  }
+}
+
+@layer components {
+  .grid-container {
+    @apply container mx-auto grid grid-cols-12 gap-4 @sm:gap-6 px-4 @sm:px-6;
+  }
+
+  .grid-container > * {
+    @apply col-start-1 col-span-12 @lg:col-start-2 @lg:col-span-10;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin-top: 0;
+  @apply text-links;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-2xl;
+}
+
+.tippy-box[data-theme~="light-border"] {
+  border-color: var(--blue-medium) !important;
+  @apply p-3 rounded-none border !shadow-none;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="top"]
+  > .tippy-arrow::after {
+  border-top-color: var(--blue-medium) !important;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="bottom"]
+  > .tippy-arrow::after {
+  border-bottom-color: var(--blue-medium) !important;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="left"]
+  > .tippy-arrow::after {
+  border-left-color: var(--blue-medium) !important;
+}
+
+.tippy-box[data-theme~="light-border"][data-placement^="right"]
+  > .tippy-arrow::after {
+  border-right-color: var(--blue-medium) !important;
+}

@@ -1,0 +1,88 @@
+---
+import type { HTMLTag } from "astro/types";
+
+export type Props = {
+  tag?: "span" | "a" | "button" | "div";
+  variant?: "primary" | "secondary";
+  inverted?: boolean;
+  class?: string;
+  href?: string;
+  target?: undefined | "_blank";
+  rel?: undefined | "noopener noreferrer";
+};
+
+const {
+  variant = "primary",
+  inverted = false,
+  tag = "a",
+  class: className,
+  ...props
+} = Astro.props;
+
+const isPrimary = variant === "primary";
+const finalTailwindClasses = [
+  className,
+  isPrimary &&
+    [
+      `font-bold`,
+      inverted && `shadow-primary-inv bg-bg text-links`,
+      inverted && `hover-hover:hover:shadow-primary-inv-md`,
+      !inverted && `shadow-primary hover-hover:hover:shadow-primary-md`,
+    ]
+      .filter(Boolean)
+      .join(" "),
+  !isPrimary &&
+    [
+      inverted && `shadow-secondary-inv bg-bg-inv text-links-inv`,
+      inverted && `hover-hover:hover:shadow-secondary-inv-md`,
+      !inverted && `shadow-secondary hover-hover:hover:shadow-secondary-md`,
+    ]
+      .filter(Boolean)
+      .join(" "),
+  inverted && `border-line-inv focus-visible:ring-offset-bg-inv`,
+  !inverted && `border-line text-links bg-bg focus-visible:ring-offset-bg`,
+  `hover-hover:hover:text-links`,
+  `hover-hover:hover:bg-bg-alt`,
+  `inline-block py-4 px-6 border-2`,
+  `transition motion-reduce:transition-none`,
+  `focus-visible:outline-none focus-visible:ring-4`,
+  `focus-visible:ring-links/50`,
+  `focus-visible:shadow-none`,
+  `hover-hover:hover:focus-visible:shadow-none`,
+  `focus-visible:ring-offset-4`,
+  `cursor-pointer`,
+]
+  .filter(Boolean)
+  .join(" ");
+---
+
+{
+  tag === "a" && (
+    <a {...props} class={finalTailwindClasses}>
+      <slot />
+    </a>
+  )
+}
+
+{
+  tag === "button" && (
+    <button {...props} class={finalTailwindClasses}>
+      <slot />
+    </button>
+  )
+}
+
+{
+  tag === "span" && (
+    <div {...props} class={finalTailwindClasses}>
+      <slot />
+    </div>
+  )
+}
+{
+  tag === "div" && (
+    <div {...props} class={finalTailwindClasses}>
+      <slot />
+    </div>
+  )
+}

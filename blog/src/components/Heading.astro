@@ -1,0 +1,36 @@
+---
+import type { HTMLTag } from "astro/types";
+
+export type Props = {
+  tag?: HTMLTag;
+  class?: string;
+  inverted?: boolean;
+  size?: "xxl" | "xl" | "lg";
+};
+
+const {
+  tag: Tag = "h2",
+  class: className,
+  inverted = false,
+  size = "xl",
+  ...rest
+} = Astro.props;
+---
+
+<Tag
+  class={[
+    className,
+    `font-bold text-balance max-w-prose`,
+    inverted ? "text-headlines-inv" : "text-headlines",
+    size === "xxl" && `text-3xl lg:text-4xl xl:text-5xl !leading-tight mb-4`,
+    size === "lg" && `text-lg lg:text-xl mb-2`,
+    size !== "xxl" &&
+      size !== "lg" &&
+      `leading-tight text-xl md:text-2xl lg:text-3xl mb-4`,
+  ]
+    .filter(Boolean)
+    .join(" ")}
+  {...rest}
+>
+  <slot />
+</Tag>
