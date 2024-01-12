@@ -45,17 +45,17 @@ const lineChart = (params) => {
   let x =
       params.x || isTime == true
         ? d3
-          .scaleTime()
-          .rangeRound([0, dWidth])
-          .domain(d3.extent(data, (d) => d[date_column]))
+            .scaleTime()
+            .rangeRound([0, dWidth])
+            .domain(d3.extent(data, (d) => d[date_column]))
         : d3
-          .scaleLinear()
-          .range([0, dWidth])
-          .domain(
-            d3.extent(data, function (d) {
-              return d[date_column];
-            }),
-          ),
+            .scaleLinear()
+            .range([0, dWidth])
+            .domain(
+              d3.extent(data, function (d) {
+                return d[date_column];
+              }),
+            ),
     y =
       params.y ||
       d3
@@ -362,18 +362,17 @@ const histodots = (params) => {
       .append("svg")
       .attr("width", width)
       .attr("height", height)
-      .attr("viewBox", `0 0 ${width} ${height}`)
-      .attr("preserveAspectRatio", "xMidYMid meet"),
-    margin = params.margin || { top: 20, right: 20, bottom: 30, left: 50 },
-    dWidth = width - margin.left - margin.right,
-    dHeight = height - margin.top - margin.bottom,
-    g = svg
+      .attr("viewBox", `0 0 ${width} ${height}`);
+  (margin = params.margin || { top: 0, right: 0, bottom: 0, left: 0 }),
+    (dWidth = width - margin.left - margin.right),
+    (dHeight = height - margin.top - margin.bottom),
+    (g = svg
       .append("g")
-      .attr("transform", `translate(${margin.left},${margin.top})`),
-    parseTime = params.parseTime || d3.timeParse("%Y-%m-%d"),
-    isTime = params.isTime || false,
-    equalize = params.equalize || false,
-    values = [];
+      .attr("transform", `translate(${margin.left},${margin.top})`)),
+    (parseTime = params.parseTime || d3.timeParse("%Y-%m-%d")),
+    (isTime = params.isTime || false),
+    (equalize = params.equalize || false),
+    (values = []);
 
   data.forEach((d) => {
     if (isTime) {
@@ -847,7 +846,7 @@ const stackedArea = (params) => {
 
 /*------------ CHART BUILDING ------------*/
 
-d3.csv("/assets/charts/all.csv")
+d3.csv("/charts/all.csv")
   .then((data) => {
     let chart = lineChart({
       container: d3.select("#introvis"),
@@ -1003,9 +1002,9 @@ d3.csv("/assets/charts/all.csv")
       let show = ["pv"];
 
       switch (currentStory) {
-      case 0:
-        peakLines.style("display", "none");
-        break;
+        case 0:
+          peakLines.style("display", "none");
+          break;
         // case 1:
         //   show = ['pv','a_pv']
         // break;
@@ -1013,43 +1012,43 @@ d3.csv("/assets/charts/all.csv")
         //   peakLines.style('display','none')
         //   show = ['pv','a_pv','ra_pv']
         // break;
-      case 1:
-        peakLines.style("display", "block");
-        peakLines.style("opacity", "0");
-        show = ["pv", "trend"];
-        break;
-      case 2:
-        peakLines.style("display", "block");
-        peakLines.style("opacity", "1");
-        show = ["pv"];
-        break;
+        case 1:
+          peakLines.style("display", "block");
+          peakLines.style("opacity", "0");
+          show = ["pv", "trend"];
+          break;
+        case 2:
+          peakLines.style("display", "block");
+          peakLines.style("opacity", "1");
+          show = ["pv"];
+          break;
         // case 2:
         //   show = ['pv']
         //   peakData[0].annotation.style('display','block')
         // break;
-      case 3:
-        show = ["pv"];
-        peakLines.style("opacity", "0.3");
-        peakData[1].annotation.style("display", "block");
-        peakData[3].annotation.style("display", "block");
-        peakData[4].annotation.style("display", "block");
-        break;
-      case 4:
-        show = ["pv"];
-        peakData[2].annotation.style("display", "block");
-        peakData[5].annotation.style("display", "block");
-        peakData[6].annotation.style("display", "block");
-        peakData[8].annotation.style("display", "block");
-        break;
-      case 5:
-        show = ["pv"];
-        peakLines.style("opacity", "0.3");
-        peakData[7].annotation.style("display", "block");
-        break;
-      case 6:
-        peakLines.style("opacity", "0");
-        show = ["pv", "all"];
-        break;
+        case 3:
+          show = ["pv"];
+          peakLines.style("opacity", "0.3");
+          peakData[1].annotation.style("display", "block");
+          peakData[3].annotation.style("display", "block");
+          peakData[4].annotation.style("display", "block");
+          break;
+        case 4:
+          show = ["pv"];
+          peakData[2].annotation.style("display", "block");
+          peakData[5].annotation.style("display", "block");
+          peakData[6].annotation.style("display", "block");
+          peakData[8].annotation.style("display", "block");
+          break;
+        case 5:
+          show = ["pv"];
+          peakLines.style("opacity", "0.3");
+          peakData[7].annotation.style("display", "block");
+          break;
+        case 6:
+          peakLines.style("opacity", "0");
+          show = ["pv", "all"];
+          break;
       }
 
       chart
@@ -1134,7 +1133,7 @@ d3.csv("/assets/charts/all.csv")
 //   })
 // }).catch(err=>{ throw err; })
 
-d3.csv("/assets/charts/dataset_count.csv")
+d3.csv("/charts/dataset_count.csv")
   .then((data) => {
     let chart = lineChart({
       container: d3.select("#count"),
@@ -1172,7 +1171,7 @@ d3.csv("/assets/charts/dataset_count.csv")
     throw err;
   });
 
-d3.csv("/assets/charts/dataset_author.csv")
+d3.csv("/charts/dataset_author.csv")
   .then((data) => {
     let chart2 = lineChart({
       container: d3.select("#author"),
@@ -1210,7 +1209,7 @@ d3.csv("/assets/charts/dataset_author.csv")
     throw err;
   });
 
-d3.csv("/assets/charts/dataset_top1_sum.csv")
+d3.csv("/charts/dataset_top1_sum.csv")
   .then((data) => {
     let chart2 = lineChart({
       container: d3.select("#top1_sum"),
@@ -1228,7 +1227,7 @@ d3.csv("/assets/charts/dataset_top1_sum.csv")
     throw err;
   });
 
-d3.csv("/assets/charts/dataset_top1_std.csv")
+d3.csv("/charts/dataset_top1_std.csv")
   .then((data) => {
     let chart2 = lineChart({
       container: d3.select("#top1_std"),
@@ -1287,7 +1286,7 @@ d3.csv("/assets/charts/dataset_top1_std.csv")
 //   })
 // }).catch(err=>{ throw err; })
 
-d3.csv("/assets/charts/histofull_smoothed.csv")
+d3.csv("/charts/histofull_smoothed.csv")
   .then((data) => {
     histodots({
       container: d3.select("#histograms-1"),
@@ -1500,7 +1499,7 @@ const buildTableExtended = (data, id) => {
   tr.append("td").html((d) => `${d.month_count}`);
 };
 
-d3.csv("/assets/charts/top_abs.csv")
+d3.csv("/charts/top_abs.csv")
   .then((data) => {
     buildTable(data, "top_abs");
   })
@@ -1508,7 +1507,7 @@ d3.csv("/assets/charts/top_abs.csv")
     throw err;
   });
 
-d3.csv("/assets/charts/top_month.csv")
+d3.csv("/charts/top_month.csv")
   .then((data) => {
     buildTableExtended(data, "top_month");
   })

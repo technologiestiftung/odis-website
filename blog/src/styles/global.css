@@ -73,8 +73,8 @@
     --shadow-secondary-inv: var(--blue-dark);
 
     --containerWidth: 100vw;
-    --gridGap: 1.5rem;
-    --marginSize: minmax(1.5rem, (100vw - var(--containerWidth)) / 2);
+    --gridGap: 1rem;
+    --marginSize: minmax(1rem, (100vw - var(--containerWidth)) / 2);
     --columnSize: minmax(
       0,
       (var(--containerWidth) - (13 * var(--gridGap))) / 12
@@ -82,7 +82,7 @@
   }
 
   @media (min-width: 640px) {
-    body {
+    :root {
       --containerWidth: 640px;
       --marginSize: calc((100vw - var(--containerWidth)) / 2);
       --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
@@ -90,7 +90,7 @@
   }
 
   @media (min-width: 768px) {
-    body {
+    :root {
       --containerWidth: 768px;
       --marginSize: calc((100vw - var(--containerWidth)) / 2);
       --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
@@ -98,7 +98,7 @@
   }
 
   @media (min-width: 1024px) {
-    body {
+    :root {
       --containerWidth: 1024px;
       --marginSize: calc((100vw - var(--containerWidth)) / 2);
       --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
@@ -106,7 +106,7 @@
   }
 
   @media (min-width: 1280px) {
-    body {
+    :root {
       --containerWidth: 1280px;
       --marginSize: calc((100vw - var(--containerWidth)) / 2);
       --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
@@ -114,7 +114,7 @@
   }
 
   @media (min-width: 1536px) {
-    body {
+    :root {
       --containerWidth: 1536px;
       --marginSize: calc((100vw - var(--containerWidth)) / 2);
       --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
