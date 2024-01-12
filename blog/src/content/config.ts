@@ -47,12 +47,23 @@ const projekte = defineCollection({
       finishDate: z.coerce.date().optional(),
       heroImage: z.string().optional(),
       mobileImage: z.string().optional(),
+      indexImage: z.string().optional(),
       showImageInMockup: z.boolean().default(true),
       projectUrlWithoutProtocol: z.string().optional(),
       datasetDescription: z.string().optional(),
       datasetLinkText: z.string().optional(),
       datasetLink: z.string().optional(),
       gitHubLink: z.string().optional(),
+      status: z.string().optional(),
+      period: z.string().optional(),
+      datasets: z
+        .array(
+          z.object({
+            linkText: z.string(),
+            link: z.string().url(),
+          }),
+        )
+        .optional(),
       partners: z
         .array(
           z.object({

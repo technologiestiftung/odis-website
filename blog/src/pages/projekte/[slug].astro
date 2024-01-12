@@ -1,0 +1,140 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Paragraph from "../../components/Paragraph.astro";
+import Heading from "../../components/Heading.astro";
+import TextLink from "../../components/TextLink.astro";
+import ProjectHeader from "../../components/ProjectHeader.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("projekte");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+export type Props = CollectionEntry<"projekte">;
+
+const post = Astro.props;
+const {
+  title,
+  metaDescription,
+  period,
+  status,
+  datasets,
+  gitHubLink,
+  partners,
+} = post.data;
+const { Content } = await post.render();
+---
+
+<DefaultLayout metaDescription={metaDescription} metaTitle={title}>
+  <ProjectHeader {...Astro.props} />
+  <section class="pb-64">
+    <div class="grid-container">
+      <div class="md:col-span-6 md:col-start-2 prose">
+        <Content />
+      </div>
+      <aside class="md:col-start-9 md:col-span-3 py-4 flex flex-col gap-6">
+        <dl class="sticky w-full top-6">
+          {
+            period && (
+              <>
+                <Heading size="lg" tag="dt">
+                  Umsetzung
+                </Heading>
+                <dd class="mb-8">
+                  <Paragraph>{status}</Paragraph>
+                </dd>
+              </>
+            )
+          }
+          {
+            status && (
+              <>
+                <Heading size="lg" tag="dt">
+                  Projektstatus
+                </Heading>
+                <dd class="mb-8">
+                  <Paragraph>{status}</Paragraph>
+                </dd>
+              </>
+            )
+          }
+
+          {
+            datasets && datasets.length > 0 && (
+              <>
+                <Heading size="lg" tag="dt">
+                  Datensätze
+                </Heading>
+                <dd class="mb-8">
+                  <ul class="flex flex-col gap-4">
+                    {datasets.map((dataset) => (
+                      <li>
+                        <a
+                          href={dataset.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={dataset.linkText}
+                        >
+                          {dataset.linkText}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
+              </>
+            )
+          }
+
+          {
+            gitHubLink && (
+              <>
+                <Heading size="lg" tag="dt">
+                  GitHub
+                </Heading>
+                <dd class="mb-8">
+                  <TextLink href={gitHubLink}>Code auf GitHub</TextLink>
+                </dd>
+              </>
+            )
+          }
+
+          {
+            partners && partners.length > 0 && (
+              <>
+                <Heading size="lg" tag="dt">
+                  Partner
+                </Heading>
+                <dd class="mb-8">
+                  <ul class="flex flex-col gap-4">
+                    {partners.map((partner) => (
+                      <li>
+                        <Paragraph>{partner.name}</Paragraph>
+                        {partner.logoPath && (
+                          <a
+                            href={partner.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={`Partner Webseite: ${partner.name}`}
+                          >
+                            <img
+                              src={partner.logoPath}
+                              alt={`Logo von ${partner.name}`}
+                              class="max-w-[min(220px,75%)]"
+                            />
+                          </a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
+              </>
+            )
+          }
+        </dl>
+      </aside>
+    </div>
+  </section>
+</DefaultLayout>
