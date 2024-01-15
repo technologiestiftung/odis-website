@@ -22,11 +22,13 @@ const {
 } = Astro.props;
 ---
 
-<div class={`${className} grid @xl:grid-cols-12 relative @container w-full`}>
+<div
+  class={`${className || ""} grid @xl:grid-cols-12 relative @container w-full`}
+>
   <div
     class="p-0.5 bg-line-dark col-span-12 relative @container/mockup w-full
       shadow-secondary @lg:shadow-secondary-md @2xl:shadow-secondary-lg @5xl:shadow-secondary-2xl
-      @2xl:col-start-2 @2xl:col-span-10"
+      @3xl:col-start-2 @3xl:col-span-10"
   >
     {
       showImageInMockup && (

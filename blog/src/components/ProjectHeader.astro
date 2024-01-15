@@ -12,8 +12,8 @@ const { title, metaDescription } = post.data;
 
 <section class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64">
   <div class="grid-container">
-    <div>
-      <Heading size="xxl" inverted>{title}</Heading>
+    <div class="lg:col-span-6 lg:col-start-2">
+      <Heading size="xxl" inverted set:html={title} />
       <Paragraph size="lg">{metaDescription}</Paragraph>
     </div>
   </div>
@@ -23,6 +23,6 @@ const { title, metaDescription } = post.data;
     {...post.data}
     buttonLink={post.data.blogLink}
     buttonTitle={post.data.blogLinkTitle}
-    class="container mx-auto grid grid-cols-12 gap-x-4 sm:gap-x-6 px-4 @sm:px-6"
+    class="container mx-auto grid grid-cols-12 gap-x-4 sm:gap-x-6 px-4 @sm:px-6 max-w-7xl"
   />
 </section>
