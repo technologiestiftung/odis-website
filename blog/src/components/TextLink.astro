@@ -6,6 +6,7 @@ export type Props = {
   inverted?: boolean;
   class?: string;
   href?: string;
+  rel?: string;
 };
 
 const { inverted = false, tag = "a", class: className, ...props } = Astro.props;

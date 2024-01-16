@@ -1,0 +1,166 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Paragraph from "../../components/Paragraph.astro";
+import Heading from "../../components/Heading.astro";
+import ModuleStepper from "../../components/ModuleStepper.astro";
+import MethodThumbnail from "../../components/MethodThumbnail.astro";
+import TextLink from "../../components/TextLink.astro";
+import Button from "../../components/Button.astro";
+import ContactLane from "../../components/ContactLane.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("module");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+export type Props = CollectionEntry<"module">;
+
+const post = Astro.props;
+const modul = post.data;
+const nextNumber = modul.number + 1;
+const allModules = (await getCollection("module")).sort((a, b) => a.data.number - b.data.number);
+const nextModul = allModules.find((m) => m.data.number === nextNumber);
+const { Content } = await post.render();
+---
+
+<DefaultLayout
+  metaDescription={modul.metaDescription}
+  metaTitle={modul.title} 
+  externalLibs={["tableOfContents"]}
+>
+  <section class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16 mb-[20vmin] lg:mb-0">
+    <div class="grid-container">
+      <div
+        class="lg:col-start-1 lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)] row-start-2"
+        style="-webkit-text-stroke: 1px var(--text-inv);text-stroke: 1px var(--text-inv);"
+      >
+        { modul.number }.
+      </div>
+      <div class="lg:col-start-2 lg:col-span-5 row-start-1">
+        <a
+          href="/module"
+          class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Übersicht
+        </a>
+      </div>
+      <div class="lg:col-start-2 lg:col-span-5 row-start-2">
+        <Heading size="xxl" inverted>{modul.title}</Heading>
+        <Paragraph size="lg" inverted>{modul.description}</Paragraph>
+      </div>
+      <div class="lg:col-start-8 lg:col-span-3 relative flex justify-center items-center row-start-3">
+        <img
+          src={modul.icon}
+          alt={`Illustration für das Modul ${ modul.number }.`}
+          class="absolute top-0 lg:top-auto lg:bottom-0 left-0 w-full lg:translate-y-[calc(50%+1rem)] max-w-sm"
+        >
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid-container">
+      <div class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 pt-16">
+        <ModuleStepper activeNumber={modul.number} />
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Beitrag">
+    <div class="grid-container">
+      <div class="py-16 flex flex-col gap-6 order-first lg:order-last lg:col-start-9 lg:col-span-3 z-0">
+        <div class="sticky w-full top-6 lg:pb-16" id="toc-target">
+          <span id="toc-label" class="font-bold text-headlines">Auf dieser Seite</span>
+        </div>
+      </div>
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable py-16 relative z-10"
+      >
+        <Content />
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Methoden" class="bg-bg-alt py-16">
+    <div class="grid-container">
+      <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:col-span-10 lg:col-start-2 toc-content">
+        <div>
+          <Heading size='xl'>Methodenbox</Heading>
+          <Paragraph>Die Erfassung aller vorliegenden Datensätze und das Sammeln von Informationen und Zuständigkeiten zu diesen Daten ist häufig eine komplexe Aufgabe, bei der es ratsam ist, ein möglichst organisiertes Vorgehen zu verfolgen. Die hier vorgestellten Ressourcen helfen dabei den Mehrwert einer Dateninventur zu begreifen und unterstützen konkret bei einem Dateninventurprozess.</Paragraph>
+        </div>
+      </div>
+      <ul class="grid grid-cols-10 gap-4 sm:gap-6">
+        {modul.methods.map(method => (
+          <MethodThumbnail method={method} />
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section aria-label={modul.furtherLinksTitle}>
+    <div class="grid-container">
+      <div class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-24 relative z-10">
+        <div>
+          <Heading size='xl'>{modul.furtherLinksTitle}</Heading>
+          <Paragraph>{modul.furtherLinksText}</Paragraph>
+        </div>
+        <ul class="flex flex-col gap-8 p-0">
+          {modul.furtherLinks.map(link => (
+            <TextLink href={link.link} rel='noreferrer nofollow'>{link.title}</TextLink>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {nextModul && nextModul.data.number <= allModules.length && (
+        <>
+          <section aria-label="Nächster Modul" class="bg-bg-alt pt-16 pb-4 not-prose">
+            <div class="grid-container">
+              <div class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
+                <Heading size='xl' tag='h2'>Zur nächsten Station</Heading>
+                <ModuleStepper activeNumber={modul.number} hightLightNext />
+              </div>
+            </div>
+          </section>
+          <section aria-label="Nächster Modul" class="bg-bg-alt pb-16 not-prose">
+            <div class="grid-container">
+              <div
+                class="@lg:col-start-1 @lg:col-span-1 text-4xl lg:text-5xl text-bg font-bold drop-shadow-[6px_4px_0px_var(--shadow-secondary)] lg:text-right"
+                style="-webkit-text-stroke: 2px var(--line);text-stroke: 2px var(--line);"
+              >
+                {nextNumber}.
+              </div>
+              <div class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
+                <Heading size='lg'  tag='h3'>{nextModul.data.title}</Heading>
+                <Paragraph>{nextModul.data.description}</Paragraph>
+                <Button href='/module/'>Alle module</Button>
+              </div>
+            </div>
+          </section>
+        </>
+  )}
+
+  <section aria-label="Kontakt" class="py-16">
+    <div class="grid-container">
+      <ContactLane />
+    </div>
+  </section>
+
+</DefaultLayout>

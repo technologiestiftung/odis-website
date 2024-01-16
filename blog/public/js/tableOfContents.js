@@ -92,7 +92,7 @@ function createTableOfContents(contentClass, targetId) {
     ];
     headingLink.classList.add(...linkClasses);
     headingLink.appendChild(heading.cloneNode(true));
-    heading.parentNode.replaceChild(headingLink, heading);
+    heading.parentNode?.replaceChild(headingLink, heading);
 
     observer.observe(headingLink);
 

@@ -1,6 +1,7 @@
 import { defineCollection, z } from "astro:content";
 import { projekteSchema } from "../schemas/projekte";
 import { aktuellesSchema } from "../schemas/aktuelles";
+import { moduleSchema } from "../schemas/module";
 
 const aktuelles = defineCollection({
   type: "content",
@@ -12,4 +13,9 @@ const projekte = defineCollection({
   schema: projekteSchema,
 });
 
-export const collections = { aktuelles, projekte };
+const module = defineCollection({
+  type: "content",
+  schema: moduleSchema,
+});
+
+export const collections = { module, aktuelles, projekte };
