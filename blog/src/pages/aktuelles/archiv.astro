@@ -1,0 +1,78 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import { frontmatter } from '../../content/content/newsletterArchiv.mdx'
+import { newsletterArchivSchema } from '../../schemas/newsletterArchiv'
+import PageHeader from '../../components/PageHeader.astro'
+import NewsletterLane from '../../components/NewsletterLane.astro'
+import Heading from '../../components/Heading.astro'
+import TextLink from '../../components/TextLink.astro'
+import classNames from '../../utils/classNames'
+
+const data = newsletterArchivSchema.parse(frontmatter)
+const years = [...new Set(data.newsletters.map((item) => item.year))]
+
+const monthMap = {
+  1: 'Januar',
+  2: 'Februar',
+  3: 'März',
+  4: 'April',
+  5: 'Mai',
+  6: 'Juni',
+  7: 'Juli',
+  8: 'August',
+  9: 'September',
+  10: 'Oktober',
+  11: 'November',
+  12: 'Dezember',
+}
+---
+
+<DefaultLayout
+  metaTitle={data.metaTitle || data.title}
+  metaDescription={data.metaDescription || data.description}
+>
+  <PageHeader
+    title={data.title}
+    description={data.description}
+    image={data.headerImage && {
+      ...data.headerImage,
+      class: 'max-w-[206px]'
+    }}
+  />
+
+  <div class="bg-bg text-text pt-20">
+    <div class="grid-container">
+      <ul class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6">
+        {years
+        .sort((a, b) => b - a)
+        .map((year) => (
+          <li class="pt-4 border-t border-line">
+            <Heading
+              tag='h3'
+              class={classNames(
+                year === new Date().getFullYear() ? 'text-headlines' : 'text-gray-light',
+              )}
+            >
+              {year}
+            </Heading>
+            <ul class="flex flex-col gap-3">
+              {data.newsletters
+                .filter((item) => item.year === year)
+                .sort((a, b) => b.month - a.month)
+                .map((item) => (
+                  <li>
+                    <TextLink href={item.url}>
+                      {monthMap[item.month as keyof typeof monthMap]}
+                    </TextLink>
+                  </li>
+                ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <NewsletterLane />
+</DefaultLayout>
+
