@@ -1,7 +1,7 @@
 ---
 layout: project
 tags: project
-title: Berlins Daten-Neuheiten im Schnellblick
+title: Berlins Daten-Neuheiten im Überblick
 metaDescription: Übersichtliche Darstellung der wöchentlichen Datenupdates auf Berlins Open Data Portal
 date: 2024-01-20
 visible: true
@@ -9,7 +9,7 @@ indexImage: daten-neuheiten-projektübersichtkachel.png
 heroImage: daten-neuheiten-headerbild.png
 ---
 
-Jede Woche gibt es spannende neue Daten und Updates auf dem [Open Data Portal Berlin](https://daten.berlin.de/). Um keinen interessanten neuen Datensatz oder Aktualisierungen zu verpassen, hat die ODIS eine übersichtliche Darstellung entwickelt, mit der Sie alle Änderungen auf einen Blick erfassen können.
+Das [Berliner Datenportal](https://daten.berlin.de/) führt über 3000 offene Datensätze - und jede Woche kommen neue Daten und Updates hinzu. Um keinen interessanten Datensatz oder Aktualisierungen zu verpassen, hat die ODIS eine übersichtliche Darstellung erstellt, die stets die neuesten Veröffentlichungen anzeigt.
 
 <br>
 
@@ -25,9 +25,9 @@ Jede Woche gibt es spannende neue Daten und Updates auf dem [Open Data Portal Be
 
 </br>
 
-Unsere Tabelle wird täglich aktualisiert und zeigt alle Änderungen der letzten sieben Tage. Dank einer einfachen Farbkodierung lassen sich Neuerscheinungen und Aktualisierungen schnell und unkompliziert erkennen. Ein Klick auf den Titel eines Datensatzes führt Sie direkt zur entsprechenden Seite auf dem Datenportal.
+Die Tabelle wird täglich aktualisiert und zeigt alle Änderungen der letzten sieben Tage. Dank einer einfachen Farbkodierung lassen sich Neuerscheinungen und Aktualisierungen schnell und unkompliziert erkennen. Ein Klick auf den Titel eines Datensatzes führt Sie direkt zur entsprechenden Seite auf dem Datenportal.
 
-Sie können die Übersicht auch bequem per iFrame in Ihre eigene Webseite einbinden. Klicken Sie einfach unter den Diagrammen auf "Einbetten", um den iFrame-Code zu kopieren.
+Die Übersicht kann auch bequem per iFrame in anderen Webseiten eingebunden werden. Durch Klick auf den Button "Einbetten" unter der Tabelle, kann der iFrame-Code kopiert werden.
 
 Aber wie sieht es mit den Änderungen auf dem Datenportal in den letzten Jahren aus?
 
@@ -45,13 +45,11 @@ Aber wie sieht es mit den Änderungen auf dem Datenportal in den letzten Jahren 
 
 <br>
 
-Unser Liniendiagramm zeigt deutlich, dass die Zahl der Änderungen und Updates zunimmt – ein erfreulicher Trend! Allerdings kann es vorkommen, dass sehr ähnliche Datensätze in der Statistik erscheinen und diese leicht verzerren.
+Das Liniendiagramm zeigt deutlich, dass die Zahl der Änderungen und Updates zunimmt – ein erfreulicher Trend! Es ist aber zu beachten, dass es Datenthemen gibt, die aus ein und dem selber Veröffentlichungsprozess stammen, aber aufgeteilt und in thematisch ähnlichen Teildatensätzen veröffentlich wurden und die Statistik somit leicht verzerren.
 
 <br>
 <br>
 
-Zur technischen Umsetzung:
+**Zur technischen Umsetzung:** Die hier dargestellten Daten stammen von der Schnittstelle (API) des Datenportals. Die Daten werden auf [Github](https://github.com/technologiestiftung/odis-datenportal-uebersicht) ausgewertet und anschließend in aggregierter Form als CSV im Github-Repository gespeichert. Die Diagramme, erstellt mit [Datawrapper](https://www.datawrapper.de/), beziehen ihre Daten direkt aus diesem Repository.
 
-Die hier dargestellten Daten stammen von der Schnittstelle (API) des Datenportals. Die Daten werden auf [Github](https://github.com/technologiestiftung/odis-datenportal-uebersicht) ausgewertet und anschließend in aggregierter Form als CSV im Github-Repository gespeichert. Die Diagramme, erstellt mit [Datawrapper](https://www.datawrapper.de/), beziehen ihre Daten direkt aus diesem Repository.
-
-Du willst Charts mit Datawrapper erstellen? Schaue dir hier unserer [Videotutorials](https://odis-berlin.de/ressourcen/datenvisualisierung/) an.
+Wie sich leicht spannende Charts und Tabellen aus den eigenen Daten erstellen lassen, wird übrigens in unseren [Videotutorials](https://odis-berlin.de/ressourcen/datenvisualisierung/) erklärt.
