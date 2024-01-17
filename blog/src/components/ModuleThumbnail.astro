@@ -68,7 +68,7 @@ const isLast = module.data.number === allModules.length;
         <div
           class={classNames(
             `absolute -inset-y-[2px] group-first:top-16 left-16`,
-            `sm:inset-x-[calc((var(--columnSize)/2)+4rem)]`,
+            `sm:inset-x-[calc((var(--columnSize)/2)+4rem-4px)]`,
             `z-0 group-focus-visible/link:opacity-0 transition-opacity pointer-events-none`,
             isFirst && `top-16`,
             isLast && `bottom-[calc(100%-4rem)]`,
@@ -90,15 +90,13 @@ const isLast = module.data.number === allModules.length;
                   !isFirst ? `rounded-tl-[64px]` : `sm:border-t-0`,
                 ],
               )}
-            >
-            </div>
+            />
             <div
               class={classNames(
                 isRight &&
                   `sm:border-2 sm:border-line sm:border-dashed sm:border-l-0 sm:border-b-0 rounded-tr-[64px]`,
               )}
-            >
-            </div>
+            />
             {
               !isLast && (
                 <>
