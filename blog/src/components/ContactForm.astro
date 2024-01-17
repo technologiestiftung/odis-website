@@ -22,15 +22,16 @@ const form = Astro.props
           <Heading tag='legend' size='lg'>{form.dataTitle}</Heading>
           <div class="grid grid-cols-1 gap-5">
             <div class="grid grid-cols-1 gap-2">
-              <label for="anrede">Anrede</label>
+              <label for="anrede">{form.fields.title.label}</label>
               <select
                 class="w-[max-content] max-w-full bg-bg px-3 py-2 focusable"
                 name="anrede"
-                id="anrede">
-                <option value="" aria-label="Keine Auswahl">-</option>
-                <option value="Frau">Frau</option>
-                <option value="Herr">Herr</option>
-                <option value="Divers">Divers</option>
+                id="anrede"
+              >
+                <option value="" aria-label="Keine Auswahl">{form.fields.title.placeholder}</option>
+                {form.fields.title.options.map((option) => (
+                  <option value={option}>{option}</option>
+                ))}
               </select>
             </div>
             <div class="grid grid-cols-1 gap-2">

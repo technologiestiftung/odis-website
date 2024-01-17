@@ -23,6 +23,7 @@ export const kontaktSchema = z.object({
         label: z.string().default("Anrede"),
         placeholder: z.string().default("–"),
         required: z.boolean().default(false),
+        options: z.array(z.string())
       }),
       name: z.object({
         label: z.string().default("Name"),
