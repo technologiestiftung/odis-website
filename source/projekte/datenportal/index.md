@@ -5,8 +5,8 @@ title: Berlins Daten-Neuheiten im Schnellblick
 metaDescription: Übersichtliche Darstellung der wöchentlichen Datenupdates auf Berlins Open Data Portal
 date: 2024-01-20
 visible: true
-indexImage: kiezcolors_projekte_kachel.png
-heroImage: chart_desktop_screen.png
+indexImage: daten-neuheiten-projektübersichtkachel.png
+heroImage: daten-neuheiten-headerbild.png
 ---
 
 Jede Woche gibt es spannende neue Daten und Updates auf dem [Open Data Portal Berlin](https://daten.berlin.de/). Um keinen interessanten neuen Datensatz oder Aktualisierungen zu verpassen, hat die ODIS eine übersichtliche Darstellung entwickelt, mit der Sie alle Änderungen auf einen Blick erfassen können.
