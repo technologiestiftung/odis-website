@@ -53,3 +53,5 @@ Unser Liniendiagramm zeigt deutlich, dass die Zahl der Änderungen und Updates z
 Zur technischen Umsetzung:
 
 Die hier dargestellten Daten stammen von der Schnittstelle (API) des Datenportals. Die Daten werden auf [Github](https://github.com/technologiestiftung/odis-datenportal-uebersicht) ausgewertet und anschließend in aggregierter Form als CSV im Github-Repository gespeichert. Die Diagramme, erstellt mit [Datawrapper](https://www.datawrapper.de/), beziehen ihre Daten direkt aus diesem Repository.
+
+Du willst Charts mit Datawrapper erstellen? Schaue dir hier unserer [Videotutorials](https://odis-berlin.de/ressourcen/datenvisualisierung/) an.
