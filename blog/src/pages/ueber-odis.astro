@@ -5,26 +5,20 @@ import { aboutSchema } from "../schemas/about";
 import Heading from "../components/Heading.astro";
 import Paragraph from "../components/Paragraph.astro";
 import TextLink from "../components/TextLink.astro";
+import PageHeader from "../components/PageHeader.astro";
 
 const about = aboutSchema.parse(frontmatter);
 ---
 
 <Layout metaTitle={about.title} metaDescription={about.metaDescription}>
-  <section class="bg-bg-inv text-text-inv py-16">
-    <div class="grid-container">
-      <div class="max-w-[50ch] lg:col-start-2 lg:col-span-6">
-        <Heading size="xxl" inverted={true}>{about.title}</Heading>
-        <Paragraph size="lg" set:html={about.description} />
-      </div>
-      <div class="col-span-12 lg:col-start-8 lg:col-span-5 relative">
-        <img
-          class="w-full h-auto lg:absolute lg:top-0 lg:left-0 lg:max-w-none lg:max-h-[70vh] lg:w-[calc(140%+var(--marginSize)+3rem)]"
-          alt={about.headerImageAlt}
-          src={about.headerImagePath}
-        />
-      </div>
-    </div>
-  </section>
+  <PageHeader
+    title={about.title}
+    description={about.description}
+    image={about.headerImage && {
+      ...about.headerImage,
+      class: "lg:max-w-none lg:max-h-[70vh] lg:w-[calc(140%+var(--marginSize)+3rem)]"
+    }}
+  />
 
   <section class="bg-bg text-text py-16">
     <div class="grid-container">

@@ -7,6 +7,7 @@ export type Props = {
   href?: string;
   target?: undefined | "_blank";
   rel?: undefined | "noopener noreferrer";
+  type?: undefined | "button" | "submit";
 };
 
 const {
@@ -14,10 +15,14 @@ const {
   inverted = false,
   tag = "a",
   class: className,
+  type,
   ...props
 } = Astro.props;
 
 const isPrimary = variant === "primary";
+const additionalProps = {
+  type: tag === "button" ? type : undefined
+}
 const finalTailwindClasses = [
   className,
   isPrimary &&
@@ -56,7 +61,7 @@ const finalTailwindClasses = [
 
 {
   tag === "a" && (
-    <a {...props} class={finalTailwindClasses}>
+    <a {...props} {...additionalProps} class={finalTailwindClasses}>
       <slot />
     </a>
   )
@@ -64,7 +69,7 @@ const finalTailwindClasses = [
 
 {
   tag === "button" && (
-    <button {...props} class={finalTailwindClasses}>
+    <button {...props} {...additionalProps} class={finalTailwindClasses}>
       <slot />
     </button>
   )
@@ -72,14 +77,14 @@ const finalTailwindClasses = [
 
 {
   tag === "span" && (
-    <div {...props} class={finalTailwindClasses}>
+    <div {...props} {...additionalProps} class={finalTailwindClasses}>
       <slot />
     </div>
   )
 }
 {
   tag === "div" && (
-    <div {...props} class={finalTailwindClasses}>
+    <div {...props} {...additionalProps} class={finalTailwindClasses}>
       <slot />
     </div>
   )

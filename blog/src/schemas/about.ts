@@ -4,8 +4,10 @@ export const aboutSchema = z.object({
   title: z.string(),
   metaDescription: z.string(),
   description: z.string(),
-  headerImagePath: z.string(),
-  headerImageAlt: z.string(),
+  headerImage: z.object({
+    src: z.string(),
+    alt: z.string(),
+  }).optional(),
   mission: z.object({
     title: z.string(),
     description: z.string(),

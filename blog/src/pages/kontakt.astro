@@ -1,0 +1,46 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import { Content, frontmatter } from '../content/content/kontakt.mdx'
+import { kontaktSchema } from '../schemas/kontakt'
+import PageHeader from '../components/PageHeader.astro'
+import TextLink from '../components/TextLink.astro'
+import ContactForm from '../components/ContactForm.astro'
+
+console.log(frontmatter)
+const kontakt = kontaktSchema.parse(frontmatter)
+---
+<DefaultLayout
+  metaTitle={kontakt.metaTitle || kontakt.title}
+  metaDescription={kontakt.metaDescription || kontakt.description}
+>
+  <PageHeader
+    title={kontakt.title}
+    description={kontakt.description}
+    image={kontakt.headerImage && {
+      ...kontakt.headerImage,
+      class: "max-w-[220px]"
+    }}
+  />
+
+  <section class="bg-bg text-text py-16">
+    <div class="grid-container">
+      <div class="prose lg:col-start-2 lg:col-span-6">
+        <Content />
+        {kontakt.links && kontakt.links?.length > 0 && (
+          <ul class="mt-2 not-prose p-0">
+            {kontakt.links?.map((link) => (
+              <li class="flex justify-start mt-4">
+                <TextLink href={link.href}>
+                  {link.title}
+                </TextLink>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <ContactForm {...kontakt.form} />
+</DefaultLayout>
+
