@@ -7,6 +7,7 @@
 <script>
   import * as d3 from "d3";
 
+
   const dimensions = {
     height: 520,
     width: 460,
@@ -18,7 +19,7 @@
     },
   };
 
-  d3.csv("/charts/word_counts.csv", function (data) {
+  d3.csv("/charts/word_counts.csv", function (data: { Word: string; Value: number }[]) {
     var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
     const svg = d3
@@ -62,19 +63,19 @@
       .attr(
         "d",
         d3
-          .arc()
+          .arc<{ Word: string, Value: number }>()
           .innerRadius(innerRadius)
-          .outerRadius((d) => y(d["Value"]))
-          .startAngle((d) => x(d.Word))
-          .endAngle((d) => x(d.Word) + x.bandwidth())
+          .outerRadius((d) => y(d.Value) || 0)
+          .startAngle((d) => x(d.Word) || 0)
+          .endAngle((d) => (x(d.Word) || 0) + x.bandwidth())
           .padAngle(0.02)
           .padRadius(innerRadius),
       )
-      .on("mouseover", function (d, i) {
+      .on("mouseover", function (event, d) {
         d3.select(this).attr("fill", "red");
         tooltip
-          .style("left", d3.event.pageX - 50 + "px")
-          .style("top", d3.event.pageY - 70 + "px")
+          .style("left", event.pageX - 50 + "px")
+          .style("top", event.pageY - 70 + "px")
           .style("display", "inline-block")
           .html(
             'Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' +
@@ -84,7 +85,7 @@
               "</span>",
           );
       })
-      .on("mouseout", function (d, i) {
+      .on("mouseout", function () {
         d3.select(this).attr("fill", "#2e91d2");
         tooltip.style("display", "None");
       });
@@ -96,18 +97,22 @@
       .enter()
       .append("g")
       .attr("text-anchor", function (d) {
-        return (x(d.Word) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) <
+        const xWord = x(d.Word)
+        if (!xWord) return "start";
+        return (xWord + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) <
           Math.PI
           ? "end"
           : "start";
       })
       .attr("transform", function (d) {
+        const xWord = x(d.Word)
+        if (!xWord) return "start";
         return (
           "rotate(" +
-          (((x(d.Word) + x.bandwidth() / 2) * 180) / Math.PI - 90) +
+          (((xWord + x.bandwidth() / 2) * 180) / Math.PI - 90) +
           ")" +
           "translate(" +
-          (y(d["Value"]) + 10) +
+          (y(d.Value) + 10) +
           ",0)"
         );
       })
@@ -116,18 +121,20 @@
         return d.Word;
       })
       .attr("transform", function (d) {
-        return (x(d.Word) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) <
+        const xWord = x(d.Word)
+        if (!xWord) return "start";
+        return (xWord + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) <
           Math.PI
           ? "rotate(180)"
           : "rotate(0)";
       })
       .style("font-size", "11px")
       .attr("alignment-baseline", "middle")
-      .on("mouseover", function (d, i) {
+      .on("mouseover", function (event, d) {
         d3.select(this).attr("fill", "red");
         tooltip
-          .style("left", d3.event.pageX - 50 + "px")
-          .style("top", d3.event.pageY - 70 + "px")
+          .style("left", event.pageX - 50 + "px")
+          .style("top", event.pageY - 70 + "px")
           .style("display", "inline-block")
           .html(
             'Anzahl Begriffe mit dem Wortstamm <span style="color:red;"> ' +
@@ -137,7 +144,7 @@
               "</span>",
           );
       })
-      .on("mouseout", function (d, i) {
+      .on("mouseout", function () {
         d3.select(this).attr("fill", "black");
         tooltip.style("display", "None");
       });

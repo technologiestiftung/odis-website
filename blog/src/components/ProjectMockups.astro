@@ -5,9 +5,9 @@ import Button from "./Button.astro";
 import MobileMockup from "./MobileMockup.astro";
 
 export type Props = CollectionEntry<"projekte">["data"] & {
-  buttonTitle?: string | null;
-  buttonLink?: string | null;
-  class?: string;
+  buttonTitle?: string | null | undefined;
+  buttonLink?: string | null | undefined;
+  class?: string | undefined;
 };
 
 const {

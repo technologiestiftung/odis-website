@@ -2,9 +2,9 @@
 import classNames from "../../utils/classNames";
 
 export type Props = {
-  class?: string;
-  caption?: string;
-  fullWidth?: boolean;
+  class?: string | undefined;
+  caption?: string | undefined;
+  fullWidth?: boolean | undefined;
 };
 
 const { class: className, caption, fullWidth = true } = Astro.props;
