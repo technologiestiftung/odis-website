@@ -7,14 +7,14 @@ import ProjectMockups from "./ProjectMockups.astro";
 export type Props = CollectionEntry<"projekte">;
 
 const post = Astro.props;
-const { title, metaDescription } = post.data;
+const { title, description } = post.data;
 ---
 
 <section class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64">
   <div class="grid-container">
     <div class="lg:col-span-6 lg:col-start-2">
       <Heading size="xxl" inverted set:html={title} />
-      <Paragraph size="lg">{metaDescription}</Paragraph>
+      <Paragraph size="lg" class="text-balance">{description}</Paragraph>
     </div>
   </div>
 </section>

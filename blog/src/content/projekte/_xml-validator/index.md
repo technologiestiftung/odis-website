@@ -4,7 +4,7 @@ tags: ['project','post']
 title: Prüftool für Geodaten
 blogLinkTitle: "Hier geht's zum Schema-Validator"
 blogLink: http://odis-berlin.de/projekte/xml-validator/tool
-metaDescription: Eine Prüftool für Geodaten
+description: Eine Prüftool für Geodaten
 date: 2020-10-01
 visible: true
 indexImage: placeholder.png

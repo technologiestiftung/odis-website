@@ -1,14 +1,7 @@
 import { z } from "astro:content";
+import { pageSchema } from "./common";
 
-export const kontaktSchema = z.object({
-  title: z.string(),
-  metaTitle: z.string().optional(),
-  description: z.string(),
-  metaDescription: z.string().optional(),
-  headerImage: z.object({
-    src: z.string(),
-    alt: z.string(),
-  }).optional(),
+export const kontaktSchema = pageSchema.merge(z.object({
   links: z.array(
     z.object({
       title: z.string(),
@@ -58,5 +51,5 @@ export const kontaktSchema = z.object({
     requiredLabel: z.string().default("* Angabe notwendig"),
     submitButtonText: z.string().default("Anfrage abschicken"),
   })
-})
+}))
 export type KontaktType = z.infer<typeof kontaktSchema>;

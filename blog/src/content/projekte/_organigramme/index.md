@@ -4,7 +4,7 @@ title: "Organigramm-Tool"
 visibleLink: false
 blogLinkTitle: "Hier geht's zum Tool"
 blogLink: https://organigramme.odis-berlin.de/
-metaDescription: Digitale Anwendung für maschinenlesbare Organigramme der Berliner Verwaltung
+description: Digitale Anwendung für maschinenlesbare Organigramme der Berliner Verwaltung
 date: 2022-07-26
 tags: ['project','post']
 visible: true

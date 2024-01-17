@@ -27,8 +27,8 @@ const { Content } = await post.render();
 ---
 
 <DefaultLayout
-  metaDescription={modul.metaDescription}
-  metaTitle={modul.title} 
+  metaDescription={modul.metaDescription || modul.description}
+  metaTitle={modul.metaTitle || modul.title} 
   externalLibs={["tableOfContents"]}
 >
   <section class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16 mb-[20vmin] lg:mb-0">

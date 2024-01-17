@@ -3,7 +3,7 @@ layout: default.liquid
 title: In 10 Schritten zum maschinenlesbaren Organigramm
 visibleLink: false
 blogLinkTitle: "Anleitung für das Organigramm Tool"
-metaDescription: Anleitung für das Organigramm Tool
+description: Anleitung für das Organigramm Tool
 date: 2022-02-18
 visible: false
 ---

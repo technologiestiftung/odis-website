@@ -1,12 +1,13 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
-import Heading from "../../components/Heading.astro";
-import Paragraph from "../../components/Paragraph.astro";
 import Pagination from "../../components/Pagination.astro";
 import type { Page, GetStaticPaths } from "astro";
 import ProjectThumbnail from "../../components/ProjectThumbnail.astro";
 import NewsletterLane from "../../components/NewsletterLane.astro";
+import { frontmatter } from '../../content/content/projectsOverview.mdx'
+import { projectsOverviewSchema } from '../../schemas/projekte'
+import PageHeader from "../../components/PageHeader.astro";
 
 type Project = CollectionEntry<"projekte">;
 
@@ -27,22 +28,27 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 
 const { page } = Astro.props;
 
+const {
+  title,
+  description,
+  metaTitle,
+  metaDescription,
+  headerImage,
+} = projectsOverviewSchema.parse(frontmatter)
+
 const firstPath = "projekte";
 ---
 
 <DefaultLayout
-  metaTitle="ODIS-Projekte"
-  metaDescription="Aus offenen Daten können vielfältige Anwendungen entstehen. Hier sind einige Projekte die Open Data von Berlin nutzen:"
+  metaTitle={metaTitle || title}
+  metaDescription={metaDescription || description}
 >
-  <section class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64">
-    <div class="grid-container">
-      <Heading size="xxl" tag="h1" inverted={true}>ODIS-Projekte</Heading>
-      <Paragraph size="lg" class="text-wrap">
-        Aus offenen Daten können vielfältige Anwendungen entstehen. Hier sind
-        einige Projekte die Open Data von Berlin nutzen:
-      </Paragraph>
-    </div>
-  </section>
+  <PageHeader
+    title={title}
+    description={description}
+    class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64"
+    image={headerImage}
+  />
 
   <section class="pb-24 -mt-32 sm:-mt-56">
     <div class="grid-container">

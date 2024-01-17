@@ -1,5 +1,5 @@
 import { z } from "astro:content";
-import { collectionSchema } from "./common";
+import { collectionSchema, pageSchema } from "./common";
 
 export const projekteSchema = collectionSchema.merge(
   z.object({
@@ -37,3 +37,5 @@ export const projekteSchema = collectionSchema.merge(
       .optional(),
   }),
 );
+
+export const projectsOverviewSchema = pageSchema;

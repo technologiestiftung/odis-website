@@ -18,7 +18,9 @@ export type Props = CollectionEntry<"projekte">;
 const post = Astro.props;
 const {
   title,
+  metaTitle,
   metaDescription,
+  description,
   period,
   status,
   datasets,
@@ -28,7 +30,10 @@ const {
 const { Content } = await post.render();
 ---
 
-<DefaultLayout metaDescription={metaDescription} metaTitle={title}>
+<DefaultLayout
+  metaTitle={metaTitle || title}
+  metaDescription={metaDescription || description}
+>
   <ProjectHeader {...Astro.props} />
   <section class="pb-64">
     <div class="grid-container">

@@ -6,7 +6,7 @@ import Paragraph from "./Paragraph.astro";
 export type Props = {
   title: string;
   description?: string | undefined;
-  className?: string | undefined;
+  class?: string | undefined;
   image?: {
     src: string;
     alt: string;
@@ -14,14 +14,14 @@ export type Props = {
   } | undefined;
 }
 
-const { title, description, image, className = "bg-bg-inv text-text-inv" } = Astro.props;
+const { title, description, image, class: className = "bg-bg-inv text-text-inv" } = Astro.props;
 
 ---
 
 <section class={classNames( className, "py-16")}>
   <div class="grid-container">
     <div class="max-w-[50ch] lg:col-start-2 lg:col-span-6">
-      <Heading size="xxl" inverted={true}>{title}</Heading>
+      <Heading size="xxl" inverted={className?.includes("bg-inv")}>{title}</Heading>
       {description && <Paragraph size="lg" set:html={description} />}
     </div>
     <div class="col-span-12 lg:col-start-8 lg:col-span-5 relative">

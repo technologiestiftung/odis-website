@@ -1,13 +1,14 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
-import Heading from "../../components/Heading.astro";
-import Paragraph from "../../components/Paragraph.astro";
 import NewsCard from "../../components/NewsCard.astro";
 import Pagination from "../../components/Pagination.astro";
 import type { Page, GetStaticPaths } from "astro";
 import ProjectThumbnail from "../../components/ProjectThumbnail.astro";
 import NewsletterLane from "../../components/NewsletterLane.astro";
+import { frontmatter } from '../../content/content/aktuellesOverview.mdx';
+import { aktuellesOverviewSchema } from "../../schemas/aktuelles";
+import PageHeader from "../../components/PageHeader.astro";
 
 type Project = CollectionEntry<"projekte">;
 type Aktuelles = CollectionEntry<"aktuelles">;
@@ -36,23 +37,23 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 
 const { page } = Astro.props;
 
+const data = aktuellesOverviewSchema.parse(frontmatter);
+
 const firstPath = "aktuelles";
 ---
 
 <DefaultLayout
-  metaTitle="Aktuelles"
-  metaDescription="Konferenzen, Vorträge, Workshops, Weiterbildungen und Prototypenentwicklung der ODIS"
+  metaTitle={data.metaTitle || data.title}
+  metaDescription={data.metaDescription || data.description}
 >
-  <div class="grid-container">
-    <div class="pt-16 max-w-[50ch]">
-      <Heading size="xxl" tag="h1">Aktuelles</Heading>
-      <Paragraph size="lg" class="text-wrap">
-        Bei der ODIS ist viel los. Konferenzen, Vorträge, Workshops,
-        Weiterbildungen und Proto&shy;typen&shy;entwicklung gehören fest in
-        unser Tätigkeitsfeld. Hier informieren wir über neue Aktivitäten.
-      </Paragraph>
-    </div>
+  <PageHeader
+    title={data.title}
+    description={data.description}
+    image={data.headerImage}
+    class="bg-bg text-text"
+  />
 
+  <div class="grid-container">
     <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
       {
         page.data.map((post) => {

@@ -1,13 +1,7 @@
+import { pageSchema } from './common';
 import { z } from "astro:content";
 
-export const aboutSchema = z.object({
-  title: z.string(),
-  metaDescription: z.string(),
-  description: z.string(),
-  headerImage: z.object({
-    src: z.string(),
-    alt: z.string(),
-  }).optional(),
+export const aboutSchema = pageSchema.merge(z.object({
   mission: z.object({
     title: z.string(),
     description: z.string(),
@@ -39,5 +33,5 @@ export const aboutSchema = z.object({
     ),
     disclaimer: z.string(),
   }),
-});
+}))
 export type AboutPageType = z.infer<typeof aboutSchema>;

@@ -1,14 +1,13 @@
 ---
 import { getCollection } from "astro:content";
-import Heading from "../../components/Heading.astro";
-import Paragraph from "../../components/Paragraph.astro";
-import { frontmatter } from "../../content/content/module.mdx";
+import { Content, frontmatter } from "../../content/content/moduleOverview.mdx";
 import { moduleOverviewSchema } from "../../schemas/module";
 import ModuleThumbnail from "../../components/ModuleThumbnail.astro";
 import ContactLane from "../../components/ContactLane.astro";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
 
-const { title, subtitle, introTitle, introText } =
+const { title, description, metaTitle, metaDescription, headerImage } =
   moduleOverviewSchema.parse(frontmatter);
 
 const module = (await getCollection("module")).sort(
@@ -16,30 +15,24 @@ const module = (await getCollection("module")).sort(
 );
 ---
 
-<DefaultLayout metaTitle={title} metaDescription={subtitle}>
-  <section class="bg-bg-inv text-text-inv py-16">
-    <div class="grid-container">
-      <div class="lg:col-start-2 lg:col-span-5">
-        <Heading size="xxl" inverted={true}>{title}</Heading>
-        <Paragraph size="lg">{subtitle}</Paragraph>
-      </div>
-      <div
-        class="lg:col-span-4 lg:col-start-8 hidden lg:block relative"
-        aria-hidden="true"
-      >
-        <img
-          src="/images/illustrations/all_modules.svg"
-          class="absolute inset-x-0 top-0 w-full aspect-square"
-        />
-      </div>
-    </div>
-  </section>
+
+<DefaultLayout
+  metaTitle={metaTitle || title}
+  metaDescription={metaDescription || description}
+>
+  <PageHeader
+    title={title}
+    description={description}
+    image={headerImage && {
+      ...headerImage,
+      class: "hidden lg:block absolute inset-x-0 top-0 w-full aspect-square"
+    }}
+  />
 
   <section class="bg-bg text-text py-16">
     <div class="grid-container">
-      <div class="lg:col-start-2 lg:col-span-5">
-        <Heading size="xl" tag="h2">{introTitle}</Heading>
-        <Paragraph>{introText}</Paragraph>
+      <div class="lg:col-start-2 lg:col-span-5 prose">
+        <Content />
       </div>
     </div>
   </section>
