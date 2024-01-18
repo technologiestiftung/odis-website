@@ -1,5 +1,5 @@
 ---
-import classNames from "../utils/classNames";
+import { cn } from "../utils/classNames";
 export interface Props {
   length: number;
   currentUrl: string;
@@ -20,7 +20,7 @@ const { length, currentPage, firstUrl, prevUrl, nextUrl } = Astro.props;
   {
     prevUrl && (
       <a
-        class={classNames(
+        class={cn(
           `flex h-10 w-10 items-center justify-center`,
           `bg-bg hover-hover:hover:bg-bg-alt text-links hover-hover:hover:text-links-active`,
           `focusable`,
@@ -45,7 +45,7 @@ const { length, currentPage, firstUrl, prevUrl, nextUrl } = Astro.props;
   {
     Array.from({ length }, (_, i) => i + 1).map((page) => (
       <a
-        class={classNames(
+        class={cn(
           `flex h-10 w-10 items-center justify-center`,
           `focusable`,
           `transition-colors motion-reduce:transition-none`,
@@ -66,7 +66,7 @@ const { length, currentPage, firstUrl, prevUrl, nextUrl } = Astro.props;
   {
     nextUrl && (
       <a
-        class={classNames(
+        class={cn(
           `flex h-10 w-10 items-center justify-center`,
           `bg-bg hover-hover:hover:bg-bg-alt`,
           `focusable`,

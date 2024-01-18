@@ -1,5 +1,6 @@
 ---
 import type { HTMLTag } from "astro/types";
+import { cn } from "../utils/classNames";
 
 export type Props = {
   tag?: HTMLTag;
@@ -11,8 +12,7 @@ export type Props = {
 
 const { inverted = false, tag = "a", class: className, ...props } = Astro.props;
 
-const finalTailwindClasses = [
-  className,
+const finalTailwindClasses = cn(
   inverted &&
     [
       `text-links-inv border-line-inv`,
@@ -31,13 +31,13 @@ const finalTailwindClasses = [
     ]
       .filter(Boolean)
       .join(" "),
+  `cursor-pointer`,
   `decoration-clone underline underline-offset-8 decoration-8`,
   `inline-block leading-7 focus-visible:ring-offset-8`,
-  `focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50`,
+  `focusable`,
   `transition motion-reduce:transition-none`,
-]
-  .filter(Boolean)
-  .join(" ");
+  className,
+)
 ---
 
 {

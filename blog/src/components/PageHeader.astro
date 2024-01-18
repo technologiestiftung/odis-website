@@ -1,5 +1,5 @@
 ---
-import classNames from "../utils/classNames";
+import { cn } from "../utils/classNames";
 import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
 
@@ -18,7 +18,7 @@ const { title, description, image, class: className = "bg-bg-inv text-text-inv" 
 
 ---
 
-<section class={classNames( className, "py-16")}>
+<section class={cn( className, "py-16")}>
   <div class="grid-container">
     <div class="max-w-[50ch] lg:col-start-2 lg:col-span-6">
       <Heading size="xxl" inverted={className?.includes("bg-inv")}>{title}</Heading>
@@ -27,7 +27,7 @@ const { title, description, image, class: className = "bg-bg-inv text-text-inv" 
     <div class="col-span-12 lg:col-start-8 lg:col-span-5 relative">
       {image && (
         <img
-          class={classNames(
+          class={cn(
             image.class,
             `w-full h-auto lg:absolute lg:top-0 lg:left-0 `
           )}

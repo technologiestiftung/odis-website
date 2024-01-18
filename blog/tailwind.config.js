@@ -41,6 +41,9 @@ module.exports = {
           inv: "var(--shadow-secondary-inv)",
         },
       },
+      discrete: {
+        DEFAULT: "var(--gray-light)",
+      }
 
       // AVOID USING PRIMITIVE COLORS DIRECTLY, RATHER USE SEMANTIC COLORS (SEE ABOVE)
       // If you still need to, use the css variable directly (eg. var(--red))

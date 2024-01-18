@@ -3,7 +3,7 @@ import NewsCardContent from "./NewsCardContent.astro";
 import Button from "./Button.astro";
 import TextLink from "./TextLink.astro";
 import NewsCardGradient from "./NewsCardGradient.astro";
-import classNames from "../utils/classNames";
+import { cn } from "../utils/classNames";
 
 export type Props = {
   title: string;
@@ -89,7 +89,7 @@ const contentAreaWrapperClasses =
     )
   }
   <div
-    class={classNames(
+    class={cn(
       "row-start-2 h-full grid grid-rows-[auto,1fr] gap-6 z-10",
       contentAreaWrapperClasses,
     )}

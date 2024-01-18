@@ -1,0 +1,85 @@
+---
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+import ArrowLeft from "./icons/ArrowLeft.astro";
+
+export type Props = {
+  title: string;
+  description: string;
+  date: Date;
+  basePath: string;
+  image?: undefined | {
+    src: string;
+    alt: string;
+  };
+}
+
+const { basePath, title, description, date, image } = Astro.props;
+
+const formattedIntlTime = new Intl.DateTimeFormat("de-DE", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}).format(new Date(date));
+---
+<div class="w-screen overflow-x-hidden pb-[8%]">
+  <section class="bg-bg-alt" aria-label="Einführung">
+    <div class="grid-container">
+      <div class="lg:col-start-2 lg:col-span-5 py-10">
+        <Paragraph class="flex gap-x-3 flex-wrap">
+          <a
+            href={`/${basePath}`}
+            class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
+          >
+            <ArrowLeft />
+            Zurück
+          </a>
+          <span aria-hidden="true" class="scale-150 opacity-50">·</span>
+          <time
+            datetime={date.toISOString().split("T")[0]}
+            class="opacity-70"
+          >
+            {formattedIntlTime}
+          </time>
+        </Paragraph>
+        <Heading tag="h1" set:html={title} size="xxl" />
+        <slot />
+        <Paragraph size="lg" set:html={description} />
+      </div>
+      {
+        image?.src && image?.alt && (
+          <div
+            class="aspect-video lg:aspect-auto lg:h-[108%] row-start-1 row-end-2 col-span-12 lg:col-start-8 lg:col-span-4 relative"
+            role="figure"
+            aria-label={image.alt}
+          >
+            <div
+              class="
+            absolute top-0 bg-cover bg-center
+            w-[110vw] h-full
+            -left-6
+            sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
+            lg:left-0
+            lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]
+          "
+              style={{ backgroundImage: `url(${image.src})` }}
+            />
+            <div
+              class="
+            absolute top-0 bg-cover bg-center
+            w-[110vw] h-full
+            -left-6
+            pointer-events-none
+            sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
+            lg:left-0
+            lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]
+            bg-bg-inv mix-blend-screen opacity-50
+          "
+              aria-hidden="true"
+            />
+          </div>
+        )
+      }
+    </div>
+  </section>
+  </div>

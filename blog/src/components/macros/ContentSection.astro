@@ -1,5 +1,5 @@
 ---
-import classNames from "../../utils/classNames";
+import { cn } from "../../utils/classNames";
 
 export type Props = {
   class?: string | undefined;
@@ -12,12 +12,12 @@ const { class: className, caption, fullWidth = true } = Astro.props;
 
 <section class="mt-10 pt-6">
   <div
-    class={classNames(
-      className,
+    class={cn(
       `bg-bg py-4 sm:py-6`,
       `mb-0 max-w-full`,
       fullWidth &&
         "sm:w-screen sm:max-w-[100vw] sm:ml-[calc((var(--gridGap)+var(--marginSize))*-1)] lg:ml-[calc((var(--marginSize)+(var(--gridGap)*2)+var(--columnSize))*-1)]",
+      className,
     )}
   >
     <slot />

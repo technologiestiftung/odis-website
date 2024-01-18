@@ -1,4 +1,5 @@
 ---
+import { cn } from "../utils/classNames";
 import Heading from "./Heading.astro";
 import type { Props as NewsCardProps } from "./NewsCard.astro";
 export type Props = NewsCardProps;
@@ -58,10 +59,6 @@ const primaryColorClasses = [
   )
 }
 <p class="line-clamp-7">{description}</p>
-<div
-  class={[primaryColorClasses, `order-first text-sm`, `flex gap-2 opacity-70`]
-    .filter(Boolean)
-    .join(" ")}
->
+<div class={cn(`order-first text-sm flex gap-2 opacity-70`, primaryColorClasses)} >
   <time datetime={date} class="justify-self-end">{date}</time>
 </div>

@@ -3,7 +3,7 @@ import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
 import Button from "./Button.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
-import classNames from "../utils/classNames";
+import { cn } from "../utils/classNames";
 
 export type Props = CollectionEntry<"module"> & {
   position: "left" | "right";
@@ -32,7 +32,7 @@ const isLast = module.data.number === allModules.length;
           relative"
       >
         <div
-          class={classNames(
+          class={cn(
             `col-span-1 flex justify-center items-start z-10 relative`,
             isRight && "sm:order-2 lg:order-3",
           )}
@@ -49,13 +49,13 @@ const isLast = module.data.number === allModules.length;
         <img
           src={module.data.icon}
           alt={`Module icon illustration for module '${module.data.title}'`}
-          class={classNames(
+          class={cn(
             `col-span-8 sm:col-span-8 sm:col-start-2 z-10 relative`,
             isRight ? `sm:order-1 lg:order-2 lg:col-span-3` : `lg:col-span-2`,
           )}
         />
         <div
-          class={classNames(
+          class={cn(
             `col-span-11 sm:col-span-8 col-start-2 sm:col-start-2 lg:col-span-5 z-10 relative pl-4 sm:pl-0`,
             isRight && "sm:order-3 lg:order-1",
           )}
@@ -66,7 +66,7 @@ const isLast = module.data.number === allModules.length;
         </div>
         <div class="col-span-1 hidden lg:block" aria-hidden="true"></div>
         <div
-          class={classNames(
+          class={cn(
             `absolute -inset-y-[2px] group-first:top-16 left-16`,
             `sm:inset-x-[calc((var(--columnSize)/2)+4rem-4px)]`,
             `z-0 group-focus-visible/link:opacity-0 transition-opacity pointer-events-none`,
@@ -76,7 +76,7 @@ const isLast = module.data.number === allModules.length;
           aria-hidden="true"
         >
           <div
-            class={classNames(
+            class={cn(
               `border-l-2 border-line border-dashed sm:border-l-0`,
               `ml-4 sm:ml-0`,
               `w-full h-full relative grid grid-cols-2 gap-[-1px]`,
@@ -84,7 +84,7 @@ const isLast = module.data.number === allModules.length;
             )}
           >
             <div
-              class={classNames(
+              class={cn(
                 !isRight && [
                   `sm:border-2 sm:border-line sm:border-dashed sm:border-r-0 sm:border-b-0`,
                   !isFirst ? `rounded-tl-[64px]` : `sm:border-t-0`,
@@ -92,7 +92,7 @@ const isLast = module.data.number === allModules.length;
               )}
             />
             <div
-              class={classNames(
+              class={cn(
                 isRight &&
                   `sm:border-2 sm:border-line sm:border-dashed sm:border-l-0 sm:border-b-0 rounded-tr-[64px]`,
               )}
@@ -101,13 +101,13 @@ const isLast = module.data.number === allModules.length;
               !isLast && (
                 <>
                   <div
-                    class={classNames(
+                    class={cn(
                       !isRight &&
                         `sm:border-2 sm:border-line sm:border-dashed sm:border-r-0 sm:border-t-0 rounded-bl-[64px]`,
                     )}
                   />
                   <div
-                    class={classNames(
+                    class={cn(
                       isRight &&
                         `sm:border-2 sm:border-line sm:border-dashed sm:border-l-0 sm:border-t-0 rounded-br-[64px]`,
                     )}

@@ -1,5 +1,5 @@
 ---
-import classNames from "../../utils/classNames";
+import { cn } from "../../utils/classNames";
 export type Props = {
   src: string;
   caption?: string;
@@ -11,17 +11,17 @@ const { src, caption, withShadow = false, fullWidth = false } = Astro.props;
 ---
 
 <figure
-  class={classNames(
+  class={cn(
     "mt-10 mb-0",
     fullWidth &&
       "sm:w-screen sm:max-w-[100vw] sm:ml-[calc((var(--gridGap)+var(--marginSize))*-1)] lg:ml-[calc((var(--marginSize)+(var(--gridGap)*2)+var(--columnSize))*-1)]",
   )}
 >
-  <div class={classNames("relative")}>
+  <div class={cn("relative")}>
     <img
       src={src}
       alt={caption}
-      class={classNames("my-0 w-full max-w-full", withShadow && "shadow-xl")}
+      class={cn("my-0 w-full max-w-full", withShadow && "shadow-xl")}
     />
     {
       withShadow && (

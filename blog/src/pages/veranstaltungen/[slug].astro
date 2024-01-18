@@ -1,0 +1,45 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("veranstaltungen");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+export type Props = CollectionEntry<"veranstaltungen">;
+
+const post = Astro.props;
+const {
+  title,
+  metaTitle,
+  metaDescription,
+  description,
+  headerImage,
+  date,
+} = post.data;
+const { Content } = await post.render();
+---
+
+<DefaultLayout
+  metaTitle={metaTitle || title}
+  metaDescription={metaDescription || description}
+>
+  <PageHeaderWithPhoto
+    basePath="veranstaltungen"
+    title={title}
+    description={description}
+    image={headerImage}
+    date={date}
+  />
+  <section class="py-16">
+    <div class="grid-container">
+      <div class="md:col-span-6 md:col-start-2 prose">
+        <Content />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

@@ -1,5 +1,6 @@
 ---
 import type { HTMLTag } from "astro/types";
+import { cn } from "../utils/classNames";
 
 export type Props = {
   tag?: HTMLTag;
@@ -18,8 +19,7 @@ const {
 ---
 
 <Tag
-  class={[
-    className,
+  class={cn(
     `font-bold text-balance max-w-prose`,
     inverted ? "text-headlines-inv" : "text-headlines",
     size === "xxl" && `text-3xl lg:text-4xl xl:text-5xl !leading-tight mb-4`,
@@ -27,9 +27,8 @@ const {
     size !== "xxl" &&
       size !== "lg" &&
       `leading-tight text-xl md:text-2xl lg:text-3xl mb-4`,
-  ]
-    .filter(Boolean)
-    .join(" ")}
+    className,
+  )}
   {...rest}
 >
   <slot />

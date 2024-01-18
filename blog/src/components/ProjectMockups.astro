@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import classNames from "../utils/classNames";
+import { cn } from "../utils/classNames";
 import Button from "./Button.astro";
 import MobileMockup from "./MobileMockup.astro";
 
@@ -48,7 +48,7 @@ const {
       )
     }
     <img
-      class={classNames(
+      class={cn(
         `w-full h-auto object-cover`,
         showImageInMockup ? `aspect-[1148/607]` : `aspect-[1148/698]`,
       )}
@@ -58,7 +58,7 @@ const {
   </div>
   <div class="grid grid-cols-12 col-span-12 items-end relative">
     <div
-      class={classNames(
+      class={cn(
         `col-start-1 col-span-7 @md:col-start-2 @md:col-span-6 pt-6`,
         `@2xl:col-start-2 @2xl:col-span-5`,
         buttonLink && buttonTitle ? `min-h-[5rem]` : `min-h-[2rem]`,

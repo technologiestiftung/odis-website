@@ -33,7 +33,7 @@ async function updateFrontMatter(
   console.log(`- ✅ ${filePath}`);
 }
 
-const folderFiles = await getFiles("./src/content/aktuelles");
+const folderFiles = await getFiles("./src/content/veranstaltungen");
 for (const filePath of folderFiles || []) {
   const dateInFileName = filePath.match(/\d{4}-\d{2}-\d{2}/);
   if (!dateInFileName) {

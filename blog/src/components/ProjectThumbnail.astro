@@ -8,12 +8,12 @@ import Button from "./Button.astro";
 export type Props = CollectionEntry<"projekte">;
 
 const { data, slug } = Astro.props;
-const { title, metaDescription } = data;
+const { title, description } = data;
 ---
 
 <a href={`/projekte/${slug}`} title={title}>
   <ProjectMockups {...data} />
   <Heading size="lg" set:html={title} />
-  <Paragraph set:html={metaDescription} />
+  <Paragraph set:html={description} />
   <Button tag="span" variant="secondary">Projekt ansehen</Button>
 </a>
