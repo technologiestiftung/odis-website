@@ -40,5 +40,6 @@ export const projekteSchema = (ctx: SchemaContext) =>
         .optional(),
     }),
   );
+export type ProjectType = z.infer<ReturnType<typeof projekteSchema>>;
 
 export const projectsOverviewSchema = pageSchema;

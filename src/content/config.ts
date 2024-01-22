@@ -1,9 +1,9 @@
-import { veranstaltungenOverviewSchema } from "./../schemas/veranstaltungen";
-import { projectsOverviewSchema } from "./../schemas/projekte";
-import { newsletterArchivSchema } from "./../schemas/newsletterArchiv";
-import { moduleOverviewSchema } from "./../schemas/module";
-import { kontaktSchema } from "./../schemas/kontakt";
-import { aktuellesOverviewSchema } from "./../schemas/aktuelles";
+import { veranstaltungenOverviewSchema } from "../schemas/veranstaltungen"
+import { projectsOverviewSchema } from "../schemas/projekte"
+import { newsletterArchivSchema } from "../schemas/newsletterArchiv"
+import { moduleOverviewSchema } from "../schemas/module"
+import { kontaktSchema } from "../schemas/kontakt"
+import { aktuellesOverviewSchema } from "../schemas/aktuelles"
 import { defineCollection } from "astro:content";
 import { projekteSchema } from "@/schemas/projekte";
 import { aktuellesSchema } from "@/schemas/aktuelles";
