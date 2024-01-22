@@ -9,4 +9,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://example.com",
   integrations: [tailwind(), mdx(), prefetch(), sitemap()],
+  redirects: {
+    "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
+  },
 });
