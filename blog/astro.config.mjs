@@ -11,5 +11,6 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), prefetch(), sitemap()],
   redirects: {
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
+    "/projekte/xml-validator/tool": "/xml-validator-tool",
   },
 });
