@@ -1,0 +1,23 @@
+---
+import Heading from "@/components/Heading.astro";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+---
+
+<DefaultLayout
+  metaTitle="Vielen Dank für Ihre Kontaktanfrage"
+  metaDescription="Erfolgreicher "
+>
+  <div class="grid-container">
+    <div
+      class="flex flex-col justify-center min-h-[calc(100vh-237px-95px)] py-8"
+    >
+      <Heading tag="h1" size="xxl">
+        Vielen Dank für Ihre Kontaktanfrage!
+      </Heading>
+      <p>
+        Ihre Anfrage ist bei uns eingegangen. Wir melden uns baldmöglich über
+        die von Ihnen angegebenen Kontaktdaten.
+      </p>
+    </div>
+  </div>
+</DefaultLayout>
