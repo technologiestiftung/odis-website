@@ -73,11 +73,14 @@
     --shadow-secondary-inv: var(--blue-dark);
 
     --containerWidth: 100vw;
-    --gridGap: 1rem;
+    --gridGap: 1.5rem;
     --marginSize: minmax(1rem, (100vw - var(--containerWidth)) / 2);
     --columnSize: minmax(
       0,
       (var(--containerWidth) - (13 * var(--gridGap))) / 12
+    );
+    --contentOffset: calc(
+      (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
     );
   }
 
@@ -86,6 +89,9 @@
       --containerWidth: 640px;
       --marginSize: calc((100vw - var(--containerWidth)) / 2);
       --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+      --contentOffset: calc(
+        (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+      );
     }
   }
 
@@ -94,6 +100,9 @@
       --containerWidth: 768px;
       --marginSize: calc((100vw - var(--containerWidth)) / 2);
       --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+      --contentOffset: calc(
+        (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+      );
     }
   }
 
@@ -102,6 +111,9 @@
       --containerWidth: 1024px;
       --marginSize: calc((100vw - var(--containerWidth)) / 2);
       --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+      --contentOffset: calc(
+        (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+      );
     }
   }
 
@@ -144,114 +156,6 @@
     @apply font-sans text-text bg-bg;
     scroll-behavior: smooth;
   }
-
-  .prose :where(p):not(:where([class~="not-prose"] *)) {
-    @apply leading-relaxed max-w-prose mb-4;
-  }
-  .prose p.lead {
-    @apply text-xl mb-6;
-  }
-
-  .prose h1,
-  .prose h2,
-  .prose h3,
-  .prose h4,
-  .prose h5,
-  .prose h6 {
-    @apply text-headlines font-bold text-balance max-w-prose;
-  }
-  .prose-invert h1,
-  .prose-invert h2,
-  .prose-invert h3,
-  .prose-invert h4,
-  .prose-invert h5,
-  .prose-invert h6 {
-    @apply text-headlines-inv;
-  }
-  .prose a > h1,
-  .prose a > h2,
-  .prose a > h3,
-  .prose a > h4,
-  .prose a > h5,
-  .prose a > h6,
-  .prose-invert a > h1,
-  .prose-invert a > h2,
-  .prose-invert a > h3,
-  .prose-invert a > h4,
-  .prose-invert a > h5,
-  .prose-invert a > h6 {
-    color: inherit;
-  }
-
-  .prose h1 {
-    @apply leading-tight text-5xl mb-4;
-  }
-
-  .prose h2 {
-    @apply leading-tight text-3xl mb-4;
-  }
-
-  .prose h3 {
-    @apply text-xl mb-2 mt-0 pt-6;
-  }
-
-  .prose h4,
-  .prose h5,
-  .prose h6 {
-    @apply text-lg mb-1 mt-0 pt-4;
-  }
-
-  .prose h5,
-  .prose h6 {
-    @apply uppercase tracking-widest leading-5;
-  }
-
-  .prose h6 {
-    @apply font-normal;
-  }
-
-  .prose a > h1,
-  .prose-invert a > h1 {
-    @apply mt-0 pt-8;
-  }
-
-  .prose a > h2,
-  .prose-invert a > h2 {
-    @apply mt-0 pt-6;
-  }
-
-  .prose a > h3,
-  .prose-invert a > h3 {
-    @apply mt-0 pt-5;
-  }
-
-  .prose a > h4,
-  .prose a > h5,
-  .prose a > h6,
-  .prose-invert a > h4,
-  .prose-invert a > h5,
-  .prose-invert a > h6 {
-    @apply mt-0 pt-4;
-  }
-
-  .prose a:first-of-type > h1,
-  .prose a:first-of-type > h2,
-  .prose a:first-of-type > h3,
-  .prose a:first-of-type > h4,
-  .prose a:first-of-type > h5,
-  .prose a:first-of-type > h6,
-  .prose-invert a:first-of-type > h1,
-  .prose-invert a:first-of-type > h2,
-  .prose-invert a:first-of-type > h3,
-  .prose-invert a:first-of-type > h4,
-  .prose-invert a:first-of-type > h5,
-  .prose-invert a:first-of-type > h6 {
-    @apply mt-0 pt-0;
-  }
-
-  .prose center {
-    @apply text-left;
-  }
 }
 
 @layer components {
@@ -279,6 +183,114 @@
   .grid-container > * {
     @apply col-start-1 col-span-12 @lg:col-start-2 @lg:col-span-10;
   }
+}
+
+.prose :where(p):not(:where([class~="not-prose"] *)) {
+  @apply leading-relaxed max-w-prose mb-4;
+}
+.prose :where(p.lead):not(:where([class~="not-prose"] *)) {
+  @apply text-xl mb-6;
+}
+
+.prose :where(h1):not(:where([class~="not-prose"] *)),
+.prose :where(h2):not(:where([class~="not-prose"] *)),
+.prose :where(h3):not(:where([class~="not-prose"] *)),
+.prose :where(h4):not(:where([class~="not-prose"] *)),
+.prose :where(h5):not(:where([class~="not-prose"] *)),
+.prose :where(h6):not(:where([class~="not-prose"] *)) {
+  @apply text-headlines font-bold text-balance max-w-prose;
+}
+.prose-invert :where(h1),
+.prose-invert :where(h2),
+.prose-invert :where(h3),
+.prose-invert :where(h4),
+.prose-invert :where(h5),
+.prose-invert :where(h6) {
+  @apply text-headlines-inv;
+}
+.prose :where(a > h1):not(:where([class~="not-prose"] *)),
+.prose :where(a > h2):not(:where([class~="not-prose"] *)),
+.prose :where(a > h3):not(:where([class~="not-prose"] *)),
+.prose :where(a > h4):not(:where([class~="not-prose"] *)),
+.prose :where(a > h5):not(:where([class~="not-prose"] *)),
+.prose :where(a > h6):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h1):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h2):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h3):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h4):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h5):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h6):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.prose :where(h1):not(:where([class~="not-prose"] *)) {
+  @apply leading-tight text-5xl mb-4;
+}
+
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
+  @apply leading-tight text-3xl mb-4;
+}
+
+.prose :where(h3):not(:where([class~="not-prose"] *)) {
+  @apply text-xl mb-2 mt-0 pt-6;
+}
+
+.prose :where(h4):not(:where([class~="not-prose"] *)),
+.prose :where(h5):not(:where([class~="not-prose"] *)),
+.prose :where(h6):not(:where([class~="not-prose"] *)) {
+  @apply text-lg mb-1 mt-0 pt-4;
+}
+
+.prose :where(h5):not(:where([class~="not-prose"] *)),
+.prose :where(h6):not(:where([class~="not-prose"] *)) {
+  @apply uppercase tracking-widest leading-5;
+}
+
+.prose :where(h6):not(:where([class~="not-prose"] *)) {
+  @apply font-normal;
+}
+
+.prose :where(a > h1):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h1):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 pt-8;
+}
+
+.prose :where(a > h2):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h2):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 pt-6;
+}
+
+.prose :where(a > h3):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h3):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 pt-5;
+}
+
+.prose :where(a > h4):not(:where([class~="not-prose"] *)),
+.prose :where(a > h5):not(:where([class~="not-prose"] *)),
+.prose :where(a > h6):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h4):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h5):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h6):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 pt-4;
+}
+
+.prose :where(a:first-of-type > h1):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h2):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h3):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h4):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h5):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h6):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h1):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h2):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h3):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h4):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h5):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h6):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 pt-0;
+}
+
+.prose :where(center):not(:where([class~="not-prose"] *)) {
+  @apply text-left;
 }
 
 .swiper-button-next,
