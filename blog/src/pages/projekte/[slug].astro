@@ -5,6 +5,7 @@ import Paragraph from "../../components/Paragraph.astro";
 import Heading from "../../components/Heading.astro";
 import TextLink from "../../components/TextLink.astro";
 import ProjectHeader from "../../components/ProjectHeader.astro";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
   const posts = await getCollection("projekte");
@@ -114,25 +115,35 @@ const { Content } = await post.render();
                 </Heading>
                 <dd class="mb-8">
                   <ul class="flex flex-col gap-4">
-                    {partners.map((partner) => (
-                      <li>
-                        <Paragraph>{partner.name}</Paragraph>
-                        {partner.logoPath && (
-                          <a
-                            href={partner.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={`Partner Webseite: ${partner.name}`}
-                          >
-                            <img
-                              src={partner.logoPath}
-                              alt={`Logo von ${partner.name}`}
-                              class="max-w-[min(220px,75%)]"
-                            />
-                          </a>
-                        )}
-                      </li>
-                    ))}
+                    {partners.map((partner) => {
+                      const { logoPath } = partner;
+                      const localLogo = logoPath;
+                      const externalLogo =
+                        typeof logoPath === "string" && logoPath;
+                      const logo = (externalLogo || localLogo) as ImageMetadata;
+                      const ImageTag = (
+                        externalLogo ? "img" : Image
+                      ) as typeof Image;
+                      return (
+                        <li>
+                          <Paragraph>{partner.name}</Paragraph>
+                          {logo && (
+                            <a
+                              href={partner.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title={`Partner Webseite: ${partner.name}`}
+                            >
+                              <ImageTag
+                                src={logo}
+                                alt={`Logo von ${partner.name}`}
+                                class="max-w-[min(220px,75%)]"
+                              />
+                            </a>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </dd>
               </>

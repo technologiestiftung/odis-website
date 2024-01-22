@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import { getImageFromFiles, type AstroImageType } from "../../utils/imageUtil";
+
 export type Props = {
   authorName?: string;
   authorRole?: string;
@@ -7,6 +10,32 @@ export type Props = {
 };
 
 const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
+
+// Optimizing images for quick loading
+const images = await Astro.glob<AstroImageType>(
+  "../../**/images/**/*.{jpg,jpeg,png,gif,svg}",
+);
+
+let quoteLogoOptimized;
+if (authorLogo) {
+  quoteLogoOptimized = getImageFromFiles({ images, identifier: authorLogo });
+  if (!quoteLogoOptimized)
+    throw new Error(
+      `The quote logo defined in "${authorLogo}" could not be found in the assets folder: ${authorLogo}`,
+    );
+}
+
+let quoteAuthorOptimized;
+if (authorAvatar) {
+  quoteAuthorOptimized = getImageFromFiles({
+    images,
+    identifier: authorAvatar,
+  });
+  if (!quoteAuthorOptimized)
+    throw new Error(
+      `The quote logo defined in "${authorAvatar}" could not be found in the assets folder: ${authorAvatar}`,
+    );
+}
 ---
 
 <div class="grid grid-cols-12 not-prose py-16 gap-8">
@@ -23,9 +52,9 @@ const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
     {
       authorName && (
         <footer class="mt-6 flex flex-col gap-3 items-center">
-          {authorAvatar && (
-            <img
-              src={authorAvatar}
+          {authorAvatar && quoteAuthorOptimized && (
+            <Image
+              src={quoteAuthorOptimized}
               alt={`Avatar von ${authorName}`}
               class="w-12 h-12 object-fill rounded-full"
             />
@@ -35,9 +64,9 @@ const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
             {authorRole && (
               <span class="block text-sm opacity-75">{authorRole.trim()}</span>
             )}
-            {authorLogo && (
-              <img
-                src={authorLogo}
+            {authorLogo && quoteLogoOptimized && (
+              <Image
+                src={quoteLogoOptimized}
                 alt={`Logo von ${authorName}`}
                 class="max-w-[12rem] mt-4"
               />

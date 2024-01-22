@@ -1,21 +1,21 @@
 ---
-import type { HTMLTag } from "astro/types";
+import type { HTMLAttributes, HTMLTag } from "astro/types";
 import { cn } from "../utils/classNames";
 
-export type Props = {
-  tag?: HTMLTag;
-  class?: string;
+export type Props<T extends HTMLTag> = HTMLAttributes<T> & {
+  tag?: T;
   inverted?: boolean;
   size?: "xxl" | "xl" | "lg";
 };
 
 const {
-  tag: Tag = "h2",
+  tag = "h2",
   class: className,
   inverted = false,
   size = "xl",
   ...rest
 } = Astro.props;
+const Tag = tag;
 ---
 
 <Tag

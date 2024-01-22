@@ -14,17 +14,9 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"aktuelles">;
 
 const post = Astro.props;
-const {
-  date,
-  title,
-  author,
-  readingTime,
-  description,
-  heroImagePath,
-  heroImageAltText,
-} = post.data;
+const { date, title, author, readingTime, description, headerImage } =
+  post.data;
 const { Content } = await post.render();
-
 ---
 
 <DefaultLayout
@@ -36,10 +28,7 @@ const { Content } = await post.render();
     title={title}
     description={description}
     basePath="aktuelles"
-    image={{
-      src: heroImagePath,
-      alt: heroImageAltText,
-    }}
+    image={headerImage}
     date={date}
   >
     {

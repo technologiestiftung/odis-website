@@ -2,16 +2,19 @@
 import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
 import TextLink from "./TextLink.astro";
+import odisContactIcon from "../assets/images/illustrations/odis_icon_contact.svg";
+import { Image } from "astro:assets";
 ---
 
 <div
   class="sm:col-start-1 sm:col-span-2 lg:col-start-1 lg:col-span-1 hidden sm:flex items-start justify-end"
 >
-  <img
-    src="/images/illustrations/odis_icon_contact.svg"
+  <Image
+    src={odisContactIcon}
     aria-hidden="true"
     loading="lazy"
     class="grow max-w-[72px]"
+    alt="Illustration von Sprechblasen mit Fragezeichen und Ausrufezeichen"
   />
 </div>
 

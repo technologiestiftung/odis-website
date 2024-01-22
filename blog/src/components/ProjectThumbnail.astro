@@ -12,7 +12,7 @@ const { title, description } = data;
 ---
 
 <a href={`/projekte/${slug}`} title={title}>
-  <ProjectMockups {...data} />
+  <ProjectMockups {...data} slug={slug} />
   <Heading size="lg" set:html={title} />
   <Paragraph set:html={description} />
   <Button tag="span" variant="secondary">Projekt ansehen</Button>

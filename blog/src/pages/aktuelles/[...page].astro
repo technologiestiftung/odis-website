@@ -1,13 +1,11 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import NewsCard from "../../components/NewsCard.astro";
 import Pagination from "../../components/Pagination.astro";
 import type { Page, GetStaticPaths } from "astro";
 import ProjectThumbnail from "../../components/ProjectThumbnail.astro";
 import NewsletterLane from "../../components/NewsletterLane.astro";
-import { frontmatter } from '../../content/content/aktuellesOverview.mdx';
-import { aktuellesOverviewSchema } from "../../schemas/aktuelles";
 import PageHeader from "../../components/PageHeader.astro";
 
 type Project = CollectionEntry<"projekte">;
@@ -37,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 
 const { page } = Astro.props;
 
-const data = aktuellesOverviewSchema.parse(frontmatter);
+const { data } = await getEntry("aktuellesOverview", "aktuellesoverview");
 
 const firstPath = "aktuelles";
 ---
@@ -85,8 +83,8 @@ const firstPath = "aktuelles";
                 readingTime={
                   aktuelles.readingTime ? `${aktuelles.readingTime}` : undefined
                 }
-                imagePath={aktuelles.heroImagePath}
-                imageAlt={aktuelles.heroImageAltText}
+                image={aktuelles.headerImage?.src}
+                imageAlt={aktuelles.headerImage?.alt}
                 theme={theme}
               />
             );

@@ -100,10 +100,14 @@ function createTableOfContents(contentClass, targetId) {
     link.appendChild(text);
     link.classList.add(...linkClasses);
     listItem.appendChild(link);
-    lists[lists.length - 1].appendChild(listItem);
+    lists.at(-1)?.appendChild(listItem);
   });
 
   const target = document.getElementById(targetId);
+  if (headings.length === 0) {
+    target.innerHTML = "";
+  }
+
   target.appendChild(toc);
 }
 

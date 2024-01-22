@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import { cn } from "../utils/classNames";
 import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
 import ArrowLeft from "./icons/ArrowLeft.astro";
@@ -8,13 +10,23 @@ export type Props = {
   description: string;
   date: Date;
   basePath: string;
-  image?: undefined | {
-    src: string;
-    alt: string;
-  };
-}
+  class?: undefined | string;
+  image?:
+    | undefined
+    | {
+        src: ImageMetadata;
+        alt: string;
+      };
+};
 
-const { basePath, title, description, date, image } = Astro.props;
+const {
+  basePath,
+  title,
+  description,
+  date,
+  image,
+  class: className,
+} = Astro.props;
 
 const formattedIntlTime = new Intl.DateTimeFormat("de-DE", {
   year: "numeric",
@@ -22,7 +34,8 @@ const formattedIntlTime = new Intl.DateTimeFormat("de-DE", {
   day: "numeric",
 }).format(new Date(date));
 ---
-<div class="w-screen overflow-x-hidden pb-[8%]">
+
+<div class={cn(`w-screen overflow-x-hidden`, image && `pb-[8vmin]`, className)}>
   <section class="bg-bg-alt" aria-label="Einführung">
     <div class="grid-container">
       <div class="lg:col-start-2 lg:col-span-5 py-10">
@@ -35,35 +48,45 @@ const formattedIntlTime = new Intl.DateTimeFormat("de-DE", {
             Zurück
           </a>
           <span aria-hidden="true" class="scale-150 opacity-50">·</span>
-          <time
-            datetime={date.toISOString().split("T")[0]}
-            class="opacity-70"
-          >
+          <time datetime={date.toISOString().split("T")[0]} class="opacity-70">
             {formattedIntlTime}
+            <slot name="naturalLanguageTime" />
           </time>
+          <slot name="prefix" />
         </Paragraph>
         <Heading tag="h1" set:html={title} size="xxl" />
-        <slot />
+        <slot name="suffix" />
         <Paragraph size="lg" set:html={description} />
+        <slot name="buttons" />
       </div>
       {
-        image?.src && image?.alt && (
+        image && (
           <div
-            class="aspect-video lg:aspect-auto lg:h-[108%] row-start-1 row-end-2 col-span-12 lg:col-start-8 lg:col-span-4 relative"
+            class={cn(
+              `aspect-video lg:aspect-auto`,
+              `row-start-1 row-end-2 col-span-12`,
+              `lg:col-start-8 lg:col-span-4 relative`,
+              image ? `lg:h-[calc(100%+8vmin)]` : `lg:h-full`,
+            )}
             role="figure"
             aria-label={image.alt}
           >
             <div
               class="
-            absolute top-0 bg-cover bg-center
-            w-[110vw] h-full
-            -left-6
-            sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
-            lg:left-0
-            lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]
-          "
-              style={{ backgroundImage: `url(${image.src})` }}
-            />
+                absolute top-0 bg-bg-alt
+                w-[110vw] h-full
+                -left-6
+                sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
+                lg:left-0
+                lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]
+              "
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                class="w-full h-full object-cover"
+              />
+            </div>
             <div
               class="
             absolute top-0 bg-cover bg-center
@@ -82,4 +105,4 @@ const formattedIntlTime = new Intl.DateTimeFormat("de-DE", {
       }
     </div>
   </section>
-  </div>
+</div>

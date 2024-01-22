@@ -25,6 +25,8 @@
   "devDependencies": {
     "@types/d3": "4.13.0",
     "gray-matter": "4.0.3",
+    "prettier-plugin-astro": "0.12.3",
+    "sharp": "0.33.2",
     "tailwindcss-touch": "1.0.1",
     "yaml": "2.3.4"
   }

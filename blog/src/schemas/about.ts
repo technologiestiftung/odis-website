@@ -1,37 +1,40 @@
-import { pageSchema } from './common';
-import { z } from "astro:content";
+import { pageSchema } from "./common";
+import { z, type SchemaContext } from "astro:content";
 
-export const aboutSchema = pageSchema.merge(z.object({
-  mission: z.object({
-    title: z.string(),
-    description: z.string(),
-    imagePath: z.string(),
-    imageAlt: z.string(),
-    expertiseTitle: z.string(),
-    expertiseFields: z.array(
-      z.object({
-        iconPath: z.string(),
-        iconAlt: z.string(),
-        text: z.string(),
-      }),
-    ),
-  }),
-  team: z.object({
-    title: z.string(),
-    members: z.array(
-      z.object({
-        name: z.string(),
-        imagePath: z.string(),
+export const aboutSchema = (ctx: SchemaContext) =>
+  pageSchema(ctx).merge(
+    z.object({
+      mission: z.object({
+        title: z.string(),
+        description: z.string(),
+        imagePath: ctx.image(),
         imageAlt: z.string(),
-        role: z.string().max(50),
-        email: z.string().email().optional(),
-        phoneNumber: z
-          .string()
-          .regex(/^\+49 \(0\)30 \d{3} \d{2} \d{2} \d{2}$/)
-          .optional(),
+        expertiseTitle: z.string(),
+        expertiseFields: z.array(
+          z.object({
+            iconPath: ctx.image(),
+            iconAlt: z.string(),
+            text: z.string(),
+          }),
+        ),
       }),
-    ),
-    disclaimer: z.string(),
-  }),
-}))
-export type AboutPageType = z.infer<typeof aboutSchema>;
+      team: z.object({
+        title: z.string(),
+        members: z.array(
+          z.object({
+            name: z.string(),
+            imagePath: ctx.image(),
+            imageAlt: z.string(),
+            role: z.string().max(50),
+            email: z.string().email().optional(),
+            phoneNumber: z
+              .string()
+              .regex(/^\+49 \(0\)30 \d{3} \d{2} \d{2} \d{2}$/)
+              .optional(),
+          }),
+        ),
+        disclaimer: z.string(),
+      }),
+    }),
+  );
+export type AboutPageType = z.infer<ReturnType<typeof aboutSchema>>;

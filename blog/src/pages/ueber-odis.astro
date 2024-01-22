@@ -1,22 +1,28 @@
 ---
 import Layout from "../layouts/DefaultLayout.astro";
-import { Content, frontmatter } from "../content/content/about.mdx";
-import { aboutSchema } from "../schemas/about";
 import Heading from "../components/Heading.astro";
 import Paragraph from "../components/Paragraph.astro";
 import TextLink from "../components/TextLink.astro";
 import PageHeader from "../components/PageHeader.astro";
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
 
-const about = aboutSchema.parse(frontmatter);
+const entry = await getEntry("about", "about");
+const about = entry.data;
+const { Content } = await entry.render();
 ---
 
-<Layout metaTitle={about.title} metaDescription={about.metaDescription}>
+<Layout
+  metaTitle={about.metaTitle || about.title}
+  metaDescription={about.metaDescription || about.description}
+>
   <PageHeader
     title={about.title}
     description={about.description}
     image={about.headerImage && {
       ...about.headerImage,
-      class: "lg:max-w-none lg:max-h-[70vh] lg:w-[calc(140%+var(--marginSize)+3rem)]"
+      class:
+        "lg:max-w-none lg:max-h-[70vh] lg:w-[calc(140%+var(--marginSize)+3rem)]",
     }}
   />
 
@@ -44,16 +50,20 @@ const about = aboutSchema.parse(frontmatter);
         <div class="not-prose mt-6">
           <ul class="grid grid-cols-3 sm:grid-cols-6 gap-x-6 gap-y-4">
             {
-              about.mission.expertiseFields.map((workArea) => (
-                <li class="col-span-3 flex sm:flex-col gap-4 items-start">
-                  <img
-                    src={workArea.iconPath}
-                    alt={workArea.iconAlt}
-                    class="w-[72px]"
-                  />
-                  <Paragraph set:html={workArea.text} />
-                </li>
-              ))
+              about.mission.expertiseFields.map((workArea) => {
+                const image = workArea.iconPath;
+                if (!image) return null;
+                return (
+                  <li class="col-span-3 flex sm:flex-col gap-4 items-start">
+                    <Image
+                      src={image}
+                      alt={workArea.iconAlt}
+                      class="w-[72px]"
+                    />
+                    <Paragraph set:html={workArea.text} />
+                  </li>
+                );
+              })
             }
           </ul>
         </div>
@@ -63,16 +73,26 @@ const about = aboutSchema.parse(frontmatter);
         role="figure"
         aria-label={about.mission.imageAlt}
       >
-        <div
-          class="absolute top-0 bg-cover bg-top
-          w-[110vw] h-full
-          -left-6
-          sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
-          lg:left-0
-          lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]"
-          style={{ backgroundImage: `url(${about.mission.imagePath})` }}
-        >
-        </div>
+        {
+          about.mission.imagePath && (
+            <div
+              class="
+                absolute top-0 bg-cover bg-top
+                w-[110vw] h-full
+                -left-6
+                sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
+                lg:left-0
+                lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]
+              "
+            >
+              <Image
+                src={about.mission.imagePath}
+                alt={about.mission.imageAlt}
+                class="w-full h-full object-cover"
+              />
+            </div>
+          )
+        }
         <div
           class="absolute top-0 bg-cover bg-top
           w-[110vw] h-full
@@ -103,37 +123,42 @@ const about = aboutSchema.parse(frontmatter);
         class="lg:col-start-1 lg:col-span-8 grid grid-cols-4 lg:grid-cols-8 gap-x-6 gap-y-12"
       >
         {
-          about.team.members.map((member) => (
-            <li class="col-span-4 grid">
-              <address class="grid grid-cols-4 gap-6 items-center lg:items-start">
-                <img
-                  class="rounded-full w-40 col-span-1 lg:scale-110"
-                  src={member.imagePath}
-                  alt={`Portraitbild von ${member.name}`}
-                />
-                <div class="flex flex-col col-span-3">
-                  <strong>{member.name}</strong>
-                  <span class="mb-0.5">{member.role}</span>
-                  {member.email && (
-                    <TextLink
-                      href={`mailto:${member.email}`}
-                      class="no-underline"
-                    >
-                      {member.email}
-                    </TextLink>
+          about.team.members.map((member) => {
+            const memberImage = member.imagePath;
+            return (
+              <li class="col-span-4 grid">
+                <address class="grid grid-cols-4 gap-6 items-center lg:items-start">
+                  {memberImage && (
+                    <Image
+                      class="rounded-full w-40 col-span-1 lg:scale-110"
+                      src={memberImage}
+                      alt={`Portraitbild von ${member.name}`}
+                    />
                   )}
-                  {member.phoneNumber && (
-                    <TextLink
-                      href={`tel:${member.phoneNumber}`}
-                      class="no-underline"
-                    >
-                      {member.phoneNumber}
-                    </TextLink>
-                  )}
-                </div>
-              </address>
-            </li>
-          ))
+                  <div class="flex flex-col col-span-3">
+                    <strong>{member.name}</strong>
+                    <span class="mb-0.5">{member.role}</span>
+                    {member.email && (
+                      <TextLink
+                        href={`mailto:${member.email}`}
+                        class="no-underline"
+                      >
+                        {member.email}
+                      </TextLink>
+                    )}
+                    {member.phoneNumber && (
+                      <TextLink
+                        href={`tel:${member.phoneNumber}`}
+                        class="no-underline"
+                      >
+                        {member.phoneNumber}
+                      </TextLink>
+                    )}
+                  </div>
+                </address>
+              </li>
+            );
+          })
         }
       </ul>
     </div>

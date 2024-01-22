@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
+import Button from "../../components/Button.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("veranstaltungen");
@@ -20,6 +21,10 @@ const {
   description,
   headerImage,
   date,
+  time,
+  web,
+  mail,
+  adresse,
 } = post.data;
 const { Content } = await post.render();
 ---
@@ -27,6 +32,7 @@ const { Content } = await post.render();
 <DefaultLayout
   metaTitle={metaTitle || title}
   metaDescription={metaDescription || description}
+  externalLibs={["tableOfContents"]}
 >
   <PageHeaderWithPhoto
     basePath="veranstaltungen"
@@ -34,10 +40,32 @@ const { Content } = await post.render();
     description={description}
     image={headerImage}
     date={date}
-  />
-  <section class="py-16">
+  >
+    {time && <span slot="naturalLanguageTime">– {time}</span>}
+    {
+      (web || mail) && (
+        <Button slot="buttons" tag="a" href={web || `mailto:${mail}`}>
+          {web ? "Online anmelden" : "Per E-Mail anmelden"}
+        </Button>
+      )
+    }
+    {adresse && <span slot="suffix">{adresse}</span>}
+  </PageHeaderWithPhoto>
+
+  <section aria-label="Veranstaltungsbeschreibung">
     <div class="grid-container">
-      <div class="md:col-span-6 md:col-start-2 prose">
+      <div
+        class="pt-16 flex flex-col gap-6 order-first lg:order-last lg:col-start-9 lg:col-span-3 z-0"
+      >
+        <div class="sticky w-full top-6 lg:pb-48" id="toc-target">
+          <span id="toc-label" class="font-bold text-headlines"
+            >Auf dieser Seite</span
+          >
+        </div>
+      </div>
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10"
+      >
         <Content />
       </div>
     </div>

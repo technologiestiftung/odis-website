@@ -1,12 +1,14 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import BaseHead, {
+  type Props as BaseHeadProps,
+} from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 type Props = {
   metaTitle: string;
   metaDescription: string;
-  externalLibs?: string[];
+  externalLibs?: BaseHeadProps["externalLibs"];
 };
 
 const { metaTitle, metaDescription, externalLibs = [] } = Astro.props;

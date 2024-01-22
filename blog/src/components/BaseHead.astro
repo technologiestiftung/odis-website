@@ -3,30 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
 
-interface Props {
-  title: string;
-  description: string;
-  image?: string;
-  externalLibs?: string[];
-}
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
-const {
-  title,
-  description,
-  image = "/blog-placeholder-1.jpg",
-  externalLibs = [],
-} = Astro.props;
-
-type LibType = {
-  src: string;
-  type: "script" | "style";
-  async?: boolean;
-  defer?: boolean;
-};
-
-const libsMap: Record<string, LibType[]> = {
+const libsMap = {
   swiper: [
     {
       src: "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css",
@@ -46,6 +23,29 @@ const libsMap: Record<string, LibType[]> = {
       defer: true,
     },
   ],
+};
+type ExternalLibKey = keyof typeof libsMap;
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  externalLibs?: ExternalLibKey[];
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const {
+  title,
+  description,
+  image = "/images/social-media.jpg",
+  externalLibs = [],
+} = Astro.props;
+
+type LibType = {
+  src: string;
+  type: "script" | "style";
+  async?: boolean;
+  defer?: boolean;
 };
 ---
 

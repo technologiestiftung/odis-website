@@ -1,10 +1,12 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
 import { cn } from "../utils/classNames";
 import Button from "./Button.astro";
 import MobileMockup from "./MobileMockup.astro";
+import { Image } from "astro:assets";
 
 export type Props = CollectionEntry<"projekte">["data"] & {
+  slug: string;
   buttonTitle?: string | null | undefined;
   buttonLink?: string | null | undefined;
   class?: string | undefined;
@@ -47,14 +49,18 @@ const {
         </div>
       )
     }
-    <img
-      class={cn(
-        `w-full h-auto object-cover`,
-        showImageInMockup ? `aspect-[1148/607]` : `aspect-[1148/698]`,
-      )}
-      src={heroImage}
-      alt={`Screenshot für das Projekt: '${title}'`}
-    />
+    {
+      heroImage && (
+        <Image
+          class={cn(
+            `w-full h-auto object-cover`,
+            showImageInMockup ? `aspect-[1148/607]` : `aspect-[1148/698]`,
+          )}
+          src={heroImage}
+          alt={`Screenshot für das Projekt: '${title}'`}
+        />
+      )
+    }
   </div>
   <div class="grid grid-cols-12 col-span-12 items-end relative">
     <div
@@ -67,6 +73,7 @@ const {
       {
         buttonLink && buttonTitle && (
           <Button
+            tag="a"
             href={buttonLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -90,7 +97,7 @@ const {
           />
           <div class="absolute inset-0 top-auto">
             <div class="relative">
-              <img
+              <Image
                 src={mobileImage}
                 alt={`Mobile screenshot für das Projekt: '${title}'`}
                 class="w-[calc(100%-6cqw)] h-[calc(100%-6cqw)] rounded-[10cqw] absolute z-10 top-[3cqw] left-[3cqw] object-fill"

@@ -10,15 +10,9 @@ visible: false
 
 ## In 10 Schritten zum maschinenlesbaren Organigramm
 
-<br/>
-
 Das [Organigramm-Tool](https://organigramme.odis-berlin.de) hat zum Ziel, die Erstellung der Organigramme der Berliner Verwaltung zu vereinfachen und die Organigramme in ein einheitlicheres und maschinenlesbares Format zu bringen. Neben einer schicken grafischen Darstellung der Berliner Verwaltungsorganisation, welche sich unter anderem als PDF exportieren lässt, legt das Tool Organigramme als [JSON](https://berlinonline.github.io/open-data-handbuch/#formatwahl)-Dateien an. Dieses Dateiformat ermöglicht es, die eingegebenen Daten in einem einfachen Textformat zu speichern und auch wieder in das Tool einzuladen und zu bearbeiten. Durch das JSON-Format werden die Daten außerdem vielfältig als Open Data für ganz andere Anwendungen und Auswertungen nutzbar. Das Tool befindet sich derzeit in einer prototypischen Version.
 
-<br/>
-
-##### Getting started: Wir führen Sie in 10 einfachen Schritten durch das Tool
-
-<br/>
+### Getting started: Wir führen Sie in 10 einfachen Schritten durch das Tool
 
 **1) Tool öffnen und navigieren:** Das Tool funktioniert direkt im Browser, ein Download oder eine Anmeldung sind nicht nötig. Am besten funktioniert die Anwendung in Firefox und Chrome. Öffnen Sie folgende Internetseite in Ihrem Browser: [https://organigramme.odis-berlin.de](https://organigramme.odis-berlin.de). Wenn Sie das Tool zum ersten Mal aufrufen, dann sehen Sie ein von uns angelegtes Beispiel-Organigramm. Um sich an eine andere Stelle im Dokument zu bewegen, halten Sie die Maustaste gedrückt und ziehen Sie das Dokument. Unten rechts können Sie rein- und rauszoomen sowie die Ansicht auf das ganze Dokument aktivieren, alternativ können Sie dafür auch das Scrollrad der Maus benutzen. In der Leiste oben rechts gibt es Pfeile um Schritte _rückgängig_ zu machen bzw. zu _wiederholen_.
 

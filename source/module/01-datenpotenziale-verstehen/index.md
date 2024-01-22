@@ -85,5 +85,5 @@ In einer Senats- oder Bezirksverwaltung werden auf unterschiedliche Weise Daten 
   text: 'Die ODIS hat auf dieser Datengrundlage einen schön gestalteten Weihnachtsmarktfinder gebaut (in dem es sogar schneit!). Auch das Lab von Code for Leipzig hat die Karte übernommen und für die eigene Stadt angepasst.',
   authorName: 'Jörg Reichert (Code for Leipzig) et al.',
   authorRole: 'Out in the Open November 2022 (Blog)',
-  authorLogo: '/assets/images/logo-senweb.png'
+  authorLogo: '/assets/images/logos/logo-senweb.png'
 %}

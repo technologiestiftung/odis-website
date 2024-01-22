@@ -4,6 +4,7 @@ import Button from "./Button.astro";
 import TextLink from "./TextLink.astro";
 import NewsCardGradient from "./NewsCardGradient.astro";
 import { cn } from "../utils/classNames";
+import type { ImageMetadata } from "astro";
 
 export type Props = {
   title: string;
@@ -14,7 +15,7 @@ export type Props = {
   author?: undefined | string;
   readingTime?: undefined | string;
   theme: "normal" | "inverted";
-  imagePath?: undefined | string;
+  image?: undefined | ImageMetadata;
   imageAlt?: undefined | string;
   class?: undefined | string;
 };
@@ -23,16 +24,14 @@ const {
   postLink,
   postLinkText = "Zum Beitrag",
   theme = "normal",
-  imagePath,
+  image,
   imageAlt,
   class: className = "",
 } = Astro.props;
 
 const paddingClasses = `px-7 pt-7 pb-10`;
-const hasAccessibleImage = Boolean(imagePath && imageAlt);
 const isInverted = theme === "inverted";
-const contentAreaWrapperClasses =
-  !isInverted && imagePath ? paddingClasses : "";
+const contentAreaWrapperClasses = !isInverted && image ? paddingClasses : "";
 ---
 
 <article
@@ -41,7 +40,7 @@ const contentAreaWrapperClasses =
     `@container relative grid grid-items-start`,
     `grid-rows-[250px,minmax(auto,1fr)] border`,
     !isInverted && `bg-bg-alt text-text border-bg-alt`,
-    !isInverted && imagePath ? `p-0` : paddingClasses,
+    !isInverted && image ? `p-0` : paddingClasses,
     isInverted && `text-text-inv bg-bg-inv bg-top`,
     isInverted && `border-bg-inv bg-no-repeat bg-cover @md:bg-contain`,
     isInverted && paddingClasses,
@@ -50,10 +49,10 @@ const contentAreaWrapperClasses =
     .join(" ")}
 >
   {
-    !isInverted && hasAccessibleImage && (
+    !isInverted && image?.src && (
       <a
         href={postLink}
-        style={{ backgroundImage: `url(${imagePath})` }}
+        style={{ backgroundImage: `url("${image.src}")` }}
         class="
         h-full bg-center bg-cover relative outline-none
         hover:opacity-50 transition-opacity duration-300 ease-in-out
@@ -67,7 +66,7 @@ const contentAreaWrapperClasses =
     )
   }
   {
-    theme == "inverted" && hasAccessibleImage && (
+    theme == "inverted" && image?.src && (
       <a
         class="h-full group outline-none"
         href={postLink}
@@ -81,7 +80,7 @@ const contentAreaWrapperClasses =
           absolute top-0 left-0 w-full h-1/2 bg-top bg-cover
           group-hover:opacity-50 transition-opacity duration-300 ease-in-out
         "
-          style={{ backgroundImage: `url(${imagePath})` }}
+          style={{ backgroundImage: `url("${image.src}")` }}
           role="img"
           aria-label={imageAlt}
         />
@@ -100,7 +99,7 @@ const contentAreaWrapperClasses =
     <div class="flex flex-col justify-end items-start">
       {
         !isInverted && (
-          <Button href={postLink} variant="secondary">
+          <Button tag="a" href={postLink} variant="secondary">
             {postLinkText}
           </Button>
         )

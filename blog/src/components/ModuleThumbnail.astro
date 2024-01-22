@@ -4,6 +4,7 @@ import Paragraph from "./Paragraph.astro";
 import Button from "./Button.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { cn } from "../utils/classNames";
+import { Image } from "astro:assets";
 
 export type Props = CollectionEntry<"module"> & {
   position: "left" | "right";
@@ -46,14 +47,20 @@ const isLast = module.data.number === allModules.length;
             </span>
           </span>
         </div>
-        <img
-          src={module.data.icon}
-          alt={`Module icon illustration for module '${module.data.title}'`}
-          class={cn(
-            `col-span-8 sm:col-span-8 sm:col-start-2 z-10 relative`,
-            isRight ? `sm:order-1 lg:order-2 lg:col-span-3` : `lg:col-span-2`,
-          )}
-        />
+        {
+          module.data.icon && (
+            <Image
+              src={module.data.icon}
+              alt={`Module icon illustration for module '${module.data.title}'`}
+              class={cn(
+                `col-span-8 sm:col-span-8 sm:col-start-2 z-10 relative`,
+                isRight
+                  ? `sm:order-1 lg:order-2 lg:col-span-3`
+                  : `lg:col-span-2`,
+              )}
+            />
+          )
+        }
         <div
           class={cn(
             `col-span-11 sm:col-span-8 col-start-2 sm:col-start-2 lg:col-span-5 z-10 relative pl-4 sm:pl-0`,
@@ -90,13 +97,15 @@ const isLast = module.data.number === allModules.length;
                   !isFirst ? `rounded-tl-[64px]` : `sm:border-t-0`,
                 ],
               )}
-            />
+            >
+            </div>
             <div
               class={cn(
                 isRight &&
                   `sm:border-2 sm:border-line sm:border-dashed sm:border-l-0 sm:border-b-0 rounded-tr-[64px]`,
               )}
-            />
+            >
+            </div>
             {
               !isLast && (
                 <>
