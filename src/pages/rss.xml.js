@@ -14,7 +14,7 @@ export async function GET(context) {
   let about = await getEntry("about", "about");
   about = { ...about.data, link: "/about" }
   let kontakt = await getEntry("kontakt", "kontakt");
-  kontakt = { ...kontakt.data, link: "/kontakt" }
+  kontakt = { ...kontakt.data, link: "/contact" }
   let newsletterArchiv = await getEntry("newsletterArchiv", "newsletterarchiv");
   newsletterArchiv = { ...newsletterArchiv.data, link: "/aktuelles/archiv" }
   let moduleOverview = await getEntry("moduleOverview", "moduleoverview");

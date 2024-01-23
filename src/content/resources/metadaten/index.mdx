@@ -1,0 +1,45 @@
+---
+title: Metadaten-Leitfaden
+description: Leitfaden zur Erstellung von Metadaten für das Open-Data-Portal Berlin
+---
+
+import MetadataTable from '@/components/pageSpecific/MetadataTable.astro'
+
+## Was sind Metadaten?
+
+Daten im Open-Data-Portal zu veröffentlichen, ist ein wichtiger Schritt zur Umsetzung der Open-Data-Richtlinie. Wichtig zu wissen ist allerdings, dass ein vollständiger Datensatz nicht nur aus den Daten(-werten) allein besteht, sondern ebenfalls die Angaben der sogenannten Metadaten umfasst. Ohne Metadaten können die Daten eventuell nicht optimal gefunden und genutzt werden oder sind im schlimmsten Fall sogar unbrauchbar, da die Anwender:innen sie nicht in den richtigen Kontext setzen können. Doch was sind Metadaten eigentlich und warum sind sie so wichtig?
+
+## "Daten über Daten"
+
+**Metadaten be- und umschreiben die eigentlichen Daten, es sind „Daten über Daten“.** Sie sind nicht nur für Open Data relevant, sondern finden sich auch in vielen anderen Bereichen. Eine Musikdatei beispielsweise, enthält nicht nur die Musik an sich, sondern auch eingebettete Informationen, wie den Interpreten, das Musikgenre oder das Erscheinungsjahr des Musikstückes. Ohne diese Angaben wäre es nicht möglich die Musik in einer entsprechenden Bibliothek oder Anwendung zu suchen oder zu sortieren.
+Im Falle von Verwaltungsdaten sieht das ähnlich aus. Nur durch den Datensatz ergänzende Angaben, wie dem Namen der veröffentlichenden Stelle, Kategoriezugehörigkeit und das Veröffentlichungsdatum, können die Daten von den Nutzer:innen schnell gefunden und richtig eingeordnet werden.
+
+## Metadatenqualität
+
+So trivial es auch erst einmal klingen mag, in der Praxis zeigt sich, dass viele Datensätze keine akkuraten, anwenderfreundlichen Metadaten besitzen. Für eine Studie aus dem Jahr 2016 \[1\] wurden im Rahmen einer Qualitätsbewertung von Open Data deren Metadaten auf verschiedene Qualitätskriterien überprüft. Insgesamt wurden die Metadaten von über 1,1 Millionen Datensätzen auf 261 verschiedenen Open-Data-Portalen der ganzen Welt aus dem Bereich Verwaltung, aber auch aus dem privaten Sektor, analysiert. Laut den Ergebnissen konnten hierbei einige Defizite festgestellt werden. So verfügte zum Beispiel der überwiegende Anteil offener Datensätze über keine maschinenlesbare E-Mail oder URL-Adresse zu einem Ansprechpartner. Solch fehlende Informationen zur Herkunft von Daten mindern die Transparenz und nachhaltige Nutzbarkeit von Open Data ungemein.
+
+Ein weiteres bekanntes Problem sind nicht vorhandene oder ungenaue Angaben zur zeitlichen Auflösungen und zum Aktualisierungsrhythmus. Hier wird es Nutzer:innen erschwert, zu erkennen ob sie den aktuellsten Datensatz zur Verfügung stehen haben oder mit veralteten Daten handhaben. Ein anderes Beispiel sind Defizite bei der Auffindbarkeit von Daten. Diese können sich unter anderem dann ergeben, wenn wenige oder schlechte Tags in den Metadaten festgelegt sind. Die Tags fungieren als eine Art Suchbegriff. Der Datensatz kann über seinen Titel und die festgelegten Tags durch die Suchfunktion im Open-Data-Portal gefunden werden. Dies wird besonders dann wichtig, wenn potentielle Datennutzer:innen nicht nach einem speziellen Datensatz suchen, sondern die Datenverfügbarkeit zu einem übergeordneten Thema ausloten, oder wenn ein Datensatz sehr viele verschiedene Informationen enthält. Ein Datensatz der beispielsweise das gesamte Streckennetz und die Fahrpläne des ÖPNV enthält, sollte auch durch Tags wie _U-Bahn_, _Tram_ usw. auffindbar sein.
+
+## Metadatenstandards
+
+Um die Metadaten offener Verwaltungsdaten von ganz Deutschland möglichst einheitlich zur Verfügung zu stellen, wurde vom IT-Planungsrat ein Datenstandard für Metadaten entwickelt, der sogenannte **DCAT-AP.de** (die deutsche Umsetzung des EU-weiten Standards DCAT-AP). Durch die Einhaltung des dort festgelegten Datenschemas kann sichergestellt werden, dass Metadaten leicht analysiert und zwischen Portalen und Anwendungen ausgetauscht werden können. Der Standard legt sowohl die notwendigen Inhalte der Metadaten fest (z.B. Angabe der Lizenz, Angabe des Veröffentlichungsdatums), als auch ein kontrolliertes Vokabular, dass verwendet werden soll, um diese Angaben zu tätigen. Wenn Sie mehr über DCAT-AP.de erfahren möchten, empfehlen wir Ihnen unsere [Einführung](https://lab.technologiestiftung-berlin.de/projects/opendata-metadata-dcat-ap/de/) auf der Seite der Technologiestiftung Berlin.
+
+## Metadaten im Open-Data-Portal Berlin
+
+Bei der Veröffentlichung von Daten im Open-Data-Portal Berlin müssen die Metadaten über ein Eingabeformular eingetragen werden. Dieses orientiert sich an DCAT-AP.de und stellt sie auch für die weitere Nutzung durch das Metadaten-Portal für Deutschland [govdata.de](https://www.govdata.de) bereit. Alles worum Sie sich kümmern müssen, ist also alle geforderten Felder des Formulars möglichst akkurat auszufüllen. **Die untenstehende Tabelle zeigt alle möglichen Felder zur Eintragung von Metadaten über das Datenregister des Open-Data-Portal Berlins mit den jeweiligen Erläuterungen und Beispielen.**
+
+<ContentSection class="sm:px-6">
+  <MetadataTable />
+</ContentSection>
+
+Noch mehr Informationen zum Thema Metadaten im Berliner Open-Data-Portal finden Sie auch im [Open-Data-Handbuch](https://berlinonline.github.io/open-data-handbuch/#metadaten-des-datensatzes).
+
+## Download
+
+Sie können diese Tabelle als Excel- oder Word-Dokument herunterladen, um Metadaten für die Veröffentlichung vorzubereiten, weiterzureichen oder als Vorlage für eine spätere Veröffentlichung abzuspeichern.
+
+[Download der Metadaten-Vorlage als .xlsx](/assets/file-download/Vorlage_Metadaten.xlsx)
+
+[Download der Metadaten-Vorlage als .docx](/assets/file-download/Vorlage_Metadaten.docx)
+
+\[1\] Neumaier, S.; Umbrich, J.; Pollers, A.: Automated Quality Assessment of Metadata across Open Data Portals, ACM Journal of Data and Information quality V, N., Article A, January 2016.

@@ -1,16 +1,14 @@
 ---
-import type { HTMLTag } from "astro/types";
+import type { HTMLAttributes, HTMLTag } from "astro/types";
 import { cn } from "../utils/classNames";
 
-export type Props = {
-  tag?: HTMLTag;
+export type Props<T extends HTMLTag> = HTMLAttributes<T> & {
+  tag?: T;
   inverted?: boolean;
-  class?: string;
-  href?: string;
-  rel?: string;
 };
 
 const { inverted = false, tag = "a", class: className, ...props } = Astro.props;
+const Tag = tag;
 
 const finalTailwindClasses = cn(
   inverted &&
@@ -40,18 +38,6 @@ const finalTailwindClasses = cn(
 )
 ---
 
-{
-  tag === "a" && (
-    <a {...props} class={finalTailwindClasses}>
-      <slot />
-    </a>
-  )
-}
-
-{
-  tag === "button" && (
-    <button {...props} class={finalTailwindClasses}>
-      <slot />
-    </button>
-  )
-}
+<Tag {...props} class={finalTailwindClasses}>
+  <slot />
+</Tag>

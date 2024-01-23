@@ -1,15 +1,12 @@
-import { veranstaltungenOverviewSchema } from "../schemas/veranstaltungen"
-import { projectsOverviewSchema } from "../schemas/projekte"
-import { newsletterArchivSchema } from "../schemas/newsletterArchiv"
-import { moduleOverviewSchema } from "../schemas/module"
-import { kontaktSchema } from "../schemas/kontakt"
-import { aktuellesOverviewSchema } from "../schemas/aktuelles"
+import { newsletterArchivSchema } from "@/schemas/newsletterArchiv"
+import { kontaktSchema } from "@/schemas/kontakt"
 import { defineCollection } from "astro:content";
-import { projekteSchema } from "@/schemas/projekte";
-import { aktuellesSchema } from "@/schemas/aktuelles";
-import { moduleSchema } from "@/schemas/module";
-import { veranstaltungenSchema } from "@/schemas/veranstaltungen";
+import { projekteSchema, projectsOverviewSchema } from "@/schemas/projekte";
+import { aktuellesSchema, aktuellesOverviewSchema } from "@/schemas/aktuelles";
+import { moduleSchema, moduleOverviewSchema } from "@/schemas/module";
+import { veranstaltungenSchema, veranstaltungenOverviewSchema } from "@/schemas/veranstaltungen";
 import { aboutSchema } from "@/schemas/about";
+import { resourcesSchema, resourcesOverviewSchema } from "@/schemas/resources"
 
 const aktuelles = defineCollection({
   type: "content",
@@ -66,6 +63,16 @@ const veranstaltungenOverview = defineCollection({
   schema: veranstaltungenOverviewSchema,
 });
 
+const resources = defineCollection({
+  type: "content",
+  schema: resourcesSchema,
+});
+
+const resourcesOverview = defineCollection({
+  type: "content",
+  schema: resourcesOverviewSchema,
+});
+
 export const collections = {
   veranstaltungen,
   module,
@@ -78,4 +85,6 @@ export const collections = {
   newsletterArchiv,
   projectsOverview,
   veranstaltungenOverview,
+  resources,
+  resourcesOverview,
 };

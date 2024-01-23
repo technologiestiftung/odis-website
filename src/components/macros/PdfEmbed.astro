@@ -1,0 +1,24 @@
+---
+import TextLink from '../TextLink.astro';
+
+
+export type Props = {
+  filePath: string;
+  downloadLinkText?: undefined | string;
+}
+
+const { filePath, downloadLinkText } = Astro.props;
+---
+
+<object data={filePath} type="application/pdf" class="pdf">
+  <embed src={filePath}>
+    <p>
+      Dieser Browser unterstützt keine PDF-Ansichten.<br />
+      Bitte laden sich das PDF runter, um es anzusehen.
+      <TextLink tag='a' href={filePath} download>
+        {downloadLinkText || 'PDF herunterladen'}
+      </TextLink>
+    </p>
+  </embed>
+</object>
+

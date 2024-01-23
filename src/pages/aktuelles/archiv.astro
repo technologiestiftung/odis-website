@@ -70,7 +70,7 @@ const monthMap = {
                       .sort((a, b) => b.month - a.month)
                       .map((item) => (
                         <li>
-                          <TextLink href={item.url}>
+                          <TextLink tag="a" href={item.url}>
                             {monthMap[item.month as keyof typeof monthMap]}
                           </TextLink>
                         </li>

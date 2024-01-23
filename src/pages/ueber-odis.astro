@@ -141,6 +141,7 @@ const { Content } = await entry.render();
                     <span class="mb-0.5">{member.role}</span>
                     {member.email && (
                       <TextLink
+                        tag="a"
                         href={`mailto:${member.email}`}
                         class="no-underline"
                       >
@@ -149,6 +150,7 @@ const { Content } = await entry.render();
                     )}
                     {member.phoneNumber && (
                       <TextLink
+                        tag="a"
                         href={`tel:${member.phoneNumber}`}
                         class="no-underline"
                       >
