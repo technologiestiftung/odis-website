@@ -4,6 +4,7 @@ import ModuleThumbnail from "../../components/ModuleThumbnail.astro";
 import ContactLane from "../../components/ContactLane.astro";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import PageHeader from "../../components/PageHeader.astro";
+import { components } from "@/components/macros/index.astro";
 
 const entry = await getEntry("moduleOverview", "moduleoverview");
 const {
@@ -32,7 +33,7 @@ const module = (await getCollection("module")).sort(
   <section class="bg-bg text-text py-16">
     <div class="grid-container">
       <div class="lg:col-start-2 lg:col-span-5 prose">
-        <Content />
+        <Content components={components} />
       </div>
     </div>
   </section>

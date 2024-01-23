@@ -27,9 +27,14 @@ zusammen benutzt werden. Die Farben der Nodes werden durch die zugehörige
 Kategorie zu einem Cluster bestimmt. Diese Cluster wurden automatisiert durch
 eine Netzwerkanalyse identifiziert.
 
-import Graph from "@/components/pageSpecific/Graph.astro";
-
-<Graph />
+<ContentSection fullWidth={false}>
+  <iframe
+    src="/tag_analyse/index.html"
+    width="100%"
+    height="880px"
+    title="My file"
+  ></iframe>
+</ContentSection>
 
 ## Auswertung Aus der Analyse lassen sich einige
 
@@ -74,9 +79,10 @@ Natürlich kann der Graph aber nicht alle Zusammenhänge darstellen, da nur die
 häufigsten Tags bzw. Verbindungen mit eingeflossen sind. Falls Sie mehr zum
 Thema Tags wissen wollen (zum Beispiel warum Tags wichtig sind und wie man
 effektive Tags erfasst), schauen Sie gerne [unseren
-Leitfaden](https://odis-berlin.de/ressourcen/tag_analyse.html) zu Tags an. ##
-Datenquelle und technische Umsetzung Mehr darüber, wie die Daten verarbeitet und
-analysiert wurden erfahren Sie in einem
+Leitfaden](https://odis-berlin.de/ressourcen/tag_analyse.html) zu Tags an.
+
+## Datenquelle und technische Umsetzung
+Mehr darüber, wie die Daten verarbeitet und analysiert wurden erfahren Sie in einem
 [Blogpost](https://lab.technologiestiftung-berlin.de/projects/tag-analysis/de/)
 des Ideation & Prototyping Lab der Technologiestiftung. Dort finden Sie auch den
 Link zum offenem Quellcode der Netzwerkanalyse.

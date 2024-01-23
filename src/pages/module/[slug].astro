@@ -10,6 +10,7 @@ import Button from "../../components/Button.astro";
 import ContactLane from "../../components/ContactLane.astro";
 import ArrowLeft from "../../components/icons/ArrowLeft.astro";
 import { Image } from "astro:assets";
+import { components } from "@/components/macros/index.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("module");
@@ -94,7 +95,7 @@ const { Content } = await post.render();
       <div
         class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable py-16 relative z-10"
       >
-        <Content />
+        <Content components={components} />
       </div>
     </div>
   </section>

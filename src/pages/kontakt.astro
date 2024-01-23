@@ -4,6 +4,7 @@ import PageHeader from "../components/PageHeader.astro";
 import TextLink from "../components/TextLink.astro";
 import ContactForm from "../components/ContactForm.astro";
 import { getEntry } from "astro:content";
+import { components } from "@/components/macros/index.astro";
 
 const entry = await getEntry("kontakt", "kontakt");
 const { data: kontakt } = entry;
@@ -26,7 +27,7 @@ const { Content } = await entry.render();
   <section class="bg-bg text-text py-16">
     <div class="grid-container">
       <div class="prose lg:col-start-2 lg:col-span-6">
-        <Content />
+        <Content components={components} />
         {
           kontakt.links && kontakt.links?.length > 0 && (
             <ul class="mt-2 not-prose p-0">
