@@ -1,0 +1,32 @@
+---
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+import TextLink from "./TextLink.astro";
+import odisContactIcon from "../assets/images/illustrations/odis_icon_contact.svg";
+import { Image } from "astro:assets";
+---
+
+<div
+  class="sm:col-start-1 sm:col-span-2 lg:col-start-1 lg:col-span-1 hidden sm:flex items-start justify-end"
+>
+  <Image
+    src={odisContactIcon}
+    aria-hidden="true"
+    loading="lazy"
+    class="grow max-w-[72px]"
+    alt="Illustration von Sprechblasen mit Fragezeichen und Ausrufezeichen"
+  />
+</div>
+
+<div
+  class="col-start-1 sm:col-start-3 lg:col-start-2 col-span-12 sm:col-span-9 lg:col-span-10 flex flex-col gap-2 max-w-[34.5rem]"
+>
+  <Heading tag="h3" size="lg">Du brauchst noch Hilfe?</Heading>
+  <Paragraph>
+    Du hast eine Frage, benötigst Unterstützung bei deinem Open-Data-Vorhaben
+    oder hast eine Projektidee? Dann kontaktiere uns.
+  </Paragraph>
+  <div class="flex justify-start mt-2">
+    <TextLink href="/kontakt#contact-form">Zum Kontaktformular</TextLink>
+  </div>
+</div>

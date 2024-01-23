@@ -1,0 +1,179 @@
+---
+import Layout from "../layouts/DefaultLayout.astro";
+import Heading from "../components/Heading.astro";
+import Paragraph from "../components/Paragraph.astro";
+import TextLink from "../components/TextLink.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
+import { components } from "@/components/macros/index.astro";
+
+const entry = await getEntry("about", "about");
+const about = entry.data;
+const { Content } = await entry.render();
+---
+
+<Layout
+  metaTitle={about.metaTitle || about.title}
+  metaDescription={about.metaDescription || about.description}
+>
+  <PageHeader
+    title={about.title}
+    description={about.description}
+    image={about.headerImage && {
+      ...about.headerImage,
+      class:
+        "lg:max-w-none lg:max-h-[70vh] lg:w-[calc(140%+var(--marginSize)+3rem)]",
+    }}
+  />
+
+  <section class="bg-bg text-text py-16">
+    <div class="grid-container">
+      <div class="prose lg:col-start-2 lg:col-span-6">
+        <Content components={components} />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-bg-alt text-text pt-16">
+    <div class="grid-container">
+      <div class="prose lg:col-start-2 lg:col-span-6">
+        <Heading size="xl" tag="h2">{about.mission.title}</Heading>
+        <Paragraph set:html={about.mission.description} />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-bg-alt text-text pb-0">
+    <div class="grid-container">
+      <div class="prose lg:col-start-2 lg:col-span-6 pb-16">
+        <Heading size="lg" tag="h3">{about.mission.expertiseTitle}</Heading>
+        <div class="not-prose mt-6">
+          <ul class="grid grid-cols-3 sm:grid-cols-6 gap-x-6 gap-y-4">
+            {
+              about.mission.expertiseFields.map((workArea) => {
+                const image = workArea.iconPath;
+                if (!image) return null;
+                return (
+                  <li class="col-span-3 flex sm:flex-col gap-4 items-start">
+                    <Image
+                      src={image}
+                      alt={workArea.iconAlt}
+                      class="w-[72px]"
+                    />
+                    <Paragraph set:html={workArea.text} />
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+      </div>
+      <div
+        class="aspect-video lg:aspect-auto row-start-1 row-end-2 col-span-12 lg:col-start-9 lg:col-span-3 relative mt-6"
+        role="figure"
+        aria-label={about.mission.imageAlt}
+      >
+        {
+          about.mission.imagePath && (
+            <div
+              class="
+                absolute top-0 bg-cover bg-top
+                w-[110vw] h-full
+                -left-6
+                sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
+                lg:left-0
+                lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]
+              "
+            >
+              <Image
+                src={about.mission.imagePath}
+                alt={about.mission.imageAlt}
+                class="w-full h-full object-cover"
+              />
+            </div>
+          )
+        }
+        <div
+          class="absolute top-0 bg-cover bg-top
+          w-[110vw] h-full
+          -left-6
+          pointer-events-none
+          sm:left-[calc((1.5rem+var(--columnSize)+var(--marginSize))*-1)]
+          lg:left-0
+          lg:w-[calc(100%+var(--marginSize)+var(--columnSize)+3rem)]
+          bg-bg-inv mix-blend-screen opacity-50"
+          aria-hidden="true"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-bg text-text pt-16 pb-6">
+    <div class="grid-container">
+      <div class="lg:col-start-2 lg:col-span-6">
+        <Heading size="xl" tag="h2">{about.team.title}</Heading>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-bg text-text pb-6">
+    <div class="grid-container">
+      <ul
+        class="lg:col-start-1 lg:col-span-8 grid grid-cols-4 lg:grid-cols-8 gap-x-6 gap-y-12"
+      >
+        {
+          about.team.members.map((member) => {
+            const memberImage = member.imagePath;
+            return (
+              <li class="col-span-4 grid">
+                <address class="grid grid-cols-4 gap-6 items-center lg:items-start">
+                  {memberImage && (
+                    <Image
+                      class="rounded-full w-40 col-span-1 lg:scale-110"
+                      src={memberImage}
+                      alt={`Portraitbild von ${member.name}`}
+                    />
+                  )}
+                  <div class="flex flex-col col-span-3">
+                    <strong>{member.name}</strong>
+                    <span class="mb-0.5">{member.role}</span>
+                    {member.email && (
+                      <TextLink
+                        href={`mailto:${member.email}`}
+                        class="no-underline"
+                      >
+                        {member.email}
+                      </TextLink>
+                    )}
+                    {member.phoneNumber && (
+                      <TextLink
+                        href={`tel:${member.phoneNumber}`}
+                        class="no-underline"
+                      >
+                        {member.phoneNumber}
+                      </TextLink>
+                    )}
+                  </div>
+                </address>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-bg text-text pt-16 pb-6">
+    <div class="grid-container">
+      <div class="lg:col-start-2 lg:col-span-6">
+        <hr class="opacity-50" />
+        <p
+          class="mt-4 pb-16 text-sm opacity-70"
+          set:html={about.team.disclaimer}
+        />
+      </div>
+    </div>
+  </section>
+</Layout>

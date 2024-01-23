@@ -1,0 +1,27 @@
+---
+import processed_kerndatensaetze from "../../assets/data/processed_kerndatensaetze.json";
+---
+
+<table id="kerndatentable" class="display lg:mx-8">
+  <thead>
+    <tr>
+      <th>Kategorie</th>
+      <th>Datensatz</th>
+      <th>Beschreibung</th>
+      <th>offen</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  {
+    processed_kerndatensaetze.map((row) => (
+      <tr>
+        <td set:html={row[0]} />
+        <td set:html={row[1]} />
+        <td set:html={row[2]} />
+        <td set:html={row[3]} />
+        <td set:html={row[4]} />
+      </tr>
+    ))
+  }
+</table>
+

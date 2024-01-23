@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+import ProjectMockups from "./ProjectMockups.astro";
+import Button from "./Button.astro";
+
+export type Props = CollectionEntry<"projekte">;
+
+const { data, slug } = Astro.props;
+const { title, description } = data;
+---
+
+<a href={`/projekte/${slug}`} title={title}>
+  <ProjectMockups {...data} slug={slug} />
+  <Heading size="lg" set:html={title} />
+  <Paragraph set:html={description} />
+  <Button tag="span" variant="secondary">Projekt ansehen</Button>
+</a>

@@ -1,0 +1,33 @@
+---
+import BaseHead, {
+  type Props as BaseHeadProps,
+} from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+type Props = {
+  metaTitle: string;
+  metaDescription: string;
+  externalLibs?: BaseHeadProps["externalLibs"];
+};
+
+const { metaTitle, metaDescription, externalLibs = [] } = Astro.props;
+---
+
+<html lang="de">
+  <head>
+    <BaseHead
+      title={metaTitle}
+      description={metaDescription}
+      externalLibs={externalLibs}
+    />
+  </head>
+
+  <body class="@container">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

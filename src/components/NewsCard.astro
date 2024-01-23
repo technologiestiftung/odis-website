@@ -1,0 +1,127 @@
+---
+import NewsCardContent from "./NewsCardContent.astro";
+import Button from "./Button.astro";
+import TextLink from "./TextLink.astro";
+import NewsCardGradient from "./NewsCardGradient.astro";
+import { cn } from "../utils/classNames";
+import type { ImageMetadata } from "astro";
+
+export type Props = {
+  title: string;
+  description: string;
+  date: string;
+  postLink: string;
+  postLinkText?: undefined | string;
+  author?: undefined | string;
+  readingTime?: undefined | string;
+  theme: "normal" | "inverted";
+  image?: undefined | ImageMetadata;
+  imageAlt?: undefined | string;
+  class?: undefined | string;
+};
+
+const {
+  postLink,
+  postLinkText = "Zum Beitrag",
+  theme = "normal",
+  image,
+  imageAlt,
+  class: className = "",
+} = Astro.props;
+
+const paddingClasses = `px-7 pt-7 pb-10`;
+const isInverted = theme === "inverted";
+const contentAreaWrapperClasses = !isInverted && image ? paddingClasses : "";
+---
+
+<article
+  class={[
+    className,
+    `@container relative grid grid-items-start`,
+    `grid-rows-[250px,minmax(auto,1fr)] border`,
+    !isInverted && `bg-bg-alt text-text border-bg-alt`,
+    !isInverted && image ? `p-0` : paddingClasses,
+    isInverted && `text-text-inv bg-bg-inv bg-top`,
+    isInverted && `border-bg-inv bg-no-repeat bg-cover @md:bg-contain`,
+    isInverted && paddingClasses,
+  ]
+    .filter(Boolean)
+    .join(" ")}
+>
+  {
+    !isInverted && image?.src && (
+      <a
+        href={postLink}
+        style={{ backgroundImage: `url("${image.src}")` }}
+        class="
+        h-full bg-center bg-cover relative outline-none
+        hover:opacity-50 transition-opacity duration-300 ease-in-out
+      "
+        role="img"
+        tabindex="-1"
+        aria-label={imageAlt}
+      >
+        <div class="absolute inset-0 bg-bg-inv mix-blend-screen opacity-50" />
+      </a>
+    )
+  }
+  {
+    theme == "inverted" && image?.src && (
+      <a
+        class="h-full group outline-none"
+        href={postLink}
+        title={postLinkText}
+        rel="noopener noreferrer"
+        target="_blank"
+        tabindex="-1"
+      >
+        <div
+          class="
+          absolute top-0 left-0 w-full h-1/2 bg-top bg-cover
+          group-hover:opacity-50 transition-opacity duration-300 ease-in-out
+        "
+          style={{ backgroundImage: `url("${image.src}")` }}
+          role="img"
+          aria-label={imageAlt}
+        />
+      </a>
+    )
+  }
+  <div
+    class={cn(
+      "row-start-2 h-full grid grid-rows-[auto,1fr] gap-6 z-10",
+      contentAreaWrapperClasses,
+    )}
+  >
+    <div class="flex flex-col gap-2">
+      <NewsCardContent {...Astro.props} />
+    </div>
+    <div class="flex flex-col justify-end items-start">
+      {
+        !isInverted && (
+          <Button tag="a" href={postLink} variant="secondary">
+            {postLinkText}
+          </Button>
+        )
+      }
+      {
+        theme !== "normal" && (
+          <TextLink
+            href={postLink}
+            class="text-text-inv focus-visible:bg-bg focus-visible:decoration-bg focus-visible:text-links"
+          >
+            {postLinkText}
+          </TextLink>
+        )
+      }
+    </div>
+  </div>
+  {
+    isInverted && (
+      <>
+        <div class="sr-only" role="img" aria-label="{{ image_alt_text }}" />
+        <NewsCardGradient class="absolute top-0 left-0 w-full h-full" />
+      </>
+    )
+  }
+</article>

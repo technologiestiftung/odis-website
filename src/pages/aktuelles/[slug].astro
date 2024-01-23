@@ -1,0 +1,68 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Paragraph from "../../components/Paragraph.astro";
+import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
+import { components } from "@/components/macros/index.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("aktuelles");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"aktuelles">;
+
+const post = Astro.props;
+const { date, title, author, readingTime, description, headerImage } =
+  post.data;
+const { Content } = await post.render();
+---
+
+<DefaultLayout
+  metaDescription={post.data.metaDescription || post.data.description}
+  metaTitle={post.data.metaTitle || post.data.title}
+  externalLibs={["tableOfContents"]}
+>
+  <PageHeaderWithPhoto
+    title={title}
+    description={description}
+    basePath="aktuelles"
+    image={headerImage}
+    date={date}
+  >
+    {
+      (author || readingTime) && (
+        <Paragraph class="opacity-70 flex gap-x-3 flex-wrap">
+          {author && <span class="inline not-italic">Von {author}</span>}
+          {author && readingTime && (
+            <span aria-hidden="true" class="opacity-50">
+              ·
+            </span>
+          )}
+          {readingTime && <span>{readingTime} Minuten</span>}
+        </Paragraph>
+      )
+    }
+  </PageHeaderWithPhoto>
+
+  <section aria-label="Beitrag">
+    <div class="grid-container">
+      <div
+        class="pt-16 flex flex-col gap-6 order-first lg:order-last lg:col-start-9 lg:col-span-3 z-0"
+      >
+        <div class="sticky w-full top-6 lg:pb-48" id="toc-target">
+          <span id="toc-label" class="font-bold text-headlines"
+            >Auf dieser Seite</span
+          >
+        </div>
+      </div>
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10"
+      >
+        <Content components={components} />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

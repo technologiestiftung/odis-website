@@ -1,61 +1,34 @@
 {
-  "name": "@technologiestiftung/odis-website",
-  "version": "2.0.0",
-  "description": "Repository for the website of Berlins Open Data Informationsstelle (ODIS).",
+  "name": "blog",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "start": "eleventy --serve --quiet",
-    "build": "npm run build:css && eleventy",
-    "build-ci": "npm run lint:fix && npm run build",
-    "css": "npx tailwindcss -i ./source/assets/css/tailwind.css -o ./_site/assets/css/tailwind.css",
-    "build:css": "npm run css -- --minify",
-    "dev:css": "npx tailwindcss -w -i ./source/assets/css/tailwind.css -o ./_site/assets/css/tailwind.css",
-    "predev": "npm run build",
-    "dev": "npm-run-all -p dev:css dev:eleventy",
-    "dev:eleventy": "eleventy --serve --quiet --watch",
-    "prettier": "prettier . --check --ignore-path .lintignore",
-    "prettier:fix": "prettier . --write --ignore-path .lintignore",
-    "eslint": "eslint . --ignore-path .lintignore",
-    "eslint:fix": "eslint . --fix --ignore-path .lintignore",
-    "lint": "run-s prettier eslint",
-    "lint:fix": "run-s prettier:fix eslint:fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/technologiestiftung/odis-website.git"
-  },
-  "keywords": [],
-  "contributors": [
-    {
-      "name": "vogelino",
-      "email": "contact@vogelino.com"
-    },
-    {
-      "name": "ff6347",
-      "email": "hash@ff6347.email"
-    }
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/technologiestiftung/odis-website/issues"
-  },
-  "homepage": "https://odis-berlin.de/",
-  "devDependencies": {
-    "@11ty/eleventy": "2.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
-    "@shopify/prettier-plugin-liquid": "1.2.2",
-    "@tailwindcss/container-queries": "0.1.1",
-    "@tailwindcss/typography": "0.5.9",
-    "eslint": "8.10.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "markdown-it": "13.0.1",
-    "npm-run-all": "4.1.5",
-    "prettier": "3.0.2",
-    "prettier-plugin-tailwindcss": "0.5.3",
-    "tailwindcss": "3.3.3",
-    "tailwindcss-touch": "1.0.1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "NODE_OPTIONS=--max_old_space_size=8192 astro build --experimental-static-build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@tailwindcss/line-clamp": "0.4.4"
+    "@astrojs/check": "0.4.1",
+    "@astrojs/mdx": "2.0.3",
+    "@astrojs/prefetch": "0.4.1",
+    "@astrojs/rss": "4.0.1",
+    "@astrojs/sitemap": "3.0.4",
+    "@astrojs/tailwind": "5.1.0",
+    "@tailwindcss/container-queries": "0.1.1",
+    "@tailwindcss/typography": "0.5.9",
+    "astro": "4.1.1",
+    "d3": "4.13.0",
+    "typescript": "5.3.3"
+  },
+  "devDependencies": {
+    "@types/d3": "4.13.0",
+    "gray-matter": "4.0.3",
+    "prettier-plugin-astro": "0.12.3",
+    "sharp": "0.33.2",
+    "tailwind-merge": "2.2.1",
+    "tailwindcss-touch": "1.0.1",
+    "yaml": "2.3.4"
   }
 }

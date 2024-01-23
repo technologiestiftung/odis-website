@@ -1,0 +1,172 @@
+---
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Pagination from "../../components/Pagination.astro";
+import type { Page, GetStaticPaths } from "astro";
+import NewsletterLane from "../../components/NewsletterLane.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Heading from "../../components/Heading.astro";
+import { Image } from "astro:assets";
+
+type Event = CollectionEntry<"veranstaltungen">;
+
+export type Props = {
+  page: Page<Event>;
+};
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const isPostAndVisible = (post: Event) =>
+    post.data.tags.includes("event") && post.data.visible;
+  const veranstaltungen = (await getCollection("veranstaltungen")).filter(
+    isPostAndVisible,
+  );
+
+  return paginate(
+    veranstaltungen.sort(
+      (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+    ),
+    { pageSize: 50 },
+  );
+};
+
+const { page } = Astro.props;
+
+const eventsByYear = page.data.reduce(
+  (acc, event) => {
+    const year = event.data.date.getFullYear();
+    const existingValue = acc[year] || [];
+    const extendedValue = [...existingValue, event];
+    return {
+      ...acc,
+      [year]: extendedValue.sort(
+        (a, b) => a.data.date.getTime() - b.data.date.getTime(),
+      ),
+    };
+  },
+  {} as Record<number, Event[]>,
+);
+
+const entry = await getEntry(
+  "veranstaltungenOverview",
+  "veranstaltungenoverview",
+);
+const { title, description, metaTitle, metaDescription, headerImage } =
+  entry.data;
+
+const firstPath = "veranstaltungen";
+---
+
+<DefaultLayout
+  metaTitle={metaTitle || title}
+  metaDescription={metaDescription || description}
+>
+  <PageHeader
+    title={title}
+    description={description}
+    class="bg-bg-inv text-text-inv py-16"
+    image={headerImage && {
+      ...headerImage,
+      class: "max-w-[220px]",
+    }}
+  />
+
+  <section class="py-16">
+    <div class="grid-container">
+      <ul class="flex flex-col gap-6">
+        {
+          Object.keys(eventsByYear)
+            .sort((a, b) => +b - +a)
+            .map((year) => {
+              const yearEvents = eventsByYear[+year] || [];
+              return (
+                <li class="flex flex-col pb-5">
+                  <Heading
+                    size="lg"
+                    class="pb-2 border-b border-line max-w-none mb-0"
+                  >
+                    {year}
+                  </Heading>
+                  <ul class="flex flex-col">
+                    {yearEvents.map((event) => {
+                      const image = event.data.headerImage?.src;
+                      return (
+                        <li class="border-b border-discrete">
+                          <a
+                            href={`/${firstPath}/${event.slug}`}
+                            title={event.data.title}
+                            class="group focusable grid grid-cols-1 md:grid-cols-4"
+                          >
+                            <div class="flex flex-col gap-1 cursor-pointer md:col-span-3 justify-center">
+                              <time datetime={event.data.date.toISOString()}>
+                                <span>
+                                  {event.data.date.toLocaleDateString("de-DE", {
+                                    weekday: "long",
+                                    day: "numeric",
+                                    month: "long",
+                                    year: "numeric",
+                                  })}
+                                </span>
+                                <span
+                                  aria-hidden="true"
+                                  class="scale-150 opacity-50"
+                                >
+                                  ·
+                                </span>
+                                <span>{event.data.time}</span>
+                              </time>
+
+                              <Heading
+                                tag="h3"
+                                size="xl"
+                                class="text-links hover-hover:group-hover:text-links-active transition-colors mb-0"
+                              >
+                                {event.data.title}
+                              </Heading>
+
+                              {event.data.adresse && (
+                                <span class="text-text-alt">
+                                  {event.data.adresse}
+                                </span>
+                              )}
+                            </div>
+
+                            {image && (
+                              <Image
+                                src={image}
+                                width={400}
+                                height={200}
+                                alt={event.data.headerImage?.alt || ""}
+                                class="h-32 w-full object-cover bg-bg-alt"
+                              />
+                            )}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              );
+            })
+        }
+      </ul>
+    </div>
+
+    {
+      page.lastPage !== page.currentPage && (
+        <nav aria-label="Pagination" class="mt-16 grid-container">
+          <Pagination
+            length={page.lastPage}
+            currentUrl={page.url.current}
+            currentPage={page.currentPage}
+            firstUrl={`/${firstPath}`}
+            prevUrl={page.url.prev}
+            nextUrl={page.url.next}
+            lastUrl={`/${firstPath}/${page.lastPage}`}
+          />
+        </nav>
+      )
+    }
+  </section>
+
+  <NewsletterLane />
+</DefaultLayout>

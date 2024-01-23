@@ -1,0 +1,114 @@
+---
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import NewsCard from "../../components/NewsCard.astro";
+import Pagination from "../../components/Pagination.astro";
+import type { Page, GetStaticPaths } from "astro";
+import ProjectThumbnail from "../../components/ProjectThumbnail.astro";
+import NewsletterLane from "../../components/NewsletterLane.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+type Project = CollectionEntry<"projekte">;
+type Aktuelles = CollectionEntry<"aktuelles">;
+type DataType = Project | Aktuelles;
+
+export type Props = {
+  page: Page<DataType>;
+};
+
+const formattedIntlDateFormatter = new Intl.DateTimeFormat("de-DE", {
+  dateStyle: "long",
+});
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const isPostAndVisible = (post: DataType) =>
+    post.data.tags.includes("post") && post.data.visible;
+  const aktuelles = (await getCollection("aktuelles")).filter(isPostAndVisible);
+  const projects = (await getCollection("projekte")).filter(isPostAndVisible);
+  const posts = [...aktuelles, ...projects];
+
+  return paginate(
+    posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+    { pageSize: 10 },
+  );
+};
+
+const { page } = Astro.props;
+
+const { data } = await getEntry("aktuellesOverview", "aktuellesoverview");
+
+const firstPath = "aktuelles";
+---
+
+<DefaultLayout
+  metaTitle={data.metaTitle || data.title}
+  metaDescription={data.metaDescription || data.description}
+>
+  <PageHeader
+    title={data.title}
+    description={data.description}
+    image={data.headerImage}
+    class="bg-bg text-text"
+  />
+
+  <div class="grid-container">
+    <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
+      {
+        page.data.map((post) => {
+          if (!post.data.visible) return null;
+          const { slug, data } = post;
+          const isProject = data.tags.includes("project");
+          const isResource = data.tags.includes("resource");
+          const isAktuelles =
+            data.tags.includes("post") && !isProject && !isResource;
+
+          if (isAktuelles) {
+            const { data: aktuelles } = post as Aktuelles;
+            const hasLink = !!aktuelles.link;
+            const linkIsExternal =
+              hasLink && aktuelles.link?.startsWith("http");
+            const postLink =
+              aktuelles.link && linkIsExternal
+                ? aktuelles.link
+                : `/aktuelles/${slug}`;
+            const theme = linkIsExternal ? "inverted" : "normal";
+            return (
+              <NewsCard
+                title={aktuelles.title}
+                description={aktuelles.description}
+                postLink={postLink}
+                postLinkText={aktuelles.urlText}
+                date={formattedIntlDateFormatter.format(aktuelles.date)}
+                author={aktuelles.author}
+                readingTime={
+                  aktuelles.readingTime ? `${aktuelles.readingTime}` : undefined
+                }
+                image={aktuelles.headerImage?.src}
+                imageAlt={aktuelles.headerImage?.alt}
+                theme={theme}
+              />
+            );
+          }
+          if (isProject) {
+            const project = post as Project;
+            return <ProjectThumbnail {...project} />;
+          }
+        })
+      }
+    </div>
+  </div>
+
+  <nav aria-label="Pagination" class="mt-12 grid-container">
+    <Pagination
+      length={page.lastPage}
+      currentUrl={page.url.current}
+      currentPage={page.currentPage}
+      firstUrl={`/${firstPath}`}
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      lastUrl={`/${firstPath}/${page.lastPage}`}
+    />
+  </nav>
+
+  <NewsletterLane />
+</DefaultLayout>
