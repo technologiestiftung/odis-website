@@ -1,0 +1,57 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import ModuleThumbnail from "../../components/ModuleThumbnail.astro";
+import ContactLane from "../../components/ContactLane.astro";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { components } from "@/components/macros/index.astro";
+
+const entry = await getEntry("moduleOverview", "moduleoverview");
+const {
+  data: { title, description, metaTitle, metaDescription, headerImage },
+} = entry;
+const { Content } = await entry.render();
+
+const module = (await getCollection("module")).sort(
+  (a, b) => a.data.number - b.data.number,
+);
+---
+
+<DefaultLayout
+  metaTitle={metaTitle || title}
+  metaDescription={metaDescription || description}
+>
+  <PageHeader
+    title={title}
+    description={description}
+    image={headerImage && {
+      ...headerImage,
+      class: "hidden lg:block absolute inset-x-0 top-0 w-full aspect-square",
+    }}
+  />
+
+  <section class="bg-bg text-text py-16">
+    <div class="grid-container">
+      <div class="lg:col-start-2 lg:col-span-5 prose">
+        <Content components={components} />
+      </div>
+    </div>
+  </section>
+
+  <div>
+    {
+      module.map((module, index) => (
+        <ModuleThumbnail
+          {...module}
+          position={index % 2 !== 0 ? "right" : "left"}
+        />
+      ))
+    }
+  </div>
+
+  <section aria-label="Kontakt" class="py-16 bg-bg-alt mt-16">
+    <div class="grid-container">
+      <ContactLane />
+    </div>
+  </section>
+</DefaultLayout>

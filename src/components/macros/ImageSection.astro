@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import { cn } from "../../utils/classNames";
+export type Props = {
+  src: ImageMetadata;
+  caption?: string;
+  alt?: string;
+  withShadow?: boolean;
+  fullWidth?: boolean;
+};
+
+const {
+  src,
+  alt,
+  caption,
+  withShadow = false,
+  fullWidth = false,
+} = Astro.props;
+
+---
+
+<figure
+  class={cn(
+    "mt-10 mb-0",
+    fullWidth && "sm:w-screen sm:max-w-[100vw]  sm:ml-[var(--contentOffset)]",
+  )}
+>
+  <div class={cn("relative")}>
+    {
+      src && (
+        <Image
+          src={src}
+          alt={alt || caption || ""}
+          class={cn("my-0 w-full max-w-full", withShadow && "shadow-xl")}
+        />
+      )
+    }
+    {
+      withShadow && (
+        <div
+          class="absolute pointer-events-none inset-0 ring-1 ring-inset ring-text opacity-10"
+          aria-hidden="true"
+        />
+      )
+    }
+  </div>
+  {
+    caption && (
+      <figcaption
+        class="
+          mt-2 text-xs opacity-70 transition-opacity
+          hover:opacity-100 focus-visible:opacity-100
+          focusable
+        "
+        tabindex="0"
+      >
+        {caption}
+      </figcaption>
+    )
+  }
+</figure>

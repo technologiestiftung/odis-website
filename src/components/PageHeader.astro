@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import { cn } from "../utils/classNames";
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+import type { ImageMetadata } from "astro";
+
+export type Props = {
+  title: string;
+  description?: string | undefined;
+  class?: string | undefined;
+  image?:
+    | {
+        src: ImageMetadata;
+        alt: string;
+        class?: string | undefined;
+      }
+    | undefined;
+};
+
+const {
+  title,
+  description,
+  image,
+  class: className = "bg-bg-inv text-text-inv",
+} = Astro.props;
+---
+
+<section class={cn(className, "py-16")}>
+  <div class="grid-container">
+    <div class="max-w-[50ch] lg:col-start-2 lg:col-span-6">
+      <Heading size="xxl" inverted={className?.includes("bg-inv")}>
+        {title}
+      </Heading>
+      {description && <Paragraph size="lg" set:html={description} />}
+    </div>
+    <div class="col-span-12 lg:col-start-8 lg:col-span-5 relative">
+      {
+        image && (
+          <Image
+            class={cn(
+              image.class,
+              `w-full h-auto lg:absolute lg:top-0 lg:left-0 `,
+            )}
+            alt={image.alt}
+            src={image.src}
+          />
+        )
+      }
+    </div>
+  </div>
+</section>

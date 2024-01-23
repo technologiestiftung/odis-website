@@ -1,0 +1,57 @@
+---
+import type { HTMLTag } from "astro/types";
+import { cn } from "../utils/classNames";
+
+export type Props = {
+  tag?: HTMLTag;
+  inverted?: boolean;
+  class?: string;
+  href?: string;
+  rel?: string;
+};
+
+const { inverted = false, tag = "a", class: className, ...props } = Astro.props;
+
+const finalTailwindClasses = cn(
+  inverted &&
+    [
+      `text-links-inv border-line-inv`,
+      `focus-visible:ring-offset-bg-inv`,
+      `hover-hover:hover:text-text-inv`,
+      `hover-hover:hover:border-links-active-inv`,
+    ]
+      .filter(Boolean)
+      .join(" "),
+  !inverted &&
+    [
+      `text-links border-line`,
+      `focus-visible:ring-offset-bg`,
+      `hover-hover:hover:text-links-active`,
+      `hover-hover:hover:border-links-active`,
+    ]
+      .filter(Boolean)
+      .join(" "),
+  `cursor-pointer`,
+  `decoration-clone underline underline-offset-8 decoration-8`,
+  `inline-block leading-7 focus-visible:ring-offset-8`,
+  `focusable`,
+  `transition motion-reduce:transition-none`,
+  className,
+)
+---
+
+{
+  tag === "a" && (
+    <a {...props} class={finalTailwindClasses}>
+      <slot />
+    </a>
+  )
+}
+
+{
+  tag === "button" && (
+    <button {...props} class={finalTailwindClasses}>
+      <slot />
+    </button>
+  )
+}

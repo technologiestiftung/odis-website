@@ -1,0 +1,67 @@
+---
+import HamburgerIcon from "./icons/HamburgerIcon.astro";
+import OdisLogo from "./logos/OdisLogo.astro";
+import navItems from "../navItems";
+
+export type Props = {};
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const urlPath = canonicalURL.pathname;
+---
+
+<nav class="container mx-auto flex flex-wrap justify-between max-w-7xl">
+  <div class="flex px-4 md:px-6 py-5 items-center md:hidden">
+    <button
+      class="h-7 w-7 text-links hover:text-links-active motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4"
+      id="menu-button"
+    >
+      <HamburgerIcon />
+    </button>
+  </div>
+
+  <div class="flex px-4 md:px-6 py-5">
+    <a
+      class="motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4 text-shadow-primary hover:text-links-active"
+      href="/"
+      aria-label="Zur Startseite"
+    >
+      <OdisLogo />
+    </a>
+  </div>
+
+  <div class="hidden md:flex w-full md:w-auto px-4 md:px-6" id="menu">
+    <ul
+      class="grid md:flex md:justify-between md:items-center gap-4 pb-5 md:pt-5"
+    >
+      {
+        navItems.map((navItem) => (
+          <li>
+            <a
+              class="p-2 font-bold text-links hover:text-links-active aria-current:text-links-active motion-safe:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-4"
+              href={`/${navItem.slug}`}
+              aria-current={`/${navItem.slug}` === urlPath ? "true" : undefined}
+            >
+              {navItem.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const button = document.querySelector("#menu-button");
+  const menu = document.querySelector("#menu");
+
+  if (button && menu) {
+    button.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+    button.addEventListener("keypress", (evt) => {
+      const event = evt as KeyboardEvent;
+      if (!["Enter", "Space"].includes(event.code)) return;
+
+      menu.classList.toggle("hidden");
+    });
+  }
+</script>

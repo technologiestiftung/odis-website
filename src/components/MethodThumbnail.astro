@@ -1,0 +1,41 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Button from "./Button.astro";
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+import { Image } from "astro:assets";
+
+export type Props = {
+  method: CollectionEntry<"module">["data"]["methods"][0];
+};
+
+const { method } = Astro.props;
+---
+
+<li
+  class="border-t-8 border-line py-4 sm:pt-6 col-span-10 lg:col-span-5 grid gap-x-4 sm:gap-x-6 gap-y-2"
+  style="grid-template-columns: subgrid;"
+>
+  <Heading tag="h3" size="lg" class="col-span-10 lg:col-span-5">
+    {method.name}
+  </Heading>
+  <Paragraph class="col-span-8 lg:col-span-4">{method.description}</Paragraph>
+  {
+    method.icon && (
+      <div class="col-span-2 lg:col-span-1">
+        {method.icon && (
+          <Image
+            src={method.icon}
+            alt={`Icon for method: ${method.name}`}
+            class="w-full"
+          />
+        )}
+      </div>
+    )
+  }
+  <div class="col-span-10 lg:col-span-5">
+    <Button tag="a" variant="secondary" href={method.link}>
+      Zur Ressource
+    </Button>
+  </div>
+</li>
