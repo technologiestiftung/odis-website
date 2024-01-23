@@ -1,0 +1,126 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+import { cn } from "@/utils/classNames";
+
+export type Props = CollectionEntry<"resources">;
+
+const { data, slug } = Astro.props;
+const { title, description, question, media } = data;
+const { thumbnail } = media;
+
+const isVideoAspectRatio = thumbnail.width > thumbnail.height;
+---
+
+<article
+  class="bg-bg-alt border border-line-inv @container flex flex-col justify-between"
+>
+  <a
+    href={`/ressourcen/${slug}`}
+    class="grid px-6 py-4 @sm:py-5 gap-2 group"
+    style={{
+      gridTemplate: `
+      "question" auto
+      "title" auto
+      "description" auto
+    `,
+    }}
+  >
+    {
+      question && (
+        <Paragraph
+          class="text-headlines opacity-50 mb-0"
+          style={{ gridArea: "question" }}
+        >
+          {question}
+        </Paragraph>
+      )
+    }
+    <Heading
+      size="lg"
+      tag="h2"
+      style={{ gridArea: "title" }}
+      class="m-0 hover-hover:group-hover:text-links-active transition-colors"
+    >
+      {title}
+    </Heading>
+    <Paragraph style={{ gridArea: "description" }} class="line-clamp-5">
+      {description}
+    </Paragraph>
+  </a>
+  <section
+    class={cn(
+      "relative px-6 flex flex-col @sm:grid overflow-hidden",
+      isVideoAspectRatio
+        ? "@sm:grid-cols-5 min-h-[260px] @sm:h-[200px]"
+        : "@sm:grid-cols-2 h-[360px] @sm:h-[240px]",
+    )}
+  >
+    <div
+      aria-hidden="true"
+      class="absolute w-full h-full @sm:h-[calc(100%-3rem)] bg-bg-inv bottom-0 left-0"
+    >
+    </div>
+    <section
+      class={cn(
+        "flex flex-col gap-0 @sm:order-1 pt-4 @sm:mt-12 relative text-text-inv",
+        "@sm:pl-8",
+        isVideoAspectRatio && "@sm:col-span-2",
+      )}
+    >
+      <Paragraph class="flex justify-between mb-0">
+        <span>{media.type}</span>
+        <span>I</span>
+      </Paragraph>
+      {
+        media.readingOrPlayingTime && (
+          <Paragraph class="mb-0">{media.readingOrPlayingTime}</Paragraph>
+        )
+      }
+      {media.size && <Paragraph class="mb-0">{media.size}</Paragraph>}
+    </section>
+    <a
+      href={`/ressourcen/${slug}`}
+      class={cn(
+        "relative h-full pt-12 group",
+        isVideoAspectRatio && "@sm:col-span-3",
+      )}
+    >
+      <Image
+        src={media.thumbnail}
+        alt={`Media thumbnail preview of "${title}"`}
+        class={cn(
+          "absolute w-full h-auto top-4 left-0 bg-bg-alt",
+          "border border-line-inv shadow-secondary",
+          "hover-hover:group-hover:-translate-y-4 transition-transform",
+        )}
+      />
+      {
+        !isVideoAspectRatio && (
+          <div
+            aria-hidden="true"
+            class={cn(
+              "absolute w-full h-[calc(100%+3rem)] top-4 left-0",
+              "mix-blend-multiply opacity-20 gradient-overlay",
+              "hover-hover:group-hover:-translate-y-4 transition-transform",
+            )}
+          />
+        )
+      }
+    </a>
+  </section>
+</article>
+
+<style>
+  .gradient-overlay {
+    filter: contrast(100%) brightness(300%);
+    background: linear-gradient(
+        8deg,
+        var(--blue-dark, black),
+        rgba(255, 255, 255, 0)
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 43 43' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.68' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+</style>

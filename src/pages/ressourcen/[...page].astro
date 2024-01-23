@@ -1,12 +1,13 @@
 ---
 import { getCollection, type CollectionEntry, getEntry } from "astro:content";
-import DefaultLayout from "../../layouts/DefaultLayout.astro";
-import Pagination from "../../components/Pagination.astro";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import Pagination from "@/components/Pagination.astro";
 import type { Page, GetStaticPaths } from "astro";
-import NewsletterLane from "../../components/NewsletterLane.astro";
-import PageHeader from "../../components/PageHeader.astro";
+import NewsletterLane from "@/components/NewsletterLane.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import ResourceCard from "@/components/ResourceCard.astro";
 
-type DataType = CollectionEntry<'resources'>
+type DataType = CollectionEntry<"resources">;
 
 export type Props = {
   page: Page<DataType>;
@@ -37,18 +38,12 @@ const firstPath = "ressourcen";
     }}
   />
 
-  <div class="grid-container">
+  <div class="grid-container py-16">
     <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
       {
         page.data.map((post) => {
           if (!post.data.visible) return null;
-          const { data } = post;
-
-          return (
-            <div>
-              <h1>{data.title}</h1>
-            </div>
-          )
+          return <ResourceCard {...post} />;
         })
       }
     </div>

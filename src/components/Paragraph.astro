@@ -1,11 +1,11 @@
 ---
-import type { HTMLTag } from "astro/types";
+import { cn } from "@/utils/classNames";
+import type { HTMLAttributes, HTMLTag } from "astro/types";
 
-export type Props = {
+export type Props<T extends HTMLTag> = HTMLAttributes<T> & {
   tag?: HTMLTag;
   inverted?: boolean;
   size?: "lg" | "xl";
-  class?: string;
 };
 
 const {
@@ -18,15 +18,13 @@ const {
 ---
 
 <Tag
-  class={[
-    className,
+  class={cn(
     `max-w-prose`,
     size === "lg"
       ? `text-lg xl:text-xl !leading-relaxed mb-6`
       : `text-base mb-4`,
-  ]
-    .filter(Boolean)
-    .join(" ")}
+    className,
+    )}
   {...rest}
 >
   <slot />
