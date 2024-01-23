@@ -142,10 +142,10 @@
         p = null,
         c = { content: 0, map: 0 },
         u = null;
-      a.j("/grundsicherung/data/config.json")
+      a.j("/extra-pages/grundsicherung/data/config.json")
         .then(function (t) {
           (r = t),
-            a.j("/grundsicherung/data/xii.geojson").then(function (t) {
+            a.j("/extra-pages/grundsicherung/data/xii.geojson").then(function (t) {
               (o = a.h().fitSize([e, n], t)),
                 (s = a.i().projection(o)),
                 (i = a
@@ -262,7 +262,7 @@
             a.p("#content-description").html(n.description[0]),
             l.selectAll("*").remove(),
             a
-              .j("/grundsicherung/data/" + n.data)
+              .j("/extra-pages/grundsicherung/data/" + n.data)
               .then(function (t) {
                 t.features.forEach(function (t) {
                   t.properties[n.attribute] = parseFloat(
@@ -556,7 +556,7 @@
         (n = parseFloat(t.width)),
         new o({
           div: "timeline",
-          file: "/grundsicherung/data/timeline.csv",
+          file: "/extra-pages/grundsicherung/data/timeline.csv",
           width: n - e,
           xaxis: "jahr",
           yaxis: "ab 65 Jahre insgesamt",
@@ -580,10 +580,10 @@
             l = null,
             p = null,
             c = null;
-          a.j("/grundsicherung/data/config.json")
+          a.j("/extra-pages/grundsicherung/data/config.json")
             .then(function (t) {
               (r = t),
-                a.j("/grundsicherung/data/xii.geojson").then(function (t) {
+                a.j("/extra-pages/grundsicherung/data/xii.geojson").then(function (t) {
                   (s = a.h().fitSize([e, n], t)), (l = a.i().projection(s));
                 }),
                 (i = a
@@ -612,9 +612,9 @@
                   .append("linearGradient")
                   .attr("id", "mainGradient");
               function h(t) {
-                a.d("/grundsicherung/data/timelapse.csv")
+                a.d("/extra-pages/grundsicherung/data/timelapse.csv")
                   .then(function (e) {
-                    a.j("/grundsicherung/data/lor_planungsraeume.geojson").then(
+                    a.j("/extra-pages/grundsicherung/data/lor_planungsraeume.geojson").then(
                       function (n) {
                         e.forEach(function (e) {
                           var a = e.Kennung,

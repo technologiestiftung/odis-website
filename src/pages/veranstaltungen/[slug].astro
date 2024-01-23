@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
 import Button from "../../components/Button.astro";
+import { components } from "@/components/macros/index.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("veranstaltungen");

@@ -30,9 +30,10 @@ Der Datensatz ist seit Februar 2022 mit den nötigen Schlüsseltabellen und der 
 - Wie kann der mit Fachbegriffen und Codes gespickte Datensatz so aufgewertet werden, dass die Informationen verständlich und nutzbar werden?
 - Wie kann eine erfolgreiche Veröffentlichung im Berliner Open Data Portal und eine jährliche Aktualisierung realisiert werden?
 
+import image1 from "./images/Bibliotheksdaten_auszug_rohdatensatz.png"
 
 <ContentSection caption="Der Rohdatensatz enthält personenbezogene Daten, zum Beispiel Alter und Wohnort auf Ebene der Teilverkehrszellen">
-  <ImageSection src="Bibliotheksdaten_auszug_rohdatensatz.png" />
+  <ImageSection src={image1} />
 </ContentSection>
 
 #### Anonymisierung der Daten
@@ -62,8 +63,10 @@ Für die **geplante, jährliche Veröffentlichung** des Datensatzes kann die Sta
 
 Im Open Data Portal ist neben dem Datensatz und den Schlüsseltabellen auch eine Dokumentation bereitgestellt, die die einzelnen Spalten und Kategorien erklärt.
 
+import image2 from "./images/Bibliotheksdaten_auszug_doku.png"
+
 <ImageSection
-  src="Bibliotheksdaten_auszug_doku.png"
+  src={image2}
   caption="Auszug aus der Dokumentation, bereitgestellt durch die Stadtteilbibliothek Pankow und veröffentlicht im Open Data Portal"
 />
 
@@ -71,7 +74,9 @@ Im Open Data Portal ist neben dem Datensatz und den Schlüsseltabellen auch eine
 
 Welche Erkenntnisse lassen sich nun aus den Daten gewinnen? Jeder Eintrag stellt einen Ausleih- oder Verlängerungsvorgang dar – sowohl erfolgreiche als auch fehlgeschlagene. Darin enthalten sind vielfältige Informationen über den Ausleihvorgang, das Medium selbst oder über die Bibliotheksnutzer:innen. So lässt sich durch Abfragen des Datensatzes schnell herausfinden, welche Sachbücher bei Kinder- und Jugendlichen gefragt sind, welche Bibliotheksstandorte am häufigsten genutzt oder wann Medien über den Jahresverlauf gesehen am meisten nachgefragt werden. Ein paar dieser Analysen haben wir im Rahmen eines [Dashboards](/projekte/bibliotheksdaten) visualisiert. Wir wünschen viel Vergnügen beim Stöbern durch die (digitale) Stadtteilbibliothek Pankow!
 
+import image3 from "./images/Bibliotheksdaten_Dashboard.png"
+
 <ImageSection
-  src="Bibliotheksdaten_Dashboard.png"
+  src={image3}
   caption="Das Dashboard zeigt verschiedene Analysen, zum Beispiel die Anzahl der Gesamtausleihen oder die Fächerstatistik"
 />

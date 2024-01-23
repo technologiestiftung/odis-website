@@ -189,7 +189,7 @@
   right: 0;
 }
 .grundsicherung .dl-arrow div {
-  background: url("/src/img/dl-arrow.svg") no-repeat center;
+  background: url("/extra-pages/grundsicherung/img/dl-arrow.svg") no-repeat center;
   background-size: cover;
   width: auto;
   width: 22px;
@@ -213,7 +213,7 @@ p.copy {
   flex-direction: column;
 }
 .grundsicherung .bullets-wrapper .bullet:before {
-  background-image: url(src/img/arrow-bullet.svg);
+  background-image: url(/extra-pages/grundsicherung/img/arrow-bullet.svg);
   transform: translateX(-16px) translateY(5px);
   background-size: contain;
   content: " ";

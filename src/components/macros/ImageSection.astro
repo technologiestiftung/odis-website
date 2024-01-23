@@ -1,9 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import { cn } from "../../utils/classNames";
-import { getImageFromFiles, type AstroImageType } from "../../utils/imageUtil";
 export type Props = {
-  src: string;
+  src: ImageMetadata;
   caption?: string;
   alt?: string;
   withShadow?: boolean;
@@ -18,19 +17,6 @@ const {
   fullWidth = false,
 } = Astro.props;
 
-// Optimizing images for quick loading
-const images = await Astro.glob<AstroImageType>(
-  "../../**/images/**/*.{jpg,jpeg,png,gif,svg}",
-);
-
-let imageOptimized;
-if (src) {
-  imageOptimized = getImageFromFiles({ images, identifier: src });
-  if (!imageOptimized)
-    throw new Error(
-      `The image defined in "ImageSection" could not be found: ${src}`,
-    );
-}
 ---
 
 <figure
@@ -41,9 +27,9 @@ if (src) {
 >
   <div class={cn("relative")}>
     {
-      imageOptimized && (
+      src && (
         <Image
-          src={imageOptimized}
+          src={src}
           alt={alt || caption || ""}
           class={cn("my-0 w-full max-w-full", withShadow && "shadow-xl")}
         />
