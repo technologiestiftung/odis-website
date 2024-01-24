@@ -18,18 +18,20 @@ Daten haben das Potenzial, diverse Dimensionen einer Stadt zu transformieren –
 
 ## Wo fangen wir an? Daten aus Perspektive der Stadtgesellschaft 
 
-Welche Daten sind für eine Stadt eigentlich relevant? Die Antwort hängt vom Blickwinkel ab: Geht es beispielsweise um die Bedürfnisse der Privatwirtschaft oder um den Bedarf von Bürger:innen nach mehr Transparenz? Um diese diversen Perspektiven auf Daten zu kombinieren und eine (mögliche) Antwort auf die Frage "Welche offene Daten braucht eine Stadt wie Berlin?" anzubieten, erstellte ODIS Anfang 2021 eine Liste von sogenannten „Kerndatensätzen.“ 
+Welche Daten sind für eine Stadt eigentlich relevant? Die Antwort hängt vom Blickwinkel ab: Geht es beispielsweise um die Bedürfnisse der Privatwirtschaft oder um den Bedarf von Bürger:innen nach mehr Transparenz? Um diese diversen Perspektiven auf Daten zu kombinieren und eine (mögliche) Antwort auf die Frage "Welche offene Daten braucht eine Stadt wie Berlin?" anzubieten, erstellte ODIS Anfang 2021 eine Liste von sogenannten „Kerndatensätzen", die auf 10 Kategorien verteilt sind.
+
+*Einfügen Kategorien*
 
 Knapp drei Jahre später bildet die Öffnung der Kerndatensätze eine konkrete Maßnahme der neuen Open Data Strategie des Landes, die im November 2023 vom Senat verabschiedet wurde. Damit will das Land Berlin den Behörden in Form einer Prioritätenliste Orientierung geben, welche Daten vorrangig und nachfrageorientiert veröffentlicht werden sollen. Die Liste ist allerdings keine abgeschlossene Aufzählung, sondern eher eine Orientierungshilfe um herauszufinden, wo wir als Stadt eigentlich anfangen und welche Datensätze wir unbedingt (noch) veröffentlichen sollten. Die Berliner Verwaltung ist eingeladen, uns weitere aus ihrer Sicht relevanten Kerndatensätze zu benennen.
 
 ## Über die Liste
 
-Kerndatensätze sind Datensätze, die wir als besonders wertvoll für Berlin bewertet haben, weil sie einen großen Mehrwert für ein breites Publikum liefern können. Die Grundlage der Kerndatensätze bildet der Musterdatenkatalog NRW. Anhand dessen haben wir für Berlin relevante Daten im Dialog mit der Wirtschaft, der Wissenschaft, der Zivilgesellschaft und der Verwaltung bewertet und priorisiert, um die Bedarfe und Interessen dieser Stakeholder einfließen zu lassen. Die vollständige Liste und Informationen dazu, wie die Datensätze ausgewählt wurden, sind in der [Veröffentlichung "Kerndatensätze für Berlin"](/assets/file-download/ODIS_Kerndatensaetze.pdf) zu finden.
+Kerndatensätze sind Datensätze, die wir als besonders wertvoll für Berlin bewertet haben, weil sie einen großen Mehrwert für ein breites Publikum liefern können. Die Grundlage der Kerndatensätze bildet der [Musterdatenkatalog NRW](https://www.bertelsmann-stiftung.de/de/themen/aktuelle-meldungen/2021/maerz/musterdatenkatalog-schafft-erstmals-uebersicht-ueber-offene-daten-in-deutschlands-kommunen). Anhand dessen haben wir für Berlin relevante Daten im Dialog mit der Wirtschaft, der Wissenschaft, der Zivilgesellschaft und der Verwaltung bewertet und priorisiert, um die Bedarfe und Interessen dieser Stakeholder einfließen zu lassen. Die vollständige Liste und Informationen dazu, wie die Datensätze ausgewählt wurden, sind in der [Veröffentlichung "Kerndatensätze für Berlin"](/assets/file-download/ODIS_Kerndatensaetze.pdf) zu finden.
 
-Die Liste der Kerndatensätze wird auf dieser Projektseite bereitgestellt und aktuell gehalten. Sie kann nach **Kategorie** und **Name** sowie der identifizierten oder vermuteten **Institution** sortiert und nach **Stichwörtern** durchsucht werden. 
+Die Liste der Kerndatensätze wird auf dieser Projektseite bereitgestellt und aktuell gehalten. Sie kann nach **Kategorie**, **Titel** sowie der identifizierten oder vermuteten **Institution** sortiert und nach **Stichwörtern** durchsucht werden. 
 
 - Wenn die Daten als maschinenlesbares Open Data bereitgestellt werden, ist ein **offener** Datensatz verlinkt.
-- Wenn die Daten nicht komplett maschinenlesbar, in einem geringeren Detailgrad oder nur verwaltungsintern vorliegen, wird -  wenn möglich - ein **eingeschränkt** zugänglicher Datensatz verlinkt. Die Inhalte der verlinkten Datensätze entsprechen dabei nicht immer komplett unserer Beschreibung des Kerndatensatzes.
+- Wenn die Daten nicht komplett maschinenlesbar, in einem geringeren Detailgrad oder nur verwaltungsintern vorliegen, wird -  wenn möglich - ein **eingeschränkt** zugänglicher Datensatz verlinkt. Das **Infokästchen** gibt detailliertere Hinweise, warum der Datensatz zum Beispiel nur eingeschränkt offen ist oder warum dieser Datensatz nicht veröffentlich werden kann.
 
 <br>
 
@@ -38,15 +40,24 @@ Die Liste der Kerndatensätze wird auf dieser Projektseite bereitgestellt und ak
 
 <br>
 <br>
-Um gegenüber der Stadtgesellschaft transparent zu sein, wo bestimmte Kerndatensätze liegen, wie der Veröffentlichungsprozess läuft und warum eventuell manche Datensätze nicht als Open Data bereitgestellt werden, dokumentiert ODIS die Öffnung der Kerndatensätze und erstellt anhand dieser Datengrundlage Visualisierungen über Berlins Kerndatensätze. 
+Um gegenüber der Stadtgesellschaft transparent zu sein, wie es um den Zugang zu den Kerndatensätzen steht und wie der Veröffentlichungsprozess läuft, dokumentieren wir hier die Öffnung der Kerndatensätze.
 
-Ob ein **Erstgespräch** mit der datenhaltenden Stelle stattgefunden hat oder noch aussteht wird ebenso festgehalten, wie detailliertere Ergebnisse der Gespräche unter der Spalte **Hinweis**, zum Beispiel Gründe warum dieser Datensatz nicht veröffentlich werden kann.
+
+*Einfügen Öffnungsgrad*
 
 ## Gemeinsam öffnen wir die Kerndatensätze
 
-Zum aktuellen Zeitpunkt sind noch nicht alle Kerndatensätze als Open Data verfügbar, aber ODIS und zahlreiche Kolleg:innen in der Berliner Verwaltung arbeiten daran, immer mehr Datensätze für die Öffentlichkeit bereitzustellen. Mit der neuen Open Data Strategie bekommt die Öffnung der Kerndatensätze spürbaren Rückenwind. Gemeinsam mit den Open Data Beauftragten und Open Data in der Senatskanzlei Berlin haben wir seit Inkrafttreten der Strategie bereits erste Gespräche geführt, um zunächst Kerndatensätze zu identifizieren und bestimmten Behörden zuordnen zu können. Im zweiten Schritt prüfen wir mit den datenhaltenden Stellen eine Veröffentlichung. Mit der aktiven Begleitung der Strategiemaßnahme erhoffen wir uns nicht nur neue Datenschätze zu befreien, sondern auch Erkenntnisse darüber zu erlangen, was die Bereitstellung erschwert und was die Bereitstellung offener Daten generell erleichtern kann. Zu gegebenen Zeitpunkt werden wir die wichtigsten Learnings aufbereiten und teilen.
+Zum aktuellen Zeitpunkt sind noch nicht alle Kerndatensätze als Open Data verfügbar, aber ODIS und zahlreiche Kolleg:innen in der Berliner Verwaltung arbeiten daran, immer mehr Datensätze für die Öffentlichkeit bereitzustellen. Mit der neuen Open Data Strategie bekommt die Öffnung der Kerndatensätze spürbaren Rückenwind. Gemeinsam mit den Open Data Beauftragten und Open Data in der Senatskanzlei Berlin haben wir seit Inkrafttreten der Strategie mit den behördlichen Open Data Beauftragten zunächst die Kerndatensätze identifiziert und bestimmtenn Behörden bzw. Institutionen zugeordnet.
 
-Übrigens: Mit unserem Kerndatensatzmemory kannst du Berlins Kerndatensätze spielerisch kennenlernen!
+*Einfügen Grafik Institutionen*
+
+Im zweiten Schritt prüfen wir mit den datenhaltenden Stellen eine Veröffentlichung. Dazu begleiten wir Erstgespräche mit den datenverantwortlichen Stellen, um herauszufinden, ob die Daten überhaupt erhoben werden, wer über die Datenhoheit verfügt, in welcher Qualität die Daten vorliegen und wie die Daten bereitgestellt und aktuell gehalten werden können.
+
+*Einfügen Grafik Erstgespräch*
+
+Mit der aktiven Begleitung der Strategiemaßnahme erhoffen wir uns nicht nur neue Datenschätze zu befreien, sondern auch Erkenntnisse darüber zu erlangen, was die Bereitstellung erschwert und welche Schritte die Verwaltung noch gehen muss, um die Bereitstellung offener Daten zu vereinfachen. Zu gegebenen Zeitpunkt werden wir die wichtigsten Learnings aufbereiten und teilen.
+
+Übrigens: Mit unserem Kerndatensatzmemory kannst du Berlins Kerndatensätze spielerisch kennenlernen! 
 
 <center>
 {% include "macro-image-section-small.html", src:"/assets/images/memory_mallanders.jpeg", caption:"Unser Kerndatensatzmemory im Einsatz im Dialog mit Bürger:innen" %}
@@ -59,5 +70,3 @@ Die Corona-Pandemie hat die Gesellschaft vor ganz neue Herausforderungen gestell
 
 **Wie werden die Tabelle und Abbildungen erstellt?** Die Tabelle wird von ODIS mit [Datawrapper](https://www.datawrapper.de/) erstellt. Die Visualisierungen beziehen ihre Daten direkt aus dieser Tabelle und bleiben so aktuell. Tabelle und Visualisierungen können auch bequem per iFrame in anderen Webseiten eingebunden werden. Durch Klick auf den Button "Einbetten" unter der Tabelle, kann der iFrame-Code kopiert werden.
 Wie sich mit Datawrapper leicht spannende Charts und Tabellen aus eigenen Daten erstellen lassen, wird übrigens in unseren [Videotutorials](https://odis-berlin.de/ressourcen/datenvisualisierung/) erklärt.
-
-https://www.bertelsmann-stiftung.de/de/themen/aktuelle-meldungen/2021/maerz/musterdatenkatalog-schafft-erstmals-uebersicht-ueber-offene-daten-in-deutschlands-kommunen
