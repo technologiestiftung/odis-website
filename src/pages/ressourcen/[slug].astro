@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
-import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
+import ResourcePageHeader from "../../components/ResourcePageHeader.astro";
 import { components } from "@/components/macros/index.astro";
 
 export async function getStaticPaths() {
@@ -23,13 +23,7 @@ const { Content } = await post.render();
   metaTitle={post.data.metaTitle || post.data.title}
   externalLibs={["tableOfContents"]}
 >
-  <PageHeaderWithPhoto
-    title={title}
-    description={description}
-    basePath="ressourcen"
-    image={headerImage}
-    date={date}
-  />
+  <ResourcePageHeader {...post} />
 
   <section aria-label="Beitrag">
     <div class="grid-container">

@@ -17,7 +17,7 @@ const { thumbnail } = media;
 const isVideoAspectRatio = thumbnail.width > thumbnail.height;
 
 type MediaType = Props["data"]["media"]["type"];
-const labelsMap: Record<MediaType, string> = {
+export const labelsMap: Record<MediaType, string> = {
   video: "Videoanleitung",
   pdf: "PDF Dokument",
   blog: "Blogbeitrag",
@@ -25,7 +25,7 @@ const labelsMap: Record<MediaType, string> = {
   project: "Projekt",
   other: "Verschiedenes",
 };
-const linkTextMap: Record<MediaType, string> = {
+export const iconsMap: Record<MediaType, string> = {
   video: "resources/video",
   pdf: "ui/tray-arrow-down",
   blog: "ui/eye",
@@ -112,7 +112,7 @@ const linkTextMap: Record<MediaType, string> = {
           title="Direkter Link zur Ressource"
           download={media.type === "pdf" || media.type === "table"}
         >
-          <Icon name={linkTextMap[media.type]} size={20} />
+          <Icon name={iconsMap[media.type]} size={20} />
         </Button>
       </div>
     </section>
