@@ -1,25 +1,31 @@
 ---
-import ContentSection from "@/components/macros/ContentSection.astro";
+import ContentSection, {
+  type Props as ContentSectionProps,
+} from "@/components/macros/ContentSection.astro";
+import { cn } from "@/utils/classNames";
 import type { HTMLAttributes } from "astro/types";
 
-export type Props = {
+export type Props = ContentSectionProps & {
   url: string;
-  caption?: undefined | string;
-  fullWidth?: boolean | undefined;
-  iframeProps?: undefined | HTMLAttributes<'iframe'>;
-}
+  iframeProps?: undefined | HTMLAttributes<"iframe">;
+};
 
-const { url, caption, fullWidth, iframeProps = {} } = Astro.props;
+const {
+  url,
+  class: className,
+  iframeProps = {},
+  ...contentSectionProps
+} = Astro.props;
 ---
 
-<ContentSection class="sm:px-6" fullWidth={fullWidth} caption={caption}>
-  <iframe
-    class="w-full aspect-video"
-    src={url}
-    title={caption || "Video player"}
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    {...iframeProps}
-  />
+<ContentSection {...contentSectionProps} class={cn("sm:px-6", className)}>
+  <div class="sm:grid-container">
+    <iframe
+      class="w-full aspect-video"
+      src={url}
+      title={contentSectionProps.caption || "Video player"}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      {...iframeProps}></iframe>
+  </div>
 </ContentSection>
-

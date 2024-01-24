@@ -1,24 +1,29 @@
 ---
-import TextLink from '../TextLink.astro';
+import { cn } from "@/utils/classNames";
+import TextLink from "../TextLink.astro";
+import ContentSection, {
+  type Props as ContentSectionProps,
+} from "./ContentSection.astro";
 
-
-export type Props = {
+export type Props = ContentSectionProps & {
   filePath: string;
   downloadLinkText?: undefined | string;
-}
+};
 
-const { filePath, downloadLinkText } = Astro.props;
+const {
+  filePath,
+  downloadLinkText,
+  class: className = "",
+  ...contentSectionProps
+} = Astro.props;
 ---
 
-<object data={filePath} type="application/pdf" class="pdf">
-  <embed src={filePath}>
-    <p>
-      Dieser Browser unterstützt keine PDF-Ansichten.<br />
-      Bitte laden sich das PDF runter, um es anzusehen.
-      <TextLink tag='a' href={filePath} download>
-        {downloadLinkText || 'PDF herunterladen'}
-      </TextLink>
-    </p>
-  </embed>
-</object>
-
+<ContentSection {...contentSectionProps} class={cn(className)}>
+  <div class="sm:grid-container">
+    <iframe
+      src={`http://docs.google.com/gview?url=${Astro.site}${filePath.replace("/", "")}&embedded=true`}
+      class="aspect-[9/13] lg:aspect-square w-full"
+    >
+    </iframe>
+  </div>
+</ContentSection>

@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/d3": "4.13.0",
+    "astro-icon": "1.0.2",
     "gray-matter": "4.0.3",
     "prettier-plugin-astro": "0.12.3",
     "sharp": "0.33.2",

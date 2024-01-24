@@ -3,14 +3,20 @@ import { cn } from "../../utils/classNames";
 
 export type Props = {
   class?: string | undefined;
+  wrapperClass?: string | undefined;
   caption?: string | undefined;
   fullWidth?: boolean | undefined;
 };
 
-const { class: className, caption, fullWidth = true } = Astro.props;
+const {
+  class: className,
+  wrapperClass,
+  caption,
+  fullWidth = true,
+} = Astro.props;
 ---
 
-<section class="mt-10 pt-6">
+<section class={cn("mt-10 pt-6", wrapperClass)}>
   <div
     class={cn(
       `bg-bg py-4 sm:py-6`,

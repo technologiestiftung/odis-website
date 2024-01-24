@@ -16,7 +16,11 @@ export default [
     label: "Aktuelles",
   },
   {
-    slug: "kontakt",
+    slug: "ressourcen",
+    label: "Ressourcen",
+  },
+  {
+    slug: "contact",
     label: "Kontakt",
   },
 ];
