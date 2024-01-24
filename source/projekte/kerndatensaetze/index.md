@@ -28,64 +28,7 @@ Die vollständige Liste und Informationen dazu, wie die Datensätze ausgewählt 
 
 <br>
 
-<table id='kerndatentable' class="display">
-<thead>
-<tr>
-<th>Kategorie</th>
-<th>Datensatz</th>
-<th>Beschreibung</th>
-<th>offen</th>
-<th>Link</th>
-</tr>
-</thead>
-{% for row in processed_kerndatensaetze %}
-{% tablerow pair in row %}
-{{ pair }}
-{% endtablerow %}
-{% endfor %}
-</table>
-
-<script>
-$('#kerndatentable').DataTable( {
-    language: {
-      search: 'Stichwortsuche ',
-      lengthMenu: 'Zeige _MENU_ Einträge pro Seite',
-      info: 'Zeige _START_ bis _END_ von _TOTAL_ Einträgen',
-      paginate: {
-        first: 'Erste',
-        previous:'Vorherige',
-        next:'Nächste',
-        last:'Letzte'
-      }
-    },
-    "columnDefs": [
-    { "orderable": false, "targets": [2,4] },
-    { className: "bold", "targets": [1] },
-    // { "width": "100%", "targets": [2] },
-    {"className": "dt-center", "targets": 3}
-  ],
-    initComplete: function () {
-        this.api().columns([0,3]).every( function () {
-            var column = this;
-            var select = $('<select><option value="">Alle</option></select>')
-                .appendTo( $(column.header()))
-                .on( 'change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex(
-                        $(this).val()
-                    );               
-                    column
-                        .search( val ? '^'+val+'$' : '', true, false )
-                        .draw();
-                } );
-
-            column.data().unique().sort().each( function ( d, j ) {
-                select.append('<option value="' + d + '">' + d.substr(0,30) + '</option>')
-                //var val = $('<div/>').html(d.substr(0,35)).text();
-                //select.append( '<option value="' + val + '">' + val + '</option>' );
-            } );
-        } );
-    }
-} );
+<iframe title="Kerndatensätze" aria-label="Tabelle" id="datawrapper-chart-0xCZQ" src="https://datawrapper.dwcdn.net/0xCZQ/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="597" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>
 
 <br>
