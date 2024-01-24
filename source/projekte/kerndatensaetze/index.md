@@ -33,10 +33,12 @@ Knapp drei Jahre später bildet die Öffnung der Kerndatensätze eine konkrete M
 
 Kerndatensätze sind Datensätze, die wir als besonders wertvoll für Berlin bewertet haben, weil sie einen großen Mehrwert für ein breites Publikum liefern können. Die Grundlage der Kerndatensätze bildet der [Musterdatenkatalog NRW](https://www.bertelsmann-stiftung.de/de/themen/aktuelle-meldungen/2021/maerz/musterdatenkatalog-schafft-erstmals-uebersicht-ueber-offene-daten-in-deutschlands-kommunen). Anhand dessen haben wir für Berlin relevante Daten im Dialog mit der Wirtschaft, der Wissenschaft, der Zivilgesellschaft und der Verwaltung bewertet und priorisiert, um die Bedarfe und Interessen dieser Stakeholder einfließen zu lassen. Die vollständige Liste und Informationen dazu, wie die Datensätze ausgewählt wurden, sind in der [Veröffentlichung "Kerndatensätze für Berlin"](/assets/file-download/ODIS_Kerndatensaetze.pdf) zu finden.
 
-Die Liste der Kerndatensätze wird auf dieser Projektseite bereitgestellt und aktuell gehalten. Sie kann nach **Kategorie**, **Titel** sowie der identifizierten oder vermuteten **Institution** sortiert und nach **Stichwörtern** durchsucht werden. 
+Die Liste der Kerndatensätze wird auf dieser Projektseite bereitgestellt und aktuell gehalten. Sie kann nach allen Spaltentitel wie **Kategorie**, **Titel** oder der identifizierten oder vermuteten **Institution** sortiert und nach **Stichwörtern** durchsucht werden. 
 
 - Wenn die Daten als maschinenlesbares Open Data bereitgestellt werden, ist ein **offener** Datensatz verlinkt.
-- Wenn die Daten nicht komplett maschinenlesbar, in einem geringeren Detailgrad oder nur verwaltungsintern vorliegen, wird -  wenn möglich - ein **eingeschränkt** zugänglicher Datensatz verlinkt. Das **Infokästchen** gibt detailliertere Hinweise, warum der Datensatz zum Beispiel nur eingeschränkt offen ist oder warum dieser Datensatz nicht veröffentlich werden kann.
+- Wenn die Daten nicht komplett maschinenlesbar, in einem geringeren Detailgrad oder nur verwaltungsintern vorliegen, wird -  wenn möglich - ein **eingeschränkt** zugänglicher Datensatz verlinkt. 
+
+Das **Infokästchen** gibt detailliertere Hinweise, warum der Datensatz zum Beispiel nur eingeschränkt offen ist oder warum dieser Datensatz nicht veröffentlich werden kann.
 <br>
 
 <iframe title="100 Berliner Kerndatensätze" aria-label="Tabelle" id="datawrapper-chart-uwEE0" src="https://datawrapper.dwcdn.net/uwEE0/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="735" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
@@ -45,6 +47,11 @@ Die Liste der Kerndatensätze wird auf dieser Projektseite bereitgestellt und ak
 <br>
 <br>
 
+
+
+
+## Gemeinsam öffnen wir die Kerndatensätze
+
 Um gegenüber der Stadtgesellschaft transparent zu sein, wie es um den Zugang zu den Kerndatensätzen steht und wie der Veröffentlichungsprozess läuft, dokumentieren wir den Öffnungsgrad der Kerndatensätze.
 <br>
 
@@ -52,9 +59,6 @@ Um gegenüber der Stadtgesellschaft transparent zu sein, wie es um den Zugang zu
 </script>
 <br>
 <br>
-
-
-## Gemeinsam öffnen wir die Kerndatensätze
 
 Zum aktuellen Zeitpunkt sind noch nicht alle Kerndatensätze als Open Data verfügbar, aber ODIS und zahlreiche Kolleg:innen in der Berliner Verwaltung arbeiten daran, immer mehr Datensätze für die Öffentlichkeit bereitzustellen. Mit der neuen Open Data Strategie bekommt die Öffnung der Kerndatensätze spürbaren Rückenwind. Gemeinsam mit den Open Data Beauftragten und Open Data in der Senatskanzlei Berlin haben wir seit Inkrafttreten der Strategie mit den behördlichen Open Data Beauftragten zunächst die Kerndatensätze identifiziert und bestimmtenn Behörden bzw. Institutionen zugeordnet.
 <br>
