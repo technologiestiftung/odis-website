@@ -69,8 +69,12 @@ Zum aktuellen Zeitpunkt sind noch nicht alle Kerndatensätze als Open Data verf�
 <br>
 
 Im zweiten Schritt prüfen wir mit den datenhaltenden Stellen eine Veröffentlichung. Dazu begleiten wir Erstgespräche mit den datenverantwortlichen Stellen, um herauszufinden, ob die Daten überhaupt erhoben werden, wer über die Datenhoheit verfügt, in welcher Qualität die Daten vorliegen und wie die Daten bereitgestellt und aktuell gehalten werden können.
+<br>
 
-*Einfügen Grafik Erstgespräch*
+<iframe title="Geführte und ausstehend Gespräche" aria-label="Torten-diagramm" id="datawrapper-chart-2WOfL" src="https://datawrapper.dwcdn.net/2WOfL/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="443" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
+<br>
+<br>
 
 Mit der aktiven Begleitung der Strategiemaßnahme erhoffen wir uns nicht nur neue Datenschätze zu befreien, sondern auch Erkenntnisse darüber zu erlangen, was die Bereitstellung erschwert und welche Schritte die Verwaltung noch gehen muss, um die Bereitstellung offener Daten zu vereinfachen. Zu gegebenen Zeitpunkt werden wir die wichtigsten Learnings aufbereiten und teilen.
 
