@@ -7,6 +7,7 @@ import { cn } from "@/utils/classNames";
 import type { JSX } from "astro/jsx-runtime";
 import { Icon } from "astro-icon/components";
 import Button from "./Button.astro";
+import ResourceInfo, { iconsMap } from "./ResourceInfo.astro";
 
 export type Props = CollectionEntry<"resources">;
 
@@ -15,24 +16,6 @@ const { title, description, question, media } = data;
 const { thumbnail } = media;
 
 const isVideoAspectRatio = thumbnail.width > thumbnail.height;
-
-type MediaType = Props["data"]["media"]["type"];
-export const labelsMap: Record<MediaType, string> = {
-  video: "Videoanleitung",
-  pdf: "PDF Dokument",
-  blog: "Blogbeitrag",
-  table: "Datensatz",
-  project: "Projekt",
-  other: "Verschiedenes",
-};
-export const iconsMap: Record<MediaType, string> = {
-  video: "resources/video",
-  pdf: "ui/tray-arrow-down",
-  blog: "ui/eye",
-  table: "ui/tray-arrow-down",
-  project: "ui/eye",
-  other: "ui/eye",
-};
 ---
 
 <article
@@ -91,18 +74,7 @@ export const iconsMap: Record<MediaType, string> = {
         isVideoAspectRatio && "@sm:col-span-2",
       )}
     >
-      <div class="flex flex-col">
-        <Paragraph class="flex justify-between mb-0">
-          <span>{labelsMap[media.type]}</span>
-          <Icon name={`resources/${media.type}`} size={20} />
-        </Paragraph>
-        {
-          media.readingOrPlayingTime && (
-            <Paragraph class="mb-0">{media.readingOrPlayingTime}</Paragraph>
-          )
-        }
-        {media.size && <Paragraph class="mb-0">{media.size}</Paragraph>}
-      </div>
+      <ResourceInfo {...media} />
       <div class="pb-4">
         <Button
           tag="a"

@@ -1,13 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import { cn } from "../utils/classNames";
-import Heading from "./Heading.astro";
-import Paragraph from "./Paragraph.astro";
-import ArrowLeft from "./icons/ArrowLeft.astro";
+import { cn } from "@/utils/classNames";
+import Heading from "@/components/Heading.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import ArrowLeft from "@/components/icons/ArrowLeft.astro";
 import type { CollectionEntry } from "astro:content";
-import Button from "./Button.astro";
+import Button from "@/components/Button.astro";
 import { Icon } from "astro-icon/components";
-import { iconsMap, labelsMap } from "./ResourceCard.astro";
+import { iconsMap, labelsMap } from "@/components/ResourceInfo.astro";
 
 export type Props = CollectionEntry<"resources"> & {
   class?: string;
