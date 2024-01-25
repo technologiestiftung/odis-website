@@ -1,11 +1,7 @@
 ---
-import { cn } from "@/utils/classNames";
-import ContentSection, {
-  type Props as ContentSectionProps,
-} from "@/components/macros/ContentSection.astro";
-import Button from "@/components/Button.astro";
-import ResourceInfo from "../ResourceInfo.astro";
+import { type Props as ContentSectionProps } from "@/components/macros/ContentSection.astro";
 import type { CollectionEntry } from "astro:content";
+import MediaSection from "./MediaSection.astro";
 
 export type Props = ContentSectionProps & {
   filePath: string;
@@ -22,24 +18,15 @@ const {
 } = Astro.props;
 ---
 
-<ContentSection {...contentSectionProps} class={cn(`not-prose`, className)}>
-  <div class="sm:grid-container">
-    <iframe
-      src={`http://docs.google.com/gview?url=${Astro.site}${filePath.replace("/", "")}&embedded=true`}
-      class="aspect-[9/13] lg:aspect-square w-full bg-discrete border border-discrete"
-    >
-    </iframe>
-    <div
-      class={cn(
-        `lg:col-span-6 lg:col-start-2 xl:col-span-10 xl:col-start-2`,
-        `mb-8 border-b border-discrete pb-8 flex flex-wrap gap-6 justify-between`,
-        `items-center`,
-      )}
-    >
-      {mediaMetadata && <ResourceInfo {...mediaMetadata} />}
-      <Button tag="a" href={Astro.site + filePath} download>
-        {downloadLinkText || "Download"}
-      </Button>
-    </div>
-  </div>
-</ContentSection>
+<MediaSection
+  isDownloadable
+  buttonLink={Astro.site + filePath}
+  buttonText={downloadLinkText || "Download"}
+  mediaMetadata={mediaMetadata}
+  {...contentSectionProps}
+>
+  <iframe
+    src={`http://docs.google.com/gview?url=${Astro.site}${filePath.replace("/", "")}&embedded=true`}
+    class="aspect-[9/13] lg:aspect-square w-full bg-discrete border border-discrete"
+  ></iframe>
+</MediaSection>

@@ -1,0 +1,51 @@
+---
+import { cn } from "@/utils/classNames";
+import ContentSection, {
+  type Props as ContentSectionProps,
+} from "@/components/macros/ContentSection.astro";
+import Button from "@/components/Button.astro";
+import ResourceInfo from "../ResourceInfo.astro";
+import type { CollectionEntry } from "astro:content";
+
+export type Props = ContentSectionProps & {
+  buttonText?: undefined | string;
+  buttonLink?: undefined | string;
+  mediaMetadata?: CollectionEntry<"resources">["data"]["media"];
+  isDownloadable?: boolean;
+};
+
+const {
+  buttonText,
+  buttonLink,
+  class: className = "",
+  mediaMetadata,
+  isDownloadable = false,
+  ...contentSectionProps
+} = Astro.props;
+---
+
+<ContentSection {...contentSectionProps} class={cn(`not-prose`, className)}>
+  <div class="sm:grid-container">
+    <div aria-label="Medienvorschau">
+      <slot />
+    </div>
+    {
+      (mediaMetadata || (buttonLink && buttonText)) && (
+        <div
+          class={cn(
+            `lg:col-span-6 lg:col-start-2 xl:col-span-10 xl:col-start-2`,
+            `mb-8 border-b border-discrete pb-8 flex flex-wrap gap-6 justify-between`,
+            `items-center`,
+          )}
+        >
+          {mediaMetadata && <ResourceInfo {...mediaMetadata} />}
+          {buttonText && buttonLink && (
+            <Button tag="a" href={buttonLink} download={isDownloadable}>
+              {buttonText}
+            </Button>
+          )}
+        </div>
+      )
+    }
+  </div>
+</ContentSection>

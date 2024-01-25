@@ -9,7 +9,7 @@ media:
   thumbnail: ./images/Dateninformationsblatt.webp
   type: table
   size: 0.1 MB
-  link: /file-download/Dateninformationsblatt_v2.pdf
+  link: /file-download/Dateninformationsblatt_v2.xlsx
 ---
 
 import Dateninformationsblatt from '@/components/pageSpecific/Dateninformationsblatt.astro'
@@ -25,11 +25,13 @@ Die Informationen, die über einen Datensatz geführt werden sollten, lassen sic
 
 In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabellarisch im Detail beschrieben. Diese Vorlage kann für räumliche sowie nicht-räumliche Daten benutzt werden. Die hier gezeigten Eintragungen zum Kleingartenbestand in Tempelhof-Schöneberg dienen der Veranschaulichung und stellen ein fiktives Beispiel dar. Die Vorlage steht in verschiedenen Dateiformaten (Excel und CSV) zum Download zur Verfügung und ist am Ende dieser Seite verlinkt.
 
-<ContentSection>
-  <div class="container mx-auto sm:px-6">
-    <Dateninformationsblatt />
-  </div>
-</ContentSection>
+<MediaSection
+  mediaMetadata={frontmatter.media}
+  buttonText="Download als Excel-Tabelle"
+  buttonLink="/file-download/Dateninformationsblatt_v2.xlsx"
+>
+  <Dateninformationsblatt />
+</MediaSection>
 
 ## Download
 

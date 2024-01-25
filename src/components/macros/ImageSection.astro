@@ -7,6 +7,7 @@ export type Props = {
   alt?: string;
   withShadow?: boolean;
   fullWidth?: boolean;
+  class?: undefined | string;
 };
 
 const {
@@ -15,14 +16,15 @@ const {
   caption,
   withShadow = false,
   fullWidth = false,
+  class: className,
 } = Astro.props;
-
 ---
 
 <figure
   class={cn(
     "mt-10 mb-0",
     fullWidth && "sm:w-screen sm:max-w-[100vw]  sm:ml-[var(--contentOffset)]",
+    className,
   )}
 >
   <div class={cn("relative")}>
