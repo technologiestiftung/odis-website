@@ -5,8 +5,8 @@ title: Berlins Kerndatensätze
 metaDescription: Wir schaffen Zugang zu relevanten Datensätzen für die Stadtgesellschaft
 date: 2023-01-30
 visible: true
-indexImage: thumbnail.png
-heroImage: home_globe.png
+indexImage: kerndatensätze_thumbnail.png
+heroImage: kerndatensätze_hero.png
 ---
 
 # Offene Daten für mehr Teilhabe und Transparenz
