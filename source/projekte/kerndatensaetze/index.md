@@ -35,9 +35,9 @@ Kerndatensätze sind Datensätze, die wir als besonders wertvoll für Berlin bew
 Die Liste der Kerndatensätze wird auf dieser Projektseite bereitgestellt und aktuell gehalten. Sie kann nach allen Spaltentitel wie **Kategorie**, **Titel** oder der identifizierten oder vermuteten **Institution** sortiert und nach **Stichwörtern** durchsucht werden. 
 
 - Wenn die Daten als maschinenlesbares Open Data bereitgestellt werden, ist ein **offener** Datensatz verlinkt.
-- Wenn die Daten nicht komplett maschinenlesbar, in einem geringeren Detailgrad oder nur verwaltungsintern vorliegen, wird -  wenn möglich - ein **eingeschränkt** zugänglicher Datensatz verlinkt. 
+- Wenn die Daten nicht komplett maschinenlesbar, in einem geringeren Detailgrad oder nur verwaltungsintern vorliegen, wird -  wenn möglich - ein **beschränkt** zugänglicher Datensatz verlinkt. 
 
-Das **Infokästchen** gibt detailliertere Hinweise, warum der Datensatz zum Beispiel nur eingeschränkt offen ist oder wie der aktuelle Stand beim Öffnungsprozess ist.
+Das **Infokästchen** gibt detailliertere Hinweise, warum der Datensatz zum Beispiel nur beschränkt offen ist oder wie der aktuelle Stand beim Öffnungsprozess ist.
 <br>
 <br>
 
