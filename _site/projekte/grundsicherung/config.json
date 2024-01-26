@@ -1,0 +1,107 @@
+{
+  "colors":["#6cb2df", "#213A8F", "#E60032"],
+  "content":[
+    {
+      "title": ["Grundsicherung gesamte Bevölkerung"],
+      "nav": ["Gesamt"],
+      "description": ["Empfänger:innen von Grundsicherung in % der jeweilig spezifizierten Bevölkerungsgruppe."],
+      "maps":[
+        {
+          "title": ["Grundsicherung der gesamten Bevölkerung"],
+          "nav": ["Gesamt"],
+          "description": ["Diese Karte zeigt den Anteil Empfänger:innen (unabhängig von der Staatsbürgerschaft) von Grundsicherung, sowohl im Alter, als auch bei Erwerbsminderung, bezogen auf die gleichaltrige Bevölkerungsgruppe auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume).<br> <br> Wie auf der Karte dargestellt, erhalten <b>beispielsweise 2.14% aller Einwohner:innen im LOR „Alexanderplatzviertel” Grundsicherung.</b> "],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "Bevölkerung insgesamt",
+          "legend": ["% Grunsicherungsempfänger:innen"]
+        },
+        {
+          "title": ["Grundsicherung im Alter"],
+          "nav": ["Im Alter"],
+          "description": ["Diese Karte zeigt den Anteil Empfänger:innen (ab 65 Jahren, unabhängig von der Staatsbürgerschaft) von Grundsicherung im Alter bezogen auf die gleichaltrige Bevölkerungsgruppe auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume).<br> <br> Wie auf der Karte dargestellt, erhalten <b>beispielsweise 8,31% aller Einwohner:innen ab 65 Jahren im LOR „Alexanderplatzviertel” Grundsicherung im Alter.</b>"],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "ab 65 Jahre insgesamt",
+          "legend": ["% Grunsicherungsempfänger:innen"]
+        },
+        {
+          "title": ["Grundsicherung bei Erwerbsminderung"],
+          "nav": ["Erwerbsminderung"],
+          "description": ["Diese Karte zeigt den Anteil Empfänger:innen (18-64 Jährige, unabhängig von der Staatsbürgerschaft) von Grundsicherung bei Erwerbsminderung bezogen auf die gleichaltrige Bevölkerungsgruppe auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume). <br> <br> Wie auf der Karte dargestellt, erhalten <b>beispielsweise 0,9% aller Einwohner:innen zwischen 18 - 64 Jahren im LOR „Alexanderplatzviertel” Grundsicherung bei Erwerbsminderung.</b> <br> <br> Einige Planungsräume sind unbewohnt. Sie sind auf der Karte grau hinterlegt."],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "18-64 Jahre insgesamt",
+          "legend": ["% Grunsicherungsempfänger:innen"]
+        }
+      ] 
+    },
+    {
+      "title": ["Grundsicherung deutsche Bevölkerung"],
+      "nav": ["Deutsche Staatsbürgerschaft"],
+      "description": ["Beschreibung deutsche Staatsbürgerschaft"],
+      "maps":[
+        {
+          "title": ["Gesamte Grundsicherung deutscher Empfänger:innen"],
+          "nav": ["Gesamt"],
+          "description": ["Diese Karte zeigt den Anteil deutscher Empfänger:innen von Grundsicherung sowohl im Alter, als auch bei Erwerbsminderung, bezogen auf die gleichaltrige Bevölkerungsgruppe auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume).<br> <br>Wie auf der Karte dargestellt, erhalten <b>beispielsweise 2,72% aller Einwohner:innen mit einem deutschen Pass im LOR „Alexanderplatzviertel” Grundsicherung im Alter.</b>"],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "Deutsche insgesamt",
+          "legend": ["% Grunsicherungsempfänger:innen"]
+        },
+        {
+          "title": ["Grundsicherung im Alter deutscher Empfänger:innen"],
+          "nav": ["Im Alter"],
+          "description": ["Diese Karte zeigt den Anteil deutscher Empfänger:innen (ab 65 Jahren) von Grundsicherung im Alter bezogen auf die gleichaltrige Bevölkerungsgruppe auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume).<br> <br>Wie auf der Karte dargestellt, erhalten <b>beispielsweise 6,99% aller Einwohner:innen ab 65 Jahren und mit einem deutschen Pass im LOR „Alexanderplatzviertel” Grundsicherung im Alter.</b>"],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "ab 65 Jahre Deutsche",
+          "legend": ["% Grunsicherungsempfänger:innen"]
+        },
+        {
+          "title": ["Grundsicherung bei Erwerbsminderung deutscher Empfänger:innen"],
+          "nav": ["Erwerbsminderung"],
+          "description": ["Diese Karte zeigt den Anteil deutscher Empfänger:innen (18-64 Jährige) von Grundsicherung bei Erwerbsminderung bezogen auf die gelichaltrige Bevölkerungsgruppe auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume).<br> <br> Wie auf der Karte dargestellt, erhalten <b>beispielsweise 1,32% aller Einwohner:innen zwischen 18 - 64 Jahren und mit einem deutschen Pass im LOR „Alexanderplatzviertel” Grundsicherung bei Erwerbsminderung.</b> <br> <br> Einige Planungsräume sind unbewohnt. Sie sind auf der Karte grau hinterlegt."],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "18-64 Jahre Deutsche",
+          "legend": ["% Grunsicherungsempfänger:innen"]
+        }
+      ]
+    },
+    {
+      "title": ["Grundsicherung Bevölkerung mit ausländischer Staatsbürgerschaft"],
+      "nav": ["Ausländische Staatsbürgerschaft"],
+      "description": ["Beschreibung ausländische Staatsbürgerschaft"],
+      "maps":[
+        {
+          "title": ["Gesamte Grundsicherung Empfänger:innen ausländischer Staatsbürgerschaft"],
+          "nav": ["Gesamt"],
+          "description": ["Diese Karte zeigt den Anteil ausländischer Empfänger:innen von Grundsicherung sowohl im Alter, als auch bei Erwerbsminderung, bezogen auf die gleichaltrige Bevölkerungsgruppe auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume).<br> <br> Wie auf der Karte dargestellt, erhalten <b>beispielsweise 1,15% aller Einwohner:innen ohne deutsche Staatsbürgerschaft im LOR „Alexanderplatzviertel” Grundsicherung.</b>"],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "Ausländer insgesamt",
+          "legend": ["% Grunsicherungsempfänger:innen"]
+        },
+        {
+          "title": ["Grundsicherung im Alter Empfänger:innen ausländischer Staatsbürgerschaft"],
+          "nav": ["Im Alter"],
+          "description": ["Diese Karte zeigt den Anteil ausländischer Empfänger:innen (ab 65 Jahren) von Grundsicherung im Alter bezogen auf die gleichaltrige Bevölkerungsgruppe auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume).<br> <br> Wie auf der Karte dargestellt, erhalten <b>beispielsweise 25,23% aller Einwohner:innen ohne deutsche Staatsbürgerschaft ab 65 Jahren im LOR „Alexanderplatzviertel” Grundsicherung im Alter.</b>"],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "ab 65 Jahre Ausländer",
+          "legend": ["% Grunsicherungsempfänger:innen"]
+        },
+        {
+          "title": ["Grundsicherung bei Erwerbsminderung Empfänger:innen ausländischer Staatsbürgerschaft"],
+          "nav": ["Erwerbsminderung"],
+          "description": ["Diese Karte zeigt den Anteil ausländischer Empfänger:innen (18-64 Jährige) von Grundsicherung bei Erwerbsminderung bezogen auf die gleichaltrige Bevölkerungsgruppe auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume).<br> <br> Wie auf der Karte dargestellt, erhalten <b>beispielsweise 0,34% aller Einwohner:innen ohne deutsche Staatsbürgerschaft zwischen 18 - 64 Jahren im LOR „Alexanderplatzviertel” Grundsicherung bei Erwerbsminderung.</b> <br> <br> Einige Planungsräume sind unbewohnt. Sie sind auf der Karte grau hinterlegt."],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "18-64 Jahre Ausländer",
+          "legend": ["% Grunsicherungsempfänger:innen"]
+        }
+      ]
+    }
+  ]
+}
