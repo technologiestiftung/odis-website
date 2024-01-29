@@ -51,7 +51,7 @@ const { Content } = await post.render();
                   Umsetzung
                 </Heading>
                 <dd class="mb-8">
-                  <Paragraph>{status}</Paragraph>
+                  <Paragraph>{period}</Paragraph>
                 </dd>
               </>
             )
@@ -102,7 +102,9 @@ const { Content } = await post.render();
                   GitHub
                 </Heading>
                 <dd class="mb-8">
-                  <TextLink tag="a" href={gitHubLink}>Code auf GitHub</TextLink>
+                  <TextLink tag="a" href={gitHubLink}>
+                    Code auf GitHub
+                  </TextLink>
                 </dd>
               </>
             )
