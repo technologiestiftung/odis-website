@@ -26,6 +26,6 @@ export const collectionSchema = ({ image }: SchemaContext) =>
 export const buttonSchema = z.object({
   text: z.string(),
   link: z.string(),
-  variant: z.enum(["pirmary", "secondary"]),
+  variant: z.enum(["pirmary", "secondary"]).default("pirmary"),
   inverted: z.boolean().default(false),
 });

@@ -20,7 +20,7 @@ const focusStyles =
     <WimmelBild />
   </div>
 
-  <div class="swiper mb-4 w-full lg:hidden" aria-hidden="true">
+  <div class="swiper mb-4 lg:hidden w-full" aria-hidden="true">
     <div class="swiper-wrapper flex flex-nowrap items-end" aria-hidden="true">
       {
         highlightedDatasets.map((dataset) => {
@@ -40,26 +40,32 @@ const focusStyles =
     </div>
   </div>
 
-  <div class="flex flex-wrap gap-y-4 lg:hidden">
+  <div
+    class="flex flex-wrap gap-y-4 lg:hidden sm:w-[calc(100%+8rem)] sm:-ml-16"
+  >
+    <div class="w-full flex justify-between order-first">
+      <button class={`swiper-button-prev ${focusStyles}`}></button>
+      <button class={`swiper-button-next ${focusStyles}`}></button>
+    </div>
     <div id="highlighted-datasets" class="w-full">
       {
         highlightedDatasets.map((dataset, index) => (
           <div
             data-highlighted-dataset-index={index}
             data-highlighted-dataset-id={dataset.id}
-            class="hidden px-12 relative"
+            class="hidden !px-0 relative w-full "
           >
             <h2
               id={`${dataset.id}-title`}
-              class="text-xl font-bold text-headlines"
+              class="text-xl font-bold text-headlines px-8 sm:px-16"
             >
               {dataset.title}
             </h2>
-            <div class="absolute -top-12 left-1/2 -translate-x-1/2 text-center lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:text-left lg:px-0 lg:my-2 w-full px-12 text-sm">
+            <div class="absolute -top-12 left-1/2 -translate-x-1/2 lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:text-left lg:px-0 lg:my-2 w-full px-8 sm:px-16 text-sm flex">
               {dataset.url ? (
                 <a
                   href={dataset.url}
-                  class="text-links hover-hover:hover:text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-1 items-center"
+                  class="text-links hover-hover:hover:text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-3 items-center"
                 >
                   <Icon
                     name="ui/external-link"
@@ -68,182 +74,223 @@ const focusStyles =
                   Zum Datensatz
                 </a>
               ) : (
-                <p class="text-[var(--red)] font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-1 items-center">
+                <p class="text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-3 items-center">
                   <Icon name="ui/lock" class="inline-block w-6 h-auto" />
                   Datensatz geschlossen
                 </p>
               )}
             </div>
-            <p id={`${dataset.id}-description`} class="my-2">
+            <p
+              id={`${dataset.id}-description`}
+              class="my-2 px-8 sm:px-16 w-full"
+            >
               {dataset.description}
             </p>
-            {dataset.example_usage && (
-              <Button
-                tag="a"
-                href={dataset.example_usage}
-                target="_blank"
-                class="w-full text-center !mt-4"
-              >
-                Beispiel-Anwendung
-              </Button>
-            )}
-            {!dataset.url && (
-              <Button tag="a" href="/journey" class="w-full text-center !mt-4">
-                Wie ODIS Daten öffnet
-              </Button>
-            )}
+            <div class="px-8 sm:px-16">
+              {dataset.example_usage && (
+                <Button
+                  tag="a"
+                  href={dataset.example_usage}
+                  target="_blank"
+                  class="!mt-4"
+                >
+                  Beispiel-Anwendung
+                </Button>
+              )}
+              {!dataset.url && (
+                <Button tag="a" href="/journey" class="!mt-4">
+                  Wie ODIS Daten öffnet
+                </Button>
+              )}
+            </div>
           </div>
         ))
       }
     </div>
-    <div class="w-full px-6 flex justify-between order-first">
-      <button class={`swiper-button-prev ${focusStyles}`}></button>
-      <button class={`swiper-button-next ${focusStyles}`}></button>
-    </div>
   </div>
+</section>
 
-  <script is:inline src="https://unpkg.com/@popperjs/core@2"></script>
-  <script is:inline src="https://unpkg.com/tippy.js@6"></script>
-  <script>
-    import tippy from "tippy.js";
-    import "tippy.js/dist/tippy.css";
+<script is:inline src="https://unpkg.com/@popperjs/core@2"></script>
+<script is:inline src="https://unpkg.com/tippy.js@6"></script>
+<script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
 
-    import Swiper from "swiper";
-    import "swiper/swiper-bundle.css";
+  import Swiper from "swiper";
+  import "swiper/swiper-bundle.css";
 
-    const highlightedDatasetsList = (document
-      .getElementById("highlighted-datasets")
-      ?.querySelectorAll("div[data-highlighted-dataset-index]") ||
-      []) as HTMLElement[];
+  const highlightedDatasetsList = (document
+    .getElementById("highlighted-datasets")
+    ?.querySelectorAll("div[data-highlighted-dataset-index]") ||
+    []) as HTMLElement[];
 
-    /*
+  /*
     ------------------------------------------------------------
     SLIDER (mobile screen sizes)
     ------------------------------------------------------------
     */
-    const INITIAL_SLIDE_INDEX = 1;
+  const INITIAL_SLIDE_INDEX = 1;
 
-    const swiper = new Swiper(".swiper", {
-      slidesPerView: 1.4,
-      spaceBetween: 24,
-      breakpoints: {
-        480: {
-          slidesPerView: 1.8,
-          spaceBetween: 40,
-        },
-        640: {
-          slidesPerView: 2.2,
-          spaceBetween: 48,
-        },
+  const swiper = new Swiper(".swiper", {
+    slidesPerView: 1.4,
+    spaceBetween: 24,
+    breakpoints: {
+      480: {
+        slidesPerView: 1.8,
+        spaceBetween: 40,
       },
-      initialSlide: INITIAL_SLIDE_INDEX,
-      centeredSlides: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      640: {
+        slidesPerView: 2.2,
+        spaceBetween: 48,
       },
-      a11y: {
-        nextSlideMessage: "Nächster Datensatz",
-        prevSlideMessage: "Vorheriger Datensatz",
-      },
+    },
+    initialSlide: INITIAL_SLIDE_INDEX,
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    a11y: {
+      nextSlideMessage: "Nächster Datensatz",
+      prevSlideMessage: "Vorheriger Datensatz",
+    },
+  });
+
+  const initialInfoElement = [...highlightedDatasetsList][INITIAL_SLIDE_INDEX];
+  const initialSlide = swiper.slides[INITIAL_SLIDE_INDEX];
+
+  if (initialInfoElement && initialSlide) {
+    initialInfoElement.classList.remove("hidden");
+    alignHorizontally(initialInfoElement, initialSlide as HTMLElement);
+  }
+
+  swiper.on("transitionEnd", function (swiper) {
+    [...highlightedDatasetsList].forEach((element) => {
+      const isActive =
+        element.dataset.highlightedDatasetIndex ===
+        `${Number(swiper.activeIndex)}`;
+
+      element.classList.toggle("hidden", !isActive);
+
+      if (isActive) {
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        alignHorizontally(element, activeSlide as HTMLElement);
+      }
     });
+  });
 
-    const initialInfoElement = [...highlightedDatasetsList][
-      INITIAL_SLIDE_INDEX
-    ];
-    const initialSlide = swiper.slides[INITIAL_SLIDE_INDEX];
-
-    if (initialInfoElement && initialSlide) {
-      initialInfoElement.classList.remove("hidden");
-      alignHorizontally(initialInfoElement, initialSlide as HTMLElement);
-    }
-
-    swiper.on("transitionEnd", function (swiper) {
-      [...highlightedDatasetsList].forEach((element) => {
-        const isActive =
-          element.dataset.highlightedDatasetIndex ===
-          `${Number(swiper.activeIndex)}`;
-
-        element.classList.toggle("hidden", !isActive);
-
-        if (isActive) {
-          const activeSlide = swiper.slides[swiper.activeIndex];
-          alignHorizontally(element, activeSlide as HTMLElement);
-        }
-      });
-    });
-
-    /*
+  /*
       ------------------------------------------------------------
       WIMMELBILD (medium and large screen sizes)
       ------------------------------------------------------------
       */
-    const wimmelbildSvg = document.getElementById("wimmelbild");
-    wimmelbildSvg?.setAttribute("role", "list");
+  const wimmelbildSvg = document.getElementById("wimmelbild");
+  wimmelbildSvg?.setAttribute("role", "list");
 
-    const wimmelbildGroups = (document.querySelectorAll("#wimmelbild > g") ||
-      []) as NodeListOf<HTMLElement>;
+  const wimmelbildGroups = (document.querySelectorAll("#wimmelbild > g") ||
+    []) as NodeListOf<HTMLElement>;
 
-    wimmelbildGroups.forEach((group) => {
-      group.setAttribute("tabindex", "0");
-      group.setAttribute("role", "listitem");
-      group.setAttribute("aria-labelledby", `${group.id}-title`);
-      group.setAttribute("aria-describedby", `${group.id}-description`);
-    });
+  wimmelbildGroups.forEach((group) => {
+    group.setAttribute("tabindex", "0");
+    group.setAttribute("role", "listitem");
+    group.setAttribute("aria-labelledby", `${group.id}-title`);
+    group.setAttribute("aria-describedby", `${group.id}-description`);
+  });
 
-    wimmelbildGroups.forEach((group) => {
-      const infoElement = [...highlightedDatasetsList].find(
-        (element) => element.dataset.highlightedDatasetId === group.id,
-      );
+  wimmelbildGroups.forEach((group) => {
+    const infoElement = [...highlightedDatasetsList].find(
+      (element) => element.dataset.highlightedDatasetId === group.id,
+    );
 
-      if (infoElement) {
-        tippy(group, {
-          theme: "light-border",
-          interactive: true,
-          delay: 100,
-          content: infoElement.innerHTML,
-          allowHTML: true,
-          offset: 0,
-          placement: "bottom",
-          // We can't use tippy's aria features because our setup with triggers within an SVG
-          // messes up the aria connections and focus handling.
-          aria: {
-            content: null,
-            expanded: false,
-          },
-          appendTo: document.getElementById("wimmelbild-container"),
-          onTrigger(instance: { reference: HTMLElement }) {
-            instance.reference.classList.add(
+    if (infoElement) {
+      tippy(group, {
+        theme: "light-border",
+        interactive: true,
+        delay: 100,
+        content: infoElement.innerHTML,
+        allowHTML: true,
+        offset: 0,
+        placement: "bottom",
+        // We can't use tippy's aria features because our setup with triggers within an SVG
+        // messes up the aria connections and focus handling.
+        aria: {
+          content: null,
+          expanded: false,
+        },
+        appendTo: document.getElementById("wimmelbild-container"),
+        onTrigger(instance: { reference: HTMLElement }) {
+          instance.reference.classList.add("wimmelbild_puzzle-piece--hovered");
+          wimmelbildGroups.forEach((group) => {
+            if (group.id === instance.reference.id) return;
+            group.classList.add("wimmelbild_puzzle-piece--hovered-out");
+          });
+        },
+        onUntrigger() {
+          wimmelbildGroups.forEach((group) => {
+            group.classList.remove(
               "wimmelbild_puzzle-piece--hovered",
+              "wimmelbild_puzzle-piece--hovered-out",
             );
-            wimmelbildGroups.forEach((group) => {
-              if (group.id === instance.reference.id) return;
-              group.classList.add("wimmelbild_puzzle-piece--hovered-out");
-            });
-          },
-          onUntrigger() {
-            wimmelbildGroups.forEach((group) => {
-              group.classList.remove(
-                "wimmelbild_puzzle-piece--hovered",
-                "wimmelbild_puzzle-piece--hovered-out",
-              );
-            });
-          },
-        });
-      }
-    });
-
-    /**
-     * Aligns two elements horizontally by taking the positioning of the referenceElement and applying its left offset as a horizontal padding to the targetElement.
-     */
-    function alignHorizontally(
-      targetElement: HTMLElement,
-      referenceElement: HTMLElement,
-    ) {
-      const referenceOffset = referenceElement.getBoundingClientRect().left;
-
-      targetElement.style.paddingLeft = `${referenceOffset}px`;
-      targetElement.style.paddingRight = `${referenceOffset}px`;
+          });
+        },
+      });
     }
-  </script>
-</section>
+  });
+
+  /**
+   * Aligns two elements horizontally by taking the positioning of the referenceElement and applying its left offset as a horizontal padding to the targetElement.
+   */
+  function alignHorizontally(
+    targetElement: HTMLElement,
+    referenceElement: HTMLElement,
+  ) {
+    const referenceOffset = referenceElement.getBoundingClientRect().left;
+
+    targetElement.style.paddingLeft = `${referenceOffset}px`;
+    targetElement.style.paddingRight = `${referenceOffset}px`;
+  }
+</script>
+
+<style is:global>
+  .swiper-slide path,
+  .swiper-slide circle,
+  .swiper-slide rect {
+    transition:
+      fill 1s cubic-bezier(0.12, 0.98, 0.13, 0.98),
+      stroke 1s cubic-bezier(0.12, 0.98, 0.13, 0.98);
+  }
+</style>
+
+<style>
+  .swiper-slide.swiper-slide-active {
+    --illu-white: var(--white);
+    --illu-highlight: var(--red);
+    --illu-gray: var(--gray-light);
+    --illu-bg: var(--blue-light);
+    --illu-line: var(--line);
+  }
+
+  .swiper-slide path,
+  .swiper-slide circle,
+  .swiper-slide rect {
+    transition:
+      fill 1s cubic-bezier(0.12, 0.98, 0.13, 0.98),
+      stroke 1s cubic-bezier(0.12, 0.98, 0.13, 0.98);
+  }
+
+  .swiper-slide:not(.swiper-slide-active) {
+    --illu-white: var(--bg);
+    --illu-highlight: var(--bg);
+    --illu-gray: var(--bg);
+    --illu-bg: var(--bg);
+    --illu-line: var(--blue-light);
+  }
+
+  [data-applied-mode="dark"] .swiper-slide:not(.swiper-slide-active) {
+    --illu-white: var(--bg);
+    --illu-highlight: var(--bg);
+    --illu-gray: var(--bg);
+    --illu-bg: var(--bg);
+    --illu-line: var(--blue);
+  }
+</style>
