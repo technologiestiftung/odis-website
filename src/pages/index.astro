@@ -1,8 +1,11 @@
 ---
+import HighlightedDatasets from "@/components/HighlightedDatasets.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
 <DefaultLayout metaTitle={SITE_TITLE} metaDescription={SITE_DESCRIPTION}>
-  <h1>HIGHLIGH</h1>
+  <div class="grid-container">
+    <HighlightedDatasets />
+  </div>
 </DefaultLayout>

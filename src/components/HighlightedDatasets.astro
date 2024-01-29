@@ -2,6 +2,7 @@
 import WimmelBild from "@/components/WimmelBild.astro";
 import highlightedDatasets from "@/assets/data/highlighted_datasets.json";
 import Button from "./Button.astro";
+import { Icon } from "astro-icon/components";
 
 const focusStyles =
   "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8 transition motion-reduce:transition-none";
@@ -19,16 +20,16 @@ const focusStyles =
     <WimmelBild />
   </div>
 
-  <div class="swiper mb-4 w-full h-full lg:hidden" aria-hidden="true">
+  <div class="swiper mb-4 w-full lg:hidden" aria-hidden="true">
     <div class="swiper-wrapper flex flex-nowrap items-end" aria-hidden="true">
       {
         highlightedDatasets.map((dataset) => {
-          if (dataset.image_path) {
+          if (dataset.icon) {
             return (
               <div class="swiper-slide">
-                <img
+                <Icon
                   class="w-full h-auto"
-                  src={dataset.image_path}
+                  name={`wimmelbild/${dataset.icon}`}
                   aria-hidden="true"
                 />
               </div>
@@ -42,7 +43,7 @@ const focusStyles =
   <div class="flex flex-wrap gap-y-4 lg:hidden">
     <div id="highlighted-datasets" class="w-full">
       {
-        highlighted_datasets.map((dataset, index) => (
+        highlightedDatasets.map((dataset, index) => (
           <div
             data-highlighted-dataset-index={index}
             data-highlighted-dataset-id={dataset.id}
@@ -60,12 +61,15 @@ const focusStyles =
                   href={dataset.url}
                   class="text-links hover-hover:hover:text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-1 items-center"
                 >
-                  <ExternalLinkIcon class="inline-block w-6 h-auto" />
+                  <Icon
+                    name="ui/external-link"
+                    class="inline-block w-6 h-auto"
+                  />
                   Zum Datensatz
                 </a>
               ) : (
                 <p class="text-[var(--red)] font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-1 items-center">
-                  <LockIcon class="inline-block w-6 h-auto" />
+                  <Icon name="ui/lock" class="inline-block w-6 h-auto" />
                   Datensatz geschlossen
                 </p>
               )}
@@ -93,12 +97,153 @@ const focusStyles =
       }
     </div>
     <div class="w-full px-6 flex justify-between order-first">
-      <button class="swiper-button-prev {{ focus_styles }}"></button>
-      <button class="swiper-button-next {{ focus_styles }}"></button>
+      <button class={`swiper-button-prev ${focusStyles}`}></button>
+      <button class={`swiper-button-next ${focusStyles}`}></button>
     </div>
   </div>
 
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://unpkg.com/tippy.js@6"></script>
-  <script src="/assets/js/highlighted-datasets.js"></script>
+  <script is:inline src="https://unpkg.com/@popperjs/core@2"></script>
+  <script is:inline src="https://unpkg.com/tippy.js@6"></script>
+  <script>
+    import tippy from "tippy.js";
+    import "tippy.js/dist/tippy.css";
+
+    import Swiper from "swiper";
+    import "swiper/swiper-bundle.css";
+
+    const highlightedDatasetsList = (document
+      .getElementById("highlighted-datasets")
+      ?.querySelectorAll("div[data-highlighted-dataset-index]") ||
+      []) as HTMLElement[];
+
+    /*
+    ------------------------------------------------------------
+    SLIDER (mobile screen sizes)
+    ------------------------------------------------------------
+    */
+    const INITIAL_SLIDE_INDEX = 1;
+
+    const swiper = new Swiper(".swiper", {
+      slidesPerView: 1.4,
+      spaceBetween: 24,
+      breakpoints: {
+        480: {
+          slidesPerView: 1.8,
+          spaceBetween: 40,
+        },
+        640: {
+          slidesPerView: 2.2,
+          spaceBetween: 48,
+        },
+      },
+      initialSlide: INITIAL_SLIDE_INDEX,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      a11y: {
+        nextSlideMessage: "Nächster Datensatz",
+        prevSlideMessage: "Vorheriger Datensatz",
+      },
+    });
+
+    const initialInfoElement = [...highlightedDatasetsList][
+      INITIAL_SLIDE_INDEX
+    ];
+    const initialSlide = swiper.slides[INITIAL_SLIDE_INDEX];
+
+    if (initialInfoElement && initialSlide) {
+      initialInfoElement.classList.remove("hidden");
+      alignHorizontally(initialInfoElement, initialSlide as HTMLElement);
+    }
+
+    swiper.on("transitionEnd", function (swiper) {
+      [...highlightedDatasetsList].forEach((element) => {
+        const isActive =
+          element.dataset.highlightedDatasetIndex ===
+          `${Number(swiper.activeIndex)}`;
+
+        element.classList.toggle("hidden", !isActive);
+
+        if (isActive) {
+          const activeSlide = swiper.slides[swiper.activeIndex];
+          alignHorizontally(element, activeSlide as HTMLElement);
+        }
+      });
+    });
+
+    /*
+      ------------------------------------------------------------
+      WIMMELBILD (medium and large screen sizes)
+      ------------------------------------------------------------
+      */
+    const wimmelbildSvg = document.getElementById("wimmelbild");
+    wimmelbildSvg?.setAttribute("role", "list");
+
+    const wimmelbildGroups = (document.querySelectorAll("#wimmelbild > g") ||
+      []) as NodeListOf<HTMLElement>;
+
+    wimmelbildGroups.forEach((group) => {
+      group.setAttribute("tabindex", "0");
+      group.setAttribute("role", "listitem");
+      group.setAttribute("aria-labelledby", `${group.id}-title`);
+      group.setAttribute("aria-describedby", `${group.id}-description`);
+    });
+
+    wimmelbildGroups.forEach((group) => {
+      const infoElement = [...highlightedDatasetsList].find(
+        (element) => element.dataset.highlightedDatasetId === group.id,
+      );
+
+      if (infoElement) {
+        tippy(group, {
+          theme: "light-border",
+          interactive: true,
+          delay: 100,
+          content: infoElement.innerHTML,
+          allowHTML: true,
+          offset: 0,
+          placement: "bottom",
+          // We can't use tippy's aria features because our setup with triggers within an SVG
+          // messes up the aria connections and focus handling.
+          aria: {
+            content: null,
+            expanded: false,
+          },
+          appendTo: document.getElementById("wimmelbild-container"),
+          onTrigger(instance: { reference: HTMLElement }) {
+            instance.reference.classList.add(
+              "wimmelbild_puzzle-piece--hovered",
+            );
+            wimmelbildGroups.forEach((group) => {
+              if (group.id === instance.reference.id) return;
+              group.classList.add("wimmelbild_puzzle-piece--hovered-out");
+            });
+          },
+          onUntrigger() {
+            wimmelbildGroups.forEach((group) => {
+              group.classList.remove(
+                "wimmelbild_puzzle-piece--hovered",
+                "wimmelbild_puzzle-piece--hovered-out",
+              );
+            });
+          },
+        });
+      }
+    });
+
+    /**
+     * Aligns two elements horizontally by taking the positioning of the referenceElement and applying its left offset as a horizontal padding to the targetElement.
+     */
+    function alignHorizontally(
+      targetElement: HTMLElement,
+      referenceElement: HTMLElement,
+    ) {
+      const referenceOffset = referenceElement.getBoundingClientRect().left;
+
+      targetElement.style.paddingLeft = `${referenceOffset}px`;
+      targetElement.style.paddingRight = `${referenceOffset}px`;
+    }
+  </script>
 </section>
