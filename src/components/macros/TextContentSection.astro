@@ -1,18 +1,22 @@
 ---
-import ContentSection, { type Props as ContentSectionProps } from "./ContentSection.astro";
+import { cn } from "@/utils/classNames";
+import ContentSection, {
+  type Props as ContentSectionProps,
+} from "./ContentSection.astro";
 
 export type Props = {
-  caption: ContentSectionProps['caption']
-  class: ContentSectionProps['class']
-}
+  caption: ContentSectionProps["caption"];
+  class: ContentSectionProps["class"];
+};
 
 const { caption, class: className } = Astro.props;
-
 ---
 
-<ContentSection fullWidth caption={caption} class={className}>
+<ContentSection fullWidth caption={caption} class={cn(`not-prose`, className)}>
   <div class="grid-container">
-    <div class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable py-16 relative z-10">
+    <div
+      class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable py-16 relative z-10"
+    >
       <slot />
     </div>
   </div>

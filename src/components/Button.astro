@@ -18,11 +18,14 @@ const {
 const isPrimary = variant === "primary";
 const finalTailwindClasses = [
   className,
+  inverted && `border-line-inv focus-visible:ring-offset-bg-inv`,
+  !inverted && `border-line text-links bg-bg focus-visible:ring-offset-bg`,
   isPrimary &&
     [
       `font-bold`,
       inverted && `shadow-primary-inv bg-bg text-links`,
       inverted && `hover-hover:hover:shadow-primary-inv-md`,
+      inverted && `border-line-dark`,
       !inverted && `shadow-primary hover-hover:hover:shadow-primary-md`,
     ]
       .filter(Boolean)
@@ -35,8 +38,6 @@ const finalTailwindClasses = [
     ]
       .filter(Boolean)
       .join(" "),
-  inverted && `border-line-inv focus-visible:ring-offset-bg-inv`,
-  !inverted && `border-line text-links bg-bg focus-visible:ring-offset-bg`,
   `hover-hover:hover:text-links`,
   `hover-hover:hover:bg-bg-alt`,
   `inline-block py-4 px-6 border-2`,

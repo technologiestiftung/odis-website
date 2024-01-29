@@ -415,14 +415,106 @@ const homepage = defineCollection({
       intro: z.object({
         title: z.string(),
         text: z.string(),
-        buttons: z.array(
-          z.object({
-            text: z.string(),
-            link: z.string(),
-            variant: z.enum(["primary", "secondary"]).default("primary"),
-            inverted: z.boolean().default(true),
-          }),
-        ),
+        buttons: z
+          .array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+              variant: z.enum(["primary", "secondary"]).default("primary"),
+            }),
+          )
+          .default([]),
+      }),
+      openData: z.object({
+        subtitle: z.string(),
+        title: z.string(),
+        textPrefix: z.string().optional().nullable(),
+        benefits: z.array(z.string()).default([]),
+        textSuffix: z.string().optional().nullable(),
+        image: image(),
+        imageAltText: z.string(),
+        buttons: z
+          .array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+              variant: z.enum(["primary", "secondary"]).default("primary"),
+            }),
+          )
+          .default([]),
+      }),
+      aboutOdis: z.object({
+        subtitle: z.string().optional().nullable(),
+        title: z.string(),
+        textPrefix: z.string().optional().nullable(),
+        benefits: z.array(z.string()).default([]),
+        textSuffix: z.string().optional().nullable(),
+        image: image(),
+        imageAltText: z.string(),
+        buttons: z
+          .array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+              variant: z.enum(["primary", "secondary"]).default("primary"),
+            }),
+          )
+          .default([]),
+      }),
+      journey: z.object({
+        title: z.string(),
+        lead: z.string().nullable().optional(),
+        text: z.string(),
+        buttons: z
+          .array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+              variant: z.enum(["primary", "secondary"]).default("primary"),
+            }),
+          )
+          .default([]),
+        seeModuleButtonText: z.string(),
+      }),
+      projects: z.object({
+        title: z.string(),
+        text: z.string(),
+        buttons: z
+          .array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+              variant: z.enum(["primary", "secondary"]).default("primary"),
+            }),
+          )
+          .default([]),
+        seeProjectButtonText: z.string(),
+      }),
+      resources: z.object({
+        title: z.string(),
+        text: z.string(),
+        buttons: z
+          .array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+              variant: z.enum(["primary", "secondary"]).default("primary"),
+            }),
+          )
+          .default([]),
+      }),
+      aktuelles: z.object({
+        title: z.string(),
+        text: z.string(),
+        buttons: z
+          .array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+              variant: z.enum(["primary", "secondary"]).default("primary"),
+            }),
+          )
+          .default([]),
       }),
     }),
 });

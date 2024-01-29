@@ -69,16 +69,13 @@
 
     --shadow-primary: var(--blue);
     --shadow-secondary: var(--blue-light);
-    --shadow-primary-inv: var(--blue-darker);
+    --shadow-primary-inv: var(--blue-dark);
     --shadow-secondary-inv: var(--blue-dark);
 
     --containerWidth: 100vw;
     --gridGap: 1.5rem;
-    --marginSize: minmax(1rem, (100vw - var(--containerWidth)) / 2);
-    --columnSize: minmax(
-      0,
-      (var(--containerWidth) - (13 * var(--gridGap))) / 12
-    );
+    --marginSize: calc((100vw - var(--containerWidth)) / 2);
+    --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
     --contentOffset: calc(
       (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
     );
