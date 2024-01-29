@@ -22,3 +22,10 @@ export const collectionSchema = ({ image }: SchemaContext) =>
       tags: z.array(z.string()),
     }),
   );
+
+export const buttonSchema = z.object({
+  text: z.string(),
+  link: z.string(),
+  variant: z.enum(["pirmary", "secondary"]),
+  inverted: z.boolean().default(false),
+});
