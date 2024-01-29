@@ -33,7 +33,9 @@ const { Content } = await entry.render();
             <ul class="mt-2 not-prose p-0">
               {kontakt.links?.map((link) => (
                 <li class="flex justify-start mt-4">
-                  <TextLink href={link.href}>{link.title}</TextLink>
+                  <TextLink tag="a" href={link.href}>
+                    {link.title}
+                  </TextLink>
                 </li>
               ))}
             </ul>
