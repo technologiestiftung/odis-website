@@ -57,7 +57,7 @@ const focusStyles =
           >
             <h2
               id={`${dataset.id}-title`}
-              class="text-xl font-bold text-headlines px-8 sm:px-16"
+              class="text-xl font-bold text-headlines px-8 sm:px-16 lg:px-0"
             >
               {dataset.title}
             </h2>
@@ -65,7 +65,7 @@ const focusStyles =
               {dataset.url ? (
                 <a
                   href={dataset.url}
-                  class="text-links hover-hover:hover:text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-3 items-center"
+                  class="text-links hover-hover:hover:text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center"
                 >
                   <Icon
                     name="ui/external-link"
@@ -74,7 +74,7 @@ const focusStyles =
                   Zum Datensatz
                 </a>
               ) : (
-                <p class="text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-3 items-center">
+                <p class="text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center">
                   <Icon name="ui/lock" class="inline-block w-6 h-auto" />
                   Datensatz geschlossen
                 </p>
@@ -82,11 +82,11 @@ const focusStyles =
             </div>
             <p
               id={`${dataset.id}-description`}
-              class="my-2 px-8 sm:px-16 w-full"
+              class="my-2 px-8 sm:px-16 lg:px-0 w-full"
             >
               {dataset.description}
             </p>
-            <div class="px-8 sm:px-16">
+            <div class="px-8 sm:px-16 lg:px-0 mb-4">
               {dataset.example_usage && (
                 <Button
                   tag="a"
@@ -98,7 +98,7 @@ const focusStyles =
                 </Button>
               )}
               {!dataset.url && (
-                <Button tag="a" href="/journey" class="!mt-4">
+                <Button tag="a" href="/module" class="!mt-4">
                   Wie ODIS Daten öffnet
                 </Button>
               )}
@@ -161,7 +161,6 @@ const focusStyles =
 
   if (initialInfoElement && initialSlide) {
     initialInfoElement.classList.remove("hidden");
-    alignHorizontally(initialInfoElement, initialSlide as HTMLElement);
   }
 
   swiper.on("transitionEnd", function (swiper) {
@@ -171,11 +170,6 @@ const focusStyles =
         `${Number(swiper.activeIndex)}`;
 
       element.classList.toggle("hidden", !isActive);
-
-      if (isActive) {
-        const activeSlide = swiper.slides[swiper.activeIndex];
-        alignHorizontally(element, activeSlide as HTMLElement);
-      }
     });
   });
 
@@ -236,19 +230,6 @@ const focusStyles =
       });
     }
   });
-
-  /**
-   * Aligns two elements horizontally by taking the positioning of the referenceElement and applying its left offset as a horizontal padding to the targetElement.
-   */
-  function alignHorizontally(
-    targetElement: HTMLElement,
-    referenceElement: HTMLElement,
-  ) {
-    const referenceOffset = referenceElement.getBoundingClientRect().left;
-
-    targetElement.style.paddingLeft = `${referenceOffset}px`;
-    targetElement.style.paddingRight = `${referenceOffset}px`;
-  }
 </script>
 
 <style is:global>
