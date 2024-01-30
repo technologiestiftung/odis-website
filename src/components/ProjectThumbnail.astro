@@ -5,13 +5,15 @@ import Paragraph from "./Paragraph.astro";
 import ProjectMockups from "./ProjectMockups.astro";
 import Button from "./Button.astro";
 
-export type Props = CollectionEntry<"projekte">;
+export type Props = CollectionEntry<"projekte"> & {
+  class: string;
+};
 
-const { data, slug } = Astro.props;
+const { data, slug, class: className = "" } = Astro.props;
 const { title, description } = data;
 ---
 
-<a href={`/projekte/${slug}`} title={title}>
+<a href={`/projekte/${slug}`} title={title} class={className}>
   <ProjectMockups {...data} slug={slug} />
   <Heading size="lg" set:html={title} />
   <Paragraph set:html={description} />

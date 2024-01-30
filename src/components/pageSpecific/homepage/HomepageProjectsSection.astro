@@ -1,0 +1,85 @@
+---
+import Button from "@/components/Button.astro";
+import Heading from "@/components/Heading.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import ProjectThumbnail from "@/components/ProjectThumbnail.astro";
+import { boldify } from "@/utils/boldify";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+export type Props = CollectionEntry<"homepage">["data"]["projects"];
+
+const texts = Astro.props;
+
+const projects = await getCollection("projekte", (project) =>
+  project.data.tags.includes("home"),
+);
+---
+
+<div class="bg-bg-inv text-text-inv pt-24 pb-56">
+  <div class="grid-container">
+    <div class="grid col-span-12 grid-cols-subgrid">
+      <div
+        class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 lg:col-start-1"
+      >
+        <Heading
+          class="font-normal"
+          tag="h3"
+          size="xl"
+          set:html={boldify(texts.title, "text-text-inv")}
+          inverted
+        />
+        <Paragraph set:html={texts.text} inverted />
+        {
+          texts.buttons.map((button) => (
+            <Button
+              tag="a"
+              href={button.link}
+              variant={button.variant}
+              inverted
+            >
+              {button.text}
+            </Button>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pb-24 -mt-40">
+  <div class="grid-container">
+    <div class="grid col-span-12 grid-cols-subgrid">
+      <div
+        class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-12 lg:col-start-1 projects-swiper"
+      >
+        <div class="swiper-wrapper">
+          {
+            projects.map((project) => (
+              <ProjectThumbnail class="swiper-slide" {...project} />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import Swiper from "swiper/bundle";
+  import "swiper/swiper-bundle.css";
+
+  const swiper = new Swiper(".projects-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    loop: true,
+    breakpoints: {
+      640: {
+        centeredSlides: false,
+        slidesPerView: 2,
+      },
+      1024: {
+        centeredSlides: true,
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
