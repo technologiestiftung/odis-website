@@ -1,7 +1,7 @@
 ---
 tags:
   - "post"
-title: Daten zu BVV-Sitzungen jetzt als Open Data verfügbar
+title: Daten zu BVV-Sitzungen als Open Data
 description: Seit Juli diesen Jahres veröffentlichen die ersten Bezirke
   Daten aus ihren Bezirksverordnetenversammlungen (BVV) als Open Data über eine
   API. Was genau bedeutet das und warum werden bestimmte Daten auf diese Art und
@@ -10,10 +10,13 @@ description: Seit Juli diesen Jahres veröffentlichen die ersten Bezirke
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
+headerImage:
+  src: ./images/unsplash_-WXQm_NTK0U.png
+  alt: 3D Datenvisualisierungsmodelle auf einer Fläche
 date: 2021-09-01
 ---
 
-## Daten zu BVV-Sitzungen jetzt als Open Data verfügbar
+## Daten zu BVV-Sitzungen als Open Data
 
 Seit Juli diesen Jahres haben die ersten Bezirke angefangen, Daten aus ihren Bezirksverordnetenversammlungen (BVV) [als Open Data zu veröffentlichen](https://daten.berlin.de/search/node/bvv). Die ODIS war beratend tätig und hat bei der Veröffentlichung unterstützt. Potenzielle Datennutzer:innen haben jetzt Zugang zu einer Schatzkiste an maschinenlesbaren Daten rund um Ausschusssitzungen und Bezirksverordnete. Das besondere an dieser Datenveröffentlichung ist, dass die Daten nicht in einzelnen, statischen Dateien zu finden sind (zum Beispiel in CSV-Dateien), sondern direkt über eine öffentliche API-Schnittstelle verfügbar gemacht werden. Was genau bedeutet das und warum werden bestimmte Daten auf diese Art und Weise veröffentlicht?
 
@@ -27,11 +30,13 @@ APIs sind über sogenannte Endpunkte zugänglich. Ein Endpunkt wird über eine U
 
 Für Datenabfragen sind in der Regel Programmierkenntnisse notwendig, eine API richtet sich daher eher an Nutzergruppen mit entsprechender Erfahrung, also z.B. Datenanalyst:innen oder Entwickler:innen. Von der Datenbereitstellung profitieren kann aber natürlich ein erweiterter Nutzerkreis. So können unter Verwendung einer API Apps, Dashboards und Ähnliches programmiert werden, die für den oder die Endnutzer:in interessante Informationen ansprechend präsentieren. Natürlich kann eine API auch verwendet werden, um Daten einmalig herunterzuladen, in einer statischen Datei abzuspeichern und weiterzuverarbeiten.
 
-#### Warum ist eine Bereitstellung von offenen Daten über eine API vorteilhaft?
+
+### Warum ist eine Bereitstellung von offenen Daten über eine API vorteilhaft?
 
 Es gibt verschiedene Szenarien, bei denen eine Datenbereitstellung mittels API besonders empfehlenswert ist. Zum einen kann es bei einer außerordentlich großen Menge an Daten problematisch für Endnutzer:innen werden, wenn nur eine einzige, sehr große Datei bereitgestellt wird. Mit großen Dateien umzugehen kann schwierig oder fast unmöglich sein, abhängig von der Rechnerleistung und davon, wie man mit den Daten arbeiten will. Besonders unpraktisch sind solche Dateien, wenn Endnutzer:innen sich eigentlich nur für einen Ausschnitt der Daten interessieren. In einem solchen Fall eignet sich eine API besonders zur Datenbereitstellung.
 
 Auch für Daten, die sehr regelmäßig aktualisiert werden – wöchentlich, täglich oder noch häufiger –, ist eine API oft die praktischere Art der Datenveröffentlichung. Entwickler:innen können eine Anwendung programmieren, in der neue Daten automatisiert direkt aus der API abgerufen werden (und die regelmäßig prüft, ob aktuellere Daten vorliegen); so kann sichergestellt werden, dass die entwickelte Anwendung immer die aktuellsten Daten präsentiert.
+
 
 ### Was ist die ALLRIS-Schnittstelle?
 
@@ -39,9 +44,10 @@ Die ALLRIS-Schnittstelle ist eine Schnittstelle zum Sitzungsmanagement- und Grem
 
 Weil es sich hier um eine recht große Menge an Daten handelt – die Daten umfassen alle Aktivitäten der BVV für alle Wahlperioden seit 2000 –, die auch sehr regelmäßig aktualisiert werden (es werden als Teil der regulären Arbeit der BVV ja ständig neue Sitzungen organisiert und Drucksachen erstellt), ist die ALLRIS-Schnittstelle ein sehr gutes Beispiel für die Notwendigkeit einer API: Über die API können Nutzer:innen tagesaktuell Daten aus einer BVV abrufen und verarbeiten – und wer sich nur für Informationen über die aktuellen Abgeordneten in der BVV interessiert, kann diese Informationen gezielt abfragen, anstatt zuerst einen kompletten Datensatz für die BVV herunterladen zu müssen.
 
-### Was man mit den Daten machen kann
+#### Was man mit den Daten machen kann
 
 Um die große Vielfalt der durch die ALLRIS-API verfügbaren Daten greifbarer zu machen, haben wir drei kleine Visualisierungs- und Analyseprojekte aufbereitet, die Daten aus dem ALLRIS-System von Treptow-Köpenick nutzen.
+
 
 #### Rollen und Personen
 
@@ -65,7 +71,7 @@ Die meist vertretenen Rollen sind die des Ausschussmitglieds (34%) und des stell
 Derselbe Datensatz ermöglicht einen Blick auf die durchschnittliche Anzahl der Rollen, die Männer und Frauen in der BVV im Laufe der Zeit innehaben. Die meisten in der parlamentarischen Arbeit des Bezirks tätigen Personen nehmen nämlich mehrere Rollen in verschiedenen Kontexten ein, zum Beispiel als Mitglied einer Fraktion und in verschiedenen Ausschüssen.
 Die nachstehende Abbildung zeigt die durchschnittliche Anzahl der Rollen, die Männer und Frauen zwischen 2001 und 2021 innehatten. Sie zeigt, dass Frauen von 2002 bis 2011 im Durchschnitt eine Rolle mehr innehatten als Männer, aber dass beide Geschlechter seitdem eine ähnliche Anzahl von Rollen innehaben (durchschnittlich 4,76 Positionen für Frauen und 4,6 Positionen für Männer).
 
-<ContentSection fullWidth={false}>
+<ContentSection fullWidth={true}>
   <iframe
     src="https://evelyne-brie.shinyapps.io/ALLRIS_Cumul/"
     width="100%"
@@ -86,11 +92,11 @@ import Allris from "@/components/pageSpecific/Allris.astro";
 
 Wie die oben gezeigte Auswertung der häufigsten Begriffe in den Tagesordnungspunkten zeigt, lassen sich auch Rückschlüsse über den räumlichen Bezug von Sitzungsthemen ziehen. So tauchen bestimmte Ortsteilnamen wie Altglienicke besonders häufig auf. Ebenfalls hervor sticht der Wortstamm _strass_ als zweit häufigster Begriff. Viele Sitzungsthemen scheinen also mit dem Thema Straßenverkehr im allgemeinen oder mit speziellen Straßen im Zusammenhang zu stehen. In einer weiterführenden Analyse haben wir alle Straßennamen aus den Sitzungsthemen extrahiert und auf einer Karte dargestellt. Die jeweiligen Punkte wurden dafür immer zentral auf der Straße platziert, auch wenn im Tagespunkt eine weitere räumliche Eingrenzung genannt wurde, wie eine Hausnummer oder eine Angabe wie _Fennstraße Ecke Michael-Brückner-Straße_. Bei Klick auf einen Punkt werden die häufigsten in Zusammenhang stehenden Begriffe (also Wörter, die in den gleichen Tagesordungspunkten enthalten sind) gezeigt. Der am häufigsten auftretende Straßenname ist _Baumschulenweg_ mit 146 Erwähnungen.
 
-<ContentSection fullWidth={false}>
+<ContentSection fullWidth={true}>
   <iframe
     src="/extra-pages/allris/allris_streets.html"
     width="100%"
-    height="400px"
+    height="600px"
     title="My file"
   ></iframe>
 </ContentSection>
