@@ -6,6 +6,7 @@ import { boldify } from "@/utils/boldify";
 import type { CollectionEntry } from "astro:content";
 import Paragraph from "@/components/Paragraph.astro";
 import Button from "@/components/Button.astro";
+import JourneySlider from "@/components/pageSpecific/homepage/JourneySlider.astro";
 
 export type Props = CollectionEntry<"homepage">["data"]["journey"];
 
@@ -18,16 +19,19 @@ const journey = Astro.props;
   <div class="grid col-span-12 grid-cols-subgrid">
     <div
       class={cn(
-        `col-span-10 lg:col-span-5 mb-16`,
+        `col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 mb-16 row-start-2 lg:row-start-auto`,
         `relative aspect-square lg:aspect-auto`,
       )}
     >
       <div
-        class="absolute w-full h-[calc(100%+112px)] bg-bg-alt -top-[112px] left-0"
+        class="lg:absolute w-full lg:h-[calc(100%+112px)] lg:-top-[112px] left-0"
       >
+        <JourneySlider moduleButtonText={journey.seeModuleButtonText} />
       </div>
     </div>
-    <div class="col-span-10 lg:col-span-5 lg:col-start-7 pt-0 pb-16">
+    <div
+      class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 lg:col-start-7 lg:pt-0 py-16"
+    >
       <Heading
         class="font-normal"
         tag="h3"

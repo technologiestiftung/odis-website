@@ -18,7 +18,7 @@ const aboutOdis = Astro.props;
     <div class="grid col-span-12 grid-cols-subgrid">
       <div
         class={cn(
-          `col-span-10 lg:col-span-5`,
+          `col-span-12 lg:col-span-5`,
           `relative aspect-square lg:aspect-auto`,
         )}
       >
@@ -39,7 +39,9 @@ const aboutOdis = Astro.props;
           />
         </div>
       </div>
-      <div class="col-span-10 lg:col-span-5 lg:col-start-7 py-24 lg:pb-0">
+      <div
+        class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 lg:col-start-7 py-24 lg:pb-0"
+      >
         <Paragraph
           tag="h2"
           size="lg"
