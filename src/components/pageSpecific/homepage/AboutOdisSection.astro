@@ -1,0 +1,83 @@
+---
+import Button from "@/components/Button.astro";
+import Checklist from "@/components/Checklist.astro";
+import Heading from "@/components/Heading.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import { boldify } from "@/utils/boldify";
+import { cn } from "@/utils/classNames";
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+export type Props = CollectionEntry<"homepage">["data"]["aboutOdis"];
+
+const aboutOdis = Astro.props;
+---
+
+<div class="bg-bg-inv text-text-inv lg:pb-24">
+  <div class="grid-container">
+    <div class="grid col-span-12 grid-cols-subgrid">
+      <div
+        class={cn(
+          `col-span-10 lg:col-span-5`,
+          `relative aspect-square lg:aspect-auto`,
+        )}
+      >
+        <div
+          class={cn(
+            `absolute top-0 bg-bg-alt`,
+            `w-[110vw] h-full`,
+            `-left-[calc(var(--gridGap)+var(--marginSize))] lg:left-auto lg:right-0`,
+            `lg:w-[calc(100%+var(--marginSize)+var(--gridGap))]`,
+            `max-w-4xl`,
+            ` shadow-secondary-inv`,
+          )}
+        >
+          <Image
+            src={aboutOdis.image}
+            alt={aboutOdis.imageAltText}
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="col-span-10 lg:col-span-5 lg:col-start-7 py-24 lg:pb-0">
+        <Paragraph
+          tag="h2"
+          size="lg"
+          class="mb-0"
+          set:html={aboutOdis.subtitle}
+          inverted
+        />
+        <Heading
+          class="font-normal"
+          tag="h3"
+          size="xl"
+          set:html={boldify(aboutOdis.title)}
+          inverted
+        />
+        {
+          aboutOdis.textPrefix && (
+            <Paragraph tag="p" set:html={aboutOdis.textPrefix} inverted />
+          )
+        }
+        <Checklist items={aboutOdis.benefits} />
+        {
+          aboutOdis.textSuffix && (
+            <Paragraph tag="p" set:html={aboutOdis.textSuffix} inverted />
+          )
+        }
+        {
+          aboutOdis.buttons.map((button) => (
+            <Button
+              tag="a"
+              href={button.link}
+              variant={button.variant}
+              inverted
+            >
+              {button.text}
+            </Button>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

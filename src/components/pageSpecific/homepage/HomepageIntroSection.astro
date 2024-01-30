@@ -1,0 +1,17 @@
+---
+import Heading from "@/components/Heading.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import { boldify } from "@/utils/boldify";
+import type { CollectionEntry } from "astro:content";
+
+export type Props = CollectionEntry<"homepage">["data"]["intro"];
+
+const intro = Astro.props;
+---
+
+<div class="grid-container">
+  <div class="max-w-[50ch] lg:col-start-4 lg:col-span-7">
+    <Heading size="xxl" class="font-normal" set:html={boldify(intro.title)} />
+    {intro.text && <Paragraph size="lg" set:html={intro.text} />}
+  </div>
+</div>

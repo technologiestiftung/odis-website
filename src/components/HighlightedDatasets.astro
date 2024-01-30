@@ -8,107 +8,112 @@ const focusStyles =
   "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8 transition motion-reduce:transition-none";
 ---
 
-<section
-  aria-label="Von ODIS für wichtig befundene Datensätze"
-  class="w-full my-12"
->
-  <div class="hidden lg:block container mx-auto px-4" id="wimmelbild-container">
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/tippy.js@6/themes/light-border.css"
-    />
-    <WimmelBild />
-  </div>
-
-  <div class="swiper mb-4 lg:hidden w-full" aria-hidden="true">
-    <div class="swiper-wrapper flex flex-nowrap items-end" aria-hidden="true">
-      {
-        highlightedDatasets.map((dataset) => {
-          if (dataset.icon) {
-            return (
-              <div class="swiper-slide">
-                <Icon
-                  class="w-full h-auto"
-                  name={`wimmelbild/${dataset.icon}`}
-                  aria-hidden="true"
-                />
-              </div>
-            );
-          }
-        })
-      }
-    </div>
-  </div>
-
-  <div
-    class="flex flex-wrap gap-y-4 lg:hidden sm:w-[calc(100%+8rem)] sm:-ml-16"
+<div class="grid-container pb-16">
+  <section
+    aria-label="Von ODIS für wichtig befundene Datensätze"
+    class="w-full my-12"
   >
-    <div class="w-full flex justify-between order-first">
-      <button class={`swiper-button-prev ${focusStyles}`}></button>
-      <button class={`swiper-button-next ${focusStyles}`}></button>
+    <div
+      class="hidden lg:block container mx-auto px-4"
+      id="wimmelbild-container"
+    >
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/tippy.js@6/themes/light-border.css"
+      />
+      <WimmelBild />
     </div>
-    <div id="highlighted-datasets" class="w-full">
-      {
-        highlightedDatasets.map((dataset, index) => (
-          <div
-            data-highlighted-dataset-index={index}
-            data-highlighted-dataset-id={dataset.id}
-            class="hidden !px-0 relative w-full "
-          >
-            <h2
-              id={`${dataset.id}-title`}
-              class="text-xl font-bold text-headlines px-8 sm:px-16 lg:px-0"
-            >
-              {dataset.title}
-            </h2>
-            <div class="absolute -top-12 left-1/2 -translate-x-1/2 lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:text-left lg:px-0 lg:my-2 w-full px-8 sm:px-16 text-sm flex">
-              {dataset.url ? (
-                <a
-                  href={dataset.url}
-                  class="text-links hover-hover:hover:text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center"
-                >
+
+    <div class="swiper mb-4 lg:hidden w-full" aria-hidden="true">
+      <div class="swiper-wrapper flex flex-nowrap items-end" aria-hidden="true">
+        {
+          highlightedDatasets.map((dataset) => {
+            if (dataset.icon) {
+              return (
+                <div class="swiper-slide">
                   <Icon
-                    name="ui/external-link"
-                    class="inline-block w-6 h-auto"
+                    class="w-full h-auto"
+                    name={`wimmelbild/${dataset.icon}`}
+                    aria-hidden="true"
                   />
-                  Zum Datensatz
-                </a>
-              ) : (
-                <p class="text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center">
-                  <Icon name="ui/lock" class="inline-block w-6 h-auto" />
-                  Datensatz geschlossen
-                </p>
-              )}
-            </div>
-            <p
-              id={`${dataset.id}-description`}
-              class="my-2 px-8 sm:px-16 lg:px-0 w-full"
-            >
-              {dataset.description}
-            </p>
-            <div class="px-8 sm:px-16 lg:px-0 mb-4">
-              {dataset.example_usage && (
-                <Button
-                  tag="a"
-                  href={dataset.example_usage}
-                  target="_blank"
-                  class="!mt-4"
-                >
-                  Beispiel-Anwendung
-                </Button>
-              )}
-              {!dataset.url && (
-                <Button tag="a" href="/module" class="!mt-4">
-                  Wie ODIS Daten öffnet
-                </Button>
-              )}
-            </div>
-          </div>
-        ))
-      }
+                </div>
+              );
+            }
+          })
+        }
+      </div>
     </div>
-  </div>
-</section>
+
+    <div
+      class="flex flex-wrap gap-y-4 lg:hidden sm:w-[calc(100%+8rem)] sm:-ml-16"
+    >
+      <div class="w-full flex justify-between order-first">
+        <button class={`swiper-button-prev ${focusStyles}`}></button>
+        <button class={`swiper-button-next ${focusStyles}`}></button>
+      </div>
+      <div id="highlighted-datasets" class="w-full">
+        {
+          highlightedDatasets.map((dataset, index) => (
+            <div
+              data-highlighted-dataset-index={index}
+              data-highlighted-dataset-id={dataset.id}
+              class="hidden !px-0 relative w-full "
+            >
+              <h2
+                id={`${dataset.id}-title`}
+                class="text-xl font-bold text-headlines px-8 sm:px-16 lg:px-0"
+              >
+                {dataset.title}
+              </h2>
+              <div class="absolute -top-12 left-1/2 -translate-x-1/2 lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:text-left lg:px-0 lg:my-2 w-full px-8 sm:px-16 text-sm flex">
+                {dataset.url ? (
+                  <a
+                    href={dataset.url}
+                    class="text-links hover-hover:hover:text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center"
+                  >
+                    <Icon
+                      name="ui/external-link"
+                      class="inline-block w-6 h-auto"
+                    />
+                    Zum Datensatz
+                  </a>
+                ) : (
+                  <p class="text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center">
+                    <Icon name="ui/lock" class="inline-block w-6 h-auto" />
+                    Datensatz geschlossen
+                  </p>
+                )}
+              </div>
+              <p
+                id={`${dataset.id}-description`}
+                class="my-2 px-8 sm:px-16 lg:px-0 w-full"
+              >
+                {dataset.description}
+              </p>
+              <div class="px-8 sm:px-16 lg:px-0 mb-4">
+                {dataset.example_usage && (
+                  <Button
+                    tag="a"
+                    href={dataset.example_usage}
+                    target="_blank"
+                    class="!mt-4"
+                  >
+                    Beispiel-Anwendung
+                  </Button>
+                )}
+                {!dataset.url && (
+                  <Button tag="a" href="/module" class="!mt-4">
+                    Wie ODIS Daten öffnet
+                  </Button>
+                )}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</div>
 
 <script is:inline src="https://unpkg.com/@popperjs/core@2"></script>
 <script is:inline src="https://unpkg.com/tippy.js@6"></script>
