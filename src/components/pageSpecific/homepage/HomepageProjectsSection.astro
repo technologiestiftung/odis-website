@@ -70,16 +70,30 @@ const projects = await getCollection("projekte", (project) =>
   const swiper = new Swiper(".projects-swiper", {
     slidesPerView: 1,
     spaceBetween: 32,
-    loop: true,
     breakpoints: {
       640: {
-        centeredSlides: false,
         slidesPerView: 2,
       },
       1024: {
-        centeredSlides: true,
         slidesPerView: 3,
       },
     },
   });
 </script>
+
+<style is:global>
+  .projects-swiper .swiper-slide:not(.swiper-slide-active) {
+    transition: filter 0.3s ease-in-out;
+    filter: brightness(1.2) saturate(0.5) blur(2px);
+  }
+  .projects-swiper .swiper-slide.swiper-slide-active,
+  .projects-swiper .swiper-slide.swiper-slide-next {
+    filter: brightness(1) saturate(1) blur(0px);
+  }
+
+  @media (min-width: 1024px) {
+    .projects-swiper .swiper-slide.swiper-slide-next + .swiper-slide {
+      filter: brightness(1) saturate(1) blur(0px);
+    }
+  }
+</style>
