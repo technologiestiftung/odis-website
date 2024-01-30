@@ -25,7 +25,7 @@ const nextNumber = activeNumber + 1;
 const Tag = buttonTag;
 ---
 
-<nav class="inline-flex relative gap-4">
+<nav class="inline-flex relative gap-1 @sm:gap-4">
   <span
     aria-hidden="true"
     class="z-10 absolute left-4 w-[calc(100%-2rem)] top-1/2 -translate-y-1/2 h-[2px] bg-line"
@@ -42,10 +42,12 @@ const Tag = buttonTag;
           href={Tag === "a" ? `/module/${module.slug}` : undefined}
           tabindex={active ? "-1" : "0"}
           aria-label={`Go to module ${module.data.number}`}
+          data-modulenumber={module.data.number}
           class={cn(
+            `module-stepper-button`,
             `w-10 h-10 flex place-content-center place-items-center`,
             `relative z-20 focusable rounded-full group`,
-            `no-underline`,
+            `no-underline cursor-pointer`,
           )}
           {...buttonProps}
         >
