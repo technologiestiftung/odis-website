@@ -1,0 +1,339 @@
+---
+import WimmelBild from "@/components/WimmelBild.astro";
+import highlightedDatasets from "@/assets/data/highlighted_datasets.json";
+import Button from "./Button.astro";
+import { Icon } from "astro-icon/components";
+import { cn } from "@/utils/classNames";
+
+const focusStyles =
+  "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8 transition motion-reduce:transition-none";
+---
+
+<div class="grid-container pb-16">
+  <section
+    aria-label="Von ODIS für wichtig befundene Datensätze"
+    class="w-full my-12"
+  >
+    <div
+      class="hidden lg:block container mx-auto px-4"
+      id="wimmelbild-container"
+    >
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/tippy.js@6/themes/light-border.css"
+      />
+      <WimmelBild />
+    </div>
+
+    <div
+      class="swiper wimmelbild-swiper mb-4 lg:hidden w-full"
+      aria-hidden="true"
+    >
+      <div class="swiper-wrapper flex flex-nowrap items-end" aria-hidden="true">
+        {
+          highlightedDatasets.map((dataset) => {
+            if (dataset.icon) {
+              return (
+                <div class="swiper-slide">
+                  <Icon
+                    class="w-full h-auto"
+                    name={`wimmelbild/${dataset.icon}`}
+                    aria-hidden="true"
+                  />
+                </div>
+              );
+            }
+          })
+        }
+      </div>
+    </div>
+
+    <div
+      class="flex flex-wrap gap-y-4 lg:hidden sm:w-[calc(100%+8rem)] sm:-ml-16"
+    >
+      <div class="w-full flex justify-between order-first relative">
+        <button
+          class={cn(
+            `swiper-button-prev`,
+            `wimmelbild-button-prev`,
+            focusStyles,
+          )}></button>
+        <button
+          class={cn(
+            `swiper-button-next`,
+            `wimmelbild-button-next`,
+            focusStyles,
+          )}></button>
+      </div>
+      <div id="highlighted-datasets" class="w-full">
+        {
+          highlightedDatasets.map((dataset, index) => (
+            <div
+              data-highlighted-dataset-index={index}
+              data-highlighted-dataset-id={dataset.id}
+              class="hidden !px-0 relative w-full "
+            >
+              <h2
+                id={`${dataset.id}-title`}
+                class="text-xl font-bold text-headlines px-8 sm:px-16 lg:px-0"
+              >
+                {dataset.title}
+              </h2>
+              <div class="absolute -top-12 left-1/2 -translate-x-1/2 lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:text-left lg:px-0 lg:my-2 w-full px-8 sm:px-16 text-sm flex">
+                {dataset.url ? (
+                  <a
+                    href={dataset.url}
+                    class="text-links hover-hover:hover:text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center"
+                  >
+                    <Icon
+                      name="ui/external-link"
+                      class="inline-block w-6 h-auto"
+                    />
+                    Zum Datensatz
+                  </a>
+                ) : (
+                  <p class="text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center">
+                    <Icon name="ui/lock" class="inline-block w-6 h-auto" />
+                    Datensatz geschlossen
+                  </p>
+                )}
+              </div>
+              <p
+                id={`${dataset.id}-description`}
+                class="my-2 px-8 sm:px-16 lg:px-0 w-full"
+              >
+                {dataset.description}
+              </p>
+              <div class="px-8 sm:px-16 lg:px-0 mb-4">
+                {dataset.example_usage && (
+                  <Button
+                    tag="a"
+                    href={dataset.example_usage}
+                    target="_blank"
+                    class="!mt-4"
+                  >
+                    Beispiel-Anwendung
+                  </Button>
+                )}
+                {!dataset.url && (
+                  <Button tag="a" href="/module" class="!mt-4">
+                    Wie ODIS Daten öffnet
+                  </Button>
+                )}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+
+  import Swiper from "swiper";
+  import "swiper/swiper-bundle.css";
+
+  const highlightedDatasetsList = (document
+    .getElementById("highlighted-datasets")
+    ?.querySelectorAll("div[data-highlighted-dataset-index]") ||
+    []) as HTMLElement[];
+
+  /*
+    ------------------------------------------------------------
+    SLIDER (mobile screen sizes)
+    ------------------------------------------------------------
+    */
+  const INITIAL_SLIDE_INDEX = 1;
+
+  const swiper = new Swiper(".wimmelbild-swiper", {
+    slidesPerView: 1.4,
+    spaceBetween: 24,
+    breakpoints: {
+      480: {
+        slidesPerView: 1.8,
+        spaceBetween: 40,
+      },
+      640: {
+        slidesPerView: 2.2,
+        spaceBetween: 48,
+      },
+    },
+    initialSlide: INITIAL_SLIDE_INDEX,
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".wimmelbild-button-next",
+      prevEl: ".wimmelbild-button-prev",
+    },
+    a11y: {
+      nextSlideMessage: "Nächster Datensatz",
+      prevSlideMessage: "Vorheriger Datensatz",
+    },
+  });
+
+  const initialInfoElement = [...highlightedDatasetsList][INITIAL_SLIDE_INDEX];
+  const initialSlide = swiper.slides[INITIAL_SLIDE_INDEX];
+
+  if (initialInfoElement && initialSlide) {
+    initialInfoElement.classList.remove("hidden");
+  }
+
+  swiper.on("transitionEnd", function (swiper) {
+    [...highlightedDatasetsList].forEach((element) => {
+      const isActive =
+        element.dataset.highlightedDatasetIndex ===
+        `${Number(swiper.activeIndex)}`;
+
+      element.classList.toggle("hidden", !isActive);
+    });
+  });
+
+  /*
+      ------------------------------------------------------------
+      WIMMELBILD (medium and large screen sizes)
+      ------------------------------------------------------------
+      */
+  const wimmelbildSvg = document.getElementById("wimmelbild");
+  wimmelbildSvg?.setAttribute("role", "list");
+
+  const wimmelbildGroups = (document.querySelectorAll("#wimmelbild > g") ||
+    []) as NodeListOf<HTMLElement>;
+
+  wimmelbildGroups.forEach((group) => {
+    group.setAttribute("tabindex", "0");
+    group.setAttribute("role", "listitem");
+    group.setAttribute("aria-labelledby", `${group.id}-title`);
+    group.setAttribute("aria-describedby", `${group.id}-description`);
+  });
+
+  wimmelbildGroups.forEach((group) => {
+    const infoElement = [...highlightedDatasetsList].find(
+      (element) => element.dataset.highlightedDatasetId === group.id,
+    );
+
+    if (infoElement) {
+      tippy(group, {
+        theme: "light-border",
+        interactive: true,
+        delay: 100,
+        content: infoElement.innerHTML,
+        allowHTML: true,
+        offset: 0,
+        placement: "bottom",
+        // We can't use tippy's aria features because our setup with triggers within an SVG
+        // messes up the aria connections and focus handling.
+        aria: {
+          content: null,
+          expanded: false,
+        },
+        appendTo: document.getElementById("wimmelbild-container"),
+        onTrigger(instance: { reference: HTMLElement }) {
+          instance.reference.classList.add("wimmelbild_puzzle-piece--hovered");
+          wimmelbildGroups.forEach((group) => {
+            if (group.id === instance.reference.id) return;
+            group.classList.add("wimmelbild_puzzle-piece--hovered-out");
+          });
+        },
+        onUntrigger() {
+          wimmelbildGroups.forEach((group) => {
+            group.classList.remove(
+              "wimmelbild_puzzle-piece--hovered",
+              "wimmelbild_puzzle-piece--hovered-out",
+            );
+          });
+        },
+      });
+    }
+  });
+</script>
+
+<style is:global>
+  .wimmelbild-swiper .swiper-slide path,
+  .wimmelbild-swiper .swiper-slide circle,
+  .wimmelbild-swiper .swiper-slide rect {
+    transition:
+      fill 1s cubic-bezier(0.12, 0.98, 0.13, 0.98),
+      stroke 1s cubic-bezier(0.12, 0.98, 0.13, 0.98);
+  }
+
+  .swiper-button-next.wimmelbild-button-next,
+  .swiper-button-prev.wimmelbild-button-prev {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 0;
+    color: var(--links) !important;
+  }
+
+  .swiper-button-next.wimmelbild-button-next::after,
+  .swiper-button-prev.wimmelbild-button-prev::after {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .tippy-box[data-theme~="light-border"] {
+    border-color: var(--blue-medium) !important;
+    padding: 0.75rem;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .tippy-box[data-theme~="light-border"][data-placement^="top"]
+    > .tippy-arrow::after {
+    border-top-color: var(--blue-medium) !important;
+  }
+
+  .tippy-box[data-theme~="light-border"][data-placement^="bottom"]
+    > .tippy-arrow::after {
+    border-bottom-color: var(--blue-medium) !important;
+  }
+
+  .tippy-box[data-theme~="light-border"][data-placement^="left"]
+    > .tippy-arrow::after {
+    border-left-color: var(--blue-medium) !important;
+  }
+
+  .tippy-box[data-theme~="light-border"][data-placement^="right"]
+    > .tippy-arrow::after {
+    border-right-color: var(--blue-medium) !important;
+  }
+</style>
+
+<style>
+  .swiper-slide.swiper-slide-active {
+    --illu-white: var(--white);
+    --illu-highlight: var(--red);
+    --illu-gray: var(--gray-light);
+    --illu-bg: var(--blue-light);
+    --illu-line: var(--line);
+  }
+
+  .swiper-slide path,
+  .swiper-slide circle,
+  .swiper-slide rect {
+    transition:
+      fill 1s cubic-bezier(0.12, 0.98, 0.13, 0.98),
+      stroke 1s cubic-bezier(0.12, 0.98, 0.13, 0.98);
+  }
+
+  .swiper-slide:not(.swiper-slide-active) {
+    --illu-white: var(--bg);
+    --illu-highlight: var(--bg);
+    --illu-gray: var(--bg);
+    --illu-bg: var(--bg);
+    --illu-line: var(--blue-light);
+  }
+
+  [data-applied-mode="dark"] .swiper-slide:not(.swiper-slide-active) {
+    --illu-white: var(--bg);
+    --illu-highlight: var(--bg);
+    --illu-gray: var(--bg);
+    --illu-bg: var(--bg);
+    --illu-line: var(--blue);
+  }
+</style>

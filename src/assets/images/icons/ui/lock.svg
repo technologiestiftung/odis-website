@@ -1,0 +1,7 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+  xmlns="http://www.w3.org/2000/svg" class="{{ class }}">
+  <rect width="24" height="24" fill="white" />
+  <path d="M9 7V5.33333C9 4.44928 9.36875 3.60143 10.0251 2.97631C10.6815 2.35119 11.5717 2 12.5 2C13.4283 2 14.3185 2.35119 14.9749 2.97631C15.6313 3.60143 16 4.44928 16 5.33333V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="5" y="8" width="15" height="13" rx="1" stroke="currentColor" stroke-width="2" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.75 15.6655C14.4973 15.2333 15 14.4254 15 13.5C15 12.1193 13.8807 11 12.5 11C11.1193 11 10 12.1193 10 13.5C10 14.4254 10.5027 15.2333 11.25 15.6655V18.5H13.75V15.6655Z" fill="currentColor" />
+</svg>

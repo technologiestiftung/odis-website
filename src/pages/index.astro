@@ -1,8 +1,28 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import DefaultLayout from "../layouts/DefaultLayout.astro";
+import { getEntry } from "astro:content";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import HighlightedDatasets from "@/components/HighlightedDatasets.astro";
+import OpenDataSection from "@/components/pageSpecific/homepage/OpenDataSection.astro";
+import AboutOdisSection from "@/components/pageSpecific/homepage/AboutOdisSection.astro";
+import JourneySection from "@/components/pageSpecific/homepage/JourneySection.astro";
+import HomepageIntroSection from "@/components/pageSpecific/homepage/HomepageIntroSection.astro";
+import HomepageProjectsSection from "@/components/pageSpecific/homepage/HomepageProjectsSection.astro";
+import HomepageRessourcenSection from "@/components/pageSpecific/homepage/HomepageRessourcenSection.astro";
+import HomepageAktuellesSection from "@/components/pageSpecific/homepage/HomepageAktuellesSection.astro";
+import NewsletterLane from "@/components/NewsletterLane.astro";
+
+const entry = await getEntry("homepage", "homepage");
 ---
 
 <DefaultLayout metaTitle={SITE_TITLE} metaDescription={SITE_DESCRIPTION}>
-  <h1>HIGHLIGH</h1>
+  <HomepageIntroSection {...entry.data.intro} />
+  <HighlightedDatasets />
+  <OpenDataSection {...entry.data.openData} />
+  <AboutOdisSection {...entry.data.aboutOdis} />
+  <JourneySection {...entry.data.journey} />
+  <HomepageProjectsSection {...entry.data.projects} />
+  <HomepageRessourcenSection {...entry.data.resources} />
+  <HomepageAktuellesSection {...entry.data.aktuelles} />
+  <NewsletterLane />
 </DefaultLayout>
