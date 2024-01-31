@@ -16,6 +16,10 @@ const {
   mediaMetadata,
   ...contentSectionProps
 } = Astro.props;
+
+const iFrameUrl = import.meta.env.PROD
+  ? `https://docs.google.com/gview?url=${Astro.site}${filePath.replace("/", "")}&embedded=true`
+  : `http://localhost:${import.meta.env.PORT || 4321}/${filePath.replace("/", "")}`;
 ---
 
 <MediaSection
@@ -26,7 +30,7 @@ const {
   {...contentSectionProps}
 >
   <iframe
-    src={`https://docs.google.com/gview?url=${Astro.site}${filePath.replace("/", "")}&embedded=true`}
+    src={iFrameUrl}
     class="aspect-[9/13] lg:aspect-square w-full bg-discrete border border-discrete"
   ></iframe>
 </MediaSection>

@@ -9,8 +9,8 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: import.meta.env.PROD
-    ? "https://odis-berlin.de"
-    : "https://deploy-preview-296--odis-website.netlify.app",
+    ? import.meta.env.VERCEL_URL || "https://odis-berlin.de"
+    : `http://localhost:${process.env.PORT || 4321}`,
   integrations: [
     icon({ iconDir: "src/assets/images/icons" }),
     tailwind(),
