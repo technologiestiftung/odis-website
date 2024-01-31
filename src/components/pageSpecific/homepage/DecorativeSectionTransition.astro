@@ -1,0 +1,32 @@
+---
+import { cn } from "@/utils/classNames";
+import { Image } from "astro:assets";
+import homepageWaveSectionTransition from "@/assets/images/misc/homepage-wave-section-transition.svg";
+---
+
+<div class="grid-container hidden lg:grid" aria-hidden="true">
+  <div class="grid col-span-10 grid-cols-subgrid">
+    <div class="relative col-span-4">
+      <div
+        class={cn(
+          "absolute h-full top-0 bg-bg-inv",
+          `-left-[calc(var(--gridGap)+var(--marginSize))]`,
+          `lg:w-[calc(100%+var(--marginSize)+var(--gridGap)+1px)]`,
+        )}
+        style={{ boxShadow: `0 -1px 0 0 var(--bg-inv)` }}
+      >
+      </div>
+    </div>
+    <div class="col-span-2 col-start-5 bg-right h-[112px] relative">
+      <div
+        class="absolute -top-px -left-[var(--gridGap)] w-[calc(100%+(var(--gridGap)*2))] h-[113px]"
+      >
+        <Image
+          src={homepageWaveSectionTransition}
+          alt=""
+          class="w-full h-full object-cover object-right"
+        />
+      </div>
+    </div>
+  </div>
+</div>

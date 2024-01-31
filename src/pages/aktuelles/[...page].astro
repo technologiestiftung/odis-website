@@ -18,10 +18,6 @@ export type Props = {
   page: Page<DataType>;
 };
 
-const formattedIntlDateFormatter = new Intl.DateTimeFormat("de-DE", {
-  dateStyle: "long",
-});
-
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const isPostAndVisible = (post: DataType) =>
     post.data.tags.includes("post") && post.data.visible;
@@ -63,38 +59,15 @@ const firstPath = "aktuelles";
       {
         page.data.map((post) => {
           if (!post.data.visible) return null;
-          const { slug, data } = post;
+          const { data } = post;
           const isProject = data.tags.includes("project");
           const isResource = data.tags.includes("resource");
           const isAktuelles =
             data.tags.includes("post") && !isProject && !isResource;
 
           if (isAktuelles) {
-            const { data: aktuelles } = post as Aktuelles;
-            const hasLink = !!aktuelles.link;
-            const linkIsExternal =
-              hasLink && aktuelles.link?.startsWith("http");
-            const postLink =
-              aktuelles.link && linkIsExternal
-                ? aktuelles.link
-                : `/aktuelles/${slug}`;
-            const theme = linkIsExternal ? "inverted" : "normal";
-            return (
-              <NewsCard
-                title={aktuelles.title}
-                description={aktuelles.description}
-                postLink={postLink}
-                postLinkText={aktuelles.urlText}
-                date={formattedIntlDateFormatter.format(aktuelles.date)}
-                author={aktuelles.author}
-                readingTime={
-                  aktuelles.readingTime ? `${aktuelles.readingTime}` : undefined
-                }
-                image={aktuelles.headerImage?.src}
-                imageAlt={aktuelles.headerImage?.alt}
-                theme={theme}
-              />
-            );
+            const aktuelles = post as Aktuelles;
+            return <NewsCard {...aktuelles} />;
           }
           if (isProject) {
             const project = post as Project;

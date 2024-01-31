@@ -447,7 +447,6 @@ import Heading from "@/components/Heading.astro";
             return response.json();
           })
           .then((json) => {
-            console.log(json);
             if (target instanceof HTMLElement) {
               target.innerHTML = "";
               // const br = document.createElement("br");
