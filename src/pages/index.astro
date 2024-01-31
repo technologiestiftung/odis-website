@@ -8,6 +8,7 @@ import AboutOdisSection from "@/components/pageSpecific/homepage/AboutOdisSectio
 import JourneySection from "@/components/pageSpecific/homepage/JourneySection.astro";
 import HomepageIntroSection from "@/components/pageSpecific/homepage/HomepageIntroSection.astro";
 import HomepageProjectsSection from "@/components/pageSpecific/homepage/HomepageProjectsSection.astro";
+import HomepageRessourcenSection from "@/components/pageSpecific/homepage/HomepageRessourcenSection.astro";
 
 const entry = await getEntry("homepage", "homepage");
 ---
@@ -19,4 +20,5 @@ const entry = await getEntry("homepage", "homepage");
   <AboutOdisSection {...entry.data.aboutOdis} />
   <JourneySection {...entry.data.journey} />
   <HomepageProjectsSection {...entry.data.projects} />
+  <HomepageRessourcenSection {...entry.data.resources} />
 </DefaultLayout>

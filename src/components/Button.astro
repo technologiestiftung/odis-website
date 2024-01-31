@@ -1,4 +1,5 @@
 ---
+import { cn } from "@/utils/classNames";
 import type { HTMLAttributes, HTMLTag } from "astro/types";
 
 export type Props<T extends HTMLTag> = HTMLAttributes<T> & {
@@ -16,8 +17,7 @@ const {
 } = Astro.props;
 
 const isPrimary = variant === "primary";
-const finalTailwindClasses = [
-  className,
+const finalTailwindClasses = cn(
   inverted && `border-line-inv focus-visible:ring-offset-bg-inv`,
   !inverted && `border-line text-links bg-bg focus-visible:ring-offset-bg`,
   isPrimary &&
@@ -48,9 +48,8 @@ const finalTailwindClasses = [
   `hover-hover:hover:focus-visible:shadow-none`,
   `focus-visible:ring-offset-4`,
   `cursor-pointer`,
-]
-  .filter(Boolean)
-  .join(" ");
+  className,
+);
 
 const Tag = tag;
 ---
