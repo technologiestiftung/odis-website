@@ -18,10 +18,6 @@ const focusStyles =
       class="hidden lg:block container mx-auto px-4"
       id="wimmelbild-container"
     >
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/tippy.js@6/themes/light-border.css"
-      />
       <WimmelBild />
     </div>
 
@@ -221,7 +217,7 @@ const focusStyles =
         content: infoElement.innerHTML,
         allowHTML: true,
         offset: 0,
-        placement: "bottom",
+        placement: "auto",
         // We can't use tippy's aria features because our setup with triggers within an SVG
         // messes up the aria connections and focus handling.
         aria: {
@@ -276,31 +272,35 @@ const focusStyles =
   }
 
   .tippy-box[data-theme~="light-border"] {
-    border-color: var(--blue-medium) !important;
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
     padding: 0.75rem;
     border-radius: 0;
-    border: none;
-    box-shadow: none;
+    border: none !important;
+    border-style: solid;
+    box-shadow:
+      0.5rem 0.5rem 0 0 var(--shadow-secondary),
+      inset 0 0 0 1px var(--line);
   }
 
   .tippy-box[data-theme~="light-border"][data-placement^="top"]
-    > .tippy-arrow::after {
-    border-top-color: var(--blue-medium) !important;
+    > .tippy-arrow::before {
+    border-top-color: var(--line) !important;
   }
 
   .tippy-box[data-theme~="light-border"][data-placement^="bottom"]
-    > .tippy-arrow::after {
-    border-bottom-color: var(--blue-medium) !important;
+    > .tippy-arrow::before {
+    border-bottom-color: var(--line) !important;
   }
 
   .tippy-box[data-theme~="light-border"][data-placement^="left"]
-    > .tippy-arrow::after {
-    border-left-color: var(--blue-medium) !important;
+    > .tippy-arrow::before {
+    border-left-color: var(--line) !important;
   }
 
   .tippy-box[data-theme~="light-border"][data-placement^="right"]
-    > .tippy-arrow::after {
-    border-right-color: var(--blue-medium) !important;
+    > .tippy-arrow::before {
+    border-right-color: var(--line) !important;
   }
 </style>
 

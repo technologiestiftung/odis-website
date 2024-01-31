@@ -1,7 +1,8 @@
 {
-  "name": "blog",
+  "name": "odis-website",
+  "description": "Webseite von Berlins Open Data Informationsstelle",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
