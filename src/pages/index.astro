@@ -9,6 +9,8 @@ import JourneySection from "@/components/pageSpecific/homepage/JourneySection.as
 import HomepageIntroSection from "@/components/pageSpecific/homepage/HomepageIntroSection.astro";
 import HomepageProjectsSection from "@/components/pageSpecific/homepage/HomepageProjectsSection.astro";
 import HomepageRessourcenSection from "@/components/pageSpecific/homepage/HomepageRessourcenSection.astro";
+import HomepageAktuellesSection from "@/components/pageSpecific/homepage/HomepageAktuellesSection.astro";
+import NewsletterLane from "@/components/NewsletterLane.astro";
 
 const entry = await getEntry("homepage", "homepage");
 ---
@@ -21,4 +23,6 @@ const entry = await getEntry("homepage", "homepage");
   <JourneySection {...entry.data.journey} />
   <HomepageProjectsSection {...entry.data.projects} />
   <HomepageRessourcenSection {...entry.data.resources} />
+  <HomepageAktuellesSection {...entry.data.aktuelles} />
+  <NewsletterLane />
 </DefaultLayout>

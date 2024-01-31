@@ -4,74 +4,61 @@ import Button from "./Button.astro";
 import TextLink from "./TextLink.astro";
 import NewsCardGradient from "./NewsCardGradient.astro";
 import { cn } from "../utils/classNames";
-import type { ImageMetadata } from "astro";
 import { Icon } from "astro-icon/components";
+import type { CollectionEntry } from "astro:content";
 
-export type Props = {
-  title: string;
-  description: string;
-  date: string;
-  postLink: string;
-  postLinkText?: undefined | string;
-  author?: undefined | string;
-  readingTime?: undefined | string;
-  theme: "normal" | "inverted";
-  image?: undefined | ImageMetadata;
-  imageAlt?: undefined | string;
-  class?: undefined | string;
+export type Props = CollectionEntry<"aktuelles"> & {
+  class?: string;
 };
 
-const {
-  postLink,
-  postLinkText = "Zum Beitrag",
-  theme = "normal",
-  image,
-  imageAlt,
-  class: className = "",
-} = Astro.props;
+const { class: className = "", data, slug } = Astro.props;
+const { headerImage } = data;
 
+const hasLink = !!data.link;
+const linkIsExternal = hasLink && data.link?.startsWith("http");
+const postLink = data.link && linkIsExternal ? data.link : `/aktuelles/${slug}`;
+const theme = linkIsExternal ? "inverted" : "normal";
 const paddingClasses = `px-7 pt-7 pb-10`;
 const isInverted = theme === "inverted";
-const contentAreaWrapperClasses = !isInverted && image ? paddingClasses : "";
+const contentAreaWrapperClasses =
+  !isInverted && headerImage ? paddingClasses : "";
 ---
 
 <article
-  class={[
-    className,
+  class={cn(
     `@container relative grid grid-items-start`,
     `grid-rows-[250px,minmax(auto,1fr)] border`,
     !isInverted && `bg-bg-alt text-text border-bg-alt`,
-    !isInverted && image ? `p-0` : paddingClasses,
+    !isInverted && headerImage?.src ? `p-0` : paddingClasses,
     isInverted && `text-text-inv bg-bg-inv bg-top`,
     isInverted && `border-bg-inv bg-no-repeat bg-cover @md:bg-contain`,
     isInverted && paddingClasses,
-  ]
-    .filter(Boolean)
-    .join(" ")}
+    className,
+  )}
 >
   {
-    !isInverted && image?.src && (
+    !isInverted && headerImage?.src && (
       <a
         href={postLink}
-        style={{ backgroundImage: `url("${image.src}")` }}
+        style={{ backgroundImage: `url("${headerImage.src.src}")` }}
         class="
         h-full bg-center bg-cover relative outline-none
         hover:opacity-50 transition-opacity duration-300 ease-in-out
       "
         role="img"
         tabindex="-1"
-        aria-label={imageAlt}
+        aria-label={headerImage.alt}
       >
         <div class="absolute inset-0 bg-bg-inv mix-blend-screen opacity-50" />
       </a>
     )
   }
   {
-    isInverted && image?.src && (
+    isInverted && headerImage?.src && (
       <a
         class="h-full group outline-none"
         href={postLink}
-        title={postLinkText}
+        title={data.urlText}
         rel="noopener noreferrer"
         target="_blank"
         tabindex="-1"
@@ -81,9 +68,9 @@ const contentAreaWrapperClasses = !isInverted && image ? paddingClasses : "";
           absolute top-0 left-0 w-full h-1/2 bg-top bg-cover
           group-hover:opacity-50 transition-opacity duration-300 ease-in-out
         "
-          style={{ backgroundImage: `url("${image.src}")` }}
+          style={{ backgroundImage: `url("${headerImage.src.src}")` }}
           role="img"
-          aria-label={imageAlt}
+          aria-label={headerImage.alt}
         />
       </a>
     )
@@ -95,13 +82,17 @@ const contentAreaWrapperClasses = !isInverted && image ? paddingClasses : "";
     )}
   >
     <div class="flex flex-col gap-2">
-      <NewsCardContent {...Astro.props} />
+      <NewsCardContent
+        {...Astro.props.data}
+        postLink={postLink}
+        theme={theme}
+      />
     </div>
     <div class="flex flex-col justify-end items-start">
       {
         !isInverted && (
           <Button tag="a" href={postLink} variant="secondary">
-            {postLinkText}
+            {data.urlText}
           </Button>
         )
       }
@@ -112,7 +103,7 @@ const contentAreaWrapperClasses = !isInverted && image ? paddingClasses : "";
             href={postLink}
             class="text-text-inv focus-visible:bg-bg focus-visible:decoration-bg focus-visible:text-links"
           >
-            {postLinkText}
+            {data.urlText}
           </TextLink>
         )
       }
@@ -121,7 +112,7 @@ const contentAreaWrapperClasses = !isInverted && image ? paddingClasses : "";
   {
     isInverted && (
       <>
-        <div class="sr-only" role="img" aria-label="{{ image_alt_text }}" />
+        <div class="sr-only" role="img" aria-label={headerImage?.alt} />
         <NewsCardGradient class="absolute top-0 left-0 w-full h-full" />
         <Icon
           name="ui/external-link"

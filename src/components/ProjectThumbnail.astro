@@ -6,7 +6,7 @@ import ProjectMockups from "./ProjectMockups.astro";
 import Button from "./Button.astro";
 
 export type Props = CollectionEntry<"projekte"> & {
-  class: string;
+  class?: string;
 };
 
 const { data, slug, class: className = "" } = Astro.props;
