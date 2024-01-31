@@ -10,12 +10,13 @@ description: Offene Daten bilden die Grundlage von Anwendungen wie
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
+headerImage:
+  src: ./images/tarifkarte.png
+  alt: Tarifkarte
 date: 2023-03-30
 ---
 
-### GTFS-Daten und die Berliner Tarifkarte
-
-<br />
+## GTFS-Daten und die Berliner Tarifkarte
 
 Egal ob sich Berliner:innen morgens um 9 Uhr auf dem Weg zur Arbeit oder auf dem Nachhauseweg vom Club befinden. Dienste wie Google Maps, Jelbi oder die Fahrplanauskunft der S-Bahn Berlin ermöglichen es ihnen auf dem schnellsten Weg mit den öffentlichen Verkehrsmitteln von A nach B zu kommen. Dass die Services reibungslos und kostenlos funktionieren, sind auch offenen Daten in einem einheitlichen Dateiformat zu verdanken: GTFS-Daten.
 
@@ -44,18 +45,13 @@ Während die Unterteilung Berlins in Tarifbereiche A und B eine verwaltungsrelev
 
 Um die Visualisierung herzustellen wurden GTFS-Daten zur Position der Haltestellen aus dem Open Data Portal mit Informationen über die Tarifbereiche verschnitten. Mit Hilfe eines Voronoi-Diagramms wurde der Raum um Berlin zuerst in Regionen zerlegt. Danach wurden diejenigen wieder zusammengelegt, welche zur Zone C gehören. Die genaue Methodik und den zugrundliegenden Code zur Tarifkarte findest du in unserem [GitHub Repository](https://github.com/technologiestiftung/tarifkarte).
 
-<br />
-
 ### Community
 
 Von [eigenen Dateiformaten](https://github.com/public-transport/friendly-public-transport-format) bis [Telegram Chatbots](https://github.com/derhuerst/vbb-telegram) und ganze APIs; Anwendungen, die GTFS- und öffentliche Verkehrsdaten im weiteren Sinne benutzen, basieren vielerorts auf dem ehrenamtlichen Einsatz von Freiwilligen. Für eine beispielhafte Übersicht an Projekten, die in der Community entstanden sind, lohnt sich ein Blick auf die [GitHub Repositories](https://github.com/derhuerst) der jeweiligen Entwickler:innen.
-
-<br />
 
 ### Anmerkung
 
 Bei der Erstellung der Karte fiel auf, dass die bereitgestellten GTFS-Daten keine Informationen darüber enthalten, zu welchen Stadttarifen die einzelnen Stationen gehören. Zwar stießen wir nach eigener Recherche auf der Seite der VBB auf eine PDF, welches die Informationen enthält. Allerdings lässt sich die Datei im proprietären (und damit nicht offenen Format) nur schwer weiternutzen. Auf unsere Anfrage, ob diese Informationen maschinenlesbar, offen und unter einer stabilen, sich nicht ändernden URL eröffentlicht werden könnten, wurden wir vom VBB API-Team, welches auch die GTFS-Daten pflegt, unterstützt.
 Wir bedanken uns für das Engagement und freuen uns, dass die Informationen nun ebenfalls unter [diesem Link](https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/vbb-alle-zielorte.csv) abrufbar sind.
 
-<br />
-Danke VBB API-Team!
+**Danke VBB API-Team!**
