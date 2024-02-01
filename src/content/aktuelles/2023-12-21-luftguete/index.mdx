@@ -33,12 +33,16 @@ Eine kontinuierliche Messung der Berliner Luftqualität dient damit nicht nur de
 
 Seit Mai 2022 übermittelt die zuständige Senatsverwaltung Mobilität, Verkehr, Klimaschutz und Umwelt (SenMVKU) die Luftgütemessdaten an das Berliner Open-Data-Portal über eine offene Schnittstelle, auch API (kurz für "application programming interface") genannt, und betreibt darüber hinaus den Internetauftritt des Luftgütemessnetzes unter [https://luftdaten.berlin.de.](https://luftdaten.berlin.de/) Auf der Webseite stellt die SenMVKU einige Übersichten zum aktuellen Luftqualitätsindex, den täglichen Messwerten und der jährlichen Anzahl von Grenzwertüberschreitungen zur Verfügung. Diese Daten stehen als CSV-Download zur Verfügung und können direkt im Browser visualisiert werden.
 
-<iframe 
+
+
+<ContentSection caption="Übersicht von Kraftwerken im Berliner Stadtgebiet" fullWidth={false}>
+  <iframe 
 src="https://luftdaten.berlin.de/station/mc010" 
 height="600" 
-width="1000" 
+width="100%" 
 title= "Die interaktive Ansicht der Daten, die beispielshaft von einer der Messstationen erhoben werden.">
 </iframe>
+</ContentSection>
 
 Weitaus interessanter für Datenverarbeitende ist die zugrunde liegende Programmierschnittstelle, über die Daten heruntergeladen werden können. Eine Schnittstelle bietet sich im Falle der Luftdaten aus mehreren Gründen an: Aus Sicht der Datenbereitstellenden ist eine automatisierte Art, die Daten zusammenzuführen, wichtig. Viele Datensätze und Statistiken, die sich beispielweise im Open-Data-Portal finden, werden von Mitarbeitenden in der Verwaltung einzeln zusammengetragen, abgespeichert und hochgeladen.
 
@@ -95,9 +99,215 @@ import image3 from "./images/luftgüte_browser.png"
   caption="Darstellung des Inhalts der Abfrage im Browser (Mozilla Firefox)."
 />
 
-Bisher haben wir uns hauptsächlich über die Metadaten, also die Struktur der Daten, informiert. Möchten wir nun tatsächliche Werte für bestimmte Zeiträume abfragen, können wir dies unter dem Reiter “Stationen” und /api/stations/{code}/data tun. Erinnern wir uns an das Beispiel der Station Marienfelde in der vorherigen Abfrage, können wir mit dem ‘code’, also der Eingabe der Stations-ID “mc027”, und einer bestimmten Komponente, beispielsweise “no2”, die Werte für Stickstoffdioxid abfragen. Zusätzliche Eingaben für Zeitperiode (z.B. ‘24h’) und -spanne (’currentmonth’) konkretisieren die Abfrage. Die generierte Abfrage-URL https://luftdaten.berlin.de/api/stations/mc027/data?core=no2&period=24h&timespan=currentmonth gibt also die Daten für Stickstoffdioxid pro Tag, erhoben von der Station 027 für den aktuellen Monat, zurück.
+Bisher haben wir uns hauptsächlich über die Metadaten, also die Struktur der Daten, informiert. Möchten wir nun tatsächliche Werte für bestimmte Zeiträume abfragen, können wir dies unter dem Reiter “Stationen” und /api/stations/\{code\}/data tun. Erinnern wir uns an das Beispiel der Station Marienfelde in der vorherigen Abfrage, können wir mit dem ‘code’, also der Eingabe der Stations-ID “mc027”, und einer bestimmten Komponente, beispielsweise “no2”, die Werte für Stickstoffdioxid abfragen. Zusätzliche Eingaben für Zeitperiode (z.B. ‘24h’) und -spanne (’currentmonth’) konkretisieren die Abfrage. Die generierte Abfrage-URL https://luftdaten.berlin.de/api/stations/mc027/data?core=no2&period=24h&timespan=currentmonth gibt also die Daten für Stickstoffdioxid pro Tag, erhoben von der Station 027 für den aktuellen Monat, zurück.
 
 Die angefragten Daten werden als .json-Datei herausgegeben und können nun von Datenverarbeitenden beispielsweise in Visualisierungen eingebunden werden. In ihrer Rohform sehen die Daten mitsamt Zeitstempel so aus:
+
+```json
+[
+  {
+    "datetime": "2023-10-25T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 12
+  },
+  {
+    "datetime": "2023-10-24T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": null
+  },
+  {
+    "datetime": "2023-10-23T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": null
+  },
+  {
+    "datetime": "2023-10-22T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 4
+  },
+  {
+    "datetime": "2023-10-21T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-20T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 9
+  },
+  {
+    "datetime": "2023-10-19T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 13
+  },
+  {
+    "datetime": "2023-10-18T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 21
+  },
+  {
+    "datetime": "2023-10-17T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 15
+  },
+  {
+    "datetime": "2023-10-16T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 8
+  },
+  {
+    "datetime": "2023-10-15T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 2
+  },
+  {
+    "datetime": "2023-10-14T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 3
+  },
+  {
+    "datetime": "2023-10-13T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-12T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-11T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 6
+  },
+  {
+    "datetime": "2023-10-10T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-09T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-08T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-07T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-06T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-05T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-04T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  },
+  {
+    "datetime": "2023-10-03T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 4
+  },
+  {
+    "datetime": "2023-10-02T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 7
+  },
+  {
+    "datetime": "2023-10-01T00:00:00+02:00",
+    "station": "mc027",
+    "core": "no2",
+    "component": "no2_24h",
+    "period": "24h",
+    "value": 5
+  }
+]
+```
+
 
 Die resultierenden Daten können nun auf verschiedene Weise weiterverarbeitet oder visualisiert werden. So funktioniert zum Beispiel die eingangs verlinkte Visualisierung verschiedener Stationen des Berliner Luftgütemessnetzes. Durch das Ausfüllen von Werten unter https://luftdaten.berlin.de/station/mc027#station-data generieren Nutzer:innen eine jeweilige API-Abfrage, die sofort als Diagramm angezeigt wird und deren zugrunde liegenden Daten als Excel-Datei heruntergeladen werden können.
 Fazit: Nach ein wenig Einarbeitungszeit eröffnen sich viele Möglichkeiten
