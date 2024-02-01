@@ -28,7 +28,7 @@ const contentAreaWrapperClasses =
   class={cn(
     `@container relative grid grid-items-start`,
     `grid-rows-[250px,minmax(auto,1fr)] border`,
-    !isInverted && `bg-bg-alt text-text border-bg-alt`,
+    !isInverted && `bg-bg-alt dark:bg-bg text-text border-bg-alt`,
     !isInverted && headerImage?.src ? `p-0` : paddingClasses,
     isInverted && `text-text-inv bg-bg-inv bg-top`,
     isInverted && `border-bg-inv bg-no-repeat bg-cover @md:bg-contain`,
