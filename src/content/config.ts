@@ -376,6 +376,7 @@ const resources = defineCollection({
       visible: z.boolean().default(true),
       date: z.date().default(new Date()),
       tags: z.array(z.string()).default(["resource"]),
+      link: z.string().optional(),
       question: z.string().optional().nullable(),
       media: z.object({
         thumbnail: image(),

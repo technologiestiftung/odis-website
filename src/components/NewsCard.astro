@@ -41,6 +41,8 @@ const contentAreaWrapperClasses =
       <a
         href={postLink}
         style={{ backgroundImage: `url("${headerImage.src.src}")` }}
+        target={linkIsExternal ? "_blank" : "_self"}
+        rel={linkIsExternal ? "noopener noreferrer" : undefined}
         class="
         h-full bg-center bg-cover relative outline-none
         hover:opacity-50 transition-opacity duration-300 ease-in-out
