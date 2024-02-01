@@ -1,56 +1,72 @@
 ---
-import { getCollection } from 'astro:content';
+import { cn } from "@/utils/classNames";
+import type { HTMLAttributes, HTMLTag } from "astro/types";
+import { getCollection } from "astro:content";
 
-export type Props = {
+export type Props<T extends HTMLTag> = {
   activeNumber: number;
   hightLightNext?: boolean;
-}
+  buttonTag?: undefined | T;
+  buttonProps?: HTMLAttributes<T>;
+};
 
-const sortedModules = (await getCollection('module'))
-  .sort((a, b) => a.data.number - b.data.number);
+const sortedModules = (await getCollection("module")).sort(
+  (a, b) => a.data.number - b.data.number,
+);
 
-const { activeNumber, hightLightNext = false } = Astro.props
+const {
+  activeNumber,
+  hightLightNext = false,
+  buttonTag = "a",
+  buttonProps,
+} = Astro.props;
 const nextNumber = activeNumber + 1;
 
+const Tag = buttonTag;
 ---
 
-<nav class="inline-flex relative gap-4">
+<nav class="inline-flex relative gap-1 @sm:gap-4">
   <span
     aria-hidden="true"
     class="z-10 absolute left-4 w-[calc(100%-2rem)] top-1/2 -translate-y-1/2 h-[2px] bg-line"
   ></span>
-  {sortedModules.map((module) => {
-        const active = module.data.number === activeNumber;
-        const isNext = module.data.number === nextNumber;
-        const activeAndNext = active && !hightLightNext
-        const isNextAndHighlighted = isNext && hightLightNext;
-        const showLarge = activeAndNext || isNextAndHighlighted;
-        return (
-          <a
-            href={`/module/${module.slug}`}
-            tabindex={active ? '-1' : '0'}
-            aria-label={`Go to module ${module.data.number}`}
-            class="
-              w-10 h-10 flex place-content-center place-items-center
-              relative z-20 focusable rounded-full group
-              no-underline
-            "
+  {
+    sortedModules.map((module) => {
+      const active = module.data.number === activeNumber;
+      const isNext = module.data.number === nextNumber;
+      const activeAndNext = active && !hightLightNext;
+      const isNextAndHighlighted = isNext && hightLightNext;
+      const showLarge = activeAndNext || isNextAndHighlighted;
+      return (
+        <Tag
+          href={Tag === "a" ? `/module/${module.slug}` : undefined}
+          tabindex={active ? "-1" : "0"}
+          aria-label={`Go to module ${module.data.number}`}
+          data-modulenumber={module.data.number}
+          class={cn(
+            `module-stepper-button`,
+            `w-10 h-10 flex place-content-center place-items-center`,
+            `relative z-20 focusable rounded-full group`,
+            `no-underline cursor-pointer`,
+          )}
+          {...buttonProps}
+        >
+          <span
+            class={cn(
+              `flex place-content-center place-items-center`,
+              `aspect-square rounded-full border-2 border-line`,
+              showLarge ? `w-10` : `w-5`,
+              active && `bg-links-active text-bg`,
+              !active && `bg-bg text-links-active font-bold`,
+              `group-hover:bg-links-active`,
+              `group-hover:text-bg transition-colors`,
+            )}
           >
-            <span
-              class={`
-                flex place-content-center place-items-center
-                aspect-square rounded-full border-2 border-line
-                ${showLarge ? 'w-10' : 'w-5'}
-                ${active ? 'bg-links-active text-bg' : 'bg-bg text-links-active font-bold'}
-                group-hover:bg-links-active
-                group-hover:text-bg
-                transition-colors
-              `}
-            >
-              {activeAndNext ? module.data.number : null}
-              {isNextAndHighlighted ? nextNumber : null}
-            </span>
-          </a>
-        );
-  })}
+            {activeAndNext ? module.data.number : null}
+            {isNextAndHighlighted ? nextNumber : null}
+          </span>
+        </Tag>
+      );
+    })
+  }
 </nav>

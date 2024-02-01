@@ -1,0 +1,92 @@
+---
+import Button from "@/components/Button.astro";
+import Heading from "@/components/Heading.astro";
+import ModuleStepper from "@/components/ModuleStepper.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import { cn } from "@/utils/classNames";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+export type Props = {
+  moduleButtonText: string;
+};
+
+const props = Astro.props;
+
+const modules = (await getCollection("module")).sort(
+  (a, b) => a.data.number - b.data.number,
+);
+---
+
+<div class="relative w-full h-full pb-4 overflow-hidden swiper modules-swiper">
+  <ul class="swiper-wrapper">
+    {
+      modules.map((module) => (
+        <li
+          class={cn(
+            `swiper-slide`,
+            `grid grid-cols-1 grid-rows-[320px_40px_1fr]`,
+            `relative w-full h-full gap-6`,
+          )}
+          aria-title={module.data.title}
+        >
+          <a href={`/module/${module.slug}`} class="relative w-full h-full">
+            <Image
+              src={module.data.icon}
+              alt={`Illustration für Modul ${module.data.number}`}
+              class="object-contain w-full h-full"
+            />
+          </a>
+          <div class="flex justify-center px-6 @container">
+            <ModuleStepper
+              activeNumber={module.data.number}
+              buttonTag="button"
+              data-module-number={module.data.number}
+            />
+          </div>
+          <div class="text-center max-w-96 mx-auto">
+            <Heading size="lg" tag="h3">
+              {module.data.title}
+            </Heading>
+            <Paragraph>{module.data.description}</Paragraph>
+            <Button
+              tag="a"
+              href={`/module/${module.slug}`}
+              variant="secondary"
+              class="mt-2"
+            >
+              {props.moduleButtonText}
+            </Button>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import "swiper/swiper-bundle.css";
+
+  const MODULES_INITIAL_SLIDE_INDEX = 0;
+
+  const swiper = new Swiper(".modules-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    initialSlide: MODULES_INITIAL_SLIDE_INDEX,
+    centeredSlides: true,
+  });
+
+  const stepperButtons = document.querySelectorAll(
+    "button.module-stepper-button",
+  ) as NodeListOf<HTMLButtonElement>;
+
+  stepperButtons.forEach((button) => {
+    button.addEventListener("click", (evt) => {
+      const currentTarget = evt.currentTarget as HTMLButtonElement;
+      const number = currentTarget.dataset.modulenumber;
+      if (!number) return;
+      swiper.slideTo(+number - 1);
+    });
+  });
+</script>

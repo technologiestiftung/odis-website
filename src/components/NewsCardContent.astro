@@ -1,17 +1,22 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import { cn } from "../utils/classNames";
 import Heading from "./Heading.astro";
-import type { Props as NewsCardProps } from "./NewsCard.astro";
-export type Props = NewsCardProps;
+
+export type Props = CollectionEntry<"aktuelles">["data"] & {
+  postLink: string;
+  theme: "normal" | "inverted";
+};
+
 const {
   postLink,
-  postLinkText,
   title,
   description,
   date,
   author,
   readingTime,
   theme,
+  urlText = "Zum Beitrag",
 } = Astro.props;
 
 const primaryColorClasses = [
@@ -35,11 +40,15 @@ const primaryColorClasses = [
 ]
   .filter(Boolean)
   .join(" ");
+
+const formattedIntlDateFormatter = new Intl.DateTimeFormat("de-DE", {
+  dateStyle: "long",
+});
 ---
 
 <a
   href={postLink}
-  title={postLinkText}
+  title={urlText}
   {...theme === "inverted"
     ? { rel: "noopener noreferrer", target: "_blank" }
     : {}}
@@ -58,7 +67,11 @@ const primaryColorClasses = [
     </p>
   )
 }
-<p class="line-clamp-7">{description}</p>
-<div class={cn(`order-first text-sm flex gap-2 opacity-70`, primaryColorClasses)} >
-  <time datetime={date} class="justify-self-end">{date}</time>
+<p class="line-clamp-5">{description}</p>
+<div
+  class={cn(`order-first text-sm flex gap-2 opacity-70`, primaryColorClasses)}
+>
+  <time datetime={date.toISOString()} class="justify-self-end"
+    >{formattedIntlDateFormatter.format(date)}</time
+  >
 </div>

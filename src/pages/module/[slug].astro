@@ -11,6 +11,7 @@ import ContactLane from "../../components/ContactLane.astro";
 import ArrowLeft from "../../components/icons/ArrowLeft.astro";
 import { Image } from "astro:assets";
 import { components } from "@/components/macros/index.astro";
+import { cn } from "@/utils/classNames";
 
 export async function getStaticPaths() {
   const posts = await getCollection("module");
@@ -74,7 +75,10 @@ const { Content } = await post.render();
   <section>
     <div class="grid-container">
       <div
-        class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 pt-16"
+        class={cn(
+          "lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2",
+          "pt-16 @container flex justify-center items-center md:justify-start",
+        )}
       >
         <ModuleStepper activeNumber={modul.number} />
       </div>
