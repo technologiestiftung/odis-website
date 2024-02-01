@@ -327,3 +327,7 @@
 :where(a):not(:where([class~="not-prose"] *)) {
   @apply focusable hover-hover:hover:text-links-active transition-colors;
 }
+
+iframe {
+  @apply bg-[var(--white)] !w-full rounded relative overflow-hidden;
+}
