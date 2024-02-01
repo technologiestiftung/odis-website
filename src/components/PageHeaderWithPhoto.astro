@@ -28,11 +28,13 @@ const {
   class: className,
 } = Astro.props;
 
+const dateNextDay = new Date(date.getTime() + 24 * 60 * 60 * 1000);
+const dateIsoString = date.toISOString();
 const formattedIntlTime = new Intl.DateTimeFormat("de-DE", {
   year: "numeric",
   month: "long",
   day: "numeric",
-}).format(new Date(date));
+}).format(new Date(dateNextDay));
 ---
 
 <div class={cn(`w-screen overflow-x-hidden`, image && `pb-[8vmin]`, className)}>
@@ -48,7 +50,7 @@ const formattedIntlTime = new Intl.DateTimeFormat("de-DE", {
             Zurück
           </a>
           <span aria-hidden="true" class="scale-150 opacity-50">·</span>
-          <time datetime={date.toISOString().split("T")[0]} class="opacity-70">
+          <time datetime={dateIsoString} class="opacity-70">
             {formattedIntlTime}
             <slot name="naturalLanguageTime" />
           </time>

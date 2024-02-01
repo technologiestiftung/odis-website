@@ -44,6 +44,10 @@ const primaryColorClasses = [
 const formattedIntlDateFormatter = new Intl.DateTimeFormat("de-DE", {
   dateStyle: "long",
 });
+const dateIsoString = date.toISOString();
+const formattedDateNextDay = formattedIntlDateFormatter.format(
+  new Date(date.getTime() + 24 * 60 * 60 * 1000),
+);
 ---
 
 <a
@@ -71,7 +75,7 @@ const formattedIntlDateFormatter = new Intl.DateTimeFormat("de-DE", {
 <div
   class={cn(`order-first text-sm flex gap-2 opacity-70`, primaryColorClasses)}
 >
-  <time datetime={date.toISOString()} class="justify-self-end"
-    >{formattedIntlDateFormatter.format(date)}</time
-  >
+  <time datetime={dateIsoString} class="justify-self-end">
+    {formattedDateNextDay}
+  </time>
 </div>
