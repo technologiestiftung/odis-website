@@ -1,4 +1,4 @@
-import { z, defineCollection } from "astro:content";
+import { z, defineCollection, reference } from "astro:content";
 
 const aktuelles = defineCollection({
   type: "content",
@@ -96,14 +96,7 @@ const module = defineCollection({
       date: z.coerce.date().optional(),
       number: z.number(),
       icon: image(),
-      methods: z.array(
-        z.object({
-          name: z.string(),
-          description: z.string(),
-          link: z.string(),
-          icon: image(),
-        }),
-      ),
+      methods: z.array(reference("resources")),
       furtherLinksTitle: z.string().default("Weiterführende Links"),
       furtherLinksText: z
         .string()
