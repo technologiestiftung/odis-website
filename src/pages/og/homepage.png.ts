@@ -10,7 +10,7 @@ export const GET: APIRoute = async () => {
     renderBasicOgImage({
       title: data.intro.title,
       description: data.intro.text,
-      imagePath: data.aboutOdis.image.src,
+      image: data.aboutOdis.image,
     }),
   );
 };

@@ -12,7 +12,7 @@ export const GET: APIRoute = async () => {
     renderBasicOgImage({
       title: data.title,
       description: data.description,
-      imagePath: entries[0].data.heroImage?.src,
+      image: entries[0].data.heroImage,
       logoPath: "/images/odis-logo-negative.svg",
       styleOverrides: {
         wrapper: "bg-[#20378b]",

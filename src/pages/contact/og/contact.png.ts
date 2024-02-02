@@ -10,7 +10,7 @@ export const GET: APIRoute = async () => {
     renderBasicOgImage({
       title: contact.data.title,
       description: contact.data.description,
-      imagePath: contact.data.headerImage?.src.src,
+      image: contact.data.headerImage?.src,
       styleOverrides: {
         image: "border-0",
         imageStyles: {},

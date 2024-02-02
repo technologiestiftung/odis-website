@@ -12,7 +12,7 @@ export const GET: APIRoute<Props> = async ({ props }) =>
     renderBasicOgImage({
       title: props.data.title,
       description: props.data.description,
-      imagePath: props.data.headerImage?.src.src,
+      image: props.data.headerImage?.src,
       prefix: `Veranstaltung · ${formatGermanDate(props.data.date)}`,
     }),
   );

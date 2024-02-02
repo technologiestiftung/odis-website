@@ -12,7 +12,7 @@ export const GET: APIRoute<Props> = async ({ props }) =>
     renderBasicOgImage({
       title: props.data.title,
       description: props.data.description,
-      imagePath: props.data.media?.thumbnail.src,
+      image: props.data.media?.thumbnail,
       prefix: `Ressource · ${labelsMap[props.data.media.type]}`,
       styleOverrides: {
         wrapper: "bg-[#edf8fe]",

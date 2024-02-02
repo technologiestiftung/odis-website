@@ -42,7 +42,7 @@ export function renderBasicOgImage({
   title,
   suffix,
   description,
-  imagePath,
+  image,
   styleOverrides = {},
   logoPath = "/images/odis-logo.svg",
 }: {
@@ -50,7 +50,7 @@ export function renderBasicOgImage({
   suffix?: string | undefined;
   title: string;
   description: string;
-  imagePath?: string | undefined;
+  image?: ImageMetadata | undefined;
   styleOverrides?: {
     wrapper?: string;
     title?: string;
@@ -73,12 +73,14 @@ export function renderBasicOgImage({
       el(
         "div",
         {
-          tw: cn("w-1/2 flex flex-col gap-0 justify-center px-16 pt-12 pb-16"),
+          tw: cn("w-1/2 flex flex-col justify-center px-16 pt-12 pb-16"),
         },
         [
           el("img", {
             src: import.meta.env.SITE + logoPath,
-            tw: cn("h-24 mb-4 -ml-3", styleOverrides.logo),
+            tw: cn("mb-4 -ml-3", styleOverrides.logo),
+            width: 300,
+            height: 72,
           }),
           prefix &&
             el(
@@ -121,12 +123,22 @@ export function renderBasicOgImage({
         {
           tw: cn("w-1/2 h-full flex items-center justify-center p-16 pl-0"),
         },
-        imagePath &&
+        image &&
           el("img", {
-            src: import.meta.env.SITE + imagePath,
+            src: import.meta.env.SITE + image.src,
+            width: image.width,
+            height: image.height,
             tw: cn("border border-[#bee4f8]", styleOverrides.image),
             style: styleOverrides.imageStyles || {
               boxShadow: "8px 8px 0 0 #bee4f8",
+              width:
+                image.orientation === 1
+                  ? 400
+                  : (image.width / image.height) * 400,
+              height:
+                image.orientation === 1
+                  ? (image.height / image.width) * 400
+                  : 400,
             },
           }),
       ),

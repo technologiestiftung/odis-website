@@ -2,7 +2,6 @@ export const prerender = true;
 
 import type { APIRoute } from "astro";
 import { renderBasicOgImage, renderImageResponse } from "@/utils/ogUtil";
-import { formatGermanDate } from "@/utils/dateUtil";
 
 export const GET: APIRoute = async () => {
   return renderImageResponse(

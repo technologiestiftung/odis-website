@@ -12,7 +12,7 @@ export const GET: APIRoute = async () => {
     renderBasicOgImage({
       title: data.title,
       description: data.description,
-      imagePath: entries[0].data.media.thumbnail.src,
+      image: entries[0].data.media.thumbnail,
       styleOverrides: {
         wrapper: "bg-[#edf8fe]",
         image: cn(
