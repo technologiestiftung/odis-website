@@ -23,6 +23,7 @@ const {
   metaTitle,
   metaDescription,
   description,
+  type,
   period,
   status,
   datasets,
@@ -39,12 +40,23 @@ const { Content } = await post.render();
   <ProjectHeader {...Astro.props} />
   <section class="pb-64">
     <div class="grid-container">
-      <div class="md:col-span-6 md:col-start-2 prose">
+      <div class="md:col-span-6 md:col-start-2 prose relative z-10">
         <Content components={components} />
       </div>
       <aside class="md:col-start-9 md:col-span-3 py-4 flex flex-col gap-6">
         <dl class="sticky w-full top-6">
           {
+            type && (
+              <>
+                <Heading size="lg" tag="dt">
+                  Projekttyp
+                </Heading>
+                <dd class="mb-8">
+                  <Paragraph>{type}</Paragraph>
+                </dd>
+              </>
+            )
+          }{
             period && (
               <>
                 <Heading size="lg" tag="dt">
