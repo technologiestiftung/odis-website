@@ -1,0 +1,85 @@
+---
+tags:
+  - "home"
+  - "project"
+  - "post"
+title: Berlins Daten-Neuheiten
+blogLinkTitle: "Anwendung erkunden"
+blogLink: https://weihnachtsmaerkte.odis-berlin.de/
+description: Übersichtliche Darstellung der wöchentlichen Datenupdates auf Berlins Open Data Portal.
+date: 2024-01-17
+period: Januar 2024
+status: abgeschlossenes Projekt
+visible: true
+indexImage: ./images/daten-neuheiten-projektübersichtkachel.png
+heroImage: ./images/daten-neuheiten-projektübersichtkachel.png
+showImageInMockup: true
+projectUrlWithoutProtocol: ""
+datasets:
+  - linkText: Alle Datensätze aus dem Berliner Open Data Portal
+    link: https://daten.berlin.de/
+gitHubLink: https://github.com/technologiestiftung/odis-datenportal-uebersicht
+partners:
+  - name: ???
+    url: https://www.berlin.de/sen/wgp/
+    logoPath: https://logos.citylab-berlin.org/logo-senatskanzlei-buergermeister-vertikal.svg
+---
+
+## Hintergrund
+
+Das [Berliner Datenportal](https://daten.berlin.de/) führt über 3.000 offene Datensätze - und jede Woche kommen neue Daten und Updates hinzu. Um keinen interessanten Datensatz oder Aktualisierungen zu verpassen, hat die ODIS eine übersichtliche Darstellung erstellt, die stets die neuesten Veröffentlichungen anzeigt.
+
+<iframe title="Neuerscheinungen und Updates in den letzten zwei Wochen auf Berlin Open Data" 
+  aria-label="Tabelle" 
+  id="datawrapper-chart-Rij6z" 
+  src="https://datawrapper.dwcdn.net/Rij6z/17/" 
+  scrolling="no" 
+  frameborder="0" 
+  style="width: 0; min-width: 100% !important; border: none;" 
+  height="460" 
+  data-external="1">
+</iframe>
+        
+
+
+Die Tabelle wird täglich aktualisiert und zeigt alle Änderungen der letzten zwei Wochen. Dank einer einfachen Farbkodierung lassen sich Neuerscheinungen und Aktualisierungen schnell und unkompliziert erkennen. Ein Klick auf den Titel eines Datensatzes führt Sie direkt zur entsprechenden Seite auf dem Datenportal.
+
+Die Übersicht kann auch bequem per iFrame in anderen Webseiten eingebunden werden. Durch Klick auf den Button "Einbetten" unter der Tabelle, kann der iFrame-Code kopiert werden.
+
+## Historische Daten
+
+Aber wie sieht es mit den Änderungen auf dem Datenportal in den letzten Jahren aus? Dazu Haben wir uns auch historische Daten angeschaut, die wir in zwei Liniengraphen visualisiert haben. 
+
+<iframe title="Neuerscheinungen und Updates seit dem Jahr 2000 auf Berlin Open Data" 
+  aria-label="Interactive line chart" 
+  id="datawrapper-chart-ZgWJU" 
+  src="https://datawrapper.dwcdn.net/ZgWJU/8/" 
+  scrolling="no" 
+  frameborder="0" 
+  style="width: 0; min-width: 100% !important; border: none;" 
+  height="398" 
+  data-external="1">
+</iframe>
+
+Das Liniendiagramm zeigt deutlich, dass die Zahl der Änderungen und Updates zunimmt – ein erfreulicher Trend! Es ist aber zu beachten, dass es Datenthemen gibt, die aus ein und dem selber Veröffentlichungsprozess stammen, aber aufgeteilt und in thematisch ähnlichen Teildatensätzen veröffentlich wurden und die Statistik somit leicht verzerren.
+
+## Technische Umsetzung
+
+Die hier dargestellten Daten stammen von der Schnittstelle (API) des Datenportals. Die Daten werden auf [Github](https://github.com/technologiestiftung/odis-datenportal-uebersicht) ausgewertet und anschließend in aggregierter Form als CSV im Github-Repository gespeichert. Die Diagramme, erstellt mit [Datawrapper](https://www.datawrapper.de/), beziehen ihre Daten direkt aus diesem Repository.
+
+Wie sich leicht spannende Charts und Tabellen aus den eigenen Daten erstellen lassen, wird übrigens in unseren [Datawrapper-Videotutorials](https://odis-berlin.de/ressourcen/datenvisualisierung/) erklärt.
+
+import logo from '../../../assets/images/logos/logo-senweb.png'
+
+<Quote
+  authorName="Betül vielleicht"
+  authorRole="Betüls Rolle vielleicht"
+  authorLogo={logo}
+>
+  Eventuell Zitat von Betül
+</Quote>
+
+<script
+  type="text/javascript"
+  set:html={`!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();`}
+/>{" "}
