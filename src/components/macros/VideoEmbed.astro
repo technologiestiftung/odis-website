@@ -1,7 +1,5 @@
 ---
-import ContentSection, {
-  type Props as MediaSectionProps,
-} from "@/components/macros/MediaSection.astro";
+import { type Props as MediaSectionProps } from "@/components/macros/MediaSection.astro";
 import type { HTMLAttributes } from "astro/types";
 import MediaSection from "./MediaSection.astro";
 
@@ -24,11 +22,20 @@ const {
   buttonLink={buttonLink || url}
   buttonText={buttonText || "Auf YouTube ansehen"}
 >
-  <iframe
-    class="w-full aspect-video bg-discrete border border-discrete"
-    src={url}
-    title={otherProps.caption || "Video player"}
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    {...iframeProps}></iframe>
+  {
+    url.startsWith("/") ? (
+      <video controls class="bg-discrete border border-discrete w-full">
+        <source src={url} type="video/mp4" />
+      </video>
+    ) : (
+      <iframe
+        class="w-full aspect-video bg-discrete border border-discrete"
+        src={url}
+        title={otherProps.caption || "Video player"}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        {...iframeProps}
+      />
+    )
+  }
 </MediaSection>
