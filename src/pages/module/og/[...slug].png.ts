@@ -8,12 +8,12 @@ type Props = CollectionEntry<"module">;
 
 export const GET: APIRoute<Props> = async ({ props }) =>
   renderImageResponse(
-    renderBasicOgImage({
+    await renderBasicOgImage({
       title: props.data.title,
       description: props.data.description,
       image: props.data.icon,
       prefix: `Datareise · Modul ${props.data.number}`,
-      logoPath: "/images/odis-logo-negative.svg",
+      logoPath: "/images/odis-logo-negative.png",
       styleOverrides: {
         wrapper: "bg-[#20378b]",
         title: "text-white",

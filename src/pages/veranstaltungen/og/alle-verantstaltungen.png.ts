@@ -10,7 +10,7 @@ export const GET: APIRoute = async () => {
     "veranstaltungenoverview",
   );
   return renderImageResponse(
-    renderBasicOgImage({
+    await renderBasicOgImage({
       title: data.title,
       description: data.description,
       image: data.headerImage?.src,

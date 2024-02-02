@@ -7,7 +7,7 @@ import { getEntry } from "astro:content";
 export const GET: APIRoute = async () => {
   const contact = await getEntry("kontakt", "kontakt");
   return renderImageResponse(
-    renderBasicOgImage({
+    await renderBasicOgImage({
       title: contact.data.title,
       description: contact.data.description,
       image: contact.data.headerImage?.src,

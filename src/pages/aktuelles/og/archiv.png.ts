@@ -7,7 +7,7 @@ import { getEntry } from "astro:content";
 export const GET: APIRoute = async () => {
   const { data } = await getEntry("newsletterArchiv", "newsletterarchiv");
   return renderImageResponse(
-    renderBasicOgImage({
+    await renderBasicOgImage({
       title: data.title,
       description: data.description,
       image: data.headerImage?.src,

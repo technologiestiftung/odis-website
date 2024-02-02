@@ -9,7 +9,7 @@ type Props = CollectionEntry<"veranstaltungen">;
 
 export const GET: APIRoute<Props> = async ({ props }) =>
   renderImageResponse(
-    renderBasicOgImage({
+    await renderBasicOgImage({
       title: props.data.title,
       description: props.data.description,
       image: props.data.headerImage?.src,

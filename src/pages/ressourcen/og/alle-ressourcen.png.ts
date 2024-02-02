@@ -9,7 +9,7 @@ export const GET: APIRoute = async () => {
   const { data } = await getEntry("resourcesOverview", "resourcesoverview");
   const entries = await getCollection("resources");
   return renderImageResponse(
-    renderBasicOgImage({
+    await renderBasicOgImage({
       title: data.title,
       description: data.description,
       image: entries[0].data.media.thumbnail,

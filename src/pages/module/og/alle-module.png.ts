@@ -8,11 +8,11 @@ import { cn } from "@/utils/classNames";
 export const GET: APIRoute = async () => {
   const { data } = await getEntry("moduleOverview", "moduleoverview");
   return renderImageResponse(
-    renderBasicOgImage({
+    await renderBasicOgImage({
       title: data.title,
       description: data.description,
       image: data.headerImage?.src,
-      logoPath: "/images/odis-logo-negative.svg",
+      logoPath: "/images/odis-logo-negative.png",
       styleOverrides: {
         wrapper: "bg-[#20378b]",
         title: "text-white",

@@ -44,7 +44,7 @@ export async function renderBasicOgImage({
   description,
   image,
   styleOverrides = {},
-  logoPath = "/images/odis-logo.svg",
+  logoPath = "/images/odis-logo.png",
 }: {
   prefix?: string | undefined;
   suffix?: string | undefined;
@@ -63,33 +63,45 @@ export async function renderBasicOgImage({
   };
   logoPath?: string;
 }) {
-  const logoData = await fetch(new URL(logoPath, import.meta.env.SITE)).then(
+  const logoData = await fetch(new URL(import.meta.env.SITE + logoPath)).then(
     (res) => res.arrayBuffer(),
   );
+  let imageData;
+  if (image?.src) {
+    console.log("fetching image", import.meta.env.SITE + image.src);
+    imageData = await fetch(new URL(import.meta.env.SITE + image.src)).then(
+      (res) => res.arrayBuffer(),
+    );
+    console.log("fetched image", imageData);
+  }
   return el(
     "div",
     {
       tw: cn("w-full h-full flex", "bg-white", styleOverrides.wrapper),
       style: { fontFamily: "'Clan'" },
+      key: "wrapper",
     },
     [
       el(
         "div",
         {
+          key: "image-container",
           tw: cn("w-1/2 flex flex-col justify-center px-16 pt-12 pb-16"),
         },
         [
           el("img", {
             src: logoData,
-            tw: cn("mb-4 -ml-3", styleOverrides.logo),
+            tw: cn("mb-4", styleOverrides.logo),
             width: 300,
             height: 72,
+            key: "logo",
           }),
           prefix &&
             el(
               "p",
               {
                 tw: cn("text-gray-700", styleOverrides.prefix),
+                key: "prefix",
               },
               stripHtmlTagsAndEntities(prefix),
             ),
@@ -101,6 +113,7 @@ export async function renderBasicOgImage({
                 styleOverrides.title,
               ),
               style: { textWrap: "balance" },
+              key: "title",
             },
             stripHtmlTagsAndEntities(limitString(boldify(title), 75)),
           ),
@@ -109,6 +122,7 @@ export async function renderBasicOgImage({
               "p",
               {
                 tw: cn("text-gray-700", styleOverrides.suffix),
+                key: "suffix",
               },
               stripHtmlTagsAndEntities(suffix),
             ),
@@ -116,6 +130,7 @@ export async function renderBasicOgImage({
             "p",
             {
               tw: cn("text-lg mt-4", styleOverrides.description),
+              key: "description",
             },
             stripHtmlTagsAndEntities(limitString(description, 190)),
           ),
@@ -125,23 +140,24 @@ export async function renderBasicOgImage({
         "div",
         {
           tw: cn("w-1/2 h-full flex items-center justify-center p-16 pl-0"),
+          key: "image-container",
         },
         image &&
+          imageData &&
           el("img", {
-            src: import.meta.env.SITE + image.src,
-            width: image.width,
-            height: image.height,
+            key: "image",
+            src: imageData,
+            width:
+              image.orientation === 1
+                ? 400
+                : (image.width / image.height) * 400,
+            height:
+              image.orientation === 1
+                ? (image.height / image.width) * 400
+                : 400,
             tw: cn("border border-[#bee4f8]", styleOverrides.image),
             style: styleOverrides.imageStyles || {
               boxShadow: "8px 8px 0 0 #bee4f8",
-              width:
-                image.orientation === 1
-                  ? 400
-                  : (image.width / image.height) * 400,
-              height:
-                image.orientation === 1
-                  ? (image.height / image.width) * 400
-                  : 400,
             },
           }),
       ),

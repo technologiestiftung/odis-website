@@ -9,11 +9,11 @@ export const GET: APIRoute = async () => {
   const { data } = await getEntry("projectsOverview", "projectsoverview");
   const entries = await getCollection("projekte");
   return renderImageResponse(
-    renderBasicOgImage({
+    await renderBasicOgImage({
       title: data.title,
       description: data.description,
       image: entries[0].data.heroImage,
-      logoPath: "/images/odis-logo-negative.svg",
+      logoPath: "/images/odis-logo-negative.png",
       styleOverrides: {
         wrapper: "bg-[#20378b]",
         title: "text-white",
