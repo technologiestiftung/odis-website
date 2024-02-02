@@ -1,7 +1,5 @@
 ---
 import { cn } from "@/utils/classNames";
-import { Image } from "astro:assets";
-import homepageWaveSectionTransition from "@/assets/images/misc/homepage-wave-section-transition.svg";
 ---
 
 <div class="grid-container hidden lg:grid" aria-hidden="true">
@@ -21,11 +19,21 @@ import homepageWaveSectionTransition from "@/assets/images/misc/homepage-wave-se
       <div
         class="absolute -top-px -left-[var(--gridGap)] w-[calc(100%+(var(--gridGap)*2))] h-[113px]"
       >
-        <Image
-          src={homepageWaveSectionTransition}
-          alt=""
-          class="w-full h-full object-cover object-right"
-        />
+        <div class="w-full h-full object-cover object-right text-bg-inv">
+          <svg
+            width="264"
+            height="113"
+            viewBox="0 0 264 113"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0H264V1H258.338C242.377 1 227.011 7.03099 215.345 17.8746L131.155 96.1254C119.489 106.969 104.123 113 88.1623 113H0V0Z"
+              fill="currentColor"
+            >
+            </path>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
