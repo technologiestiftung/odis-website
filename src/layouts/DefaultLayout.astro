@@ -9,9 +9,10 @@ type Props = {
   metaTitle: string;
   metaDescription: string;
   externalLibs?: BaseHeadProps["externalLibs"];
+  ogImage?: string;
 };
 
-const { metaTitle, metaDescription, externalLibs = [] } = Astro.props;
+const { metaTitle, ogImage, metaDescription, externalLibs = [] } = Astro.props;
 ---
 
 <html lang="de">
@@ -20,6 +21,7 @@ const { metaTitle, metaDescription, externalLibs = [] } = Astro.props;
       title={metaTitle}
       description={metaDescription}
       externalLibs={externalLibs}
+      image={ogImage}
     />
   </head>
 

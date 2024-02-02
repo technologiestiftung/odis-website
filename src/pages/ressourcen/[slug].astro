@@ -14,7 +14,6 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"resources">;
 
 const post = Astro.props;
-const { date, title, description, headerImage } = post.data;
 const { Content } = await post.render();
 ---
 
@@ -22,6 +21,7 @@ const { Content } = await post.render();
   metaDescription={post.data.metaDescription || post.data.description}
   metaTitle={post.data.metaTitle || post.data.title}
   externalLibs={["tableOfContents"]}
+  ogImage={`/ressourcen/og/${post.slug}.png`}
 >
   <ResourcePageHeader {...post} />
 

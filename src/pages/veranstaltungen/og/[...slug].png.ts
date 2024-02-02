@@ -5,7 +5,7 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { renderBasicOgImage, renderImageResponse } from "@/utils/ogUtil";
 import { formatGermanDate } from "@/utils/dateUtil";
 
-type Props = CollectionEntry<"aktuelles">;
+type Props = CollectionEntry<"veranstaltungen">;
 
 export const GET: APIRoute<Props> = async ({ props }) =>
   renderImageResponse(
@@ -13,12 +13,12 @@ export const GET: APIRoute<Props> = async ({ props }) =>
       title: props.data.title,
       description: props.data.description,
       imagePath: props.data.headerImage?.src.src,
-      prefix: `Aktuelles · ${formatGermanDate(props.data.date)}`,
+      prefix: `Veranstaltung · ${formatGermanDate(props.data.date)}`,
     }),
   );
 
 export async function getStaticPaths() {
-  const posts = await getCollection("aktuelles");
+  const posts = await getCollection("veranstaltungen");
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,

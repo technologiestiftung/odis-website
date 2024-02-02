@@ -1,9 +1,9 @@
 ---
-import Layout from "../layouts/DefaultLayout.astro";
-import Heading from "../components/Heading.astro";
-import Paragraph from "../components/Paragraph.astro";
-import TextLink from "../components/TextLink.astro";
-import PageHeader from "../components/PageHeader.astro";
+import Layout from "@/layouts/DefaultLayout.astro";
+import Heading from "@/components/Heading.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import TextLink from "@/components/TextLink.astro";
+import PageHeader from "@/components/PageHeader.astro";
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 import { components } from "@/components/macros/index.astro";
@@ -16,6 +16,7 @@ const { Content } = await entry.render();
 <Layout
   metaTitle={about.metaTitle || about.title}
   metaDescription={about.metaDescription || about.description}
+  ogImage="/ueber-odis/og/ueber-odis.png"
 >
   <PageHeader
     title={about.title}

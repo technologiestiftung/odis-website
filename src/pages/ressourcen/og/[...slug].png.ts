@@ -3,22 +3,26 @@ export const prerender = true;
 import type { APIRoute } from "astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { renderBasicOgImage, renderImageResponse } from "@/utils/ogUtil";
-import { formatGermanDate } from "@/utils/dateUtil";
+import { labelsMap } from "@/utils/resourceUtil";
 
-type Props = CollectionEntry<"aktuelles">;
+type Props = CollectionEntry<"resources">;
 
 export const GET: APIRoute<Props> = async ({ props }) =>
   renderImageResponse(
     renderBasicOgImage({
       title: props.data.title,
       description: props.data.description,
-      imagePath: props.data.headerImage?.src.src,
-      prefix: `Aktuelles · ${formatGermanDate(props.data.date)}`,
+      imagePath: props.data.media?.thumbnail.src,
+      prefix: `Ressource · ${labelsMap[props.data.media.type]}`,
+      styleOverrides: {
+        wrapper: "bg-[#edf8fe]",
+        image: props.data.media.type !== "video" ? "h-full" : "w-full",
+      },
     }),
   );
 
 export async function getStaticPaths() {
-  const posts = await getCollection("aktuelles");
+  const posts = await getCollection("resources");
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,
