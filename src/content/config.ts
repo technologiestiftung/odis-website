@@ -52,6 +52,7 @@ const projekte = defineCollection({
       datasetLinkText: z.string().optional(),
       datasetLink: z.string().optional(),
       gitHubLink: z.string().optional(),
+      type: z.string().optional(),
       status: z.string().optional(),
       period: z.string().optional(),
       datasets: z
