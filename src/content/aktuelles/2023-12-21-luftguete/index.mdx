@@ -14,14 +14,14 @@ readingTime: 15-20
 date: 2023-12-21
 ---
 
-## Datenanalysen dank APIs: Das Beispiel der Berliner Luftgütedaten
+## Datenanalysen dank APIs – Beispiel Berliner Luftgütedaten
 
 Hohe Luftqualität ist eine zentrale Voraussetzung für eine lebenswerte Stadt und steht in direktem Zusammenhang mit der Gesundheit ihrer Bewohner:innen. Die Belastung der Luft in Städten hängt dabei von einer Vielzahl von Faktoren ab, die sowohl von Menschen beeinflusst werden als auch von natürlichen Faktoren. 
 
 Auf Länder-, Bundes-, und europäischer Ebene zielen zahlreiche Programme auf eine stetige Verbesserung der Luftqualität ab, wie zum Beispiel Fahrverbote, bessere Filteranlagen und die Regulierung von Industrie und Gewerbe. Um Programme genau zu steuern und ihren Erfolg abschätzen zu können, sind eine solide Datengrundlage und damit einhergehende, regelmäßige und genaue Messungen wichtig. 
 Wir zeigen in diesem Blogpost auf, wie dank einer API-Schnittstelle Luftgütedaten abgefragt und weiterverwendet werden können.
 
-## Luftgütedaten: Ein wichtiger Kontrollwert zur Einhaltung von Grenzwerten 
+## Luftgütedaten – Wichtiger Kontrollwert zur Grenzwerteinhaltung
 
 Wie stark die Luft belastet ist, wird seit 1975 durch das Berliner Luftgüte-Messnetz (BLUME) kontinuierlich gemessen. Das Messnetz aus 17 ortsfesten Messstationen erhebt an Hauptverkehrsstraßen, in Wohngebieten und an den Rändern bzw. Wäldern der Stadt Daten über die Luftqualität. Aus jeder Station werden alle fünf Minuten die Werte diverser Schadstoffe, wie Feinstaub, Stickstoffe und Schwefelmono- und dioxide, zur Messzentrale übertragen und daraus die Stunden- und Tageswerte als Basis für die weitere Auswertung berechnet. 
 
@@ -29,16 +29,16 @@ Eine kontinuierliche Messung der Berliner Luftqualität dient damit nicht nur de
 
  Das Land Berlin will mit einer neuen [Luftreinhaltestrategie 2030.](https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2021/pressemitteilung.1133068.php) daher ambitioniertere Ziele analog zu Empfehlungen der Weltgesundheitsorganisation erreichen. Die Überwachung der Luftqualität wird dabei weiter eine wichtige Rolle einnehmen.
 
-## Luftgütemessdaten als offene Datenschnittstelle abrufbar
+## Luftgütemessdaten als offene Datenschnittstelle
 
 Seit Mai 2022 übermittelt die zuständige Senatsverwaltung Mobilität, Verkehr, Klimaschutz und Umwelt (SenMVKU) die Luftgütemessdaten an das Berliner Open-Data-Portal über eine offene Schnittstelle, auch API (kurz für "application programming interface") genannt, und betreibt darüber hinaus den Internetauftritt des Luftgütemessnetzes unter [https://luftdaten.berlin.de.](https://luftdaten.berlin.de/) Auf der Webseite stellt die SenMVKU einige Übersichten zum aktuellen Luftqualitätsindex, den täglichen Messwerten und der jährlichen Anzahl von Grenzwertüberschreitungen zur Verfügung. Diese Daten stehen als CSV-Download zur Verfügung und können direkt im Browser visualisiert werden.
 
 
-
-<ContentSection caption="Übersicht von Kraftwerken im Berliner Stadtgebiet" fullWidth={false}>
+<ContentSection caption="Übersicht von Kraftwerken im Berliner Stadtgebiet" fullWidth={true} withShadow={true}>
   <iframe 
-src="https://luftdaten.berlin.de/station/mc010" 
-height="600" 
+src="https://luftdaten.berlin.de/station/mc010"
+style="border: 1px; padding-right: 40px; padding-left: 40px;" 
+height="700" 
 width="100%" 
 title= "Die interaktive Ansicht der Daten, die beispielshaft von einer der Messstationen erhoben werden.">
 </iframe>
@@ -56,20 +56,23 @@ REST-APIs verwenden HTTP-Protokollmethoden wie GET, POST, PUT und DELETE, um auf
 
 Die einheitlichen Standards ermöglichen es also Entwicklern, Dokumente und Informationen, wie beispielsweise Webseiten über HTTP anzusprechen und zu bearbeiten. Dies führt zu leicht verständlichen und gut strukturierten APIs, die skalierbar und vielseitig weiterverwendbar sind. REST-APIs werden häufig in Webanwendungen und mobilen Apps eingesetzt, da sie eine einfache und effiziente Möglichkeit bieten, auf Ressourcen und Daten zuzugreifen.
 
-## Das Berliner Luftgütemessnetz (BLUME): API-Abfragen generieren
+## Berliner Luftgütemessnetz (BLUME) – API-Abfragen generieren
 
 Für die Luftgüte-API steht eine Dokumentation, also eine Art digitale Gebrauchsanweisung bereit, die die Funktionsweise der API erläutert. Gleichzeitig stellt sie ein grafisches Interface zur Verfügung, mit der sich diverse Messwerte abfragen lassen. So können beispielsweise stündliche Werte zu einzelnen Komponenten wie Ozon oder Feinstaub aus einzelnen Stationen abgefragt werden. Über [https://luftdaten.berlin.de/api/doc](https://luftdaten.berlin.de/api/doc) können Nutzer:innen die Dokumentation der Schnittstelle aufrufen und eigene Anfragen generieren. Durch eine graphische Benutzeroberfläche ist sie direkt im Browser bedienbar und so auch für Nutzer:innen ohne Programmierkenntnisse zugänglich. Um eine GET-Request, also eine HTTP-Anfrage, zu generieren und Informationen abzurufen, ist es hilfreich sich zunächst mit der Übersicht der verfügbaren Elemente vertraut zu machen.
 
-### Beispielabfragen der API-Schnittstelle
+### Beispielabfragen API-Schnittstelle
 
 Unter dem ersten Dropdown-Menüs des Reiters “Kernkomponenten” und der dazugehörigen URL [api/components ](https://luftdaten.berlin.de//api/components) lässt sich eine Übersicht über die gemessenen Komponenten generieren. Um eine GET-Request zu stellen, wählen Nutzer:innen ‘Try It Out’ aus, setzen das Parameter ‘active’ auf TRUE und klicken ´Execute´. Unter ‘Request URL’ wird eine URL generiert, die den Inhalt der Abfrage liefert.
 
 import image from "./images/luftgüte_request_url.png"
 
-<ImageSection
-  src={image}
-  caption="Die Parameter listen verschiedene Elemente auf, die zusammen die Request URL ergeben."
-/>
+<ContentSection style="padding: 40px; background-color: coral;" fullWidth={false}>
+  <ImageSection
+    src={image}   
+    style="padding: 40px; background-color: coral;" 
+    caption="Die Parameter listen verschiedene Elemente auf, die zusammen die Request-URL ergeben."
+  />
+</ContentSection>
 
 Der Inhalt dieser URL kann separat im Browser aufgerufen oder direkt unter ‘Server Response’ bzw. ‘Response Body’ eingesehen werden. Im Fall der Messkomponenten besteht die Antwort des Servers aus einer Auflistung und Beschreibung der Metadaten des Luftgüte-Messnetzes.
 
@@ -77,7 +80,7 @@ import image1 from "./images/luftgüte_request_url2.png"
 
 <ImageSection
   src={image1}
-  caption="Der Inhalt der nutzer:innengenerierten Request URL."
+  caption="Der Inhalt der nutzer:innengenerierten Request-URL."
 />
 
 Um beispielsweise die Messwerte einer bestimmten Station abzufragen, machen wir uns zunächst mit den verschiedenen Messtationen und ihren Metadaten vertraut. So können wir im Untermenü ‘Stationen’ ([api/stations](https://luftdaten.berlin.de/api/stations)) wahlweise eine Liste aller Stationen und der erhobenen Komponenten anzeigen oder über eine binäre ja/nein bzw. TRUE/FALSE Eingabe eine Auswahl von Messtationen abrufen. Dafür wählen wir aus, ob wir nur spezielle, aktive, inaktive, oder alle Arten von Stationen abfragen wollen. Zusätzlich können wir mit *stationgroup_codes[]* ein bestimmtes Wort eintragen, wie beispielsweise ‘suburb’ (Vorort) für Messtationen außerhalb des dichter besiedelten Stadtkerns von Berlin. 
@@ -310,6 +313,7 @@ Die angefragten Daten werden als .json-Datei herausgegeben und können nun von D
 
 
 Die resultierenden Daten können nun auf verschiedene Weise weiterverarbeitet oder visualisiert werden. So funktioniert zum Beispiel die eingangs verlinkte Visualisierung verschiedener Stationen des Berliner Luftgütemessnetzes. Durch das Ausfüllen von Werten unter https://luftdaten.berlin.de/station/mc027#station-data generieren Nutzer:innen eine jeweilige API-Abfrage, die sofort als Diagramm angezeigt wird und deren zugrunde liegenden Daten als Excel-Datei heruntergeladen werden können.
-Fazit: Nach ein wenig Einarbeitungszeit eröffnen sich viele Möglichkeiten
+
+## Fazit – Nach ein wenig Einarbeitungszeit eröffnen sich viele Möglichkeiten
 
 Abschließend zeigt dieses kurze Beispiel, dass sich per API bereitgestellte Daten praktisch und effizient herunterladen und weiterverarbeiten lassen. Zwar erfordert jede API anfänglich eine gewisse Zeit zur Einarbeitung. Sobald man sich allerdings mit dem Aufbau und der Funktionsweise der API vertraut gemacht hat, folgen alle Abfragen einem ähnlichen Schema. Dies spart besonders Zeit für die Datennutzer:innen, die Daten speziell für ihre Zwecke herunterladen können. Gleichzeitig können APIs allerdings auch die datenbereitstellenden Stellen entlasten, da interessierte Personen nicht einzelne Anfragen für Zeiträume und Stationen verfassen müssen, die unter Umständen manuell erfüllt und beantwortet werden.
