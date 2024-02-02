@@ -46,7 +46,6 @@ const projekte = defineCollection({
       finishDate: z.coerce.date().optional(),
       heroImage: image().optional(),
       mobileImage: image().optional(),
-      indexImage: image().optional(),
       showImageInMockup: z.boolean().default(true),
       projectUrlWithoutProtocol: z.string().optional(),
       datasetDescription: z.string().optional(),
