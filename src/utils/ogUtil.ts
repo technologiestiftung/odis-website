@@ -37,7 +37,7 @@ export async function renderImageResponse(
   });
 }
 
-export function renderBasicOgImage({
+export async function renderBasicOgImage({
   prefix,
   title,
   suffix,
@@ -63,6 +63,9 @@ export function renderBasicOgImage({
   };
   logoPath?: string;
 }) {
+  const logoData = await fetch(new URL(logoPath, import.meta.env.SITE)).then(
+    (res) => res.arrayBuffer(),
+  );
   return el(
     "div",
     {
@@ -77,7 +80,7 @@ export function renderBasicOgImage({
         },
         [
           el("img", {
-            src: import.meta.env.SITE + logoPath,
+            src: logoData,
             tw: cn("mb-4 -ml-3", styleOverrides.logo),
             width: 300,
             height: 72,
