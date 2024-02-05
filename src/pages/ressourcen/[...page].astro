@@ -9,6 +9,8 @@ import ResourceCard from "@/components/ResourceCard.astro";
 
 type DataType = CollectionEntry<"resources">;
 
+export const prerender = true;
+
 export type Props = {
   page: Page<DataType>;
 };

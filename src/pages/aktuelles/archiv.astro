@@ -7,6 +7,8 @@ import TextLink from "../../components/TextLink.astro";
 import { cn } from "../../utils/classNames";
 import { getEntry } from "astro:content";
 
+export const prerender = true;
+
 const { data } = await getEntry("newsletterArchiv", "newsletterarchiv");
 const years = [...new Set(data.newsletters.map((item) => item.year))];
 

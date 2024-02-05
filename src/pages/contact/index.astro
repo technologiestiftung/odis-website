@@ -6,6 +6,8 @@ import ContactForm from "../../components/ContactForm.astro";
 import { getEntry } from "astro:content";
 import { components } from "@/components/macros/index.astro";
 
+export const prerender = true;
+
 const entry = await getEntry("kontakt", "kontakt");
 const { data: kontakt } = entry;
 const { Content } = await entry.render();

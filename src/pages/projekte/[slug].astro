@@ -8,6 +8,8 @@ import ProjectHeader from "@/components/ProjectHeader.astro";
 import { Image } from "astro:assets";
 import { components } from "@/components/macros/index.astro";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getCollection("projekte");
   return posts.map((post) => ({

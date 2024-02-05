@@ -8,6 +8,8 @@ import PageHeader from "../../components/PageHeader.astro";
 import Heading from "../../components/Heading.astro";
 import { Image } from "astro:assets";
 
+export const prerender = true;
+
 type Event = CollectionEntry<"veranstaltungen">;
 
 export type Props = {

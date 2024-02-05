@@ -13,6 +13,8 @@ import { components } from "@/components/macros/index.astro";
 import { cn } from "@/utils/classNames";
 import ResourceCard from "@/components/ResourceCard.astro";
 
+export const prerender = true;
+
 export type Props = CollectionEntry<"module"> & {
   data: CollectionEntry<"module">["data"] & {
     resources: CollectionEntry<"resources">[];

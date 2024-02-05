@@ -5,6 +5,8 @@ import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
 import Button from "../../components/Button.astro";
 import { components } from "@/components/macros/index.astro";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getCollection("veranstaltungen");
   return posts.map((post) => ({

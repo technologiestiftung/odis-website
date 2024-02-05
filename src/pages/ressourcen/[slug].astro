@@ -4,6 +4,8 @@ import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import ResourcePageHeader from "../../components/ResourcePageHeader.astro";
 import { components } from "@/components/macros/index.astro";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getCollection("resources");
   return posts.map((post) => ({

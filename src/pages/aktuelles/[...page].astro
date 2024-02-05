@@ -9,6 +9,8 @@ import NewsletterLane from "../../components/NewsletterLane.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import ResourceCard from "@/components/ResourceCard.astro";
 
+export const prerender = true;
+
 type Project = CollectionEntry<"projekte">;
 type Aktuelles = CollectionEntry<"aktuelles">;
 type Resource = CollectionEntry<"resources">;

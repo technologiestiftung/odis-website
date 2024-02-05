@@ -8,6 +8,8 @@ import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 import { components } from "@/components/macros/index.astro";
 
+export const prerender = true;
+
 const entry = await getEntry("about", "about");
 const about = entry.data;
 const { Content } = await entry.render();

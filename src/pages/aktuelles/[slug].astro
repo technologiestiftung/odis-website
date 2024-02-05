@@ -5,6 +5,8 @@ import Paragraph from "../../components/Paragraph.astro";
 import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
 import { components } from "@/components/macros/index.astro";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getCollection("aktuelles");
   return posts.map((post) => ({

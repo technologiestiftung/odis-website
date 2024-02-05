@@ -12,6 +12,8 @@ import HomepageRessourcenSection from "@/components/pageSpecific/homepage/Homepa
 import HomepageAktuellesSection from "@/components/pageSpecific/homepage/HomepageAktuellesSection.astro";
 import NewsletterLane from "@/components/NewsletterLane.astro";
 
+export const prerender = true;
+
 const entry = await getEntry("homepage", "homepage");
 ---
 

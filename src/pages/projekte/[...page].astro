@@ -7,6 +7,8 @@ import ProjectThumbnail from "../../components/ProjectThumbnail.astro";
 import NewsletterLane from "../../components/NewsletterLane.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
+export const prerender = true;
+
 type Project = CollectionEntry<"projekte">;
 
 export type Props = {

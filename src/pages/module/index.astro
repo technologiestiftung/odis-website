@@ -6,6 +6,8 @@ import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import { components } from "@/components/macros/index.astro";
 
+export const prerender = true;
+
 const entry = await getEntry("moduleOverview", "moduleoverview");
 const {
   data: { title, description, metaTitle, metaDescription, headerImage },
