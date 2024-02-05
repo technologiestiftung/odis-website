@@ -66,14 +66,14 @@ export async function renderBasicOgImage({
   const logoData = await fetch(new URL(import.meta.env.SITE + logoPath)).then(
     (res) => res.arrayBuffer(),
   );
-  let imageData;
-  if (image?.src) {
-    console.log("fetching image", import.meta.env.SITE + image.src);
-    imageData = await fetch(new URL(import.meta.env.SITE + image.src)).then(
-      (res) => res.arrayBuffer(),
-    );
-    console.log("fetched image", imageData);
-  }
+  // let imageData;
+  // if (image?.src) {
+  //   console.log("fetching image", import.meta.env.SITE + image.src);
+  //   imageData = await fetch(new URL(import.meta.env.SITE + image.src)).then(
+  //     (res) => res.arrayBuffer(),
+  //   );
+  //   console.log("fetched image", imageData);
+  // }
   return el(
     "div",
     {
@@ -142,24 +142,24 @@ export async function renderBasicOgImage({
           tw: cn("w-1/2 h-full flex items-center justify-center p-16 pl-0"),
           key: "image-container",
         },
-        image &&
-          imageData &&
-          el("img", {
-            key: "image",
-            src: imageData,
-            width:
-              image.orientation === 1
-                ? 400
-                : (image.width / image.height) * 400,
-            height:
-              image.orientation === 1
-                ? (image.height / image.width) * 400
-                : 400,
-            tw: cn("border border-[#bee4f8]", styleOverrides.image),
-            style: styleOverrides.imageStyles || {
-              boxShadow: "8px 8px 0 0 #bee4f8",
-            },
-          }),
+        // image &&
+        //   imageData &&
+        //   el("img", {
+        //     key: "image",
+        //     src: imageData,
+        //     width:
+        //       image.orientation === 1
+        //         ? 400
+        //         : (image.width / image.height) * 400,
+        //     height:
+        //       image.orientation === 1
+        //         ? (image.height / image.width) * 400
+        //         : 400,
+        //     tw: cn("border border-[#bee4f8]", styleOverrides.image),
+        //     style: styleOverrides.imageStyles || {
+        //       boxShadow: "8px 8px 0 0 #bee4f8",
+        //     },
+        //   }),
       ),
     ],
   );
