@@ -39,8 +39,10 @@ Bei der Veröffentlichung von Daten im Open-Data-Portal Berlin müssen die Metad
 
 <MediaSection
   mediaMetadata={frontmatter.media}
-  buttonText="Download als Excel-Tabelle"
-  buttonLink="/file-download/Vorlage_Metadaten.xlsx"
+  buttons={[{
+    text: "Download als Excel-Tabelle",
+    link: "/file-download/Vorlage_Metadaten.xlsx"
+  }]}
 >
   <MetadataTable />
 </MediaSection>

@@ -24,8 +24,12 @@ const iFrameUrl = import.meta.env.PROD
 
 <MediaSection
   isDownloadable
-  buttonLink={Astro.site + filePath}
-  buttonText={downloadLinkText || "Download"}
+  buttons={[
+    {
+      link: Astro.site + filePath,
+      text: downloadLinkText || "Download",
+    },
+  ]}
   mediaMetadata={mediaMetadata}
   {...contentSectionProps}
 >

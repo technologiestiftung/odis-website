@@ -31,33 +31,30 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 <MediaSection 
   class="sm:px-6" 
   mediaMetadata={frontmatter.media}
-  buttonText="Download Excel-Tabelle"
-  buttonLink="/file-download/Dateninformationsblatt_v2.xlsx" 
+  buttons={[
+    {
+      text: "Download Excel-Tabelle",
+      link: "/file-download/Dateninformationsblatt_v2.xlsx"
+    },
+    {
+      text: "Download CSV-Datei",
+      link: "/file-download/Dateninformationsblatt_v2.csv"
+    }
+  ]}
   >
-    <iframe 
-      class="sm:container sm:mx-auto"     
-      title="Dateninformationsblatt" 
-      aria-label="Table" 
-      id="datawrapper-chart-dmI7d" src="https://datawrapper.dwcdn.net/dmI7d/1/" 
-      scrolling="no" 
-      frameborder="0" 
-      height="1134" 
-      data-external="1">
-    </iframe>
+  <iframe 
+    class="sm:container sm:mx-auto"     
+    title="Dateninformationsblatt" 
+    aria-label="Table" 
+    id="datawrapper-chart-dmI7d" src="https://datawrapper.dwcdn.net/dmI7d/1/" 
+    scrolling="no" 
+    frameborder="0" 
+    height="1134" 
+    data-external="1">
+  </iframe>
 </MediaSection>
 
 <script
   type="text/javascript"
   set:html={`!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();`}
 />{" "}
-
-
-<MediaSection
-  mediaMetadata={frontmatter.media}
-  buttonText="Download CSV-Datei"
-  buttonLink="/file-download/Dateninformationsblatt_v2.csv"
->
-</MediaSection>
-
-
-
