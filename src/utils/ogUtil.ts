@@ -134,7 +134,7 @@ export async function renderBasicOgImage({
         image &&
           el("img", {
             key: "image",
-            src: import.meta.env.SITE + image.src,
+            src: `https://citylab-berlin.org/wp-content/uploads/2021/05/intro-preview-1024x576.jpg`,
             width:
               image.orientation === 1
                 ? 400
