@@ -27,5 +27,5 @@ export default defineConfig({
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
   },
   output: "server",
-  adapter: netlify({ cacheOnDemandPages }),
+  adapter: netlify({ cacheOnDemandPages: true }),
 });
