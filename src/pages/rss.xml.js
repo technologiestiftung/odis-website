@@ -15,6 +15,10 @@ export async function GET(context) {
     ...p.data,
     link: `/veranstaltungen/${p.slug}`,
   }));
+  const resources = (await getCollection("resources")).map((p) => ({
+    ...p.data,
+    link: `/module/${p.slug}`,
+  }));
   const modules = (await getCollection("module")).map((p) => ({
     ...p.data,
     link: `/module/${p.slug}`,
@@ -27,6 +31,11 @@ export async function GET(context) {
   newsletterArchiv = { ...newsletterArchiv.data, link: "/aktuelles/archiv" };
   let moduleOverview = await getEntry("moduleOverview", "moduleoverview");
   moduleOverview = { ...moduleOverview.data, link: "/module" };
+  let resourcesOverview = await getEntry(
+    "resourcesOverview",
+    "resourcesoverview",
+  );
+  resourcesOverview = { ...resourcesOverview.data, link: "/ressourcen" };
   let veranstaltungenOverview = await getEntry(
     "veranstaltungenOverview",
     "veranstaltungenoverview",
@@ -48,10 +57,12 @@ export async function GET(context) {
     ...aktuelles,
     ...events,
     ...modules,
+    ...resources,
     about,
     kontakt,
     newsletterArchiv,
     moduleOverview,
+    resourcesOverview,
     veranstaltungenOverview,
     projectsOverview,
     aktuellesOverview,

@@ -67,7 +67,7 @@ const { Content } = await post.render();
           class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
         >
           <ArrowLeft />
-          Übersicht
+          {modul.backButtonText}
         </a>
       </div>
       <div class="lg:col-start-2 lg:col-span-5 row-start-2">
@@ -124,15 +124,8 @@ const { Content } = await post.render();
         class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:col-span-10 lg:col-start-2 toc-content"
       >
         <div>
-          <Heading size="xl">Methodenbox</Heading>
-          <Paragraph>
-            Die Erfassung aller vorliegenden Datensätze und das Sammeln von
-            Informationen und Zuständigkeiten zu diesen Daten ist häufig eine
-            komplexe Aufgabe, bei der es ratsam ist, ein möglichst organisiertes
-            Vorgehen zu verfolgen. Die hier vorgestellten Ressourcen helfen
-            dabei den Mehrwert einer Dateninventur zu begreifen und unterstützen
-            konkret bei einem Dateninventurprozess.
-          </Paragraph>
+          <Heading size="xl">{modul.methodsTitle}</Heading>
+          <Paragraph>{modul.methodsText}</Paragraph>
         </div>
       </div>
     </div>
@@ -184,7 +177,7 @@ const { Content } = await post.render();
           <div class="grid-container">
             <div class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
               <Heading size="xl" tag="h2">
-                Zur nächsten Station
+                {modul.nextStationTitle}
               </Heading>
               <ModuleStepper activeNumber={modul.number} hightLightNext />
             </div>
@@ -204,7 +197,7 @@ const { Content } = await post.render();
               </Heading>
               <Paragraph>{nextModul.data.description}</Paragraph>
               <Button tag="a" href="/module/">
-                Alle module
+                {modul.allModulesButtonText}
               </Button>
             </div>
           </div>
