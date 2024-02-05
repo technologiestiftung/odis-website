@@ -1,3 +1,4 @@
+import { join } from "node:path";
 import { boldify } from "./boldify";
 import { ImageResponse } from "@vercel/og";
 import {
@@ -63,9 +64,6 @@ export async function renderBasicOgImage({
   };
   logoPath?: string;
 }) {
-  // const logoData = await fetch(new URL(import.meta.env.SITE + logoPath)).then(
-  //   (res) => res.arrayBuffer(),
-  // );
   // let imageData;
   // if (image?.src) {
   //   console.log("fetching image", import.meta.env.SITE + image.src);
@@ -89,13 +87,13 @@ export async function renderBasicOgImage({
           tw: cn("w-1/2 flex flex-col justify-center px-16 pt-12 pb-16"),
         },
         [
-          // el("img", {
-          //   src: logoData,
-          //   tw: cn("mb-4", styleOverrides.logo),
-          //   width: 300,
-          //   height: 72,
-          //   key: "logo",
-          // }),
+          el("img", {
+            tw: cn("mb-4", styleOverrides.logo),
+            src: `https://logos.citylab-berlin.org/logo-odis-berlin-black.svg`,
+            width: 300,
+            height: 72,
+            key: "logo",
+          }),
           prefix &&
             el(
               "p",
