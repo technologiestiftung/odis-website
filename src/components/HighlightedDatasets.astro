@@ -9,7 +9,7 @@ const focusStyles =
   "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8 transition motion-reduce:transition-none";
 ---
 
-<div class="grid-container pb-16">
+<div class="grid-container">
   <section
     aria-label="Von ODIS für wichtig befundene Datensätze"
     class="w-full my-12"
@@ -310,7 +310,7 @@ const focusStyles =
     --illu-highlight: var(--red);
     --illu-gray: var(--gray-light);
     --illu-bg: var(--blue-light);
-    --illu-line: var(--line);
+    --illu-line: var(--blue-dark);
   }
 
   .swiper-slide path,
@@ -329,11 +329,11 @@ const focusStyles =
     --illu-line: var(--blue-light);
   }
 
-  [data-applied-mode="dark"] .swiper-slide:not(.swiper-slide-active) {
+  :global([data-applied-mode="dark"]) .swiper-slide:not(.swiper-slide-active) {
     --illu-white: var(--bg);
     --illu-highlight: var(--bg);
     --illu-gray: var(--bg);
     --illu-bg: var(--bg);
-    --illu-line: var(--blue);
+    --illu-line: var(--line);
   }
 </style>

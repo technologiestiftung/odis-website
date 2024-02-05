@@ -1,0 +1,72 @@
+---
+import { cn } from "@/utils/classNames";
+import { Icon } from "astro-icon/components";
+
+export type Props = {
+  class?: undefined | string;
+};
+
+const { class: className } = Astro.props;
+---
+
+<div class={cn("inline-flex items-center", className)}>
+  <button
+    class="theme-button-light p-1 sm:p-2 rounded-full transition-colors focusable hover-hover:hover:text-links-active"
+    title="Apply light color theme"
+  >
+    <Icon class="w-6 h-6" name="ui/sun" />
+  </button>
+  <button
+    class="theme-button-dark p-2 rounded-full transition-colors focusable hover-hover:hover:text-links-active"
+    title="Apply dark color theme"
+  >
+    <Icon class="w-6 h-6" name="ui/moon" />
+  </button>
+</div>
+
+<script>
+  type ThemeType = "dark" | "light";
+  const suns = document.querySelectorAll(
+    ".theme-button-light",
+  ) as NodeListOf<HTMLButtonElement>;
+  const moons = document.querySelectorAll(
+    ".theme-button-dark",
+  ) as NodeListOf<HTMLButtonElement>;
+
+  const activeClass = [
+    `bg-links-active`,
+    `text-bg`,
+    `dark:text-text`,
+    `hover-hover:hover:text-bg`,
+    `dark:hover-hover:hover:text-text`,
+    `cursor-default`,
+  ];
+
+  const theme = localStorage.getItem("theme");
+  const systemTheme: ThemeType = window.matchMedia(
+    "(prefers-color-scheme: dark)",
+  ).matches
+    ? "dark"
+    : "light";
+
+  updateTheme(theme !== null ? theme : systemTheme);
+
+  function updateTheme(value: string) {
+    const theme: ThemeType = value === "dark" ? "dark" : "light";
+    const buttons = document.querySelectorAll(
+      `.theme-button-${theme}`,
+    ) as NodeListOf<HTMLButtonElement>;
+    suns.forEach((sun) => sun.classList.remove(...activeClass));
+    moons.forEach((moon) => moon.classList.remove(...activeClass));
+    buttons.forEach((btn) => btn.classList.add(...activeClass));
+    document.documentElement.dataset.appliedMode = theme;
+    localStorage.setItem("theme", value);
+  }
+
+  suns.forEach((sun) =>
+    sun.addEventListener("click", () => updateTheme("light")),
+  );
+  moons.forEach((moon) =>
+    moon.addEventListener("click", () => updateTheme("dark")),
+  );
+</script>

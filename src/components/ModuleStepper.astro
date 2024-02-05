@@ -56,10 +56,12 @@ const Tag = buttonTag;
               `flex place-content-center place-items-center`,
               `aspect-square rounded-full border-2 border-line`,
               showLarge ? `w-10` : `w-5`,
-              active && `bg-links-active text-bg`,
+              active &&
+                `bg-links-active text-bg dark:text-text border-links-active`,
               !active && `bg-bg text-links-active font-bold`,
-              `group-hover:bg-links-active`,
-              `group-hover:text-bg transition-colors`,
+              `group-hover:hover-hover:bg-links-active`,
+              `group-hover:hover-hover:text-bg dark:hover-hover:group-hover:text-text transition-all`,
+              `group-hover:hover-hover:border-links-active`,
             )}
           >
             {activeAndNext ? module.data.number : null}

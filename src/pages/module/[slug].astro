@@ -4,7 +4,6 @@ import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import Paragraph from "../../components/Paragraph.astro";
 import Heading from "../../components/Heading.astro";
 import ModuleStepper from "../../components/ModuleStepper.astro";
-import MethodThumbnail from "../../components/MethodThumbnail.astro";
 import TextLink from "../../components/TextLink.astro";
 import Button from "../../components/Button.astro";
 import ContactLane from "../../components/ContactLane.astro";
@@ -12,15 +11,30 @@ import ArrowLeft from "../../components/icons/ArrowLeft.astro";
 import { Image } from "astro:assets";
 import { components } from "@/components/macros/index.astro";
 import { cn } from "@/utils/classNames";
+import ResourceCard from "@/components/ResourceCard.astro";
+
+export type Props = CollectionEntry<"module"> & {
+  data: CollectionEntry<"module">["data"] & {
+    resources: CollectionEntry<"resources">[];
+  };
+};
 
 export async function getStaticPaths() {
   const posts = await getCollection("module");
-  return posts.map((post) => ({
+  let postsWithResources: Props[] = [];
+
+  for (const post of posts) {
+    const resources = await getCollection("resources", ({ slug }) =>
+      post.data.methods.find((method) => method.slug === slug),
+    );
+    postsWithResources.push({ ...post, data: { ...post.data, resources } });
+  }
+
+  return postsWithResources.map((post) => ({
     params: { slug: post.slug },
     props: post,
   }));
 }
-export type Props = CollectionEntry<"module">;
 
 const post = Astro.props;
 const modul = post.data;
@@ -105,7 +119,7 @@ const { Content } = await post.render();
     </div>
   </section>
 
-  <section aria-label="Methoden" class="bg-bg-alt py-16">
+  <section aria-label="Methoden" class="bg-bg-alt pt-16">
     <div class="grid-container">
       <div
         class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:col-span-10 lg:col-start-2 toc-content"
@@ -122,9 +136,20 @@ const { Content } = await post.render();
           </Paragraph>
         </div>
       </div>
-      <ul class="grid grid-cols-10 gap-4 sm:gap-6">
-        {modul.methods.map((method) => <MethodThumbnail method={method} />)}
-      </ul>
+    </div>
+
+    <div class="pb-24 pt-12 bg-bg-alt">
+      <div class="grid-container">
+        <div class="col-span-12 sm:col-span-10 sm:col-start-2 resources-swiper">
+          <div class="swiper-wrapper">
+            {
+              modul.resources.map((method) => (
+                <ResourceCard {...method} class="swiper-slide" />
+              ))
+            }
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -140,7 +165,7 @@ const { Content } = await post.render();
         <ul class="flex flex-col gap-8 p-0">
           {
             modul.furtherLinks.map((link) => (
-              <TextLink href={link.link} rel="noreferrer nofollow">
+              <TextLink tag="a" href={link.link} rel="noreferrer nofollow">
                 {link.title}
               </TextLink>
             ))
@@ -195,3 +220,35 @@ const { Content } = await post.render();
     </div>
   </section>
 </DefaultLayout>
+
+<script>
+  import Swiper from "swiper/bundle";
+  import "swiper/swiper-bundle.css";
+
+  const swiper = new Swiper(".resources-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    breakpoints: {
+      1024: {
+        slidesPerView: 2,
+      },
+    },
+  });
+</script>
+
+<style is:global>
+  .resources-swiper .swiper-slide:not(.swiper-slide-active) {
+    transition:
+      filter 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+    filter: blur(2px);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .resources-swiper .swiper-slide.swiper-slide-active,
+  .resources-swiper .swiper-slide.swiper-slide-next {
+    filter: blur(0px);
+    opacity: 1;
+    pointer-events: all;
+  }
+</style>
