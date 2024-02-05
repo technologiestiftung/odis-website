@@ -81,6 +81,7 @@ const module = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
+      backButtonText: z.string(),
       title: z.string(),
       description: z.string(),
       metaTitle: z.string().optional(),
@@ -96,6 +97,8 @@ const module = defineCollection({
       date: z.coerce.date().optional(),
       number: z.number(),
       icon: image(),
+      methodsTitle: z.string(),
+      methodsText: z.string(),
       methods: z.array(reference("resources")),
       furtherLinksTitle: z.string().default("Weiterführende Links"),
       furtherLinksText: z
@@ -109,6 +112,8 @@ const module = defineCollection({
           link: z.string().url(),
         }),
       ),
+      nextStationTitle: z.string(),
+      allModulesButtonText: z.string(),
     }),
 });
 
