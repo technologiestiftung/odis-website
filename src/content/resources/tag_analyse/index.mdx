@@ -28,7 +28,12 @@ import image from "../../projekte/tag_analyse/images/tag_analyse.png"
 <ProjectEmbed
   project="tag_analyse"
   image={image}
-  buttonText="Zur Analyse"
+  buttons={[
+    {
+      link: `/projekte/tag_analyse`,
+      text: "Zur Analyse",
+    },
+  ]}
   mediaMetadata={frontmatter.media}
 />
 

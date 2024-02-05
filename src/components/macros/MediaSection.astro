@@ -8,15 +8,16 @@ import ResourceInfo from "../ResourceInfo.astro";
 import type { CollectionEntry } from "astro:content";
 
 export type Props = ContentSectionProps & {
-  buttonText?: undefined | string;
-  buttonLink?: undefined | string;
+  buttons?: {
+    text?: undefined | string;
+    link?: undefined | string;
+  }[];
   mediaMetadata?: CollectionEntry<"resources">["data"]["media"];
   isDownloadable?: boolean;
 };
 
 const {
-  buttonText,
-  buttonLink,
+  buttons = [],
   class: className = "",
   mediaMetadata,
   isDownloadable = false,
@@ -25,12 +26,14 @@ const {
 ---
 
 <ContentSection {...contentSectionProps} class={cn(`not-prose`, className)}>
-  <div class="sm:grid-container">
+  <div class={cn(contentSectionProps.fullWidth && "sm:grid-container")}>
     <div aria-label="Medienvorschau">
       <slot />
     </div>
+  </div>
+  <div class="sm:grid-container">
     {
-      (mediaMetadata || (buttonLink && buttonText)) && (
+      (mediaMetadata || buttons.length > 0) && (
         <div
           class={cn(
             `lg:col-span-6 lg:col-start-2 xl:col-span-10 xl:col-start-2`,
@@ -39,10 +42,19 @@ const {
           )}
         >
           {mediaMetadata && <ResourceInfo {...mediaMetadata} />}
-          {buttonText && buttonLink && (
-            <Button tag="a" href={buttonLink} download={isDownloadable}>
-              {buttonText}
-            </Button>
+          {buttons.length > 0 && (
+            <div class="flex flex-wrap gap-x-6 gap-y-3">
+              {buttons.map((button) => (
+                <Button
+                  tag="a"
+                  href={button.link}
+                  download={isDownloadable}
+                  variant="secondary"
+                >
+                  {button.text}
+                </Button>
+              ))}
+            </div>
           )}
         </div>
       )

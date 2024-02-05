@@ -13,14 +13,17 @@ export type Props = MediaSectionProps &
     image: ImageMetadata;
   };
 
-const { mediaMetadata, buttonText, project, image, ...otherProps } =
-  Astro.props;
+const { mediaMetadata, buttons, project, image, ...otherProps } = Astro.props;
 ---
 
 <MediaSection
   mediaMetadata={mediaMetadata}
-  buttonLink={`/projekte/${project}`}
-  buttonText={buttonText || "Projekt ansehen"}
+  buttons={buttons || [
+    {
+      link: `/projekte/${project}`,
+      text: "Projekt ansehen",
+    },
+  ]}
   {...otherProps}
 >
   <a

@@ -8,19 +8,17 @@ export type Props = MediaSectionProps & {
   iframeProps?: undefined | HTMLAttributes<"iframe">;
 };
 
-const {
-  url,
-  iframeProps = {},
-  buttonLink,
-  buttonText,
-  ...otherProps
-} = Astro.props;
+const { url, iframeProps = {}, buttons = [], ...otherProps } = Astro.props;
 ---
 
 <MediaSection
   {...otherProps}
-  buttonLink={buttonLink || url}
-  buttonText={buttonText || "Auf YouTube ansehen"}
+  buttons={buttons || [
+    {
+      link: url,
+      text: "Auf YouTube ansehen",
+    },
+  ]}
 >
   {
     url.startsWith("/") ? (

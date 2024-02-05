@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Remainings of 11ty site (ignored to avoid editors to commit the files)
+_site
