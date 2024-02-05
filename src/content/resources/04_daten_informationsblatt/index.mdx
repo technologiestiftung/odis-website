@@ -28,8 +28,11 @@ Die Informationen, die über einen Datensatz geführt werden sollten, lassen sic
 
 In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabellarisch im Detail beschrieben. Diese Vorlage kann für räumliche sowie nicht-räumliche Daten benutzt werden. Die hier gezeigten Eintragungen zum Kleingartenbestand in Tempelhof-Schöneberg dienen der Veranschaulichung und stellen ein fiktives Beispiel dar. Die Vorlage steht in verschiedenen Dateiformaten (Excel und CSV) zum Download zur Verfügung und ist am Ende dieser Seite verlinkt.
 
-<ContentSection 
+<MediaSection 
   class="sm:px-6" 
+  mediaMetadata={frontmatter.media}
+  buttonText="Download Excel-Tabelle"
+  buttonLink="/file-download/Dateninformationsblatt_v2.xlsx" 
   >
     <iframe 
       class="sm:container sm:mx-auto"     
@@ -41,22 +44,13 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
       height="1134" 
       data-external="1">
     </iframe>
-</ContentSection>
+</MediaSection>
 
 <script
   type="text/javascript"
   set:html={`!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();`}
 />{" "}
 
-
-
-<MediaSection
-  mediaMetadata={frontmatter.media}
-  buttonText="Download Excel-Tabelle"
-  buttonLink="/file-download/Dateninformationsblatt_v2.xlsx"
->
-  <Dateninformationsblatt />
-</MediaSection>
 
 <MediaSection
   mediaMetadata={frontmatter.media}
@@ -65,7 +59,5 @@ In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabell
 >
 </MediaSection>
 
----
 
-import Dateninformationsblatt from '@/components/pageSpecific/Dateninformationsblatt.astro'
 
