@@ -1,0 +1,71 @@
+---
+tags:
+  - resource
+  - home
+title: Dateninformationsblatt
+description: Im Zuge der Dateninventur wird erfasst, welche Daten innerhalb einer Behörde, Abteilung oder Fachgruppe vorliegen. Die dabei gewonnen Informationen müssen strukturiert erfasst werden, um sie später leicht zusammenführen und austauschen zu können. ODIS hat deshalb eine Vorlage zur Dokumentation der Datenbestände entwickelt, die Sie als Grundlage für Ihre eigene Dateninventur verwenden können.
+question: Welche Daten besitze ich?
+media:
+  thumbnail: ./images/04_dateninformationsblatt.png
+  type: table
+  size: 0.1 MB
+  link: /file-download/Dateninformationsblatt_v2.xlsx
+---
+
+## Strukturierte Dokumentation
+
+Damit Verwaltungen einen Überblick über vorhandene Datensätze und die zuständigen Stellen erhalten und bewahren, sollte eine Dateninventur durchgeführt werden. Hier finden Sie das [Handout mit Informationen zur Durchführung einer Dateninventur](/ressourcen/dateninventur).
+
+Zur strukturierten Dokumentation der Dateninventur hat ODIS anhand bestehender Beispiele verschiedener Verwaltungen und anderer Städte eine tabellarische Vorlage entwickelt, die als Grundlage für die eigene Dateninventur genutzt werden kann. Pro Datensatz sollte eines der sogenannten Dateninformationsblätter ausgefüllt werden. Die gesammelten Informationsblätter können dann leicht zusammengeführt, ausgetauscht und gepflegt werden.
+
+## Themenbereiche
+
+Die Informationen, die über einen Datensatz geführt werden sollten, lassen sich in drei Themenbereiche einteilen, die sich im Dateninformationsblatt als Hauptblöcke wiederfinden:
+
+- Inhaltliche Felder: Metadaten über den Inhalt der Daten
+- Verantwortlichkeit: Zuständige Stellen und Personen auf Hauptverwaltungs- und Bezirksebene
+- Technische Details: Informationen zu Datenbereitstellung und Aktualisierung
+
+In der folgenden Vorlage für das Dateninformationsblatt sind alle Felder tabellarisch im Detail beschrieben. Diese Vorlage kann für räumliche sowie nicht-räumliche Daten benutzt werden. Die hier gezeigten Eintragungen zum Kleingartenbestand in Tempelhof-Schöneberg dienen der Veranschaulichung und stellen ein fiktives Beispiel dar. Die Vorlage steht in verschiedenen Dateiformaten (Excel und CSV) zum Download zur Verfügung und ist am Ende dieser Seite verlinkt.
+
+<ContentSection 
+  class="sm:px-6" 
+  >
+    <iframe 
+      class="sm:container sm:mx-auto"     
+      title="Dateninformationsblatt" 
+      aria-label="Table" 
+      id="datawrapper-chart-dmI7d" src="https://datawrapper.dwcdn.net/dmI7d/1/" 
+      scrolling="no" 
+      frameborder="0" 
+      height="1134" 
+      data-external="1">
+    </iframe>
+</ContentSection>
+
+<script
+  type="text/javascript"
+  set:html={`!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();`}
+/>{" "}
+
+
+
+<MediaSection
+  mediaMetadata={frontmatter.media}
+  buttonText="Download Excel-Tabelle"
+  buttonLink="/file-download/Dateninformationsblatt_v2.xlsx"
+>
+  <Dateninformationsblatt />
+</MediaSection>
+
+<MediaSection
+  mediaMetadata={frontmatter.media}
+  buttonText="Download CSV-Datei"
+  buttonLink="/file-download/Dateninformationsblatt_v2.csv"
+>
+</MediaSection>
+
+---
+
+import Dateninformationsblatt from '@/components/pageSpecific/Dateninformationsblatt.astro'
+
