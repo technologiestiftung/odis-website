@@ -7,15 +7,16 @@ import Button from "./Button.astro";
 
 export type Props = CollectionEntry<"projekte"> & {
   class?: string;
+  titleTag?: "h2" | "h3" | "h4" | "h5" | "h6" | "p";
 };
 
-const { data, slug, class: className = "" } = Astro.props;
+const { data, slug, titleTag = "h2", class: className = "" } = Astro.props;
 const { title, description } = data;
 ---
 
 <a href={`/projekte/${slug}`} title={title} class={className}>
   <ProjectMockups {...data} slug={slug} />
-  <Heading size="lg" class="mt-3 mb-1" set:html={title} />
+  <Heading tag={titleTag} size="lg" class="mt-3 mb-1" set:html={title} />
   <Paragraph set:html={description} />
   <Button tag="span" variant="secondary">Projekt ansehen</Button>
 </a>
