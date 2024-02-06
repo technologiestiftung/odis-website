@@ -8,6 +8,7 @@ const aktuelles = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -32,6 +33,7 @@ const projekte = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -85,6 +87,7 @@ const module = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -120,6 +123,7 @@ const veranstaltungen = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -144,6 +148,7 @@ const about = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -192,6 +197,7 @@ const aktuellesOverview = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -209,6 +215,7 @@ const kontakt = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -285,6 +292,7 @@ const moduleOverview = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -302,6 +310,7 @@ const newsletterArchiv = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -326,6 +335,7 @@ const projectsOverview = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -343,6 +353,7 @@ const veranstaltungenOverview = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -360,6 +371,7 @@ const resources = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -391,6 +403,7 @@ const resourcesOverview = defineCollection({
       description: z.string(),
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       headerImage: z
         .object({
           src: image(),
@@ -406,6 +419,7 @@ const homepage = defineCollection({
     z.object({
       metaTitle: z.string().optional(),
       metaDescription: z.string().optional(),
+      ogImage: image().optional(),
       intro: z.object({
         title: z.string(),
         text: z.string(),

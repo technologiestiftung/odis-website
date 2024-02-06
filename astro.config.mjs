@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
-
 import tailwind from "@astrojs/tailwind";
 import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
@@ -9,10 +8,12 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: import.meta.env.PROD
-    ? import.meta.env.VERCEL_URL || "https://odis-berlin.de"
+    ? import.meta.env.DEPLOY_PRIME_URL || "https://odis-berlin.de"
     : `http://localhost:${process.env.PORT || 4321}`,
   integrations: [
-    icon({ iconDir: "src/assets/images/icons" }),
+    icon({
+      iconDir: "src/assets/images/icons",
+    }),
     tailwind(),
     mdx(),
     prefetch(),

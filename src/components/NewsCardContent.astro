@@ -1,7 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { cn } from "../utils/classNames";
-import Heading from "./Heading.astro";
+import { cn } from "@/utils/classNames";
+import { formatGermanDate } from "@/utils/dateUtil";
+import Heading from "@/components/Heading.astro";
 
 export type Props = CollectionEntry<"aktuelles">["data"] & {
   postLink: string;
@@ -41,13 +42,8 @@ const primaryColorClasses = [
   .filter(Boolean)
   .join(" ");
 
-const formattedIntlDateFormatter = new Intl.DateTimeFormat("de-DE", {
-  dateStyle: "long",
-});
 const dateIsoString = date.toISOString();
-const formattedDateNextDay = formattedIntlDateFormatter.format(
-  new Date(date.getTime() + 24 * 60 * 60 * 1000),
-);
+const formattedDateNextDay = formatGermanDate(date);
 ---
 
 <a

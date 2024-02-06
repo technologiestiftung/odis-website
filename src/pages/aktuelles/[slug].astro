@@ -24,6 +24,7 @@ const { Content } = await post.render();
   metaDescription={post.data.metaDescription || post.data.description}
   metaTitle={post.data.metaTitle || post.data.title}
   externalLibs={["tableOfContents"]}
+  ogImage={post.data.ogImage?.src || `/aktuelles/og/${post.slug}.png`}
 >
   <PageHeaderWithPhoto
     title={title}
