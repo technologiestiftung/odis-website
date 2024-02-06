@@ -6,6 +6,7 @@ import NewsCardGradient from "./NewsCardGradient.astro";
 import { cn } from "../utils/classNames";
 import { Icon } from "astro-icon/components";
 import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 
 export type Props = CollectionEntry<"aktuelles"> & {
   class?: string;
@@ -26,7 +27,7 @@ const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
 <article
   class={cn(
     `@container relative grid grid-items-start`,
-    `grid-rows-[250px,minmax(auto,1fr)] border`,
+    `grid-rows-[306px,minmax(auto,1fr)] border`,
     !isInverted && `bg-bg-alt dark:bg-bg text-text border-bg-alt`,
     headerImage?.src ? `p-0` : paddingClasses,
     isInverted && `text-text-inv bg-bg-inv bg-top`,
@@ -35,20 +36,23 @@ const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
   )}
 >
   {
-    headerImage?.src && (
+    headerImage && (
       <a
         href={postLink}
-        style={{ backgroundImage: `url("${headerImage.src.src}")` }}
         target={linkIsExternal ? "_blank" : "_self"}
         rel={linkIsExternal ? "noopener noreferrer" : undefined}
-        class="
-        h-full bg-center bg-cover relative outline-none
-        hover:opacity-50 transition-opacity duration-300 ease-in-out
-      "
-        role="img"
-        tabindex="-1"
-        aria-label={headerImage.alt}
-      />
+        class={cn(
+          `w-full h-[306px] overflow-hidden outline-none relative`,
+          `hover:opacity-50 transition-opacity duration-300 ease-in-out`,
+        )}
+      >
+        <Image
+          src={headerImage.src}
+          alt={headerImage.alt}
+          class={cn("w-full h-full object-cover")}
+        />
+        <div class="absolute inset-0 bg-bg-inv mix-blend-screen opacity-50" />
+      </a>
     )
   }
   <div
