@@ -41,11 +41,11 @@ const firstPath = "projekte";
   <PageHeader
     title={title}
     description={description}
-    class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64"
+    class="bg-bg-inv text-text-inv pt-16 pb-64 sm:pb-64"
     image={headerImage}
   />
 
-  <section class="pb-24 -mt-32 sm:-mt-56">
+  <section class="pb-24 -mt-24 sm:-mt-56">
     <div class="grid-container">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 gap-y-12 xl:gap-y-16">
         {page.data.map((project) => <ProjectThumbnail {...project} />)}

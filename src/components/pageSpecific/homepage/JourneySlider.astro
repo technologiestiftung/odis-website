@@ -19,10 +19,10 @@ const modules = (await getCollection("module")).sort(
 ---
 
 <div class="relative w-full h-full pb-4 overflow-hidden swiper modules-swiper">
-  <ul class="swiper-wrapper">
+  <div class="swiper-wrapper">
     {
       modules.map((module) => (
-        <li
+        <div
           class={cn(
             `swiper-slide`,
             `grid grid-cols-1 grid-rows-[320px_40px_1fr]`,
@@ -57,10 +57,10 @@ const modules = (await getCollection("module")).sort(
               {props.moduleButtonText}
             </Button>
           </div>
-        </li>
+        </div>
       ))
     }
-  </ul>
+  </div>
 </div>
 
 <script>
