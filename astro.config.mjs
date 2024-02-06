@@ -19,9 +19,10 @@ if (!hasMatomo) {
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.PROD
-    ? process.env.DEPLOY_PRIME_URL || "https://odis-berlin.de"
-    : `http://localhost:${process.env.PORT || 4321}`,
+  site:
+    process.env.NODE_ENV !== "development"
+      ? process.env.DEPLOY_PRIME_URL || "https://odis-berlin.de"
+      : `http://localhost:${process.env.PORT || 4321}`,
   integrations: [
     icon({
       iconDir: "src/assets/images/icons",
@@ -31,7 +32,7 @@ export default defineConfig({
     prefetch(),
     sitemap(),
     matomo({
-      url: process.env.MATOMO_URL,
+      baseUrl: process.env.MATOMO_URL,
       siteId: process.env.MATOMO_SITE_ID,
     }),
   ],
