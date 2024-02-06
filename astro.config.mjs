@@ -12,8 +12,8 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: import.meta.env.PROD
-    ? import.meta.env.DEPLOY_PRIME_URL || "https://odis-berlin.de"
+  site: process.env.PROD
+    ? process.env.DEPLOY_PRIME_URL || "https://odis-berlin.de"
     : `http://localhost:${process.env.PORT || 4321}`,
   integrations: [
     icon({
@@ -24,8 +24,8 @@ export default defineConfig({
     prefetch(),
     sitemap(),
     matomo({
-      url: import.meta.env.MATOMO_URL,
-      siteId: import.meta.env.MATOMO_SITE_ID,
+      url: process.env.MATOMO_URL,
+      siteId: process.env.MATOMO_SITE_ID,
     }),
   ],
   redirects: {
