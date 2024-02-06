@@ -1,14 +1,24 @@
 ---
-title: "Grundsicherung in Berlin"
 tags:
   - "home"
   - "project"
   - "post"
-blogLinkTitle: "Hier geht's zu den HG Infos"
-description: Berlinweit gibt es ca. 89.000 Menschen, die staatliche Unterstützung in Form von Grundsicherung zur Sicherung ihres Lebensunterhalts bekommen.
+title: "Grundsicherung in Berlin"
+description: Datenanalyse in Form einer Choroplethenkarte zum Thema Grundsicherung in Berlin
 date: 2019-12-17
+period: Dezember 2019
+status: abgeschlossenes Projekt
 visible: true
-heroImage: ./images/gs-hero.png
+heroImage: ./images/grundsicherung_desktop_visual.png
+gitHubLink: https://github.com/technologiestiftung/grundsicherung
+datasets:
+  - linkText: Empfänger/innen von Grundsicherung im Alter und bei Erwerbsminderung
+    link: https://www.sozial-informations-system.de/datasets/ts1700199029202112-xlsx/?lang=de
+  - linkText: Alle historischen Daten sind im Sozial-Informations-System zu finden
+    link: https://www.sozial-informations-system.de/home?lang=de
+  - linkText: Bei Datenfragen bitte an Peter.Broytman@SenIAS.berlin.de. wenden
+    link: https://www.berlin.de/sen/asgiva/
+  
 ---
 
 import "./_css/bundle.css"
@@ -24,8 +34,9 @@ export const Tooltip = ({ label, children }) => (
 )
 
 <div class="section pb-6 pt-6" id="intro">
+<h2> Hintergrund und Zielsetzung </h2>
   <p class="headline-04">
-    Die sogenannte “Grundsicherung im Alter und bei Erwerbsminderung gemäß dem 4. Kapital des Zwölften
+    Berlinweit gibt es ca. 89.000 Menschen, die staatliche Unterstützung in Form von Grundsicherung zur Sicherung ihres Lebensunterhalts bekommen. Die sogenannte “Grundsicherung im Alter und bei Erwerbsminderung gemäß dem 4. Kapital des Zwölften
     Sozialgesetzbuch (SGB XII)” fokussiert sich auf zwei Gruppen:
   </p>
   <ul class="bullets-wrapper mb-1 not-prose">
@@ -212,27 +223,18 @@ in Berlin zwischen 18-64 Jahren Grundsicherung. 2021 waren es 1,53%.
 
 ## Erläuterungen & Datenquellen
 
-### Anteil in %
-
-Quote der Empfängerinnen und Empfänger an der entsprechenden Gruppe der melderechtlich registrierten
+**Anteil in Prozent (%):** Quote der Empfängerinnen und Empfänger an der entsprechenden Gruppe der melderechtlich registrierten
 Einwohnerinnen und Einwohner
 
-### Empfängerzahlen
+**Empfänger:innenzahlen:** Bestandserhebung zum Stichtag 31. Dezember des jeweiligen Jahres
 
-Bestandserhebung zu Stichtag 31.12. des Jahres
-
-### Ausgaben
-
-kumulierte Jahresbeträge
+**Ausgaben:** kumulierte Jahresbeträge
 
 Diese Analysen basieren auf dem Datensatz, <a class="cross-link" href="https://www.sozial-informations-system.de/datasets/ts1700199029202112-xlsx/?lang=de">“Empfänger/innen von Grundsicherung im Alter und bei Erwerbsminderung gemäß 4. Kapitel SGB XII in Berlin außerhalb von Einrichtungen an der Bevölkerung nach LOR (Stand 31.12.2021)”</a>. Für die historische Linechart-Analyse wurden auch die Datensätze der vorherigen Jahre genutzt. Alle Datensätze sind im <a class="gsi-link" href="https://www.sozial-informations-system.de/home?lang=de" target="blank">Sozial-Informations-System (SIS)</a>, das von der Senatsverwaltung für Integration, Arbeit und Soziales in Kooperation mit Fraunhofer Fokus bereitgestellt wird, zu finden.
 
 Wenn Sie Fragen zu den Daten haben, bitte wenden Sie sich an <a href="mailto:peter.broytman@SenIAS.berlin.de">Peter.Broytman@SenIAS.berlin.de</a>.
 
-Der Quellcode der Visualisierung ist <a href="https://github.com/technologiestiftung/grundsicherung" target="blank">auf GitHub verfügbar.</a> Wenn Sie Fragen zu dieser Seite den Visualisierungen haben, wenden Sie sich bitte an <a href="mailto:odis@technologiestiftung-berlin.de">odis@technologiestiftung-berlin.de</a>.
-
-Gefördert von der Senatsverwaltung für Wirtschaft, Energie und Betriebe und der Investitionsbank Berlin aus den
-Mitteln des Landes Berlin.
+Der Quellcode der Visualisierung ist <a href="https://github.com/technologiestiftung/grundsicherung" target="blank">auf GitHub verfügbar.</a> Wenn Sie Fragen zu dieser Seite den Visualisierungen haben, wenden Sie sich bitte an die ODIS.
 
 <script src="/extra-pages/grundsicherung/js/1.fadaea37.chunk.js"></script>
 <script src="/extra-pages/grundsicherung/js/app.a32d7907.js"></script>

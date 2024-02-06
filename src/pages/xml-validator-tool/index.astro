@@ -11,8 +11,8 @@ import Heading from "@/components/Heading.astro";
   metaDescription="Schema-Validator für Berlins Geodaten"
 >
   <PageHeader
-    title="Schema Validator"
-    description="Tool zur Schemavalidierung von Geodaten im GML-Format."
+    title="Schema-Validator"
+    description="Webbasiertes, interaktives Validator-Tool zur Schemavalidierung von Geodaten im GML-Format"
   >
     <p slot="prefix">Ein Tool der Open Data Informationsstelle (ODIS)</p>
   </PageHeader>
@@ -43,12 +43,12 @@ import Heading from "@/components/Heading.astro";
           id="form"
           class="form__validate"
         >
-          <Heading size="lg">Schritt 1:</Heading>
+          <Heading size="lg">1. Schritt</Heading>
 
           <fieldset class="mb-6">
             <label for="schemas" class="block">
               Wählen Sie eines der hinterlegten Schemata gegen das validiert
-              werden soll:
+              werden soll.
             </label>
             <select
               name="schemas"
@@ -69,11 +69,11 @@ import Heading from "@/components/Heading.astro";
             </select>
           </fieldset>
 
-          <Heading size="lg">Schritt 2:</Heading>
+          <Heading size="lg">2. Schritt</Heading>
 
           <label for="xml" class="max-w-prose block">
             Laden Sie Ihre GML-Datei für die Validierung hoch oder kopieren Sie
-            den Inhalt in das Textfeld:
+            den Inhalt in das Textfeld.
           </label>
           <input
             class="fileinput my-4 block focusable"
@@ -98,32 +98,18 @@ import Heading from "@/components/Heading.astro";
     </ContentSection>
 
     <div class="prose">
-      <h4>Erläuterungen zum Tool</h4>
+      <h2>Erläuterungen zum Tool</h2>
       <p>
-        Die Berliner Verwaltung stellt Geodaten unter anderem über den
-        <a
-          href="https://www.stadtentwicklung.berlin.de/geoinformation/fis-broker/"
-          >FIS-Broker</a
-        >
-        als Open Data bereit. Neben Datensätzen die von einer Verwaltungsstelle direkt
-        berlinweit erfasst und gepflegt werden, also räumlich das gesamte Stadtgebiet
-        abdecken, gibt es eine Vielzahl weiterer Geodaten die dezentral in der Verantwortlichkeit
-        der Bezirke liegen. Diese weisen teilweise eine starke schematische Heterogenität
-        untereinander auf und lassen sich nur mit hohem Arbeitsaufwand für die Bereitstellung
-        im FIS-Broker zusammenführen. Das Projekt zur Koordinierung bezirklicher
-        Geodaten im Auftrag der Senatsverwaltung für Stadtentwicklung und Wohnen
-        hat sich der Aufgabe angenommen entsprechende Herausforderungen zu erkennen
-        und bessere Routinen für die Aufbereitung und Bereitstellung der bezirklichen
-        Geodaten zu schaffen. Zu diesem Zweck wurden mehrere Workshops mit Mitarbeiter:innen
-        der bezirklichen Vermessungsämter durchgeführt und für Beispieldatensätze
-        standardisierte Datenschemata und Darstellungsvorgaben erstellt. Diese Datenschemata
-        sind in diesem Tool hinterlegt und über das Drop-Down-Menü in Schritt 1 auswählbar.
-        Durch Hochladen oder Einfügen eines Geodatensatzes im GML-Dateiformat, kann
-        dieser gegen das entsprechende Schema validiert werden. Wenn der Validator
-        Fehler ausgibt, muss der Geodatensatz korrigiert werden, um ihn an das geforderte
-        Schema anzupassen. Die Beschreibungen der jeweiligen Schemata sind in den
-        zugehörigen Objektartenkatalogen festgehalten:
+        Die Berliner Verwaltung stellt Geodaten unter anderem über den <ahref="https://www.stadtentwicklung.berlin.de/geoinformation/fis-broker/"
+          >FIS-Broker</a> als Open Data bereit. Neben Datensätzen die von einer Verwaltungsstelle direkt berlinweit erfasst und gepflegt werden, also räumlich das gesamte Stadtgebiet abdecken, gibt es eine Vielzahl weiterer Geodaten die dezentral in der Verantwortlichkeit der Bezirke liegen. Diese weisen teilweise eine starke schematische Heterogenität untereinander auf und lassen sich nur mit hohem Arbeitsaufwand für die Bereitstellung im FIS-Broker zusammenführen. 
+        
+        <br/>
+        <br/>
+        
+        Das Projekt zur Koordinierung bezirklicher Geodaten im Auftrag der Senatsverwaltung für Stadtentwicklung und Wohnen hat sich der Aufgabe angenommen entsprechende Herausforderungen zu erkennen und bessere Routinen für die Aufbereitung und Bereitstellung der bezirklichen Geodaten zu schaffen. Zu diesem Zweck wurden mehrere Workshops mit Mitarbeiter:innen der bezirklichen Vermessungsämter durchgeführt und für Beispieldatensätze standardisierte Datenschemata und Darstellungsvorgaben erstellt. Diese Datenschemata sind in diesem Tool hinterlegt und über das Drop-Down-Menü in Schritt 1 auswählbar. Durch Hochladen oder Einfügen eines Geodatensatzes im GML-Dateiformat, kann dieser gegen das entsprechende Schema validiert werden. Wenn der Validator Fehler ausgibt, muss der Geodatensatz korrigiert werden, um ihn an das geforderte Schema anzupassen. Die Beschreibungen der jeweiligen Schemata sind in den zugehörigen Objektartenkatalogen festgehalten:
+        
         <br />
+        
         <details>
           <summary>Beschreibungen der Schemata</summary>
           <br />
@@ -153,18 +139,17 @@ import Heading from "@/components/Heading.astro";
             target="blank">Behindertenparkplätze</a
           >
         </details>
+       
         <br />
-        Bei diesem Tool handelt es sich um einen Prototypen für einen Testbetrieb,
-        der bei Bedarf weiterentwickelt werden kann. So können beispielweise leicht
-        weitere Schemata für die Validierung hinterlegt werden. Bei Fragen und Feedback
-        wenden Sie sich bitte an
-        <a href="mailto:odis@ts.berlin">odis@ts.berlin.</a> Der Quellcode ist
+        Bei diesem Tool handelt es sich um einen Prototypen für einen Testbetrieb, der bei Bedarf weiterentwickelt werden kann. So können beispielweise leicht weitere Schemata für die Validierung hinterlegt werden. Bei Fragen und Feedback wenden Sie sich bitte an <a href="mailto:odis@ts.berlin">odis@ts.berlin.</a> Der Quellcode ist
         <a
           href="https://github.com/technologiestiftung/xml-schema-validator-for-berlins-geodata"
           target="blank">auf GitHub verfügbar</a
-        >. Das Tool kann mit den folgenden zwei Datensätzen für das Beispiel
-        "Brunnen" getestet werden. Dafür einfach den Text in das Textfeld
-        kopieren: <br /><br />
+        >. 
+        
+        Das Tool kann mit den folgenden zwei Datensätzen für das Beispiel "Brunnen" getestet werden. Dafür einfach den Text in das Textfeld kopieren: 
+        <br/>
+        <br/>
       </p>
 
       <details>
@@ -350,10 +335,11 @@ import Heading from "@/components/Heading.astro";
   </pre>
       </details>
     </div>
-    <em class="italic prose">
-      Gefördert von der Senatsverwaltung für Wirtschaft, Energie und Betriebe
-      und der Investitionsbank Berlin aus den Mitteln des Landes Berlin.
-    </em>
+
+   <p class="prose"> 
+   <strong> Gefördert von der Senatsverwaltung für Wirtschaft, Energie und Betriebe und der Investitionsbank Berlin aus den Mitteln des Landes Berlin.
+   </strong>
+   </p>
   </div>
 
   <script>
