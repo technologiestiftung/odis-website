@@ -1,29 +1,12 @@
 ---
-import type { CollectionEntry, CollectionKey } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 import Paragraph from "./Paragraph.astro";
 import { Icon } from "astro-icon/components";
+import { labelsMap } from "@/utils/resourceUtil";
 
 export type Props = CollectionEntry<"resources">["data"]["media"];
 
 const media = Astro.props;
-
-type MediaType = Props["type"];
-export const labelsMap: Record<MediaType, string> = {
-  video: "Videoanleitung",
-  pdf: "PDF Dokument",
-  blog: "Blogbeitrag",
-  table: "Datensatz",
-  project: "Projekt",
-  other: "Verschiedenes",
-};
-export const iconsMap: Record<MediaType, string> = {
-  video: "resources/video",
-  pdf: "ui/tray-arrow-down",
-  blog: "ui/eye",
-  table: "ui/tray-arrow-down",
-  project: "ui/eye",
-  other: "ui/eye",
-};
 ---
 
 <div class="flex flex-col">

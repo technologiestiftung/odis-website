@@ -1,8 +1,8 @@
 ---
-import DefaultLayout from "../layouts/DefaultLayout.astro";
-import PageHeader from "../components/PageHeader.astro";
-import TextLink from "../components/TextLink.astro";
-import ContactForm from "../components/ContactForm.astro";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import TextLink from "../../components/TextLink.astro";
+import ContactForm from "../../components/ContactForm.astro";
 import { getEntry } from "astro:content";
 import { components } from "@/components/macros/index.astro";
 
@@ -14,6 +14,7 @@ const { Content } = await entry.render();
 <DefaultLayout
   metaTitle={kontakt.metaTitle || kontakt.title}
   metaDescription={kontakt.metaDescription || kontakt.description}
+  ogImage={kontakt.ogImage?.src || "/contact/og/contact.png"}
 >
   <PageHeader
     title={kontakt.title}
@@ -25,7 +26,7 @@ const { Content } = await entry.render();
   />
 
   <section class="bg-bg text-text py-16">
-    <div class="grid-container">
+    <div class="grid-container" style={{}}>
       <div class="prose lg:col-start-2 lg:col-span-6">
         <Content components={components} />
         {

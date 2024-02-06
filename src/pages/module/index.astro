@@ -20,6 +20,7 @@ const module = (await getCollection("module")).sort(
 <DefaultLayout
   metaTitle={metaTitle || title}
   metaDescription={metaDescription || description}
+  ogImage={entry.data.ogImage?.src || "/module/og/alle-module.png"}
 >
   <PageHeader
     title={title}
