@@ -4,6 +4,7 @@ import { cn } from "../utils/classNames";
 import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
 import ArrowLeft from "./icons/ArrowLeft.astro";
+import { formatGermanDate } from "@/utils/dateUtil";
 
 export type Props = {
   title: string;
@@ -28,13 +29,8 @@ const {
   class: className,
 } = Astro.props;
 
-const dateNextDay = new Date(date.getTime() + 24 * 60 * 60 * 1000);
+const formattedDate = formatGermanDate(date);
 const dateIsoString = date.toISOString();
-const formattedIntlTime = new Intl.DateTimeFormat("de-DE", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-}).format(new Date(dateNextDay));
 ---
 
 <div class={cn(`w-screen overflow-x-hidden`, image && `pb-[8vmin]`, className)}>
@@ -51,7 +47,7 @@ const formattedIntlTime = new Intl.DateTimeFormat("de-DE", {
           </a>
           <span aria-hidden="true" class="scale-150 opacity-50">·</span>
           <time datetime={dateIsoString} class="opacity-70">
-            {formattedIntlTime}
+            {formattedDate}
             <slot name="naturalLanguageTime" />
           </time>
           <slot name="prefix" />

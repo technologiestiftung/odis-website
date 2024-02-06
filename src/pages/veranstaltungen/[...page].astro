@@ -59,6 +59,8 @@ const firstPath = "veranstaltungen";
 <DefaultLayout
   metaTitle={metaTitle || title}
   metaDescription={metaDescription || description}
+  ogImage={entry.data.ogImage?.src ||
+    "/veranstaltungen/og/alle-verantstaltungen.png"}
 >
   <PageHeader
     title={title}

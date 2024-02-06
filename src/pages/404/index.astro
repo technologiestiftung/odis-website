@@ -7,6 +7,7 @@ import DefaultLayout from "@/layouts/DefaultLayout.astro";
 <DefaultLayout
   metaTitle="404 Not Found"
   metaDescription="Die von Ihnen angeforderte Seite konnte nicht gefunden werden."
+  ogImage="/404/og/404.png"
 >
   <div class="grid-container">
     <div
@@ -15,7 +16,10 @@ import DefaultLayout from "@/layouts/DefaultLayout.astro";
       <Heading tag="h1" size="xxl">404 Not Found</Heading>
       <p>Die von Ihnen angeforderte Seite konnte nicht gefunden werden.</p>
       <p>
-        Bitte überprüfen Sie die URL oder kehren Sie zur <TextLink tag="a" href="/">
+        Bitte überprüfen Sie die URL oder kehren Sie zur <TextLink
+          tag="a"
+          href="/"
+        >
           Startseite
         </TextLink>
         zurück.
