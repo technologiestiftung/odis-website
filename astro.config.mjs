@@ -7,7 +7,6 @@ import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
 
 // Comunity plugins
-import matomo from "@jop-software/astro-matomo";
 import icon from "astro-icon";
 
 const hasMatomo = process.env.MATOMO_URL && process.env.MATOMO_SITE_ID;
@@ -31,10 +30,6 @@ export default defineConfig({
     mdx(),
     prefetch(),
     sitemap(),
-    matomo({
-      baseUrl: process.env.MATOMO_URL,
-      siteId: process.env.MATOMO_SITE_ID,
-    }),
   ],
   redirects: {
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",

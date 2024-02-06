@@ -17,7 +17,6 @@
     "@astrojs/rss": "4.0.4",
     "@astrojs/sitemap": "3.0.5",
     "@astrojs/tailwind": "5.1.0",
-    "@jop-software/astro-matomo": "1.1.0",
     "@tailwindcss/container-queries": "0.1.1",
     "@tailwindcss/typography": "0.5.9",
     "astro": "4.3.2",
