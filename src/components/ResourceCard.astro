@@ -7,7 +7,8 @@ import { cn } from "@/utils/classNames";
 import type { JSX } from "astro/jsx-runtime";
 import { Icon } from "astro-icon/components";
 import Button from "./Button.astro";
-import ResourceInfo, { iconsMap } from "./ResourceInfo.astro";
+import ResourceInfo from "./ResourceInfo.astro";
+import { iconsMap } from "@/utils/resourceUtil";
 
 export type Props = CollectionEntry<"resources"> & {
   class?: string;
@@ -156,12 +157,9 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
 
   {
     isInverted && (
-      <Icon
-        name="ui/external-link"
-        class="absolute top-6 right-6"
-        size={20}
-        aria-hidden="true"
-      />
+      <span class="absolute top-2 right-2 p-4 text-text-inv">
+        <Icon name="ui/external-link" size={20} aria-hidden="true" />
+      </span>
     )
   }
 </article>

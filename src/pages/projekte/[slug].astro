@@ -36,6 +36,7 @@ const { Content } = await post.render();
 <DefaultLayout
   metaTitle={metaTitle || title}
   metaDescription={metaDescription || description}
+  ogImage={post.data.ogImage?.src || `/projekte/og/${post.slug}.png`}
 >
   <ProjectHeader {...Astro.props} />
   <section class="pb-64">

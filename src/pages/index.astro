@@ -15,7 +15,11 @@ import NewsletterLane from "@/components/NewsletterLane.astro";
 const entry = await getEntry("homepage", "homepage");
 ---
 
-<DefaultLayout metaTitle={SITE_TITLE} metaDescription={SITE_DESCRIPTION}>
+<DefaultLayout
+  metaTitle={SITE_TITLE}
+  metaDescription={SITE_DESCRIPTION}
+  ogImage={entry.data.ogImage?.src || "/og/homepage.png"}
+>
   <HomepageIntroSection {...entry.data.intro} />
   <HighlightedDatasets />
   <OpenDataSection {...entry.data.openData} />

@@ -20,8 +20,7 @@ const postLink = data.link && linkIsExternal ? data.link : `/aktuelles/${slug}`;
 const theme = linkIsExternal ? "inverted" : "normal";
 const paddingClasses = `px-7 pt-7 pb-10`;
 const isInverted = theme === "inverted";
-const contentAreaWrapperClasses =
-  !isInverted && headerImage ? paddingClasses : "";
+const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
 ---
 
 <article
@@ -29,15 +28,14 @@ const contentAreaWrapperClasses =
     `@container relative grid grid-items-start`,
     `grid-rows-[250px,minmax(auto,1fr)] border`,
     !isInverted && `bg-bg-alt dark:bg-bg text-text border-bg-alt`,
-    !isInverted && headerImage?.src ? `p-0` : paddingClasses,
+    headerImage?.src ? `p-0` : paddingClasses,
     isInverted && `text-text-inv bg-bg-inv bg-top`,
     isInverted && `border-bg-inv bg-no-repeat bg-cover @md:bg-contain`,
-    isInverted && paddingClasses,
     className,
   )}
 >
   {
-    !isInverted && headerImage?.src && (
+    headerImage?.src && (
       <a
         href={postLink}
         style={{ backgroundImage: `url("${headerImage.src.src}")` }}
@@ -50,31 +48,7 @@ const contentAreaWrapperClasses =
         role="img"
         tabindex="-1"
         aria-label={headerImage.alt}
-      >
-        <div class="absolute inset-0 bg-bg-inv mix-blend-screen opacity-50" />
-      </a>
-    )
-  }
-  {
-    isInverted && headerImage?.src && (
-      <a
-        class="h-full group outline-none"
-        href={postLink}
-        title={data.urlText}
-        rel="noopener noreferrer"
-        target="_blank"
-        tabindex="-1"
-      >
-        <div
-          class="
-          absolute top-0 left-0 w-full h-1/2 bg-top bg-cover
-          group-hover:opacity-50 transition-opacity duration-300 ease-in-out
-        "
-          style={{ backgroundImage: `url("${headerImage.src.src}")` }}
-          role="img"
-          aria-label={headerImage.alt}
-        />
-      </a>
+      />
     )
   }
   <div
@@ -115,13 +89,9 @@ const contentAreaWrapperClasses =
     isInverted && (
       <>
         <div class="sr-only" role="img" aria-label={headerImage?.alt} />
-        <NewsCardGradient class="absolute top-0 left-0 w-full h-full" />
-        <Icon
-          name="ui/external-link"
-          class="absolute top-6 right-6"
-          size={20}
-          aria-hidden="true"
-        />
+        <span class="absolute top-2 right-2 bg-bg-inv p-4 text-text-inv">
+          <Icon name="ui/external-link" size={20} aria-hidden="true" />
+        </span>
       </>
     )
   }
