@@ -12,14 +12,6 @@ export const GET: APIRoute = async () => {
     await renderBasicOgImage({
       title: data.title,
       description: data.description,
-      image: entries[0].data.heroImage,
-      logoPath: "/images/odis-logo-negative.png",
-      styleOverrides: {
-        wrapper: "bg-[#20378b]",
-        title: "text-white",
-        description: "text-white",
-        prefix: "text-white",
-      },
     }),
   );
 };

@@ -13,7 +13,6 @@
   "dependencies": {
     "@astrojs/check": "0.4.1",
     "@astrojs/mdx": "2.1.1",
-    "@astrojs/netlify": "5.0.1",
     "@astrojs/prefetch": "0.4.1",
     "@astrojs/rss": "4.0.4",
     "@astrojs/sitemap": "3.0.5",
@@ -31,12 +30,10 @@
     "@types/react": "18.2.51",
     "@vercel/og": "0.6.2",
     "astro-icon": "1.0.2",
-    "gray-matter": "4.0.3",
     "prettier-plugin-astro": "0.12.3",
     "react": "18.2.0",
     "sharp": "0.33.2",
     "tailwind-merge": "2.2.1",
-    "tailwindcss-touch": "1.0.1",
-    "yaml": "2.3.4"
+    "tailwindcss-touch": "1.0.1"
   }
 }

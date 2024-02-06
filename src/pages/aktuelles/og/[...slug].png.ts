@@ -12,7 +12,6 @@ export const GET: APIRoute<Props> = async ({ props }) =>
     await renderBasicOgImage({
       title: props.data.title,
       description: props.data.description,
-      image: props.data.headerImage?.src,
       prefix: `Aktuelles · ${formatGermanDate(props.data.date)}`,
     }),
   );

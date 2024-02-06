@@ -12,15 +12,13 @@ import HomepageRessourcenSection from "@/components/pageSpecific/homepage/Homepa
 import HomepageAktuellesSection from "@/components/pageSpecific/homepage/HomepageAktuellesSection.astro";
 import NewsletterLane from "@/components/NewsletterLane.astro";
 
-export const prerender = true;
-
 const entry = await getEntry("homepage", "homepage");
 ---
 
 <DefaultLayout
   metaTitle={SITE_TITLE}
   metaDescription={SITE_DESCRIPTION}
-  ogImage="/og/homepage.png"
+  ogImage={entry.data.ogImage?.src || "/og/homepage.png"}
 >
   <HomepageIntroSection {...entry.data.intro} />
   <HighlightedDatasets />

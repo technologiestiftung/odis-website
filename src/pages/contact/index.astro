@@ -6,8 +6,6 @@ import ContactForm from "../../components/ContactForm.astro";
 import { getEntry } from "astro:content";
 import { components } from "@/components/macros/index.astro";
 
-export const prerender = true;
-
 const entry = await getEntry("kontakt", "kontakt");
 const { data: kontakt } = entry;
 const { Content } = await entry.render();
@@ -16,7 +14,7 @@ const { Content } = await entry.render();
 <DefaultLayout
   metaTitle={kontakt.metaTitle || kontakt.title}
   metaDescription={kontakt.metaDescription || kontakt.description}
-  ogImage="/contact/og/contact.png"
+  ogImage={kontakt.ogImage?.src || "/contact/og/contact.png"}
 >
   <PageHeader
     title={kontakt.title}

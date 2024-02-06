@@ -6,8 +6,6 @@ import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import { components } from "@/components/macros/index.astro";
 
-export const prerender = true;
-
 const entry = await getEntry("moduleOverview", "moduleoverview");
 const {
   data: { title, description, metaTitle, metaDescription, headerImage },
@@ -22,7 +20,7 @@ const module = (await getCollection("module")).sort(
 <DefaultLayout
   metaTitle={metaTitle || title}
   metaDescription={metaDescription || description}
-  ogImage="/module/og/alle-module.png"
+  ogImage={entry.data.ogImage?.src || "/module/og/alle-module.png"}
 >
   <PageHeader
     title={title}

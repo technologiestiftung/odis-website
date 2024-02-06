@@ -5,8 +5,6 @@ import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
 
-import netlify from "@astrojs/netlify";
-
 // https://astro.build/config
 export default defineConfig({
   site: import.meta.env.PROD
@@ -26,6 +24,4 @@ export default defineConfig({
     "/projekte/xml-validator/tool": "/xml-validator-tool",
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
   },
-  output: "server",
-  adapter: netlify({ cacheOnDemandPages: true }),
 });

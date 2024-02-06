@@ -9,8 +9,6 @@ import NewsletterLane from "../../components/NewsletterLane.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import ResourceCard from "@/components/ResourceCard.astro";
 
-export const prerender = true;
-
 type Project = CollectionEntry<"projekte">;
 type Aktuelles = CollectionEntry<"aktuelles">;
 type Resource = CollectionEntry<"resources">;
@@ -48,7 +46,7 @@ const firstPath = "aktuelles";
 <DefaultLayout
   metaTitle={data.metaTitle || data.title}
   metaDescription={data.metaDescription || data.description}
-  ogImage="/aktuelles/og/alle-aktuelles.png"
+  ogImage={data.ogImage?.src || "/aktuelles/og/alle-aktuelles.png"}
 >
   <PageHeader
     title={data.title}

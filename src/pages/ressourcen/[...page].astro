@@ -9,8 +9,6 @@ import ResourceCard from "@/components/ResourceCard.astro";
 
 type DataType = CollectionEntry<"resources">;
 
-export const prerender = true;
-
 export type Props = {
   page: Page<DataType>;
 };
@@ -29,7 +27,7 @@ const firstPath = "ressourcen";
 <DefaultLayout
   metaTitle={data.metaTitle || data.title}
   metaDescription={data.metaDescription || data.description}
-  ogImage="/ressourcen/og/alle-ressourcen.png"
+  ogImage={data.ogImage?.src || "/ressourcen/og/alle-ressourcen.png"}
 >
   <PageHeader
     title={data.title}

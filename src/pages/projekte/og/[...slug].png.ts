@@ -11,15 +11,7 @@ export const GET: APIRoute<Props> = async ({ props }) =>
     await renderBasicOgImage({
       title: props.data.title,
       description: props.data.description,
-      image: props.data.heroImage,
       prefix: ["Projekt", props.data.status].filter(Boolean).join(` · `),
-      logoPath: "/images/odis-logo-negative.png",
-      styleOverrides: {
-        wrapper: "bg-[#20378b]",
-        title: "text-white",
-        description: "text-white",
-        prefix: "text-white",
-      },
     }),
   );
 

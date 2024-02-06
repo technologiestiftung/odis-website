@@ -12,15 +12,6 @@ export const GET: APIRoute = async () => {
     await renderBasicOgImage({
       title: data.title,
       description: data.description,
-      image: entries[0].data.media.thumbnail,
-      styleOverrides: {
-        wrapper: "bg-[#edf8fe]",
-        image: cn(
-          "border-0",
-          entries[0].data.media.type !== "video" ? "h-full" : "w-full",
-        ),
-        imageStyles: {},
-      },
     }),
   );
 };

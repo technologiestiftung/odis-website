@@ -4,8 +4,6 @@ import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import ResourcePageHeader from "../../components/ResourcePageHeader.astro";
 import { components } from "@/components/macros/index.astro";
 
-export const prerender = true;
-
 export async function getStaticPaths() {
   const posts = await getCollection("resources");
   return posts.map((post) => ({
@@ -23,7 +21,7 @@ const { Content } = await post.render();
   metaDescription={post.data.metaDescription || post.data.description}
   metaTitle={post.data.metaTitle || post.data.title}
   externalLibs={["tableOfContents"]}
-  ogImage={`/ressourcen/og/${post.slug}.png`}
+  ogImage={post.data.ogImage?.src || `/ressourcen/og/${post.slug}.png`}
 >
   <ResourcePageHeader {...post} />
 

@@ -2,7 +2,6 @@ import { boldify } from "./boldify";
 import { ImageResponse } from "@vercel/og";
 import {
   createElement as el,
-  type CSSProperties,
   type JSXElementConstructor,
   type ReactElement,
 } from "react";
@@ -42,31 +41,16 @@ export async function renderBasicOgImage({
   title,
   suffix,
   description,
-  image,
-  styleOverrides = {},
-  logoPath = "/images/odis-logo.png",
 }: {
   prefix?: string | undefined;
   suffix?: string | undefined;
   title: string;
   description: string;
-  image?: ImageMetadata | undefined;
-  styleOverrides?: {
-    wrapper?: string;
-    title?: string;
-    description?: string;
-    image?: string;
-    imageStyles?: CSSProperties;
-    prefix?: string;
-    suffix?: string;
-    logo?: string;
-  };
-  logoPath?: string;
 }) {
   return el(
     "div",
     {
-      tw: cn("w-full h-full flex", "bg-white", styleOverrides.wrapper),
+      tw: cn("w-full h-full flex", "bg-white"),
       style: { fontFamily: "'Clan'" },
       key: "wrapper",
     },
@@ -75,21 +59,21 @@ export async function renderBasicOgImage({
         "div",
         {
           key: "image-container",
-          tw: cn("w-1/2 flex flex-col justify-center px-16 pt-12 pb-16"),
+          tw: cn("flex flex-col justify-center px-16 pt-12 pb-16"),
         },
         [
           el("img", {
-            src: import.meta.env.SITE + logoPath,
-            tw: cn("mb-4", styleOverrides.logo),
-            width: 300,
-            height: 72,
+            src: `https://logos.citylab-berlin.org/logo-odis-berlin-coloured.svg`,
+            tw: cn("mb-8"),
+            width: 251 * 1.2,
+            height: 63 * 1.2,
             key: "logo",
           }),
           prefix &&
             el(
               "p",
               {
-                tw: cn("text-gray-700", styleOverrides.prefix),
+                tw: cn("text-gray-700 text-3xl"),
                 key: "prefix",
               },
               stripHtmlTagsAndEntities(prefix),
@@ -97,20 +81,17 @@ export async function renderBasicOgImage({
           el(
             "h1",
             {
-              tw: cn(
-                "text-4xl text-[#20378b] font-bold m-0",
-                styleOverrides.title,
-              ),
+              tw: cn("text-6xl text-[#20378b] font-bold m-0"),
               style: { textWrap: "balance" },
               key: "title",
             },
-            stripHtmlTagsAndEntities(limitString(boldify(title), 75)),
+            limitString(stripHtmlTagsAndEntities(boldify(title)), 75),
           ),
           suffix &&
             el(
               "p",
               {
-                tw: cn("text-gray-700", styleOverrides.suffix),
+                tw: cn("text-gray-700"),
                 key: "suffix",
               },
               stripHtmlTagsAndEntities(suffix),
@@ -118,36 +99,13 @@ export async function renderBasicOgImage({
           el(
             "p",
             {
-              tw: cn("text-lg mt-4", styleOverrides.description),
+              tw: cn("text-3xl mt-8 w-[75vw]"),
               key: "description",
+              style: { textWrap: "balance" },
             },
-            stripHtmlTagsAndEntities(limitString(description, 190)),
+            limitString(stripHtmlTagsAndEntities(description), 190),
           ),
         ],
-      ),
-      el(
-        "div",
-        {
-          tw: cn("w-1/2 h-full flex items-center justify-center p-16 pl-0"),
-          key: "image-container",
-        },
-        image &&
-          el("img", {
-            key: "image",
-            src: `https://citylab-berlin.org/wp-content/uploads/2021/05/intro-preview-1024x576.jpg`,
-            width:
-              image.orientation === 1
-                ? 400
-                : (image.width / image.height) * 400,
-            height:
-              image.orientation === 1
-                ? (image.height / image.width) * 400
-                : 400,
-            tw: cn("border border-[#bee4f8]", styleOverrides.image),
-            style: styleOverrides.imageStyles || {
-              boxShadow: "8px 8px 0 0 #bee4f8",
-            },
-          }),
       ),
     ],
   );

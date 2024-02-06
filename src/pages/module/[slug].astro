@@ -13,8 +13,6 @@ import { components } from "@/components/macros/index.astro";
 import { cn } from "@/utils/classNames";
 import ResourceCard from "@/components/ResourceCard.astro";
 
-export const prerender = true;
-
 export type Props = CollectionEntry<"module"> & {
   data: CollectionEntry<"module">["data"] & {
     resources: CollectionEntry<"resources">[];
@@ -52,7 +50,7 @@ const { Content } = await post.render();
   metaDescription={modul.metaDescription || modul.description}
   metaTitle={modul.metaTitle || modul.title}
   externalLibs={["tableOfContents"]}
-  ogImage={`/module/og/${post.slug}.png`}
+  ogImage={modul.ogImage?.src || `/module/og/${post.slug}.png`}
 >
   <section
     class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16 mb-[20vmin] lg:mb-0"

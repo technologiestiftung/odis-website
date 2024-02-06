@@ -7,8 +7,6 @@ import ProjectThumbnail from "../../components/ProjectThumbnail.astro";
 import NewsletterLane from "../../components/NewsletterLane.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
-export const prerender = true;
-
 type Project = CollectionEntry<"projekte">;
 
 export type Props = {
@@ -38,7 +36,7 @@ const firstPath = "projekte";
 <DefaultLayout
   metaTitle={metaTitle || title}
   metaDescription={metaDescription || description}
-  ogImage="/projekte/og/alle-projekte.png"
+  ogImage={entry.data.ogImage?.src || "/projekte/og/alle-projekte.png"}
 >
   <PageHeader
     title={title}

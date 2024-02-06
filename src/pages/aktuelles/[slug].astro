@@ -5,8 +5,6 @@ import Paragraph from "../../components/Paragraph.astro";
 import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
 import { components } from "@/components/macros/index.astro";
 
-export const prerender = true;
-
 export async function getStaticPaths() {
   const posts = await getCollection("aktuelles");
   return posts.map((post) => ({
@@ -26,7 +24,7 @@ const { Content } = await post.render();
   metaDescription={post.data.metaDescription || post.data.description}
   metaTitle={post.data.metaTitle || post.data.title}
   externalLibs={["tableOfContents"]}
-  ogImage={`/aktuelles/og/${post.slug}.png`}
+  ogImage={post.data.ogImage?.src || `/aktuelles/og/${post.slug}.png`}
 >
   <PageHeaderWithPhoto
     title={title}
