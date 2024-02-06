@@ -10,18 +10,27 @@ import Heading from "../Heading.astro";
 import Paragraph from "../Paragraph.astro";
 import MediaSection from "./MediaSection.astro";
 import ProjectReference from "./ProjectReference.astro";
+import ResourceReference from "./ResourceReference.astro";
 
 export const components = {
+  // Primitives
+  Quote,
+  Heading,
+  Paragraph,
+  TextLink,
+
+  // Sections
   ImageSection,
   ContentSection,
   TextContentSection,
   MediaSection,
-  TextLink,
-  Quote,
+
+  // Embedding media
   PdfEmbed,
   VideoEmbed,
-  Heading,
-  Paragraph,
+
+  // Referencing other pages within the text
   ProjectReference,
+  ResourceReference,
 };
 ---
