@@ -10,6 +10,13 @@ import sitemap from "@astrojs/sitemap";
 import matomo from "@jop-software/astro-matomo";
 import icon from "astro-icon";
 
+const hasMatomo = process.env.MATOMO_URL && process.env.MATOMO_SITE_ID;
+if (!hasMatomo) {
+  console.warn(
+    "Matomo is not configured. Please set MATOMO_URL and MATOMO_SITE_ID in your .env file.",
+  );
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: process.env.PROD
