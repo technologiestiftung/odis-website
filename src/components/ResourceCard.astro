@@ -40,12 +40,13 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
     href={resourceLink}
     target={linkIsExternal ? "_blank" : "_self"}
     rel={linkIsExternal ? "noopener noreferrer" : undefined}
-    class="grid px-6 py-4 @sm:py-5 gap-2 group"
+    class="grid px-6 py-4 @sm:py-5 gap-2 group min-h-[258px]"
     style={{
       gridTemplate: `
       "question" auto
       "title" auto
       "description" auto
+      "spacer" 1fr
     `,
     }}
   >
@@ -79,6 +80,7 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
     >
       {description}
     </Paragraph>
+    <div aria-hidden="true" style={{ gridArea: "spacer" }}></div>
   </a>
   <section
     class={cn(

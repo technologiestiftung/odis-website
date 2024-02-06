@@ -76,7 +76,11 @@ const firstPath = "aktuelles";
           }
           if (isResource) {
             const resource = post as Resource;
-            return <ResourceCard {...resource} />;
+            return (
+              <div>
+                <ResourceCard {...resource} />
+              </div>
+            );
           }
         })
       }
