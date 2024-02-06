@@ -10,6 +10,7 @@ import { Image } from "astro:assets";
 
 export type Props = CollectionEntry<"aktuelles"> & {
   class?: string;
+  titleTag?: "h2" | "h3" | "h4" | "h5" | "h6" | "p";
 };
 
 const { class: className = "", data, slug } = Astro.props;

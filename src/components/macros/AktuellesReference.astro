@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+import NewsCard, {
+  type Props as NewsCardProps,
+} from "@/components/NewsCard.astro";
+
+export type Props = {
+  slug: CollectionEntry<"aktuelles">["slug"];
+  titleTag?: NewsCardProps["titleTag"];
+};
+
+const { slug, titleTag = "p" } = Astro.props;
+const newsItem = await getEntry("aktuelles", slug);
+---
+
+<div class="not-prose pb-12 pt-2">
+  <NewsCard {...newsItem} titleTag={titleTag} />
+</div>
