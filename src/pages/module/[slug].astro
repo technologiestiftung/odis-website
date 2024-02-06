@@ -50,6 +50,7 @@ const { Content } = await post.render();
   metaDescription={modul.metaDescription || modul.description}
   metaTitle={modul.metaTitle || modul.title}
   externalLibs={["tableOfContents"]}
+  ogImage={modul.ogImage?.src || `/module/og/${post.slug}.png`}
 >
   <section
     class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16 mb-[20vmin] lg:mb-0"

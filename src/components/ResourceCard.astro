@@ -7,7 +7,8 @@ import { cn } from "@/utils/classNames";
 import type { JSX } from "astro/jsx-runtime";
 import { Icon } from "astro-icon/components";
 import Button from "./Button.astro";
-import ResourceInfo, { iconsMap } from "./ResourceInfo.astro";
+import ResourceInfo from "./ResourceInfo.astro";
+import { iconsMap } from "@/utils/resourceUtil";
 
 export type Props = CollectionEntry<"resources"> & {
   class?: string;
