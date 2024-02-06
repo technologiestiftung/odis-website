@@ -41,7 +41,6 @@ const modules = (await getCollection("module")).sort(
             <ModuleStepper
               activeNumber={module.data.number}
               buttonTag="button"
-              data-module-number={module.data.number}
             />
           </div>
           <div class="text-center max-w-96 mx-auto">
@@ -75,16 +74,16 @@ const modules = (await getCollection("module")).sort(
     spaceBetween: 0,
     initialSlide: MODULES_INITIAL_SLIDE_INDEX,
     centeredSlides: true,
+    shortSwipes: false,
   });
 
   const stepperButtons = document.querySelectorAll(
-    "button.module-stepper-button",
+    "[data-modulenumber]",
   ) as NodeListOf<HTMLButtonElement>;
 
   stepperButtons.forEach((button) => {
     button.addEventListener("click", (evt) => {
-      const currentTarget = evt.currentTarget as HTMLButtonElement;
-      const number = currentTarget.dataset.modulenumber;
+      const number = button.dataset.modulenumber;
       if (!number) return;
       swiper.slideTo(+number - 1);
     });
