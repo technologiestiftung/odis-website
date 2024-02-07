@@ -132,7 +132,10 @@ const { Content } = await post.render();
           <div class="swiper-wrapper">
             {
               modul.resources.map((method) => (
-                <ResourceCard {...method} class="swiper-slide" />
+                <ResourceCard
+                  {...method}
+                  class="swiper-slide swiper-slide-active max-w-screen-sm"
+                />
               ))
             }
           </div>
@@ -210,7 +213,7 @@ const { Content } = await post.render();
 </DefaultLayout>
 
 <script>
-  import Swiper from "swiper/bundle";
+  import Swiper from "swiper";
   import "swiper/swiper-bundle.css";
 
   const swiper = new Swiper(".resources-swiper", {
