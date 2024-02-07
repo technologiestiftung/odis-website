@@ -3,13 +3,14 @@ import { type CollectionEntry } from "astro:content";
 import { cn } from "../utils/classNames";
 import Button from "./Button.astro";
 import MobileMockup from "./MobileMockup.astro";
-import { Image } from "astro:assets";
+import { Image, type LocalImageProps } from "astro:assets";
 
 export type Props = CollectionEntry<"projekte">["data"] & {
   slug: string;
   buttonTitle?: string | null | undefined;
   buttonLink?: string | null | undefined;
   class?: string | undefined;
+  imageLoading?: LocalImageProps["loading"];
 };
 
 const {
@@ -20,6 +21,7 @@ const {
   showImageInMockup,
   mobileImage,
   projectUrlWithoutProtocol,
+  imageLoading = "lazy",
   class: className,
 } = Astro.props;
 ---
@@ -58,6 +60,7 @@ const {
           )}
           src={heroImage}
           alt={`Screenshot für das Projekt: '${title}'`}
+          loading={imageLoading}
           widths={[360, 720, 960, 1440]}
           sizes={`
             (max-width: 400px) 360px,
@@ -110,6 +113,7 @@ const {
                 class="w-[calc(100%-6cqw)] h-[calc(100%-6cqw)] rounded-[10cqw] absolute z-10 top-[3cqw] left-[3cqw] object-fill"
                 widths={[150, 300, 450]}
                 sizes={`(max-width: 400px) 150px, (max-width: 640px) 300px, 450px`}
+                loading={imageLoading}
               />
               <MobileMockup class="w-full h-auto z-20 relative" />
             </div>

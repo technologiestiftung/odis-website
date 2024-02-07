@@ -95,6 +95,7 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
             sizes={isVideoAspectRatio
               ? "(max-width: 1024px) 500px, 600px"
               : "(max-width: 1024px) 300px, 400px"}
+            loading="eager"
           />
           {
             !isVideoAspectRatio && (

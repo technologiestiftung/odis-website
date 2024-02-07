@@ -48,7 +48,14 @@ const firstPath = "projekte";
   <section class="pb-24 -mt-24 sm:-mt-56">
     <div class="grid-container">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 gap-y-12 xl:gap-y-16">
-        {page.data.map((project) => <ProjectThumbnail {...project} />)}
+        {
+          page.data.map((project, idx) => (
+            <ProjectThumbnail
+              {...project}
+              imageLoading={idx > 2 ? "lazy" : "eager"}
+            />
+          ))
+        }
       </div>
     </div>
 

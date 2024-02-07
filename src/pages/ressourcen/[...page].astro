@@ -42,9 +42,10 @@ const firstPath = "ressourcen";
   <div class="grid-container py-16">
     <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
       {
-        page.data.map((post) => {
+        page.data.map((post, idx) => {
           if (!post.data.visible) return null;
-          return <ResourceCard {...post} />;
+          const imgLoading = idx > 2 ? "lazy" : "eager";
+          return <ResourceCard {...post} imageLoading={imgLoading} />;
         })
       }
     </div>
