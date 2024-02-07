@@ -8,7 +8,7 @@
 </div>
 
 <script>
-  function slugify(text) {
+  function slugify(text: string) {
     return text
       .toString()
       .toLowerCase()
@@ -18,7 +18,7 @@
       .replace(/^-+/, "") // Trim - from start of text
       .replace(/-+$/, ""); // Trim - from end of text
   }
-  function slugifyGerman(string) {
+  function slugifyGerman(string: string) {
     return slugify(
       string
         .replace(/[äÄ]/g, "ae")
@@ -28,21 +28,27 @@
     );
   }
 
-  function createTableOfContents(contentClass, targetId) {
-    const content = [...document.querySelectorAll(contentClass)];
+  function createTableOfContents(contentSelector: string, targetId: string) {
+    const content = [
+      ...document.querySelectorAll(contentSelector),
+    ] as HTMLElement[];
     const headings = content.reduce(
-      (acc, tocContentNode) => [
-        ...acc,
-        ...tocContentNode.querySelectorAll("h2, h3, h4, h5, h6"),
-      ],
-      [],
+      (acc, tocContentNode) =>
+        [
+          ...acc,
+          ...tocContentNode.querySelectorAll("h2, h3, h4, h5, h6"),
+        ] as HTMLElement[],
+      [] as HTMLElement[],
     );
+
+    headings.forEach((heading) => heading.removeAttribute("id"));
+
     const toc = document.createElement("nav");
     toc.setAttribute("id", "toc");
     toc.setAttribute("aria-label", "Table of Contents");
 
     let currentLevel = 0;
-    const lists = [];
+    const lists: HTMLUListElement[] = [];
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -56,7 +62,7 @@
     });
 
     headings.forEach((heading) => {
-      const slug = slugifyGerman(heading.textContent);
+      const slug = slugifyGerman(heading.textContent || "untitled");
       const level = parseInt(heading.tagName.slice(1));
 
       while (level < currentLevel) {
@@ -66,20 +72,16 @@
 
       if (level > currentLevel) {
         const newList = document.createElement("ul");
-        newList.classList.add(
-          "flex",
-          "flex-col",
-          "list-none",
-          "gap-4",
-          "pt-4",
-          currentLevel > 0 ? "pl-4" : undefined,
-        );
+        newList.classList.add("flex", "flex-col", "list-none", "gap-4", "pt-4");
+        if (currentLevel > 0) {
+          newList.classList.add("pl-4");
+        }
         if (lists.length === 0) {
           toc.appendChild(newList);
-        } else if (lists.at(-1).lastChild) {
-          lists.at(-1).lastChild.appendChild(newList);
+        } else if (lists.at(-1)?.lastChild) {
+          lists.at(-1)?.lastChild?.appendChild(newList);
         } else {
-          lists.at(-1).appendChild(newList);
+          lists.at(-1)?.appendChild(newList);
         }
         lists.push(newList);
         currentLevel = level;
@@ -87,7 +89,7 @@
 
       const listItem = document.createElement("li");
       const link = document.createElement("a");
-      const text = document.createTextNode(heading.textContent);
+      const text = document.createTextNode(heading.textContent || "untitled");
 
       const headingLink = document.createElement("a");
       headingLink.setAttribute("id", slug);
@@ -113,7 +115,7 @@
       lists.at(-1)?.appendChild(listItem);
     });
 
-    const target = document.getElementById(targetId);
+    const target = document.getElementById(targetId) as HTMLElement;
     if (headings.length === 0) {
       target.innerHTML = "";
     }

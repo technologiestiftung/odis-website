@@ -28,7 +28,7 @@ const modules = (await getCollection("module")).sort(
             `grid grid-cols-1 grid-rows-[320px_40px_1fr]`,
             `relative w-full h-full gap-6`,
           )}
-          aria-title={module.data.title}
+          title={module.data.title}
         >
           <a href={`/module/${module.slug}`} class="relative w-full h-full">
             <Image
