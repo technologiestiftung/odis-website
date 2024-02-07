@@ -24,7 +24,7 @@ const { Content } = await entry.render();
     image={about.headerImage && {
       ...about.headerImage,
       class:
-        "lg:max-w-none lg:max-h-[70vh] lg:w-[calc(140%+var(--marginSize)+3rem)]",
+        "lg:max-h-[70vh] lg:w-[calc(140%+var(--marginSize)+3rem)] max-w-7xl",
     }}
   />
 
@@ -61,6 +61,8 @@ const { Content } = await entry.render();
                       src={image}
                       alt={workArea.iconAlt}
                       class="w-[72px]"
+                      widths={[72]}
+                      sizes="72px"
                     />
                     <Paragraph set:html={workArea.text} />
                   </li>
@@ -90,7 +92,14 @@ const { Content } = await entry.render();
               <Image
                 src={about.mission.imagePath}
                 alt={about.mission.imageAlt}
-                class="w-full h-full object-cover object-top"
+                class="w-full h-full object-cover object-top max-w-7xl"
+                widths={[320, 640, 960, 1280]}
+                sizes={`
+                  (max-width: 639px) 320px,
+                  (max-width: 767px) 640px,
+                  (max-width: 1023px) 960px,
+                  1280px
+                `}
               />
             </div>
           )
@@ -135,6 +144,8 @@ const { Content } = await entry.render();
                       class="rounded-full w-40 col-span-1 lg:scale-110"
                       src={memberImage}
                       alt={`Portraitbild von ${member.name}`}
+                      widths={[160]}
+                      sizes="160px"
                     />
                   )}
                   <div class="flex flex-col col-span-3">

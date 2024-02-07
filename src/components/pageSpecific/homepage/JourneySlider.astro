@@ -35,6 +35,8 @@ const modules = (await getCollection("module")).sort(
               src={module.data.icon}
               alt={`Illustration für Modul ${module.data.number}`}
               class="object-contain w-full h-full"
+              widths={[320, 640]}
+              sizes={`(max-width: 400px) 320px, 640px`}
             />
           </a>
           <div class="flex justify-center px-6 @container">

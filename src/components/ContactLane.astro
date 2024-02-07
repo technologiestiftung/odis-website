@@ -15,6 +15,8 @@ import { Image } from "astro:assets";
     loading="lazy"
     class="grow max-w-[72px]"
     alt="Illustration von Sprechblasen mit Fragezeichen und Ausrufezeichen"
+    widths={[220]}
+    sizes="220px"
   />
 </div>
 
@@ -27,6 +29,8 @@ import { Image } from "astro:assets";
     oder hast eine Projektidee? Dann kontaktiere uns.
   </Paragraph>
   <div class="flex justify-start mt-2">
-    <TextLink tag='a' href="/kontakt#contact-form">Zum Kontaktformular</TextLink>
+    <TextLink tag="a" href="/kontakt#contact-form">
+      Zum Kontaktformular
+    </TextLink>
   </div>
 </div>

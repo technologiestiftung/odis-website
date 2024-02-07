@@ -83,6 +83,17 @@
     );
   }
 
+  @media (min-width: 400px) {
+    :root {
+      --containerWidth: 400px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+      --contentOffset: calc(
+        (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+      );
+    }
+  }
+
   @media (min-width: 640px) {
     :root {
       --containerWidth: 640px;

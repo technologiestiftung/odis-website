@@ -50,6 +50,8 @@ const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
         <Image
           src={headerImage.src}
           alt={headerImage.alt}
+          widths={[240, 540]}
+          sizes={`(max-width: 360px) 240px, 540px`}
           class={cn("w-full h-full object-cover")}
         />
         <div class="absolute inset-0 bg-bg-inv mix-blend-screen opacity-50" />

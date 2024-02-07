@@ -33,7 +33,19 @@ const {
         <Image
           src={src}
           alt={alt || caption || ""}
-          class={cn("my-0 w-full max-w-full", withShadow && "shadow-xl")}
+          class={cn(
+            "my-0 w-full max-w-[1720px] mx-auto",
+            withShadow && "shadow-xl",
+          )}
+          widths={[320, 640, 960, 1280, 1440, Math.min(1720, src.width)]}
+          sizes={`
+            (max-width: 400px) 320px,
+            (max-width: 960px) 640px,
+            (max-width: 1280px) 960px,
+            (max-width: 1440px) 1280px,
+            (max-width: 1720px) 1440px,
+            ${Math.min(1720, src.width)}px
+          `}
         />
       )
     }
@@ -52,7 +64,7 @@ const {
         class="
           mt-2 text-xs opacity-70 transition-opacity
           hover:opacity-100 focus-visible:opacity-100
-          focusable
+          focusable max-w-[1720px] mx-auto
         "
         tabindex="0"
       >
