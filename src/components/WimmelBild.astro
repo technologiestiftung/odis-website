@@ -7486,14 +7486,14 @@
     --illu-highlight: var(--red);
     --illu-gray: var(--gray-light);
     --illu-bg: var(--blue-light);
-    --illu-line: var(--blue-dark);
+    --illu-line: var(--blue);
   }
 
   .wimmelbild_puzzle-piece:focus {
     outline: none;
   }
 
-  [data-applied-mode="dark"] .wimmelbild_puzzle-piece {
+  :global(html.dark) .wimmelbild_puzzle-piece {
     --illu-white: var(--white);
     --illu-highlight: var(--red);
     --illu-gray: var(--gray-light);
@@ -7534,11 +7534,11 @@
     --illu-line: var(--blue-light);
   }
 
-  :global([data-applied-mode="dark"]) .wimmelbild_puzzle-piece--hovered-out {
+  :global(html.dark) .wimmelbild_puzzle-piece--hovered-out {
     --illu-white: var(--bg);
     --illu-highlight: var(--bg);
     --illu-gray: var(--bg);
     --illu-bg: var(--bg);
-    --illu-line: var(--line);
+    --illu-line: var(--line-medium);
   }
 </style>
