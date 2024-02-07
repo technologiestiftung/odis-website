@@ -3,7 +3,7 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: ["./**/*.{md,mdx,astro,html,js,jsx,ts,tsx}"],
-  darkMode: ["class", '[data-applied-mode="dark"]'],
+  darkMode: ["class", "dark"],
   theme: {
     colors: {
       // USE THESE SEMANIC COLORS

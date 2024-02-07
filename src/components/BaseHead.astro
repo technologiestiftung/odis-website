@@ -110,11 +110,13 @@ type LibType = {
 <script is:inline>
   function loadUserPrefTheme() {
     const userPref = localStorage.getItem("theme");
-    const userPreference =
+    const theme =
       userPref ||
       (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    document.documentElement.dataset.appliedMode = userPreference;
-    userPref && localStorage.setItem("theme", userPreference);
+    const opposedTheme = theme === "dark" ? "light" : "dark";
+    document.documentElement.classList.remove(opposedTheme);
+    document.documentElement.classList.add(theme);
+    userPref && localStorage.setItem("theme", theme);
   }
   loadUserPrefTheme();
 </script>

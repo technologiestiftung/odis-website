@@ -38,6 +38,7 @@ export default defineConfig({
           extensions: ["astro", "html"],
         },
       ],
+      safelist: ["dark"],
     }),
   ],
   redirects: {

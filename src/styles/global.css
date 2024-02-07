@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  /*! purgecss start ignore */
   @font-face {
     font-family: "Clan";
     font-style: normal;
@@ -123,8 +124,7 @@
     }
   }
 
-  /* To apply dark mode, apply the [data-applied-mode='dark'] to the <html /> tag and add this CSS */
-  :root[data-applied-mode="dark"] {
+  html.dark {
     --bg: var(--blue-darker);
     --bg-alt: var(--blue-dark);
     --bg-inv: var(--blue-dark);
@@ -154,6 +154,7 @@
     @apply font-sans text-text bg-bg min-h-screen;
     scroll-behavior: smooth;
   }
+  /*! purgecss end ignore */
 }
 
 @layer components {
@@ -183,6 +184,7 @@
   }
 }
 
+/*! purgecss start ignore */
 .prose {
   --tw-prose-body: var(--text);
   --tw-prose-headings: var(--headlines);
@@ -331,3 +333,4 @@
 iframe {
   @apply bg-[var(--white)] !w-full rounded relative overflow-hidden;
 }
+/*! purgecss end ignore */

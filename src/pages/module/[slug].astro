@@ -57,12 +57,12 @@ const { Content } = await post.render();
   >
     <div class="grid-container">
       <div
-        class="lg:col-start-1 lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)] row-start-2"
+        class="lg:col-start-1 lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)] row-start-1 lg:row-start-2"
         style="-webkit-text-stroke: 1px var(--text-inv);text-stroke: 1px var(--text-inv);"
       >
         {modul.number}.
       </div>
-      <div class="lg:col-start-2 lg:col-span-5 row-start-1">
+      <div class="lg:col-start-2 lg:col-span-5 row-start-2 lg:row-start-1">
         <a
           href="/module"
           class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
@@ -71,17 +71,17 @@ const { Content } = await post.render();
           {modul.backButtonText}
         </a>
       </div>
-      <div class="lg:col-start-2 lg:col-span-5 row-start-2">
+      <div class="lg:col-start-2 lg:col-span-5 row-start-3 lg:row-start-2">
         <Heading size="xxl" inverted>{modul.title}</Heading>
         <Paragraph size="lg" inverted>{modul.description}</Paragraph>
       </div>
       <div
-        class="lg:col-start-8 lg:col-span-3 relative flex justify-center items-center row-start-3"
+        class="lg:col-start-9 lg:col-span-3 relative flex justify-center items-center row-start-4 lg:row-start-3"
       >
         <Image
           src={modul.icon}
           alt={`Illustration für das Modul ${modul.number}.`}
-          class="absolute top-0 lg:top-auto lg:bottom-0 left-0 w-full lg:translate-y-[calc(50%+1rem)] max-w-sm"
+          class="absolute top-0 lg:top-auto lg:bottom-0 -left-4 lg:-left-6 w-full lg:translate-y-[calc(50%+1rem)] max-w-sm"
         />
       </div>
     </div>
