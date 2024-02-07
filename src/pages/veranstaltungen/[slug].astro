@@ -34,7 +34,6 @@ const { Content } = await post.render();
 <DefaultLayout
   metaTitle={metaTitle || title}
   metaDescription={metaDescription || description}
-  externalLibs={["tableOfContents"]}
   ogImage={post.data.ogImage?.src || `/veranstaltungen/og/${post.slug}.png`}
 >
   <PageHeaderWithPhoto
