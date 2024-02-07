@@ -1,18 +1,15 @@
 ---
-import BaseHead, {
-  type Props as BaseHeadProps,
-} from "../components/BaseHead.astro";
+import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 type Props = {
   metaTitle: string;
   metaDescription: string;
-  externalLibs?: BaseHeadProps["externalLibs"];
   ogImage?: string;
 };
 
-const { metaTitle, ogImage, metaDescription, externalLibs = [] } = Astro.props;
+const { metaTitle, ogImage, metaDescription } = Astro.props;
 
 const matomoUrl = import.meta.env.MATOMO_URL;
 const matomoSiteId = import.meta.env.MATOMO_SITE_ID;
@@ -20,12 +17,7 @@ const matomoSiteId = import.meta.env.MATOMO_SITE_ID;
 
 <html lang="de">
   <head>
-    <BaseHead
-      title={metaTitle}
-      description={metaDescription}
-      externalLibs={externalLibs}
-      image={ogImage}
-    />
+    <BaseHead title={metaTitle} description={metaDescription} image={ogImage} />
   </head>
 
   <body class="@container">
