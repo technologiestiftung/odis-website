@@ -1,3 +1,44 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs]
+    fail_deploy_on_score_thresholds = "true"
+
+  # Set minimum thresholds for each report area
+  [plugins.inputs.thresholds]
+    performance = 0.8
+    accessibility = 0.9
+
+  [[plugins.inputs.audits]]
+    path = "contact"
+
+  [[plugins.inputs.audits]]
+    path = "ueber-uns"
+
+  [[plugins.inputs.audits]]
+    path = "module"
+
+  [[plugins.inputs.audits]]
+    path = "module/01-datenpotenziale-verstehen"
+
+  [[plugins.inputs.audits]]
+    path = "projekte"
+
+  [[plugins.inputs.audits]]
+    path = "projekte/2023-06-kiezcolors"
+
+  [[plugins.inputs.audits]]
+    path = "aktuelles"
+
+  [[plugins.inputs.audits]]
+    path = "aktuelles/2023-12-21-luftguete"
+
+  [[plugins.inputs.audits]]
+    path = "ressourcen"
+  
+  [[plugins.inputs.audits]]
+    path = "ressourcen/01_open_data_in_verwaltung"
