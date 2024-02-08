@@ -47,6 +47,10 @@ export default defineConfig({
       experimental: {
         directoryAndTrailingSlashHandler: true,
       },
+      manifest: {
+        theme_color: "#273a91",
+        start_url: "/",
+      },
     }),
   ],
   redirects: {
