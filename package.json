@@ -17,11 +17,12 @@
     "@astrojs/rss": "4.0.4",
     "@astrojs/sitemap": "3.0.5",
     "@astrojs/tailwind": "5.1.0",
-    "@jop-software/astro-matomo": "1.1.0",
     "@tailwindcss/container-queries": "0.1.1",
     "@tailwindcss/typography": "0.5.9",
     "astro": "4.3.2",
+    "astro-purgecss": "4.1.0",
     "d3": "4.13.0",
+    "purgecss": "5.0.0",
     "swiper": "6.8.4",
     "tippy.js": "6.3.7",
     "typescript": "5.3.3"

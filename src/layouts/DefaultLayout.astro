@@ -1,28 +1,23 @@
 ---
-import BaseHead, {
-  type Props as BaseHeadProps,
-} from "../components/BaseHead.astro";
+import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 type Props = {
   metaTitle: string;
   metaDescription: string;
-  externalLibs?: BaseHeadProps["externalLibs"];
   ogImage?: string;
 };
 
-const { metaTitle, ogImage, metaDescription, externalLibs = [] } = Astro.props;
+const { metaTitle, ogImage, metaDescription } = Astro.props;
+
+const matomoUrl = import.meta.env.MATOMO_URL;
+const matomoSiteId = import.meta.env.MATOMO_SITE_ID;
 ---
 
 <html lang="de">
   <head>
-    <BaseHead
-      title={metaTitle}
-      description={metaDescription}
-      externalLibs={externalLibs}
-      image={ogImage}
-    />
+    <BaseHead title={metaTitle} description={metaDescription} image={ogImage} />
   </head>
 
   <body class="@container">
@@ -31,5 +26,18 @@ const { metaTitle, ogImage, metaDescription, externalLibs = [] } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <!-- MATOMO COOKIELESS TRACKING -->
+    {
+      matomoUrl && matomoSiteId && (
+        <img
+          src={`${matomoUrl}/matomo.php?idsite=${matomoSiteId}&rec=1&action_name=${encodeURIComponent(metaTitle)}`}
+          style="border:0"
+          alt=""
+          aria-hidden="true"
+          width="1"
+          height="1"
+        />
+      )
+    }
   </body>
 </html>

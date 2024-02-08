@@ -14,6 +14,7 @@ const {
   downloadLinkText,
   class: className = "",
   mediaMetadata,
+  fullWidth = true,
   ...contentSectionProps
 } = Astro.props;
 
@@ -31,10 +32,11 @@ const iFrameUrl = import.meta.env.PROD
     },
   ]}
   mediaMetadata={mediaMetadata}
+  fullWidth={fullWidth}
   {...contentSectionProps}
 >
   <iframe
     src={iFrameUrl}
     class="aspect-[9/13] lg:aspect-square w-full bg-discrete border border-discrete"
-  ></iframe>
+    title="Embedded PDF viewer"></iframe>
 </MediaSection>

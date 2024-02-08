@@ -139,6 +139,8 @@ const firstPath = "veranstaltungen";
                                 height={200}
                                 alt={event.data.headerImage?.alt || ""}
                                 class="h-32 w-full object-cover bg-bg-alt"
+                                widths={[320, 400]}
+                                sizes={`(max-width: 330px) 320px, 400px`}
                               />
                             )}
                           </a>

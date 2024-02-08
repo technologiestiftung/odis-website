@@ -9,7 +9,6 @@ export type Props = {
 };
 
 const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
-
 ---
 
 <div class="grid grid-cols-12 not-prose py-16 gap-8">
@@ -31,6 +30,8 @@ const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
               src={authorAvatar}
               alt={`Avatar von ${authorName}`}
               class="w-12 h-12 object-fill rounded-full"
+              widths={[64]}
+              sizes="64px"
             />
           )}
           <cite class="inline-flex flex-col items-center text-base">
@@ -43,6 +44,8 @@ const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
                 src={authorLogo}
                 alt={`Logo von ${authorName}`}
                 class="max-w-[12rem] mt-4"
+                widths={[240]}
+                sizes="240px"
               />
             )}
           </cite>

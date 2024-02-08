@@ -56,12 +56,14 @@ const resources = await getCollection("resources", (project) =>
           <Button
             tag="button"
             class={cn(`resources-button resources-button-prev p-2`)}
+            aria-label="Vorherige Ressource"
           >
             <Icon size={32} name="ui/chevron-left" />
           </Button>
           <Button
             tag="button"
             class={cn(`resources-button resources-button-next p-2`)}
+            aria-label="Nächste Ressource"
           >
             <Icon size={32} name="ui/chevron-right" />
           </Button>
@@ -89,7 +91,7 @@ const resources = await getCollection("resources", (project) =>
 </style>
 
 <script>
-  import Swiper from "swiper/bundle";
+  import Swiper from "swiper";
   import "swiper/swiper-bundle.css";
 
   const swiper = new Swiper(".resources-swiper", {

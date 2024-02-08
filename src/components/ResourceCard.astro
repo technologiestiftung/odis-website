@@ -1,10 +1,9 @@
 ---
-import { Image } from "astro:assets";
+import { Image, type LocalImageProps } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
 import { cn } from "@/utils/classNames";
-import type { JSX } from "astro/jsx-runtime";
 import { Icon } from "astro-icon/components";
 import Button from "./Button.astro";
 import ResourceInfo from "./ResourceInfo.astro";
@@ -13,9 +12,16 @@ import { iconsMap } from "@/utils/resourceUtil";
 export type Props = CollectionEntry<"resources"> & {
   class?: string;
   titleTag?: "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+  imageLoading?: LocalImageProps["loading"];
 };
 
-const { data, slug, class: className, titleTag = "h2" } = Astro.props;
+const {
+  data,
+  slug,
+  class: className,
+  titleTag = "h2",
+  imageLoading = "lazy",
+} = Astro.props;
 const { title, description, question, media } = data;
 const { thumbnail } = media;
 
@@ -55,7 +61,7 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
       question && (
         <Paragraph
           class={cn(
-            "opacity-50 mb-0",
+            "opacity-50 contrast-more:opacity-100 mb-0",
             isInverted ? "text-headlines-inv" : "text-headlines",
           )}
           style={{ gridArea: "question" }}
@@ -142,6 +148,9 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
           "dark:shadow-primary-inv",
           "hover-hover:group-hover:-translate-y-4 transition-transform",
         )}
+        widths={[300]}
+        sizes="300px"
+        loading={imageLoading}
       />
       {
         !isVideoAspectRatio && (

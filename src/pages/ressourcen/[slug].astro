@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import ResourcePageHeader from "../../components/ResourcePageHeader.astro";
 import { components } from "@/components/macros/index.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("resources");
@@ -20,22 +21,13 @@ const { Content } = await post.render();
 <DefaultLayout
   metaDescription={post.data.metaDescription || post.data.description}
   metaTitle={post.data.metaTitle || post.data.title}
-  externalLibs={["tableOfContents"]}
   ogImage={post.data.ogImage?.src || `/ressourcen/og/${post.slug}.png`}
 >
   <ResourcePageHeader {...post} />
 
   <section aria-label="Beitrag">
     <div class="grid-container">
-      <div
-        class="pt-16 flex flex-col gap-6 order-first lg:order-last lg:col-start-9 lg:col-span-3 z-0"
-      >
-        <div class="sticky w-full top-6 lg:pb-48" id="toc-target">
-          <span id="toc-label" class="font-bold text-headlines"
-            >Auf dieser Seite</span
-          >
-        </div>
-      </div>
+      <TableOfContents />
       <div
         class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10"
       >

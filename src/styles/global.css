@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  /*! purgecss start ignore */
   @font-face {
     font-family: "Clan";
     font-style: normal;
@@ -36,6 +37,17 @@
   }
 
   :root {
+    --high-contrast-blue-darker: #040b22;
+    --high-contrast-blue-dark: #0a153b;
+    --high-contrast-blue: #122467;
+    --high-contrast-blue-medium: #273a91;
+    --high-contrast-blue-light: #c7e5f9;
+    --high-contrast-blue-ultralight: #f8fcff;
+    --high-contrast-gray-light: #7f898d;
+    --high-contrast-gray: #374044;
+    --high-contrast-red: #e60032;
+    --high-contrast-red-dark: #c42c3a;
+
     --blue-darker: #0c163b;
     --blue-dark: #172763;
     --blue: #20378b;
@@ -82,6 +94,45 @@
     );
   }
 
+  @media (prefers-contrast: more) {
+    :root {
+      --bg-alt: var(--high-contrast-blue-ultralight);
+      --bg-inv: var(--high-contrast-blue);
+
+      --text: var(--high-contrast-blue-darker);
+      --text-inv: var(--high-contrast-blue-ultralight);
+
+      --links: var(--high-contrast-blue-dark);
+      --links-inv: var(--high-contrast-blue-light);
+      --links-active: var(--high-contrast-red);
+
+      --headlines: var(--high-contrast-blue);
+      --headlines-inv: var(--high-contrast-blue-light);
+      --links-active-inv: var(--high-contrast-red);
+
+      --line: var(--high-contrast-blue);
+      --line-dark: var(--high-contrast-blue-dark);
+      --line-inv: var(--high-contrast-blue-light);
+      --line-dark-inv: var(--high-contrast-blue-ultralight);
+
+      --shadow-primary: var(--high-contrast-blue);
+      --shadow-secondary: var(--high-contrast-blue-light);
+      --shadow-primary-inv: var(--high-contrast-blue-dark);
+      --shadow-secondary-inv: var(--high-contrast-blue-dark);
+    }
+  }
+
+  @media (min-width: 400px) {
+    :root {
+      --containerWidth: 400px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+      --contentOffset: calc(
+        (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+      );
+    }
+  }
+
   @media (min-width: 640px) {
     :root {
       --containerWidth: 640px;
@@ -123,8 +174,7 @@
     }
   }
 
-  /* To apply dark mode, apply the [data-applied-mode='dark'] to the <html /> tag and add this CSS */
-  :root[data-applied-mode="dark"] {
+  html.dark {
     --bg: var(--blue-darker);
     --bg-alt: var(--blue-dark);
     --bg-inv: var(--blue-dark);
@@ -149,11 +199,36 @@
     --shadow-secondary-inv: var(--blue-darker);
   }
 
+  @media (prefers-contrast: more) {
+    html.dark {
+      --bg: var(--high-contrast-blue-darker);
+      --bg-alt: var(--high-contrast-blue-dark);
+      --bg-inv: var(--high-contrast-blue-dark);
+
+      --text: var(--high-contrast-blue-ultralight);
+
+      --links: var(--high-contrast-blue-light);
+
+      --headlines-inv: var(--high-contrast-blue-ultralight);
+
+      --line: var(--high-contrast-blue-medium);
+      --line-dark: var(--high-contrast-blue-medium);
+      --line-inv: var(--high-contrast-blue-dark);
+      --line-dark-inv: var(--high-contrast-blue-darker);
+
+      --shadow-primary: var(--high-contrast-blue-dark);
+      --shadow-secondary: var(--high-contrast-blue-dark);
+      --shadow-primary-inv: var(--high-contrast-blue-darker);
+      --shadow-secondary-inv: var(--high-contrast-blue-darker);
+    }
+  }
+
   body,
   html {
     @apply font-sans text-text bg-bg min-h-screen;
     scroll-behavior: smooth;
   }
+  /*! purgecss end ignore */
 }
 
 @layer components {
@@ -183,6 +258,7 @@
   }
 }
 
+/*! purgecss start ignore */
 .prose {
   --tw-prose-body: var(--text);
   --tw-prose-headings: var(--headlines);
@@ -331,3 +407,4 @@
 iframe {
   @apply bg-[var(--white)] !w-full rounded relative overflow-hidden;
 }
+/*! purgecss end ignore */

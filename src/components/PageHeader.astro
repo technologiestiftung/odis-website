@@ -39,11 +39,17 @@ const {
         image && (
           <Image
             class={cn(
+              `w-full h-auto lg:absolute lg:top-0 lg:left-0 max-w-7xl`,
               image.class,
-              `w-full h-auto lg:absolute lg:top-0 lg:left-0 `,
             )}
+            loading="eager"
             alt={image.alt}
             src={image.src}
+            widths={[400, Math.min(800, image.src.width)]}
+            sizes={`
+              (max-width: 640px) 400px,
+              ${Math.min(800, image.src.width)}px
+            `}
           />
         )
       }

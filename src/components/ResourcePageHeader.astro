@@ -91,6 +91,11 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
               "w-full h-auto top-4 left-0 bg-bg-alt",
               "border border-line-inv shadow-secondary dark:shadow-primary-inv",
             )}
+            widths={isVideoAspectRatio ? [500, 600] : [300, 400]}
+            sizes={isVideoAspectRatio
+              ? "(max-width: 1024px) 500px, 600px"
+              : "(max-width: 1024px) 300px, 400px"}
+            loading="eager"
           />
           {
             !isVideoAspectRatio && (
