@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import { pwaInfo } from "virtual:pwa-info";
 
 export interface Props {
   title: string;
@@ -70,6 +71,9 @@ const { title, description, image = "/images/social-media.jpg" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<script src="/src/pwa.ts"></script>
+{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
 
 <script is:inline>
   function loadUserPrefTheme() {

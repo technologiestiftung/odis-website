@@ -9,6 +9,8 @@ import sitemap from "@astrojs/sitemap";
 // Comunity plugins
 import icon from "astro-icon";
 import purgecss from "astro-purgecss";
+import AstroPWA from "@vite-pwa/astro";
+
 const hasMatomo = process.env.MATOMO_URL && process.env.MATOMO_SITE_ID;
 if (!hasMatomo) {
   console.warn(
@@ -39,6 +41,9 @@ export default defineConfig({
         },
       ],
       safelist: ["dark"],
+    }),
+    AstroPWA({
+      workbox: { navigateFallback: "/404" },
     }),
   ],
   redirects: {
