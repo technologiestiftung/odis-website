@@ -32,15 +32,16 @@ export default defineConfig({
     mdx(),
     prefetch(),
     sitemap(),
-    purgecss({
-      extractors: [
-        {
-          extractor: (content) =>
-            content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
-          extensions: ["astro", "html", "mdx", "md", "ts"],
-        },
-      ],
-    }),
+    // purgecss({
+    //   extractors: [
+    //     {
+    //       extractor: (content) =>
+    //         content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
+    //       extensions: ["astro", "html", "mdx", "md", "ts"],
+    //     },
+    //   ],
+    //   safelist: ["dark", /^dark/],
+    // }),
     AstroPWA({
       workbox: { navigateFallback: "/404" },
       experimental: {

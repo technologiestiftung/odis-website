@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.{md,mdx,astro,html,js,jsx,ts,tsx}"],
   darkMode: "class",

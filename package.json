@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "NODE_OPTIONS=--max_old_space_size=8192 astro build --experimental-static-build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -37,6 +37,7 @@
     "react": "18.2.0",
     "sharp": "0.33.2",
     "tailwind-merge": "2.2.1",
+    "tailwindcss": "3.4.1",
     "tailwindcss-touch": "1.0.1"
   }
 }
