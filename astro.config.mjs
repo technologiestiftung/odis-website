@@ -37,10 +37,9 @@ export default defineConfig({
         {
           extractor: (content) =>
             content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
-          extensions: ["astro", "html"],
+          extensions: ["astro", "html", "mdx", "md", "ts"],
         },
       ],
-      safelist: ["dark"],
     }),
     AstroPWA({
       workbox: { navigateFallback: "/404" },
