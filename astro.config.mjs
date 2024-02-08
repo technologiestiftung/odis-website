@@ -50,7 +50,7 @@ export default defineConfig({
       manifest: {
         theme_color: "#ffffff",
         background_color: "#273a91",
-        display: "browser",
+        display: "minimal-ui",
         scope: "/",
         start_url: "/",
         name: "Open Data Informationsstelle Berlin",
