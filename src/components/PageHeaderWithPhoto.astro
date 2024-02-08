@@ -3,8 +3,8 @@ import { Image } from "astro:assets";
 import { cn } from "../utils/classNames";
 import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
-import ArrowLeft from "./icons/ArrowLeft.astro";
 import { formatGermanDate } from "@/utils/dateUtil";
+import { Icon } from "astro-icon/components";
 
 export type Props = {
   title: string;
@@ -42,7 +42,7 @@ const dateIsoString = date.toISOString();
             href={`/${basePath}`}
             class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
           >
-            <ArrowLeft />
+            <Icon name="ui/arrow-left" size={20} />
             Zurück
           </a>
           <span aria-hidden="true" class="scale-150 opacity-50">·</span>

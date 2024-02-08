@@ -7,12 +7,12 @@ import ModuleStepper from "../../components/ModuleStepper.astro";
 import TextLink from "../../components/TextLink.astro";
 import Button from "../../components/Button.astro";
 import ContactLane from "../../components/ContactLane.astro";
-import ArrowLeft from "../../components/icons/ArrowLeft.astro";
 import { Image } from "astro:assets";
 import { components } from "@/components/macros/index.astro";
 import { cn } from "@/utils/classNames";
 import ResourceCard from "@/components/ResourceCard.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
+import { Icon } from "astro-icon/components";
 
 export type Props = CollectionEntry<"module"> & {
   data: CollectionEntry<"module">["data"] & {
@@ -67,7 +67,7 @@ const { Content } = await post.render();
           href="/module"
           class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
         >
-          <ArrowLeft />
+          <Icon name="ui/arrow-left" size={20} />
           {modul.backButtonText}
         </a>
       </div>

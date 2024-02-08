@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 import { cn } from "@/utils/classNames";
 import Heading from "@/components/Heading.astro";
 import Paragraph from "@/components/Paragraph.astro";
-import ArrowLeft from "@/components/icons/ArrowLeft.astro";
 import type { CollectionEntry } from "astro:content";
 import Button from "@/components/Button.astro";
 import { Icon } from "astro-icon/components";
@@ -32,7 +31,7 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
             href={`/ressourcen`}
             class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
           >
-            <ArrowLeft />
+            <Icon name="ui/arrow-left" size={20} />
             Zurück
           </a>
         </Paragraph>

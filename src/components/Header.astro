@@ -1,9 +1,9 @@
 ---
-import HamburgerIcon from "./icons/HamburgerIcon.astro";
 import OdisLogo from "./logos/OdisLogo.astro";
 import navItems from "../navItems";
 import ThemeSwitch from "./ThemeSwitch.astro";
 import { cn } from "@/utils/classNames";
+import { Icon } from "astro-icon/components";
 
 export type Props = {};
 
@@ -38,7 +38,7 @@ const urlPath = canonicalURL.pathname;
       id="menu-button"
       aria-label="Menü umschalten"
     >
-      <HamburgerIcon />
+      <Icon name="ui/hamburger" size={24} />
     </button>
   </div>
 
