@@ -48,8 +48,38 @@ export default defineConfig({
         directoryAndTrailingSlashHandler: true,
       },
       manifest: {
-        theme_color: "#273a91",
+        theme_color: "#ffffff",
+        background_color: "#273a91",
+        display: "browser",
+        scope: "/",
         start_url: "/",
+        name: "Open Data Informationsstelle Berlin",
+        short_name: "ODIS",
+        description:
+          "Wir begleiten die Stadt auf dem Weg zu einer partizipativen, nachhaltigen und datengetriebenen Gesellschaft mit dem Schwerpunkt auf die Bereitstellung und Nutzung offener Daten.",
+        icons: [
+          {
+            src: "/icon-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/icon-256x256.png",
+            sizes: "256x256",
+            type: "image/png",
+          },
+          {
+            src: "/icon-384x384.png",
+            sizes: "384x384",
+            type: "image/png",
+          },
+          {
+            src: "/icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+        ],
       },
     }),
   ],
