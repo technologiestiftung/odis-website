@@ -44,6 +44,9 @@ export default defineConfig({
     }),
     AstroPWA({
       workbox: { navigateFallback: "/404" },
+      experimental: {
+        directoryAndTrailingSlashHandler: true,
+      },
     }),
   ],
   redirects: {
