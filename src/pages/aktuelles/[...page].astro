@@ -58,25 +58,30 @@ const firstPath = "aktuelles";
   <div class="grid-container">
     <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
       {
-        page.data.map((post) => {
+        page.data.map((post, idx) => {
           if (!post.data.visible) return null;
           const { data } = post;
           const isProject = data.tags.includes("project");
           const isResource = data.tags.includes("resource");
           const isAktuelles =
             data.tags.includes("post") && !isProject && !isResource;
+          const imgLoading = idx > 2 ? "lazy" : "eager";
 
           if (isAktuelles) {
             const aktuelles = post as Aktuelles;
-            return <NewsCard {...aktuelles} />;
+            return <NewsCard {...aktuelles} imageLoading={imgLoading} />;
           }
           if (isProject) {
             const project = post as Project;
-            return <ProjectThumbnail {...project} />;
+            return <ProjectThumbnail {...project} imageLoading={imgLoading} />;
           }
           if (isResource) {
             const resource = post as Resource;
-            return <ResourceCard {...resource} />;
+            return (
+              <div>
+                <ResourceCard {...resource} imageLoading={imgLoading} />
+              </div>
+            );
           }
         })
       }

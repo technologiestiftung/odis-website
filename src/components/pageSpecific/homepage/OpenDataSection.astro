@@ -63,6 +63,14 @@ const openData = Astro.props;
           src={openData.image}
           alt={openData.imageAltText}
           class="w-full h-full object-cover"
+          widths={[320, 640, 720, 960, 1024]}
+          sizes={`
+            (max-width: 500px) 320px,
+            (max-width: 720px) 640px,
+            (max-width: 960px) 720px,
+            (max-width: 1024px) 960px,
+            1024px
+          `}
         />
       </div>
     </div>

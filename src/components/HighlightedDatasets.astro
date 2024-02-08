@@ -49,12 +49,14 @@ const focusStyles =
     >
       <div class="w-full flex justify-between order-first relative">
         <button
+          aria-label="Vorherige Slide"
           class={cn(
             `swiper-button-prev`,
             `wimmelbild-button-prev`,
             focusStyles,
           )}></button>
         <button
+          aria-label="Nächste Slide"
           class={cn(
             `swiper-button-next`,
             `wimmelbild-button-next`,
@@ -310,7 +312,7 @@ const focusStyles =
     --illu-highlight: var(--red);
     --illu-gray: var(--gray-light);
     --illu-bg: var(--blue-light);
-    --illu-line: var(--blue-dark);
+    --illu-line: var(--blue);
   }
 
   .swiper-slide path,
@@ -329,11 +331,11 @@ const focusStyles =
     --illu-line: var(--blue-light);
   }
 
-  :global([data-applied-mode="dark"]) .swiper-slide:not(.swiper-slide-active) {
+  :global(html.dark) .swiper-slide:not(.swiper-slide-active) {
     --illu-white: var(--bg);
     --illu-highlight: var(--bg);
     --illu-gray: var(--bg);
     --illu-bg: var(--bg);
-    --illu-line: var(--line);
+    --illu-line: var(--blue-medium);
   }
 </style>

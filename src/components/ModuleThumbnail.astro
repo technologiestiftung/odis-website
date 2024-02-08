@@ -50,6 +50,7 @@ const isLast = module.data.number === allModules.length;
         {
           module.data.icon && (
             <Image
+              loading="lazy"
               src={module.data.icon}
               alt={`Module icon illustration for module '${module.data.title}'`}
               class={cn(
@@ -58,6 +59,8 @@ const isLast = module.data.number === allModules.length;
                   ? `sm:order-1 lg:order-2 lg:col-span-3`
                   : `lg:col-span-2`,
               )}
+              widths={[185]}
+              sizes="185px"
             />
           )
         }

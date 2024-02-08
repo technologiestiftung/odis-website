@@ -6,13 +6,20 @@ import NewsCardGradient from "./NewsCardGradient.astro";
 import { cn } from "../utils/classNames";
 import { Icon } from "astro-icon/components";
 import type { CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
+import { Image, type LocalImageProps } from "astro:assets";
 
 export type Props = CollectionEntry<"aktuelles"> & {
   class?: string;
+  titleTag?: "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+  imageLoading?: LocalImageProps["loading"];
 };
 
-const { class: className = "", data, slug } = Astro.props;
+const {
+  class: className = "",
+  data,
+  slug,
+  imageLoading = "lazy",
+} = Astro.props;
 const { headerImage } = data;
 
 const hasLink = !!data.link;
@@ -49,6 +56,9 @@ const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
         <Image
           src={headerImage.src}
           alt={headerImage.alt}
+          loading={imageLoading}
+          widths={[240, 540]}
+          sizes={`(max-width: 360px) 240px, 540px`}
           class={cn("w-full h-full object-cover")}
         />
         <div class="absolute inset-0 bg-bg-inv mix-blend-screen opacity-50" />

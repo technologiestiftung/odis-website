@@ -53,13 +53,15 @@ const { class: className } = Astro.props;
 
   function updateTheme(value: string) {
     const theme: ThemeType = value === "dark" ? "dark" : "light";
+    const opposedTheme: ThemeType = theme === "dark" ? "light" : "dark";
     const buttons = document.querySelectorAll(
       `.theme-button-${theme}`,
     ) as NodeListOf<HTMLButtonElement>;
     suns.forEach((sun) => sun.classList.remove(...activeClass));
     moons.forEach((moon) => moon.classList.remove(...activeClass));
     buttons.forEach((btn) => btn.classList.add(...activeClass));
-    document.documentElement.dataset.appliedMode = theme;
+    document.documentElement.classList.remove(opposedTheme);
+    document.documentElement.classList.add(theme);
     localStorage.setItem("theme", value);
   }
 

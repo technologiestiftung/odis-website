@@ -4,18 +4,27 @@ import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
 import ProjectMockups from "./ProjectMockups.astro";
 import Button from "./Button.astro";
+import type { LocalImageProps } from "astro:assets";
 
 export type Props = CollectionEntry<"projekte"> & {
   class?: string;
+  titleTag?: "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+  imageLoading?: LocalImageProps["loading"];
 };
 
-const { data, slug, class: className = "" } = Astro.props;
+const {
+  data,
+  slug,
+  titleTag = "h2",
+  class: className = "",
+  imageLoading = "lazy",
+} = Astro.props;
 const { title, description } = data;
 ---
 
 <a href={`/projekte/${slug}`} title={title} class={className}>
-  <ProjectMockups {...data} slug={slug} />
-  <Heading size="lg" class="mt-3 mb-1" set:html={title} />
+  <ProjectMockups {...data} slug={slug} imageLoading={imageLoading} />
+  <Heading tag={titleTag} size="lg" class="mt-3 mb-1" set:html={title} />
   <Paragraph set:html={description} />
   <Button tag="span" variant="secondary">Projekt ansehen</Button>
 </a>
