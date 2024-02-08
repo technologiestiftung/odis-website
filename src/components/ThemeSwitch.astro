@@ -7,18 +7,43 @@ export type Props = {
 };
 
 const { class: className } = Astro.props;
+const activeClass = cn(
+  `bg-links-active`,
+  `dark:bg-links-active`,
+  `text-bg`,
+  `dark:text-text`,
+  `hover-hover:hover:text-bg`,
+  `dark:hover-hover:hover:text-text`,
+  `cursor-default`,
+);
+const inactiveClass = cn(
+  "text-links hover-hover:hover:text-links-active",
+  "dark:text-links dark:hover-hover:hover:text-links-active",
+);
 ---
 
 <div class={cn("inline-flex items-center", className)}>
   <button
-    class="theme-button-light p-1 sm:p-2 rounded-full transition-colors focusable hover-hover:hover:text-links-active"
+    class={cn(
+      "theme-button-light p-1 sm:p-2 rounded-full",
+      "motion-safe:transition-colors focusable",
+      activeClass,
+    )}
     title="Apply light color theme"
+    data-activeclass={activeClass}
+    data-inactiveclass={inactiveClass}
   >
     <Icon class="w-6 h-6" name="ui/sun" />
   </button>
   <button
-    class="theme-button-dark p-2 rounded-full transition-colors focusable hover-hover:hover:text-links-active"
+    class={cn(
+      "theme-button-dark p-1 sm:p-2 rounded-full",
+      "motion-safe:transition-colors focusable",
+      inactiveClass,
+    )}
     title="Apply dark color theme"
+    data-activeclass={activeClass}
+    data-inactiveclass={inactiveClass}
   >
     <Icon class="w-6 h-6" name="ui/moon" />
   </button>
@@ -32,15 +57,8 @@ const { class: className } = Astro.props;
   const moons = document.querySelectorAll(
     ".theme-button-dark",
   ) as NodeListOf<HTMLButtonElement>;
-
-  const activeClass = [
-    `bg-links-active`,
-    `text-bg`,
-    `dark:text-text`,
-    `hover-hover:hover:text-bg`,
-    `dark:hover-hover:hover:text-text`,
-    `cursor-default`,
-  ];
+  const activeClass = suns[0].dataset.activeclass?.split(" ") || [];
+  const inactiveClass = suns[0].dataset.inactiveclass?.split(" ") || [];
 
   const theme = localStorage.getItem("theme");
   const systemTheme: ThemeType = window.matchMedia(
@@ -57,9 +75,18 @@ const { class: className } = Astro.props;
     const buttons = document.querySelectorAll(
       `.theme-button-${theme}`,
     ) as NodeListOf<HTMLButtonElement>;
+
+    // Reset styles for both buttons
     suns.forEach((sun) => sun.classList.remove(...activeClass));
     moons.forEach((moon) => moon.classList.remove(...activeClass));
-    buttons.forEach((btn) => btn.classList.add(...activeClass));
+    suns.forEach((sun) => sun.classList.add(...inactiveClass));
+    moons.forEach((moon) => moon.classList.add(...inactiveClass));
+
+    // Apply styles for active button
+    buttons.forEach((btn) => {
+      btn.classList.remove(...inactiveClass);
+      btn.classList.add(...activeClass);
+    });
     document.documentElement.classList.remove(opposedTheme);
     document.documentElement.classList.add(theme);
     localStorage.setItem("theme", value);
