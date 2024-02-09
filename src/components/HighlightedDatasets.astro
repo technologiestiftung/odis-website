@@ -171,6 +171,12 @@ const focusStyles =
     },
   });
 
+  const nextButton = document.querySelector(".wimmelbild-button-next");
+  const prevButton = document.querySelector(".wimmelbild-button-prev");
+
+  nextButton?.addEventListener("click", () => swiper.slideNext());
+  prevButton?.addEventListener("click", () => swiper.slidePrev());
+
   const initialInfoElement = [...highlightedDatasetsList][INITIAL_SLIDE_INDEX];
   const initialSlide = swiper.slides[INITIAL_SLIDE_INDEX];
 
@@ -266,6 +272,14 @@ const focusStyles =
     bottom: auto;
     margin-top: 0;
     color: var(--links) !important;
+    width: 48px;
+    height: 48px;
+  }
+
+  .swiper-button-next.wimmelbild-button-next:hover,
+  .swiper-button-prev.wimmelbild-button-prev:hover {
+    background: var(--bg-alt);
+    color: var(--links-active) !important;
   }
 
   .swiper-button-next.wimmelbild-button-next::after,
