@@ -27,7 +27,7 @@ const inactiveClass = cn(
     class={cn(
       "theme-button-light p-1 sm:p-2 rounded-full",
       "motion-safe:transition-colors focusable",
-      activeClass,
+      inactiveClass,
     )}
     title="Apply light color theme"
     data-activeclass={activeClass}
@@ -39,7 +39,7 @@ const inactiveClass = cn(
     class={cn(
       "theme-button-dark p-1 sm:p-2 rounded-full",
       "motion-safe:transition-colors focusable",
-      inactiveClass,
+      activeClass,
     )}
     title="Apply dark color theme"
     data-activeclass={activeClass}

@@ -40,7 +40,11 @@ export default defineConfig({
           extensions: ["astro", "html", "mdx", "md", "ts"],
         },
       ],
-      safelist: ["dark", /^dark/],
+      safelist: {
+        standard: ["dark", /^dark/],
+        deep: ["dark", /^dark/],
+        eager: ["dark", /^dark/],
+      },
     }),
     AstroPWA({
       workbox: { navigateFallback: "/404" },
