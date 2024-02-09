@@ -10,9 +10,11 @@ export type Props = CollectionEntry<"homepage">["data"]["aktuelles"];
 
 const texts = Astro.props;
 
-const news = await getCollection("aktuelles", (project) =>
-  project.data.tags.includes("home"),
-);
+const news = (
+  await getCollection("aktuelles", (project) =>
+    project.data.tags.includes("home"),
+  )
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <div class="pt-24 pb-12">

@@ -2,20 +2,20 @@
 import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
 import Button from "./Button.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
 import { cn } from "../utils/classNames";
 import { Image } from "astro:assets";
 
 export type Props = CollectionEntry<"module"> & {
   position: "left" | "right";
+  totalModules: number;
 };
 
-const allModules = await getCollection("module");
 const module = Astro.props;
 
 const isRight = module.position === "right";
 const isFirst = module.data.number === 1;
-const isLast = module.data.number === allModules.length;
+const isLast = module.data.number === module.totalModules;
 ---
 
 <section class="bg-bg group/section">

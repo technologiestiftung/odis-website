@@ -2,55 +2,56 @@ import rss from "@astrojs/rss";
 import { getCollection, getEntry } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
+const pageToRssPage = (arr, pathPrefix) =>
+  arr.map((p) => ({ ...p.data, link: `/${pathPrefix}/${p.slug}` }));
 export async function GET(context) {
-  const posts = (await getCollection("projekte")).map((p) => ({
-    ...p.data,
-    link: `/projekte/${p.slug}`,
-  }));
-  const aktuelles = (await getCollection("aktuelles")).map((p) => ({
-    ...p.data,
-    link: `/aktuelles/${p.slug}`,
-  }));
-  const events = (await getCollection("veranstaltungen")).map((p) => ({
-    ...p.data,
-    link: `/veranstaltungen/${p.slug}`,
-  }));
-  const resources = (await getCollection("resources")).map((p) => ({
-    ...p.data,
-    link: `/module/${p.slug}`,
-  }));
-  const modules = (await getCollection("module")).map((p) => ({
-    ...p.data,
-    link: `/module/${p.slug}`,
-  }));
-  let about = await getEntry("about", "about");
-  about = { ...about.data, link: "/about" };
-  let kontakt = await getEntry("kontakt", "kontakt");
-  kontakt = { ...kontakt.data, link: "/contact" };
-  let newsletterArchiv = await getEntry("newsletterArchiv", "newsletterarchiv");
-  newsletterArchiv = { ...newsletterArchiv.data, link: "/aktuelles/archiv" };
-  let moduleOverview = await getEntry("moduleOverview", "moduleoverview");
-  moduleOverview = { ...moduleOverview.data, link: "/module" };
-  let resourcesOverview = await getEntry(
-    "resourcesOverview",
-    "resourcesoverview",
+  const posts = pageToRssPage(await getCollection("projekte"), "projekte");
+  const aktuelles = pageToRssPage(
+    await getCollection("aktuelles"),
+    "aktuelles",
   );
-  resourcesOverview = { ...resourcesOverview.data, link: "/ressourcen" };
-  let veranstaltungenOverview = await getEntry(
-    "veranstaltungenOverview",
-    "veranstaltungenoverview",
+  const events = pageToRssPage(
+    await getCollection("veranstaltungen"),
+    "veranstaltungen",
   );
-  veranstaltungenOverview = {
-    ...veranstaltungenOverview.data,
+  const resources = pageToRssPage(
+    await getCollection("resources"),
+    "ressourcen",
+  );
+  const modules = pageToRssPage(await getCollection("module"), "module");
+  const about = {
+    ...(await getEntry("about", "about")).data,
+    link: "/about",
+  };
+  const contact = {
+    ...(await getEntry("kontakt", "kontakt")).data,
+    link: "/contact",
+  };
+  const newsletterArchiv = {
+    ...(await getEntry("newsletterArchiv", "newsletterarchiv")).data,
+    link: "/aktuelles/archiv",
+  };
+  const moduleOverview = {
+    ...(await getEntry("moduleOverview", "moduleoverview")).data,
+    link: "/module",
+  };
+  const resourcesOverview = {
+    ...(await getEntry("resourcesOverview", "resourcesoverview")).data,
+    link: "/resources",
+  };
+  const veranstaltungenOverview = {
+    ...(await getEntry("veranstaltungenOverview", "veranstaltungenoverview"))
+      .data,
     link: "/veranstaltungen",
   };
-  let projectsOverview = await getEntry("projectsOverview", "projectsoverview");
-  projectsOverview = { ...projectsOverview.data, link: "/projekte" };
-  let aktuellesOverview = await getEntry(
-    "aktuellesOverview",
-    "aktuellesoverview",
-  );
-  aktuellesOverview = { ...aktuellesOverview.data, link: "/aktuelles" };
+  const projectsOverview = {
+    ...(await getEntry("projectsOverview", "projectsoverview")).data,
+    link: "/projekte",
+  };
+  const aktuellesOverview = {
+    ...(await getEntry("aktuellesOverview", "aktuellesoverview")).data,
+    link: "/aktuelles",
+  };
 
   const items = [
     ...posts,
@@ -59,19 +60,21 @@ export async function GET(context) {
     ...modules,
     ...resources,
     about,
-    kontakt,
+    contact,
     newsletterArchiv,
     moduleOverview,
     resourcesOverview,
     veranstaltungenOverview,
     projectsOverview,
     aktuellesOverview,
-  ].map((item) => ({
-    title: item.title,
-    description: item.description,
-    link: item.link,
-    pubDate: item.date || new Date(),
-  }));
+  ]
+    .map((item) => ({
+      title: item.title,
+      description: item.description,
+      link: item.link,
+      pubDate: item.date || new Date("2018-01-01"),
+    }))
+    .sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
 
   return rss({
     title: SITE_TITLE,
