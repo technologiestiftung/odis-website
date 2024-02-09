@@ -10,9 +10,7 @@ export type Props = CollectionEntry<"module"> & {
   position: "left" | "right";
 };
 
-const allModules = (await getCollection("module")).sort(
-  (a, b) => a.data.number - b.data.number,
-);
+const allModules = await getCollection("module");
 const module = Astro.props;
 
 const isRight = module.position === "right";

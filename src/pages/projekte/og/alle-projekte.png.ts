@@ -7,7 +7,6 @@ import { cn } from "@/utils/classNames";
 
 export const GET: APIRoute = async () => {
   const { data } = await getEntry("projectsOverview", "projectsoverview");
-  const entries = await getCollection("projekte");
   return renderImageResponse(
     await renderBasicOgImage({
       title: data.title,
