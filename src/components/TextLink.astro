@@ -12,23 +12,19 @@ const Tag = tag;
 
 const finalTailwindClasses = cn(
   inverted &&
-    [
+    cn(
       `text-links-inv border-line-inv`,
       `focus-visible:ring-offset-bg-inv`,
       `hover-hover:hover:text-text-inv`,
       `hover-hover:hover:border-links-active-inv`,
-    ]
-      .filter(Boolean)
-      .join(" "),
+    ),
   !inverted &&
-    [
+    cn(
       `text-links border-line`,
       `focus-visible:ring-offset-bg`,
       `hover-hover:hover:text-links-active`,
       `hover-hover:hover:border-links-active`,
-    ]
-      .filter(Boolean)
-      .join(" "),
+    ),
   `cursor-pointer`,
   `decoration-clone underline underline-offset-8 decoration-4`,
   `inline-block leading-8 focus-visible:ring-offset-4`,
