@@ -10,9 +10,11 @@ export type Props = CollectionEntry<"homepage">["data"]["projects"];
 
 const texts = Astro.props;
 
-const projects = await getCollection("projekte", (project) =>
-  project.data.tags.includes("home"),
-);
+const projects = (
+  await getCollection("projekte", (project) =>
+    project.data.tags.includes("home"),
+  )
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <div class="bg-bg-inv text-text-inv pt-24 pb-56">
