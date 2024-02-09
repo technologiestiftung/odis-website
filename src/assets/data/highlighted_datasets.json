@@ -2,15 +2,15 @@
   {
     "id": "budget",
     "title": "Berliner Haushalt",
-    "description": "Offene Haushaltsdaten bilden eine wichtige Grundlage für eine Diskussion von Verwaltung und Zivilgesellschaft darüber, wie Steuergelder effektiv eingesetzt werden.",
+    "description": "Pro Jahr stehen der Berliner Verwaltung über 35 Milliarden Euro zur Verfügung. Offene Haushaltsdaten bilden eine wichtige Grundlage für eine Diskussion zwischen Verwaltung und Zivilgesellschaft darüber, wie Steuergelder effektiv eingesetzt werden sollen.",
     "url": "https://daten.berlin.de/datensaetze/doppelhaushalt-20222023",
-    "example_usage": "https://haushaltsdaten.odis-berlin.de",
+    "example_usage": "/projekte/haushaltsdaten",
     "icon": "money"
   },
   {
     "id": "a11y",
     "title": "Barrierefreiheit",
-    "description": "Offene Daten zum barrierefreien Ausbau von öffentlichen Gebäuden machen Hürden für die breite Stadtgesellschaft sichtbar, können Veränderungen anstoßen und die Stadt gerechter gestalten.",
+    "description": "Für Menschen mit Mobilitätseinschränkungen können sich überall in der Stadt Hürden auftun. Offene Daten zum barrierefreien Ausbau von öffentlichen Gebäuden machen diese Hürden für die breite Stadtgesellschaft sichtbar, können Veränderungen anstoßen und die Stadt gerechter gestalten.",
     "icon": "a11y"
   },
   {
@@ -23,21 +23,21 @@
   {
     "id": "waiting-time",
     "title": "Wartezeiten in der öffentlichen Verwaltung",
-    "description": "Offene Daten und Statistiken über Wartezeiten, Auslastung oder bearbeiteten Anträgen schaffen Transparenz und gewähren einen Überblick, von dem sich Handlungsoptionen wie Personalplanung oder Terminvergabe ableiten lassen.",
+    "description": "Selten kommen Bürger:innen so unmittelbar in Kontakt mit der öffentlichen Verwaltung wie in den Ämtern Berlins. Lange Wartezeiten und überlastete Mitarbeiter:innen sind für beide Seiten frustrierend. Offene Daten und Statistiken über Wartezeiten, Auslastung oder bearbeitete Anträge schaffen Transparenz und liefern die Datengrundlage für effizientere Vorgänge und Planung in den Ämtern.",
     "icon": "clock"
   },
   {
     "id": "bathing",
     "title": "Wasserqualität",
-    "description": "Offene Daten zu Berliner Badestellen ermöglichen es, sich tagesaktuell über die Qualität der Badegewässer zu informieren, damit einem sicheren und hygienischen Badespaß nichts mehr im Wege steht.",
-    "url": "https://www.badestellen.berlin.de/",
-    "example_usage": "https://www.badestellen.berlin.de/",
+    "description": "Die einzigartige Fluss- und Seenlandschaft Berlins bietet seinen Einwohner:innen angenehme Abkühlung an heißen Sommertagen. Offene Daten zu Berliner Badestellen ermöglichen sich tagesaktuell über die Qualität der Badegewässer zu informieren, damit einem sicheren und hygienischen Badespaß nichts mehr im Wege steht.",
+    "url": "https://daten.berlin.de/datensaetze/liste-der-badestellen",
+    "example_usage": "/projekte/berliner-badestellen",
     "icon": "bathing"
   },
   {
     "id": "traffic",
     "title": "Mobilität",
-    "description": "Ob mit der S-Bahn, dem Auto, Fahrrad oder zu Fuß; Daten darüber, wie Berliner:innen von A nach B kommen, können Verhaltensmuster entschlüsseln und so bei der Stadtplanung hilfreich sein.",
+    "description": "Ob mit der S-Bahn, Auto, Fahrrad oder zu Fuß – Offene Daten darüber, wie Berliner:innen von A nach B kommen, können Verhaltensmuster entschlüsseln und so bei der Stadtplanung hilfreich sein. Mobilitätsdaten fließen beispielsweise in die Planung neuer Stadtteile und Verkehrsinfrastruktur ein und geben Aufschluss darüber, welche Bedarfe bestehen.",
     "icon": "traffic"
   },
   {
@@ -58,12 +58,12 @@
     "title": "Grundsicherung",
     "description": "Über 89.000 Menschen in Berlin beziehen Grundsicherung zur Sicherung ihres Lebensunterhalts. Die Empfänger:innen sind dabei nicht gleichmäßig über die Stadt verteilt – einige Stadtgebiete in Berlin haben einen höheren Anteil als andere. Verwaltung und Sozialhilfeinitiativen können Offene Daten und Kartenanwendungen dazu nutzen,  Unterstützungsangebote an Orten mit erhöhtem Bedarf zu positionieren und somit soziale Infrastrukturen besser zu planen.",
     "url": "https://www.sozial-informations-system.de/datasets/ts1700199029202112-xlsx/?lang=de",
-    "example_usage": "https://odis-berlin.de/projekte/grundsicherung/"
+    "example_usage": "/projekte/grundsicherung/"
   },
   {
     "id": "solar",
     "icon": "solar",
     "title": "Solarenergie",
-    "description": "Necessitatibus voluptas praesentium id enim. Quam eligendi asperiores nihil non. Cumque rerum veniam labore. Occaecati et voluptas ad ut."
+    "description": "Vor dem Hintergrund des rasant voranschreitenden Klimawandels hilft jedes kWh Energie, das aus erneuerbaren Energien stammt Mensch, Tier und Umwelt. Offene Daten zu beispielsweise Berlins Solardachpotentialen können engagierten Bürger:innen und Politiker:innen helfen, aktiv im Ausbau von Solarenergie zu werden."
   }
 ]
