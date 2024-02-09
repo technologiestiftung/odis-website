@@ -30,12 +30,12 @@ const finalTailwindClasses = cn(
       .filter(Boolean)
       .join(" "),
   `cursor-pointer`,
-  `decoration-clone underline underline-offset-8 decoration-8`,
-  `inline-block leading-7 focus-visible:ring-offset-8`,
+  `decoration-clone underline underline-offset-8 decoration-4`,
+  `inline-block leading-8 focus-visible:ring-offset-4`,
   `focusable`,
   `transition motion-reduce:transition-none`,
   className,
-)
+);
 ---
 
 <Tag {...props} class={finalTailwindClasses}>
