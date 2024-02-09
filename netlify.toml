@@ -2,11 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [[headers]]
   for = "/manifest.webmanifest"
   [headers.values]
@@ -24,10 +19,13 @@
   package = "@netlify/plugin-lighthouse"
 
   [[plugins.inputs.audits]]
+    path = ""
+
+  [[plugins.inputs.audits]]
     path = "contact"
 
   [[plugins.inputs.audits]]
-    path = "ueber-uns"
+    path = "ueber-odis"
 
   [[plugins.inputs.audits]]
     path = "module"
