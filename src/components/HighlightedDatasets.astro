@@ -196,8 +196,9 @@ const focusStyles =
   const wimmelbildSvg = document.getElementById("wimmelbild");
   wimmelbildSvg?.setAttribute("role", "list");
 
-  const wimmelbildGroups = (document.querySelectorAll("#wimmelbild > g") ||
-    []) as NodeListOf<HTMLElement>;
+  const wimmelbildGroups = (document.querySelectorAll(
+    "#wimmelbild .wimmelbild_puzzle-piece",
+  ) || []) as NodeListOf<HTMLElement>;
 
   wimmelbildGroups.forEach((group) => {
     group.setAttribute("tabindex", "0");
