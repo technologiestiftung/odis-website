@@ -6,7 +6,10 @@ import { components } from "@/components/macros/index.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("resources");
+  const posts = await getCollection(
+    "resources",
+    (entry) => !entry.data.link?.startsWith("http"),
+  );
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,

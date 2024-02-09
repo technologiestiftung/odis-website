@@ -8,7 +8,7 @@ import { Icon } from "astro-icon/components";
 export type Props = {};
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const urlPath = canonicalURL.pathname;
+const urlPath = canonicalURL.pathname.replaceAll("/", "");
 ---
 
 <nav class="container mx-auto flex flex-wrap justify-between max-w-7xl py-4">
@@ -54,14 +54,14 @@ const urlPath = canonicalURL.pathname;
     >
       {
         navItems.map((navItem) => {
-          const navItemPath = `/${navItem.slug}`;
+          const navItemPath = navItem.slug.replaceAll("/", "");
           let isActivePath = navItemPath === urlPath;
           const isCollectionPage =
-            urlPath.startsWith("/projekte/") ||
-            urlPath.startsWith("/aktuelles/") ||
-            urlPath.startsWith("/ressourcen/") ||
-            urlPath.startsWith("/module/") ||
-            urlPath.startsWith("/veranstaltungen/");
+            urlPath.startsWith("projekte") ||
+            urlPath.startsWith("aktuelles") ||
+            urlPath.startsWith("ressourcen") ||
+            urlPath.startsWith("module") ||
+            urlPath.startsWith("veranstaltungen");
           isActivePath = isCollectionPage
             ? urlPath.startsWith(navItemPath)
             : isActivePath;

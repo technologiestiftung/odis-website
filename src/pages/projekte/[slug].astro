@@ -92,14 +92,15 @@ const { Content } = await post.render();
                   <ul class="flex flex-col gap-4">
                     {datasets.map((dataset) => (
                       <li>
-                        <a
+                        <TextLink
+                          tag="a"
                           href={dataset.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           title={dataset.linkText}
                         >
                           {dataset.linkText}
-                        </a>
+                        </TextLink>
                       </li>
                     ))}
                   </ul>

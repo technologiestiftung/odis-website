@@ -132,7 +132,9 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
       }
     </section>
     <a
-      href={`/ressourcen/${slug}`}
+      href={resourceLink}
+      target={linkIsExternal ? "_blank" : "_self"}
+      rel={linkIsExternal ? "noopener noreferrer" : undefined}
       class={cn(
         "relative h-full pt-12 group",
         isVideoAspectRatio && "@sm:col-span-3",
