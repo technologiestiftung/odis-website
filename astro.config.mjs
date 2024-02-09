@@ -8,7 +8,6 @@ import sitemap from "@astrojs/sitemap";
 
 // Comunity plugins
 import icon from "astro-icon";
-import purgecss from "astro-purgecss";
 import AstroPWA from "@vite-pwa/astro";
 
 const hasMatomo = process.env.MATOMO_URL && process.env.MATOMO_SITE_ID;
@@ -28,24 +27,10 @@ export default defineConfig({
     icon({
       iconDir: "src/assets/images/icons",
     }),
-    tailwind(),
     mdx(),
     prefetch(),
     sitemap(),
-    purgecss({
-      extractors: [
-        {
-          extractor: (content) =>
-            content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
-          extensions: ["astro", "html", "mdx", "md", "ts"],
-        },
-      ],
-      safelist: {
-        standard: ["dark", /^dark/],
-        deep: ["dark", /^dark/],
-        eager: ["dark", /^dark/],
-      },
-    }),
+    tailwind(),
     AstroPWA({
       workbox: { navigateFallback: "/404" },
       experimental: {
