@@ -76,5 +76,6 @@ export default defineConfig({
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
     "/projekte/xml-validator/tool": "/xml-validator-tool",
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
+    "/ressourcen/einstiegopendata": "/ressourcen/open_data_in_verwaltung"
   },
 });
