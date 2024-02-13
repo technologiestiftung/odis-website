@@ -12,6 +12,11 @@ export type Props = {
 
 const { slug, titleTag = "p" } = Astro.props;
 const resource = await getEntry("resources", slug);
+if (!resource) {
+  throw new Error(
+    `In ResourceReference.astro: Could not find resource with slug: ${slug}`,
+  );
+}
 ---
 
 <div class="not-prose pb-12 pt-2">
