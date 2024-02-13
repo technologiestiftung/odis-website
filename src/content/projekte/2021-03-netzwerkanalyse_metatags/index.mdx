@@ -3,9 +3,9 @@ tags:
   - "home"
   - "project"
   - "post"
-title: Netzwerkanalyse von Metadaten-Tags
-description: Analyse der meist genutzten Tags im Berliner Open Data Portal
-date: 2021-03-16
+title: "Netzwerkanalyse von Metadaten-Tags"
+description: "Analyse der meist genutzten Tags im Berliner Open Data Portal"
+date: 2021-03-10
 period: März 2021
 status: abgeschlossenes Projekt
 visible: true
@@ -26,14 +26,16 @@ Was sagen uns die Tags im [Berliner Datenportal](https://daten.berlin.de) über 
 
 In unserer interaktiven Visualisierung ist zu sehen, wie oft bestimmte Tags im Zusammenhang stehen (also wie oft jeweils zwei Tags in den Metadaten des gleichen Datensatzes auftauchen). Nur Tags, die mindestens 20 Mal mit einem anderen Tag in Verbindung gebracht wurden, werden in der Visualisierung angezeigt. Diese Visualisierung zeigt demzufolge nicht alle Tags, die im Datenportal benutzt werden. Die Größe einer Node, also eines Knotenpunktes, entspricht der Häufigkeit der Verwendung dieses Tags. Die Stärke der Linie zwischen zwei Nodes entspricht der Anzahl mit der diese zwei Tags zusammen benutzt werden. Die Farben der Nodes werden durch die zugehörige Kategorie zu einem Cluster bestimmt. Diese Cluster wurden automatisiert durch eine Netzwerkanalyse identifiziert.
 
-<ContentSection fullWidth={true}>
+<ContentSection 
+fullWidth={true}>
   <iframe
     src={`${import.meta.env.SITE}/extra-pages/tag-analyse/`}
     width="100%"
     height="880px"
     title="My file"
     loading="lazy"
-  ></iframe>
+  >
+  </iframe>
 </ContentSection>
 
 ## Auswertung 
@@ -52,9 +54,20 @@ Es gibt in unserer Berechnung einige entstandene Kategorien, die nur sehr wenige
 
 Zusammenfassend lässt sich sagen, dass unsere Taganalyse einen interessanten Einblick in die Vielfalt, Häufigkeit und Zusammenhänge der durch die Datensätze abgedeckten Themen gibt. Tags sind und bleiben ein wichtiges Tool, um Daten zu beschreiben und besser auffindbar zu machen. Natürlich kann der Graph aber nicht alle Zusammenhänge darstellen, da nur die häufigsten Tags bzw. Verbindungen mit eingeflossen sind. Falls Sie mehr zum Thema Tags wissen wollen (z.B. warum Tags wichtig sind und wie man effektive Tags erfasst), schau gerne [unseren Leitfaden](https://odis-berlin.de/ressourcen/06_metadaten_tags/) zu Tags an.
 
+import logo from "./images/logo_kompetenzzentrum_opendata.png";
+
+<Quote
+  authorName="Kompetenzzentrum Open Data"
+  authorLogo={logo}
+>
+  Die Kolleg*innen von #ODISBerlin geben in diesem Artikel einige wertvolle Tipps, insbesondere für den Umgang mit Schlagwörtern (Tags) bei Metadaten. 
+</Quote>
+
 ## Datenquelle und technische Umsetzung
 
 Mehr darüber, wie die Daten verarbeitet und analysiert wurden erfährst du in einem [Blogpost](https://lab.technologiestiftung-berlin.de/projects/tag-analysis/de/) des Ideation & Prototyping Lab der Technologiestiftung. Dort findest du auch den Link zum offenem Quellcode der Netzwerkanalyse.
 
 ## Zur Ressource
-<ResourceReference slug="06_metadaten_tags" />
+<ResourceReference 
+slug="metadaten_tags" 
+/>
