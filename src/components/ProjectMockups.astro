@@ -61,12 +61,12 @@ const {
           src={heroImage}
           alt={`Screenshot für das Projekt: '${title}'`}
           loading={imageLoading}
-          widths={[360, 720, 960, 1440]}
+          widths={[600, 1080, 1536, Math.min(2160, heroImage.width)]}
           sizes={`
-            (max-width: 400px) 360px,
-            (max-width: 640px) 720px,
-            (max-width: 1024px) 960px,
-            1440px
+            (max-width: 400px) 600px,
+            (max-width: 720px) 1080px,
+            (max-width: 1024px) 1536px,
+            ${Math.min(2160, heroImage.width)}px
           `}
         />
       )
