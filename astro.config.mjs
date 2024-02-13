@@ -76,6 +76,18 @@ export default defineConfig({
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
     "/projekte/xml-validator/tool": "/xml-validator-tool",
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
-    "/ressourcen/einstiegopendata": "/ressourcen/open_data_in_verwaltung"
+    "/ressourcen/einstiegopendata": "/ressourcen/open_data_in_verwaltung",
+    "/ressourcen/dateninventurprozess": "/ressourcen/dateninventur_prozess",
+    "/ressourcen/dateninformationsblatt": "/ressourcen/daten_informationsblatt",
+    "/ressourcen/metadaten": "/ressourcen/metadaten_leitfaden",
+    "/ressourcen/metadaten": "/ressourcen/metadaten_leitfaden",
+    "/ressourcen/tag_analyse": "/ressourcen/metadaten_tags",
+    "/ressourcen/checkliste": "/ressourcen/veroeffentlichung-check",
+    "/ressourcen/datenschutz": "/ressourcen/datenschutz_check",
+    "/ressourcen/datenqualitaet": "/ressourcen/datenqualitaet_video_handout",
+    "/ressourcen/geocodierung": "/ressourcen/geocodierung_video",
+    "/ressourcen/datenregister": "/ressourcen/veroeffentlichung_daten_portal",
+    "/ressourcen/lizenzen": "/ressourcen/lizenzwahl",
+    "/ressourcen/datenvisualisierung": "/ressourcen/datenvisualisierung_videos"
   },
 });
