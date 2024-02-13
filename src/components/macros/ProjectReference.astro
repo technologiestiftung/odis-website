@@ -12,6 +12,11 @@ export type Props = {
 
 const { slug, titleTag = "p" } = Astro.props;
 const project = await getEntry("projekte", slug);
+if (!project) {
+  throw new Error(
+    `In ProjectReference.astro: Could not find project with slug: ${slug}`,
+  );
+}
 ---
 
 <div class="not-prose pb-12 pt-2">

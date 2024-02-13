@@ -47,15 +47,15 @@ const Tag = buttonTag;
             `module-stepper-button`,
             `w-10 h-10 flex place-content-center place-items-center`,
             `relative z-20 focusable rounded-full group`,
-            `no-underline cursor-pointer`,
+            `no-underline cursor-pointer aspect-square`,
           )}
           {...buttonProps}
         >
           <span
             class={cn(
-              `flex place-content-center place-items-center`,
+              `flex place-content-center place-items-center text-center`,
               `aspect-square rounded-full border-2 border-line`,
-              showLarge ? `w-10` : `w-5`,
+              showLarge ? `w-10 h-10` : `w-5 h-5`,
               active &&
                 `bg-links-active text-bg dark:text-text border-links-active`,
               !active && `bg-bg text-links-active font-bold`,
@@ -66,6 +66,7 @@ const Tag = buttonTag;
           >
             {activeAndNext ? module.data.number : null}
             {isNextAndHighlighted ? nextNumber : null}
+            {!activeAndNext && !isNextAndHighlighted && <>&nbsp;</>}
           </span>
         </Tag>
       );
