@@ -245,8 +245,10 @@ const { title, description, image = "/images/social-media.jpg" } = Astro.props;
   crossorigin
 />
 
-<script src="/src/pwa.ts"></script>
-{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
+<!-- CONTAINER QUERY POLYFILL (TODO: Remove when all browsers from 3 versions ago support it natively) -->
+<script
+  src="https://cdn.jsdelivr.net/npm/container-query-polyfill@1/dist/container-query-polyfill.modern.js"
+></script>
 
 <script is:inline>
   function loadUserPrefTheme() {
@@ -261,3 +263,6 @@ const { title, description, image = "/images/social-media.jpg" } = Astro.props;
   }
   loadUserPrefTheme();
 </script>
+
+<script src="/src/pwa.ts"></script>
+{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
