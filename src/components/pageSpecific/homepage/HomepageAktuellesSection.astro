@@ -3,6 +3,7 @@ import Button from "@/components/Button.astro";
 import Heading from "@/components/Heading.astro";
 import NewsCard from "@/components/NewsCard.astro";
 import Paragraph from "@/components/Paragraph.astro";
+import ItemsSlider from "@/components/ItemsSlider.astro";
 import { boldify } from "@/utils/boldify";
 import { getCollection, type CollectionEntry } from "astro:content";
 
@@ -46,60 +47,6 @@ const news = (
     </div>
   </div>
 </div>
-<div class="">
-  <div class="grid-container">
-    <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
-      <div
-        class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-12 lg:col-start-1 news-swiper"
-      >
-        <div class="swiper-wrapper">
-          {
-            news.map((newsEntry) => (
-              <NewsCard {...newsEntry} class="swiper-slide" />
-            ))
-          }
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  import Swiper from "swiper";
-  import "swiper/swiper-bundle.css";
-
-  const swiper = new Swiper(".news-swiper", {
-    slidesPerView: 1,
-    spaceBetween: 32,
-    breakpoints: {
-      960: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-</script>
-
-<style is:global>
-  .news-swiper .swiper-slide:not(.swiper-slide-active) {
-    transition:
-      filter 0.3s ease-in-out,
-      opacity 0.3s ease-in-out;
-    filter: brightness(1.8) saturate(0.4) blur(1px);
-    opacity: 0.2;
-  }
-  .news-swiper .swiper-slide.swiper-slide-active,
-  .news-swiper .swiper-slide.swiper-slide-next {
-    filter: brightness(1) saturate(1) blur(0px);
-    opacity: 1;
-  }
-
-  @media (min-width: 1024px) {
-    .news-swiper .swiper-slide.swiper-slide-next + .swiper-slide {
-      filter: brightness(1) saturate(1) blur(0px);
-      opacity: 1;
-    }
-  }
-</style>
+<ItemsSlider>
+  {news.map((newsEntry) => <NewsCard {...newsEntry} class="swiper-slide" />)}
+</ItemsSlider>
