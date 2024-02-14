@@ -59,7 +59,15 @@ Solche Verknüpfung von Daten sind möglich, wenn diese in einem speziellen Form
 
 Das Prinzip: Datensätze und ihre Inhalte sind durch eindeutige Identifikatoren gekennzeichnet, die es erlauben, unmissverständlich und automatisiert Verbindungen herzustellen. So kann sich ein Netz an Informationen bilden, auch bezeichnet als „Knowledge Graph“. Dieses Wissensgebilde kann über unser Beispiel hinaus weitere Informationen über Berlin etwa zu Mobilität, Klimaschutz, Stadtplanung, Bevölkerung, Infrastruktur usw. enthalten. 
 
---> Skizze kleiner Knowledge Graph, von zusammenhängenden Infos über Franziska Giffey und Kai Wegner --
+import image2 from "./images/knowledge_graph_beispiel.png"
+
+<ContentSection class="sm:px-6">
+
+  <ImageSection class="sm:container sm:mx-auto"
+    src={image2}
+    caption="Möglicher Knowledge Graph mit zusammenhängenden Informationen zu Kai Wegner und Franziska Giffey."
+  />
+</ContentSection>
 
 An diesem Punkt mag man sich fragen, weshalb all diese Anstrengungen unternommen werden, wenn fortschrittliche Sprachmodelle wie ChatGPT bereits über umfangreiches Wissen verfügen. Aber auch ChatGPT wurde mit Informationen trainiert, die heute schon wieder veraltet sind. Wie ein Projekt aus Zürich zeigt, ist es aber durchaus in der Lage, aktuelle Information aus einem Linked Open Data auszulesen und in Kontext zu setzen. Darüber hinaus eröffnet ein gut strukturierter Wissensgraph eine Fülle neuer Fragestellungen und Erkenntnisse. Diese sind nicht nur für spezialisierte digitale Chat-Assistenten wie Bobbi relevant, um stets aktuell zu bleiben, sondern bilden auch eine wichtige Grundlage für andere digitale Anwendungen und Prozesse. Sie sind essentiell für die Digitalisierung der Verwaltung, die Beantwortung wissenschaftlicher Fragen oder das Training von Machine-Learning-Modellen. 
 
@@ -187,7 +195,15 @@ Um die beschriebenen Triples im RDF-Format zu speichern, ist eine besondere Art 
 
 Eine SPARQL-Abfrage zur Abfrage von Informationen über eine Person, z.B. den Bürgermeister Kai Wegener könnte wie folgt aussehen: 
 
---> code snippet --
+```sparql
+  PREFIX foaf:<http://xmlns.com/foaf/0.1/> 
+  SELECT ?person ?name ?birthdate ?email 
+  WHERE { 
+    ?person foaf:name "Kai Wegener" . 
+    ?person foaf:birthdate ?birthdate . 
+    OPTIONAL { ?person foaf:email ?email }
+  } 
+```
 
 In diesem Beispiel wird die FOAF-Ontologie (Friend of a Friend) verwendet. Die Abfrage sucht nach einer Ressource (?person), die den Namen "Kai Wegener" hat, und ruft dann Informationen wie Geburtsdatum und optional die E-Mail-Adresse ab. 
 
