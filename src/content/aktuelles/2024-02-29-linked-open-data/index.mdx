@@ -8,10 +8,10 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 headerImage:
-  src: ./images/unsplash_bkzjNDPQ3Hg.png
-  alt: Blauer Himmel am Berliner Alexanderplatz
-readingTime: 25-35
-date: 2024-02-29
+  src: ./images/linked_open_data_visual.png
+  alt: Skizze eines Knowledge Graphs
+readingTime: 30-35
+date: 2024-02-28
 ---
 
 ## Einleitung
@@ -28,7 +28,12 @@ Ein Aspekt der künftig für Digitalprojekte sowie die Weiterentwicklung und Inn
 
 Vor diesem Hintergrund gewinnt das Konzept der Linked Open Data an Aufmerksamkeit, da es das Potenzial birgt, eine vernetzte und zugängliche Datenbasis zu schaffen, die eine Grundlage für präzisere und relevantere Digitalprojekte bilden kann. Im Folgenden erklären wir, welche Potentiale in Linked Open Data stecken und wie wir als ODIS unser selbstentwickeltes Organigramm-Tool als praxisnahe Fallstudie nutzen. Dieses Beispiel soll nicht nur Bewegung in die Diskussion bringen, sondern auch als Ausgangspunkt für die Schaffung einer vernetzten Datenbasis für Berlin dienen. Und davon könnten nicht nur digitale Assistenten wie Bobbi profitieren. 
 
---> bild bobby --
+import image from "./images/bobby_visual.png"
+
+<ImageSection
+  src={image} 
+  caption="Information-Flow des Bobby-Chatbots."
+/>
 
 ## Hintergrund 
 
@@ -86,9 +91,16 @@ Im nächsten Abschnitt erklären wir am Beispiel der Organigramme, wie Linked Op
 
 ### Prinzipien von Linked Data am Beispiel der Organigramme 
 
---> skizze 4 prinzipien --
+Das [Datenqualitätsmodell](https://5stardata.info/de/) von Tim Berners-Lee, das von der einfachen Online-Verfügbarkeit (ein Stern) bis hin zur Einbindung in das Web der Daten (fünf Sterne) reicht, bietet eine klare Richtschnur für die Bewertung und Verbesserung der Zugänglichkeit sowie der technischen Nutzbarkeit von Datensätzen.
 
-Das [Datenqualitätsmodell](https://5stardata.info/de/) von Tim Berners-Lee, das von der einfachen Online-Verfügbarkeit (1 Stern) bis hin zur Einbindung in das Web der Daten (Fünf Sterne) reicht, bietet eine klare Richtschnur für die Bewertung und Verbesserung der Zugänglichkeit sowie der technischen Nutzbarkeit von Datensätzen. Um die höchste Bewertung von 5 Sternen zu erreichen, müssen die Daten nicht nur maschinenlesbar sein, sondern auch den grundlegenden Prinzipien von Linked Open Data (LOD) entsprechen: 
+import image1 from "./images/fuenf_sterne_visual.png"
+
+<ImageSection
+  src={image1} 
+  caption="Datenqualitätsmodell nach Tim Berners-Lee."
+/>
+
+Um die höchste Bewertung von fünf Sternen zu erreichen, müssen die Daten nicht nur maschinenlesbar sein, sondern auch den grundlegenden Prinzipien von Linked Open Data (LOD) entsprechen: 
  
 1. Sie verwenden URIs zum Beschreiben von Gegenständen oder Personen und ihren Eigenschaften sowie Beziehungen zueinander 
 
@@ -97,6 +109,9 @@ Das [Datenqualitätsmodell](https://5stardata.info/de/) von Tim Berners-Lee, das
 3. Eine Ontologie, auch Vokabular genannt, definiert mithilfe von Klassen und Eigenschaften, welche Beziehungen zwischen verschiedenen Gegenständen, oder Personen, z.B. Abteilungen und Mitarbeitenden, möglich sind 
 
 4. Durch eine einheitliche Verwendung der obigen Merkmale lassen sich neue Verbindungen mit weiteren Datensätzen herstellen 
+
+--> skizze 4 prinzipien --
+
 
 Wir stellen im Folgenden konkret vor, wie wir die Prinzipien von Linked Open Data am Beispiel des Organigramm-Tools umgesetzt haben: 
 
@@ -199,16 +214,3 @@ Wir sind mindestens so gespannt wie Chatbot Bobby auf die weiteren Entwicklungen
 - ["What is Linked Data" YouTube-Video von Manu Sporny](https://www.youtube.com/watch?v=4x_xzT5eF5Q)
 - ["Linking Data. What does it mean?" Beitrag auf data.europa.eu](https://data.europa.eu/en/publications/datastories/linking-data-what-does-it-mean)
 - [ZüriLinkedGPT](https://ld.gpt.liip.ch/)
-
-
-
-import image from "./images/luftgüte_request_url.png"
-
-<ContentSection style="padding: 40px; background-color: coral;" fullWidth={false}>
-  <ImageSection
-    src={image}   
-    style="padding: 40px; background-color: coral;" 
-    caption="Die Parameter listen verschiedene Elemente auf, die zusammen die Request-URL ergeben."
-  />
-</ContentSection>
-
