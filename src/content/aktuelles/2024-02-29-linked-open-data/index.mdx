@@ -45,7 +45,12 @@ In anderen Bereichen dagegen gibt es weniger Vorgaben und abgestimmte Prozesse. 
 
 Öffnet man beispielsweise das Organigramm der Senatskanzlei, kann man auf einen Blick recht schnell erfassen, wer den Posten „Regierender Bürgermeister von Berlin“ innehat: Kai Wegner. Auch Franziska Giffey findet man in diesem Organigramm, als „Bürgermeisterin von Berlin“ (also als seine Stellvertreterin). Durch einen Computer bzw. Programmcode ist dieses PDF nur schwer automatisiert auslesbar. Würden die Informationen der Organigramme dagegen in einer strukturierten Tabelle, ähnlich wie die oben erwähnten Haushaltsdaten, vorliegen, hätte der Computer es deutlich einfacher.  
 
---> Skizze: Tabelle vs. Organigramm-PDF, vlt guckt Bobbi das PDF verwirrt an, oder so? --
+import image3 from "./images/bobby_visual_2.png"
+
+<ImageSection
+  src={image3} 
+  caption="Informationen aus einer PDF kann der Bobby-Chatbot nicht gut verarbeiten."
+/>
 
 Allerdings haben auch Tabellen ihre Grenzen. Im Fall der Organigramme ist einer der Gründe dafür recht offensichtlich. Die Verwaltungsstrukturen sind sehr komplex und geprägt von Hierarchien und Abhängigkeiten, die sich in einer tabellarischen Übersicht nur schwer abbilden lassen. Ein weiteres Problem ist die Existenz vieler isolierter Datensätze in der Verwaltung. Ein Beispiel verdeutlicht dies: Angenommen, die Senatskanzlei veröffentlicht neben ihrem PDF-Organigramm eine maschinenlesbare Tabelle mit Zuständigkeiten. Ein darauf basierender Chatbot könnte auf die Frage nach Franziska Giffeys Position als „Stellvertretende Bürgermeisterin von Berlin“ antworten. Was der Bot jedoch nicht weiß: Sie hat auch den Posten als Senatorin für Wirtschaft inne. Denn nur Informationen, die explizit im Text auftauchen, stehen dem Bot zur Verfügung. Informationen ableiten und eigene Schlüsse ziehen, wie zum Beispiel auf die Rolle von Franziska Giffey von ihrer bloßen Positionierung an der Spitze des Organigramms zu schließen, ist nicht möglich.  Diese Information ist nicht explizit Teil des Organigramms und somit dem Bot unbekannt. Um umfassend Auskunft geben zu können, müsste der Bot Zugang zu vielen weiteren Datensätzen haben und diese stets aktuell halten. Bei einem Chatbot, der auf eine Vielzahl unterschiedlicher, schwer vorauszusehender Anfragen reagieren soll, stößt man hier schnell an Grenzen. 
 
@@ -53,7 +58,12 @@ Allerdings haben auch Tabellen ihre Grenzen. Im Fall der Organigramme ist einer 
 
 Doch was wäre, wenn alle Informationen, die wir über bestimmte Dinge, Objekte und Prozesse vorliegen haben, automatisch miteinander verknüpft werden könnten? Wenn ich nach dem Regierenden Bürgermeister frage und der Bot mir nicht nur sagen kann, dass es sich dabei derzeit um Kai Wegner handelt, sondern dass er seit dem 26.04.23 im Amt ist, dass sein Arbeitsort das Rote Rathaus ist, sein Geburtsort allerdings im Bezirk Spandau liegt, der Bezirk Spandau im Jahr 2023 151.046 EUR für Kindertagesbetreuung ausgegeben hat und gleichzeitig noch die Adressen aller Kindertagesstätten, sowie deren Öffnungszeiten und Belegungen angibt. 
 
---> Skizze: Verschiedene Informationen die eigtl verknüpft sidn liegen in verschiedenen Tabellen vor --
+import image4 from "./images/verlinkte_tabellen.png"
+
+<ImageSection
+  src={image4} 
+  caption="Informationen, die eigentlich miteinander verlinkt sind, liegen in unterschiedlichen Tabellen."
+/>
 
 Solche Verknüpfung von Daten sind möglich, wenn diese in einem speziellen Format, das Tim Berners-Lee bereits 2009 als Endstufe eines Datenqualitätspfads beschrieben hat, bereitgestellt werden: Linked Open Data!  
 
