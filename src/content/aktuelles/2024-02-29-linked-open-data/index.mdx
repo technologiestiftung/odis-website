@@ -10,7 +10,7 @@ urlText: Zum Blogbeitrag
 headerImage:
   src: ./images/unsplash_bkzjNDPQ3Hg.png
   alt: Blauer Himmel am Berliner Alexanderplatz
-readingTime: 15-20
+readingTime: 25-35
 date: 2024-02-29
 ---
 
@@ -34,7 +34,7 @@ Vor diesem Hintergrund gewinnt das Konzept der Linked Open Data an Aufmerksamkei
 
 ### Die Ausgangslage: Datensilos und Mangel an Standards 
 
-Die Themenbereiche und Aufgaben der Berliner Verwaltung sind zahlreich. Ebenso vielfältig ist die Art und Weise wie Informationen in der Verwaltung erhoben, gesammelt, verarbeitet und geteilt werden. Da gibt es Bereiche, in denen mit standardisierten und maschinenlesbaren Daten gearbeitet wird – im Finanzsektor z.B., wo Daten behördenübergreifend für Berechnungen und Planungen essenziell sind und in speziellen Fachverfahren verarbeitet werden. Viele dieser Daten werden auch veröffentlicht. Die Daten zum Berliner Haushalt z.B. stehen als strukturierter, tabellarischer Datensatz im Berliner Open Data Portal der Allgemeinheit zur Verfügung. 
+Die Themenbereiche und Aufgaben der Berliner Verwaltung sind zahlreich. Ebenso vielfältig ist die Art und Weise wie Informationen in der Verwaltung erhoben, gesammelt, verarbeitet und geteilt werden. Da gibt es Bereiche, in denen mit standardisierten und maschinenlesbaren Daten gearbeitet wird – im Finanzsektor z.B., wo Daten behördenübergreifend für Berechnungen und Planungen essenziell sind und in speziellen Fachverfahren verarbeitet werden. Viele dieser Daten werden auch veröffentlicht. Die Daten zum Berliner Haushalt z.B. stehen als strukturierter, tabellarischer Datensatz im Berliner Open Data Portal der Allgemeinheit zur Verfügung. 
 
 In anderen Bereichen dagegen gibt es weniger Vorgaben und abgestimmte Prozesse. Ein Beispiel hierfür sind die Zuständigkeiten und Strukturen in der Verwaltung. Die wichtigsten Personalien werden über die Organigramme der Senats- und Bezirksverwaltungen dargestellt und veröffentlicht. Diese wichtigen Informationen liegen in hoher Aktualität vor und können im Internet gefunden und eingesehen werden. Sie liegen für gewöhnlich im PDF-Format vor, folgen keinen einheitlichen Standards und sind mit einem Fokus auf die Lesbarkeit für Menschen erstellt.  
 
@@ -100,34 +100,105 @@ Das [Datenqualitätsmodell](https://5stardata.info/de/) von Tim Berners-Lee, das
 
 Wir stellen im Folgenden konkret vor, wie wir die Prinzipien von Linked Open Data am Beispiel des Organigramm-Tools umgesetzt haben: 
 
-**Das Konzept der URIs**
+#### Das Konzept der URIs
 
 Eine grundlegende Voraussetzung für Linked Open Data: Die eindeutige Identifizierung einer Ressource! Anhand von URIs ("Uniform Resource Identifier") lassen sich abstrakte Ressourcen und Daten im World Wide Web eindeutig identifizieren, wiederfinden und somit auch wiederverwenden. Ein einfaches Analogon hierzu aus der Welt der Bücher ist die ISBN: Diese einzigartigen Nummern beschreiben individuelle Buchtitel und deren Ausgaben, sodass man zum Auffinden eines Buches nicht unbedingt Autor, Titel oder Erscheinungsjahr kennen muss – die ISBN repräsentiert all diese Informationen. 
  
 Ebenso funktionieren URIs im Internet: Sie stellen abstrakte oder konkrete Dinge dar und bilden die Basis für Linked Data. Für die Zugänglichkeit dieser Identifikatoren verwendet Linked Data öffentliche, über HTTP abrufbare URIs. Diese gelten allerdings nicht für ganze Webressourcen wie Webseiten, Artikel, oder PDF-Dateien, sondern beschreiben individuelle Objekte innerhalb von Datensätzen. Im Falle eines Organigramms reicht es zum Bespiel nicht aus, einem gesamten Organigramm einen Link zuzuweisen, wie die fiktive URL: www.organigramm-senatskanzlei-berlin.de. Vielmehr werden den verschiedenen Einzelelementen des Organigrammes beim Erstellen bereits eine URI zugewiesen. So erhält jede:r Senator:in, Abteilung, Referatsleiter:in, oder eine Organisation eine einzigartige URI. Durch die Art und Weise, wie diese URIs miteinander verknüpft sind, lassen sich vielfältige Informationen ableiten, wie etwa die Anzahl der Abteilungen, die einem bestimmten Senator oder einer Senatorin unterstellt sind. 
 
-**Das Konzept der RDF**
+#### Das Konzept der RDF
 
 Ein wichtiger Aspekt für Linked Data ist die Organisation von Daten in einem speziellen Format, das aus drei Teilen besteht: dem Subjekt, dem Prädikat und dem Objekt. Diese Dreiteilung, bekannt als Triple, ist entscheidend für die Strukturierung von Daten in Linked Data. Das Subjekt repräsentiert die Ressource oder Entität, auf die sich die Aussage bezieht. Dies kann eine Person, ein geografischer Ort wie eine Stadt oder ein anderes Konzept sein. 
 
-Wir nehmen als Beispiel einmal die Senatskanzlei und geben ihr eine einzigartige Art von Identifikation, also eine URI, z.B.  https://berlin.github.io/lod-organigram/organigram-20c5cdb22c. Das Objekt repräsentiert einen Wert oder eine weitere Ressource, die mit dem Subjekt in Beziehung steht. Für die Senatskanzlei könnte ein Objekt zum Beispiel ein absoluter Wert, wie die Höhe des jährlichen Etats sein, aber auch eine weitere Ressource, wie zum Beispiel eine Person sein. Das Objekt wird hier ebenfalls durch eine URI identifiziert. Als Verbindung von Subjekt und Objekt gibt das Prädikat gibt an, welche Art von Beziehung zwischen Subjekt und dem Objekt besteht und welche Informationen sich aus der Verbindung ergeben. Beispiele für Prädikate für das oben genannte Subjekt (Senatskanzlei) könnten sein: “hat Senator:in“, oder “hat folgende Ausgabetitel im Haushalt”. Das Prädikat ist ebenfalls durch eine URI dargestellt; diese werden in einer sogenannten Ontologie, bzw. einem Vokabular festgehalten.   
+Wir nehmen als Beispiel einmal die Senatskanzlei und geben ihr eine einzigartige Art von Identifikation, also eine URI, z.B. https://berlin.github.io/lod-organigram/organigram-20c5cdb22c. Das Objekt repräsentiert einen Wert oder eine weitere Ressource, die mit dem Subjekt in Beziehung steht. Für die Senatskanzlei könnte ein Objekt zum Beispiel ein absoluter Wert, wie die Höhe des jährlichen Etats sein, aber auch eine weitere Ressource, wie zum Beispiel eine Person sein. Das Objekt wird hier ebenfalls durch eine URI identifiziert. Als Verbindung von Subjekt und Objekt gibt das Prädikat gibt an, welche Art von Beziehung zwischen Subjekt und dem Objekt besteht und welche Informationen sich aus der Verbindung ergeben. Beispiele für Prädikate für das oben genannte Subjekt (Senatskanzlei) könnten sein: “hat Senator:in“, oder “hat folgende Ausgabetitel im Haushalt”. Das Prädikat ist ebenfalls durch eine URI dargestellt; diese werden in einer sogenannten Ontologie, bzw. einem Vokabular festgehalten.   
 
 Um Aussagen zu tätigen, werden Informationen, beispielsweise über die Senatskanzlei, in Triple-Form abgebildet:  
 
-1. Aussage 
+1. AUSSAGE
 
-**“Kai Wegener ist Regierender Bürgermeister von Berlin.”**
+**"Kai Wegener ist Regierender Bürgermeister von Berlin."**
 
 Als ein Datensatz im Triple-Format würden diese Informationen wie folgt beschrieben: 
 
-https://berlin.github.io/lod-organigram/organigram-20c5cdb22c (Senatskanzlei)
+https://berlin.github.io/lod-organigram/organigram-20c5cdb22c <br></br>
+(**Senatskanzlei**)
 
-https://berlin.github.io/lod-vocabulary/berorgs#SenatorIn (hat Senator:in)
+https://berlin.github.io/lod-vocabulary/berorgs#SenatorIn <br></br>
+(**hat Senator:in**)
 
-https://berlin.github.io/lod-organigram/person-f60db6579c (Kai Wegener)
+https://berlin.github.io/lod-organigram/person-f60db6579c <br></br>
+(**Kai Wegener**)
 
+2. AUSSAGE  
 
+**"Die Senatskanzlei gibt im Jahr 2023 145.000 EUR für Dienstreisen aus."**
 
+Als ein Datensatz im Triple-Format würden diese Informationen als zwei Triples beschrieben: 
+
+**1. Triple**
+
+https://berlin.github.io/lod-organigram/organigram-20c5cdb22c <br></br>
+(**URI der Senatskanzlei**) 
+
+http://ontologie.berlin/12893 <br></br>
+(**URI für die Eigenschaft "hat Ausgabetitel"**) 
+
+http://finanzen.berlin/2388 <br></br>
+(**URI für den Ausgabetitel "Dienstreisen"**) 
+     
+**2. Triple**
+
+http://finanzen.berlin/2388 <br></br>
+(**"Dienstreisen"**)
+
+http://finanzen.berlin/1285 <br></br>
+(**URI für „in Höhe von 145.000“**)
+
+Da alle in den Datensätzen genannten Gegenstände, wie zum Beispiel Bezirke, eine einzigartige URI erhalten und diese URIs so gut wie möglich in allen Datensätzen wiederverwendet werden, lassen sich nicht nur Verknüpfungen innerhalb des einzelnen Datensatzes, sondern darüber hinaus Verbindungen zu anderen Datensätzen herstellen, in denen die gleiche URI verwendet wird. Mit dem obigen Beispiel ließe sich also die Frage beantworten, wie viele Einwohner die Berliner Bezirksbürgermeisterin für Friedrichshain-Kreuzberg repräsentiert, auch wenn diese Informationen über verschiedene Datenquellen verteilt vorliegen. 
+
+#### Ontologien 
+
+Eine weitere zentrale Voraussetzung für Linked Open Data sind entsprechende Ontologien, also eine Art Vokabular. Sie bieten eine formalisierte Darstellung von Begriffen und deren Beziehungen in einem bestimmten Wissensbereich. Ontologien können als Schemas betrachtet werden, die Struktur und Bedeutung von Daten in einem bestimmten Kontext festlegen. Die Verwendung von möglichst einheitlichen Ontologien in Linked Open Data ermöglicht, dass Maschinen die Bedeutung von Daten verstehen können und die Beziehungen “maschinenlesbar” werden.  
+
+Ein Beispiel für eine existierende Ontologie über Personen, die in Berlin für Politiker:innen verwendet werden kann, heißt “Friend of a Friend”, abgekürzt als “foaf” und wird benutzt, um diverse Informationen über Personen zu sammeln.
+
+Ein [Webeintrag](http://xmlns.com/foaf/spec/) beschreibt, wie die Ontologie benutzt wird und bietet einen Überblick über ihre Begriffe, also Beziehungen und Informationen, die mit ihrem Vokabular abgebildet werden können, so zum Beispiel die Namen, Anschrift, Kontaktmöglichkeiten oder innegehaltenen Positionen einer jeweiligen Person. Die Ontologie stellt vor allem die URIs bereit, die benötigt werden, um Informationen als Triples auszudrücken. 
+
+Einem ähnlichen Prinzip folgend, bedient sich das Organigramm-Tool sowohl bestehender Vokabulare, als auch eines speziell für Berlin verfasstes. Um die Beziehungen verschiedener Abteilungen und Mitarbeitenden akkurat abzubilden, entwickelte die ODIS für die Organigramme auch ein eigenes Vokabular. Ein [GitHub-Repository](https://github.com/berlin/lod-vocabulary) stellt Informationen zusammen und definiert Berlin-spezifische Einrichtungen und Positionen, wie beispielsweise Abteilungen, Stabstellen oder Leiter:innen des Leitungsstabes. 
+
+#### Speichern und abfragen mit SPARQL 
+
+Um die beschriebenen Triples im RDF-Format zu speichern, ist eine besondere Art von Datenbank erforderlich, ein sogenannter Triple Store. Der Triple Store ermöglicht effiziente Verwaltung und Abfrage von Linked Data, indem er die Triples und somit die Beziehungen zwischen verschiedenen Datenpunkten speichert. Dies fördert die Vernetzung von Informationen im Web, erleichtert die semantische Suche und unterstützt die Interoperabilität zwischen verschiedenen Datenquellen. Um die Informationen eines Triple Stores abzufragen, gibt es eine speziell entwickelte Abfragesprache: SPARQL (SPARQL Protocol and RDF Query Language) ermöglicht es, komplexe Abfragen über die gespeicherten Linked Data im Triple Store auszuführen. 
+
+Eine SPARQL-Abfrage zur Abfrage von Informationen über eine Person, z.B. den Bürgermeister Kai Wegener könnte wie folgt aussehen: 
+
+--> code snippet --
+
+In diesem Beispiel wird die FOAF-Ontologie (Friend of a Friend) verwendet. Die Abfrage sucht nach einer Ressource (?person), die den Namen "Kai Wegener" hat, und ruft dann Informationen wie Geburtsdatum und optional die E-Mail-Adresse ab. 
+
+Das Ergebnis dieser Abfrage könnte in Form einer Tabelle ausgegeben werden, die eine Reihe von Triples widerspiegelt, die Informationen zu dieser bestimmten Person abbildet.  
+
+Sprachmodelle wie ChatGPT können hier eine zusätzliche Rolle spielen. Sie sind in der Lage, Code zu schreiben und zu interpretieren, was bedeutet, dass sie natürliche Sprache in SPARQL-Abfragen umwandeln und die Ergebnisse verarbeiten können. Dies erweitert die Zugänglichkeit und Nutzbarkeit von Linked Open Data erheblich, da Benutzer nicht mehr direkt mit komplexen Abfragesprachen interagieren müssen. Ein praktisches Beispiel hierfür ist das schon erwähnte [ZüriLinkedGPT](https://ld.gpt.liip.ch/), dass den [Linked Open Data Triple Store von Zürich](https://ld.stadt-zuerich.ch/sparql/) in natürlicher Sprache abfragbar macht. 
+
+## Zusammenfassung und Ausblick 
+
+In diesem Blogpost haben wir aufgezeigt, welchen Wissensvorsprung Linked Data durch offene, maschinenlesbare und strukturierte Daten bietet. Am Beispiel des Organigramm-Tools haben wir die technische Umsetzbarkeit und den Mehrwert gezeigt, den Linked Open Data besonders für Daten der öffentlichen Verwaltung bereithält. Damit perspektivisch eine kritische Masse an Datensätzen verknüpft werden und darüber neue Einsichten gewonnen und innovative Lösungen für komplexe Probleme entwickelt werden können, bedarf es einem Pool an Linked Open Data. Um diesen aufzubauen, hilft das Organigramm-Tool der ODIS die Organigramme aktuell zu halten und im RDF-Format bereitzustellen. Darüber hinaus können natürlich auch weitere Behörden über Berlin hinaus das Organigramm-Tool nutzen und das Angebot an strukturierten Informationen über Verwaltungseinheiten erweitern.  
+
+Trotz ihrer abstrakten Natur sind erste verlinkte offene Daten über Berlin bereits heute verfügbar. Ein konkretes Beispiel liefern die lebensweltlich orientierten Räume (LOR) Berlins, welche das Land Berlin in kleine geografische Untereinheiten gliedern, als Grundlage für Planung, Prognose und Beobachtung demografischer und sozialer Entwicklungen in Berlin. Dieser Datensatz ist sowohl in herkömmlichen Geodaten als auch als Linked Data verfügbar. Über GitHub können sich Nutzer:innen jegliche Unterteilungen anzeigen lassen, von einer [Übersicht aller Bezirke](https://berlinonline.github.io/lod-berlin-lor/berlin) zur kleinsten Untereinheit, wie beispielsweise die “Zwinglistraße” im Bezirk Mitte ([Planungsraum 01022105](https://berlinonline.github.io/lod-berlin-lor-2019/plr_01022105)). Ein weiterer Datensatz in Form von Linked Data verfügt über [Bevölkerungszahlen](https://berlinonline.github.io/lod-berlin-einwohner/obs_202012_01022105) für alle Ebenen der geografischen Einheiten. Durch die Veröffentlichung als Linked Data kann so eine Verbindung zwischen geografischen Einheiten, Bevölkerungszahlen und beliebig vielen weiteren verlinkten Datensätzen hergestellt werden. 
+ 
+Konkrete Pläne für weitere Datensätze gibt es ebenfalls bereits: Im Rahmen des [Vierten Nationalen Aktionsplanes](https://www.open-government-deutschland.de/resource/blob/1567548/2203222/ceb9c802f7fb0f078c56d012c0f9d204/vorentwurf-nap-4-kommentierung-data.pdf?download=1) hat sich die Berliner Senatsverwaltung für Finanzen verpflichtet, den bereits seit vielen Jahren als offene Daten veröffentlichen [Doppelhaushalt](https://daten.berlin.de/datensaetze/doppelhaushalt-20222023), ebenfalls als Linked Data im RDF-Format zu veröffentlichen. Mit tausenden von Ausgabe- und Einnahmetiteln, also Informationen zur Höhe und Zweck von Einnahmen und Ausgaben, enthält der Haushalt wichtige Informationen mit örtlichem und politischem Bezug. Da Einwohnerzahlen mit ihrem geografischen Bezug bereits vorliegen, könnten Ausgaben der einzelnen Bezirke sofort mit Einwohnerzahlen verbunden werden und machen so Pro-Kopf Analysen von Einnahmen und Ausgaben auf Bezirksebene einfacher und schneller. 
+
+Durch die standardisierte Bereitstellung von Daten im RDF-Format könnte ebenfalls eine Verbindung zwischen maschinenlesbaren Organigrammen, den LOR und den Haushaltsdaten hergestellt werden. Ohne mühsames manuelles Zusammentragen von Daten können so Erkenntnisse über die Berliner Verwaltung, ihre Organisation und ihre Finanzen gewonnen werden. Eine Anwendung, die auf Linked Data basiert, könnte so beispielsweise die Etats mit jeweiligen Senatsverwaltungen vergleichen. Hier bietet es sich an, auf unserer Ontologie aufzubauen und diese gemeinsam weiterzuentwickeln, damit eine einheitliche Sprache gesprochen wird. 
+
+Wir sind mindestens so gespannt wie Chatbot Bobby auf die weiteren Entwicklungen im Land in Richtung Fünf-Sterne Open Data. 
+
+## Weiterführende Infos und Quellen 
+
+- [Berliner _Open Data Strategie_ 2023 (Seite 10 ff.)](https://www.berlin.de/moderne-verwaltung/e-government/open-data/strategieprozess/artikel.1257333.php#:~:text=Linked%20Open%20Data%3A%20Ein%20wichtiges,im%20Web%20verkn%C3%BCpft%20werden%20k%C3%B6nnen)
+- [_Open Knowledge Hub_ der _Open Knowledge Foundation_ (OKF)](https://opendata.okfn.de/)
+- ["What is Linked Data" YouTube-Video von Manu Sporny](https://www.youtube.com/watch?v=4x_xzT5eF5Q)
+- ["Linking Data. What does it mean?" Beitrag auf data.europa.eu](https://data.europa.eu/en/publications/datastories/linking-data-what-does-it-mean)
+- [ZüriLinkedGPT](https://ld.gpt.liip.ch/)
 
 
 
