@@ -75,50 +75,35 @@ const focusStyles =
                 id={`${dataset.id}-title`}
                 class="text-xl font-bold text-headlines px-8 sm:px-16 lg:px-0"
               >
-                {dataset.title}
+                {dataset.category}
               </h2>
-              <div class="absolute -top-12 left-1/2 -translate-x-1/2 lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:text-left lg:px-0 lg:my-2 w-full px-8 sm:px-16 text-sm flex">
+              <div class="absolute -top-12 left-1/2 -translate-x-1/2 lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:text-left lg:px-0 lg:my-2 w-full px-8 sm:px-16 text-sm flex flex-col">
                 {dataset.url ? (
                   <a
                     href={dataset.url}
                     class="text-links hover-hover:hover:text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center"
+                    target="_blank"
                   >
                     <Icon
                       name="ui/external-link"
                       class="inline-block w-6 h-auto"
                     />
-                    Zum Datensatz
+                    Beispiel: {dataset.title}
                   </a>
                 ) : (
                   <p class="text-links-active font-bold uppercase tracking-wider inline-flex flex-nowrap gap-x-2 items-center">
                     <Icon name="ui/lock" class="inline-block w-6 h-auto" />
-                    Datensatz geschlossen
+                    Beispiel: {dataset.title}
                   </p>
                 )}
               </div>
+
               <p
                 id={`${dataset.id}-description`}
                 class="my-2 px-8 sm:px-16 lg:px-0 w-full"
               >
                 {dataset.description}
               </p>
-              <div class="px-8 sm:px-16 lg:px-0 mb-4">
-                {dataset.example_usage && (
-                  <Button
-                    tag="a"
-                    href={dataset.example_usage}
-                    target="_blank"
-                    class="!mt-4"
-                  >
-                    Beispiel-Anwendung
-                  </Button>
-                )}
-                {!dataset.url && (
-                  <Button tag="a" href="/module" class="!mt-4">
-                    Wie ODIS Daten öffnet
-                  </Button>
-                )}
-              </div>
             </div>
           ))
         }
