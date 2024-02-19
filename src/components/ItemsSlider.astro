@@ -7,6 +7,7 @@ export type Props = {
   wrapperClass?: string | undefined;
   swiperClass?: string | undefined;
   uniqueId?: string | undefined;
+  slidesCount?: number | undefined;
 };
 
 const defaultUniqueId = Math.random().toString(36).slice(2);
@@ -14,10 +15,15 @@ const {
   wrapperClass = "",
   swiperClass = "",
   uniqueId = defaultUniqueId,
+  slidesCount = 3,
 } = Astro.props;
 ---
 
-<div class={cn(`items-swiper-wrapper`, wrapperClass)} id={uniqueId}>
+<div
+  class={cn(`items-swiper-wrapper`, wrapperClass)}
+  id={uniqueId}
+  data-slidescout={slidesCount}
+>
   <div class="grid-container">
     <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
       <div
@@ -70,9 +76,12 @@ const {
   import Swiper from "swiper";
   import "swiper/swiper-bundle.css";
 
-  const swipers = document.querySelectorAll(".items-swiper-wrapper");
+  const swipers = document.querySelectorAll(
+    ".items-swiper-wrapper",
+  ) as NodeListOf<HTMLDivElement>;
   swipers.forEach((swiperEl) => {
     const id = swiperEl.id;
+    const slidesCount = parseInt(swiperEl.dataset.slidescout || "3", 10);
     const prevButton = document.querySelector(
       `#${id} .items-swiper-button-prev`,
     ) as HTMLButtonElement;
@@ -84,10 +93,10 @@ const {
       spaceBetween: 32,
       breakpoints: {
         640: {
-          slidesPerView: 2,
+          slidesPerView: slidesCount > 2 ? 2 : 1,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: slidesCount,
         },
       },
       navigation: {
@@ -110,17 +119,13 @@ const {
     });
 
     function updateButtons() {
-      const currentSlide = swiper.realIndex;
-      const lastSlide = swiper.slides.length - 1;
-      const firstSlide = 0;
-
       prevButton.classList.remove("items-swiper-button-disabled");
       nextButton.classList.remove("items-swiper-button-disabled");
 
-      if (currentSlide === firstSlide) {
+      if (swiper.isBeginning) {
         prevButton.classList.add("items-swiper-button-disabled");
       }
-      if (currentSlide === lastSlide) {
+      if (swiper.isEnd) {
         nextButton.classList.add("items-swiper-button-disabled");
       }
     }
@@ -151,7 +156,7 @@ const {
     }
   }
 
-  .items-swiper-button.swiper-button-disabled {
+  .items-swiper-button.items-swiper-button-disabled {
     border-color: var(--gray-light);
     box-shadow: none;
     color: var(--gray-light);

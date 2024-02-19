@@ -119,17 +119,13 @@ const resources = (
   nextButton.addEventListener("click", () => swiper.slideNext());
 
   function updateButtons() {
-    const currentSlide = swiper.realIndex;
-    const lastSlide = swiper.slides.length - 1;
-    const firstSlide = 0;
-
     prevButton.classList.remove("swiper-button-disabled");
     nextButton.classList.remove("swiper-button-disabled");
 
-    if (currentSlide === firstSlide) {
+    if (swiper.isBeginning) {
       prevButton.classList.add("swiper-button-disabled");
     }
-    if (currentSlide === lastSlide) {
+    if (swiper.isEnd) {
       nextButton.classList.add("swiper-button-disabled");
     }
   }
