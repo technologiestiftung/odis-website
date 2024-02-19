@@ -13,6 +13,7 @@ import { cn } from "@/utils/classNames";
 import ResourceCard from "@/components/ResourceCard.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
 import { Icon } from "astro-icon/components";
+import ItemsSlider from "@/components/ItemsSlider.astro";
 
 export type Props = CollectionEntry<"module"> & {
   data: CollectionEntry<"module">["data"] & {
@@ -126,22 +127,16 @@ const { Content } = await post.render();
       </div>
     </div>
 
-    <div class="pb-24 pt-12 bg-bg-alt">
-      <div class="grid-container">
-        <div class="col-span-12 sm:col-span-10 sm:col-start-2 resources-swiper">
-          <div class="swiper-wrapper">
-            {
-              modul.resources.map((method) => (
-                <ResourceCard
-                  {...method}
-                  class="swiper-slide swiper-slide-active max-w-screen-sm"
-                />
-              ))
-            }
-          </div>
-        </div>
-      </div>
-    </div>
+    <ItemsSlider wrapperClass="pb-24 pt-12 bg-bg-alt">
+      {
+        modul.resources.map((resource) => (
+          <ResourceCard
+            {...resource}
+            class="swiper-slide swiper-slide-active max-w-screen-sm"
+          />
+        ))
+      }
+    </ItemsSlider>
   </section>
 
   <section aria-label={modul.furtherLinksTitle}>
