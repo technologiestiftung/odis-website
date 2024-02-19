@@ -74,8 +74,8 @@
     "id": "solar",
     "icon": "solar",
     "category": "Energie",
-    "title": "Solarenergie",
-    "description": "Vor dem Hintergrund des rasant voranschreitenden Klimawandels hilft jedes kWh Energie, das aus erneuerbaren Energien stammt der Umwelt. Offene Daten zu beispielsweise Berlins Solardachpotentialen können engagierten Bürger:innen und Politiker:innen helfen, aktiv im Ausbau von Solarenergie zu werden.",
-    "url": "https://energieatlas.berlin.de/?permalink=29nCYYYt"
+    "title": "Energieverbräuche",
+    "description": "Bis spätestens 2045 will Berlin klimaneutral werden. Dafür müssen auch Gebäude Energie einsparen und umfassend saniert werden. Offene Daten zu Energieverbrauch und Energieeinsparungen öffentlicher Gebäude können dabei zum Beispiel eine Grundlage für ein datengestütztes Monitoring bilden.",
+    "url": "https://odis-berlin.de/projekte/energiecheckpoint"
   }
 ]
