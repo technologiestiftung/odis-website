@@ -49,7 +49,7 @@ const modules = (await getCollection("module")).sort(
             <Heading size="lg" tag="h3">
               {module.data.title}
             </Heading>
-            <Paragraph>{module.data.description}</Paragraph>
+
             <Button
               tag="a"
               href={`/module/${module.slug}`}
