@@ -5,10 +5,10 @@ import MediaSection from "./MediaSection.astro";
 
 export type Props = MediaSectionProps & {
   url: string;
-  iframeProps?: undefined | HTMLAttributes<"iframe">;
+  elementProps?: undefined | HTMLAttributes<"iframe">;
 };
 
-const { url, iframeProps = {}, buttons = [], ...otherProps } = Astro.props;
+const { url, elementProps = {}, buttons = [], ...otherProps } = Astro.props;
 ---
 
 <MediaSection
@@ -16,13 +16,17 @@ const { url, iframeProps = {}, buttons = [], ...otherProps } = Astro.props;
   buttons={buttons || [
     {
       link: url,
-      text: "Auf YouTube ansehen",
+      text: url.startsWith("/") ? "Video herunterladen" : "Auf YouTube ansehen",
     },
   ]}
 >
   {
     url.startsWith("/") ? (
-      <video controls class="bg-discrete border border-discrete w-full">
+      <video
+        controls
+        class="bg-discrete border border-discrete w-full"
+        {...elementProps}
+      >
         <source src={url} type="video/mp4" />
       </video>
     ) : (
@@ -33,7 +37,7 @@ const { url, iframeProps = {}, buttons = [], ...otherProps } = Astro.props;
         title={otherProps.caption || "Video player"}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-        {...iframeProps}
+        {...elementProps}
       />
     )
   }
