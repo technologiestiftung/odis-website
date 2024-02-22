@@ -114,12 +114,6 @@ module.exports = {
         ".text-pretty": {
           "text-wrap": "pretty",
         },
-        ".hyphenate": {
-          "hyphenate-limit-after": "1",
-          "hyphenate-limit-before": "3",
-          "-webkit-hyphens": "auto",
-          hyphens: "auto",
-        },
       });
     }),
   ],
