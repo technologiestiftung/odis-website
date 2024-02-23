@@ -439,7 +439,7 @@ const homepage = defineCollection({
           .default([]),
       }),
       openData: z.object({
-        subtitle: z.string(),
+        subtitle: z.string().optional().nullable(),
         title: z.string(),
         textPrefix: z.string().optional().nullable(),
         benefits: z.array(z.string()).default([]),
