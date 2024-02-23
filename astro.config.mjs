@@ -88,6 +88,7 @@ export default defineConfig({
     "/ressourcen/geocodierung": "/ressourcen/geocodierung_video",
     "/ressourcen/datenregister": "/ressourcen/veroeffentlichung_daten_portal",
     "/ressourcen/lizenzen": "/ressourcen/lizenzwahl",
-    "/ressourcen/datenvisualisierung": "/ressourcen/datenvisualisierung_videos"
+    "/ressourcen/datenvisualisierung": "/ressourcen/datenvisualisierung_videos",
+    "/journey": "/module",
   },
 });
