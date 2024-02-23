@@ -170,7 +170,7 @@ const { Content } = await post.render();
     nextModul && nextModul.data.number < allModules.length + 1 && (
       <>
         <section
-          aria-label="Nächster Modul"
+          aria-label="Nächste Etappe"
           class="bg-bg-alt pt-16 pb-4 not-prose"
         >
           <div class="grid-container">
@@ -182,7 +182,7 @@ const { Content } = await post.render();
             </div>
           </div>
         </section>
-        <section aria-label="Nächster Modul" class="bg-bg-alt pb-16 not-prose">
+        <section aria-label="Nächste Etappe" class="bg-bg-alt pb-16 not-prose">
           <div class="grid-container">
             <div
               class="@lg:col-start-1 @lg:col-span-1 text-4xl lg:text-5xl text-bg font-bold drop-shadow-[6px_4px_0px_var(--shadow-secondary)] lg:text-right"
@@ -190,7 +190,7 @@ const { Content } = await post.render();
             >
               {nextNumber}.
             </div>
-            <div class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
+            <div class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
               <Heading size="lg" tag="h3">
                 {nextModul.data.title}
               </Heading>
