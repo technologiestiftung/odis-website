@@ -115,6 +115,7 @@ const module = defineCollection({
           link: z.string().url(),
         }),
       ),
+      nextStationText: z.string(),
       nextStationTitle: z.string(),
       allModulesButtonText: z.string(),
     }),
