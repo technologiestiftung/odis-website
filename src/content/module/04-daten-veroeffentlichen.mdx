@@ -8,29 +8,29 @@ description: Wo und wie können Daten veröffentlicht werden? Wer bietet Unterst
 metaDescription: Wo und wie können Daten veröffentlicht werden? Wer bietet Unterstützung dabei? Und was hat es mit den verschiedenen Lizenzen auf sich?
 icon: ./images/module-4.svg
 methodsTitle: Hilfreiche Wegbegleiter
-methodsText: Ob einer Bereitstellung von Open Data nichts mehr im Wege steht, lässt sich mithilfe des Veröffentlichungs-Checks prüfen. Im Vorfeld fällt die Wahl der Lizenz mit unserem Handout leicht. Für die Bereitstellung geben wir ein praktisches Videotutorial in die Hand und zeigen die Vorteile von APIs auf.
+methodsText: Um sicherzustellen, dass einer Bereitstellung von Open Data nichts mehr im Wege steht, kann die Veröffentlichungs-Checkliste zu Rate gezogen werden. Für die Veröffentlichung via Datenregister bieten wir ein Videotutorial an. Die Wahl der Lizenz wird durch unser Handout erleichtert.
 methods:
-  - "veroeffentlichung_daten_portal"
+  - "daten_portal_veroeffentlichung"
   - "lizenzwahl"
-  - "veroeffentlichung-check"
+  - "checkliste_veroeffentlichung"
   - "open_data_handbuch"
 furtherLinksTitle: Exkursionen
 furtherLinksText: Hier haben wir eine Linksammlung zu externen Ressourcen zusammengetragen, die einen noch tieferen Einstieg in die Thematik ermöglichen.
 furtherLinks:
   - title: Infos fehlen hier noch
     link: https://odis-berlin.de
-nextStationText: Test
+nextStationText: "Die Daten sind veröffentlicht, die Pflicht also getan. Jetzt folgt die Kür, für alle die noch einen Schritt weiter gehen wollen: In der letzten Etappe erklären wir, wie offene Daten visualisiert werden können."
 nextStationTitle: Zur nächsten Etappe
 allModulesButtonText: Zur nächsten Etappe
 ---
 
 ## Warum diese Etappe wichtig ist
 
-Wie hoch ist heute die Schadstoffbelastung an einzelnen Orten Berlins? Welche ÖPNV-Stationen sind barrierearm zugänglich? Wo schlagen Fahrraddiebe am liebsten zu? Spannende Informationen über unsere Stadt liegen mit offenen Daten nicht mehr in Silos, sondern stehen über das Berliner Open Data Portal zentral allen zur Verfügung. In dieser Etappe erklären wir, wann Daten veröffentlichungsbereit sind und unter welchen Bedingungen, also unter welcher Lizenz, Daten veröffentlicht werden und auf welchen Wegen sie über das Berliner Open Data Portal bereitgestellt werden können.
+Wie hoch ist heute die Schadstoffbelastung an einzelnen Orten Berlins? Welche ÖPNV-Stationen sind barrierearm zugänglich? Wo schlagen Fahrraddiebe am liebsten zu? Wertvolle Informationen über unsere Stadt liegen mit offenen Daten nicht mehr in Silos, sondern stehen über das Berliner Open Data Portal allen zentral zur Verfügung. In dieser Etappe erklären wir, wann Daten zur Veröffentlichung bereit sind und unter welchen Nutzungsbedingungen, also unter welcher Lizenz, Daten veröffentlicht werden können und auf welchen Wegen sie über das Berliner Open Data Portal bereitgestellt werden können.
 
 ## Wie wir unterstützen
 
-Wir unterstützen im Vorfeld der Veröffentlichung bei der Wahl der richtigen Lizenz und anschließend des passenden Bereitstellungswegs, der von der Beschaffenheit der Daten, sowie der Veröffentlichungspraxis der einzelnen Behörden abhängt. Bei der technischen Anbindung von Fachverfahren verweisen wir auf das Unterstützungsangebot des Portalbetreibers BerlinOnline.
+Wir unterstützen im Vorfeld der Veröffentlichung bei der Wahl der richtigen Lizenz und anschließend des passenden Bereitstellungswegs. Dieser hängt von der Beschaffenheit der Daten, sowie der Veröffentlichungspraxis der einzelnen Behörden ab. Bei der technischen Anbindung von Fachverfahren verweisen wir auf das Unterstützungsangebot des Portalbetreibers BerlinOnline.
 
 <TextContentSection class="bg-bg-alt px-4 sm:px-6" largeContainer>
     <h2>Das Ziel im Blick – Den richtigen Veröffentlichungsweg finden</h2>
@@ -38,23 +38,27 @@ Wir unterstützen im Vorfeld der Veröffentlichung bei der Wahl der richtigen Li
     <ul class="lg:grid lg:grid-cols-2 gap-x-6">
       <li>
         <strong>Datenrubrik</strong>
-        <p class="mt-0 text-balance">Ist ein Imperia-Zugang vorhanden? Dann können Datensätze über die Datenrubrik veröffentlicht werden.</p>
+        <p class="mt-0 text-balance">Ist ein Imperia-Zugang vorhanden? Falls ja, können Datensätze unkompliziert über das sogenannte Datenrubrik-Modul des CMS des Landes Berlin veröffentlicht werden.</p>
       </li>
       <li>
         <strong>Simple Search</strong>
-        <p class="mt-0 text-balance">Mit der Anwendung Simple Search können einfache Datenbankanwendungen im Imperia-Auftritt für die eigene Behörde veröffentlicht werden.</p>
+        <p class="mt-0 text-balance">Mit dem Simple-Search-Modul können einfache Datenbanktabellen in Imperia veröffentlicht werden, die automatisch mit dem Datenportal verknüpft sind.</p>
       </li>
       <li>
         <strong>Datenregister</strong>
-        <p class="mt-0 text-balance">Kein Imperia-Zugang vorhanden? Über das nicht-öffentliche Datenregister können manuell Datensätze veröffentlicht werden, die schon online sind.</p>
-      </li>
-      <li>
-        <strong>API-Schnittstellen</strong>
-        <p class="mt-0 text-balance">Bei komplexeren und größeren Datensätzen bietet es sich an, Daten über eine Programm-Schnittstelle zu veröffentlichen (API - Application Programming Interface).</p>
+        <p class="mt-0 text-balance">Kein Imperia-Zugang vorhanden? Über das Datenregister können manuell (Meta-)Daten veröffentlicht werden. Der Datenupload muss dann aber an anderer Stelle erfolgen.</p>
       </li>
       <li>
         <strong>GitHub</strong>
-        <p class="mt-0 text-balance">Einige Behörden nutzen die Plattform GitHub, um Daten abzulegen, die über das Berliner Datenportal angesprochen werden können.</p>
+        <p class="mt-0 text-balance">Einige Behörden nutzen die Plattform GitHub, um Daten abzulegen, die dann über das Datenregister ins Berliner Datenportal eingetragen werden.</p>
+      </li>
+      <li>
+        <strong>API-Schnittstellen</strong>
+        <p class="mt-0 text-balance">Bei komplexeren und größeren Datensätzen bietet es sich an, Daten über eine Programmier-Schnittstelle (API) zu veröffentlichen.</p>
+      </li>
+      <li>
+        <strong>Geodateninfrastruktur</strong>
+        <p class="mt-0 text-balance">Bei Datensätzen die einen räumlichen Bezug aufweisen, kann es sinnvoll sein eine Veröffentlichung im Berliner Geodatenportal anzustreben.</p>
       </li>
     </ul>
 
