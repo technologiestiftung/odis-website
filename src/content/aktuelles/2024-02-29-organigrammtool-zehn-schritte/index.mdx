@@ -1,13 +1,11 @@
 ---
-tags:
-  - "post"
 title: "In zehn Schritten zum maschinenlesbaren Organigramm"
 description: Das Organigramm-Tool hat zum Ziel, die Erstellung der Organigramme der Berliner Verwaltung zu vereinfachen und die Organigramme in ein einheitlicheres und maschinenlesbares Format zu bringen. 
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 headerImage:
-  src: ./images/step1.png
+  src: ./images/zehn_schritte_visual.png
   alt: Skizze eines Knowledge Graphs
 readingTime: 30-35
 date: 2024-02-28
@@ -138,3 +136,59 @@ import image7 from "./images/step7.png"
     caption="Siebter Schritt – Dokument (zwischen)speichern"
   />
 </ContentSection>
+
+### 8. Bestehendes Dokument einladen
+
+Ein Organigramm, das mit unserem Tool erstellt wurde, kann einfach wieder in der Anwendung geladen werden. Probieren Sie das einmal exemplarisch aus. [Laden Sie sich hier eine Beispiel-JSON-Datei herunter](https://odis-berlin.de/projekte/organigramme/data/senkult_organigramm.json), in der das Organigramm für die Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt gespeichert ist. Gehen Sie nun zurück in das Organigramm-Tool und klicken Sie in der Menüleiste oben links auf das Symbol für Neues Dokument erstellen oder öffnen. Klicken Sie auf Durchsuchen und wählen Sie die gerade heruntergeladene Datei in ihrem Filesystem aus und laden diese hoch. Wählen Sie im erscheinenden Fenster Änderungen Verwerfen aus. Sie sollten nun das Organigramm der SenKultGZ sehen. Sie können sich [das Organigramm auch hier als PDF ansehen](/file-download/senkult_organigramm.pdf).
+
+**Hinweis:** Zum aktuellen Zeitpunkt ist es leider nicht möglich, ein bereits bestehendes Organigramm im PDF-Format zu importieren, sondern nur Organigramme im JSON-Format, die mit unserem Tool erstellt wurden.
+
+import image8 from "./images/step8.png"
+
+<ContentSection class="sm:px-6">
+
+  <ImageSection class="sm:container sm:mx-auto"
+    src={image8}
+    caption="Achter Schritt – Bestehendes Dokument einladen"
+  />
+</ContentSection>
+
+import image8_2 from "./images/step8_2.png"
+
+<ContentSection class="sm:px-6">
+
+  <ImageSection class="sm:container sm:mx-auto"
+    src={image8_2}
+    caption="Achter Schritt, Teil zwei – Bestehendes Dokument einladen"
+  />
+</ContentSection>
+
+### 9. Fertiges Organigramm exportieren
+
+Sie können ein fertiges Organigramm auch als PDF oder im Linked Open Data Format RDF exportieren. Klicken Sie in der Menüleiste auf Dokument speichern oder exportieren. Unter Exportieren werden Ihnen verschiedene Dateiformate zur Auswahl gestellt. Wählen Sie testweise PDF und Bidmap und klicken Sie auf den Button exportieren um ein PDF herunterzuladen. Beim Download als Linked Data stehen verschiedene RDF Formate wie JSON-LD oder Turtle zur Auswahl.
+
+import image9 from "./images/step9.png"
+
+<ContentSection class="sm:px-6">
+
+  <ImageSection class="sm:container sm:mx-auto"
+    src={image9}
+    caption="Neunter Schritt – Fertiges Organigramm exportieren"
+  />
+</ContentSection>
+
+### 10. Mit einem neuen Dokument starten
+
+Um wieder mit einem frischen Beispiel-Dokument zu starten, klicken Sie wieder links oben in der Menüleiste auf das Symbol für Neues Dokument erstellen oder öffnen. Klicken Sie diesmal anschließend auf Neues Dokument erstellen und dann auf Verwerfen. Sie sehen wieder das Organigramm vom Anfang.
+
+import image10 from "./images/step10.png"
+
+<ContentSection class="sm:px-6">
+
+  <ImageSection class="sm:container sm:mx-auto"
+    src={image10}
+    caption="Zehnter Schritt – Mit einem neuen Dokument starten"
+  />
+</ContentSection>
+
+Sie haben nun alle wichtigen Schritte und Funktionen testweise durchlaufen und können damit loslegen, ein Organigramm für Ihre eigene Behörde zu erstellen.
