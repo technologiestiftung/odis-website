@@ -24,7 +24,8 @@ const { title, description } = data;
 
 <a href={`/projekte/${slug}`} title={title} class={className}>
   <ProjectMockups {...data} slug={slug} imageLoading={imageLoading} />
-  <Heading tag={titleTag} size="lg" class="mt-3 mb-1" set:html={title} />
+  <Paragraph class="opacity-90 text-sm mb-1" set:html={"Datenvisualisierung"} />
+  <Heading tag={titleTag} size="lg" class="mb-1" set:html={title} />
   <Paragraph set:html={description} />
   <Button tag="span" variant="secondary">Projekt ansehen</Button>
 </a>
