@@ -6,10 +6,10 @@ tags:
 title: Kiezcolors
 blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://kiezcolors.odis-berlin.de/
-description: Schaue dir die Verteilung unterschiedlicher Flächennutzungen in deinem Kiez an.
+description: Entecke die Verteilung unterschiedlicher Flächennutzungen in deinem Kiez und kreiere eine Postkarte
 date: 2023-06-12
-period: Juni 2023 (Erstveröffentlichung)
-status: Aktives Projekt, das zu unterschiedlichen Anlässen von der ODIS eingesetzt wird.
+period: Juni 2023
+status: abgeschlossen
 visible: true
 indexImage: ./images/kiezcolors_projekte_kachel.png
 heroImage: ./images/kiezcolors_desktop_screen.png
@@ -17,9 +17,10 @@ mobileImage: ./images/kiezcolors_mobile_screen.png
 projectUrlWithoutProtocol: "kiezcolors.odis-berlin.de"
 showImageInMockup: true
 datasets:
-  - linkText: Offene Flächennutzungsdaten (ALKIS) aus dem Geoportal der Stadt Berlin 
-    link: https://fbinter.stadt-berlin.de/fb 
+  - linkText: Offene Flächennutzungsdaten (ALKIS) aus dem Geoportal der Stadt Berlin
+    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=wmsk_alkis@senstadt&bbox=388978,5819194,390982,5820197
 gitHubLink: https://github.com/technologiestiftung/kiezcolors
+category: Datenvisualisierung
 ---
 
 ## Hintergrund
@@ -28,7 +29,7 @@ Wie viel Platz brauchen wir eigentlich, um zu wohnen, uns fortzubewegen und mal 
 
 Mit der Kiezcolors Webanwendung, kann die Verteilung der Flächennutzung in einem Umkreis von 1000 Metern um einen Punkt, visuell dargestellt werden. Durch verschieben der Karte oder einer Adresssuche lassen sich so verschiedene Orte einfach explorieren. Das Resultat kann als PDF heruntergeladen und im Postkartenformat ausgedruckt werden. Der Text auf der Postkarte kann auch angepasst werden.
 
-import image from "./images/kiezcolors_beispielpostkarte_front.png"
+import image from "./images/kiezcolors_beispielpostkarte_front.png";
 
 <ImageSection
   src={image}
@@ -36,7 +37,7 @@ import image from "./images/kiezcolors_beispielpostkarte_front.png"
   fullWidth={false}
 />
 
-import image2 from "./images/kiezcolors_beispielpostkarte_back.png"
+import image2 from "./images/kiezcolors_beispielpostkarte_back.png";
 
 <ImageSection
   src={image2}
@@ -50,9 +51,9 @@ Die Anwendung basiert komplett auf offenen Flächennutzungsdaten (ALKIS) aus dem
 
 import logo from "./images/logo_geoobserver.png";
 
-<Quote
-  authorName="Geo Observer"
-  authorLogo={logo}
->
-  Die Open Data Informationsstelle (ODIS) und CityLAB Berlin haben mit Kiezcolors eine wunderbare, einfach zu bedienende interaktive Webanwendung ins Netz gestellt, mit welcher man ganz schnell für jede Lokation in Berlin die Flächennutzung im Umkreis von 1.000m ermitteln kann.
+<Quote authorName="Geo Observer" authorLogo={logo}>
+  Die Open Data Informationsstelle (ODIS) und CityLAB Berlin haben mit
+  Kiezcolors eine wunderbare, einfach zu bedienende interaktive Webanwendung ins
+  Netz gestellt, mit welcher man ganz schnell für jede Lokation in Berlin die
+  Flächennutzung im Umkreis von 1.000m ermitteln kann.
 </Quote>

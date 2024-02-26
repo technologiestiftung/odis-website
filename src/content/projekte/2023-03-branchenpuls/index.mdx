@@ -3,26 +3,27 @@ tags:
   - "home"
   - "project"
   - "post"
-title: Berliner BranchenPuls
+title: BranchenPuls
 blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://branchenpuls.odis-berlin.de
 description: Exploriere Berlins Gewerbelandschaft auf einer interaktiven Karte vom Bezirk bis zum Kiez
 date: 2023-03-22
-period: März 2023
-status: Abgeschlossenes Projekt
+period: September 2023
+status: abgeschlossen, Weiterentwicklung geplant
 visible: true
 heroImage: ./images/branchenpuls_desktop_visual.png
 mobileImage: ./images/branchenpuls_mobile_visual.png
 projectUrlWithoutProtocol: "branchenpuls.odis-berlin.de"
 showImageInMockup: true
 datasets:
-  - linkText: Teilweise offener Datensatz der Berliner Immobilienmanagement GmbH (BIM) 
-    link: https://www.bim-berlin.de/presse/publikationen/
-gitHubLink: https://github.com/technologiestiftung/energiekarte
+  - linkText: Gewerbedaten der IHK
+    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
+gitHubLink: https://github.com/technologiestiftung/branchenpuls
 partners:
   - name: IHK Berlin
     url: https://www.ihk.de/berlin/
     logoPath: ./images/logo_IHK_Berlin.svg
+category: Datenvisualisierung
 ---
 
 ## Hintergrund
@@ -39,7 +40,7 @@ Die IHK Berlin hat Informationen über ihre Mitgliedsunternehmen als Open Data b
 
 Die Standorte, als Punkte bzw. bei kleiner Zoomstufe als Heatmap dargestellt, entsprechen dem Sitz des Mitgliedsunternehmes inklusive deren Betriebsstätten der IHK Berlin. Die Unternehmen können nach Informationen wie Branchen- und Gewerbetyp, Beschäftigtenzahl oder Unternehmensalter gefiltert werden. Außerdem ist eine räumliche Differenzierung auf Ebene der Bezirke, Prognoseraum und Planungsraum der Lebensweltlich orientierten Räume (offizielle in Berlin verwendete Raumeinheiten) möglich. Durch die Zeitraumauswahl ist darüber hinaus eine zeitliche Entwicklung erkundbar. Dazu können mehrere Ansichten geöffnet und miteinander verglichen werden. Die Filterauswahl lässt sich als CSV-Datei exportieren.
 
-import image1 from "./images/branchenpuls.png"
+import image1 from "./images/branchenpuls.png";
 
 <ContentSection class="sm:px-6">
 
@@ -51,25 +52,19 @@ import image1 from "./images/branchenpuls.png"
 
 Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf "Tour starten" in der Infobox eine zehnteilige Tour angeboten, bei der die einzelnen Funktionen genauer erklärt und eingeordnet werden.
 
-import image3 from "./images/joyride_1.png"
+import image3 from "./images/joyride_1.png";
 
-<ImageSection
-  src={image3}
-/>
+<ImageSection src={image3} />
 
-import image4 from "./images/joyride_2.png"
+import image4 from "./images/joyride_2.png";
 
-<ImageSection
-  src={image4}
-/>
+<ImageSection src={image4} />
 
-import image5 from "./images/joyride_3.png"
+import image5 from "./images/joyride_3.png";
 
-<ImageSection
-  src={image5}
-/>
+<ImageSection src={image5} />
 
-import image6 from "./images/joyride_4.png"
+import image6 from "./images/joyride_4.png";
 
 <ImageSection
   src={image6}

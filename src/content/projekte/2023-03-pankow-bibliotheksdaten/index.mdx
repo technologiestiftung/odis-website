@@ -3,14 +3,13 @@ tags:
   - "home"
   - "project"
   - "post"
-title: Dashboard Stadtbibliothek Pankow
+title: Bedarfserfassung Stadtbibliothek Pankow
 blogLinkTitle: "Hier geht's zum Dashboard"
 blogLink: https://bibliotheksdaten.odis-berlin.de/pankow/
-description: Ein interaktives Dashboard als Analysetool für offene Bibliotheksdaten
+description: Ein interaktives Dashboard als Analysetool für offene Bibliotheksdaten unterstützt die datengetriebene Bedarfserfassung
 date: 2023-03-14
 period: März 2023 (Erstveröffentlichung)
-status: Aktives Projekt, das jährlich mit aktuellen Bibliotheksdaten aktualisiert wird.
-
+status: abgeschlossen, Weiterentwicklung geplant
 visible: true
 indexImage: ./images/pankow_desktop_visual.png
 heroImage: ./images/pankow_desktop_visual.png
@@ -18,13 +17,13 @@ mobileImage: ./images/pankow_mobile_visual.png
 projectUrlWithoutProtocol: "grafana.odis-berlin.de/public-dashboards"
 showImageInMockup: true
 datasets:
-  - linkText: Bibliotheksdaten aller Pankower Bibliotheken 
-    link: https://daten.berlin.de/datensaetze/ausleihen-%C3%B6ffentlichen-bibliotheken-pankow-2022
-gitHubLink: https://github.com/grafana/grafana
+  - linkText: Bibliotheksdaten Pankow
+    link: https://daten.berlin.de/datensaetze/ausleihen-öffentlichen-bibliotheken-pankow-2022-und-2023
 partners:
   - name: Stadtteilbibliothek Pankow
-    url: https://www.berlin.de/stadtbibliothek-pankow/ 
+    url: https://www.berlin.de/stadtbibliothek-pankow/
     logoPath: ./images/logo_pankow.jpg
+category: Datenvisualisierung
 ---
 
 ## Hintergrund
@@ -39,7 +38,7 @@ Die Leitung der Janusz-Korczak-Bibliothek in Pankow startete im vergangenen Jahr
 
 Das Dashboard zeigt exemplarisch, welche Auswertungen anhand der Daten möglich sind und betrachtet verschiedene Themenbereiche. Den Beginn macht eine Übersicht über die absoluten Ausleihen und Verlängerungen im Jahr 2022 sowie den beliebstesten 1.000 Ausleihungen. Dabei fällt auf: Die beliebstesten Medien sind für Kinder. Eine Übersicht der Ausleihen nach Medientypen zeigt, dass die Bibliothek viel mehr im Angebot hat als Bücher. DVDs, Zeitschriften aber auch Audiomedien wie CDs und Tonie-Figuren gehören längst zum Bibliotheksangebot
 
-Besonders interessant aus Sicht der Stadtteilbliothek ist es, auch zu untersuchen, wo die Menschen gemeldet sind, die die einzelnen Standorte nutzen. In einer Karte werden diese Standorte sowie die Ausleihen pro Berliner Teilverkehrszelle dargestellt. Welche Menschen nutzen eigentlich die Bibliothek? Ein Abschnitt zu den persönlichen Merkmalen schlüsselt die **Ausleihen nach Benutzer:innengruppe, Geschlecht und Altersgruppe auf. Es zeigt sich, dass insbesondere weibliche Personen das Bibliotheksangebot nutzen. Beispielhaft ist außerdem einzusehen, welche Medien von Personen mit Fluchterfahrung am häufigsten ausgeliehen werden.
+Besonders interessant aus Sicht der Stadtteilbliothek ist es, auch zu untersuchen, wo die Menschen gemeldet sind, die die einzelnen Standorte nutzen. In einer Karte werden diese Standorte sowie die Ausleihen pro Berliner Teilverkehrszelle dargestellt. Welche Menschen nutzen eigentlich die Bibliothek? Ein Abschnitt zu den persönlichen Merkmalen schlüsselt die \*\*Ausleihen nach Benutzer:innengruppe, Geschlecht und Altersgruppe auf. Es zeigt sich, dass insbesondere weibliche Personen das Bibliotheksangebot nutzen. Beispielhaft ist außerdem einzusehen, welche Medien von Personen mit Fluchterfahrung am häufigsten ausgeliehen werden.
 
 Die Medien der Bibliothek sind verschiedenen Sachgruppen zugeordnet. Die Sachgruppen geben eine Idee davon, welchem Genre das Medium angehört. Eine Tabelle zeigt, wie viele Ausleihen es pro Sachgruppe gab. Auch die Top 50 Autor:innen aus der Sachgruppe 'Roman' oder die Top 6 Sachgruppen im Bereich Sachliteratur lassen sich einsehen. Den Abschluss des Dashboards machen eine Übersicht über die Entwicklung der Ausleihen im Jahresverlauf sowie ein paar spezielle Abfragen, zum Beispiel zur Anzahl der Ausleihen nach bestimmten Sichwörten oder nach der Art des Ausleih-/Verängerungs-Vorgangs. Dabei zeigt sich, dass im gesamten Jahr 2022 unter 1% der Ausleihen online getätigt wurden, dafür aber 89% der Verlängerungen.
 
@@ -48,3 +47,17 @@ Die Medien der Bibliothek sind verschiedenen Sachgruppen zugeordnet. Die Sachgru
 Die [Daten](https://daten.berlin.de/datensaetze/ausleihen-%C3%B6ffentlichen-bibliotheken-pankow-2022) sowie zugehörigen Schlüsseltabellen und Dokumentationen sind über das Berliner Open Data Portal verfügbar.
 
 Das Dashboard wurde mit der Open-Source-Anwendung [Grafana](https://github.com/grafana/grafana) erstellt. Die Graphen wurden durch SQL-Abfragen generiert. Entsprechend können leicht weitere Auswertungen und angepasste, interne Dashboards z.B. von den einzelnen Stadtteilbibliotheken erstellt und genutzt werden.
+
+import logo from "./images/logo_pankow.jpg";
+
+<Quote
+  authorName="Tobias Weiß"
+  authorRole="Leiter der Janusz-Korczak-Bibliothek, Bezirksamt Pankow"
+  authorLogo={logo}
+>
+  Durch das Dashboard bekommen wir einen ganz neuen Blick auf unsere Arbeit. Ich
+  habe aus den Büros regelrechte Jubelschreie vernommen, als wir den Link zur
+  ersten Version des Dashboards zirkuliert haben. Für viele ist allein die
+  Kartenansicht, der Blick auf die Daten verknüpft mit einer räumlichen
+  Verortung, Gold wert.
+</Quote>
