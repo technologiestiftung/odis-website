@@ -156,7 +156,12 @@ const { Content } = await post.render();
         <ul class="flex flex-col gap-8 p-0">
           {
             modul.furtherLinks.map((link) => (
-              <TextLink tag="a" href={link.link} rel="noreferrer nofollow">
+              <TextLink
+                tag="a"
+                href={link.link}
+                target="_blank"
+                rel="noreferrer nofollow"
+              >
                 {link.title}
               </TextLink>
             ))
