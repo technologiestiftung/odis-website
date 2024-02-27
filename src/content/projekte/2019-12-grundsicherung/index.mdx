@@ -18,35 +18,41 @@ datasets:
     link: https://www.sozial-informations-system.de/home?lang=de
   - linkText: Bei Datenfragen bitte an Peter.Broytman@SenIAS.berlin.de. wenden
     link: https://www.berlin.de/sen/asgiva/
-  
+category: Datenvisualisierung
 ---
 
-import "./_css/bundle.css"
-import Heading from "@/components/Heading.astro"
+import "./_css/bundle.css";
+import Heading from "@/components/Heading.astro";
 
 export const Tooltip = ({ label, children }) => (
   <span class="inline-block relative group">
-    <span class="underline">{label}</span> <span class="inline px-2 -ml-1 cursor-help leading-tight rounded-full bg-bg-alt">?</span>
-    <span class="border border-line absolute z-10 top-full left-0 bg-bg shadow-primary p-6 pb-8 w-[400px] block max-w-screen opacity-0 pointer-events-none group-hover:hover-hover:opacity-100 hover-hover:group-hover:pointer-events-auto">
-      {children}
+    <span class="underline">{label}</span>{" "}
+    <span class="inline px-2 -ml-1 cursor-help leading-tight rounded-full bg-bg-alt">
+      ?
     </span>
+    <span class="border border-line absolute z-10 top-full left-0 bg-bg shadow-primary p-6 pb-8 w-[400px] block max-w-screen opacity-0 pointer-events-none group-hover:hover-hover:opacity-100 hover-hover:group-hover:pointer-events-auto">{children}</span>
   </span>
-)
+);
 
 <div class="section pb-6 pt-6" id="intro">
-<h2> Hintergrund und Zielsetzung </h2>
+  <h2> Hintergrund und Zielsetzung </h2>
   <p class="headline-04">
-    Berlinweit gibt es ca. 89.000 Menschen, die staatliche Unterstützung in Form von Grundsicherung zur Sicherung ihres Lebensunterhalts bekommen. Die sogenannte “Grundsicherung im Alter und bei Erwerbsminderung gemäß dem 4. Kapital des Zwölften
-    Sozialgesetzbuch (SGB XII)” fokussiert sich auf zwei Gruppen:
+    Berlinweit gibt es ca. 89.000 Menschen, die staatliche Unterstützung in Form
+    von Grundsicherung zur Sicherung ihres Lebensunterhalts bekommen. Die
+    sogenannte “Grundsicherung im Alter und bei Erwerbsminderung gemäß dem 4.
+    Kapital des Zwölften Sozialgesetzbuch (SGB XII)” fokussiert sich auf zwei
+    Gruppen:
   </p>
   <ul class="bullets-wrapper mb-1 not-prose">
     <li class="list-item">
       <div class="flex flex-wrap gap-1.5">
         Menschen, die die
         <Tooltip label="Regelaltersgrenze">
-          Leistungsberechtigt wegen Alters ist, wer die Altersgrenze erreicht hat. Personen, die vor dem 1. Januar
-          1947 geboren sind, erreichen die Altersgrenze mit Vollendung des 65. Lebensjahres. Für Personen, die nach
-          dem 31. Dezember 1946 geboren sind, wird die Altersgrenze angehoben.
+          Leistungsberechtigt wegen Alters ist, wer die Altersgrenze erreicht
+          hat. Personen, die vor dem 1. Januar 1947 geboren sind, erreichen die
+          Altersgrenze mit Vollendung des 65. Lebensjahres. Für Personen, die
+          nach dem 31. Dezember 1946 geboren sind, wird die Altersgrenze
+          angehoben.
           <TextLink
             tag="a"
             href="https://www.bmas.de/DE/Soziales/Sozialhilfe/Grundsicherung-im-Alter-und-bei-Erwerbsminderung/grundsicherung-im-alter-und-bei-erwerbsminderung-art.html"
@@ -60,55 +66,84 @@ export const Tooltip = ({ label, children }) => (
       </div>
     </li>
     <li>
-      Menschen, die aus anderen Gründen (wie eine Krankheit oder eine Behinderung) dauerhaft keine Erwerbstätigkeit
-      von mindestens 3 Stunden täglich ausüben können
+      Menschen, die aus anderen Gründen (wie eine Krankheit oder eine
+      Behinderung) dauerhaft keine Erwerbstätigkeit von mindestens 3 Stunden
+      täglich ausüben können
     </li>
   </ul>
   <p class="flex flex-wrap gap-1.5 not-prose">
-    Personen die eine dieser beiden Gruppen zugehörig sind, ihren Lebensunterhalt nicht aus eigenen Mitteln
-    (Einkommen und Vermögen) sicherstellen können und einen <Tooltip label="gewöhnlichen Aufenthalt">
-      Wer sich nur kurzfristig auf Besuch oder zum Urlaub in Deutschland aufhält, hat keinen Anspruch auf
-        Leistungen der Grundsicherung im Alter und bei Erwerbsminderung. Lediglich Menschen, die ihren
-        Lebensmittelpunkt in Deutschland haben, können Grundsicherung beziehen.<br />
-        Weder ein fester Wohnsitz noch die deutsche Staatsangehörigkeit sind Voraussetzung für den Bezug von
-        Grundsicherung.
-    </Tooltip> erreicht haben, haben Anspruch auf Grundsicherung.
+    Personen die eine dieser beiden Gruppen zugehörig sind, ihren
+    Lebensunterhalt nicht aus eigenen Mitteln (Einkommen und Vermögen)
+    sicherstellen können und einen{" "}
+    <Tooltip label="gewöhnlichen Aufenthalt">
+      Wer sich nur kurzfristig auf Besuch oder zum Urlaub in Deutschland
+      aufhält, hat keinen Anspruch auf Leistungen der Grundsicherung im Alter
+      und bei Erwerbsminderung. Lediglich Menschen, die ihren Lebensmittelpunkt
+      in Deutschland haben, können Grundsicherung beziehen.
+      <br />
+      Weder ein fester Wohnsitz noch die deutsche Staatsangehörigkeit sind
+      Voraussetzung für den Bezug von Grundsicherung.
+    </Tooltip>{" "}
+    erreicht haben, haben Anspruch auf Grundsicherung.
   </p>
   <p class="headline-04">
-    Empfänger:innen der Grundsicherung bekommen jeden Monat finanzielle Unterstützung, wobei die <Tooltip label="Höhe der Leistungen">
-      Die Höhe der Grundsicherung berechnet sich durch den gesetzlich definierten Regelbedarf des
-      Bezugsberechtigten zuzüglich Kosten der Unterkunft und Heizung, Mehrbedarf, Kranken- und
-      Pflegeversicherungsbeiträge und evtl. Sonderbedarf abzüglich seines Einkommens bzw. Vermögens.
-    </Tooltip> vom individuellen Bedarf des Antragstellers abhängt. Die Grundsicherung soll die jeweiligen notwendigen
-    Lebenskosten decken.
+    Empfänger:innen der Grundsicherung bekommen jeden Monat finanzielle
+    Unterstützung, wobei die{" "}
+    <Tooltip label="Höhe der Leistungen">
+      Die Höhe der Grundsicherung berechnet sich durch den gesetzlich
+      definierten Regelbedarf des Bezugsberechtigten zuzüglich Kosten der
+      Unterkunft und Heizung, Mehrbedarf, Kranken- und
+      Pflegeversicherungsbeiträge und evtl. Sonderbedarf abzüglich seines
+      Einkommens bzw. Vermögens.
+    </Tooltip>{" "}
+    vom individuellen Bedarf des Antragstellers abhängt. Die Grundsicherung soll
+    die jeweiligen notwendigen Lebenskosten decken.
   </p>
   <p class="headline-04">
-    Neben der Senatsverwaltung für Integration, Arbeit und Soziales (SenIAS), sind in Berlin die bezirklichen
-    Sozialämter für die Antragstellung und Bewilligung der Grundsicherung zuständig. In dem <a class="gsi-link" href="https://www.sozial-informations-system.de/" target="blank">
-      Sozial-Informations-System </a>stellt die Senatsverwaltung weitere differenzierte Daten zur Grundsicherung, sowie zu anderen sozialen Themen,
-    als Open Data Datensätze bereit. In Zusammenarbeit mit der SenIAS hat die Open Data Informationsstelle (ODIS)
-    diese Daten analysiert und visualisiert, um dieses Thema für alle Interessierten verständlich darzustellen und
-    wichtige Trends und Entwicklungen in diesem Bereich aufzuzeigen.<br />
+    Neben der Senatsverwaltung für Integration, Arbeit und Soziales (SenIAS),
+    sind in Berlin die bezirklichen Sozialämter für die Antragstellung und
+    Bewilligung der Grundsicherung zuständig. In dem{" "}
+    <a
+      class="gsi-link"
+      href="https://www.sozial-informations-system.de/"
+      target="blank"
+    >
+      Sozial-Informations-System{" "}
+    </a>
+    stellt die Senatsverwaltung weitere differenzierte Daten zur Grundsicherung,
+    sowie zu anderen sozialen Themen, als Open Data Datensätze bereit. In Zusammenarbeit
+    mit der SenIAS hat die Open Data Informationsstelle (ODIS) diese Daten analysiert
+    und visualisiert, um dieses Thema für alle Interessierten verständlich darzustellen
+    und wichtige Trends und Entwicklungen in diesem Bereich aufzuzeigen.
+    <br />
   </p>
   <p>
-    Weitere Informationen zur Datengrundlage dieser Visualisierungen befinden sich im letzten Abschnitt dieser
-    Seite.
+    Weitere Informationen zur Datengrundlage dieser Visualisierungen befinden
+    sich im letzten Abschnitt dieser Seite.
   </p>
 </div>
 
 <ContentSection class="grundsicherung not-prose">
   <div class="chart-content container mx-auto flex gap-6 justify-around flex-wrap not-prose">
     <div class="basis-[30%] flex flex-col text-center items-center">
-      <p class="whitespace-nowrap text-headlines font-bold text-[clamp(2rem,-0.875rem+8.333vw,3.5rem)]">89.018</p>
+      <p class="whitespace-nowrap text-headlines font-bold text-[clamp(2rem,-0.875rem+8.333vw,3.5rem)]">
+        89.018
+      </p>
       <p class="leading-tight">Grundsicherungs-Empfänger:innen (31.12.2021)</p>
     </div>
     <div class="basis-[30%] flex flex-col text-center items-center">
-      <p class="whitespace-nowrap text-headlines font-bold text-[clamp(2rem,-0.875rem+8.333vw,3.5rem)]">650.961.631€</p>
+      <p class="whitespace-nowrap text-headlines font-bold text-[clamp(2rem,-0.875rem+8.333vw,3.5rem)]">
+        650.961.631€
+      </p>
       <p class="leading-tight">Jahresausgaben (2021)</p>
     </div>
     <div class="basis-[30%] flex flex-col text-center items-center">
-      <p class="whitespace-nowrap text-headlines font-bold text-[clamp(2rem,-0.875rem+8.333vw,3.5rem)]">35,5%</p>
-      <p class="leading-tight">der Ausgaben gemäß SGB XII sind Grundsicherungsleistungen (2021)</p>
+      <p class="whitespace-nowrap text-headlines font-bold text-[clamp(2rem,-0.875rem+8.333vw,3.5rem)]">
+        35,5%
+      </p>
+      <p class="leading-tight">
+        der Ausgaben gemäß SGB XII sind Grundsicherungsleistungen (2021)
+      </p>
     </div>
   </div>
 </ContentSection>
@@ -139,14 +174,12 @@ beispielsweise Westhafen oder Tegeler Forst).
             <span class="tooltiptext" id="content-description" />
           </Tooltip>
           <div id="navigation" class="flex flex-col gap-4">
-            <div class='flex flex-col gap-2'>
+            <div class="flex flex-col gap-2">
               <h3>Wählen Sie eine Personengruppe</h3>
               <ul id="main-navigation"></ul>
             </div>
-            <div class='flex flex-col gap-2'>
-              <h3>
-                und Art der Grundsicherung
-              </h3>
+            <div class="flex flex-col gap-2">
+              <h3>und Art der Grundsicherung</h3>
               <ul id="sub-navigation"></ul>
             </div>
           </div>
@@ -185,12 +218,10 @@ in Berlin zwischen 18-64 Jahren Grundsicherung. 2021 waren es 1,53%.
     <div class="container max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
       <div class="flex flex-col justify-around gap-6 flex-wrap">
         <div class="map-text md:w-[500px] max-w-full">
-          <Heading id="content-title">
-            Entwicklung von 2006 - 2021
-          </Heading>
+          <Heading id="content-title">Entwicklung von 2006 - 2021</Heading>
           <h3 style="margin-bottom: 1em; margin-top: 2em">
-            Bewegen Sie den Slider, um sich die Daten für die Jahre 2006 bis 2021
-            anzeigen zu lassen.
+            Bewegen Sie den Slider, um sich die Daten für die Jahre 2006 bis
+            2021 anzeigen zu lassen.
           </h3>
           <div id="slider-wrapper slider-container">
             <input
@@ -210,9 +241,9 @@ in Berlin zwischen 18-64 Jahren Grundsicherung. 2021 waren es 1,53%.
             id="content-description"
           >
             Auf dieser Karte werden die Empfänger:innen von Grundsicherung im
-            Alter (ab 65 Jahren) als Anteil (%) an der gleichaltrigen Bevölkerung
-            auf Kiezebene (sogenannte Planungsräume der LORs - Lebensweltlich
-            orientierten Räume) dargestellt.
+            Alter (ab 65 Jahren) als Anteil (%) an der gleichaltrigen
+            Bevölkerung auf Kiezebene (sogenannte Planungsräume der LORs -
+            Lebensweltlich orientierten Räume) dargestellt.
           </p>
         </div>
       </div>
@@ -237,4 +268,5 @@ Wenn Sie Fragen zu den Daten haben, bitte wenden Sie sich an <a href="mailto:pet
 Der Quellcode der Visualisierung ist <a href="https://github.com/technologiestiftung/grundsicherung" target="blank">auf GitHub verfügbar.</a> Wenn Sie Fragen zu dieser Seite den Visualisierungen haben, wenden Sie sich bitte an die ODIS.
 
 <script src="/extra-pages/grundsicherung/js/1.fadaea37.chunk.js"></script>
+
 <script src="/extra-pages/grundsicherung/js/app.a32d7907.js"></script>

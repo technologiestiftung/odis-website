@@ -19,12 +19,12 @@ const {
   class: className = "",
   imageLoading = "lazy",
 } = Astro.props;
-const { title, description } = data;
+const { title, description, category } = data;
 ---
 
 <a href={`/projekte/${slug}`} title={title} class={className}>
   <ProjectMockups {...data} slug={slug} imageLoading={imageLoading} />
-  <Paragraph class="opacity-90 text-sm mb-1" set:html={"Datenvisualisierung"} />
+  <Paragraph class="opacity-90 text-sm mb-1" set:html={category} />
   <Heading tag={titleTag} size="lg" class="mb-1" set:html={title} />
   <Paragraph set:html={description} />
   <Button tag="span" variant="secondary">Projekt ansehen</Button>
