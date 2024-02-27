@@ -4,10 +4,10 @@ tags:
   - "project"
   - "post"
 title: "Grundsicherung in Berlin"
-description: Datenanalyse in Form einer Choroplethenkarte zum Thema Grundsicherung in Berlin
+description: Mit Datenanalysen und -visualisierungen stellen wir Entwicklungen zum Thema Grundsicherung in Berlin dar
 date: 2019-12-17
-period: Dezember 2019
-status: abgeschlossenes Projekt
+period: Dezember 2019 (Erstveröffentlichung)
+status: abgeschlossen
 visible: true
 heroImage: ./images/grundsicherung_desktop_visual.png
 gitHubLink: https://github.com/technologiestiftung/grundsicherung
@@ -16,8 +16,10 @@ datasets:
     link: https://www.sozial-informations-system.de/datasets/ts1700199029202112-xlsx/?lang=de
   - linkText: Alle historischen Daten sind im Sozial-Informations-System zu finden
     link: https://www.sozial-informations-system.de/home?lang=de
-  - linkText: Bei Datenfragen bitte an Peter.Broytman@SenIAS.berlin.de. wenden
-    link: https://www.berlin.de/sen/asgiva/
+partners:
+  - name: SenASGIVA
+    url: https://www.berlin.de/sen/asgiva/
+    logoPath: ./images/sen_asgiva_vertikal.png
 category: Datenvisualisierung
 ---
 
@@ -102,19 +104,13 @@ export const Tooltip = ({ label, children }) => (
   <p class="headline-04">
     Neben der Senatsverwaltung für Integration, Arbeit und Soziales (SenIAS),
     sind in Berlin die bezirklichen Sozialämter für die Antragstellung und
-    Bewilligung der Grundsicherung zuständig. In dem{" "}
-    <a
-      class="gsi-link"
-      href="https://www.sozial-informations-system.de/"
-      target="blank"
-    >
-      Sozial-Informations-System{" "}
-    </a>
+    Bewilligung der Grundsicherung zuständig. Im Sozial-Informations-System
     stellt die Senatsverwaltung weitere differenzierte Daten zur Grundsicherung,
-    sowie zu anderen sozialen Themen, als Open Data Datensätze bereit. In Zusammenarbeit
-    mit der SenIAS hat die Open Data Informationsstelle (ODIS) diese Daten analysiert
-    und visualisiert, um dieses Thema für alle Interessierten verständlich darzustellen
-    und wichtige Trends und Entwicklungen in diesem Bereich aufzuzeigen.
+    sowie zu anderen sozialen Themen, als Open Data Datensätze bereit. In
+    Zusammenarbeit mit der SenIAS hat die Open Data Informationsstelle (ODIS)
+    diese Daten analysiert und visualisiert, um dieses Thema für alle
+    Interessierten verständlich darzustellen und wichtige Trends und
+    Entwicklungen in diesem Bereich aufzuzeigen.
     <br />
   </p>
   <p>
@@ -123,30 +119,24 @@ export const Tooltip = ({ label, children }) => (
   </p>
 </div>
 
-<ContentSection class="grundsicherung not-prose">
-  <div class="chart-content container mx-auto flex gap-6 justify-around flex-wrap not-prose">
-    <div class="basis-[30%] flex flex-col text-center items-center">
-      <p class="whitespace-nowrap text-headlines font-bold text-[clamp(2rem,-0.875rem+8.333vw,3.5rem)]">
-        89.018
-      </p>
-      <p class="leading-tight">Grundsicherungs-Empfänger:innen (31.12.2021)</p>
-    </div>
-    <div class="basis-[30%] flex flex-col text-center items-center">
-      <p class="whitespace-nowrap text-headlines font-bold text-[clamp(2rem,-0.875rem+8.333vw,3.5rem)]">
-        650.961.631€
-      </p>
-      <p class="leading-tight">Jahresausgaben (2021)</p>
-    </div>
-    <div class="basis-[30%] flex flex-col text-center items-center">
-      <p class="whitespace-nowrap text-headlines font-bold text-[clamp(2rem,-0.875rem+8.333vw,3.5rem)]">
-        35,5%
-      </p>
-      <p class="leading-tight">
-        der Ausgaben gemäß SGB XII sind Grundsicherungsleistungen (2021)
-      </p>
-    </div>
+{" "}
+
+<div class="chart-content container mx-auto  gap-6 justify-around  not-prose">
+  <div class="basis-[30%] flex flex-col text-center items-center mb-6">
+    <p class="whitespace-nowrap text-headlines font-bold">89.018</p>
+    <p class="leading-tight">Grundsicherungs-Empfänger:innen (31.12.2021)</p>
   </div>
-</ContentSection>
+  <div class="basis-[30%] flex flex-col text-center items-center mb-6">
+    <p class="whitespace-nowrap text-headlines font-bold">650.961.631€</p>
+    <p class="leading-tight">Jahresausgaben (2021)</p>
+  </div>
+  <div class="basis-[30%] flex flex-col text-center items-center mb-3">
+    <p class="whitespace-nowrap text-headlines font-bold">35,5%</p>
+    <p class="leading-tight">
+      der Ausgaben gemäß SGB XII sind Grundsicherungsleistungen (2021)
+    </p>
+  </div>
+</div>
 
 ## Betrachtung auf Kiezebene
 
