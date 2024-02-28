@@ -3,14 +3,18 @@ tags:
   - "project"
   - "post"
 title: Fahrradzählstellen
-blogLinkTitle: "Hier gehts zur interaktiven Visualisierung"
+blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://lab.technologiestiftung-berlin.de/projects/bikerides/de/
-description: Eine Visualisierung von Messungen der Radzählstellen in Berlin
+description: Eine Visualisierung des Radverkehrsaufkommens nach unterschiedlichen Rhythmen und Standorten
 date: 2018-09-11
 period: Septemberr 2018
-status: abgeschlossenes Projekt
+status: abgeschlossen
 visible: true
 heroImage: ./images/fahrraeder_desktop_visual.png
+datasets:
+  - linkText: Radzähldaten
+    link: https://daten.berlin.de/datensaetze/radzähldaten-berlin
+category: Datenvisualisierung
 ---
 
 ## Hintergrund und Zielsetzung
@@ -19,15 +23,4 @@ Um die langfristige Entwicklung des Radverkehrs in Berlin zu beobachten und zu a
 
 In dieser interaktiven Visualisierung können mittels Netzdiagrammen die jährlichen, wöchentlichen und täglichen Fahrmuster der jeweiligen Standorte zielgerichtet und vergleichend untersucht werden.
 
-Die stündliche zusammengefassten Werte werden jedes Jahr als offener Datensatz  von der [Senatsverwaltung für Umwelt, Verkehr und Klimaschutz](https://www.berlin.de/senuvk/verkehr/lenkung/vlb/de/radzaehlungen.shtml) veröffentlicht.
-
-import image from "./images/interface.png"
-
-<ContentSection class="sm:px-6">
-
-  <ImageSection class="sm:container sm:mx-auto"
-    src={image}
-    caption="Interface des interaktiven Tools."
-    withShadow
-  />
-</ContentSection>
+Die stündliche zusammengefassten Werte werden jedes Jahr als offener Datensatz von der [Senatsverwaltung für Umwelt, Verkehr und Klimaschutz](https://www.berlin.de/senuvk/verkehr/lenkung/vlb/de/radzaehlungen.shtml) veröffentlicht.

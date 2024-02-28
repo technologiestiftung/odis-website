@@ -4,12 +4,12 @@ tags:
   - "project"
   - "post"
 title: Erfrischungskarte
-blogLinkTitle: "Hier geht's zur Karte"
+blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://erfrischungskarte.odis-berlin.de/
-description: Eine Webkarte vom Berliner Stadtgebiet, die Temperatur, kühlen Wind und Schattenbereiche anzeigt
+description: Entdecke schattige und kühle Orte zum Ausruhen und Verweilen an heißen Tagen in einer interaktiven Karte
 date: 2021-07-01
-period: Juli 2021
-status: abgeschlossenes Projekt, das nachhaltig von der ODIS gepflegt wird
+period: Juli 2021 (Erstveröffentlichung)
+status: abgeschlossen
 visible: true
 heroImage: ./images/erfrischungskarte_desktop_visual.png
 mobileImage: ./images/erfrischungskarte_mobile_visual.png
@@ -25,16 +25,17 @@ datasets:
   - linkText: Freibädern und Schwimmhallen
     link: https://www.berlin.de/special/sport-und-fitness/schwimmen/schwimmbad/a-z/
   - linkText: Standorte öffentlicher Toiletten
-    link: https://fbinter.stadt-berlin.de/fb/wms/senstadt/k_toiletten
+    link: https://daten.berlin.de/datensaetze/öffentliche-toiletten-wfs
   - linkText: Bänke, Picknicktische und Trinkbrunnen
     link: https://overpass-turbo.eu
 gitHubLink: https://github.com/technologiestiftung/erfrischungskarte-daten
+category: Datenvisualisierung
 ---
 
 ## Einleitung
 
 Es sind 30 Grad und keine Schatten in Sicht? Open Data kann helfen! Die „Berliner Erfrischungskarte“ ist eine neue Kartenanwendung von uns und dem CityLAB Berlin und zeigt auf, welche Orte in der Stadt besonders erfrischend oder kühl sind.
-  
+
 Die Erfrischungskarte ist ein Beispiel dafür, dass Open Data nicht nur Transparenz und Offenheit schafft, sondern auch Analysen und Anwendungen ermöglicht, um den Alltag ein kleines bisschen angenehmer zu machen und uns die Stadt auf neue Art und Weise erkunden lässt.
 
 ## Hintergrund
@@ -49,22 +50,20 @@ Aufgrund der differenzierten Topographie kann es zum Teil erhebliche Unterschied
 
 Klimatische Unterschiede in der Stadt besser verstehen und erfrischende Orte finden, dabei hilft die Erfrischungskarte, eine Webkarte vom Berliner Stadtgebiet, die Temperaturverhältnisse, Kaltluftverhältnisse und Schattenbereiche visualisiert. Diese Daten können für jede Stunde des Tages zwischen 9 und 20 Uhr angezeigt werden. Die Karte gibt also Informationen darüber, an welchen Orten vergleichsweise höhere oder niedrigere Temperaturen vorherrschen und zu welchen Uhrzeiten wo Schatten und Sonne zu erwarten sind. Es werden außerdem verschiedene Orte, wie Freibäder, Grünanlagen und Wasserspielplätze angezeigt, an denen sich die Bürger:innen in Berlin an heißen Tagen erfrischen können. Mittels der Teilfunktion können Nutzer:innen Ihren Lieblingsort abspeichern und teilen.
 
-
 import logo from "./images/Tagesspiegel-Logo.png";
 
-<Quote
-  authorName="Tagesspiegel"
-  authorLogo={logo}
->
- Wer also keinen kühlen Ort in seiner Nähe findet, dem zeigt die Erfrischungskarte vielleicht immerhin, wo in der Nachbarschaft eine Abkühlung zu finden ist.
+<Quote authorName="Tagesspiegel" authorLogo={logo}>
+  Wer also keinen kühlen Ort in seiner Nähe findet, dem zeigt die
+  Erfrischungskarte vielleicht immerhin, wo in der Nachbarschaft eine Abkühlung
+  zu finden ist.
 </Quote>
 
 ## Datengrundlage und Methode
 
-Informationen über Erfrischungsmöglichkeiten und Klima in der Stadt stehen frei zugänglich als Open Data zur Verfügung. Für die Bürger:innen sind diese Daten jedoch nicht immer leicht zu finden. Es gibt zwar Daten und Karten dazu, jedoch nicht in dieser kombinierten, neu klassifizierten und interaktiven Form. 
+Informationen über Erfrischungsmöglichkeiten und Klima in der Stadt stehen frei zugänglich als Open Data zur Verfügung. Für die Bürger:innen sind diese Daten jedoch nicht immer leicht zu finden. Es gibt zwar Daten und Karten dazu, jedoch nicht in dieser kombinierten, neu klassifizierten und interaktiven Form.
 
-Was sogar komplett neu für Berlin ist, ist die Visualisierung von [Schatten](https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_dom@senstadt&bbox=387046,5818588,391547,5821400) über den Tagesverlauf. Diese Informationen sind nirgendwo anders in dieser Form zu finden. Die Informationen zu Temperatur und Kaltluft beruhen auf weiterverarbeiteten [Klimamodelldaten](https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/karten/) von der Senatsverwaltung für Stadtentwicklung und Wohnen. Für beide Themen liegen Daten für unterschiedliche Zeitpunkte des Tages vor. Diese Daten wurden interpolieren, um Daten für jede Stunde des Tages zu erhalten. Die Schatten wurden aus einem digitalen Geländemodell berechnet. 
+Was sogar komplett neu für Berlin ist, ist die Visualisierung von [Schatten](https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_dom@senstadt&bbox=387046,5818588,391547,5821400) über den Tagesverlauf. Diese Informationen sind nirgendwo anders in dieser Form zu finden. Die Informationen zu Temperatur und Kaltluft beruhen auf weiterverarbeiteten [Klimamodelldaten](https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/karten/) von der Senatsverwaltung für Stadtentwicklung und Wohnen. Für beide Themen liegen Daten für unterschiedliche Zeitpunkte des Tages vor. Diese Daten wurden interpolieren, um Daten für jede Stunde des Tages zu erhalten. Die Schatten wurden aus einem digitalen Geländemodell berechnet.
 
-Ergänzt wird die Karte durch Points of Interests, also Orten die im Zusammenhang mit den Daten interessant sein könnten. Diese stammen aus verschiedenen Quellen: Die Koordinaten der Grünanlagen wurden aus einem Datensatz zum [öffentlichen Grünanlagenbestand](https://daten.berlin.de/datensaetze/grünanlagenbestand-berlin-einschl-der-öffentlichen-spielplätze-grünanlagen-wfs) erstellt. Dieser wird durch die bezirklichen Straßen- und Grünflächenämter gepflegt und im Berliner Geodatenportal zur Verfügung gestellt. Die Standorte der [Zierbrunnen](https://daten.berlin.de/datensaetze/atkis-sonstiges-bauwerk-oder-sonstige-einrichtung-punkte-wfs) finden sich ebenfalls im Geodatenportal, und sind Bestandteil des umfangreichen ATKIS-Datensatzes, der regelmäßig durch die bezirklichen Vermessungsämter aktualisiert wird. Die Standorte der [Badestellen und Strandbäder](https://daten.berlin.de/datensaetze/liste-der-badestellen) stammen vom Landesamt für Gesundheit und Soziales (LaGeSo). Die Informationen zu [Freibädern und Schwimmhallen](https://www.berlin.de/special/sport-und-fitness/schwimmen/schwimmbad/a-z/) stehen derzeit nur als Liste über Berlin.de bereit. Sie wurden mittels Webscraping in einen Geodatensatz überführt. Über die Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz stehen die [Standorte öffentlicher Toiletten](https://fbinter.stadt-berlin.de/fb/wms/senstadt/k_toiletten) mit Hinweis auf Barrierefreiheit und Nutzungsgebühr als Geodienst zur Verfügung. [Bänke, Picknicktische und Trinkbrunnen](https://overpass-turbo.eu) wurden aus Open Street Map exportiert, einer frei zugänglichen Sammlung von Geodaten. 
+Ergänzt wird die Karte durch Points of Interests, also Orten die im Zusammenhang mit den Daten interessant sein könnten. Diese stammen aus verschiedenen Quellen: Die Koordinaten der Grünanlagen wurden aus einem Datensatz zum [öffentlichen Grünanlagenbestand](https://daten.berlin.de/datensaetze/grünanlagenbestand-berlin-einschl-der-öffentlichen-spielplätze-grünanlagen-wfs) erstellt. Dieser wird durch die bezirklichen Straßen- und Grünflächenämter gepflegt und im Berliner Geodatenportal zur Verfügung gestellt. Die Standorte der [Zierbrunnen](https://daten.berlin.de/datensaetze/atkis-sonstiges-bauwerk-oder-sonstige-einrichtung-punkte-wfs) finden sich ebenfalls im Geodatenportal, und sind Bestandteil des umfangreichen ATKIS-Datensatzes, der regelmäßig durch die bezirklichen Vermessungsämter aktualisiert wird. Die Standorte der [Badestellen und Strandbäder](https://daten.berlin.de/datensaetze/liste-der-badestellen) stammen vom Landesamt für Gesundheit und Soziales (LaGeSo). Die Informationen zu [Freibädern und Schwimmhallen](https://www.berlin.de/special/sport-und-fitness/schwimmen/schwimmbad/a-z/) stehen derzeit nur als Liste über Berlin.de bereit. Sie wurden mittels Webscraping in einen Geodatensatz überführt. Über die Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz stehen die [Standorte öffentlicher Toiletten](https://fbinter.stadt-berlin.de/fb/wms/senstadt/k_toiletten) mit Hinweis auf Barrierefreiheit und Nutzungsgebühr als Geodienst zur Verfügung. [Bänke, Picknicktische und Trinkbrunnen](https://overpass-turbo.eu) wurden aus Open Street Map exportiert, einer frei zugänglichen Sammlung von Geodaten.
 
 Die verarbeiteten Daten und die Skripte zur Datenprozessierung sind in [diesem GitHub Repository](https://github.com/technologiestiftung/erfrischungskarte-daten) zu finden.

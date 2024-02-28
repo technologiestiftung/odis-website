@@ -24,10 +24,15 @@ const { class: className } = Astro.props;
         Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin
         informiert werden? Hier geht es zu unserem ODIS-Newsletter!
       </Paragraph>
-      <Button class="mt-2" tag="button">Newsletter Abonnieren</Button>
+      <Button
+        class="mt-2"
+        tag="a"
+        href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-t9stf1hf-10dv&_ga=2.39832739.1628233919.1701885056-587004395.1700833794"
+      >
+        Newsletter abonnieren
+      </Button>
       <p class="mt-6">
-        Newsletter verpasst?<br />
-        Stöber in unserem
+        Newsletter verpasst? Stöber in unserem
         <a
           class="text-links hover:text-links-active focusable underline"
           href="/aktuelles/archiv/"
