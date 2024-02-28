@@ -333,13 +333,13 @@
 }
 
 .prose :where(h3):not(:where([class~="not-prose"] *)) {
-  @apply text-xl mb-2 mt-0 pt-6;
+  @apply text-xl mb-2 pt-0 mt-6;
 }
 
 .prose :where(h4):not(:where([class~="not-prose"] *)),
 .prose :where(h5):not(:where([class~="not-prose"] *)),
 .prose :where(h6):not(:where([class~="not-prose"] *)) {
-  @apply text-lg mb-1 mt-0 pt-4;
+  @apply text-lg mb-1 pt-0 mt-4;
 }
 
 .prose :where(h5):not(:where([class~="not-prose"] *)),
@@ -353,17 +353,17 @@
 
 .prose :where(a > h1):not(:where([class~="not-prose"] *)),
 .prose-invert :where(a > h1):not(:where([class~="not-prose"] *)) {
-  @apply mt-0 pt-8;
+  @apply mt-0 mt-8;
 }
 
 .prose :where(a > h2):not(:where([class~="not-prose"] *)),
 .prose-invert :where(a > h2):not(:where([class~="not-prose"] *)) {
-  @apply mt-0 pt-6;
+  @apply mt-0 mt-6;
 }
 
 .prose :where(a > h3):not(:where([class~="not-prose"] *)),
 .prose-invert :where(a > h3):not(:where([class~="not-prose"] *)) {
-  @apply mt-0 pt-5;
+  @apply mt-0 mt-5;
 }
 
 .prose :where(a > h4):not(:where([class~="not-prose"] *)),
@@ -372,7 +372,7 @@
 .prose-invert :where(a > h4):not(:where([class~="not-prose"] *)),
 .prose-invert :where(a > h5):not(:where([class~="not-prose"] *)),
 .prose-invert :where(a > h6):not(:where([class~="not-prose"] *)) {
-  @apply mt-0 pt-4;
+  @apply mt-0 mt-4;
 }
 
 .prose :where(a:first-of-type > h1):not(:where([class~="not-prose"] *)),
@@ -400,8 +400,9 @@
   @apply text-discrete text-base lg:text-base;
 }
 
-:where(a):not(:where([class~="not-prose"] *)) {
+.prose :where(a):not(:where([class~="not-prose"] *)) {
   @apply focusable hover-hover:hover:text-links-active transition-colors;
+  @apply px-1 -ml-1 dark:hover-hover:hover:bg-text;
 }
 
 iframe {

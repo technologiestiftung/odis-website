@@ -10,11 +10,12 @@ import YouTubeLogo from "./logos/YouTubeLogo.astro";
 import XLogo from "./logos/XLogo.astro";
 import InstagramLogo from "./logos/InstagramLogo.astro";
 import LinkedInLogo from "./logos/LinkedInLogo.astro";
+import TextLink from "./TextLink.astro";
 ---
 
 <footer class="grid-container border-t-4 border-t-line">
   <div
-    class="col-start-2 col-span-10 xl:col-span-6 pt-9 xl:pb-9 flex flex-col gap-6"
+    class="md:col-start-2 md:col-span-10 xl:col-span-6 pt-9 xl:pb-9 flex flex-col gap-6"
   >
     <div class="flex flex-wrap gap-3">
       <a
@@ -22,7 +23,9 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
         class="focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
         aria-label="Technologiestiftung Berlin"
       >
-        <TSBLogo class="text-links hover:text-links-active" />
+        <TSBLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
 
       <a
@@ -30,7 +33,9 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
         class="focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
         aria-label="Der Regierende Bürgermeister von Berlin - Senatskanzlei"
       >
-        <BerlinLogo class="text-links hover:text-links-active" />
+        <BerlinLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
 
       <a
@@ -38,7 +43,9 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
         class="focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
         aria-label="Investitionsbank Berlin"
       >
-        <IBBLogo class="text-links hover:text-links-active" />
+        <IBBLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
 
       <a
@@ -46,7 +53,9 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
         class="focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
         aria-label="Berlin Open Data"
       >
-        <BerlinOpenDataLogo class="text-links hover:text-links-active" />
+        <BerlinOpenDataLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
     </div>
 
@@ -58,15 +67,17 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
   </div>
 
   <div
-    class="col-start-2 col-span-12 xl:col-end-13 xl:col-span-3 flex flex-col gap-6 pt-4 xl:pt-9 pb-9"
+    class="md:col-start-2 md:col-span-10 xl:col-end-13 xl:col-span-3 flex flex-col gap-6 pt-4 xl:pt-9 pb-9"
   >
-    <div class="flex xl:justify-end">
+    <div class="flex xl:justify-end gap-2 lg:gap-0 flex-wrap">
       <a
         href="https://www.facebook.com/Technologiestiftung"
         class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
         aria-label="Technologiestiftung auf Facebook"
       >
-        <FbLogo class="text-links hover:text-links-active" />
+        <FbLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
 
       <a
@@ -74,7 +85,9 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
         class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
         aria-label="Technologiestiftung auf GitHub"
       >
-        <GitHubLogo class="text-links hover:text-links-active" />
+        <GitHubLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
 
       <a
@@ -82,7 +95,9 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
         class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
         aria-label="Technologiestiftung auf YouTube"
       >
-        <YouTubeLogo class="text-links hover:text-links-active" />
+        <YouTubeLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
 
       <a
@@ -90,7 +105,9 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
         class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
         aria-label="Technologiestiftung auf Twitter (X)"
       >
-        <XLogo class="text-links hover:text-links-active" />
+        <XLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
 
       <a
@@ -98,7 +115,9 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
         class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
         aria-label="Technologiestiftung auf Instagram"
       >
-        <InstagramLogo class="text-links hover:text-links-active" />
+        <InstagramLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
 
       <a
@@ -106,31 +125,36 @@ import LinkedInLogo from "./logos/LinkedInLogo.astro";
         class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
         aria-label="Technologiestiftung auf LinkedIn"
       >
-        <LinkedInLogo class="text-links hover:text-links-active" />
+        <LinkedInLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
       </a>
     </div>
 
     <div class="flex gap-4 xl:justify-end">
-      <a
+      <TextLink
+        tag="a"
         href="https://www.technologiestiftung-berlin.de/de/stiftung/kontakt-anfahrt/"
-        class="text-links hover:text-links-active font-bold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+        class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-textfont-bold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
       >
         Kontakt
-      </a>
+      </TextLink>
 
-      <a
+      <TextLink
+        tag="a"
         href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
-        class="text-links hover:text-links-active font-bold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+        class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-textfont-bold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
       >
         Datenschutz
-      </a>
+      </TextLink>
 
-      <a
+      <TextLink
+        tag="a"
         href="https://www.technologiestiftung-berlin.de/de/impressum/"
-        class="text-links hover:text-links-active font-bold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+        class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-textfont-bold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
       >
         Impressum
-      </a>
+      </TextLink>
     </div>
   </div>
 </footer>

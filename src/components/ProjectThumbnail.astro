@@ -5,6 +5,7 @@ import Paragraph from "./Paragraph.astro";
 import ProjectMockups from "./ProjectMockups.astro";
 import Button from "./Button.astro";
 import type { LocalImageProps } from "astro:assets";
+import { cn } from "@/utils/classNames";
 
 export type Props = CollectionEntry<"projekte"> & {
   class?: string;
@@ -22,10 +23,32 @@ const {
 const { title, description, category } = data;
 ---
 
-<a href={`/projekte/${slug}`} title={title} class={className}>
-  <ProjectMockups {...data} slug={slug} imageLoading={imageLoading} />
+<a
+  href={`/projekte/${slug}`}
+  title={title}
+  class={cn("group hover:text-text not-prose", className)}
+>
+  <ProjectMockups
+    {...data}
+    slug={slug}
+    imageLoading={imageLoading}
+    class={cn(
+      "group-hover:-translate-y-2",
+      "transition-transform ease-out-extreme duration-1000",
+    )}
+  />
   <Paragraph class="opacity-90 text-sm mb-1" set:html={category} />
-  <Heading tag={titleTag} size="lg" class="mb-1" set:html={title} />
+  <Heading
+    tag={titleTag}
+    size="lg"
+    class={cn(
+      "mb-1 group-hover:text-links-active transition-all",
+      "dark:group-hover:bg-text dark:group-hover:text-links-active",
+      "w-fit px-2 -ml-2 dark:group-hover:ml-0",
+      "duration-1000 ease-out-extreme",
+    )}
+    set:html={title}
+  />
   <Paragraph set:html={description} />
   <Button tag="span" variant="secondary">Projekt ansehen</Button>
 </a>

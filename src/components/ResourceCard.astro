@@ -36,6 +36,7 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
 
 <article
   class={cn(
+    "group not-prose",
     "border @container flex flex-col justify-between",
     isInverted ? "text-text-inv" : "text-text",
     isInverted ? "bg-bg-inv" : "bg-bg-alt dark:bg-bg",
@@ -47,7 +48,7 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
     href={resourceLink}
     target={linkIsExternal ? "_blank" : "_self"}
     rel={linkIsExternal ? "noopener noreferrer" : undefined}
-    class="grid px-6 py-4 @sm:py-5 gap-2 group min-h-[258px]"
+    class={cn("grid px-6 py-4 @sm:py-5 gap-2 group min-h-[258px]")}
     style={{
       gridTemplate: `
       "question" auto
@@ -75,14 +76,24 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
       size="lg"
       tag={titleTag}
       style={{ gridArea: "title" }}
-      class="m-0 hover-hover:group-hover:text-links-active transition-colors"
+      class={cn(
+        "m-0 hover-hover:group-hover:text-links-active transition-colors",
+        "group-hover:text-links-active transition-all",
+        "dark:group-hover:bg-text dark:group-hover:text-links-active",
+        "w-fit px-2 -ml-2 dark:group-hover:ml-0",
+        "duration-1000 ease-out-extreme box-decoration-clone",
+        isInverted && "group-hover:bg-bg group-hover:ml-0",
+      )}
       inverted={isInverted}
     >
       {title}
     </Heading>
     <Paragraph
       style={{ gridArea: "description" }}
-      class="line-clamp-5"
+      class={cn(
+        "line-clamp-5",
+        isInverted ? "group-hover:text-text-inv" : "group-hover:text-text",
+      )}
       inverted={isInverted}
     >
       {description}
@@ -136,7 +147,7 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
       target={linkIsExternal ? "_blank" : "_self"}
       rel={linkIsExternal ? "noopener noreferrer" : undefined}
       class={cn(
-        "relative h-full pt-12 group",
+        "relative h-full pt-12",
         isVideoAspectRatio && "@sm:col-span-3",
       )}
     >
@@ -147,7 +158,7 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
           "absolute w-full h-auto top-4 left-0 bg-bg-alt",
           "border border-line-inv ",
           isInverted ? "shadow-secondary-inv" : "shadow-secondary",
-          "dark:shadow-primary-inv",
+          "dark:shadow-primary-inv duration-1000 ease-out-extreme",
           "hover-hover:group-hover:-translate-y-4 transition-transform",
         )}
         widths={[isVideoAspectRatio ? 560 : 400]}
