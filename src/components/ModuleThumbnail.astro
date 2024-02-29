@@ -2,22 +2,20 @@
 import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
 import Button from "./Button.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
 import { cn } from "../utils/classNames";
 import { Image } from "astro:assets";
 
 export type Props = CollectionEntry<"module"> & {
   position: "left" | "right";
+  totalModules: number;
 };
 
-const allModules = (await getCollection("module")).sort(
-  (a, b) => a.data.number - b.data.number,
-);
 const module = Astro.props;
 
 const isRight = module.position === "right";
 const isFirst = module.data.number === 1;
-const isLast = module.data.number === allModules.length;
+const isLast = module.data.number === module.totalModules;
 ---
 
 <section class="bg-bg group/section">
@@ -25,12 +23,15 @@ const isLast = module.data.number === allModules.length;
     <a
       href={`/module/${module.slug}`}
       title={module.data.title}
-      class="group/link p-px lg:col-span-10 outline-none"
+      class={cn(
+        "group/link p-px lg:col-span-10 outline-none dark:hover-hover:hover:bg-bg-inv",
+        "dark:hover-hover:hover:text-text",
+      )}
     >
       <div
         class="p-16 -mx-16 grid grid-cols-10 gap-4 sm:gap-6 transition-colors group-hover:bg-bg-alt
           group-focus-visible/link:bg-bg-alt group-focus-visible/link:ring-2 group-focus-visible/link:ring-line
-          relative"
+          relative dark:group-hover:bg-bg-inv"
       >
         <div
           class={cn(
@@ -55,6 +56,8 @@ const isLast = module.data.number === allModules.length;
               alt={`Module icon illustration for module '${module.data.title}'`}
               class={cn(
                 `col-span-8 sm:col-span-8 sm:col-start-2 z-10 relative`,
+                `hover-hover:group-hover/link:-translate-y-2 transition-transform`,
+                `duration-1000 ease-out-extreme`,
                 isRight
                   ? `sm:order-1 lg:order-2 lg:col-span-3`
                   : `lg:col-span-2`,
@@ -70,8 +73,21 @@ const isLast = module.data.number === allModules.length;
             isRight && "sm:order-3 lg:order-1",
           )}
         >
-          <Heading tag="h3" size="lg">{module.data.title}</Heading>
-          <Paragraph class="mb-6">{module.data.description}</Paragraph>
+          <Heading
+            tag="h3"
+            size="lg"
+            class={cn(
+              "px-2 -ml-2 transition-all duration-1000 ease-out-extreme w-fit",
+              "dark:hover-hover:group-hover/link:bg-text",
+              "dark:hover-hover:group-hover/link:text-links-active",
+              "dark:hover-hover:group-hover/link:ml-0",
+            )}
+          >
+            {module.data.title}
+          </Heading>
+          <Paragraph class="mb-6 hover-hover:group-hover/link:text-text">
+            {module.data.description}
+          </Paragraph>
           <Button tag="span">Erfahre mehr</Button>
         </div>
         <div class="col-span-1 hidden lg:block" aria-hidden="true"></div>

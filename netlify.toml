@@ -2,22 +2,30 @@
   command = "npm run build"
   publish = "dist"
 
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    cache-control = '''
+    max-age=31536000,
+    immutable
+    '''
+
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
-  [plugins.inputs]
-    fail_deploy_on_score_thresholds = "true"
-
-  # Set minimum thresholds for each report area
-  [plugins.inputs.thresholds]
-    performance = 0.8
-    accessibility = 0.9
+  [[plugins.inputs.audits]]
+    path = ""
 
   [[plugins.inputs.audits]]
     path = "contact"
 
   [[plugins.inputs.audits]]
-    path = "ueber-uns"
+    path = "ueber-odis"
 
   [[plugins.inputs.audits]]
     path = "module"

@@ -61,7 +61,7 @@ const { Content } = await post.render();
             period && (
               <>
                 <Heading size="lg" tag="dt">
-                  Umsetzung
+                  Veröffentlichung
                 </Heading>
                 <dd class="mb-8">
                   <Paragraph>{period}</Paragraph>
@@ -92,14 +92,15 @@ const { Content } = await post.render();
                   <ul class="flex flex-col gap-4">
                     {datasets.map((dataset) => (
                       <li>
-                        <a
+                        <TextLink
+                          tag="a"
                           href={dataset.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           title={dataset.linkText}
                         >
                           {dataset.linkText}
-                        </a>
+                        </TextLink>
                       </li>
                     ))}
                   </ul>
@@ -112,7 +113,7 @@ const { Content } = await post.render();
             gitHubLink && (
               <>
                 <Heading size="lg" tag="dt">
-                  GitHub
+                  Quellcode
                 </Heading>
                 <dd class="mb-8">
                   <TextLink tag="a" href={gitHubLink}>

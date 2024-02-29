@@ -13,14 +13,14 @@ const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
 
 <div class="grid grid-cols-12 not-prose py-16 gap-8">
   <span class="col-span-2" aria-hidden="true">
-    <svg width="61" height="38" fill="none">
+    <svg width="61" height="38" viewBox="0 0 55 55" fill="none">
       <path
         fill="var(--headlines)"
         d="M49.56.333C40.52.333 35.33 5.305 35.33 12.35c0 4.281 3.181 6.768 8.037 6.906-2.512 4.972-6.028 10.082-9.712 14.779l6.196 3.453C50.733 29.2 60.61 17.874 60.61 9.173c0-5.663-3.683-8.84-11.05-8.84Zm-33.654 0C6.865.333 1.674 5.305 1.674 12.35c0 4.281 3.182 6.768 8.037 6.906C7.2 24.228 3.684 29.338 0 34.035l6.195 3.453C17.078 29.2 26.957 17.874 26.957 9.173c0-5.663-3.684-8.84-11.05-8.84Z"
       ></path>
     </svg>
   </span>
-  <blockquote class="text-xl col-span-8 text-center">
+  <blockquote class="col-span-8 text-center">
     <p><slot /></p>
     {
       authorName && (
@@ -35,7 +35,7 @@ const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
             />
           )}
           <cite class="inline-flex flex-col items-center text-base">
-            <span>{authorName.trim()}</span>
+            <span class="text-sm">{authorName.trim()}</span>
             {authorRole && (
               <span class="block text-sm opacity-75">{authorRole.trim()}</span>
             )}
@@ -43,7 +43,7 @@ const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
               <Image
                 src={authorLogo}
                 alt={`Logo von ${authorName}`}
-                class="max-w-[12rem] mt-4"
+                class="max-w-[10rem] mt-4"
                 widths={[240]}
                 sizes="240px"
               />
@@ -54,7 +54,7 @@ const { authorName, authorRole, authorAvatar, authorLogo } = Astro.props;
     }
   </blockquote>
   <span class="col-span-2" aria-hidden="true">
-    <svg width="61" height="38" fill="none">
+    <svg width="61" height="38" viewBox="0 0 55 55" fill="none">
       <path
         fill="var(--headlines)"
         d="M11.05 37.487c9.042 0 14.233-4.972 14.233-12.016 0-4.282-3.182-6.768-8.037-6.906 2.511-4.973 6.027-10.083 9.71-14.78L20.763.334C9.878 8.62 0 19.946 0 28.647c0 5.663 3.683 8.84 11.05 8.84Zm33.655 0c9.041 0 14.232-4.972 14.232-12.016 0-4.282-3.181-6.768-8.037-6.906 2.512-4.973 6.028-10.083 9.711-14.78L54.416.334C43.533 8.62 33.654 19.946 33.654 28.647c0 5.663 3.684 8.84 11.051 8.84Z"

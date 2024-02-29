@@ -3,26 +3,23 @@ tags:
   - "home"
   - "project"
   - "post"
-title: Berliner EnergieCheckpoint
+title: EnergieCheckpoint
 blogLinkTitle: "Hier geht's zur Anwendung"
 blogLink: https://energiecheckpoint.odis-berlin.de
 description: Mit einer Webkarte Energieverbrauch und Sanierungspotentiale öffentlicher Gebäude erkunden
 date: 2023-03-22
 period: März 2023
-status: Abgeschlossenes Projekt
+status: abgeschlossen
 visible: true
 heroImage: ./images/energiecheckpoint_desktop_visual.png
 mobileImage: ./images/energiecheckpoint_mobile_visual.png
 projectUrlWithoutProtocol: "energiecheckpoint.odis-berlin.de"
 showImageInMockup: true
 datasets:
-  - linkText: Teilweise offener Datensatz der Berliner Immobilienmanagement GmbH (BIM) 
+  - linkText: Teilweise offener Datensatz der Berliner Immobilienmanagement GmbH (BIM)
     link: https://www.bim-berlin.de/presse/publikationen/
 gitHubLink: https://github.com/technologiestiftung/energiekarte
-partners:
-  - name: Berliner Immobilienmanagement GmbH (BIM)
-    url: https://www.ihk.de/berlin/
-    logoPath: ./images/logo_bim.svg
+category: Datenvisualisierung
 ---
 
 ## Hintergrund
@@ -40,8 +37,7 @@ Mit der interaktiven Webkarte „Berliner EnergieCheckpoint“ haben wir daher e
 Der EnergieCheckpoint visualisiert die von der BIM Berliner Immobilienmanagement GmbH regelmäßig veröffentlichten Energieverbrauchsdaten und Einsparmaßnahmen für über 300 Standorte wie Schulen, Feuerwehren oder Kultureinrichtungen.
 Mit Klick auf einen Standort erhalten Nutzer:innen Informationen zum Gebäudetyp, Wärme- bzw. Stromverbrauch und Art der Wärmeversorgung (Gas, Fernwärme etc.).
 
-
-import image1 from "./images/volksbuehne.png"
+import image1 from "./images/volksbuehne.png";
 
 <ContentSection class="sm:px-6">
 
@@ -53,7 +49,6 @@ import image1 from "./images/volksbuehne.png"
 
 Prinzipiell lassen sich die Verbrauchsinformationen über einen Button zwischen Wärme- und Stromverbrauch jederzeit umschalten. Die Ranking-Funktion erlaubt es, die Karte weiter zu explorieren und die Einrichtungen nacheinander durchzugehen. Es kann zur Liegenschaft mit dem nächsthöheren bzw. nächstniedrigeren Verbrauch gesprungen werden.
 
-
 <VideoEmbed
   url="/videos/energiekarte_ranking_video.mp4"
   caption="Beispielnavigation EnergieCheckpoint"
@@ -62,7 +57,7 @@ Prinzipiell lassen sich die Verbrauchsinformationen über einen Button zwischen 
 Für ein besseres Verständnis wird der Stromverbrauch der einzelnen Standorte mit dem Verbrauch eines durchschnittlichen Fünfpersonenhaushalts verglichen.
 Je Gebäude oder Gebäudeteil der Liegenschaft werden darüber hinaus Sanierungsdaten angezeigt, die Kosten und Flächen der Sanierungsvorhaben darstellen. Die farbige Fläche markiert die geschätzte Fläche der Liegenschaft, ist aber nur eine Annäherung, da sich Gebäude auch außerhalb der Fläche befinden können.
 
-import image2 from "./images/sanierungen.png"
+import image2 from "./images/sanierungen.png";
 
 <ContentSection class="sm:px-6">
 
@@ -76,33 +71,33 @@ Mit verschiedenen Filterfunktionen lassen sich die öffentlichen Einrichtungen n
 
 Für einen leichteren Einstieg in die Anwendung wird bei einem Klick auf "Erkunden" in der Infobox eine neunteilige Tour angeboten, bei der die einzelnen Funktionen genauer erklärt und eingeordnet werden.
 
-import image3 from "./images/joyride_1.png"
+import image3 from "./images/joyride_1.png";
 
-<ImageSection
-  src={image3}
-/>
+<ImageSection src={image3} />
 
-import image4 from "./images/joyride_2.png"
+import image4 from "./images/joyride_2.png";
 
-<ImageSection
-  src={image4}
-/>
+<ImageSection src={image4} />
 
-import image5 from "./images/joyride_3.png"
+import image5 from "./images/joyride_3.png";
 
-<ImageSection
-  src={image5}
-/>
+<ImageSection src={image5} />
 
-import image6 from "./images/joyride_4.png"
+import image6 from "./images/joyride_4.png";
 
 <ImageSection
   src={image6}
   caption="Joyride-Ausschnitte, welche den Nutzer:innen die Anwendung in neun Schritten näher bringt."
 />
 
-
 Die Anwendung ist so konzipiert, dass in der Ansicht zwischen der 2D-Perspektive und der Liegenschafts-Perspektive gewechselt werden kann. Die Anwendung kann problemlos mit einem Smartphone bedient werden.
+
+import logo from "./images/Tagesspiegel-Logo.png";
+
+<Quote authorName="Tagesspiegel" authorLogo={logo}>
+  Das Projekt soll vor allem zeigen, welche Potenziale offene Daten aus dem
+  Gebäudesektor haben.
+</Quote>
 
 ## Datengrundlage und Methode
 

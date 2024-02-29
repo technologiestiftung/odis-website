@@ -1,14 +1,14 @@
 ---
-import HamburgerIcon from "./icons/HamburgerIcon.astro";
 import OdisLogo from "./logos/OdisLogo.astro";
 import navItems from "../navItems";
 import ThemeSwitch from "./ThemeSwitch.astro";
 import { cn } from "@/utils/classNames";
+import { Icon } from "astro-icon/components";
 
 export type Props = {};
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const urlPath = canonicalURL.pathname;
+const urlPath = canonicalURL.pathname.replaceAll("/", "");
 ---
 
 <nav class="container mx-auto flex flex-wrap justify-between max-w-7xl py-4">
@@ -38,7 +38,7 @@ const urlPath = canonicalURL.pathname;
       id="menu-button"
       aria-label="Menü umschalten"
     >
-      <HamburgerIcon />
+      <Icon name="ui/hamburger" size={24} />
     </button>
   </div>
 
@@ -53,23 +53,37 @@ const urlPath = canonicalURL.pathname;
       )}
     >
       {
-        navItems.map((navItem) => (
-          <li>
-            <a
-              class={cn(
-                "p-2 font-bold text-links hover:text-links-active aria-current:bg-links-active",
-                "aria-current:text-[var(--white)]",
-                "motion-safe:transition",
-                "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50",
-                "focus-visible:ring-offset-4",
-              )}
-              href={`/${navItem.slug}`}
-              aria-current={`/${navItem.slug}` === urlPath ? "true" : undefined}
-            >
-              {navItem.label}
-            </a>
-          </li>
-        ))
+        navItems.map((navItem) => {
+          const navItemPath = navItem.slug.replaceAll("/", "");
+          let isActivePath = navItemPath === urlPath;
+          const isCollectionPage =
+            urlPath.startsWith("projekte") ||
+            urlPath.startsWith("aktuelles") ||
+            urlPath.startsWith("ressourcen") ||
+            urlPath.startsWith("module") ||
+            urlPath.startsWith("veranstaltungen");
+          isActivePath = isCollectionPage
+            ? urlPath.startsWith(navItemPath)
+            : isActivePath;
+          return (
+            <li>
+              <a
+                class={cn(
+                  "p-2 font-bold text-links hover:text-links-active",
+                  "motion-safe:transition",
+                  "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50",
+                  "focus-visible:ring-offset-4",
+                  isActivePath &&
+                    "text-links-active dark:bg-links-active dark:text-[var(--white)]",
+                )}
+                href={`/${navItem.slug}`}
+                aria-current={isActivePath}
+              >
+                {navItem.label}
+              </a>
+            </li>
+          );
+        })
       }
     </ul>
     <ThemeSwitch class={cn(`hidden lg:inline-flex`)} />

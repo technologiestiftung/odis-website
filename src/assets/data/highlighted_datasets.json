@@ -1,69 +1,81 @@
 [
   {
     "id": "budget",
+    "category": "Haushalt und Steuern",
     "title": "Berliner Haushalt",
-    "description": "Offene Haushaltsdaten bilden eine wichtige Grundlage für eine Diskussion von Verwaltung und Zivilgesellschaft darüber, wie Steuergelder effektiv eingesetzt werden.",
-    "url": "https://daten.berlin.de/datensaetze/doppelhaushalt-20222023",
-    "example_usage": "https://haushaltsdaten.odis-berlin.de",
+    "description": "Pro Jahr stehen der Berliner Verwaltung über 35 Milliarden Euro zur Verfügung. Die Veröffentlichung der Haushaltsdaten als Open Data und deren Visualisierung machen transparent, für welche Vorhaben welche Summen an Steuergeldern eingesetzt werden.",
+    "url": "https://odis-berlin.de/projekte/haushaltsdaten/",
+    "example_usage": "/projekte/haushaltsdaten",
     "icon": "money"
   },
   {
     "id": "a11y",
+    "category": "Stadtplanung",
     "title": "Barrierefreiheit",
-    "description": "Offene Daten zum barrierefreien Ausbau von öffentlichen Gebäuden machen Hürden für die breite Stadtgesellschaft sichtbar, können Veränderungen anstoßen und die Stadt gerechter gestalten.",
+    "description": "Für Menschen mit eingeschränkter Mobilität können sich überall in der Stadt Hürden auftun. Durch Daten könnten wir diese sichtbar machen und sogar helfen die Stadt gerechter zu gestalten. Viele wichtige Informationen zu diesem Thema, zum Beispiel zu Barrieren in öffentlichen Gebäuden, liegen noch nicht offen vor.",
     "icon": "a11y"
   },
   {
     "id": "theft",
-    "title": "Fahrraddiebstähle",
-    "description": "Datensätze zu Kriminalitätsstatistiken schaffen Transparenz, schärfen das Bewusstsein für Verbrechen in verschiedenen Stadtteilen, und können das Vertrauen von Bürger:innen in Behörden und Polizei stärken.",
-    "url": "https://daten.berlin.de/datensaetze/fahrraddiebstahl-berlin",
+    "category": "Öffentliche Sicherheit",
+    "title": "Kriminalität",
+    "description": "Wie können offene Daten dazu beitragen, die Stadt sicherer zu machen? Datensätze zu allgemeinen Statistiken oder spezifischen Delikten wie Fahrraddiebstählen schaffen Transparenz, schärfen das Bewusstsein und stärken das Vertrauen von Bürger:innen in Behörden und Polizei.",
+    "url": "https://daten.berlin.de/anwendungen/kriminalitätsatlas-app",
     "icon": "theft"
   },
   {
     "id": "waiting-time",
-    "title": "Wartezeiten in der öffentlichen Verwaltung",
-    "description": "Offene Daten und Statistiken über Wartezeiten, Auslastung oder bearbeiteten Anträgen schaffen Transparenz und gewähren einen Überblick, von dem sich Handlungsoptionen wie Personalplanung oder Terminvergabe ableiten lassen.",
+    "category": "Öffentliche Verwaltung",
+    "title": "Wartezeiten in Ämtern",
+    "description": "Lange Wartezeiten und überlastete Bürgerämter sind für alle herausfordernd. Offene Daten und Statistiken über Auslastung oder Anzahl bearbeiteter Anträge wären eine Grundlage, um das Monitoring von Entwicklungen, die Wirksamkeit von Maßnahmen und die Transparenz zu verbessern. Nur wenige Informationen aus diesem Bereich sind bisher offen.",
     "icon": "clock"
   },
   {
     "id": "bathing",
+    "category": "Umwelt und Klima",
     "title": "Wasserqualität",
-    "description": "Offene Daten zu Berliner Badestellen ermöglichen es, sich tagesaktuell über die Qualität der Badegewässer zu informieren, damit einem sicheren und hygienischen Badespaß nichts mehr im Wege steht.",
-    "url": "https://www.badestellen.berlin.de/",
-    "example_usage": "https://www.badestellen.berlin.de/",
+    "description": "Die einzigartige Fluss- und Seenlandschaft Berlins bietet Bürger:innen Abkühlung an Sommertagen. Offene Daten zu Badestellen und daraus entstandene Anwendungen ermöglichen es, sich tagesaktuell über die Qualität der Gewässer zu informieren, um einem sicheren und hygienischen Badespaß zu genießen.",
+    "url": "https://daten.berlin.de/anwendungen/badegewässer-berlin",
+    "example_usage": "/projekte/berliner-badestellen",
     "icon": "bathing"
   },
   {
     "id": "traffic",
-    "title": "Mobilität",
-    "description": "Ob mit der S-Bahn, dem Auto, Fahrrad oder zu Fuß; Daten darüber, wie Berliner:innen von A nach B kommen, können Verhaltensmuster entschlüsseln und so bei der Stadtplanung hilfreich sein.",
-    "icon": "traffic"
+    "category": "Mobilität",
+    "title": "Parkraum",
+    "description": "Ob ÖPNV, Auto oder Fahrrad - Informationen über Mobilitätsangebote helfen den Bürger:innen mobil zu sein. Daten zu Nutzung und zur verkehrlichen Infrastruktur, zum Beispiel zum Thema Parken, ermöglichen darüber hinaus die Analyse von Verhalten und Bedarfen und unterstützen so die Stadtplanung und politische Entscheidungen.",
+    "icon": "traffic",
+    "url": "https://viz.berlin.de/verkehr-in-berlin/parken/parkraumkartierung/"
   },
   {
     "id": "defibrillators",
     "icon": "defibrillators",
+    "category": "Gesundheit",
     "title": "Defibrillatoren",
-    "description": "Kritische Gesundheitsinfrastruktur, wie beispielsweise Defibrillatoren im öffentlichen Raum, entscheidet im Ernstfall über Leben und Tod. Mit einer Veröffentlichung als offene Daten können Standorte nahtlos in Anwendungen und Karten für Rettungskräfte und Zivilgesellschaft integriert werden, womit wertvolle Zeit gespart und im Zweifel Leben gerettet werden können."
+    "description": "Kritische Gesundheitsinfrastruktur, wie beispielsweise Defibrillatoren im öffentlichen Raum, entscheidet im Ernstfall über Leben und Tod. Daten von Standorten könnten nahtlos in Anwendungen und Karten für Rettungskräfte und Zivilgesellschaft integriert werden und im Zweifel Leben retten, wenn sie offen wären."
   },
   {
     "id": "sports",
     "icon": "sports",
+    "category": "Freizeit und Sport",
     "title": "Sportstätten",
-    "description": "Sportstätten als Orte der Begegnung und körperlicher Aktivität bilden einen wichtigen Baustein für eine lebenswerte Stadt und die Gesundheit ihrer Bewohner:innen. Öffentliche Belegungspläne sowie Daten zur Auslastung von öffentlichen Sportstätten können dabei helfen, sportliche Angebote in Kiezen zu koordinieren und die Vereinslandschaft in Berlin zu stärken."
+    "description": "Sportstätten bilden einen wichtigen Baustein für eine lebenswerte Stadt und die Gesundheit ihrer Bewohner:innen. Standortdaten sowie öffentliche Belegungspläne können dabei helfen, sportliche Angebote in Kiezen zu koordinieren und die Vereinslandschaft in Berlin zu stärken. Berlin arbeitet an der Veröffentlichung dieser Daten."
   },
   {
     "id": "savings",
     "icon": "savings",
+    "category": "Sozialleistungen",
     "title": "Grundsicherung",
-    "description": "Über 89.000 Menschen in Berlin beziehen Grundsicherung zur Sicherung ihres Lebensunterhalts. Die Empfänger:innen sind dabei nicht gleichmäßig über die Stadt verteilt – einige Stadtgebiete in Berlin haben einen höheren Anteil als andere. Verwaltung und Sozialhilfeinitiativen können Offene Daten und Kartenanwendungen dazu nutzen,  Unterstützungsangebote an Orten mit erhöhtem Bedarf zu positionieren und somit soziale Infrastrukturen besser zu planen.",
-    "url": "https://www.sozial-informations-system.de/datasets/ts1700199029202112-xlsx/?lang=de",
-    "example_usage": "https://odis-berlin.de/projekte/grundsicherung/"
+    "description": "Über 90.000 Menschen in Berlin beziehen Grundsicherung für ihren Lebensunterhalt. Verwaltung und Sozialhilfeinitiativen können offene Daten und Dashboards nutzen, um besonders stark betroffene Gruppen zu identifizieren und soziale Infrastrukturen besser zu planen.",
+    "url": "https://dashboards.sozial-informations-system.de/superset/dashboard/37/?native_filters_key=nISNpNqmp78z8oXarJfQ2IKHRPWg8-KsJAQUtgqidyPioRhE7I1mA-ipQPCzY6HX",
+    "example_usage": "/projekte/grundsicherung/"
   },
   {
     "id": "solar",
     "icon": "solar",
-    "title": "Solarenergie",
-    "description": "Necessitatibus voluptas praesentium id enim. Quam eligendi asperiores nihil non. Cumque rerum veniam labore. Occaecati et voluptas ad ut."
+    "category": "Energie",
+    "title": "Energieverbräuche",
+    "description": "Bis spätestens 2045 will Berlin klimaneutral werden. Dafür müssen auch Gebäude Energie einsparen und umfassend saniert werden. Offene Daten zu Energieverbrauch und Energieeinsparungen öffentlicher Gebäude können dabei zum Beispiel eine Grundlage für ein datengestütztes Monitoring bilden.",
+    "url": "https://odis-berlin.de/projekte/energiecheckpoint"
   }
 ]

@@ -12,7 +12,7 @@ const {
 } = entry;
 const { Content } = await entry.render();
 
-const module = (await getCollection("module")).sort(
+const modules = (await getCollection("module")).sort(
   (a, b) => a.data.number - b.data.number,
 );
 ---
@@ -41,10 +41,11 @@ const module = (await getCollection("module")).sort(
 
   <div>
     {
-      module.map((module, index) => (
+      modules.map((module, index) => (
         <ModuleThumbnail
           {...module}
           position={index % 2 !== 0 ? "right" : "left"}
+          totalModules={modules.length}
         />
       ))
     }
