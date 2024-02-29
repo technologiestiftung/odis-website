@@ -54,9 +54,9 @@
       entries.forEach((entry) => {
         const link = toc.querySelector(`a[href="#${entry.target.id}"]`);
         if (link && entry.isIntersecting) {
-          link.classList.add("font-bold");
+          link.classList.add("font-bold", "dark:text-text");
         } else if (link) {
-          link.classList.remove("font-bold");
+          link.classList.remove("font-bold", "dark:text-text");
         }
       });
     });
@@ -97,10 +97,18 @@
       const linkClasses = [
         "block",
         "text-links",
-        "hover:text-links-active",
-        "transition-colors",
+        "hover-hover:hover:text-links-active",
+        "dark:hover-hover:hover:text-links-active",
+        "dark:hover-hover:hover:bg-text",
+        "w-fit",
+        "px-2",
+        "-ml-2",
         "no-underline",
         "focusable",
+        "dark:hover-hover:hover:ml-0",
+        "transition-all",
+        "duration-1000",
+        "ease-out-extreme",
       ];
       headingLink.classList.add(...linkClasses);
       headingLink.appendChild(heading.cloneNode(true));

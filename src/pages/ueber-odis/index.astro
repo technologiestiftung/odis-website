@@ -138,7 +138,7 @@ const { Content } = await entry.render();
             const memberImage = member.imagePath;
             return (
               <li class="col-span-4 grid">
-                <address class="grid grid-cols-4 gap-6 items-center lg:items-start">
+                <address class="grid grid-cols-4 gap-6 items-center lg:items-start not-italic">
                   {memberImage && (
                     <Image
                       class="rounded-full w-40 col-span-1 lg:scale-110"
@@ -155,7 +155,7 @@ const { Content } = await entry.render();
                       <TextLink
                         tag="a"
                         href={`mailto:${member.email}`}
-                        class="no-underline"
+                        class="no-underline leading-normal w-fit"
                       >
                         {member.email}
                       </TextLink>
@@ -164,7 +164,7 @@ const { Content } = await entry.render();
                       <TextLink
                         tag="a"
                         href={`tel:${member.phoneNumber}`}
-                        class="no-underline"
+                        class="no-underline leading-normal w-fit"
                       >
                         {member.phoneNumber}
                       </TextLink>

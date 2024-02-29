@@ -6,6 +6,7 @@ export type Props = {
   wrapperClass?: string | undefined;
   caption?: string | undefined;
   fullWidth?: boolean | undefined;
+  withShadow?: boolean | undefined;
 };
 
 const {
@@ -13,6 +14,7 @@ const {
   wrapperClass,
   caption,
   fullWidth = true,
+  withShadow = false,
 } = Astro.props;
 ---
 
@@ -22,6 +24,7 @@ const {
       `bg-bg py-4 sm:py-6`,
       `mb-0 max-w-full`,
       fullWidth && "sm:w-screen sm:max-w-[100vw] sm:ml-[var(--contentOffset)]",
+      withShadow && "shadow-xl",
       className,
     )}
   >

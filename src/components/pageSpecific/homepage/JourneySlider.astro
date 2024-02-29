@@ -49,7 +49,7 @@ const modules = (await getCollection("module")).sort(
             <Heading size="lg" tag="h3">
               {module.data.title}
             </Heading>
-            <Paragraph>{module.data.description}</Paragraph>
+
             <Button
               tag="a"
               href={`/module/${module.slug}`}
@@ -76,7 +76,6 @@ const modules = (await getCollection("module")).sort(
     spaceBetween: 0,
     initialSlide: MODULES_INITIAL_SLIDE_INDEX,
     centeredSlides: true,
-    shortSwipes: false,
   });
 
   const stepperButtons = document.querySelectorAll(

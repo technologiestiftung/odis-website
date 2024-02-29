@@ -12,30 +12,28 @@ const Tag = tag;
 
 const finalTailwindClasses = cn(
   inverted &&
-    [
+    cn(
       `text-links-inv border-line-inv`,
       `focus-visible:ring-offset-bg-inv`,
       `hover-hover:hover:text-text-inv`,
       `hover-hover:hover:border-links-active-inv`,
-    ]
-      .filter(Boolean)
-      .join(" "),
+    ),
   !inverted &&
-    [
+    cn(
       `text-links border-line`,
       `focus-visible:ring-offset-bg`,
       `hover-hover:hover:text-links-active`,
       `hover-hover:hover:border-links-active`,
-    ]
-      .filter(Boolean)
-      .join(" "),
-  `cursor-pointer`,
-  `decoration-clone underline underline-offset-8 decoration-8`,
-  `inline-block leading-7 focus-visible:ring-offset-8`,
+    ),
+  `dark:hover-hover:hover:bg-text`,
+  `dark:hover-hover:hover:ml-0`,
+  `cursor-pointer px-1 -ml-1 w-fit`,
+  `decoration-clone underline underline-offset-8 decoration-4`,
+  `inline-block leading-8 focus-visible:ring-offset-4`,
   `focusable`,
-  `transition motion-reduce:transition-none`,
+  `transition-all motion-reduce:transition-none`,
   className,
-)
+);
 ---
 
 <Tag {...props} class={finalTailwindClasses}>

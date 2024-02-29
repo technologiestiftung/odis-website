@@ -7,12 +7,14 @@ import ModuleStepper from "../../components/ModuleStepper.astro";
 import TextLink from "../../components/TextLink.astro";
 import Button from "../../components/Button.astro";
 import ContactLane from "../../components/ContactLane.astro";
-import ArrowLeft from "../../components/icons/ArrowLeft.astro";
 import { Image } from "astro:assets";
 import { components } from "@/components/macros/index.astro";
 import { cn } from "@/utils/classNames";
 import ResourceCard from "@/components/ResourceCard.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
+import { Icon } from "astro-icon/components";
+import ItemsSlider from "@/components/ItemsSlider.astro";
+import odisContactIcon from "../../assets/images/illustrations/odis_icon_contact.svg";
 
 export type Props = CollectionEntry<"module"> & {
   data: CollectionEntry<"module">["data"] & {
@@ -67,7 +69,7 @@ const { Content } = await post.render();
           href="/module"
           class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
         >
-          <ArrowLeft />
+          <Icon name="ui/arrow-left" size={20} />
           {modul.backButtonText}
         </a>
       </div>
@@ -126,22 +128,20 @@ const { Content } = await post.render();
       </div>
     </div>
 
-    <div class="pb-24 pt-12 bg-bg-alt">
-      <div class="grid-container">
-        <div class="col-span-12 sm:col-span-10 sm:col-start-2 resources-swiper">
-          <div class="swiper-wrapper">
-            {
-              modul.resources.map((method) => (
-                <ResourceCard
-                  {...method}
-                  class="swiper-slide swiper-slide-active max-w-screen-sm"
-                />
-              ))
-            }
-          </div>
-        </div>
-      </div>
-    </div>
+    <ItemsSlider
+      wrapperClass="pb-24 pt-12 bg-bg-alt"
+      swiperClass="col-span-12 sm:col-span-10 sm:col-start-2 "
+      slidesCount={2}
+    >
+      {
+        modul.resources.map((resource) => (
+          <ResourceCard
+            {...resource}
+            class="swiper-slide swiper-slide-active max-w-screen-sm"
+          />
+        ))
+      }
+    </ItemsSlider>
   </section>
 
   <section aria-label={modul.furtherLinksTitle}>
@@ -156,7 +156,12 @@ const { Content } = await post.render();
         <ul class="flex flex-col gap-8 p-0">
           {
             modul.furtherLinks.map((link) => (
-              <TextLink tag="a" href={link.link} rel="noreferrer nofollow">
+              <TextLink
+                tag="a"
+                href={link.link}
+                target="_blank"
+                rel="noreferrer nofollow"
+              >
                 {link.title}
               </TextLink>
             ))
@@ -170,19 +175,16 @@ const { Content } = await post.render();
     nextModul && nextModul.data.number < allModules.length + 1 && (
       <>
         <section
-          aria-label="Nächster Modul"
+          aria-label="Nächste Etappe"
           class="bg-bg-alt pt-16 pb-4 not-prose"
         >
           <div class="grid-container">
-            <div class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
-              <Heading size="xl" tag="h2">
-                {modul.nextStationTitle}
-              </Heading>
+            <div class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
               <ModuleStepper activeNumber={modul.number} hightLightNext />
             </div>
           </div>
         </section>
-        <section aria-label="Nächster Modul" class="bg-bg-alt pb-16 not-prose">
+        <section aria-label="Nächste Etappe" class="bg-bg-alt pb-16 not-prose">
           <div class="grid-container">
             <div
               class="@lg:col-start-1 @lg:col-span-1 text-4xl lg:text-5xl text-bg font-bold drop-shadow-[6px_4px_0px_var(--shadow-secondary)] lg:text-right"
@@ -190,12 +192,12 @@ const { Content } = await post.render();
             >
               {nextNumber}.
             </div>
-            <div class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
+            <div class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
               <Heading size="lg" tag="h3">
                 {nextModul.data.title}
               </Heading>
-              <Paragraph>{nextModul.data.description}</Paragraph>
-              <Button tag="a" href="/module/">
+              <Paragraph>{modul.nextStationText}</Paragraph>
+              <Button tag="a" href={`/module/${nextModul.slug}`}>
                 {modul.allModulesButtonText}
               </Button>
             </div>
@@ -207,7 +209,34 @@ const { Content } = await post.render();
 
   <section aria-label="Kontakt" class="py-16">
     <div class="grid-container">
-      <ContactLane />
+      <div
+        class="sm:col-start-1 sm:col-span-2 lg:col-start-1 lg:col-span-1 hidden sm:flex items-start justify-end"
+      >
+        <Image
+          src={odisContactIcon}
+          aria-hidden="true"
+          class="grow max-w-[72px]"
+          alt="Illustration von Sprechblasen mit Fragezeichen und Ausrufezeichen"
+          widths={[220]}
+          sizes="220px"
+          loading="eager"
+        />
+      </div>
+
+      <div
+        class="col-start-1 sm:col-start-3 lg:col-start-2 col-span-12 sm:col-span-9 lg:col-span-10 flex flex-col gap-2 max-w-[34.5rem]"
+      >
+        <Heading tag="h3" size="lg">Noch Fragen offen?</Heading>
+        <Paragraph>
+          Fragen oder konkreter Unterstützungsbedarf zu dieser Etappe? Einfach
+          unser Kontaktformular nutzen.
+        </Paragraph>
+        <div class="flex justify-start mt-2">
+          <TextLink tag="a" href="/contact#contact-form">
+            Zum Kontaktformular
+          </TextLink>
+        </div>
+      </div>
     </div>
   </section>
 </DefaultLayout>

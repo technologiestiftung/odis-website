@@ -12,14 +12,16 @@ export type Props = CollectionEntry<"homepage">["data"]["resources"];
 
 const texts = Astro.props;
 
-const resources = await getCollection("resources", (project) =>
-  project.data.tags.includes("home"),
-);
+const resources = (
+  await getCollection("resources", (project) =>
+    project.data.tags.includes("home"),
+  )
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <div class="py-24">
   <div class="grid-container">
-    <div class="grid col-span-12 grid-cols-subgrid">
+    <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
       <div
         class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 lg:col-start-1 flex flex-col justify-center items-start"
       >
@@ -94,6 +96,12 @@ const resources = await getCollection("resources", (project) =>
   import Swiper from "swiper";
   import "swiper/swiper-bundle.css";
 
+  const prevButton = document.querySelector(
+    ".resources-button-prev",
+  ) as HTMLButtonElement;
+  const nextButton = document.querySelector(
+    ".resources-button-next",
+  ) as HTMLButtonElement;
   const swiper = new Swiper(".resources-swiper", {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -101,5 +109,27 @@ const resources = await getCollection("resources", (project) =>
       nextEl: ".resources-button-next",
       prevEl: ".resources-button-prev",
     },
+    a11y: {
+      nextSlideMessage: "Nächste Resource",
+      prevSlideMessage: "Vorherige Resource",
+    },
   });
+
+  prevButton.addEventListener("click", () => swiper.slidePrev());
+  nextButton.addEventListener("click", () => swiper.slideNext());
+
+  function updateButtons() {
+    prevButton.classList.remove("swiper-button-disabled");
+    nextButton.classList.remove("swiper-button-disabled");
+
+    if (swiper.isBeginning) {
+      prevButton.classList.add("swiper-button-disabled");
+    }
+    if (swiper.isEnd) {
+      nextButton.classList.add("swiper-button-disabled");
+    }
+  }
+
+  swiper.on("slideChange", updateButtons);
+  updateButtons();
 </script>

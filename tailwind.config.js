@@ -1,9 +1,9 @@
-/** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.{md,mdx,astro,html,js,jsx,ts,tsx}"],
-  darkMode: ["class", "dark"],
+  darkMode: "class",
   theme: {
     colors: {
       // USE THESE SEMANIC COLORS
@@ -113,12 +113,6 @@ module.exports = {
         },
         ".text-pretty": {
           "text-wrap": "pretty",
-        },
-        ".hyphenate": {
-          "hyphenate-limit-after": "1",
-          "hyphenate-limit-before": "3",
-          "-webkit-hyphens": "auto",
-          hyphens: "auto",
         },
       });
     }),

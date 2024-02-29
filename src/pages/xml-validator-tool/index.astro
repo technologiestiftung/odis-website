@@ -13,7 +13,7 @@ import Heading from "@/components/Heading.astro";
 >
   <PageHeader
     title="Schema-Validator"
-    description="Webbasiertes, interaktives Validator-Tool zur Schemavalidierung von Geodaten im GML-Format"
+    description="Webbasiertes, interaktives Tool zur Schemavalidierung von Geodaten im GML-Format"
   >
     <p slot="prefix">Ein Tool der Open Data Informationsstelle (ODIS)</p>
   </PageHeader>
@@ -96,6 +96,7 @@ import Heading from "@/components/Heading.astro";
           class="iframestyle"
           id="result-iframe"
           name="formDestination"
+          loading="lazy"
           title="Validierungs-Ergebnis"></iframe>
         <div class="" id="results"></div>
       </div>
@@ -366,13 +367,6 @@ import Heading from "@/components/Heading.astro";
   </pre>
       </details>
     </div>
-
-    <p class="prose">
-      <strong>
-        Gefördert von der Senatsverwaltung für Wirtschaft, Energie und Betriebe
-        und der Investitionsbank Berlin aus den Mitteln des Landes Berlin.
-      </strong>
-    </p>
   </div>
 
   <script>
