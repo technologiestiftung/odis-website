@@ -11,6 +11,36 @@
   "commitConvention": "angular",
   "contributors": [
     {
+      "login": "annameide",
+      "name": "Anna Meide",
+      "avatar_url": "https://citylab-berlin.org/wp-content/uploads/2022/09/anna-meide_portait-1.jpg",
+      "profile": "http://annameide.com/",
+      "contributions": [
+        "design",
+        "doc"
+      ]
+    },
+    {
+      "login": "anajerdeva",
+      "name": "Anastasia Jerdeva",
+      "avatar_url": "https://citylab-berlin.org/wp-content/uploads/2023/02/ana_portrait-1.jpg",
+      "profile": "https://citylab-berlin.org/de/blog/die-koepfe-des-citylab-ana-jerdeva/",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "vogelino",
+      "name": "Lucas Vogel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2759340?v=4",
+      "profile": "https://vogelino.com",
+      "contributions": [
+        "code",
+        "design",
+        "doc"
+      ]
+    },
+    {
       "login": "Lisa-Stubert",
       "name": "Lisa-Stubert",
       "avatar_url": "https://avatars.githubusercontent.com/u/61182572?v=4",
@@ -53,6 +83,15 @@
       ]
     },
     {
+      "login": "dnsos",
+      "name": "Dennis Ostendorf",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15640196?v=4",
+      "profile": "https://github.com/dnsos",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
       "login": "tori-d",
       "name": "Tori Boeck",
       "avatar_url": "https://avatars.githubusercontent.com/u/12991433?v=4",
@@ -71,30 +110,12 @@
       ]
     },
     {
-      "login": "m-b-e",
-      "name": "Max B. Eckert",
-      "avatar_url": "https://avatars.githubusercontent.com/u/36029603?v=4",
-      "profile": "https://github.com/m-b-e",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
       "login": "KlemensM",
-      "name": "KlemensM",
+      "name": "Klemens Maget",
       "avatar_url": "https://avatars.githubusercontent.com/u/98896505?v=4",
       "profile": "https://github.com/KlemensM",
       "contributions": [
         "content"
-      ]
-    },
-    {
-      "login": "AlexandraKapp",
-      "name": "AlexandraKapp",
-      "avatar_url": "https://avatars.githubusercontent.com/u/18367515?v=4",
-      "profile": "https://github.com/AlexandraKapp",
-      "contributions": [
-        "doc"
       ]
     },
     {
@@ -107,24 +128,6 @@
       ]
     },
     {
-      "login": "TDesjardins",
-      "name": "Tino Desjardins",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1841306?v=4",
-      "profile": "https://github.com/TDesjardins",
-      "contributions": [
-        "bug"
-      ]
-    },
-    {
-      "login": "dnsos",
-      "name": "Dennis Ostendorf",
-      "avatar_url": "https://avatars.githubusercontent.com/u/15640196?v=4",
-      "profile": "https://github.com/dnsos",
-      "contributions": [
-        "maintenance"
-      ]
-    },
-    {
       "login": "bnjmnsbl",
       "name": "Benjamin Seibel",
       "avatar_url": "https://avatars.githubusercontent.com/u/11134234?v=4",
@@ -134,14 +137,32 @@
       ]
     },
     {
-      "login": "vogelino",
-      "name": "Lucas Vogel",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2759340?v=4",
-      "profile": "https://github.com/vogelino",
+      "login": "m-b-e",
+      "name": "Max B. Eckert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36029603?v=4",
+      "profile": "https://github.com/m-b-e",
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "AlexandraKapp",
+      "name": "AlexandraKapp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18367515?v=4",
+      "profile": "https://github.com/AlexandraKapp",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "TDesjardins",
+      "name": "Tino Desjardins",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1841306?v=4",
+      "profile": "https://github.com/TDesjardins",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 8
 }

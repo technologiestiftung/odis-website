@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /*! purgecss start ignore */
+  @font-face {
+    font-family: "Clan";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/clan-news.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: italic;
+    font-weight: 400;
+    src: url("/fonts/clan-newsitalic.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/clan-bold.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Clan";
+    font-style: italic;
+    font-weight: 700;
+    src: url("/fonts/clan-boldItalic.woff") format("woff");
+    font-display: swap;
+  }
+
+  :root {
+    --high-contrast-blue-darker: #040b22;
+    --high-contrast-blue-dark: #0a153b;
+    --high-contrast-blue: #122467;
+    --high-contrast-blue-medium: #273a91;
+    --high-contrast-blue-light: #c7e5f9;
+    --high-contrast-blue-ultralight: #f8fcff;
+    --high-contrast-gray-light: #7f898d;
+    --high-contrast-gray: #374044;
+    --high-contrast-red: #e60032;
+    --high-contrast-red-dark: #c42c3a;
+
+    --blue-darker: #0c163b;
+    --blue-dark: #172763;
+    --blue: #20378b;
+    --blue-medium: #4c64cd;
+    --blue-light: #bee4f8;
+    --blue-ultralight: #edf8fe;
+    --white: #ffffff;
+    --gray-light: #d1dbe0;
+    --gray: #6e7a80;
+    --red: #e60032;
+    --red-dark: #c42c3a;
+
+    --bg: var(--white);
+    --bg-alt: var(--blue-ultralight);
+    --bg-inv: var(--blue);
+
+    --text: var(--blue-darker);
+    --text-inv: var(--blue-ultralight);
+
+    --links: var(--blue-dark);
+    --links-inv: var(--blue-light);
+    --links-active: var(--red);
+
+    --headlines: var(--blue);
+    --headlines-inv: var(--blue-light);
+    --links-active-inv: var(--red);
+
+    --line: var(--blue);
+    --line-dark: var(--blue-dark);
+    --line-inv: var(--blue-light);
+    --line-dark-inv: var(--blue-ultralight);
+
+    --shadow-primary: var(--blue);
+    --shadow-secondary: var(--blue-light);
+    --shadow-primary-inv: var(--blue-dark);
+    --shadow-secondary-inv: var(--blue-dark);
+
+    --containerWidth: 100vw;
+    --gridGap: 1.5rem;
+    --marginSize: calc((100vw - var(--containerWidth)) / 2);
+    --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    --contentOffset: calc(
+      (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+    );
+  }
+
+  @media (prefers-contrast: more) {
+    :root {
+      --bg-alt: var(--high-contrast-blue-ultralight);
+      --bg-inv: var(--high-contrast-blue);
+
+      --text: var(--high-contrast-blue-darker);
+      --text-inv: var(--high-contrast-blue-ultralight);
+
+      --links: var(--high-contrast-blue-dark);
+      --links-inv: var(--high-contrast-blue-light);
+      --links-active: var(--high-contrast-red);
+
+      --headlines: var(--high-contrast-blue);
+      --headlines-inv: var(--high-contrast-blue-light);
+      --links-active-inv: var(--high-contrast-red);
+
+      --line: var(--high-contrast-blue);
+      --line-dark: var(--high-contrast-blue-dark);
+      --line-inv: var(--high-contrast-blue-light);
+      --line-dark-inv: var(--high-contrast-blue-ultralight);
+
+      --shadow-primary: var(--high-contrast-blue);
+      --shadow-secondary: var(--high-contrast-blue-light);
+      --shadow-primary-inv: var(--high-contrast-blue-dark);
+      --shadow-secondary-inv: var(--high-contrast-blue-dark);
+    }
+  }
+
+  @media (min-width: 400px) {
+    :root {
+      --containerWidth: 400px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+      --contentOffset: calc(
+        (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+      );
+    }
+  }
+
+  @media (min-width: 640px) {
+    :root {
+      --containerWidth: 640px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+      --contentOffset: calc(
+        (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+      );
+    }
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --containerWidth: 768px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+      --contentOffset: calc(
+        (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+      );
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --containerWidth: 1024px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+      --contentOffset: calc(
+        (var(--marginSize) + (var(--gridGap) * 2) + var(--columnSize)) * -1
+      );
+    }
+  }
+
+  @media (min-width: 1280px) {
+    :root {
+      --containerWidth: 1280px;
+      --marginSize: calc((100vw - var(--containerWidth)) / 2);
+      --columnSize: calc((var(--containerWidth) - (13 * var(--gridGap))) / 12);
+    }
+  }
+
+  html.dark {
+    --bg: var(--blue-darker);
+    --bg-alt: var(--blue-dark);
+    --bg-inv: var(--blue-dark);
+
+    --text: var(--blue-ultralight);
+    --text-inv: var(--white);
+
+    --links: var(--blue-light);
+    --links-inv: var(--white);
+
+    --headlines: var(--white);
+    --headlines-inv: var(--blue-ultralight);
+
+    --line: var(--blue-medium);
+    --line-dark: var(--blue-medium);
+    --line-inv: var(--blue-dark);
+    --line-dark-inv: var(--blue-darker);
+
+    --shadow-primary: var(--blue-dark);
+    --shadow-secondary: var(--blue-dark);
+    --shadow-primary-inv: var(--blue-darker);
+    --shadow-secondary-inv: var(--blue-darker);
+  }
+
+  @media (prefers-contrast: more) {
+    html.dark {
+      --bg: var(--high-contrast-blue-darker);
+      --bg-alt: var(--high-contrast-blue-dark);
+      --bg-inv: var(--high-contrast-blue-dark);
+
+      --text: var(--high-contrast-blue-ultralight);
+
+      --links: var(--high-contrast-blue-light);
+
+      --headlines-inv: var(--high-contrast-blue-ultralight);
+
+      --line: var(--high-contrast-blue-medium);
+      --line-dark: var(--high-contrast-blue-medium);
+      --line-inv: var(--high-contrast-blue-dark);
+      --line-dark-inv: var(--high-contrast-blue-darker);
+
+      --shadow-primary: var(--high-contrast-blue-dark);
+      --shadow-secondary: var(--high-contrast-blue-dark);
+      --shadow-primary-inv: var(--high-contrast-blue-darker);
+      --shadow-secondary-inv: var(--high-contrast-blue-darker);
+    }
+  }
+
+  body,
+  html {
+    @apply font-sans text-text bg-bg min-h-screen;
+    scroll-behavior: smooth;
+  }
+  /*! purgecss end ignore */
+}
+
+@layer components {
+  .focusable {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-links;
+    @apply focus-visible:ring-offset-8 focus-visible:ring-offset-bg focus-visible:bg-bg;
+  }
+}
+
+@layer utilities {
+  .text-stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .text-stroke-line {
+    -webkit-text-stroke-color: var(--line);
+  }
+}
+
+@layer components {
+  .grid-container {
+    @apply container mx-auto grid grid-cols-12 gap-4 @sm:gap-6 px-4 @sm:px-6 xl:max-w-7xl;
+  }
+
+  .grid-container > * {
+    @apply col-start-1 col-span-12 @lg:col-start-2 @lg:col-span-10;
+  }
+}
+
+/*! purgecss start ignore */
+.prose {
+  --tw-prose-body: var(--text);
+  --tw-prose-headings: var(--headlines);
+  --tw-prose-lead: var(--text);
+  --tw-prose-links: var(--links);
+  --tw-prose-bold: var(--text);
+  --tw-prose-counters: var(--links-active);
+  --tw-prose-bullets: var(--links-active);
+  --tw-prose-hr: var(--gray-light);
+  --tw-prose-quotes: var(--text);
+  --tw-prose-quote-borders: var(--gray-light);
+  --tw-prose-captions: var(--gray);
+  --tw-prose-code: var(--text);
+  --tw-prose-pre-code: var(--text-inv);
+  --tw-prose-pre-bg: var(--bg-inv);
+  --tw-prose-th-borders: var(--gray-light);
+  --tw-prose-td-borders: var(--gray-light);
+  --tw-prose-invert-body: var(--text-inv);
+  --tw-prose-invert-headings: var(--headlines-inv);
+  --tw-prose-invert-lead: var(--text-inv);
+  --tw-prose-invert-links: var(--links-inv);
+  --tw-prose-invert-bold: var(--text-inv);
+  --tw-prose-invert-counters: var(--links-active-inv);
+  --tw-prose-invert-bullets: var(--links-active-inv);
+  --tw-prose-invert-hr: var(--gray-light);
+  --tw-prose-invert-quotes: var(--text-inv);
+  --tw-prose-invert-quote-border: var(--gray-light);
+  --tw-prose-invert-captions: var(--gray);
+  --tw-prose-invert-code: var(--text-inv);
+  --tw-prose-invert-pre-code: var(--text);
+  --tw-prose-invert-pre-bg: var(--bg-alt);
+  --tw-prose-invert-th-borders: var(--gray-light);
+  --tw-prose-invert-td-borders: var(--gray-light);
+}
+
+.prose :where(p):not(:where([class~="not-prose"] *)) {
+  @apply leading-relaxed max-w-prose mb-4;
+}
+.prose :where(p.lead):not(:where([class~="not-prose"] *)) {
+  @apply text-xl mb-6;
+}
+
+.prose :where(h1):not(:where([class~="not-prose"] *)),
+.prose :where(h2):not(:where([class~="not-prose"] *)),
+.prose :where(h3):not(:where([class~="not-prose"] *)),
+.prose :where(h4):not(:where([class~="not-prose"] *)),
+.prose :where(h5):not(:where([class~="not-prose"] *)),
+.prose :where(h6):not(:where([class~="not-prose"] *)) {
+  @apply font-bold text-balance max-w-prose;
+}
+.prose :where(a > h1):not(:where([class~="not-prose"] *)),
+.prose :where(a > h2):not(:where([class~="not-prose"] *)),
+.prose :where(a > h3):not(:where([class~="not-prose"] *)),
+.prose :where(a > h4):not(:where([class~="not-prose"] *)),
+.prose :where(a > h5):not(:where([class~="not-prose"] *)),
+.prose :where(a > h6):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h1):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h2):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h3):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h4):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h5):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h6):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.prose :where(h1):not(:where([class~="not-prose"] *)) {
+  @apply leading-tight text-5xl mb-4;
+}
+
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
+  @apply leading-tight text-3xl mb-4;
+}
+
+.prose :where(h3):not(:where([class~="not-prose"] *)) {
+  @apply text-xl mb-2 pt-0 mt-6;
+}
+
+.prose :where(h4):not(:where([class~="not-prose"] *)),
+.prose :where(h5):not(:where([class~="not-prose"] *)),
+.prose :where(h6):not(:where([class~="not-prose"] *)) {
+  @apply text-lg mb-1 pt-0 mt-4;
+}
+
+.prose :where(h5):not(:where([class~="not-prose"] *)),
+.prose :where(h6):not(:where([class~="not-prose"] *)) {
+  @apply uppercase tracking-widest leading-5;
+}
+
+.prose :where(h6):not(:where([class~="not-prose"] *)) {
+  @apply font-normal;
+}
+
+.prose :where(a > h1):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h1):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 mt-8;
+}
+
+.prose :where(a > h2):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h2):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 mt-6;
+}
+
+.prose :where(a > h3):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h3):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 mt-5;
+}
+
+.prose :where(a > h4):not(:where([class~="not-prose"] *)),
+.prose :where(a > h5):not(:where([class~="not-prose"] *)),
+.prose :where(a > h6):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h4):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h5):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a > h6):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 mt-4;
+}
+
+.prose :where(a:first-of-type > h1):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h2):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h3):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h4):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h5):not(:where([class~="not-prose"] *)),
+.prose :where(a:first-of-type > h6):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h1):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h2):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h3):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h4):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h5):not(:where([class~="not-prose"] *)),
+.prose-invert :where(a:first-of-type > h6):not(:where([class~="not-prose"] *)) {
+  @apply mt-0 pt-0;
+}
+
+.prose :where(details):not(:where([class~="not-prose"] *)) {
+  @apply mt-4 pt-4 border-t border-discrete;
+}
+.prose :where(summary):not(:where([class~="not-prose"] *)) {
+  @apply cursor-pointer transition-colors hover-hover:hover:text-links-active focusable;
+}
+.prose :where(summary::marker):not(:where([class~="not-prose"] *)) {
+  @apply text-discrete text-base lg:text-base;
+}
+
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+  @apply focusable hover-hover:hover:text-links-active transition-colors;
+  @apply px-1 -ml-1 dark:hover-hover:hover:bg-text;
+}
+
+iframe {
+  @apply bg-[var(--white)] !w-full rounded relative overflow-hidden;
+}
+/*! purgecss end ignore */

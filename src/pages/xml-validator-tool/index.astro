@@ -1,0 +1,576 @@
+---
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import ContentSection from "@/components/macros/ContentSection.astro";
+import Button from "@/components/Button.astro";
+import Heading from "@/components/Heading.astro";
+---
+
+<DefaultLayout
+  metaTitle="XML Validator"
+  metaDescription="Schema-Validator für Berlins Geodaten"
+  ogImage="/xml-validator/og/xml-validator.png"
+>
+  <PageHeader
+    title="Schema-Validator"
+    description="Webbasiertes, interaktives Tool zur Schemavalidierung von Geodaten im GML-Format"
+  >
+    <p slot="prefix">Ein Tool der Open Data Informationsstelle (ODIS)</p>
+  </PageHeader>
+
+  <div class="grid-container px-4 sm:px-6 py-16">
+    <div class="prose">
+      <p>
+        Dieses Tool dient dazu, Geodaten im GML-Format gegen eine festgelegte,
+        dem Tool bekannte Datenstruktur zu prüfen. Abweichungen werden anhand
+        von Fehlermeldungen beschrieben. GML ist ein offener Standard für
+        räumliche Daten, basierend auf XML. Mehr zur Anwendung und Hintergrund
+        des Validators finden sie unten.
+      </p>
+      <p class="text-links-active mb-0">
+        Sie sehen hier den Prototypen des Tools. Die Anwendung wurde inzwischen
+        von der Senatsverwaltung für Stadtenwicklung, Bauen und Wohnen
+        übernommen, weiterentwickelt und im Intranet betrieben.
+      </p>
+    </div>
+
+    <ContentSection class="bg-bg-alt not-prose">
+      <div id="timelapse-map-wrapper" class="grid-container py-8">
+        <form
+          action="https://xml-schema-validator-for-berlins-geodata.vercel.app/api"
+          method="post"
+          enctype="multipart/form-data"
+          target="formDestination"
+          id="form"
+          class="form__validate"
+        >
+          <Heading size="lg">1. Schritt</Heading>
+
+          <fieldset class="mb-6">
+            <label for="schemas" class="block">
+              Wählen Sie eines der hinterlegten Schemata gegen das validiert
+              werden soll.
+            </label>
+            <select
+              name="schemas"
+              id="schemas"
+              class="w-[max-content] max-w-full bg-bg px-3 py-2 focusable mt-1"
+            >
+              <option value="brunnen">Brunnen</option>
+              <option value="parkraumbewirtschaftung">
+                Parkraumbewirtschaftung
+              </option>
+              <option value="fluchtlinien">Fluchtlinien</option>
+              <option value="hundefreilaufflaechen">
+                Hundefreilaufflächen</option
+              >
+              <option value="behindertenparkplaetze">
+                Behindertenparkplätze</option
+              >
+            </select>
+          </fieldset>
+
+          <Heading size="lg">2. Schritt</Heading>
+
+          <label for="xml" class="max-w-prose block">
+            Laden Sie Ihre GML-Datei für die Validierung hoch oder kopieren Sie
+            den Inhalt in das Textfeld.
+          </label>
+          <input
+            class="fileinput my-4 block focusable"
+            type="file"
+            id="xml"
+            name="xml"
+            accept=".xml, .gml"
+          />
+          <textarea
+            name="txt"
+            id="txt"
+            class="focusable block w-full max-w-prose p-2 mb-6 min-h-[10em]"
+          ></textarea>
+          <Button tag="button" class="button-primary" type="submit">
+            Validieren
+          </Button>
+        </form>
+        <iframe
+          class="iframestyle"
+          id="result-iframe"
+          name="formDestination"
+          loading="lazy"
+          title="Validierungs-Ergebnis"></iframe>
+        <div class="" id="results"></div>
+      </div>
+    </ContentSection>
+
+    <div class="prose">
+      <h2>Erläuterungen zum Tool</h2>
+      <p>
+        Die Berliner Verwaltung stellt Geodaten unter anderem über den <a
+          href="https:www.stadtentwicklung.berlin.de/geoinformation/fis-broker"
+        >
+          FIS-Broker
+        </a> als Opea Data bereit. Neben Datensätzen die von einer Verwaltungsstelle
+        direkt berlinweit erfasst und gepflegt werden, also räumlich das gesamte
+        Stadtgebiet abdecken, gibt es eine Vielzahl weiterer Geodaten die dezentral
+        in der Verantwortlichkeit der Bezirke liegen. Diese weisen teilweise eine
+        starke schematische Heterogenität untereinander auf und lassen sich nur mit
+        hohem Arbeitsaufwand für die Bereitstellung im FIS-Broker zusammenführen.
+
+        <br />
+        <br />
+
+        Das Projekt zur Koordinierung bezirklicher Geodaten im Auftrag der
+        Senatsverwaltung für Stadtentwicklung und Wohnen hat sich der Aufgabe
+        angenommen entsprechende Herausforderungen zu erkennen und bessere
+        Routinen für die Aufbereitung und Bereitstellung der bezirklichen
+        Geodaten zu schaffen. Zu diesem Zweck wurden mehrere Workshops mit
+        Mitarbeiter:innen der bezirklichen Vermessungsämter durchgeführt und für
+        Beispieldatensätze standardisierte Datenschemata und
+        Darstellungsvorgaben erstellt. Diese Datenschemata sind in diesem Tool
+        hinterlegt und über das Drop-Down-Menü in Schritt 1 auswählbar. Durch
+        Hochladen oder Einfügen eines Geodatensatzes im GML-Dateiformat, kann
+        dieser gegen das entsprechende Schema validiert werden. Wenn der
+        Validator Fehler ausgibt, muss der Geodatensatz korrigiert werden, um
+        ihn an das geforderte Schema anzupassen. Die Beschreibungen der
+        jeweiligen Schemata sind in den zugehörigen Objektartenkatalogen
+        festgehalten:
+
+        <br />
+
+        <details>
+          <summary>Beschreibungen der Schemata</summary>
+          <br />
+          Objektartenkatalog
+          <a
+            href="/file-download/objektartenkataloge/Objektartenkatalog_Brunnen.pdf"
+            target="blank">Brunnen</a
+          ><br />
+          Objektartenkatalog
+          <a
+            href="/file-download/objektartenkataloge/Objektartenkatalog_Parkraumbewirtschaftung.pdf"
+            target="blank">Parkraumbewirtschaftung</a
+          ><br />
+          Objektartenkatalog
+          <a
+            href="/file-download/objektartenkataloge/Objektartenkatalog_Fluchtlinien.pdf"
+            target="blank">Fluchtlinien</a
+          ><br />
+          Objektartenkatalog
+          <a
+            href="/file-download/objektartenkataloge/Objektartenkatalog_Hundefreilauf.pdf"
+            target="blank">Hundefreilaufflächen</a
+          ><br />
+          Objektartenkatalog
+          <a
+            href="/file-download/objektartenkataloge/Objektartenkatalog_Behindertenparkplatz.pdf"
+            target="blank">Behindertenparkplätze</a
+          >
+        </details>
+
+        <br />
+        Bei diesem Tool handelt es sich um einen Prototypen für einen Testbetrieb,
+        der bei Bedarf weiterentwickelt werden kann. So können beispielweise leicht
+        weitere Schemata für die Validierung hinterlegt werden. Bei Fragen und Feedback
+        wenden Sie sich bitte an <a href="mailto:odis@ts.berlin"
+          >odis@ts.berlin.</a
+        > Der Quellcode ist
+        <a
+          href="https://github.com/technologiestiftung/xml-schema-validator-for-berlins-geodata"
+          target="blank">auf GitHub verfügbar</a
+        >. Das Tool kann mit den folgenden zwei Datensätzen für das Beispiel
+        "Brunnen" getestet werden. Dafür einfach den Text in das Textfeld
+        kopieren:
+        <br />
+        <br />
+      </p>
+
+      <details>
+        <summary> Beispiel für einen validen Input (Brunnen)</summary>
+        <pre>
+        <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+          &lt;ogr:FeatureCollection
+              xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+              xsi:schemaLocation=&quot;http://ogr.maptools.org/ brunnen_neu.xsd&quot;
+              xmlns:ogr=&quot;http://ogr.maptools.org/&quot;
+              xmlns:gml=&quot;http://www.opengis.net/gml&quot;&gt;
+            &lt;gml:boundedBy&gt;
+              &lt;gml:Box&gt;
+                &lt;gml:coord&gt;
+                &lt;gml:X&gt;390328.07203217&lt;/gml:X&gt;
+                &lt;gml:Y&gt;5812275.53221021&lt;/gml:Y&gt;
+                &lt;/gml:coord&gt;
+                &lt;gml:coord&gt;
+                &lt;gml:X&gt;395999.795455024&lt;/gml:X&gt;
+                &lt;gml:Y&gt;5816266.74498926&lt;/gml:Y&gt;
+                &lt;/gml:coord&gt;
+              &lt;/gml:Box&gt;
+            &lt;/gml:boundedBy&gt;
+            &lt;gml:featureMember&gt;
+              &lt;ogr:brunnen_neu fid=&quot;brunnen.0&quot;&gt;
+                &lt;ogr:geometryProperty&gt;
+                &lt;gml:Point srsName=&quot;EPSG:25833&quot;&gt;
+                &lt;gml:coordinates&gt;390328.07203217,5816266.74498926&lt;/gml:coordinates&gt;
+                &lt;/gml:Point&gt;
+                &lt;/ogr:geometryProperty&gt;
+                &lt;ogr:uid&gt;02001&lt;/ogr:uid&gt;
+                &lt;ogr:bezirk&gt;Friedrichshain-Kreuzberg&lt;/ogr:bezirk&gt;
+                &lt;ogr:bezeichn&gt;Zierbrunnen&lt;/ogr:bezeichn&gt;
+                &lt;ogr:jahr&gt;1893&lt;/ogr:jahr&gt;
+                &lt;ogr:kuenstler&gt;Max Mustermann&lt;/ogr:kuenstler&gt;
+                &lt;ogr:einschraen&gt;Ab Oktober nicht in Betrieb.&lt;/ogr:einschraen&gt;
+                &lt;ogr:lagebez&gt;Musterpark&lt;/ogr:lagebez&gt;
+                &lt;ogr:plz&gt;10965&lt;/ogr:plz&gt;
+                &lt;ogr:ortsteil&gt;Kreuzberg&lt;/ogr:ortsteil&gt;
+                &lt;ogr:link&gt;https://beispiel-url.de&lt;/ogr:link&gt;
+                &lt;ogr:bemerkung&gt;Der Wasserfall ist 24m hoch.&lt;/ogr:bemerkung&gt;
+                &lt;ogr:eigenname&gt;Wasserfall&lt;/ogr:eigenname&gt;
+                &lt;ogr:datum&gt;2019/11/13&lt;/ogr:datum&gt;
+              &lt;/ogr:brunnen_neu&gt;
+            &lt;/gml:featureMember&gt;
+            &lt;gml:featureMember&gt;
+              &lt;ogr:brunnen_neu fid=&quot;brunnen.1&quot;&gt;
+                &lt;ogr:geometryProperty&gt;
+                &lt;gml:Point srsName=&quot;EPSG:25833&quot;&gt;
+                &lt;gml:coordinates&gt;395999.795455024,5815683.23434905&lt;/gml:coordinates&gt;
+                &lt;/gml:Point&gt;
+                &lt;/ogr:geometryProperty&gt;
+                &lt;ogr:uid&gt;02001&lt;/ogr:uid&gt;
+                &lt;ogr:bezirk&gt;Friedrichshain-Kreuzberg&lt;/ogr:bezirk&gt;
+                &lt;ogr:bezeichn&gt;Font&#xE4;ne&lt;/ogr:bezeichn&gt;
+                &lt;ogr:jahr xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:kuenstler xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:einschraen xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:lagebez xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:plz&gt;10965&lt;/ogr:plz&gt;
+                &lt;ogr:ortsteil xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:link xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:bemerkung xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:eigenname xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:datum&gt;2019/11/13&lt;/ogr:datum&gt;
+              &lt;/ogr:brunnen_neu&gt;
+            &lt;/gml:featureMember&gt;
+            &lt;gml:featureMember&gt;
+              &lt;ogr:brunnen_neu fid=&quot;brunnen.2&quot;&gt;
+                &lt;ogr:geometryProperty&gt;
+                &lt;gml:Point srsName=&quot;EPSG:25833&quot;&gt;
+                &lt;gml:coordinates&gt;394529.348641691,5812275.53221021&lt;/gml:coordinates&gt;
+                &lt;/gml:Point&gt;
+                &lt;/ogr:geometryProperty&gt;
+                &lt;ogr:uid&gt;02001&lt;/ogr:uid&gt;
+                &lt;ogr:bezirk&gt;Mitte&lt;/ogr:bezirk&gt;
+                &lt;ogr:bezeichn&gt;Plansche&lt;/ogr:bezeichn&gt;
+                &lt;ogr:jahr xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:kuenstler xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:einschraen xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:lagebez xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:plz&gt;12099&lt;/ogr:plz&gt;
+                &lt;ogr:ortsteil xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:link xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:bemerkung xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:eigenname xsi:nil=&quot;true&quot;/&gt;
+                &lt;ogr:datum&gt;2019/11/13&lt;/ogr:datum&gt;
+              &lt;/ogr:brunnen_neu&gt;
+            &lt;/gml:featureMember&gt;
+          &lt;/ogr:FeatureCollection&gt;
+        </code>
+      </pre>
+      </details>
+      <details>
+        <summary> Beispiel für einen nicht validen Input (Brunnen)</summary>
+        <pre>
+        <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        &lt;ogr:FeatureCollection
+            xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+            xsi:schemaLocation=&quot;http://ogr.maptools.org/ brunnen_neu.xsd&quot;
+            xmlns:ogr=&quot;http://ogr.maptools.org/&quot;
+            xmlns:gml=&quot;http://www.opengis.net/gml&quot;&gt;
+          &lt;gml:boundedBy&gt;
+            &lt;gml:Box&gt;
+              &lt;gml:coord&gt;
+              &lt;gml:X&gt;390328.07203217&lt;/gml:X&gt;
+              &lt;gml:Y&gt;5812275.53221021&lt;/gml:Y&gt;
+              &lt;/gml:coord&gt;
+              &lt;gml:coord&gt;&lt;gml:X&gt;395999.795455024&lt;/gml:X&gt;
+              &lt;gml:Y&gt;5816266.74498926&lt;/gml:Y&gt;&lt;/gml:coord&gt;
+            &lt;/gml:Box&gt;
+          &lt;/gml:boundedBy&gt;
+          &lt;gml:featureMember&gt;
+            &lt;ogr:brunnen_neu fid=&quot;brunnen.0&quot;&gt;
+              &lt;ogr:geometryProperty&gt;
+              &lt;gml:Point srsName=&quot;EPSG:25833&quot;&gt;
+              &lt;gml:coordinates&gt;390328.07203217,5816266.74498926&lt;/gml:coordinates&gt;
+              &lt;/gml:Point&gt;
+              &lt;/ogr:geometryProperty&gt;
+              &lt;ogr:uid&gt;brunnen1&lt;/ogr:uid&gt;
+              &lt;ogr:bezirk&gt;Fh-Kr&lt;/ogr:bezirk&gt;
+              &lt;ogr:bezeichn&gt;Zierbrunnen&lt;/ogr:bezeichn&gt;
+              &lt;ogr:jahr&gt;1893&lt;/ogr:jahr&gt;
+              &lt;ogr:kuenstler&gt;Max Mustermann&lt;/ogr:kuenstler&gt;
+              &lt;ogr:einschraen&gt;Ab Oktober nicht in Betrieb.&lt;/ogr:einschraen&gt;
+              &lt;ogr:lagebez&gt;Musterpark&lt;/ogr:lagebez&gt;
+              &lt;ogr:plz&gt;10965&lt;/ogr:plz&gt;
+              &lt;ogr:ortsteil&gt;Kreuzberg&lt;/ogr:ortsteil&gt;
+              &lt;ogr:link&gt;https://beispiel-url.de&lt;/ogr:link&gt;
+              &lt;ogr:bemerkung&gt;Der Wasserfall ist 24m hoch.&lt;/ogr:bemerkung&gt;
+              &lt;ogr:eigenname&gt;Wasserfall&lt;/ogr:eigenname&gt;
+              &lt;ogr:datum&gt;2019/11/13&lt;/ogr:datum&gt;
+            &lt;/ogr:brunnen_neu&gt;
+          &lt;/gml:featureMember&gt;
+          &lt;gml:featureMember&gt;
+            &lt;ogr:brunnen_neu fid=&quot;brunnen.1&quot;&gt;
+              &lt;ogr:geometryProperty&gt;
+              &lt;gml:Point srsName=&quot;EPSG:25833&quot;&gt;
+              &lt;gml:coordinates&gt;395999.795455024,5815683.23434905&lt;/gml:coordinates&gt;
+              &lt;/gml:Point&gt;
+              &lt;/ogr:geometryProperty&gt;
+              &lt;ogr:uid&gt;02001&lt;/ogr:uid&gt;
+              &lt;ogr:bezirk&gt;Friedrichshain-Kreuzberg&lt;/ogr:bezirk&gt;
+              &lt;ogr:bezeichn&gt;Font&#xE4;ne&lt;/ogr:bezeichn&gt;
+              &lt;ogr:jahr xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:kuenstler xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:einschraen xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:lagebez xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:plz&gt;&lt;/ogr:plz&gt;
+              &lt;ogr:ortsteil xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:link xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:bemerkung xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:eigenname xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:datum&gt;2019/11/13&lt;/ogr:datum&gt;
+            &lt;/ogr:brunnen_neu&gt;
+          &lt;/gml:featureMember&gt;
+          &lt;gml:featureMember&gt;
+            &lt;ogr:brunnen_neu fid=&quot;brunnen.2&quot;&gt;
+              &lt;ogr:geometryProperty&gt;
+              &lt;gml:Point srsName=&quot;EPSG:25833&quot;&gt;
+              &lt;gml:coordinates&gt;394529.348641691,5812275.53221021&lt;/gml:coordinates&gt;
+              &lt;/gml:Point&gt;
+              &lt;/ogr:geometryProperty&gt;
+              &lt;ogr:uid&gt;02001&lt;/ogr:uid&gt;
+              &lt;ogr:bezirk&gt;Mitte&lt;/ogr:bezirk&gt;
+              &lt;ogr:bezeichn&gt;kleiner Brunnen&lt;/ogr:bezeichn&gt;
+              &lt;ogr:jahr xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:kuenstler xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:einschraen xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:lagebez xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:plz xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:ortsteil xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:link xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:bemerkung xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:eigenname xsi:nil=&quot;true&quot;/&gt;
+              &lt;ogr:datum&gt;2019/11/13&lt;/ogr:datum&gt;
+            &lt;/ogr:brunnen_neu&gt;
+          &lt;/gml:featureMember&gt;
+        &lt;/ogr:FeatureCollection&gt;
+    </code>
+  </pre>
+      </details>
+    </div>
+  </div>
+
+  <script>
+    let fileContent = undefined;
+    const target = document.querySelector("#results");
+    if (!target) {
+      throw new Error("Could not find target div (#results) for results");
+    }
+
+    const resframe = document.querySelector("iframe#result-iframe");
+    if (resframe) {
+      if (resframe instanceof HTMLElement) {
+        resframe.style.display = "none";
+      }
+    }
+
+    const form = document.querySelector("#form");
+    if (!form) {
+      throw new Error("Could not find form element (#form)");
+    }
+
+    const textArea = document.querySelector("textarea#txt");
+    if (!textArea) {
+      throw new Error("Could not find textarea#txt");
+    }
+    const fileUpload = document.querySelector("input#xml");
+    if (!fileUpload) {
+      throw new Error("Could not find file input element");
+    }
+
+    fileUpload.addEventListener(
+      "change",
+      function () {
+        const fileList = this.files;
+        const firstFile = fileList[0];
+        // TODO: Can we validate that the file is an gml file?
+        // below is just the solution for an xml file
+        // if (firstFile.type !== "application/xml") {
+        //   throw new Error("This is not an xml");
+        // }
+        const reader = new FileReader();
+        reader.readAsText(firstFile, "UTF-8");
+        reader.onerror = () => {
+          throw new Error("could not read file");
+        };
+        reader.onload = (e) => {
+          const xml = e.target?.result;
+          // @ts-ignore
+          fileContent = xml;
+          // @ts-ignore
+          textArea.value = fileContent;
+          // @ts-ignore
+          // we could empty the file list here, but it would
+          // create confusion for the user i guess
+          // fileUpload.value = "";
+        };
+      },
+      false,
+    );
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (form instanceof HTMLFormElement) {
+        const formData = new FormData(form);
+        // uf we have something in txt entry we don't need to
+        // send the file over
+        if (formData.get("txt") !== undefined) {
+          formData.delete("xml"); // that's why we remove it
+          // below while loop is just for verification that the
+          // selected file is actually gone
+          const it = formData.keys();
+          let result = it.next();
+          // formData.set("txt", fileContent);
+          while (!result.done) {
+            // console.log(result.value);
+            result = it.next();
+          }
+        }
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          //mode: "cors",
+        })
+          .then((response) => {
+            if (!response.ok) {
+              // throw error
+              // give warning
+              // do something
+              return;
+            }
+            //form.reset();
+            return response.json();
+          })
+          .then((json) => {
+            if (target instanceof HTMLElement) {
+              target.innerHTML = "";
+              // const br = document.createElement("br");
+              const h3 = document.createElement("h3");
+              const report_status = document.createElement("p");
+              report_status.classList.add("font-bold", "report-title");
+              h3.classList.add("font-bold", "report-title", "headline-03");
+              for (var key in json) {
+                if (json.hasOwnProperty(key)) {
+                  if (key === "status") {
+                    switch (json[key]) {
+                      case "invalid": {
+                        h3.textContent =
+                          "Ergebnis: Die GML Datei ist nicht valide";
+                        report_status.textContent =
+                          "Sie entspricht nicht dem vorgegebenen Schema.";
+                        break;
+                      }
+                      case "valid": {
+                        h3.textContent =
+                          "Ergebnis: Die Validierung war erfolgreich";
+                        report_status.textContent =
+                          "Die GML-Datei entspricht dem vorgegebenen Schema. Es wurden keine Fehler gefunden.";
+
+                        break;
+                      }
+                      case "error": {
+                        h3.textContent =
+                          "Fehler: Keine Datei zum Validieren oder ungültige Datei";
+                        report_status.textContent =
+                          "Laden Sie entweder eine Datei hoch oder kopieren Sie die GML-Datei in das Textfeld.";
+
+                        break;
+                      }
+                    }
+                    target.appendChild(h3);
+                    target.appendChild(report_status);
+                  } else if (key === "report") {
+                    const reportKeys = Object.keys(json.report);
+                    for (const reportKey of reportKeys) {
+                      const report = json.report[reportKey];
+                      const reportTitle = document.createElement("h4");
+                      reportTitle.classList.add("font-bold", "report-title");
+                      reportTitle.textContent = `Fehler in Zeile ${reportKey}`;
+                      const p = document.createElement("p");
+                      p.classList.add("report-text");
+                      // const span2 = document.createElement("span");
+                      // span2.classList.add("headline-04");
+                      p.textContent = report;
+
+                      target.appendChild(reportTitle);
+                      // p.appendChild(span2);
+                      target.appendChild(p);
+                    }
+                  }
+                }
+              }
+            }
+          })
+          .catch(console.error);
+      }
+    });
+  </script>
+
+  <style is:global>
+    .report-title,
+    .report-text {
+      padding-bottom: 1rem;
+    }
+
+    .report-title {
+      font-size: 1.1rem !important;
+    }
+
+    .report-text {
+      line-height: 1.4rem;
+      padding-bottom: 2rem;
+    }
+
+    .fileinput {
+      width: 400px;
+    }
+
+    .iframestyle {
+      background-color: #d3d3d3;
+      border: 1px solid #999999;
+      margin-top: 1em;
+    }
+
+    iframe {
+      height: 12em;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1200px) and (min-width: 1000px) {
+      iframe {
+        width: 750px;
+      }
+    }
+
+    pre {
+      white-space: pre-wrap;
+      /* Since CSS 2.1 */
+      white-space: -moz-pre-wrap;
+      /* Mozilla, since 1999 */
+      white-space: -pre-wrap;
+      /* Opera 4-6 */
+      white-space: -o-pre-wrap;
+      /* Opera 7 */
+      word-wrap: break-word;
+      /* Internet Explorer 5.5+ */
+    }
+  </style>
+</DefaultLayout>

@@ -1,0 +1,62 @@
+---
+import { cn } from "@/utils/classNames";
+import ContentSection, {
+  type Props as ContentSectionProps,
+} from "@/components/macros/ContentSection.astro";
+import Button from "@/components/Button.astro";
+import ResourceInfo from "../ResourceInfo.astro";
+import type { CollectionEntry } from "astro:content";
+
+export type Props = ContentSectionProps & {
+  buttons?: {
+    text?: undefined | string;
+    link?: undefined | string;
+    isDownloadable?: boolean;
+  }[];
+  mediaMetadata?: CollectionEntry<"resources">["data"]["media"];
+};
+
+const {
+  buttons = [],
+  class: className = "",
+  mediaMetadata,
+  ...contentSectionProps
+} = Astro.props;
+---
+
+<ContentSection {...contentSectionProps} class={cn(`not-prose`, className)}>
+  <div class={cn(contentSectionProps.fullWidth && "sm:grid-container")}>
+    <div aria-label="Medienvorschau">
+      <slot />
+    </div>
+  </div>
+  <div class={cn(contentSectionProps.fullWidth && "sm:grid-container", "mt-6")}>
+    {
+      (mediaMetadata || buttons.length > 0) && (
+        <div
+          class={cn(
+            `lg:col-span-6 lg:col-start-2 xl:col-span-10 xl:col-start-2`,
+            `mb-8 border-b border-discrete pb-8 flex flex-wrap gap-6 justify-between`,
+            `items-center`,
+          )}
+        >
+          {mediaMetadata && <ResourceInfo {...mediaMetadata} />}
+          {buttons.length > 0 && (
+            <div class="flex flex-wrap gap-x-6 gap-y-3">
+              {buttons.map((button) => (
+                <Button
+                  tag="a"
+                  href={button.link}
+                  download={button.isDownloadable ?? false}
+                  variant="secondary"
+                >
+                  {button.text}
+                </Button>
+              ))}
+            </div>
+          )}
+        </div>
+      )
+    }
+  </div>
+</ContentSection>

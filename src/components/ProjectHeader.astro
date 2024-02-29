@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Heading from "../components/Heading.astro";
+import Paragraph from "./Paragraph.astro";
+import ProjectMockups from "./ProjectMockups.astro";
+
+export type Props = CollectionEntry<"projekte">;
+
+const post = Astro.props;
+const { title, description } = post.data;
+---
+
+<section class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64">
+  <div class="grid-container">
+    <div class="lg:col-span-6 lg:col-start-2">
+      <Heading size="xxl" inverted set:html={title} />
+      <Paragraph size="lg" class="text-balance">{description}</Paragraph>
+    </div>
+  </div>
+</section>
+<section class="pb-24 -mt-32 sm:-mt-56">
+  <ProjectMockups
+    {...post.data}
+    buttonLink={post.data.blogLink}
+    buttonTitle={post.data.blogLinkTitle}
+    class="container mx-auto grid grid-cols-12 gap-x-4 sm:gap-x-6 px-4 @sm:px-6 max-w-7xl"
+    slug={post.slug}
+  />
+</section>

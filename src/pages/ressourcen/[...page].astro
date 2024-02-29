@@ -1,0 +1,69 @@
+---
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import Pagination from "@/components/Pagination.astro";
+import type { Page, GetStaticPaths } from "astro";
+import NewsletterLane from "@/components/NewsletterLane.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import ResourceCard from "@/components/ResourceCard.astro";
+
+type DataType = CollectionEntry<"resources">;
+
+export type Props = {
+  page: Page<DataType>;
+};
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const posts = (await getCollection("resources")).sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+  );
+  return paginate(posts, { pageSize: 10 });
+};
+
+const { page } = Astro.props;
+const { data } = await getEntry("resourcesOverview", "resourcesoverview");
+
+const firstPath = "ressourcen";
+---
+
+<DefaultLayout
+  metaTitle={data.metaTitle || data.title}
+  metaDescription={data.metaDescription || data.description}
+  ogImage={data.ogImage?.src || "/ressourcen/og/alle-ressourcen.png"}
+>
+  <PageHeader
+    title={data.title}
+    description={data.description}
+    class="bg-bg-inv text-text-inv py-16"
+    image={data.headerImage && {
+      ...data.headerImage,
+      class: "max-w-[220px]",
+    }}
+  />
+
+  <div class="grid-container py-16">
+    <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
+      {
+        page.data.map((post, idx) => {
+          if (!post.data.visible) return null;
+          const imgLoading = idx > 2 ? "lazy" : "eager";
+          return <ResourceCard {...post} imageLoading={imgLoading} />;
+        })
+      }
+    </div>
+  </div>
+
+  <nav aria-label="Pagination" class="mt-12 grid-container">
+    <Pagination
+      length={page.lastPage}
+      currentUrl={page.url.current}
+      currentPage={page.currentPage}
+      firstUrl={`/${firstPath}`}
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      lastUrl={`/${firstPath}/${page.lastPage}`}
+    />
+  </nav>
+
+  <NewsletterLane />
+</DefaultLayout>

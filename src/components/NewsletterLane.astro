@@ -1,0 +1,49 @@
+---
+import Button from "./Button.astro";
+import ContactLane from "./ContactLane.astro";
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+
+export type Props = {
+  class?: string;
+};
+const { class: className } = Astro.props;
+---
+
+<div class={`${className} bg-bg-alt mt-40 py-20`}>
+  <!-- newsletter & kontakt -->
+  <section
+    class="container mx-auto px-4 sm:px-6 gap-4 sm:gap-6 grid grid-cols-12 max-w-7xl"
+  >
+    <!-- newsletter -->
+    <div
+      class="col-start-1 col-span-12 sm:col-start-3 lg:col-start-2 sm:col-span-9 lg:col-span-10 flex flex-col mb-16 items-start max-w-[34.5rem]"
+    >
+      <Heading>Immer up to date?</Heading>
+      <Paragraph>
+        Du möchtest über Neuigkeiten und Veranstaltungen zu Open Data in Berlin
+        informiert werden? Hier geht es zu unserem ODIS-Newsletter!
+      </Paragraph>
+      <Button
+        class="mt-2"
+        tag="a"
+        href="https://subscribe.newsletter2go.com/?n2g=r9s7xtjr-t9stf1hf-10dv&_ga=2.39832739.1628233919.1701885056-587004395.1700833794"
+      >
+        Newsletter abonnieren
+      </Button>
+      <p class="mt-6">
+        Newsletter verpasst? Stöber in unserem
+        <a
+          class="text-links hover:text-links-active focusable underline"
+          href="/aktuelles/archiv/"
+        >
+          Newsletter-Archiv.
+        </a>
+      </p>
+    </div>
+
+    <!-- kontakt -->
+
+    <ContactLane />
+  </section>
+</div>

@@ -1,0 +1,114 @@
+---
+import { Image } from "astro:assets";
+import { cn } from "@/utils/classNames";
+import Heading from "@/components/Heading.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import type { CollectionEntry } from "astro:content";
+import Button from "@/components/Button.astro";
+import { Icon } from "astro-icon/components";
+import { iconsMap, labelsMap } from "@/utils/resourceUtil";
+
+export type Props = CollectionEntry<"resources"> & {
+  class?: string;
+};
+
+const { data, class: className } = Astro.props;
+const { title, description, question, media } = data;
+const thumbnail = media.thumbnail;
+
+const isVideoAspectRatio = thumbnail.width > thumbnail.height;
+---
+
+<div class={cn(`w-screen overflow-x-hidden`, className)}>
+  <section
+    class="bg-bg-alt border-b border-line-inv overflow-hidden"
+    aria-label="Einführung"
+  >
+    <div class="grid-container">
+      <div class="lg:col-start-2 lg:col-span-5 py-10">
+        <Paragraph class="flex gap-x-3 flex-wrap">
+          <a
+            href={`/ressourcen`}
+            class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
+          >
+            <Icon name="ui/arrow-left" size={20} />
+            Zurück
+          </a>
+        </Paragraph>
+        <Paragraph tag="h2" set:html={question} />
+        <Heading tag="h1" set:html={title} size="xxl" />
+        <Paragraph size="lg" set:html={description} />
+        {
+          media.link && (
+            <Button
+              tag="a"
+              href={media.link}
+              class="inline-flex gap-3"
+              title="Direkter Link zur Ressource"
+              download={media.type === "pdf" || media.type === "table"}
+            >
+              <Icon name={iconsMap[media.type]} size={20} />
+              {labelsMap[media.type]}
+            </Button>
+          )
+        }
+      </div>
+      <div
+        class={cn(
+          `row-start-2 lg:row-start-1`,
+          `row-end-2 h-[40vmax] sm:h-[40vmin] lg:h-auto`,
+          `lg:col-start-9 lg:col-span-4 relative`,
+        )}
+      >
+        <div
+          aria-hidden="true"
+          class={cn(
+            `absolute top-[calc(var(--columnSize)+var(--gridGap))] lg:top-0 h-full bg-bg-inv`,
+            `-left-[calc(var(--contentOffset)*-1)] lg:left-0`,
+            `w-full sm:w-screen`,
+            `lg:w-[calc(100%+var(--columnSize)+var(--marginSize)+(var(--gridGap)*2))]`,
+          )}
+        >
+        </div>
+        <div
+          class={cn(
+            `absolute bg-bg-alt w-full sm:w-1/2 h-[50vmax] sm:h-[50vmin] lg:h-auto`,
+            `top-0 right-0 lg:top-auto lg:right-auto lg:max-h-[calc(100%-2.5rem)]`,
+            `lg:-left-[calc(var(--columnSize)+var(--gridGap))]`,
+            isVideoAspectRatio
+              ? `lg:w-[calc(100%+var(--columnSize)+var(--gridGap))]`
+              : `lg:w-[calc((var(--columnSize)+var(--gridGap))*3)]`,
+            isVideoAspectRatio
+              ? `lg:top-1/2 lg:-translate-y-1/2`
+              : `lg:-bottom-px`,
+          )}
+        >
+          <Image
+            src={media.thumbnail}
+            alt={`Media thumbnail preview of "${title}"`}
+            class={cn(
+              "w-full h-auto top-4 left-0 bg-bg-alt",
+              "border border-line-inv shadow-secondary dark:shadow-primary-inv",
+            )}
+            widths={isVideoAspectRatio ? [500, 600] : [300, 400]}
+            sizes={isVideoAspectRatio
+              ? "(max-width: 1024px) 500px, 600px"
+              : "(max-width: 1024px) 300px, 400px"}
+            loading="eager"
+          />
+          {
+            !isVideoAspectRatio && (
+              <div
+                aria-hidden="true"
+                class={cn(
+                  "absolute w-full h-full top-0 left-0",
+                  "mix-blend-multiply opacity-20 gradient-overlay",
+                )}
+              />
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

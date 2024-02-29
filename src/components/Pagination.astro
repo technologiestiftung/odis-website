@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+import { cn } from "../utils/classNames";
+export interface Props {
+  length: number;
+  currentUrl: string;
+  currentPage: number;
+  firstUrl: string;
+  prevUrl: string | undefined;
+  nextUrl: string | undefined;
+  lastUrl: string;
+}
+
+const { length, currentPage, firstUrl, prevUrl, nextUrl } = Astro.props;
+---
+
+<nav
+  class="flex flex-row flex-nowrap items-center justify-between md:justify-center"
+  aria-label="Pagination"
+>
+  {
+    prevUrl && (
+      <a
+        class={cn(
+          `flex h-10 w-10 items-center justify-center`,
+          `bg-bg hover-hover:hover:bg-bg-alt text-links hover-hover:hover:text-links-active`,
+          `focusable motion-safe:transition-colors`,
+        )}
+        href={prevUrl.replace(/1\/?$/, "")}
+        title="Previous Page"
+      >
+        <span class="sr-only">Previous Page</span>
+        <Icon name="ui/chevron-left" size={32} />
+      </a>
+    )
+  }
+
+  {
+    Array.from({ length }, (_, i) => i + 1).map((page) => (
+      <a
+        class={cn(
+          `flex h-10 w-10 items-center justify-center`,
+          `focusable`,
+          `transition-colors motion-reduce:transition-none`,
+          page !== currentPage &&
+            `bg-bg hover-hover:hover:bg-bg-alt text-links`,
+          page === currentPage && [
+            `cursor-default bg-links-active text-bg dark:text-text font-bold`,
+          ],
+        )}
+        href={`${firstUrl}/${page}`.replace(/1\/?$/, "")}
+        title={`Page ${page}`}
+        tabindex={page === currentPage ? -1 : undefined}
+      >
+        {page}
+      </a>
+    ))
+  }
+  {
+    nextUrl && (
+      <a
+        class={cn(
+          `flex h-10 w-10 items-center justify-center`,
+          `bg-bg hover-hover:hover:bg-bg-alt text-links hover-hover:hover:text-links-active`,
+          `focusable motion-safe:transition-colors`,
+        )}
+        href={nextUrl}
+        title="Next Page"
+      >
+        <span class="sr-only">Next Page</span>
+        <Icon name="ui/chevron-right" size={32} />
+      </a>
+    )
+  }
+</nav>

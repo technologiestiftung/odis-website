@@ -1,0 +1,112 @@
+---
+import NewsCardContent from "./NewsCardContent.astro";
+import Button from "./Button.astro";
+import TextLink from "./TextLink.astro";
+import NewsCardGradient from "./NewsCardGradient.astro";
+import { cn } from "../utils/classNames";
+import { Icon } from "astro-icon/components";
+import type { CollectionEntry } from "astro:content";
+import { Image, type LocalImageProps } from "astro:assets";
+
+export type Props = CollectionEntry<"aktuelles"> & {
+  class?: string;
+  titleTag?: "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+  imageLoading?: LocalImageProps["loading"];
+};
+
+const {
+  class: className = "",
+  data,
+  slug,
+  imageLoading = "lazy",
+} = Astro.props;
+const { headerImage } = data;
+
+const hasLink = !!data.link;
+const linkIsExternal = hasLink && data.link?.startsWith("http");
+const postLink = data.link && linkIsExternal ? data.link : `/aktuelles/${slug}`;
+const theme = linkIsExternal ? "inverted" : "normal";
+const paddingClasses = `px-7 pt-7 pb-10`;
+const isInverted = theme === "inverted";
+const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
+---
+
+<article
+  class={cn(
+    `@container relative grid grid-items-start`,
+    `grid-rows-[306px,minmax(auto,1fr)] border`,
+    !isInverted && `bg-bg-alt dark:bg-bg text-text border-bg-alt`,
+    headerImage?.src ? `p-0` : paddingClasses,
+    isInverted && `text-text-inv bg-bg-inv bg-top`,
+    isInverted && `border-bg-inv bg-no-repeat bg-cover @md:bg-contain`,
+    className,
+  )}
+>
+  {
+    headerImage && (
+      <a
+        href={postLink}
+        target={linkIsExternal ? "_blank" : "_self"}
+        rel={linkIsExternal ? "noopener noreferrer" : undefined}
+        class={cn(
+          `w-full h-[306px] overflow-hidden outline-none relative`,
+          `hover:opacity-50 transition-opacity duration-300 ease-in-out`,
+        )}
+      >
+        <Image
+          src={headerImage.src}
+          alt={headerImage.alt}
+          loading={imageLoading}
+          widths={[360, 740]}
+          sizes={`(max-width: 360px) 360px, 740px`}
+          class={cn("w-full h-full object-cover")}
+        />
+        <div class="absolute inset-0 bg-bg-inv mix-blend-screen opacity-50" />
+      </a>
+    )
+  }
+  <div
+    class={cn(
+      "row-start-2 h-full grid grid-rows-[auto,1fr] gap-6 z-10",
+      contentAreaWrapperClasses,
+    )}
+  >
+    <div class="flex flex-col gap-2">
+      <NewsCardContent
+        {...Astro.props.data}
+        postLink={postLink}
+        theme={theme}
+      />
+    </div>
+    <div class="flex flex-col justify-end items-start">
+      {
+        !isInverted && (
+          <Button tag="a" href={postLink} variant="secondary">
+            {data.urlText}
+          </Button>
+        )
+      }
+      {
+        theme !== "normal" && (
+          <TextLink
+            tag="a"
+            href={postLink}
+            class="text-text-inv focus-visible:bg-bg focus-visible:decoration-bg focus-visible:text-links"
+          >
+            {data.urlText}
+          </TextLink>
+        )
+      }
+    </div>
+  </div>
+  {
+    isInverted && (
+      <>
+        <div class="sr-only" role="img" aria-label={headerImage?.alt} />
+        <span class="absolute top-2 right-2 bg-bg-inv p-4 text-text-inv">
+          <Icon name="ui/external-link" size={20} aria-hidden="true" />
+        </span>
+      </>
+    )
+  }
+</article>

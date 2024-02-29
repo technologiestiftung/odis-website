@@ -1,0 +1,43 @@
+---
+import { type Props as ContentSectionProps } from "@/components/macros/ContentSection.astro";
+import type { CollectionEntry } from "astro:content";
+import MediaSection from "./MediaSection.astro";
+
+export type Props = ContentSectionProps & {
+  filePath: string;
+  downloadLinkText?: undefined | string;
+  mediaMetadata?: CollectionEntry<"resources">["data"]["media"];
+};
+
+const {
+  filePath,
+  downloadLinkText,
+  class: className = "",
+  mediaMetadata,
+  fullWidth = true,
+  ...contentSectionProps
+} = Astro.props;
+
+const iFrameUrl = import.meta.env.PROD
+  ? `https://docs.google.com/gview?url=${Astro.site}${filePath.replace("/", "")}&embedded=true`
+  : `http://localhost:${import.meta.env.PORT || 4321}/${filePath.replace("/", "")}`;
+---
+
+<MediaSection
+  buttons={[
+    {
+      link: Astro.site + filePath,
+      text: downloadLinkText || "Download",
+      isDownloadable: true,
+    },
+  ]}
+  mediaMetadata={mediaMetadata}
+  fullWidth={fullWidth}
+  {...contentSectionProps}
+>
+  <iframe
+    src={iFrameUrl}
+    loading="lazy"
+    class="aspect-[9/13] lg:aspect-square w-full bg-discrete border border-discrete"
+    title="Embedded PDF viewer"></iframe>
+</MediaSection>

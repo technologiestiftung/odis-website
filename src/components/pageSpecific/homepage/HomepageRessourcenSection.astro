@@ -1,0 +1,135 @@
+---
+import Button from "@/components/Button.astro";
+import Heading from "@/components/Heading.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import ResourceCard from "@/components/ResourceCard.astro";
+import { boldify } from "@/utils/boldify";
+import { cn } from "@/utils/classNames";
+import { Icon } from "astro-icon/components";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+export type Props = CollectionEntry<"homepage">["data"]["resources"];
+
+const texts = Astro.props;
+
+const resources = (
+  await getCollection("resources", (project) =>
+    project.data.tags.includes("home"),
+  )
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<div class="py-24">
+  <div class="grid-container">
+    <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
+      <div
+        class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 lg:col-start-1 flex flex-col justify-center items-start"
+      >
+        <Heading
+          class="font-normal"
+          tag="h3"
+          size="xl"
+          set:html={boldify(texts.title)}
+        />
+        <Paragraph set:html={texts.text} />
+        {
+          texts.buttons.map((button) => (
+            <Button
+              tag="a"
+              href={button.link}
+              variant={button.variant}
+              class="mt-2"
+            >
+              {button.text}
+            </Button>
+          ))
+        }
+      </div>
+      <div
+        class={cn(
+          `relative`,
+          "col-span-12 sm:col-span-10 sm:col-start-2",
+          "lg:col-span-5 lg:col-start-7 mt-16 lg:mt-0",
+        )}
+      >
+        <nav
+          class="absolute w-[calc(100%+160px)] top-0 -left-20 h-full flex justify-between items-center"
+        >
+          <Button
+            tag="button"
+            class={cn(`resources-button resources-button-prev p-2`)}
+            aria-label="Vorherige Ressource"
+          >
+            <Icon size={32} name="ui/chevron-left" />
+          </Button>
+          <Button
+            tag="button"
+            class={cn(`resources-button resources-button-next p-2`)}
+            aria-label="Nächste Ressource"
+          >
+            <Icon size={32} name="ui/chevron-right" />
+          </Button>
+        </nav>
+        <div class="overflow-hidden relative h-full resources-swiper">
+          <div class="swiper-wrapper">
+            {
+              resources.map((resource) => (
+                <ResourceCard class="swiper-slide" {...resource} />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  .resources-button.swiper-button-disabled {
+    border-color: var(--gray-light);
+    box-shadow: none;
+    color: var(--gray-light);
+  }
+</style>
+
+<script>
+  import Swiper from "swiper";
+  import "swiper/swiper-bundle.css";
+
+  const prevButton = document.querySelector(
+    ".resources-button-prev",
+  ) as HTMLButtonElement;
+  const nextButton = document.querySelector(
+    ".resources-button-next",
+  ) as HTMLButtonElement;
+  const swiper = new Swiper(".resources-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".resources-button-next",
+      prevEl: ".resources-button-prev",
+    },
+    a11y: {
+      nextSlideMessage: "Nächste Resource",
+      prevSlideMessage: "Vorherige Resource",
+    },
+  });
+
+  prevButton.addEventListener("click", () => swiper.slidePrev());
+  nextButton.addEventListener("click", () => swiper.slideNext());
+
+  function updateButtons() {
+    prevButton.classList.remove("swiper-button-disabled");
+    nextButton.classList.remove("swiper-button-disabled");
+
+    if (swiper.isBeginning) {
+      prevButton.classList.add("swiper-button-disabled");
+    }
+    if (swiper.isEnd) {
+      nextButton.classList.add("swiper-button-disabled");
+    }
+  }
+
+  swiper.on("slideChange", updateButtons);
+  updateButtons();
+</script>

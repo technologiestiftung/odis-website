@@ -1,0 +1,274 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Paragraph from "../../components/Paragraph.astro";
+import Heading from "../../components/Heading.astro";
+import ModuleStepper from "../../components/ModuleStepper.astro";
+import TextLink from "../../components/TextLink.astro";
+import Button from "../../components/Button.astro";
+import ContactLane from "../../components/ContactLane.astro";
+import { Image } from "astro:assets";
+import { components } from "@/components/macros/index.astro";
+import { cn } from "@/utils/classNames";
+import ResourceCard from "@/components/ResourceCard.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
+import { Icon } from "astro-icon/components";
+import ItemsSlider from "@/components/ItemsSlider.astro";
+import odisContactIcon from "../../assets/images/illustrations/odis_icon_contact.svg";
+
+export type Props = CollectionEntry<"module"> & {
+  data: CollectionEntry<"module">["data"] & {
+    resources: CollectionEntry<"resources">[];
+  };
+};
+
+export async function getStaticPaths() {
+  const posts = await getCollection("module");
+  let postsWithResources: Props[] = [];
+
+  for (const post of posts) {
+    const resources = await getCollection("resources", ({ slug }) =>
+      post.data.methods.find((method) => method.slug === slug),
+    );
+    postsWithResources.push({ ...post, data: { ...post.data, resources } });
+  }
+
+  return postsWithResources.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const modul = post.data;
+const nextNumber = modul.number + 1;
+const allModules = (await getCollection("module")).sort(
+  (a, b) => a.data.number - b.data.number,
+);
+const nextModul = allModules.find((m) => m.data.number === nextNumber);
+const { Content } = await post.render();
+---
+
+<DefaultLayout
+  metaDescription={modul.metaDescription || modul.description}
+  metaTitle={modul.metaTitle || modul.title}
+  ogImage={modul.ogImage?.src || `/module/og/${post.slug}.png`}
+>
+  <section
+    class="bg-bg-inv text-text-inv py-16 pb-56 lg:pb-16 mb-[20vmin] lg:mb-0"
+  >
+    <div class="grid-container">
+      <div
+        class="lg:col-start-1 lg:col-span-1 text-4xl lg:text-6xl text-bg-inv font-bold drop-shadow-[6px_4px_0px_var(--line-dark)] row-start-1 lg:row-start-2"
+        style="-webkit-text-stroke: 1px var(--text-inv);text-stroke: 1px var(--text-inv);"
+      >
+        {modul.number}.
+      </div>
+      <div class="lg:col-start-2 lg:col-span-5 row-start-2 lg:row-start-1">
+        <a
+          href="/module"
+          class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
+        >
+          <Icon name="ui/arrow-left" size={20} />
+          {modul.backButtonText}
+        </a>
+      </div>
+      <div class="lg:col-start-2 lg:col-span-5 row-start-3 lg:row-start-2">
+        <Heading size="xxl" inverted>{modul.title}</Heading>
+        <Paragraph size="lg" inverted>{modul.description}</Paragraph>
+      </div>
+      <div
+        class="lg:col-start-9 lg:col-span-3 relative flex justify-center items-center row-start-4 lg:row-start-3"
+      >
+        <Image
+          src={modul.icon}
+          alt={`Illustration für das Modul ${modul.number}.`}
+          class="absolute top-0 lg:top-auto lg:bottom-0 -left-4 lg:-left-6 w-full lg:translate-y-[calc(50%+1rem)] max-w-sm"
+          widths={[320, 400]}
+          sizes={`(max-width: 330px) 320px, 400px`}
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid-container">
+      <div
+        class={cn(
+          "lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2",
+          "pt-16 @container flex justify-center items-center md:justify-start",
+        )}
+      >
+        <ModuleStepper activeNumber={modul.number} />
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Beitrag">
+    <div class="grid-container">
+      <TableOfContents />
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable py-16 relative z-10"
+      >
+        <Content components={components} />
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Methoden" class="bg-bg-alt pt-16">
+    <div class="grid-container">
+      <div
+        class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:col-span-10 lg:col-start-2 toc-content"
+      >
+        <div>
+          <Heading size="xl">{modul.methodsTitle}</Heading>
+          <Paragraph>{modul.methodsText}</Paragraph>
+        </div>
+      </div>
+    </div>
+
+    <ItemsSlider
+      wrapperClass="pb-24 pt-12 bg-bg-alt"
+      swiperClass="col-span-12 sm:col-span-10 sm:col-start-2 "
+      slidesCount={2}
+    >
+      {
+        modul.resources.map((resource) => (
+          <ResourceCard
+            {...resource}
+            class="swiper-slide swiper-slide-active max-w-screen-sm"
+          />
+        ))
+      }
+    </ItemsSlider>
+  </section>
+
+  <section aria-label={modul.furtherLinksTitle}>
+    <div class="grid-container">
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-24 relative z-10"
+      >
+        <div>
+          <Heading size="xl">{modul.furtherLinksTitle}</Heading>
+          <Paragraph>{modul.furtherLinksText}</Paragraph>
+        </div>
+        <ul class="flex flex-col gap-8 p-0">
+          {
+            modul.furtherLinks.map((link) => (
+              <TextLink
+                tag="a"
+                href={link.link}
+                target="_blank"
+                rel="noreferrer nofollow"
+              >
+                {link.title}
+              </TextLink>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {
+    nextModul && nextModul.data.number < allModules.length + 1 && (
+      <>
+        <section
+          aria-label="Nächste Etappe"
+          class="bg-bg-alt pt-16 pb-4 not-prose"
+        >
+          <div class="grid-container">
+            <div class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
+              <ModuleStepper activeNumber={modul.number} hightLightNext />
+            </div>
+          </div>
+        </section>
+        <section aria-label="Nächste Etappe" class="bg-bg-alt pb-16 not-prose">
+          <div class="grid-container">
+            <div
+              class="@lg:col-start-1 @lg:col-span-1 text-4xl lg:text-5xl text-bg font-bold drop-shadow-[6px_4px_0px_var(--shadow-secondary)] lg:text-right"
+              style="-webkit-text-stroke: 2px var(--line);text-stroke: 2px var(--line);"
+            >
+              {nextNumber}.
+            </div>
+            <div class="lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable relative z-10">
+              <Heading size="lg" tag="h3">
+                {nextModul.data.title}
+              </Heading>
+              <Paragraph>{modul.nextStationText}</Paragraph>
+              <Button tag="a" href={`/module/${nextModul.slug}`}>
+                {modul.allModulesButtonText}
+              </Button>
+            </div>
+          </div>
+        </section>
+      </>
+    )
+  }
+
+  <section aria-label="Kontakt" class="py-16">
+    <div class="grid-container">
+      <div
+        class="sm:col-start-1 sm:col-span-2 lg:col-start-1 lg:col-span-1 hidden sm:flex items-start justify-end"
+      >
+        <Image
+          src={odisContactIcon}
+          aria-hidden="true"
+          class="grow max-w-[72px]"
+          alt="Illustration von Sprechblasen mit Fragezeichen und Ausrufezeichen"
+          widths={[220]}
+          sizes="220px"
+          loading="eager"
+        />
+      </div>
+
+      <div
+        class="col-start-1 sm:col-start-3 lg:col-start-2 col-span-12 sm:col-span-9 lg:col-span-10 flex flex-col gap-2 max-w-[34.5rem]"
+      >
+        <Heading tag="h3" size="lg">Noch Fragen offen?</Heading>
+        <Paragraph>
+          Fragen oder konkreter Unterstützungsbedarf zu dieser Etappe? Einfach
+          unser Kontaktformular nutzen.
+        </Paragraph>
+        <div class="flex justify-start mt-2">
+          <TextLink tag="a" href="/contact#contact-form">
+            Zum Kontaktformular
+          </TextLink>
+        </div>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
+
+<script>
+  import Swiper from "swiper";
+  import "swiper/swiper-bundle.css";
+
+  const swiper = new Swiper(".resources-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    breakpoints: {
+      1024: {
+        slidesPerView: 2,
+      },
+    },
+  });
+</script>
+
+<style is:global>
+  .resources-swiper .swiper-slide:not(.swiper-slide-active) {
+    transition:
+      filter 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+    filter: blur(2px);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .resources-swiper .swiper-slide.swiper-slide-active,
+  .resources-swiper .swiper-slide.swiper-slide-next {
+    filter: blur(0px);
+    opacity: 1;
+    pointer-events: all;
+  }
+</style>

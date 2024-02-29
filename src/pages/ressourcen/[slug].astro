@@ -1,0 +1,41 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import ResourcePageHeader from "../../components/ResourcePageHeader.astro";
+import { components } from "@/components/macros/index.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection(
+    "resources",
+    (entry) => !entry.data.link?.startsWith("http"),
+  );
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"resources">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<DefaultLayout
+  metaDescription={post.data.metaDescription || post.data.description}
+  metaTitle={post.data.metaTitle || post.data.title}
+  ogImage={post.data.ogImage?.src || `/ressourcen/og/${post.slug}.png`}
+>
+  <ResourcePageHeader {...post} />
+
+  <section aria-label="Beitrag">
+    <div class="grid-container">
+      <TableOfContents />
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10"
+      >
+        <Content components={components} />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

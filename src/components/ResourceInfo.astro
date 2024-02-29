@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Paragraph from "./Paragraph.astro";
+import { Icon } from "astro-icon/components";
+import { labelsMap } from "@/utils/resourceUtil";
+
+export type Props = CollectionEntry<"resources">["data"]["media"];
+
+const media = Astro.props;
+---
+
+<div class="flex flex-col">
+  <Paragraph class="flex justify-between gap-2 mb-0">
+    <span>{labelsMap[media.type]}</span>
+    <Icon name={`resources/${media.type}`} size={20} />
+  </Paragraph>
+  {
+    media.readingOrPlayingTime && (
+      <Paragraph class="mb-0">{media.readingOrPlayingTime}</Paragraph>
+    )
+  }
+  {media.size && <Paragraph class="mb-0">{media.size}</Paragraph>}
+</div>
