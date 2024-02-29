@@ -1,0 +1,31 @@
+---
+import { cn } from "@/utils/classNames";
+import type { HTMLAttributes, HTMLTag } from "astro/types";
+
+export type Props<T extends HTMLTag> = HTMLAttributes<T> & {
+  tag?: HTMLTag;
+  inverted?: boolean;
+  size?: "lg" | "xl";
+};
+
+const {
+  tag: Tag = "p",
+  class: className,
+  inverted,
+  size = "md",
+  ...rest
+} = Astro.props;
+---
+
+<Tag
+  class={cn(
+    `max-w-prose`,
+    size === "lg"
+      ? `text-lg xl:text-xl !leading-relaxed mb-6`
+      : `text-base mb-4`,
+    className,
+    )}
+  {...rest}
+>
+  <slot />
+</Tag>

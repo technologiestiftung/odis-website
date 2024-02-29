@@ -1,48 +1,41 @@
 {
-  "name": "@technologiestiftung/odis-website",
-  "version": "2.0.0",
-  "description": "Repository for the website of Berlins Open Data Informationsstelle (ODIS).",
+  "name": "odis-website",
+  "description": "Webseite von Berlins Open Data Informationsstelle",
+  "type": "module",
+  "version": "1.0.0",
   "scripts": {
-    "start": "eleventy --serve --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:css && eleventy",
-    "build:css": "npm run dev:sass && npm run dev:postcss",
-    "predev": "npm run build",
-    "dev": "npm-run-all -p dev:sass:watch dev:postcss:watch dev:eleventy ",
-    "dev:eleventy": "eleventy --serve --quiet --incremental",
-    "dev:css": "npm run dev:sass && npm run dev:postcss",
-    "dev:sass": "sass --quiet source/assets/css/main.scss --load-path=source/_sass/ source/assets/css/main.css",
-    "dev:sass:watch": "npm run dev:sass -- --watch",
-    "dev:postcss": "postcss source/assets/css/main.css --output source/assets/css/main.min.css",
-    "dev:postcss:watch": "npm run dev:postcss -- --watch"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/technologiestiftung/odis-website.git"
+  "dependencies": {
+    "@astrojs/check": "0.4.1",
+    "@astrojs/mdx": "2.1.1",
+    "@astrojs/prefetch": "0.4.1",
+    "@astrojs/rss": "4.0.4",
+    "@astrojs/sitemap": "3.0.5",
+    "@astrojs/tailwind": "5.1.0",
+    "@tailwindcss/container-queries": "0.1.1",
+    "@tailwindcss/typography": "0.5.9",
+    "astro": "4.3.2",
+    "d3": "4.13.0",
+    "swiper": "6.8.4",
+    "tippy.js": "6.3.7",
+    "typescript": "5.3.3"
   },
-  "keywords": [],
-  "contributors": [
-    {
-      "name": "ff6347",
-      "email": "hash@ff6347.email"
-    }
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/technologiestiftung/odis-website/issues"
-  },
-  "homepage": "https://github.com/technologiestiftung/odis-website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "2.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
-    "autoprefixer": "10.4.2",
-    "cssnano": "5.1.0",
-    "eslint": "8.10.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "npm-run-all": "4.1.5",
-    "postcss": "8.4.7",
-    "postcss-cli": "10.0.0",
-    "sass": "1.49.9"
+    "@types/d3": "4.13.0",
+    "@types/react": "18.2.51",
+    "@vercel/og": "0.6.2",
+    "@vite-pwa/astro": "0.2.0",
+    "astro-icon": "1.0.2",
+    "prettier-plugin-astro": "0.12.3",
+    "react": "18.2.0",
+    "sharp": "0.33.2",
+    "tailwind-merge": "2.2.1",
+    "tailwindcss": "3.4.1",
+    "tailwindcss-touch": "1.0.1"
   }
 }

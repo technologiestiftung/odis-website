@@ -1,0 +1,40 @@
+---
+import { cn } from "@/utils/classNames";
+---
+
+<div class="grid-container hidden lg:grid" aria-hidden="true">
+  <div class="grid col-span-10 grid-cols-10 gap-4 @sm:gap-6">
+    <div class="relative col-span-4">
+      <div
+        class={cn(
+          "absolute h-full top-0 bg-bg-inv",
+          `-left-[calc(var(--gridGap)+var(--marginSize))]`,
+          `lg:w-[calc(100%+var(--marginSize)+var(--gridGap)+1px)]`,
+        )}
+        style={{ boxShadow: `0 -1px 0 0 var(--bg-inv)` }}
+      >
+      </div>
+    </div>
+    <div class="col-span-2 col-start-5 bg-right h-[112px] relative">
+      <div
+        class="absolute -top-px -left-[var(--gridGap)] w-[calc(100%+(var(--gridGap)*2))] h-[113px]"
+      >
+        <div class="w-full h-full object-cover object-right text-bg-inv">
+          <svg
+            width="264"
+            height="113"
+            viewBox="0 0 264 113"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0H264V1H258.338C242.377 1 227.011 7.03099 215.345 17.8746L131.155 96.1254C119.489 106.969 104.123 113 88.1623 113H0V0Z"
+              fill="currentColor"
+            >
+            </path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+---
+import Button from "@/components/Button.astro";
+import Checklist from "@/components/Checklist.astro";
+import Heading from "@/components/Heading.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import { boldify } from "@/utils/boldify";
+import { cn } from "@/utils/classNames";
+import { Image } from "astro:assets";
+import { type CollectionEntry } from "astro:content";
+export type Props = CollectionEntry<"homepage">["data"]["openData"];
+
+const openData = Astro.props;
+---
+
+<div class="grid-container pt-16" id="offene-daten">
+  <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
+    <div
+      class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 py-8 lg:pt-0 lg:pb-16"
+    >
+      <Paragraph tag="h2" size="lg" class="mb-0" set:html={openData.subtitle} />
+      <Heading
+        tag="h3"
+        size="xl"
+        class="font-normal"
+        set:html={boldify(openData.title)}
+      />
+      {
+        openData.textPrefix && (
+          <Paragraph tag="p" set:html={openData.textPrefix} />
+        )
+      }
+      <Checklist items={openData.benefits} />
+      {
+        openData.textSuffix && (
+          <Paragraph tag="p" set:html={openData.textSuffix} />
+        )
+      }
+      {
+        openData.buttons.map((button) => (
+          <Button tag="a" href={button.link} variant={button.variant}>
+            {button.text}
+          </Button>
+        ))
+      }
+    </div>
+    <div
+      class={cn(
+        `row-start-1 lg:row-start-auto`,
+        `col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-4 lg:col-start-7`,
+        `relative aspect-video lg:aspect-auto`,
+      )}
+    >
+      <div
+        class={cn(
+          `absolute top-0 bg-bg-alt`,
+          `w-[110vw] h-full`,
+          `-left-[calc((var(--gridGap)*2)+var(--columnSize)+var(--marginSize))]`,
+          `lg:left-0 lg:w-[calc(100%+var(--marginSize)+(var(--columnSize)*2)+(var(--gridGap)*3))]`,
+          `max-w-4xl`,
+        )}
+      >
+        <Image
+          src={openData.image}
+          alt={openData.imageAltText}
+          class="w-full h-full object-cover"
+          widths={[320, 640, 720, 960, 1024]}
+          sizes={`
+            (max-width: 500px) 320px,
+            (max-width: 720px) 640px,
+            (max-width: 960px) 720px,
+            (max-width: 1024px) 960px,
+            1024px
+          `}
+        />
+      </div>
+    </div>
+  </div>
+</div>

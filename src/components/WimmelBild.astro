@@ -1,0 +1,204 @@
+---
+const hoverMarginRectExtra = 20;
+const getHoverMarginRectHeightByHeight = (height: number) => height / 2;
+const getHoverMarginRectYByHeight = (height: number) =>
+  height / 2 + hoverMarginRectExtra;
+---
+
+<svg
+  id="wimmelbild"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 938.02 539.94"
+  class="overflow-visible w-full h-auto"
+  fill="none"
+>
+  <g
+    class="wimmelbild_puzzle-piece"
+    id="bathing"
+    transform="translate(636, 50)"
+  >
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/bathing"></use>
+    </g>
+  </g>
+  <g class="wimmelbild_puzzle-piece" id="solar" transform="translate(322, 28)">
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/solar"></use>
+    </g>
+  </g>
+  <g
+    class="wimmelbild_puzzle-piece"
+    id="savings"
+    transform="translate(636, 230)"
+  >
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/savings"></use>
+    </g>
+  </g>
+  <g
+    class="wimmelbild_puzzle-piece"
+    id="waiting-time"
+    transform="translate(321, 57)"
+  >
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/clock"></use>
+    </g>
+  </g>
+  <g class="wimmelbild_puzzle-piece" id="traffic" transform="translate(4, 0)">
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/traffic"></use>
+    </g>
+  </g>
+  <g class="wimmelbild_puzzle-piece" id="a11y" transform="translate(3, 236)">
+    <rect
+      width="301"
+      height={getHoverMarginRectHeightByHeight(254.6)}
+      fill="var(--bg)"
+      x="0"
+      y={getHoverMarginRectYByHeight(254.6)}
+      fill-opacity="0"></rect>
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/a11y"></use>
+    </g>
+  </g>
+  <g class="wimmelbild_puzzle-piece" id="theft" transform="translate(637, 270)">
+    <rect
+      width="299.79"
+      height={getHoverMarginRectHeightByHeight(207.58)}
+      fill="var(--bg)"
+      x="0"
+      y={getHoverMarginRectYByHeight(207.58)}
+      fill-opacity="0"></rect>
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/theft"></use>
+    </g>
+  </g>
+  <g
+    class="wimmelbild_puzzle-piece"
+    id="budget"
+    transform="translate(318, 206)"
+  >
+    <rect
+      width="301"
+      height={getHoverMarginRectHeightByHeight(288.91)}
+      fill="var(--bg)"
+      x="3"
+      y={getHoverMarginRectYByHeight(288.91)}
+      fill-opacity="0"></rect>
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/money"></use>
+    </g>
+  </g>
+  <g
+    class="wimmelbild_puzzle-piece"
+    id="defibrillators"
+    transform="translate(487,400)"
+  >
+    <rect
+      width="135"
+      height={getHoverMarginRectHeightByHeight(130)}
+      fill="var(--bg)"
+      x="1"
+      y={130 / 2 + 10}
+      fill-opacity="0"></rect>
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/defibrillators"></use>
+    </g>
+  </g>
+  <g class="wimmelbild_puzzle-piece" id="sports" transform="translate(165,443)">
+    <rect
+      width="180"
+      height={getHoverMarginRectHeightByHeight(140)}
+      fill="var(--bg)"
+      x="1"
+      y={40 + 10}
+      fill-opacity="0"></rect>
+    <g
+      class="transition-all duration-1000 ease-out-extreme motion-reduce:transition-none"
+    >
+      <use xlink:href="#ai:local:wimmelbild/sports"></use>
+    </g>
+  </g>
+</svg>
+
+<style>
+  .wimmelbild_puzzle-piece {
+    --illu-white: var(--white);
+    --illu-highlight: var(--red);
+    --illu-gray: var(--gray-light);
+    --illu-bg: var(--blue-light);
+    --illu-line: var(--blue);
+  }
+
+  .wimmelbild_puzzle-piece:focus {
+    outline: none;
+  }
+
+  :global(html.dark) .wimmelbild_puzzle-piece {
+    --illu-white: var(--white);
+    --illu-highlight: var(--red);
+    --illu-gray: var(--gray-light);
+    --illu-bg: var(--blue-light);
+    --illu-line: var(--blue);
+  }
+
+  .wimmelbild_puzzle-piece path,
+  .wimmelbild_puzzle-piece circle,
+  .wimmelbild_puzzle-piece rect {
+    transition:
+      fill 1s cubic-bezier(0.12, 0.98, 0.13, 0.98),
+      stroke 1s cubic-bezier(0.12, 0.98, 0.13, 0.98);
+    will-change: fill, stroke;
+  }
+
+  .wimmelbild_puzzle-piece--hovered > g {
+    transform: translateY(-1rem);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wimmelbild_puzzle-piece path,
+    .wimmelbild_puzzle-piece circle,
+    .wimmelbild_puzzle-piece rect {
+      transition: none;
+    }
+
+    .wimmelbild_puzzle-piece--hovered > g {
+      transform: none;
+    }
+  }
+
+  .wimmelbild_puzzle-piece--hovered-out {
+    --illu-white: var(--bg);
+    --illu-highlight: var(--bg);
+    --illu-gray: var(--bg);
+    --illu-bg: var(--bg);
+    --illu-line: var(--blue-light);
+  }
+
+  :global(html.dark) .wimmelbild_puzzle-piece--hovered-out {
+    --illu-white: var(--bg);
+    --illu-highlight: var(--bg);
+    --illu-gray: var(--bg);
+    --illu-bg: var(--bg);
+    --illu-line: var(--blue-medium);
+  }
+</style>

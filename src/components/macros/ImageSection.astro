@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import { cn } from "../../utils/classNames";
+export type Props = {
+  src: ImageMetadata;
+  caption?: string;
+  alt?: string;
+  withShadow?: boolean;
+  fullWidth?: boolean;
+  class?: undefined | string;
+};
+
+const {
+  src,
+  alt,
+  caption,
+  withShadow = false,
+  fullWidth = false,
+  class: className,
+} = Astro.props;
+---
+
+<figure
+  class={cn(
+    "mt-10 mb-0",
+    fullWidth && "sm:w-screen sm:max-w-[100vw]  sm:ml-[var(--contentOffset)]",
+    className,
+  )}
+>
+  <div class={cn("relative")}>
+    {
+      src && (
+        <Image
+          src={src}
+          alt={alt || caption || ""}
+          class={cn(
+            "my-0 w-full max-w-[1720px] mx-auto",
+            withShadow && "shadow-xl",
+          )}
+          widths={[600, 1080, 1536, Math.min(2160, src.width)]}
+          sizes={`
+            (max-width: 400px) 600px,
+            (max-width: 720px) 1080px,
+            (max-width: 1024px) 1536px,
+            ${Math.min(2160, src.width)}px
+          `}
+        />
+      )
+    }
+    {
+      withShadow && (
+        <div
+          class="absolute pointer-events-none inset-0 ring-1 ring-inset ring-text opacity-10"
+          aria-hidden="true"
+        />
+      )
+    }
+  </div>
+  {
+    caption && (
+      <figcaption
+        class="
+          mt-2 text-xs opacity-70 transition-opacity
+          hover:opacity-100 focus-visible:opacity-100
+          focusable max-w-[1720px] mx-auto contrast-more:opacity-100
+          contrast-more:text-text
+        "
+        tabindex="0"
+      >
+        {caption}
+      </figcaption>
+    )
+  }
+</figure>

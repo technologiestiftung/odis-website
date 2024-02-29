@@ -1,0 +1,76 @@
+---
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Pagination from "../../components/Pagination.astro";
+import type { Page, GetStaticPaths } from "astro";
+import ProjectThumbnail from "../../components/ProjectThumbnail.astro";
+import NewsletterLane from "../../components/NewsletterLane.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+type Project = CollectionEntry<"projekte">;
+
+export type Props = {
+  page: Page<Project>;
+};
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const isPostAndVisible = (post: Project) =>
+    post.data.tags.includes("project") && post.data.visible;
+  const projects = await getCollection("projekte", isPostAndVisible);
+
+  return paginate(
+    projects.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+    { pageSize: 10 },
+  );
+};
+
+const { page } = Astro.props;
+
+const entry = await getEntry("projectsOverview", "projectsoverview");
+const { title, description, metaTitle, metaDescription, headerImage } =
+  entry.data;
+
+const firstPath = "projekte";
+---
+
+<DefaultLayout
+  metaTitle={metaTitle || title}
+  metaDescription={metaDescription || description}
+  ogImage={entry.data.ogImage?.src || "/projekte/og/alle-projekte.png"}
+>
+  <PageHeader
+    title={title}
+    description={description}
+    class="bg-bg-inv text-text-inv pt-16 pb-64 sm:pb-64"
+    image={headerImage}
+  />
+
+  <section class="pb-24 -mt-24 sm:-mt-56">
+    <div class="grid-container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 gap-y-12 xl:gap-y-16">
+        {
+          page.data.map((project, idx) => (
+            <ProjectThumbnail
+              {...project}
+              imageLoading={idx > 2 ? "lazy" : "eager"}
+            />
+          ))
+        }
+      </div>
+    </div>
+
+    <nav aria-label="Pagination" class="mt-16 grid-container">
+      <Pagination
+        length={page.lastPage}
+        currentUrl={page.url.current}
+        currentPage={page.currentPage}
+        firstUrl={`/${firstPath}`}
+        prevUrl={page.url.prev}
+        nextUrl={page.url.next}
+        lastUrl={`/${firstPath}/${page.lastPage}`}
+      />
+    </nav>
+  </section>
+
+  <NewsletterLane />
+</DefaultLayout>

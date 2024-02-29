@@ -1,0 +1,75 @@
+---
+import { cn } from "@/utils/classNames";
+import type { HTMLAttributes, HTMLTag } from "astro/types";
+import { getCollection } from "astro:content";
+
+export type Props<T extends HTMLTag> = {
+  activeNumber: number;
+  hightLightNext?: boolean;
+  buttonTag?: undefined | T;
+  buttonProps?: HTMLAttributes<T>;
+};
+
+const sortedModules = (await getCollection("module")).sort(
+  (a, b) => a.data.number - b.data.number,
+);
+
+const {
+  activeNumber,
+  hightLightNext = false,
+  buttonTag = "a",
+  buttonProps,
+} = Astro.props;
+const nextNumber = activeNumber + 1;
+
+const Tag = buttonTag;
+---
+
+<nav class="inline-flex relative gap-1 @sm:gap-4">
+  <span
+    aria-hidden="true"
+    class="z-10 absolute left-4 w-[calc(100%-2rem)] top-1/2 -translate-y-1/2 h-[2px] bg-line"
+  ></span>
+  {
+    sortedModules.map((module) => {
+      const active = module.data.number === activeNumber;
+      const isNext = module.data.number === nextNumber;
+      const activeAndNext = active && !hightLightNext;
+      const isNextAndHighlighted = isNext && hightLightNext;
+      const showLarge = activeAndNext || isNextAndHighlighted;
+      return (
+        <Tag
+          href={Tag === "a" ? `/module/${module.slug}` : undefined}
+          tabindex={active ? "-1" : "0"}
+          aria-label={`Go to module ${module.data.number}`}
+          data-modulenumber={module.data.number}
+          class={cn(
+            `module-stepper-button`,
+            `w-10 h-10 flex place-content-center place-items-center`,
+            `relative z-20 focusable rounded-full group`,
+            `no-underline cursor-pointer aspect-square`,
+          )}
+          {...buttonProps}
+        >
+          <span
+            class={cn(
+              `flex place-content-center place-items-center text-center`,
+              `aspect-square rounded-full border-2 border-line`,
+              showLarge ? `w-10 h-10` : `w-5 h-5`,
+              active &&
+                `bg-links-active text-bg dark:text-text border-links-active`,
+              !active && `bg-bg text-links-active font-bold`,
+              `group-hover:hover-hover:bg-links-active`,
+              `group-hover:hover-hover:text-bg dark:hover-hover:group-hover:text-text transition-all`,
+              `group-hover:hover-hover:border-links-active`,
+            )}
+          >
+            {activeAndNext ? module.data.number : null}
+            {isNextAndHighlighted ? nextNumber : null}
+            {!activeAndNext && !isNextAndHighlighted && <>&nbsp;</>}
+          </span>
+        </Tag>
+      );
+    })
+  }
+</nav>

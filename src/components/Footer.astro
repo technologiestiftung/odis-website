@@ -1,0 +1,160 @@
+---
+import Paragraph from "./Paragraph.astro";
+import BerlinLogo from "./logos/BerlinLogo.astro";
+import TSBLogo from "./logos/TSBLogo.astro";
+import IBBLogo from "./logos/IBBLogo.astro";
+import BerlinOpenDataLogo from "./logos/BerlinOpenDataLogo.astro";
+import FbLogo from "./logos/FbLogo.astro";
+import GitHubLogo from "./logos/GitHubLogo.astro";
+import YouTubeLogo from "./logos/YouTubeLogo.astro";
+import XLogo from "./logos/XLogo.astro";
+import InstagramLogo from "./logos/InstagramLogo.astro";
+import LinkedInLogo from "./logos/LinkedInLogo.astro";
+import TextLink from "./TextLink.astro";
+---
+
+<footer class="grid-container border-t-4 border-t-line">
+  <div
+    class="md:col-start-2 md:col-span-10 xl:col-span-6 pt-9 xl:pb-9 flex flex-col gap-6"
+  >
+    <div class="flex flex-wrap gap-3">
+      <a
+        href="https://www.technologiestiftung-berlin.de"
+        class="focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+        aria-label="Technologiestiftung Berlin"
+      >
+        <TSBLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+
+      <a
+        href="https://www.berlin.de/rbmskzl/"
+        class="focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+        aria-label="Der Regierende Bürgermeister von Berlin - Senatskanzlei"
+      >
+        <BerlinLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+
+      <a
+        href="https://www.ibb.de"
+        class="focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+        aria-label="Investitionsbank Berlin"
+      >
+        <IBBLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+
+      <a
+        href="https://daten.berlin.de/"
+        class="focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+        aria-label="Berlin Open Data"
+      >
+        <BerlinOpenDataLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+    </div>
+
+    <Paragraph>
+      Ein Projekt der Technologiestiftung Berlin. Gefördert von der
+      Senatskanzlei Berlin und der Investitionsbank Berlin aus den Mitteln des
+      Landes Berlin.
+    </Paragraph>
+  </div>
+
+  <div
+    class="md:col-start-2 md:col-span-10 xl:col-end-13 xl:col-span-3 flex flex-col gap-6 pt-4 xl:pt-9 pb-9"
+  >
+    <div class="flex xl:justify-end gap-2 lg:gap-0 flex-wrap">
+      <a
+        href="https://www.facebook.com/Technologiestiftung"
+        class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
+        aria-label="Technologiestiftung auf Facebook"
+      >
+        <FbLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+
+      <a
+        href="https://github.com/technologiestiftung"
+        class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
+        aria-label="Technologiestiftung auf GitHub"
+      >
+        <GitHubLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+
+      <a
+        href="https://www.youtube.com/channel/UCXKw3_0L2rqLpz94L7YwFqg"
+        class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
+        aria-label="Technologiestiftung auf YouTube"
+      >
+        <YouTubeLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+
+      <a
+        href="https://twitter.com/TSBBerlin"
+        class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
+        aria-label="Technologiestiftung auf Twitter (X)"
+      >
+        <XLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+
+      <a
+        href="https://www.instagram.com/technologiestiftung/"
+        class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
+        aria-label="Technologiestiftung auf Instagram"
+      >
+        <InstagramLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+
+      <a
+        href="https://www.linkedin.com/company/technologiestiftung/"
+        class="rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-0"
+        aria-label="Technologiestiftung auf LinkedIn"
+      >
+        <LinkedInLogo
+          class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-text"
+        />
+      </a>
+    </div>
+
+    <div class="flex gap-4 xl:justify-end">
+      <TextLink
+        tag="a"
+        href="https://www.technologiestiftung-berlin.de/de/stiftung/kontakt-anfahrt/"
+        class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-textfont-bold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+      >
+        Kontakt
+      </TextLink>
+
+      <TextLink
+        tag="a"
+        href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
+        class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-textfont-bold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+      >
+        Datenschutz
+      </TextLink>
+
+      <TextLink
+        tag="a"
+        href="https://www.technologiestiftung-berlin.de/de/impressum/"
+        class="text-links hover-hover:hover:text-links-active dark:hover-hover:hover:text-textfont-bold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50 focus-visible:ring-offset-8"
+      >
+        Impressum
+      </TextLink>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,78 @@
+---
+import Button from "@/components/Button.astro";
+import Heading from "@/components/Heading.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import ProjectThumbnail from "@/components/ProjectThumbnail.astro";
+import ItemsSlider from "@/components/ItemsSlider.astro";
+import { boldify } from "@/utils/boldify";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+export type Props = CollectionEntry<"homepage">["data"]["projects"];
+
+const texts = Astro.props;
+
+const projects = (
+  await getCollection("projekte", (project) =>
+    project.data.tags.includes("home"),
+  )
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<div class="bg-bg-inv text-text-inv pt-24 pb-56">
+  <div class="grid-container">
+    <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
+      <div
+        class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 lg:col-start-1"
+      >
+        <Heading
+          class="font-normal"
+          tag="h3"
+          size="xl"
+          set:html={boldify(texts.title, "text-text-inv")}
+          inverted
+        />
+        <Paragraph set:html={texts.text} inverted />
+        {
+          texts.buttons.map((button) => (
+            <Button
+              tag="a"
+              href={button.link}
+              variant={button.variant}
+              inverted
+            >
+              {button.text}
+            </Button>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<ItemsSlider
+  wrapperClass="pb-24 bg-bg-alt"
+  swiperClass="-mt-40"
+  uniqueId="projects-swiper"
+>
+  {
+    projects.map((project) => (
+      <ProjectThumbnail {...project} class="swiper-slide" />
+    ))
+  }
+</ItemsSlider>
+
+<style is:global>
+  #projects-swiper .items-swiper .swiper-slide.swiper-slide-active,
+  #projects-swiper .items-swiper .swiper-slide.swiper-slide-next {
+    filter: brightness(1) saturate(1) blur(0px);
+  }
+
+  @media (min-width: 1024px) {
+    #projects-swiper
+      .items-swiper
+      .swiper-slide.swiper-slide-next
+      + .swiper-slide {
+      filter: brightness(1) saturate(1) blur(0px);
+    }
+  }
+</style>

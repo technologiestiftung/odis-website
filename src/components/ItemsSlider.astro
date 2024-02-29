@@ -1,0 +1,164 @@
+---
+import { cn } from "@/utils/classNames";
+import Button from "./Button.astro";
+import { Icon } from "astro-icon/components";
+
+export type Props = {
+  wrapperClass?: string | undefined;
+  swiperClass?: string | undefined;
+  uniqueId?: string | undefined;
+  slidesCount?: number | undefined;
+};
+
+const defaultUniqueId = Math.random().toString(36).slice(2);
+const {
+  wrapperClass = "",
+  swiperClass = "",
+  uniqueId = defaultUniqueId,
+  slidesCount = 3,
+} = Astro.props;
+---
+
+<div
+  class={cn(`items-swiper-wrapper`, wrapperClass)}
+  id={uniqueId}
+  data-slidescout={slidesCount}
+>
+  <div class="grid-container">
+    <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
+      <div
+        class={cn(
+          `col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-12 lg:col-start-1`,
+          `items-swiper relative`,
+          swiperClass,
+        )}
+      >
+        <div class="swiper-wrapper">
+          <slot />
+        </div>
+        <nav
+          class={cn(
+            `absolute z-10 top-[calc(100%+1rem)] xs:top-0 pointer-events-none`,
+            `left-0 xs:-left-10 sm:-left-20`,
+            `w-full xs:w-[calc(100%+80px)] sm:w-[calc(100%+160px)]`,
+            `xs:h-full flex justify-center xs:justify-between gap-8 items-center`,
+          )}
+        >
+          <Button
+            tag="button"
+            class={cn(
+              `items-swiper-button items-swiper-button-prev`,
+              `p-1 sm:p-2`,
+              `pointer-events-auto`,
+            )}
+            aria-label="Vorherige Slide"
+          >
+            <Icon size={32} name="ui/chevron-left" />
+          </Button>
+          <Button
+            tag="button"
+            class={cn(
+              `items-swiper-button items-swiper-button-next`,
+              `p-1 sm:p-2`,
+              `pointer-events-auto`,
+            )}
+            aria-label="Nächste Slide"
+          >
+            <Icon size={32} name="ui/chevron-right" />
+          </Button>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import "swiper/swiper-bundle.css";
+
+  const swipers = document.querySelectorAll(
+    ".items-swiper-wrapper",
+  ) as NodeListOf<HTMLDivElement>;
+  swipers.forEach((swiperEl) => {
+    const id = swiperEl.id;
+    const slidesCount = parseInt(swiperEl.dataset.slidescout || "3", 10);
+    const prevButton = document.querySelector(
+      `#${id} .items-swiper-button-prev`,
+    ) as HTMLButtonElement;
+    const nextButton = document.querySelector(
+      `#${id} .items-swiper-button-next`,
+    ) as HTMLButtonElement;
+    const swiper = new Swiper(`#${id} .items-swiper`, {
+      slidesPerView: 1,
+      spaceBetween: 32,
+      breakpoints: {
+        640: {
+          slidesPerView: slidesCount > 2 ? 2 : 1,
+        },
+        1024: {
+          slidesPerView: slidesCount,
+        },
+      },
+      navigation: {
+        nextEl: `#${id} .items-swiper-button-next`,
+        prevEl: `#${id} .items-swiper-button-prev`,
+      },
+      a11y: {
+        nextSlideMessage: "Nächste Slide",
+        prevSlideMessage: "Vorherige Slide",
+      },
+    });
+
+    prevButton.addEventListener("click", () => swiper.slidePrev());
+    nextButton.addEventListener("click", () => swiper.slideNext());
+    [prevButton, nextButton].forEach((btn) => {
+      btn.addEventListener("mousedown", (evt) => {
+        evt.preventDefault();
+        evt.stopPropagation();
+      });
+    });
+
+    function updateButtons() {
+      prevButton.classList.remove("items-swiper-button-disabled");
+      nextButton.classList.remove("items-swiper-button-disabled");
+
+      if (swiper.isBeginning) {
+        prevButton.classList.add("items-swiper-button-disabled");
+      }
+      if (swiper.isEnd) {
+        nextButton.classList.add("items-swiper-button-disabled");
+      }
+    }
+
+    swiper.on("slideChange", updateButtons);
+    updateButtons();
+  });
+</script>
+
+<style is:global>
+  .items-swiper .swiper-slide:not(.swiper-slide-active) {
+    transition:
+      filter 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+    filter: brightness(1.8) saturate(0.4) blur(1px);
+    opacity: 0.2;
+  }
+  .items-swiper .swiper-slide.swiper-slide-active,
+  .items-swiper .swiper-slide.swiper-slide-next {
+    filter: brightness(1) saturate(1) blur(0px);
+    opacity: 1;
+  }
+
+  @media (min-width: 1024px) {
+    .items-swiper .swiper-slide.swiper-slide-next + .swiper-slide {
+      filter: brightness(1) saturate(1) blur(0px);
+      opacity: 1;
+    }
+  }
+
+  .items-swiper-button.items-swiper-button-disabled {
+    border-color: var(--gray-light);
+    box-shadow: none;
+    color: var(--gray-light);
+  }
+</style>

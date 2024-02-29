@@ -1,0 +1,29 @@
+---
+import Heading from "@/components/Heading.astro";
+import TextLink from "@/components/TextLink.astro";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+---
+
+<DefaultLayout
+  metaTitle="404 Not Found"
+  metaDescription="Die von Ihnen angeforderte Seite konnte nicht gefunden werden."
+  ogImage="/404/og/404.png"
+>
+  <div class="grid-container">
+    <div
+      class="flex flex-col justify-center min-h-[calc(100vh-237px-95px)] py-8"
+    >
+      <Heading tag="h1" size="xxl">404 Not Found</Heading>
+      <p>Die von Ihnen angeforderte Seite konnte nicht gefunden werden.</p>
+      <p>
+        Bitte überprüfen Sie die URL oder kehren Sie zur <TextLink
+          tag="a"
+          href="/"
+        >
+          Startseite
+        </TextLink>
+        zurück.
+      </p>
+    </div>
+  </div>
+</DefaultLayout>

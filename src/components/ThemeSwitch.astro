@@ -1,0 +1,101 @@
+---
+import { cn } from "@/utils/classNames";
+import { Icon } from "astro-icon/components";
+
+export type Props = {
+  class?: undefined | string;
+};
+
+const { class: className } = Astro.props;
+const activeClass = cn(
+  `bg-links-active`,
+  `dark:bg-links-active`,
+  `text-bg`,
+  `dark:text-text`,
+  `hover-hover:hover:text-bg`,
+  `dark:hover-hover:hover:text-text`,
+  `cursor-default`,
+);
+const inactiveClass = cn(
+  "text-links hover-hover:hover:text-links-active",
+  "dark:text-links dark:hover-hover:hover:text-links-active",
+);
+---
+
+<div class={cn("inline-flex items-center", className)}>
+  <button
+    class={cn(
+      "theme-button-light p-3 rounded-full",
+      "motion-safe:transition-colors focusable",
+      inactiveClass,
+    )}
+    title="Apply light color theme"
+    data-activeclass={activeClass}
+    data-inactiveclass={inactiveClass}
+  >
+    <Icon class="w-6 h-6" name="ui/sun" />
+  </button>
+  <button
+    class={cn(
+      "theme-button-dark p-3 rounded-full",
+      "motion-safe:transition-colors focusable",
+      activeClass,
+    )}
+    title="Apply dark color theme"
+    data-activeclass={activeClass}
+    data-inactiveclass={inactiveClass}
+  >
+    <Icon class="w-6 h-6" name="ui/moon" />
+  </button>
+</div>
+
+<script>
+  type ThemeType = "dark" | "light";
+  const suns = document.querySelectorAll(
+    ".theme-button-light",
+  ) as NodeListOf<HTMLButtonElement>;
+  const moons = document.querySelectorAll(
+    ".theme-button-dark",
+  ) as NodeListOf<HTMLButtonElement>;
+  const activeClass = suns[0].dataset.activeclass?.split(" ") || [];
+  const inactiveClass = suns[0].dataset.inactiveclass?.split(" ") || [];
+
+  const theme = localStorage.getItem("theme");
+  const systemTheme: ThemeType = window.matchMedia(
+    "(prefers-color-scheme: dark)",
+  ).matches
+    ? "dark"
+    : "light";
+
+  updateTheme(theme !== null ? theme : systemTheme);
+
+  function updateTheme(value: string) {
+    const theme: ThemeType = value === "dark" ? "dark" : "light";
+    const opposedTheme: ThemeType = theme === "dark" ? "light" : "dark";
+    const buttons = document.querySelectorAll(
+      `.theme-button-${theme}`,
+    ) as NodeListOf<HTMLButtonElement>;
+
+    // Reset styles for both buttons
+    suns.forEach((sun) => sun.classList.remove(...activeClass));
+    moons.forEach((moon) => moon.classList.remove(...activeClass));
+    suns.forEach((sun) => sun.classList.add(...inactiveClass));
+    moons.forEach((moon) => moon.classList.add(...inactiveClass));
+
+    // Apply styles for active button
+    buttons.forEach((btn) => {
+      btn.classList.remove(...inactiveClass);
+      btn.classList.add(...activeClass);
+    });
+    document.documentElement.classList.remove(opposedTheme);
+    document.documentElement.classList.add(theme);
+    localStorage.setItem("theme", value);
+  }
+
+  suns.forEach((sun) =>
+    sun.addEventListener("click", () => updateTheme("light")),
+  );
+  moons.forEach((moon) =>
+    moon.addEventListener("click", () => updateTheme("dark")),
+  );
+</script>

@@ -1,0 +1,107 @@
+---
+import OdisLogo from "./logos/OdisLogo.astro";
+import navItems from "../navItems";
+import ThemeSwitch from "./ThemeSwitch.astro";
+import { cn } from "@/utils/classNames";
+import { Icon } from "astro-icon/components";
+
+export type Props = {};
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const urlPath = canonicalURL.pathname.replaceAll("/", "");
+---
+
+<nav class="container mx-auto flex flex-wrap justify-between max-w-7xl py-4">
+  <div class="flex px-4 lg:px-6">
+    <a
+      class={cn(
+        "motion-safe:transition focus-visible:outline-none focus-visible:ring-4",
+        "focus-visible:ring-links/50 focus-visible:ring-offset-4 text-links",
+        "hover-hover:hover:text-links-active",
+        "overflow-hidden w-12 xs:w-auto xs:overflow-auto",
+      )}
+      href="/"
+      aria-label="Zur Startseite"
+    >
+      <OdisLogo />
+    </a>
+  </div>
+
+  <div class="flex gap-6 px-4 lg:px-6 items-center lg:hidden">
+    <ThemeSwitch class={cn(`lg:hidden`)} />
+    <button
+      class={cn(
+        "h-7 w-7 text-links hover:text-links-active motion-safe:transitio",
+        "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50",
+        "focus-visible:ring-offset-4",
+      )}
+      id="menu-button"
+      aria-label="Menü umschalten"
+    >
+      <Icon name="ui/hamburger" size={24} />
+    </button>
+  </div>
+
+  <div
+    class="hidden lg:flex lg:flex-wrap w-full lg:w-auto px-4 lg:px-6 gap-8"
+    id="menu"
+  >
+    <ul
+      class={cn(
+        "lg:flex lg:flex-row lg:justify-between lg:items-center gap-4",
+        "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 pt-6 lg:pt-0",
+      )}
+    >
+      {
+        navItems.map((navItem) => {
+          const navItemPath = navItem.slug.replaceAll("/", "");
+          let isActivePath = navItemPath === urlPath;
+          const isCollectionPage =
+            urlPath.startsWith("projekte") ||
+            urlPath.startsWith("aktuelles") ||
+            urlPath.startsWith("ressourcen") ||
+            urlPath.startsWith("module") ||
+            urlPath.startsWith("veranstaltungen");
+          isActivePath = isCollectionPage
+            ? urlPath.startsWith(navItemPath)
+            : isActivePath;
+          return (
+            <li>
+              <a
+                class={cn(
+                  "p-2 font-bold text-links hover:text-links-active",
+                  "motion-safe:transition",
+                  "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-links/50",
+                  "focus-visible:ring-offset-4",
+                  isActivePath &&
+                    "text-links-active dark:bg-links-active dark:text-[var(--white)]",
+                )}
+                href={`/${navItem.slug}`}
+                aria-current={isActivePath}
+              >
+                {navItem.label}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <ThemeSwitch class={cn(`hidden lg:inline-flex`)} />
+  </div>
+</nav>
+
+<script>
+  const button = document.querySelector("#menu-button");
+  const menu = document.querySelector("#menu");
+
+  if (button && menu) {
+    button.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+    button.addEventListener("keypress", (evt) => {
+      const event = evt as KeyboardEvent;
+      if (!["Enter", "Space"].includes(event.code)) return;
+
+      menu.classList.toggle("hidden");
+    });
+  }
+</script>

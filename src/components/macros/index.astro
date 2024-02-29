@@ -1,0 +1,38 @@
+---
+import TextLink from "../TextLink.astro";
+import ContentSection from "./ContentSection.astro";
+import ImageSection from "./ImageSection.astro";
+import TextContentSection from "./TextContentSection.astro";
+import Quote from "./Quote.astro";
+import PdfEmbed from "./PdfEmbed.astro";
+import VideoEmbed from "./VideoEmbed.astro";
+import Heading from "../Heading.astro";
+import Paragraph from "../Paragraph.astro";
+import MediaSection from "./MediaSection.astro";
+import ProjectReference from "./ProjectReference.astro";
+import ResourceReference from "./ResourceReference.astro";
+import AktuellesReference from "./AktuellesReference.astro";
+
+export const components = {
+  // Primitives
+  Quote,
+  Heading,
+  Paragraph,
+  TextLink,
+
+  // Sections
+  ImageSection,
+  ContentSection,
+  TextContentSection,
+  MediaSection,
+
+  // Embedding media
+  PdfEmbed,
+  VideoEmbed,
+
+  // Referencing other pages within the text
+  ProjectReference,
+  ResourceReference,
+  AktuellesReference,
+};
+---

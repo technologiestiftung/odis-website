@@ -1,0 +1,104 @@
+---
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import NewsCard from "../../components/NewsCard.astro";
+import Pagination from "../../components/Pagination.astro";
+import type { Page, GetStaticPaths } from "astro";
+import ProjectThumbnail from "../../components/ProjectThumbnail.astro";
+import NewsletterLane from "../../components/NewsletterLane.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import ResourceCard from "@/components/ResourceCard.astro";
+
+type Project = CollectionEntry<"projekte">;
+type Aktuelles = CollectionEntry<"aktuelles">;
+type Resource = CollectionEntry<"resources">;
+type DataType = Project | Aktuelles | Resource;
+
+export type Props = {
+  page: Page<DataType>;
+};
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const isPostAndVisible = (post: DataType) =>
+    post.data.tags.includes("post") && post.data.visible;
+  const aktuelles = await getCollection("aktuelles", isPostAndVisible);
+  const projects = await getCollection("projekte", isPostAndVisible);
+  const resources = await getCollection("resources", isPostAndVisible);
+  const posts = [...aktuelles, ...projects, ...resources];
+
+  return paginate(
+    posts.sort((a, b) =>
+      a.data.date && b.data.date
+        ? b.data.date.getTime() - a.data.date.getTime()
+        : -1,
+    ),
+    { pageSize: 10 },
+  );
+};
+
+const { page } = Astro.props;
+
+const { data } = await getEntry("aktuellesOverview", "aktuellesoverview");
+
+const firstPath = "aktuelles";
+---
+
+<DefaultLayout
+  metaTitle={data.metaTitle || data.title}
+  metaDescription={data.metaDescription || data.description}
+  ogImage={data.ogImage?.src || "/aktuelles/og/alle-aktuelles.png"}
+>
+  <PageHeader
+    title={data.title}
+    description={data.description}
+    image={data.headerImage}
+    class="bg-bg text-text"
+  />
+
+  <div class="grid-container">
+    <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
+      {
+        page.data.map((post, idx) => {
+          if (!post.data.visible) return null;
+          const { data } = post;
+          const isProject = data.tags.includes("project");
+          const isResource = data.tags.includes("resource");
+          const isAktuelles =
+            data.tags.includes("post") && !isProject && !isResource;
+          const imgLoading = idx > 2 ? "lazy" : "eager";
+
+          if (isAktuelles) {
+            const aktuelles = post as Aktuelles;
+            return <NewsCard {...aktuelles} imageLoading={imgLoading} />;
+          }
+          if (isProject) {
+            const project = post as Project;
+            return <ProjectThumbnail {...project} imageLoading={imgLoading} />;
+          }
+          if (isResource) {
+            const resource = post as Resource;
+            return (
+              <div>
+                <ResourceCard {...resource} imageLoading={imgLoading} />
+              </div>
+            );
+          }
+        })
+      }
+    </div>
+  </div>
+
+  <nav aria-label="Pagination" class="mt-12 grid-container">
+    <Pagination
+      length={page.lastPage}
+      currentUrl={page.url.current}
+      currentPage={page.currentPage}
+      firstUrl={`/${firstPath}`}
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      lastUrl={`/${firstPath}/${page.lastPage}`}
+    />
+  </nav>
+
+  <NewsletterLane />
+</DefaultLayout>

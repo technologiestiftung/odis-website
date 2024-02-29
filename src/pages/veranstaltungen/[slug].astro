@@ -1,0 +1,67 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
+import Button from "../../components/Button.astro";
+import { components } from "@/components/macros/index.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("veranstaltungen");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+export type Props = CollectionEntry<"veranstaltungen">;
+
+const post = Astro.props;
+const {
+  title,
+  metaTitle,
+  metaDescription,
+  description,
+  headerImage,
+  date,
+  time,
+  web,
+  mail,
+  adresse,
+} = post.data;
+const { Content } = await post.render();
+---
+
+<DefaultLayout
+  metaTitle={metaTitle || title}
+  metaDescription={metaDescription || description}
+  ogImage={post.data.ogImage?.src || `/veranstaltungen/og/${post.slug}.png`}
+>
+  <PageHeaderWithPhoto
+    basePath="veranstaltungen"
+    title={title}
+    description={description}
+    image={headerImage}
+    date={date}
+  >
+    {time && <span slot="naturalLanguageTime">– {time}</span>}
+    {
+      (web || mail) && (
+        <Button slot="buttons" tag="a" href={web || `mailto:${mail}`}>
+          {web ? "Online anmelden" : "Per E-Mail anmelden"}
+        </Button>
+      )
+    }
+    {adresse && <span slot="suffix">{adresse}</span>}
+  </PageHeaderWithPhoto>
+
+  <section aria-label="Veranstaltungsbeschreibung">
+    <div class="grid-container">
+      <TableOfContents />
+      <div
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10"
+      >
+        <Content components={components} />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

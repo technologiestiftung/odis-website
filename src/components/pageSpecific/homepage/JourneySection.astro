@@ -1,0 +1,53 @@
+---
+import { cn } from "@/utils/classNames";
+import DecorativeSectionTransition from "./DecorativeSectionTransition.astro";
+import Heading from "@/components/Heading.astro";
+import { boldify } from "@/utils/boldify";
+import type { CollectionEntry } from "astro:content";
+import Paragraph from "@/components/Paragraph.astro";
+import Button from "@/components/Button.astro";
+import JourneySlider from "@/components/pageSpecific/homepage/JourneySlider.astro";
+
+export type Props = CollectionEntry<"homepage">["data"]["journey"];
+
+const journey = Astro.props;
+---
+
+<DecorativeSectionTransition />
+<!-- Module / Journey Contents -->
+<div class="grid-container pb-12">
+  <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
+    <div
+      class={cn(
+        `col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 mb-16 row-start-2 lg:row-start-auto`,
+        `relative aspect-square lg:aspect-auto`,
+      )}
+    >
+      <div
+        class="lg:absolute w-full lg:min-h-[calc(100%+112px+2rem)] lg:-top-[112px] left-0"
+      >
+        <JourneySlider moduleButtonText={journey.seeModuleButtonText} />
+      </div>
+    </div>
+    <div
+      class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 lg:col-start-7 lg:pt-0 py-16"
+    >
+      <Heading
+        class="font-normal"
+        tag="h3"
+        size="xl"
+        set:html={boldify(journey.title)}
+      />
+      {journey.lead && <Paragraph tag="p" size="lg" set:html={journey.lead} />}
+      <Paragraph tag="p" set:html={journey.text} />
+
+      {
+        journey.buttons.map((button) => (
+          <Button tag="a" href={button.link} variant={button.variant}>
+            {button.text}
+          </Button>
+        ))
+      }
+    </div>
+  </div>
+</div>

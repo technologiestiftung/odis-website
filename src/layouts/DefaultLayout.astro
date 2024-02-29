@@ -1,0 +1,45 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import ReloadPrompt from "@/components/ReloadPrompt.astro";
+
+type Props = {
+  metaTitle: string;
+  metaDescription: string;
+  ogImage?: string;
+};
+
+const { metaTitle, ogImage, metaDescription } = Astro.props;
+
+const matomoUrl = import.meta.env.MATOMO_URL;
+const matomoSiteId = import.meta.env.MATOMO_SITE_ID;
+---
+
+<html lang="de" class="dark">
+  <head>
+    <BaseHead title={metaTitle} description={metaDescription} image={ogImage} />
+  </head>
+
+  <body class="@container">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <!-- MATOMO COOKIELESS TRACKING -->
+    {
+      matomoUrl && matomoSiteId && (
+        <img
+          src={`${matomoUrl}/matomo.php?idsite=${matomoSiteId}&rec=1&action_name=${encodeURIComponent(metaTitle)}`}
+          style="border:0"
+          alt=""
+          aria-hidden="true"
+          width="1"
+          height="1"
+        />
+      )
+    }
+    <ReloadPrompt />
+  </body>
+</html>

@@ -1,0 +1,52 @@
+---
+import Button from "@/components/Button.astro";
+import Heading from "@/components/Heading.astro";
+import NewsCard from "@/components/NewsCard.astro";
+import Paragraph from "@/components/Paragraph.astro";
+import ItemsSlider from "@/components/ItemsSlider.astro";
+import { boldify } from "@/utils/boldify";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+export type Props = CollectionEntry<"homepage">["data"]["aktuelles"];
+
+const texts = Astro.props;
+
+const news = (
+  await getCollection("aktuelles", (project) =>
+    project.data.tags.includes("home"),
+  )
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<div class="pt-24 pb-12">
+  <div class="grid-container">
+    <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
+      <div
+        class="col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-5 lg:col-start-1 flex flex-col justify-center items-start"
+      >
+        <Heading
+          class="font-normal"
+          tag="h3"
+          size="xl"
+          set:html={boldify(texts.title)}
+        />
+        <Paragraph set:html={texts.text} />
+        {
+          texts.buttons.map((button) => (
+            <Button
+              tag="a"
+              href={button.link}
+              variant={button.variant}
+              class="mt-2"
+            >
+              {button.text}
+            </Button>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+<ItemsSlider>
+  {news.map((newsEntry) => <NewsCard {...newsEntry} class="swiper-slide" />)}
+</ItemsSlider>

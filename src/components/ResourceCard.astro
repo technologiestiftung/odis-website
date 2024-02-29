@@ -1,0 +1,202 @@
+---
+import { Image, type LocalImageProps } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
+import { cn } from "@/utils/classNames";
+import { Icon } from "astro-icon/components";
+import Button from "./Button.astro";
+import ResourceInfo from "./ResourceInfo.astro";
+import { iconsMap } from "@/utils/resourceUtil";
+
+export type Props = CollectionEntry<"resources"> & {
+  class?: string;
+  titleTag?: "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+  imageLoading?: LocalImageProps["loading"];
+};
+
+const {
+  data,
+  slug,
+  class: className,
+  titleTag = "h2",
+  imageLoading = "lazy",
+} = Astro.props;
+const { title, description, question, media } = data;
+const { thumbnail } = media;
+
+const hasLink = !!data.link;
+const linkIsExternal = hasLink && data.link?.startsWith("http");
+const resourceLink =
+  data.link && linkIsExternal ? data.link : `/ressourcen/${slug}`;
+const theme = linkIsExternal ? "inverted" : "normal";
+const isInverted = theme === "inverted";
+const isVideoAspectRatio = thumbnail.width > thumbnail.height;
+---
+
+<article
+  class={cn(
+    "group not-prose",
+    "border @container flex flex-col justify-between",
+    isInverted ? "text-text-inv" : "text-text",
+    isInverted ? "bg-bg-inv" : "bg-bg-alt dark:bg-bg",
+    isInverted ? "border-line-dark" : "border-line-inv dark:border-line-dark",
+    className,
+  )}
+>
+  <a
+    href={resourceLink}
+    target={linkIsExternal ? "_blank" : "_self"}
+    rel={linkIsExternal ? "noopener noreferrer" : undefined}
+    class={cn("grid px-6 py-4 @sm:py-5 gap-2 group min-h-[258px]")}
+    style={{
+      gridTemplate: `
+      "question" auto
+      "title" auto
+      "description" auto
+      "spacer" 1fr
+    `,
+    }}
+  >
+    {
+      question && (
+        <Paragraph
+          class={cn(
+            "opacity-50 contrast-more:opacity-100 mb-0",
+            isInverted ? "text-headlines-inv" : "text-headlines",
+          )}
+          style={{ gridArea: "question" }}
+          inverted={isInverted}
+        >
+          {question}
+        </Paragraph>
+      )
+    }
+    <Heading
+      size="lg"
+      tag={titleTag}
+      style={{ gridArea: "title" }}
+      class={cn(
+        "m-0 hover-hover:group-hover:text-links-active transition-colors",
+        "group-hover:text-links-active transition-all",
+        "dark:group-hover:bg-text dark:group-hover:text-links-active",
+        "w-fit px-2 -ml-2 dark:group-hover:ml-0",
+        "duration-1000 ease-out-extreme box-decoration-clone",
+        isInverted && "group-hover:bg-bg group-hover:ml-0",
+      )}
+      inverted={isInverted}
+    >
+      {title}
+    </Heading>
+    <Paragraph
+      style={{ gridArea: "description" }}
+      class={cn(
+        "line-clamp-5",
+        isInverted ? "group-hover:text-text-inv" : "group-hover:text-text",
+      )}
+      inverted={isInverted}
+    >
+      {description}
+    </Paragraph>
+    <div aria-hidden="true" style={{ gridArea: "spacer" }}></div>
+  </a>
+  <section
+    class={cn(
+      "relative px-6 flex flex-col @sm:grid overflow-hidden",
+      isVideoAspectRatio
+        ? "@sm:grid-cols-5 min-h-[260px] @sm:min-h-[200px]"
+        : "@sm:grid-cols-2 h-[360px] @sm:h-[240px]",
+    )}
+  >
+    <div
+      aria-hidden="true"
+      class={cn(
+        `absolute w-full h-full @sm:h-[calc(100%-3rem)]`,
+        `bottom-0 left-0 bg-bg-inv`,
+        isInverted && `border-t-2 border-line-dark`,
+      )}
+    >
+    </div>
+    <section
+      class={cn(
+        "flex flex-col @sm:order-1 py-6 @sm:mt-12 relative text-text-inv",
+        "@sm:pl-8 justify-between",
+        isVideoAspectRatio && "@sm:col-span-2",
+      )}
+    >
+      <ResourceInfo {...media} />
+      {
+        media.link && (
+          <div>
+            <Button
+              tag="a"
+              href={media.link}
+              variant="secondary"
+              inverted
+              title="Direkter Link zur Ressource"
+              download={media.type === "pdf" || media.type === "table"}
+            >
+              <Icon name={iconsMap[media.type]} size={20} />
+            </Button>
+          </div>
+        )
+      }
+    </section>
+    <a
+      href={resourceLink}
+      target={linkIsExternal ? "_blank" : "_self"}
+      rel={linkIsExternal ? "noopener noreferrer" : undefined}
+      class={cn(
+        "relative h-full pt-12",
+        isVideoAspectRatio && "@sm:col-span-3",
+      )}
+    >
+      <Image
+        src={media.thumbnail}
+        alt={`Media thumbnail preview of "${title}"`}
+        class={cn(
+          "absolute w-full h-auto top-4 left-0 bg-bg-alt",
+          "border border-line-inv ",
+          isInverted ? "shadow-secondary-inv" : "shadow-secondary",
+          "dark:shadow-primary-inv duration-1000 ease-out-extreme",
+          "hover-hover:group-hover:-translate-y-4 transition-transform",
+        )}
+        widths={[isVideoAspectRatio ? 560 : 400]}
+        sizes={isVideoAspectRatio ? "560px" : "400px"}
+        loading={imageLoading}
+      />
+      {
+        !isVideoAspectRatio && (
+          <div
+            aria-hidden="true"
+            class={cn(
+              "absolute w-full h-[calc(100%+3rem)] top-4 left-0",
+              "mix-blend-multiply opacity-20 gradient-overlay",
+              "hover-hover:group-hover:-translate-y-4 transition-transform",
+            )}
+          />
+        )
+      }
+    </a>
+  </section>
+
+  {
+    isInverted && (
+      <span class="absolute top-2 right-2 p-4 text-text-inv">
+        <Icon name="ui/external-link" size={20} aria-hidden="true" />
+      </span>
+    )
+  }
+</article>
+
+<style>
+  .gradient-overlay {
+    filter: contrast(100%) brightness(300%);
+    background: linear-gradient(
+        8deg,
+        var(--blue-dark, black),
+        rgba(255, 255, 255, 0)
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 43 43' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.68' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+</style>
