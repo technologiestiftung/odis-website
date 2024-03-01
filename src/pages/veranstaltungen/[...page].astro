@@ -7,6 +7,7 @@ import NewsletterLane from "../../components/NewsletterLane.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import Heading from "../../components/Heading.astro";
 import { Image } from "astro:assets";
+import { cn } from "@/utils/classNames";
 
 type Event = CollectionEntry<"veranstaltungen">;
 
@@ -121,7 +122,15 @@ const firstPath = "veranstaltungen";
                               <Heading
                                 tag="h3"
                                 size="xl"
-                                class="text-links hover-hover:group-hover:text-links-active transition-colors mb-0"
+                                class={cn(
+                                  "transition-all w-fit mb-0 text-links",
+                                  `decoration-clone underline-offset-8 decoration-4`,
+                                  `hover-hover:group-hover:text-links-active`,
+                                  `dark:hover-hover:group-hover:text-text`,
+                                  `dark:hover-hover:group-hover:underline`,
+                                  `decoration-[transparent]`,
+                                  `dark:group-hover:decoration-[var(--links-active)]`,
+                                )}
                               >
                                 {event.data.title}
                               </Heading>
