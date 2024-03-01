@@ -5,7 +5,7 @@ tags:
 title: "Vom Informationssilo zum Wissensnetzwerk"
 description: Fallstudie – Wie wir mit Berliner Organigrammen den Pfad Richtung Linked Open Data bestreiten. Die Fallstudie gibt Einblicke in Linked Open Data Prinzipien, prototypische Tools und stellt die Vision eines Datennetzweks vor.
 categories: aktuelles
-visible: false
+visible: true
 urlText: Zum Blogbeitrag
 headerImage:
   src: ./images/knowledge_graph.png
@@ -16,15 +16,19 @@ date: 2024-02-28
 
 ## Einleitung
 
-Ein Blick zurück ins Frühjahr 2023: In Berlin rückt der Krimi um das Wahldebakel langsam aus dem Rampenlicht der öffentlichen Berichterstattung. Die darauffolgenden Neuwahlen und der damit einhergehende Regierungswechsel sind quasi schon wieder Geschichte, da sieht sich die Stadtverwaltung mit einer neuen, wenn auch deutlich kleineren Mecker-Meldung in der Presse konfrontiert: Der Berliner Chatbot des Service-Portals, symbolisiert durch einen Bären namens „Bobbi“, scheint auch mehrere Wochen nach der Wahl nicht auf dem neuesten Stand der politischen Entwicklungen zu sein. Trotz des Wechsels im Amt des Regierenden Bürgermeisters zu Kai Wegner, informiert Bobbi die Nutzer:innen noch über Franziska Giffey als Amtsinhaberin.
+Ein Blick zurück ins Frühjahr 2023: In Berlin rückt der Krimi um das Wahldebakel langsam aus dem Rampenlicht der öffentlichen Berichterstattung. Die darauffolgenden Neuwahlen und der damit einhergehende Regierungswechsel sind quasi schon wieder Geschichte, da sieht sich die Stadtverwaltung mit einer neuen, wenn auch deutlich kleineren Mecker-Meldung in der Presse konfrontiert: Der Berliner Chatbot des Service-Portals, verkörpert durch einen Bären namens „Bobbi“, scheint auch mehrere Wochen nach der Wahl nicht auf dem neuesten Stand der politischen Entwicklungen zu sein. Trotz des Wechsels im Amt des Regierenden Bürgermeisters zu Kai Wegner, informiert Bobbi die Nutzer:innen noch über Franziska Giffey als Amtsinhaberin.
 
 Zur gleichen Zeit, viele tausend Kilometer entfernt: In San Francisco wird nur wenige Monate nach dem ersten ChatGPT-Hype an der Veröffentlichung des neuen und verbesserten Sprachmodells GPT-4 gearbeitet. Diese rasanten Entwicklungen entfachen nicht nur in der Technologiebranche eine Diskussion über Chancen und Risiken im Bereich der künstlichen Intelligenz, sondern auch über die aktuellen Limitierungen.
 
 ### Problemstellung und Motivation
 
-So amüsant und harmlos die Anekdote um Bobbi auch wirkt, sie illustriert einen Aspekt, der den meisten zwar bekannt, aber gerne mal vergessen wird: Jeder Chatbot, ebenso wie jedes andere Softwareprogramm, jedes Webtool und jede Datenanalyse, sind zum einen zweckgebunden und werden für spezifische Aufgaben entwickelt, zum anderen sind sie auch nur so leistungsfähig und aussagekräftig, wie die Informationen und Daten, mit denen sie entsprechend des Use Cases gespeist werden. In diesem Kontext steht Bobbi symbolisch weniger für geringen Innovationscharakter als viel mehr für die Herausforderungen, mit denen digitale Assistenten beim Thema Nutzerinnenführung, Relevanz und Genauigkeit konfrontiert sein können.
+So amüsant und harmlos die Anekdote um Bobbi auch wirkt, sie illustriert einen Aspekt, der den meisten zwar bekannt, aber gerne mal vergessen wird: 
 
-Ein Aspekt der künftig für Digitalprojekte sowie die Weiterentwicklung und Innovation innerhalb digitaler Ökosysteme eine immer größer werdende Rolle spielen wird, ist daher die Verfügbarkeit von qualitativ hochwertigen, aktuellen und von maschineninterpretierbaren Informationen.
+**Jeder Chatbot, ebenso wie jedes andere Softwareprogramm, jedes Webtool und jede Datenanalyse, sind zum einen zweckgebunden und werden für spezifische Aufgaben entwickelt, zum anderen sind sie auch nur so leistungsfähig und aussagekräftig, wie die Informationen und Daten, mit denen sie entsprechend des Use Cases gespeist werden.** 
+
+In diesem Kontext steht Bobbi symbolisch weniger für geringen Innovationscharakter als viel mehr für die Herausforderungen, mit denen digitale Assistenten beim Thema Nutzerinnenführung, Relevanz und Genauigkeit konfrontiert sein können.
+
+Ein Aspekt, der künftig für Digitalprojekte sowie die Weiterentwicklung und Innovation innerhalb digitaler Ökosysteme eine immer größer werdende Rolle spielen wird, ist daher die Verfügbarkeit von qualitativ hochwertigen, aktuellen und von maschineninterpretierbaren Informationen.
 
 Vor diesem Hintergrund gewinnt das Konzept der Linked Open Data an Aufmerksamkeit, da es das Potenzial birgt, eine vernetzte und zugängliche Datenbasis zu schaffen, die eine Grundlage für präzisere und relevantere Digitalprojekte bilden kann. Im Folgenden erklären wir, welche Potentiale in Linked Open Data stecken und wie wir als ODIS unser selbstentwickeltes Organigramm-Tool als praxisnahe Fallstudie nutzen. Dieses Beispiel soll nicht nur Bewegung in die Diskussion bringen, sondern auch als Ausgangspunkt für die Schaffung einer vernetzten Datenbasis für Berlin dienen. Und davon könnten nicht nur digitale Assistenten wie Bobbi profitieren.
 
@@ -76,7 +80,7 @@ import image2 from "./images/knowledge_graph.png";
   />
 </ContentSection>
 
-An diesem Punkt mag man sich fragen, weshalb all diese Anstrengungen unternommen werden, wenn fortschrittliche Sprachmodelle wie ChatGPT bereits über umfangreiches Wissen verfügen. Aber auch ChatGPT wurde mit Informationen trainiert, die heute schon wieder veraltet sind. Wie ein Projekt aus Zürich zeigt, ist es aber durchaus in der Lage, aktuelle Information aus einem Linked Open Data auszulesen und in Kontext zu setzen. Darüber hinaus eröffnet ein gut strukturierter Wissensgraph eine Fülle neuer Fragestellungen und Erkenntnisse. Diese sind nicht nur für spezialisierte digitale Chat-Assistenten wie Bobbi relevant, um stets aktuell zu bleiben, sondern bilden auch eine wichtige Grundlage für andere digitale Anwendungen und Prozesse. Sie sind essentiell für die Digitalisierung der Verwaltung, die Beantwortung wissenschaftlicher Fragen oder das Training von Machine-Learning-Modellen.
+An diesem Punkt mag man sich fragen, weshalb all diese Anstrengungen unternommen werden, wenn fortschrittliche Sprachmodelle wie ChatGPT bereits über umfangreiches Wissen verfügen. Aber auch ChatGPT wurde mit Informationen trainiert, die heute schon wieder veraltet sind. Wie ein Projekt aus Zürich zeigt, ist ChatGPT aber durchaus in der Lage, aktuelle Information aus einem Linked Open Data auszulesen und in Kontext zu setzen. Darüber hinaus eröffnet ein gut strukturierter Wissensgraph eine Fülle neuer Fragestellungen und Erkenntnisse. Diese sind nicht nur für spezialisierte digitale Chat-Assistenten wie Bobbi relevant, um stets aktuell zu bleiben, sondern bilden auch eine wichtige Grundlage für andere digitale Anwendungen und Prozesse. Sie sind essentiell für die Digitalisierung der Verwaltung, die Beantwortung wissenschaftlicher Fragen oder das Training von Machine-Learning-Modellen.
 
 Inmitten der Revolution durch Large Language Models (LLMs) wird also deutlich, dass wir für innovative Entwicklungen nicht nur maschinenlesbare Daten bereitstellen müssen. Es ist ebenso entscheidend, dass Informationen aktuell, miteinander verknüpft und von Computern semantisch korrekt interpretiert werden können.
 
@@ -138,7 +142,7 @@ Wir stellen im Folgenden konkret vor, wie wir die Prinzipien von Linked Open Dat
 
 #### Das Konzept der URIs
 
-Eine grundlegende Voraussetzung für Linked Open Data: Die eindeutige Identifizierung einer Ressource! Anhand von URIs ("Uniform Resource Identifier") lassen sich abstrakte Ressourcen und Daten im World Wide Web eindeutig identifizieren, wiederfinden und somit auch wiederverwenden. Ein einfaches Analogon hierzu aus der Welt der Bücher ist die ISBN: Diese einzigartigen Nummern beschreiben individuelle Buchtitel und deren Ausgaben, sodass man zum Auffinden eines Buches nicht unbedingt Autor, Titel oder Erscheinungsjahr kennen muss – die ISBN repräsentiert all diese Informationen.
+Eine grundlegende Voraussetzung für Linked Open Data: Die eindeutige Identifizierung einer Ressource! Anhand von URIs ("Uniform Resource Identifier") lassen sich abstrakte Ressourcen und Daten im World Wide Web eindeutig identifizieren, wiederfinden und somit auch wiederverwenden.
 
 Ebenso funktionieren URIs im Internet: Sie stellen abstrakte oder konkrete Dinge dar und bilden die Basis für Linked Data. Für die Zugänglichkeit dieser Identifikatoren verwendet Linked Data öffentliche, über HTTP abrufbare URIs. Diese gelten allerdings nicht für ganze Webressourcen wie Webseiten, Artikel, oder PDF-Dateien, sondern beschreiben individuelle Objekte innerhalb von Datensätzen. Im Falle eines Organigramms reicht es zum Bespiel nicht aus, einem gesamten Organigramm einen Link zuzuweisen, wie die fiktive URL: www.organigramm-senatskanzlei-berlin.de. Vielmehr werden den verschiedenen Einzelelementen des Organigrammes beim Erstellen bereits eine URI zugewiesen. So erhält jede:r Senator:in, Abteilung, Referatsleiter:in, oder eine Organisation eine einzigartige URI. Durch die Art und Weise, wie diese URIs miteinander verknüpft sind, lassen sich vielfältige Informationen ableiten, wie etwa die Anzahl der Abteilungen, die einem bestimmten Senator oder einer Senatorin unterstellt sind.
 
@@ -194,13 +198,13 @@ Da alle in den Datensätzen genannten Gegenstände, wie zum Beispiel Bezirke, ei
 
 #### Ontologien
 
-Eine weitere zentrale Voraussetzung für Linked Open Data sind entsprechende Ontologien, also eine Art Vokabular. Sie bieten eine formalisierte Darstellung von Begriffen und deren Beziehungen in einem bestimmten Wissensbereich. Ontologien können als Schemas betrachtet werden, die Struktur und Bedeutung von Daten in einem bestimmten Kontext festlegen. Die Verwendung von möglichst einheitlichen Ontologien in Linked Open Data ermöglicht, dass Maschinen die Bedeutung von Daten verstehen können und die Beziehungen “maschinenlesbar” werden.
+Eine weitere zentrale Voraussetzung für Linked Open Data sind entsprechende Ontologien, also eine Art spezialisiertes Vokabular. Sie bieten eine formalisierte Darstellung von Begriffen und deren Beziehungen in einem bestimmten Wissensbereich. Ontologien können als Schemas betrachtet werden, die Struktur und Bedeutung von Daten in einem bestimmten Kontext festlegen. Die Verwendung von möglichst einheitlichen Ontologien in Linked Open Data ermöglicht, dass Maschinen die Bedeutung von Daten verstehen können und die Beziehungen “maschinenlesbar” werden.
 
 Ein Beispiel für eine existierende Ontologie über Personen, die in Berlin für Politiker:innen verwendet werden kann, heißt “Friend of a Friend”, abgekürzt als “foaf” und wird benutzt, um diverse Informationen über Personen zu sammeln.
 
 Ein [Webeintrag](http://xmlns.com/foaf/spec/) beschreibt, wie die Ontologie benutzt wird und bietet einen Überblick über ihre Begriffe, also Beziehungen und Informationen, die mit ihrem Vokabular abgebildet werden können, so zum Beispiel die Namen, Anschrift, Kontaktmöglichkeiten oder innegehaltenen Positionen einer jeweiligen Person. Die Ontologie stellt vor allem die URIs bereit, die benötigt werden, um Informationen als Triples auszudrücken.
 
-Einem ähnlichen Prinzip folgend, bedient sich das Organigramm-Tool sowohl bestehender Vokabulare, als auch eines speziell für Berlin verfasstes. Um die Beziehungen verschiedener Abteilungen und Mitarbeitenden akkurat abzubilden, entwickelte die ODIS für die Organigramme auch ein eigenes Vokabular. Ein [GitHub-Repository](https://github.com/berlin/lod-vocabulary) stellt Informationen zusammen und definiert Berlin-spezifische Einrichtungen und Positionen, wie beispielsweise Abteilungen, Stabstellen oder Leiter:innen des Leitungsstabes.
+Einem ähnlichen Prinzip folgend, bedient sich das Organigramm-Tool sowohl bestehender Vokabulare als auch eines speziell für Berlin verfasstes. Um die Beziehungen verschiedener Abteilungen und Mitarbeitenden akkurat abzubilden, entwickelte die ODIS für die Organigramme auch ein eigenes Vokabular. Ein [GitHub-Repository](https://github.com/berlin/lod-vocabulary) stellt Informationen zusammen und definiert Berlin-spezifische Einrichtungen und Positionen, wie beispielsweise Abteilungen, Stabstellen oder Leiter:innen des Leitungsstabes.
 
 #### Speichern und abfragen mit SPARQL
 
@@ -226,7 +230,7 @@ Sprachmodelle wie ChatGPT können hier eine zusätzliche Rolle spielen. Sie sind
 
 ## Zusammenfassung und Ausblick
 
-In diesem Blogpost haben wir aufgezeigt, welchen Wissensvorsprung Linked Data durch offene, maschinenlesbare und strukturierte Daten bietet. Am Beispiel des Organigramm-Tools haben wir die technische Umsetzbarkeit und den Mehrwert gezeigt, den Linked Open Data besonders für Daten der öffentlichen Verwaltung bereithält. Damit perspektivisch eine kritische Masse an Datensätzen verknüpft werden und darüber neue Einsichten gewonnen und innovative Lösungen für komplexe Probleme entwickelt werden können, bedarf es einem Pool an Linked Open Data. Um diesen aufzubauen, hilft das Organigramm-Tool der ODIS die Organigramme aktuell zu halten und im RDF-Format bereitzustellen. Darüber hinaus können natürlich auch weitere Behörden über Berlin hinaus das Organigramm-Tool nutzen und das Angebot an strukturierten Informationen über Verwaltungseinheiten erweitern.
+In dieser Fallstudie haben wir aufgezeigt, welchen Wissensvorsprung Linked Data durch offene, maschinenlesbare und strukturierte Daten bietet. Am Beispiel des Organigramm-Tools haben wir die technische Umsetzbarkeit und den Mehrwert gezeigt, den Linked Open Data besonders für Daten der öffentlichen Verwaltung bereithält. Damit perspektivisch eine kritische Masse an Datensätzen verknüpft werden und darüber neue Einsichten gewonnen und innovative Lösungen für komplexe Probleme entwickelt werden können, bedarf es einem Pool an Linked Open Data. Um diesen aufzubauen, hilft das Organigramm-Tool der ODIS die Organigramme aktuell zu halten und im RDF-Format bereitzustellen. Darüber hinaus können natürlich auch weitere Behörden über Berlin hinaus das Organigramm-Tool nutzen und das Angebot an strukturierten Informationen über Verwaltungseinheiten erweitern.
 
 Trotz ihrer abstrakten Natur sind erste verlinkte offene Daten über Berlin bereits heute verfügbar. Ein konkretes Beispiel liefern die lebensweltlich orientierten Räume (LOR) Berlins, welche das Land Berlin in kleine geografische Untereinheiten gliedern, als Grundlage für Planung, Prognose und Beobachtung demografischer und sozialer Entwicklungen in Berlin. Dieser Datensatz ist sowohl in herkömmlichen Geodaten als auch als Linked Data verfügbar. Über GitHub können sich Nutzer:innen jegliche Unterteilungen anzeigen lassen, von einer [Übersicht aller Bezirke](https://berlinonline.github.io/lod-berlin-lor/berlin) zur kleinsten Untereinheit, wie beispielsweise die “Zwinglistraße” im Bezirk Mitte ([Planungsraum 01022105](https://berlinonline.github.io/lod-berlin-lor-2019/plr_01022105)). Ein weiterer Datensatz in Form von Linked Data verfügt über [Bevölkerungszahlen](https://berlinonline.github.io/lod-berlin-einwohner/obs_202012_01022105) für alle Ebenen der geografischen Einheiten. Durch die Veröffentlichung als Linked Data kann so eine Verbindung zwischen geografischen Einheiten, Bevölkerungszahlen und beliebig vielen weiteren verlinkten Datensätzen hergestellt werden.
 
@@ -234,7 +238,11 @@ Konkrete Pläne für weitere Datensätze gibt es ebenfalls bereits: Im Rahmen de
 
 Durch die standardisierte Bereitstellung von Daten im RDF-Format könnte ebenfalls eine Verbindung zwischen maschinenlesbaren Organigrammen, den LOR und den Haushaltsdaten hergestellt werden. Ohne mühsames manuelles Zusammentragen von Daten können so Erkenntnisse über die Berliner Verwaltung, ihre Organisation und ihre Finanzen gewonnen werden. Eine Anwendung, die auf Linked Data basiert, könnte so beispielsweise die Etats mit jeweiligen Senatsverwaltungen vergleichen. Hier bietet es sich an, auf unserer Ontologie aufzubauen und diese gemeinsam weiterzuentwickeln, damit eine einheitliche Sprache gesprochen wird.
 
-Wir sind mindestens so gespannt wie Chatbot Bobby auf die weiteren Entwicklungen im Land in Richtung Fünf-Sterne Open Data.
+Wir sind mindestens so gespannt wie Chatbot Bobby auf die weiteren Entwicklungen im Land in Richtung Fünf-Sterne Open Data. 
+
+## Bringt euch ein!
+
+Wenn ihr Fragen zu unserem Tool oder Vorgehen habt, freuen wir uns über Feedback genauso wie über Ideen für mögliche Linked-Open-Data Anwendungen oder konkrete Projektideen. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden euch ein auf der Erkundungsreise mit uns zu experimentieren, neue Pfade zu erkunden und Wissensschätze zu sammeln.
 
 import image6 from "./images/bobby_ciao_2.png";
 
