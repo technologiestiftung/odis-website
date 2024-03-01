@@ -4,9 +4,9 @@ type MediaType = CollectionEntry<"resources">["data"]["media"]["type"];
 
 export const labelsMap: Record<MediaType, string> = {
   video: "Videoanleitung",
-  pdf: "PDF Dokument",
+  pdf: "PDF-Dokument",
   blog: "Blogbeitrag",
-  table: "Datensatz",
+  table: "Vorlage",
   project: "Projekt",
   other: "Verschiedenes",
 };
