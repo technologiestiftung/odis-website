@@ -21,9 +21,7 @@ if (!hasMatomo) {
 export default defineConfig({
   site:
     process.env.NODE_ENV !== "development"
-      ? process.env.NODE_ENV === "preview"
-        ? process.env.DEPLOY_PRIME_URL
-        : "https://odis-berlin.de"
+      ? "https://odis-berlin.de"
       : `http://localhost:${process.env.PORT || 4321}`,
   integrations: [
     icon({
