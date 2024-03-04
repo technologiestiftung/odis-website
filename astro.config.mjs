@@ -17,12 +17,15 @@ if (!hasMatomo) {
   );
 }
 
+let siteUrl = `http://localhost:${process.env.PORT || 4321}`;
+if (process.env.NODE_ENV === "production") {
+  siteUrl = "https://odis-berlin.de";
+} else if (process.env.NODE_ENV === "preview") {
+  siteUrl = process.env.DEPLOY_PRIME_URL;
+}
 // https://astro.build/config
 export default defineConfig({
-  site:
-    process.env.NODE_ENV !== "development"
-      ? process.env.DEPLOY_PRIME_URL || "https://odis-berlin.de"
-      : `http://localhost:${process.env.PORT || 4321}`,
+  site: siteUrl,
   integrations: [
     icon({
       iconDir: "src/assets/images/icons",
