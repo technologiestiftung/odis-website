@@ -15,15 +15,6 @@
     immutable
     '''
 
-[context.production.environment]
-  NODE_ENV = "production"
-
-[context.deploy-preview.environment]
-  NODE_ENV = "preview"
-
-[context.branch-deploy.environment]
-  NODE_ENV = "preview"
-
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
