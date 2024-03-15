@@ -21,22 +21,30 @@ const {
 } = Astro.props;
 
 const primaryColorClasses = [
-  `group-hover:text-links-active`,
   `group-focus-visible:ring-2`,
   `group-focus-visible:ring-offset-8`,
-  `transition-colors`,
+  "transition-all w-fit",
+  `decoration-clone underline-offset-4 decoration-4`,
+  `decoration-[transparent] underline`,
+  `hover-hover:group-hover:text-links-active`,
+  `dark:group-hover:decoration-[var(--links-active)]`,
+  `dark:hover-hover:group-hover:text-text`,
   ...(theme === "normal"
     ? [
         `text-links`,
         `group-focus-visible:ring-links`,
         `group-focus-visible:ring-offset-bg-alt`,
         `group-focus-visible:bg-bg-alt`,
+        `dark:group-hover:decoration-[var(--links-active)]`,
+        `dark:group-hover:text-text-links-inv`,
       ]
     : [
         `text-links-inv`,
         `group-focus-visible:ring-links-inv`,
         `group-focus-visible:ring-offset-bg-inv`,
         `group-focus-visible:bg-bg-inv`,
+        `group-hover:decoration-[var(--links-active)]`,
+        `hover-hover:group-hover:text-text-links-inv`,
       ]),
 ]
   .filter(Boolean)

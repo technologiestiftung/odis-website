@@ -3,6 +3,8 @@ import type { CollectionEntry } from "astro:content";
 import Heading from "../components/Heading.astro";
 import Paragraph from "./Paragraph.astro";
 import ProjectMockups from "./ProjectMockups.astro";
+import { cn } from "@/utils/classNames";
+import { Icon } from "astro-icon/components";
 
 export type Props = CollectionEntry<"projekte">;
 
@@ -13,6 +15,23 @@ const { title, description } = post.data;
 <section class="bg-bg-inv text-text-inv pt-16 pb-40 sm:pb-64">
   <div class="grid-container">
     <div class="lg:col-span-6 lg:col-start-2">
+      <Paragraph class="flex gap-x-3 flex-wrap">
+        <a
+          href={`/projekte`}
+          class={cn(
+            "flex items-bottom gap-1 opacity-70 transition",
+            "hover:opacity-100 hover:text-links-active focusable",
+            `decoration-clone underline-offset-2 decoration-2`,
+            `underline decoration-[transparent]`,
+            `hover-hover:hover:text-links-active`,
+            `dark:hover:decoration-[var(--links-active)]`,
+            `dark:hover-hover:hover:text-text`,
+          )}
+        >
+          <Icon name="ui/arrow-left" size={20} />
+          Übersicht
+        </a>
+      </Paragraph>
       <Heading size="xxl" inverted set:html={title} />
       <Paragraph size="lg" class="text-balance">{description}</Paragraph>
     </div>

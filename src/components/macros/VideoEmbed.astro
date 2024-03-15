@@ -17,6 +17,7 @@ const { url, elementProps = {}, buttons = [], ...otherProps } = Astro.props;
     {
       link: url,
       text: url.startsWith("/") ? "Video herunterladen" : "Auf YouTube ansehen",
+      isDownloadable: url.startsWith("/"),
     },
   ]}
 >

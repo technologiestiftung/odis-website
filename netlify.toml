@@ -49,4 +49,4 @@
     path = "ressourcen"
   
   [[plugins.inputs.audits]]
-    path = "ressourcen/01_open_data_in_verwaltung"
+    path = "ressourcen/open_data_in_verwaltung"
