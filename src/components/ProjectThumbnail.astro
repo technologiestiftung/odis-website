@@ -42,10 +42,12 @@ const { title, description, category } = data;
     tag={titleTag}
     size="lg"
     class={cn(
-      "mb-1 group-hover:text-links-active transition-all",
-      "dark:group-hover:bg-text dark:group-hover:text-links-active",
-      "w-fit px-2 -ml-2 dark:group-hover:ml-0",
-      "duration-1000 ease-out-extreme",
+      "mb-1 transition-all w-fit",
+      `decoration-clone underline-offset-4 decoration-4`,
+      `decoration-[transparent] underline`,
+      `dark:group-hover:decoration-[var(--links-active)]`,
+      `hover-hover:group-hover:text-links-active`,
+      `dark:hover-hover:group-hover:text-text`,
     )}
     set:html={title}
   />

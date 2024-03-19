@@ -401,8 +401,10 @@
 }
 
 .prose :where(a):not(:where([class~="not-prose"] *)) {
-  @apply focusable hover-hover:hover:text-links-active transition-colors;
-  @apply px-1 -ml-1 dark:hover-hover:hover:bg-text;
+  @apply focusable hover-hover:hover:text-links-active transition-all w-fit;
+  @apply dark:hover:decoration-[var(--links-active)] dark:hover-hover:hover:text-text;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
 }
 
 iframe {

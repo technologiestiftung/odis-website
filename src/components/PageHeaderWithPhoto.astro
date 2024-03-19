@@ -40,10 +40,18 @@ const dateIsoString = date.toISOString();
         <Paragraph class="flex gap-x-3 flex-wrap">
           <a
             href={`/${basePath}`}
-            class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
+            class={cn(
+              "flex items-bottom gap-1 opacity-70 transition",
+              "hover:opacity-100 hover:text-links-active focusable",
+              `decoration-clone underline-offset-2 decoration-2`,
+              `underline decoration-[transparent]`,
+              `hover-hover:hover:text-links-active`,
+              `dark:hover:decoration-[var(--links-active)]`,
+              `dark:hover-hover:hover:text-text`,
+            )}
           >
             <Icon name="ui/arrow-left" size={20} />
-            Zurück
+            Übersicht
           </a>
           <span aria-hidden="true" class="scale-150 opacity-50">·</span>
           <time datetime={dateIsoString} class="opacity-70">

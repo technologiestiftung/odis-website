@@ -21,7 +21,7 @@ if (!hasMatomo) {
 export default defineConfig({
   site:
     process.env.NODE_ENV !== "development"
-      ? process.env.DEPLOY_PRIME_URL || "https://odis-berlin.de"
+      ? "https://odis-berlin.de"
       : `http://localhost:${process.env.PORT || 4321}`,
   integrations: [
     icon({
@@ -75,6 +75,7 @@ export default defineConfig({
   redirects: {
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
     "/projekte/xml-validator/tool": "/xml-validator-tool",
+    "/projekte/datenportal/": "/projekte/2024-01-daten-neuheiten/",
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
     "/ressourcen/einstiegopendata": "/ressourcen/open_data_in_verwaltung",
     "/ressourcen/dateninventurprozess": "/ressourcen/dateninventur_prozess",

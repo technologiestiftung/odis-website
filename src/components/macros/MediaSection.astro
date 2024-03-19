@@ -6,6 +6,7 @@ import ContentSection, {
 import Button from "@/components/Button.astro";
 import ResourceInfo from "../ResourceInfo.astro";
 import type { CollectionEntry } from "astro:content";
+import { getFileWithExtFromPath } from "@/utils/fileDownloadUtil";
 
 export type Props = ContentSectionProps & {
   buttons?: {
@@ -22,6 +23,11 @@ const {
   mediaMetadata,
   ...contentSectionProps
 } = Astro.props;
+
+const buttonsWithFilenames = buttons.map((btn) => ({
+  ...btn,
+  fileName: btn.isDownloadable && getFileWithExtFromPath(btn.link),
+}));
 ---
 
 <ContentSection {...contentSectionProps} class={cn(`not-prose`, className)}>
@@ -41,13 +47,13 @@ const {
           )}
         >
           {mediaMetadata && <ResourceInfo {...mediaMetadata} />}
-          {buttons.length > 0 && (
+          {buttonsWithFilenames.length > 0 && (
             <div class="flex flex-wrap gap-x-6 gap-y-3">
-              {buttons.map((button) => (
+              {buttonsWithFilenames.map((button) => (
                 <Button
                   tag="a"
                   href={button.link}
-                  download={button.isDownloadable ?? false}
+                  download={button.fileName ?? false}
                   variant="secondary"
                 >
                   {button.text}

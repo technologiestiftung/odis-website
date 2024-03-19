@@ -3,6 +3,7 @@ import Button from "./Button.astro";
 import ContactLane from "./ContactLane.astro";
 import Heading from "./Heading.astro";
 import Paragraph from "./Paragraph.astro";
+import TextLink from "./TextLink.astro";
 
 export type Props = {
   class?: string;
@@ -33,12 +34,9 @@ const { class: className } = Astro.props;
       </Button>
       <p class="mt-6">
         Newsletter verpasst? Stöber in unserem
-        <a
-          class="text-links hover:text-links-active focusable underline"
-          href="/aktuelles/archiv/"
-        >
+        <TextLink tag="a" href="/aktuelles/archiv/">
           Newsletter-Archiv.
-        </a>
+        </TextLink>
       </p>
     </div>
 
