@@ -174,72 +174,42 @@ import image7 from "./images/lod_prinzipien.png";
 
 Durch das Organigramm-Tool werden alle vier Prinzipen adressiert. Wie das genau aussieht, wird im Folgenden erklärt.
 
-#### 1. URIs: Das Organigramm-Tool als URI-Generator und Editor
+#### 1. Das Organigramm-Tool als URI-Generator und Editor
 
 Eine grundlegende Voraussetzung für Linked Open Data: Die eindeutige Identifizierung einer Ressource! Anhand von URIs ("Uniform Resource Identifier") lassen sich abstrakte Ressourcen und Daten im World Wide Web eindeutig identifizieren, wiederfinden und somit auch wiederverwenden.
 
-Ebenso funktionieren URIs im Internet: Sie stellen abstrakte oder konkrete Dinge dar und bilden die Basis für Linked Data. Für die Zugänglichkeit dieser Identifikatoren verwendet Linked Data öffentliche, über HTTP abrufbare URIs. Diese gelten allerdings nicht für ganze Webressourcen wie Webseiten, Artikel, oder PDF-Dateien, sondern beschreiben individuelle Objekte innerhalb von Datensätzen. Im Falle eines Organigramms reicht es zum Bespiel nicht aus, einem gesamten Organigramm einen Link zuzuweisen, wie die fiktive URL: www.organigramm-senatskanzlei-berlin.de. Vielmehr werden den verschiedenen Einzelelementen des Organigrammes beim Erstellen bereits eine URI zugewiesen. So erhält jede:r Senator:in, Abteilung, Referatsleiter:in, oder eine Organisation eine einzigartige URI. Durch die Art und Weise, wie diese URIs miteinander verknüpft sind, lassen sich vielfältige Informationen ableiten, wie etwa die Anzahl der Abteilungen, die einem bestimmten Senator oder einer Senatorin unterstellt sind.
-Wenn ein Organigramm im Tool angelegt wird, wird für jedes Objekt bzw. Person eine URI automatisch generiert. Die URI's können aber auch per Hand angelegt und bearbeitet werden. Weiterhin bietet das Tool die Möglichkeit, bereits existierende URI's von der bestehende Datenband Wikidata zu verknüpfen. Warum das relevant ist, wird später deutlich.
+Ebenso funktionieren URIs im Internet: Sie stellen abstrakte oder konkrete Dinge dar und bilden die Basis für Linked Data. Für die Zugänglichkeit dieser Identifikatoren verwendet Linked Data öffentliche, über HTTP abrufbare URIs. Diese gelten allerdings nicht für ganze Webressourcen wie Webseiten, Artikel, oder PDF-Dateien, sondern beschreiben individuelle Objekte innerhalb von Datensätzen. Im Falle eines Organigramms reicht es zum Bespiel nicht aus, einem gesamten Organigramm einen Link zuzuweisen, wie die fiktive URL: organigramm-senatskanzlei-berlin.de. Vielmehr werden den verschiedenen Einzelelementen des Organigrammes beim Erstellen bereits URI's zugewiesen. 
+So erhält jede:r Senator:in, Abteilung, Referatsleiter:in, oder eine Organisation eine einzigartige URI. 
+
+** hier Screenshot einfügen **
+
+Wenn ein Organigramm im Tool angelegt wird, wird für jedes Objekt bzw. Person eine URI automatisch generiert. Die URI's können aber auch per Hand angelegt und bearbeitet werden. Weiterhin bietet das Tool die Möglichkeit, bereits existierende URI's von der bestehende Datenbank Wikidata zu verknüpfen. Warum das relevant ist, wird später deutlich.
 
 
+#### 2. Triples im RDF-Format exportieren
 
+Ein weiterer zentraler Aspekt für Linked Data ist die Organisation von Daten in einer speziellen Struktur, das aus drei Teilen besteht: dem Subjekt, dem Prädikat und dem Objekt. Diese Dreiteilung wird Triple genannt. Das Subjekt repräsentiert die Ressource oder Entität, auf die sich die Aussage bezieht. Dies kann zum Beipsiel eine Person sein.
+Das Objekt repräsentiert einen Wert oder eine weitere Ressource, die mit dem Subjekt in Beziehung steht. Das könnte ein Objekt zum Beispiel ein absoluter Wert, wie die Höhe des jährlichen Etats sein, aber auch eine weitere Entität, wie zum Beispiel eine Person sein. Das Objekt wird dann ebenfalls durch eine URI identifiziert. Als Verbindung von Subjekt und Objekt gibt das Prädikat gibt an, welche Art von Beziehung zwischen Subjekt und dem Objekt besteht und welche Informationen sich aus der Verbindung ergeben. Beispiele für Prädikate im Falle er Organigramme könnten sein: “hat Senator:in“, oder “hat Telefonnummer”. Das Prädikat ist ebenfalls durch eine URI dargestellt; diese werden in einer sogenannten Ontologie, bzw. einem Vokabular festgehalten.
 
-### TBd ab hier
-
-
-
-
-#### 2.Ontologie: Ein Vokabular speziell für Berliner Organigramme 
-
-Ein wichtiger Aspekt für Linked Data ist die Organisation von Daten in einem speziellen Format, das aus drei Teilen besteht: dem Subjekt, dem Prädikat und dem Objekt. Diese Dreiteilung, bekannt als Triple, ist entscheidend für die Strukturierung von Daten in Linked Data. Das Subjekt repräsentiert die Ressource oder Entität, auf die sich die Aussage bezieht. Dies kann eine Person, ein geografischer Ort wie eine Stadt oder ein anderes Konzept sein.
-
-Wir nehmen als Beispiel einmal die Senatskanzlei und geben ihr eine einzigartige Art von Identifikation, also eine URI, z.B. https://berlin.github.io/lod-organigram/organigram-20c5cdb22c. Das Objekt repräsentiert einen Wert oder eine weitere Ressource, die mit dem Subjekt in Beziehung steht. Für die Senatskanzlei könnte ein Objekt zum Beispiel ein absoluter Wert, wie die Höhe des jährlichen Etats sein, aber auch eine weitere Ressource, wie zum Beispiel eine Person sein. Das Objekt wird hier ebenfalls durch eine URI identifiziert. Als Verbindung von Subjekt und Objekt gibt das Prädikat gibt an, welche Art von Beziehung zwischen Subjekt und dem Objekt besteht und welche Informationen sich aus der Verbindung ergeben. Beispiele für Prädikate für das oben genannte Subjekt (Senatskanzlei) könnten sein: “hat Senator:in“, oder “hat folgende Ausgabetitel im Haushalt”. Das Prädikat ist ebenfalls durch eine URI dargestellt; diese werden in einer sogenannten Ontologie, bzw. einem Vokabular festgehalten.
-
-Um Aussagen zu tätigen, werden Informationen, beispielsweise über die Senatskanzlei, in Triple-Form abgebildet:
-
-1. AUSSAGE
-
-**"Kai Wegener ist Regierender Bürgermeister von Berlin."**
-
-Als ein Datensatz im Triple-Format würden diese Informationen wie folgt beschrieben:
+Eine Information die als Triple vorliegt könnte zum Beispiel so aussehen:
 
 https://berlin.github.io/lod-organigram/organigram-20c5cdb22c <br></br>
-(**Senatskanzlei**)
+(**Senatsverwaltung für Wirtschaft, Energie und Betriebe**)
 
 https://berlin.github.io/lod-vocabulary/berorgs#SenatorIn <br></br>
 (**hat Senator:in**)
 
 https://berlin.github.io/lod-organigram/person-f60db6579c <br></br>
-(**Kai Wegener**)
+(**Franziska Giffey**)
 
-2. AUSSAGE
+AUSSAGE: **"Franziska Giffey ist Senatorin für Wirtschaft, Energie und Betriebe."**
 
-**"Die Senatskanzlei gibt im Jahr 2023 145.000 EUR für Dienstreisen aus."**
+Da alle in den Datensätzen genannten Enitäten, eine einzigartige URI erhalten und diese URIs so gut wie möglich in allen Datensätzen wiederverwendet werden, lassen sich nicht nur Verknüpfungen innerhalb des einzelnen Datensatzes, sondern darüber hinaus Verbindungen zu anderen Datensätzen herstellen, in denen die gleiche URI verwendet wird. 
+So könnte zum Beispiel die Person Franziska Giffey aus dem Organigramm der Senatskanzlei (in ihrer Rolle als stellvertretende Bürgermeisterin) mit ihrer Rolleninformationen aus dem Organigramm der SenWEB über ihre eindeutige URI verlinkt werden.
 
-Als ein Datensatz im Triple-Format würden diese Informationen als zwei Triples beschrieben:
+** ergänzen das Triples als RDF im Tool abgespeichert werden **
 
-**1. Triple**
-
-https://berlin.github.io/lod-organigram/organigram-20c5cdb22c <br></br>
-(**URI der Senatskanzlei**)
-
-http://ontologie.berlin/12893 <br></br>
-(**URI für die Eigenschaft "hat Ausgabetitel"**)
-
-http://finanzen.berlin/2388 <br></br>
-(**URI für den Ausgabetitel "Dienstreisen"**)
-
-**2. Triple**
-
-http://finanzen.berlin/2388 <br></br>
-(**"Dienstreisen"**)
-
-http://finanzen.berlin/1285 <br></br>
-(**URI für „in Höhe von 145.000“**)
-
-Da alle in den Datensätzen genannten Gegenstände, wie zum Beispiel Bezirke, eine einzigartige URI erhalten und diese URIs so gut wie möglich in allen Datensätzen wiederverwendet werden, lassen sich nicht nur Verknüpfungen innerhalb des einzelnen Datensatzes, sondern darüber hinaus Verbindungen zu anderen Datensätzen herstellen, in denen die gleiche URI verwendet wird. Mit dem obigen Beispiel ließe sich also die Frage beantworten, wie viele Einwohner die Berliner Bezirksbürgermeisterin für Friedrichshain-Kreuzberg repräsentiert, auch wenn diese Informationen über verschiedene Datenquellen verteilt vorliegen.
-
-#### Ontologien
+#### 3. Eine Ontologie speziell für Berliner Organigramme 
 
 Eine weitere zentrale Voraussetzung für Linked Open Data sind entsprechende Ontologien, also eine Art spezialisiertes Vokabular. Sie bieten eine formalisierte Darstellung von Begriffen und deren Beziehungen in einem bestimmten Wissensbereich. Ontologien können als Schemas betrachtet werden, die Struktur und Bedeutung von Daten in einem bestimmten Kontext festlegen. Die Verwendung von möglichst einheitlichen Ontologien in Linked Open Data ermöglicht, dass Maschinen die Bedeutung von Daten verstehen können und die Beziehungen “maschinenlesbar” werden.
 
@@ -249,7 +219,10 @@ Ein [Webeintrag](http://xmlns.com/foaf/spec/) beschreibt, wie die Ontologie benu
 
 Einem ähnlichen Prinzip folgend, bedient sich das Organigramm-Tool sowohl bestehender Vokabulare als auch eines speziell für Berlin verfasstes. Um die Beziehungen verschiedener Abteilungen und Mitarbeitenden akkurat abzubilden, entwickelte die ODIS für die Organigramme auch ein eigenes Vokabular. Ein [GitHub-Repository](https://github.com/berlin/lod-vocabulary) stellt Informationen zusammen und definiert Berlin-spezifische Einrichtungen und Positionen, wie beispielsweise Abteilungen, Stabstellen oder Leiter:innen des Leitungsstabes.
 
-#### Speichern und abfragen mit SPARQL
+
+### TBD/Review ab hier
+
+#### 4. Wissen unbegrenzt verlinken
 
 Um die beschriebenen Triples im RDF-Format zu speichern, ist eine besondere Art von Datenbank erforderlich, ein sogenannter Triple Store. Der Triple Store ermöglicht effiziente Verwaltung und Abfrage von Linked Data, indem er die Triples und somit die Beziehungen zwischen verschiedenen Datenpunkten speichert. Dies fördert die Vernetzung von Informationen im Web, erleichtert die semantische Suche und unterstützt die Interoperabilität zwischen verschiedenen Datenquellen. Um die Informationen eines Triple Stores abzufragen, gibt es eine speziell entwickelte Abfragesprache: SPARQL (SPARQL Protocol and RDF Query Language) ermöglicht es, komplexe Abfragen über die gespeicherten Linked Data im Triple Store auszuführen.
 
@@ -265,13 +238,15 @@ Eine SPARQL-Abfrage zur Abfrage von Informationen über eine Person, z.B. den B�
   }
 ```
 
+** Screenshot, Link zum SPARQL-Endpunkt **
+
 In diesem Beispiel wird die FOAF-Ontologie (Friend of a Friend) verwendet. Die Abfrage sucht nach einer Ressource (?person), die den Namen "Kai Wegener" hat, und ruft dann Informationen wie Geburtsdatum und optional die E-Mail-Adresse ab.
 
 Das Ergebnis dieser Abfrage könnte in Form einer Tabelle ausgegeben werden, die eine Reihe von Triples widerspiegelt, die Informationen zu dieser bestimmten Person abbildet.
 
 Sprachmodelle wie ChatGPT können hier eine zusätzliche Rolle spielen. Sie sind in der Lage, Code zu schreiben und zu interpretieren, was bedeutet, dass sie natürliche Sprache in SPARQL-Abfragen umwandeln und die Ergebnisse verarbeiten können. Dies erweitert die Zugänglichkeit und Nutzbarkeit von Linked Open Data erheblich, da Benutzer nicht mehr direkt mit komplexen Abfragesprachen interagieren müssen. Ein praktisches Beispiel hierfür ist das schon erwähnte [ZüriLinkedGPT](https://ld.gpt.liip.ch/), dass den [Linked Open Data Triple Store von Zürich](https://ld.stadt-zuerich.ch/sparql/) in natürlicher Sprache abfragbar macht.
 
-## Zusammenfassung und Ausblick
+## TBD: Zusammenfassung und Ausblick
 
 In dieser Fallstudie haben wir aufgezeigt, welchen Wissensvorsprung Linked Data durch offene, maschinenlesbare und strukturierte Daten bietet. Am Beispiel des Organigramm-Tools haben wir die technische Umsetzbarkeit und den Mehrwert gezeigt, den Linked Open Data besonders für Daten der öffentlichen Verwaltung bereithält. Damit perspektivisch eine kritische Masse an Datensätzen verknüpft werden und darüber neue Einsichten gewonnen und innovative Lösungen für komplexe Probleme entwickelt werden können, bedarf es einem Pool an Linked Open Data. Um diesen aufzubauen, hilft das Organigramm-Tool der ODIS die Organigramme aktuell zu halten und im RDF-Format bereitzustellen. Darüber hinaus können natürlich auch weitere Behörden über Berlin hinaus das Organigramm-Tool nutzen und das Angebot an strukturierten Informationen über Verwaltungseinheiten erweitern.
 
@@ -284,10 +259,9 @@ Durch die standardisierte Bereitstellung von Daten im RDF-Format könnte ebenfal
 Wir sind mindestens so gespannt wie Chatbot Bobbi auf die weiteren Entwicklungen im Land in Richtung Fünf-Sterne Open Data. 
 
 
-### TBD , Call to action ausführen
-## Bringt euch ein!
+## Sparring-Partner gesucht!
 
-Wenn ihr Fragen zu unserem Tool oder Vorgehen habt, freuen wir uns über Feedback genauso wie über Ideen für mögliche Linked-Open-Data Anwendungen oder konkrete Projektideen. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden euch ein auf der Erkundungsreise mit uns zu experimentieren, neue Pfade zu erkunden und Wissensschätze zu sammeln.
+Bei Fragen oder Feedback zum Tool oder Vorgehen, freuen wir uns über einen Austausch, genauso wie über Ideen für mögliche Linked Open Data Anwendungen. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden dazu ein gemeinsame neue Ansätze und Pfade zu erkunden und Wissensschätze zu sammeln, um das Thema Datenmanagement und Dateninfrastruktur in Berlin zielgerichtet voranzubringen!
 
 import image6 from "./images/bobby_ciao_2.png";
 
