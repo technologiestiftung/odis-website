@@ -77,12 +77,15 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
       tag={titleTag}
       style={{ gridArea: "title" }}
       class={cn(
-        "m-0 hover-hover:group-hover:text-links-active transition-colors",
-        "group-hover:text-links-active transition-all",
-        "dark:group-hover:bg-text dark:group-hover:text-links-active",
-        "w-fit px-2 -ml-2 dark:group-hover:ml-0",
-        "duration-1000 ease-out-extreme box-decoration-clone",
-        isInverted && "group-hover:bg-bg group-hover:ml-0",
+        "mb-0 transition-all w-fit",
+        `decoration-clone underline-offset-4 decoration-4`,
+        `decoration-[transparent] underline`,
+        `hover-hover:group-hover:text-links-active`,
+        `hover-hover:hover:text-links-active`,
+        `dark:group-hover:decoration-[var(--links-active)]`,
+        `dark:hover-hover:group-hover:text-text`,
+        isInverted &&
+          "group-hover:decoration-[var(--links-active)] hover-hover:group-hover:text-link-inv hover-hover:hover:text-link-inv",
       )}
       inverted={isInverted}
     >

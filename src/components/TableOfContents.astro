@@ -97,18 +97,17 @@
       const linkClasses = [
         "block",
         "text-links",
-        "hover-hover:hover:text-links-active",
-        "dark:hover-hover:hover:text-links-active",
-        "dark:hover-hover:hover:bg-text",
-        "w-fit",
-        "px-2",
-        "-ml-2",
-        "no-underline",
+        `decoration-clone`,
+        `underline-offset-2`,
+        `decoration-2`,
+        `underline`,
+        `decoration-[transparent]`,
+        `hover-hover:hover:text-links-active`,
+        `dark:hover:decoration-[var(--links-active)]`,
+        `dark:hover-hover:hover:text-text`,
         "focusable",
         "dark:hover-hover:hover:ml-0",
         "transition-all",
-        "duration-1000",
-        "ease-out-extreme",
       ];
       headingLink.classList.add(...linkClasses);
       headingLink.appendChild(heading.cloneNode(true));

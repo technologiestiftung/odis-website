@@ -23,15 +23,12 @@ const isLast = module.data.number === module.totalModules;
     <a
       href={`/module/${module.slug}`}
       title={module.data.title}
-      class={cn(
-        "group/link p-px lg:col-span-10 outline-none dark:hover-hover:hover:bg-bg-inv",
-        "dark:hover-hover:hover:text-text",
-      )}
+      class={cn("group/link p-px lg:col-span-10 outline-none")}
     >
       <div
         class="p-16 -mx-16 grid grid-cols-10 gap-4 sm:gap-6 transition-colors group-hover:bg-bg-alt
           group-focus-visible/link:bg-bg-alt group-focus-visible/link:ring-2 group-focus-visible/link:ring-line
-          relative dark:group-hover:bg-bg-inv"
+          relative"
       >
         <div
           class={cn(
@@ -77,10 +74,13 @@ const isLast = module.data.number === module.totalModules;
             tag="h3"
             size="lg"
             class={cn(
-              "px-2 -ml-2 transition-all duration-1000 ease-out-extreme w-fit",
-              "dark:hover-hover:group-hover/link:bg-text",
-              "dark:hover-hover:group-hover/link:text-links-active",
-              "dark:hover-hover:group-hover/link:ml-0",
+              "transition-all w-fit",
+              `decoration-clone underline-offset-8 decoration-4`,
+              `hover-hover:group-hover/link:text-links-active`,
+              `dark:hover-hover:group-hover/link:text-text`,
+              `dark:hover-hover:group-hover/link:underline`,
+              `decoration-[transparent]`,
+              `dark:group-hover/link:decoration-[var(--links-active)]`,
             )}
           >
             {module.data.title}

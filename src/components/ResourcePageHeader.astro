@@ -7,6 +7,7 @@ import type { CollectionEntry } from "astro:content";
 import Button from "@/components/Button.astro";
 import { Icon } from "astro-icon/components";
 import { iconsMap, labelsMap } from "@/utils/resourceUtil";
+import { getFileWithExtFromPath } from "@/utils/fileDownloadUtil";
 
 export type Props = CollectionEntry<"resources"> & {
   class?: string;
@@ -17,6 +18,7 @@ const { title, description, question, media } = data;
 const thumbnail = media.thumbnail;
 
 const isVideoAspectRatio = thumbnail.width > thumbnail.height;
+const fileName = getFileWithExtFromPath(media.link);
 ---
 
 <div class={cn(`w-screen overflow-x-hidden`, className)}>
@@ -29,10 +31,18 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
         <Paragraph class="flex gap-x-3 flex-wrap">
           <a
             href={`/ressourcen`}
-            class="flex items-bottom gap-1 opacity-70 transition hover:opacity-100 hover:text-links-active focusable"
+            class={cn(
+              "flex items-bottom gap-1 opacity-70 transition",
+              "hover:opacity-100 hover:text-links-active focusable",
+              `decoration-clone underline-offset-2 decoration-2`,
+              `underline decoration-[transparent]`,
+              `hover-hover:hover:text-links-active`,
+              `dark:hover:decoration-[var(--links-active)]`,
+              `dark:hover-hover:hover:text-text`,
+            )}
           >
             <Icon name="ui/arrow-left" size={20} />
-            Zurück
+            Übersicht
           </a>
         </Paragraph>
         <Paragraph tag="h2" set:html={question} />
@@ -45,7 +55,9 @@ const isVideoAspectRatio = thumbnail.width > thumbnail.height;
               href={media.link}
               class="inline-flex gap-3"
               title="Direkter Link zur Ressource"
-              download={media.type === "pdf" || media.type === "table"}
+              download={
+                (media.type === "pdf" || media.type === "table") && fileName
+              }
             >
               <Icon name={iconsMap[media.type]} size={20} />
               {labelsMap[media.type]}
