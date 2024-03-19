@@ -141,9 +141,9 @@ Um Organigramme zukünftig in Form von Daten zu veröffentlichen, haben wir als 
 Aufgrund ihrer Fülle an Informationen über Aufbau und Struktur der Berliner Verwaltung und ihre hierarchischen Strukturen sind maschinenlesbare Organigramme ein idealer Anwendungsfall für Linked Open Data. Deshalb hat die ODIS das Organigramm-Tool in 2023 so weiterentwickelt, dass die Informationen des Organigramms jetzt auch als Linked Open Data veröffentlicht werden können. Mit dem Tool und dem begleitenden Entwicklungsprozess möchten wir folgende Ziele erreichen:
 
 
-1. Praktische Umsetzbarkeit von LOD erforschen: Das Projekt zielt darauf ab, konkret zu erforschen und zu demonstrieren, wie LOD in der Verwaltungspraxis umgesetzt werden kann und welche Herausforderungen dabei auftreten. Es ermöglicht auch anderen Personen und Forschenden, mit diesen Daten zu experimentieren und sie mit anderen Datensätzen zu verknüpfen, wodurch neue Möglichkeiten und Erkenntnisse im Bereich LOD entstehen.
-2. Basisdaten als LOD bereitstellen: Durch die Bereitstellung von maschinenlesbaren Organigrammen als LOD trägt ODIS zur Erweiterung des bisher begrenzten LOD-Angebots in Deutschland bei.  Linked Open Data wird sein Potential erst entfalten, wenn eine kritische Masse an Wissen entsteht.
-3. Förderung und Entwicklung von LOD-Standards: Mit der neuen Open Data Strategie des Landes wird Linked Open Data als Entwicklungsziel ausgerufen. Wir wollen weitere Akteure im Land ermutigen, Linked Open Data voranzutreiben und ihnen die Möglichkeit geben, sich an ersten Standards zu orientieren bzw. gemeinsam mit uns Standards weiterzuentwickeln und zu lernen.
+1. **Praktische Umsetzbarkeit von LOD erforschen:** Das Projekt zielt darauf ab, konkret zu erforschen und zu demonstrieren, wie LOD in der Verwaltungspraxis umgesetzt werden kann und welche Herausforderungen dabei auftreten. Es ermöglicht auch anderen Personen und Forschenden, mit diesen Daten zu experimentieren und sie mit anderen Datensätzen zu verknüpfen, wodurch neue Möglichkeiten und Erkenntnisse im Bereich LOD entstehen.
+2. **Basisdaten als LOD bereitstellen:** Durch die Bereitstellung von maschinenlesbaren Organigrammen als LOD trägt ODIS zur Erweiterung des bisher begrenzten LOD-Angebots in Deutschland bei.  Linked Open Data wird sein Potential erst entfalten, wenn eine kritische Masse an Wissen entsteht.
+3. **Förderung und Entwicklung von LOD-Standards:** Mit der neuen Open Data Strategie des Landes wird Linked Open Data als Entwicklungsziel ausgerufen. Wir wollen weitere Akteure im Land ermutigen, Linked Open Data voranzutreiben und ihnen die Möglichkeit geben, sich an ersten Standards zu orientieren bzw. gemeinsam mit uns Standards weiterzuentwickeln und zu lernen.
 
 Im nächsten Abschnitt erklären wir die wichtigstne Prinzipien von Linked Data und wie wir diese am Beispiel der Organigramme umgesetzt haben.
 
@@ -160,27 +160,36 @@ import image1 from "./images/fuenf_sterne_visual.png";
 
 Um die höchste Bewertung von fünf Sternen zu erreichen, müssen die Daten nicht nur maschinenlesbar sein, sondern auch den grundlegenden Prinzipien von Linked Open Data (LOD) entsprechen:
 
-1. Sie verwenden URIs zum Beschreiben von Gegenständen oder Personen und ihren Eigenschaften sowie Beziehungen zueinander
+1. Sie verwenden **URIs** zum Beschreiben von Gegenständen oder Personen und ihren Eigenschaften sowie Beziehungen zueinander
 
-2. Sie werden als RDF-Daten veröffentlicht, das Informationen in einer Art Satzform, inklusive Subjekt, Prädikat und Objekt abbildet
+2. Sie liegen im **RDF-Datenformat** vor, das Informationen in einer Art Satzform, inklusive Subjekt, Prädikat und Objekt abbildet
 
-3. Eine Ontologie, auch Vokabular genannt, definiert mithilfe von Klassen und Eigenschaften, welche Beziehungen zwischen verschiedenen Gegenständen, oder Personen, z.B. Abteilungen und Mitarbeitenden, möglich sind
+3. Durch **Ontologien**, auch Vokabulare genannt, werden mithilfe von Klassen und Eigenschaften festgelegt und standardisierte, welche Beziehungen zwischen den Subjekten und Objekten möglich sind
 
-4. Durch eine einheitliche Verwendung der obigen Merkmale lassen sich neue Verbindungen mit weiteren Datensätzen herstellen
+4. Durch die Verwendung der Prinzipien lassen sich **Verbindungen** zwischen Datensätzen herstellen, dafür müssen diese im Netz erreichbar und mit einer speziellen Sprache abgefragt werden können
 
 import image7 from "./images/lod_prinzipien.png";
 
 <ImageSection src={image7} caption="Die vier LOD-Prinzipien auf einen Blick." />
 
-Wir stellen im Folgenden konkret vor, wie wir die Prinzipien von Linked Open Data am Beispiel des Organigramm-Tools umgesetzt haben:
+Durch das Organigramm-Tool werden alle vier Prinzipen adressiert. Wie das genau aussieht, wird im Folgenden erklärt.
 
-#### Das Konzept der URIs
+#### 1. URIs: Das Organigramm-Tool als URI-Generator und Editor
 
 Eine grundlegende Voraussetzung für Linked Open Data: Die eindeutige Identifizierung einer Ressource! Anhand von URIs ("Uniform Resource Identifier") lassen sich abstrakte Ressourcen und Daten im World Wide Web eindeutig identifizieren, wiederfinden und somit auch wiederverwenden.
 
 Ebenso funktionieren URIs im Internet: Sie stellen abstrakte oder konkrete Dinge dar und bilden die Basis für Linked Data. Für die Zugänglichkeit dieser Identifikatoren verwendet Linked Data öffentliche, über HTTP abrufbare URIs. Diese gelten allerdings nicht für ganze Webressourcen wie Webseiten, Artikel, oder PDF-Dateien, sondern beschreiben individuelle Objekte innerhalb von Datensätzen. Im Falle eines Organigramms reicht es zum Bespiel nicht aus, einem gesamten Organigramm einen Link zuzuweisen, wie die fiktive URL: www.organigramm-senatskanzlei-berlin.de. Vielmehr werden den verschiedenen Einzelelementen des Organigrammes beim Erstellen bereits eine URI zugewiesen. So erhält jede:r Senator:in, Abteilung, Referatsleiter:in, oder eine Organisation eine einzigartige URI. Durch die Art und Weise, wie diese URIs miteinander verknüpft sind, lassen sich vielfältige Informationen ableiten, wie etwa die Anzahl der Abteilungen, die einem bestimmten Senator oder einer Senatorin unterstellt sind.
+Wenn ein Organigramm im Tool angelegt wird, wird für jedes Objekt bzw. Person eine URI automatisch generiert. Die URI's können aber auch per Hand angelegt und bearbeitet werden. Weiterhin bietet das Tool die Möglichkeit, bereits existierende URI's von der bestehende Datenband Wikidata zu verknüpfen. Warum das relevant ist, wird später deutlich.
 
-#### Das Konzept der RDF
+
+
+
+### TBd ab hier
+
+
+
+
+#### 2.Ontologie: Ein Vokabular speziell für Berliner Organigramme 
 
 Ein wichtiger Aspekt für Linked Data ist die Organisation von Daten in einem speziellen Format, das aus drei Teilen besteht: dem Subjekt, dem Prädikat und dem Objekt. Diese Dreiteilung, bekannt als Triple, ist entscheidend für die Strukturierung von Daten in Linked Data. Das Subjekt repräsentiert die Ressource oder Entität, auf die sich die Aussage bezieht. Dies kann eine Person, ein geografischer Ort wie eine Stadt oder ein anderes Konzept sein.
 
@@ -274,6 +283,8 @@ Durch die standardisierte Bereitstellung von Daten im RDF-Format könnte ebenfal
 
 Wir sind mindestens so gespannt wie Chatbot Bobbi auf die weiteren Entwicklungen im Land in Richtung Fünf-Sterne Open Data. 
 
+
+### TBD , Call to action ausführen
 ## Bringt euch ein!
 
 Wenn ihr Fragen zu unserem Tool oder Vorgehen habt, freuen wir uns über Feedback genauso wie über Ideen für mögliche Linked-Open-Data Anwendungen oder konkrete Projektideen. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden euch ein auf der Erkundungsreise mit uns zu experimentieren, neue Pfade zu erkunden und Wissensschätze zu sammeln.
