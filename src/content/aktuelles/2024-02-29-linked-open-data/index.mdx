@@ -3,7 +3,7 @@ tags:
   - "post"
   - "home"
 title: "Vom Informationssilo zum Wissensnetzwerk"
-description: Fallstudie – Wie wir mit Berliner Organigrammen den Pfad Richtung Linked Open Data bestreiten. Die Fallstudie gibt Einblicke in Linked Open Data Prinzipien, prototypische Tools und stellt die Vision eines Datennetzweks vor.
+description: Am Beispiel der Organigramme arbeiten wir derzeit an einer praxisnahen Fallstudie, um zu lernen, wie mit wichtigen Basis-Informationen die Grundlage für Linked Open Data in Berlin gelegt werden kann.
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
@@ -16,59 +16,94 @@ date: 2024-02-28
 
 ## Einleitung
 
-Ein Blick zurück ins Frühjahr 2023: In Berlin rückt der Krimi um das Wahldebakel langsam aus dem Rampenlicht der öffentlichen Berichterstattung. Die darauffolgenden Neuwahlen und der damit einhergehende Regierungswechsel sind quasi schon wieder Geschichte, da sieht sich die Stadtverwaltung mit einer neuen, wenn auch deutlich kleineren Mecker-Meldung in der Presse konfrontiert: Der Berliner Chatbot des Service-Portals, verkörpert durch einen Bären namens „Bobbi“, scheint auch mehrere Wochen nach der Wahl nicht auf dem neuesten Stand der politischen Entwicklungen zu sein. Trotz des Wechsels im Amt des Regierenden Bürgermeisters zu Kai Wegner, informiert Bobbi die Nutzer:innen noch über Franziska Giffey als Amtsinhaberin.
+### Dialog mit einem Bären
 
-Zur gleichen Zeit, viele tausend Kilometer entfernt: In San Francisco wird nur wenige Monate nach dem ersten ChatGPT-Hype an der Veröffentlichung des neuen und verbesserten Sprachmodells GPT-4 gearbeitet. Diese rasanten Entwicklungen entfachen nicht nur in der Technologiebranche eine Diskussion über Chancen und Risiken im Bereich der künstlichen Intelligenz, sondern auch über die aktuellen Limitierungen.
+Ein Blick zurück ins Frühjahr 2023: Der Krimi um das Berliner Wahldebakel rückt langsam aus dem Rampenlicht der öffentlichen Berichterstattung. 
+Die darauffolgenden Neuwahlen und der Regierungswechsel sind fast schon Geschichte, da sieht sich die Stadtverwaltung mit einer kleinen neuen Panne konfrontiert: Wie die Presse berichtet, scheint der [Berliner Chatbot](https://service.berlin.de/chatbot/chatbot-bobbi-606279.php) des Service-Portals, verkörpert durch einen Bären 
+namens „Bobbi“, auch mehrere Wochen nach der Wahl noch nicht auf dem neuesten Stand der politischen Entwicklungen zu sein. Trotz des Wechsels im 
+Amt des Regierenden Bürgermeisters zu Kai Wegner, behauptet Bobbi felsenfest Franziska Giffey sei Inhaberin dieses Amtes.
 
-### Problemstellung und Motivation
+Zur gleichen Zeit und augenscheinlich im Kontrast stehend, diskutiert nicht nur die gesamte Technologiebranche über die massiven Potentiale durch die rasanten Entwicklungen im Bereich der künstlichen Intelligenz, angeregt durch Chatbots wie ChatGPT.
 
-So amüsant und harmlos die Anekdote um Bobbi auch wirkt, sie illustriert einen Aspekt, der den meisten zwar bekannt, aber gerne mal vergessen wird: 
+<Quote authorName='Tagesspiegel Checkpoint - Künstliche Impertinenz: Berlins Chatbot Bobby kennt Kai Wegner nicht (10.05.2023)'>
+Also Bobbi, wer ist Regierender Bürgermeister in Berlin? „Die Regierende
+Bürgermeisterin von Berlin ist Franziska Giffey.“ Ähh.. dann vielleicht so: Bobbi, wer
+ist Kai Wegner? „Es tut mir sehr leid. Leider habe ich zu Ihrer Frage keine passende
+Antwort gefunden.“ 
+</Quote>
 
-**Jeder Chatbot, ebenso wie jedes andere Softwareprogramm, jedes Webtool und jede Datenanalyse, sind zum einen zweckgebunden und werden für spezifische Aufgaben entwickelt, zum anderen sind sie auch nur so leistungsfähig und aussagekräftig, wie die Informationen und Daten, mit denen sie entsprechend des Use Cases gespeist werden.** 
+### Problemstellung und Motivation - Garbage in, garbage out
+
+So amüsant und harmlos die Anekdote um Bobbi auch wirkt, sie illustriert einen Aspekt sehr anschaulich: 
+
+Jeder Chatbot, ebenso wie jedes andere Softwareprogramm, jedes Webtool und jede Datenanalyse, sind zum einen zweckgebunden und werden für spezifische Aufgaben entwickelt, zum anderen sind sie auch **nur so leistungsfähig und aussagekräftig, wie die Informationen und Daten, mit denen sie entsprechend des Use Cases gespeist werden**.
+
+import image from "./images/Bobby_visual.png";
+
+<ImageSection src={image} caption="Programme wie Chatbot Bobbi, sind nur so gut wie die ihnen zugrunde liegenden Informationen" />
 
 In diesem Kontext steht Bobbi symbolisch weniger für geringen Innovationscharakter als viel mehr für die Herausforderungen, mit denen digitale Assistenten beim Thema Nutzerinnenführung, Relevanz und Genauigkeit konfrontiert sein können.
+Ein zentraler Aspekt, der künftig für Digitalprojekte sowie die Weiterentwicklung und Innovation innerhalb digitaler Ökosysteme eine immer größer werdende Rolle spielen wird, ist daher **die Verfügbarkeit von qualitativ hochwertigen, aktuellen und von maschineninterpretierbaren Informationen**.
+Vor diesem Hintergrund gewinnt das Konzept der Linked Open Data an Aufmerksamkeit, da es das Potenzial birgt, eine vernetzte und zugängliche Datenbasis zu schaffen, die eine Grundlage für präzisere und relevantere Digitalprojekte bilden kann. 
 
-Ein Aspekt, der künftig für Digitalprojekte sowie die Weiterentwicklung und Innovation innerhalb digitaler Ökosysteme eine immer größer werdende Rolle spielen wird, ist daher die Verfügbarkeit von qualitativ hochwertigen, aktuellen und von maschineninterpretierbaren Informationen.
-
-Vor diesem Hintergrund gewinnt das Konzept der Linked Open Data an Aufmerksamkeit, da es das Potenzial birgt, eine vernetzte und zugängliche Datenbasis zu schaffen, die eine Grundlage für präzisere und relevantere Digitalprojekte bilden kann. Im Folgenden erklären wir, welche Potentiale in Linked Open Data stecken und wie wir als ODIS unser selbstentwickeltes Organigramm-Tool als praxisnahe Fallstudie nutzen. Dieses Beispiel soll nicht nur Bewegung in die Diskussion bringen, sondern auch als Ausgangspunkt für die Schaffung einer vernetzten Datenbasis für Berlin dienen. Und davon könnten nicht nur digitale Assistenten wie Bobbi profitieren.
-
-import image from "./images/bobby_visual.png";
-
-<ImageSection src={image} caption="Information-Flow des Bobby-Chatbots." />
+Im Folgenden erklären wir, welche Potentiale in Linked Open Data stecken und wie wir als ODIS unser selbstentwickeltes Organigramm-Tool als praxisnahe Fallstudie nutzen. Dieses Beispiel soll nicht nur Bewegung in die Diskussion bringen, sondern auch als Ausgangspunkt für die Schaffung einer vernetzten Datenbasis für Berlin dienen. Und davon könnten nicht nur digitale Assistenten wie Bobbi profitieren.
 
 ## Hintergrund
 
-### Die Ausgangslage: Datensilos und Mangel an Standards
+### Die Ausgangslage: Informationssilos und PDF-Dateien
 
-Die Themenbereiche und Aufgaben der Berliner Verwaltung sind zahlreich. Ebenso vielfältig ist die Art und Weise wie Informationen in der Verwaltung erhoben, gesammelt, verarbeitet und geteilt werden. Da gibt es Bereiche, in denen mit standardisierten und maschinenlesbaren Daten gearbeitet wird – im Finanzsektor z.B., wo Daten behördenübergreifend für Berechnungen und Planungen essenziell sind und in speziellen Fachverfahren verarbeitet werden. Viele dieser Daten werden auch veröffentlicht. Die Daten zum Berliner Haushalt z.B. stehen als strukturierter, tabellarischer Datensatz im Berliner Open Data Portal der Allgemeinheit zur Verfügung.
+Die Themenbereiche und Aufgaben der Berliner Verwaltung sind zahlreich. Ebenso vielfältig ist die Art und Weise wie Informationen in der Verwaltung erhoben, gesammelt, verarbeitet und geteilt werden. Da gibt es Bereiche, in denen mit standardisierten und maschinenlesbaren Daten gearbeitet wird – im Finanzsektor z.B., wo Daten behördenübergreifend für Berechnungen und Planungen essenziell sind und in speziellen Fachverfahren verarbeitet werden. 
+{/* Viele dieser Daten werden auch veröffentlicht. Die Daten zum Berliner Haushalt z.B. stehen als strukturierter, tabellarischer Datensatz im Berliner Open Data Portal der Allgemeinheit zur Verfügung. */}
+In anderen Bereichen dagegen gibt es weniger Vorgaben und abgestimmte Prozesse. Ein Beispiel hierfür sind die Zuständigkeiten und Strukturen in der Verwaltung. Die wichtigsten Personalien werden über die Organigramme der Senats- und Bezirksverwaltungen dargestellt und dezentral veröffentlicht. Diese wichtigen Informationen liegen in hoher Aktualität vor und können im Internet gefunden und eingesehen werden. Sie werden im PDF-Format veröffentlich, folgen keinen einheitlichen Standards und sind mit einem Fokus auf die Lesbarkeit für Menschen erstellt.
 
-In anderen Bereichen dagegen gibt es weniger Vorgaben und abgestimmte Prozesse. Ein Beispiel hierfür sind die Zuständigkeiten und Strukturen in der Verwaltung. Die wichtigsten Personalien werden über die Organigramme der Senats- und Bezirksverwaltungen dargestellt und veröffentlicht. Diese wichtigen Informationen liegen in hoher Aktualität vor und können im Internet gefunden und eingesehen werden. Sie liegen für gewöhnlich im PDF-Format vor, folgen keinen einheitlichen Standards und sind mit einem Fokus auf die Lesbarkeit für Menschen erstellt.
+import image8 from "./images/organigramm_skzl_2024-03-01.png";
 
-Öffnet man beispielsweise das Organigramm der Senatskanzlei, kann man auf einen Blick recht schnell erfassen, wer den Posten „Regierender Bürgermeister von Berlin“ innehat: Kai Wegner. Auch Franziska Giffey findet man in diesem Organigramm, als „Bürgermeisterin von Berlin“ (also als seine Stellvertreterin). Durch einen Computer bzw. Programmcode ist dieses PDF nur schwer automatisiert auslesbar. Würden die Informationen der Organigramme dagegen in einer strukturierten Tabelle, ähnlich wie die oben erwähnten Haushaltsdaten, vorliegen, hätte der Computer es deutlich einfacher.
+<ContentSection class="sm:px-6">
 
-import image3 from "./images/bobby_visual_2.png";
+  <ImageSection class="sm:container sm:mx-auto"
+    src={image8}
+    caption="Ausschnitt aus dem PDF-Organigramm der Senatskanzlei (März 2024)."
+  />
+</ContentSection>
+
+Öffnet man beispielsweise das Organigramm der Senatskanzlei, kann ein Mensch auf einen Blick recht schnell erfassen, wer den Posten „Regierender Bürgermeister von Berlin“ innehat: Kai Wegner. Auch Franziska Giffey findet sich in diesem Organigramm, als „Bürgermeisterin von Berlin“ (also als seine Stellvertreterin). Durch einen Computer bzw. Programmcode ist dieses PDF nur schwer automatisiert auslesbar. Würden die Informationen der Organigramme dagegen in einer strukturierten Tabelle vorliegen, hätte der Computer es schon deutlich einfacher.
+
+import image3 from "./images/Bobby_visual_2.png";
 
 <ImageSection
   src={image3}
-  caption="Informationen aus einer PDF kann der Bobby-Chatbot nicht gut verarbeiten."
+  caption="Informationen aus einer PDF können von Computerprogrammen nur sehr begrenzt verarbeitet werden."
 />
 
-Allerdings haben auch Tabellen ihre Grenzen. Im Fall der Organigramme ist einer der Gründe dafür recht offensichtlich. Die Verwaltungsstrukturen sind sehr komplex und geprägt von Hierarchien und Abhängigkeiten, die sich in einer tabellarischen Übersicht nur schwer abbilden lassen. Ein weiteres Problem ist die Existenz vieler isolierter Datensätze in der Verwaltung. Ein Beispiel verdeutlicht dies: Angenommen, die Senatskanzlei veröffentlicht neben ihrem PDF-Organigramm eine maschinenlesbare Tabelle mit Zuständigkeiten. Ein darauf basierender Chatbot könnte auf die Frage nach Franziska Giffeys Position als „Stellvertretende Bürgermeisterin von Berlin“ antworten. Was der Bot jedoch nicht weiß: Sie hat auch den Posten als Senatorin für Wirtschaft inne. Denn nur Informationen, die explizit im Text auftauchen, stehen dem Bot zur Verfügung. Informationen ableiten und eigene Schlüsse ziehen, wie zum Beispiel auf die Rolle von Franziska Giffey von ihrer bloßen Positionierung an der Spitze des Organigramms zu schließen, ist nicht möglich. Diese Information ist nicht explizit Teil des Organigramms und somit dem Bot unbekannt. Um umfassend Auskunft geben zu können, müsste der Bot Zugang zu vielen weiteren Datensätzen haben und diese stets aktuell halten. Bei einem Chatbot, der auf eine Vielzahl unterschiedlicher, schwer vorauszusehender Anfragen reagieren soll, stößt man hier schnell an Grenzen.
-
-### Die Vision: Das Datennetzwerk
-
-Doch was wäre, wenn alle Informationen, die wir über bestimmte Dinge, Objekte und Prozesse vorliegen haben, automatisch miteinander verknüpft werden könnten? Wenn ich nach dem Regierenden Bürgermeister frage und der Bot mir nicht nur sagen kann, dass es sich dabei derzeit um Kai Wegner handelt, sondern dass er seit dem 26.04.23 im Amt ist, dass sein Arbeitsort das Rote Rathaus ist, sein Geburtsort allerdings im Bezirk Spandau liegt, der Bezirk Spandau im Jahr 2023 151.046 EUR für Kindertagesbetreuung ausgegeben hat und gleichzeitig noch die Adressen aller Kindertagesstätten, sowie deren Öffnungszeiten und Belegungen angibt.
+Allerdings haben auch Tabellen ihre Grenzen. Im Fall der Organigramme ist das recht offensichtlich: 
+Die Verwaltungsstrukturen sind sehr komplex und geprägt von Hierarchien und Abhängigkeiten, die sich in einer tabellarischen Übersicht nur schwer abbilden lassen. 
+Ein weiteres Problem ist die Existenz vieler isolierter Datensätze in der Verwaltung. Ein Beispiel verdeutlicht dies: 
+Angenommen, die Senatskanzlei veröffentlicht neben ihrem PDF-Organigramm eine maschinenlesbare Tabelle mit den Namen der Personen und deren Positionen. 
+Ein darauf basierender Chatbot könnte auf die Frage nach Franziska Giffeys Position mit „Stellvertretende Bürgermeisterin von Berlin“ antworten. 
+Was der Bot jedoch nicht weiß: Sie hat auch den Posten als Senatorin für Wirtschaft inne. 
+Diese Information ist nicht explizit Teil des Organigramms der Senatskanzlei und somit dem Bot unbekannt.
 
 import image4 from "./images/verlinkte_tabellen.png";
 
 <ImageSection
   src={image4}
-  caption="Informationen, die eigentlich miteinander verlinkt sind, liegen in unterschiedlichen Tabellen."
+  caption="Informationen, die eigentlich miteinander in Verbindung stehen sollten, liegen in unterschiedlichen Tabellen."
 />
 
-Solche Verknüpfung von Daten sind möglich, wenn diese in einem speziellen Format, das Tim Berners-Lee bereits 2009 als Endstufe eines Datenqualitätspfads beschrieben hat, bereitgestellt werden: Linked Open Data!
+Um umfassend Auskunft geben zu können, müsste der Bot Zugang zu weiteren Datensätzen haben, in diesem Fall zum maschinenlesbare Organigramm der Senatsverwaltung für Wirtschaft.
+Bei einem Chatbot, der auf eine Vielzahl unterschiedlicher, schwer vorauszusehender Fragen reagieren soll, stößt man hier schnell an Limitierungen.
 
-Das Prinzip: Datensätze und ihre Inhalte sind durch eindeutige Identifikatoren gekennzeichnet, die es erlauben, unmissverständlich und automatisiert Verbindungen herzustellen. So kann sich ein Netz an Informationen bilden, auch bezeichnet als „Knowledge Graph“. Dieses Wissensgebilde kann über unser Beispiel hinaus weitere Informationen über Berlin etwa zu Mobilität, Klimaschutz, Stadtplanung, Bevölkerung, Infrastruktur usw. enthalten.
+### Die Vision: Das Wissensnetzwerk
+
+Doch was wäre, wenn alle Informationen, die wir über bestimmte Dinge, Objekte und Prozesse vorliegen haben, automatisch miteinander verknüpft werden könnten? 
+Wenn ich nach dem Regierenden Bürgermeister frage und der Bot mir nicht nur sagen kann, dass es sich dabei derzeit um Kai Wegner handelt, 
+sondern dass er seit dem 26.04.23 im Amt ist, dass sein Arbeitsort das Rote Rathaus ist, sein Geburtsort allerdings im Bezirk Spandau liegt, 
+der Bezirk Spandau im Jahr 2023 151.046 EUR für Kindertagesbetreuung ausgegeben hat und so weiter...
+
+Solche Verknüpfung von Daten sind möglich, wenn diese in einem speziellen Format, bereitgestellt werden: Linked Open Data!
+Das Prinzip ist, dass Inhalte eines Datensatzes durch eindeutige Identifikatoren bezeichnet sind, die es erlauben, unmissverständlich und automatisiert Verbindungen
+ herzustellen. So kann sich ein Netz an Informationen bilden, auch bezeichnet als „Knowledge Graph“. 
+ {/* Dieses Wissensgebilde kann über unser Beispiel hinaus weitere Informationen über Berlin etwa zu Mobilität, Klimaschutz, Stadtplanung, Bevölkerung, Infrastruktur usw. enthalten. */}
 
 import image2 from "./images/knowledge_graph.png";
 
@@ -76,42 +111,42 @@ import image2 from "./images/knowledge_graph.png";
 
   <ImageSection class="sm:container sm:mx-auto"
     src={image2}
-    caption="Möglicher Knowledge Graph mit zusammenhängenden Informationen zu Kai Wegner und Franziska Giffey."
+    caption="Skizze eines Knowledge Graphen mit verlinkten Informationen zu den Rollen von Kai Wegner und Franziska Giffey."
   />
 </ContentSection>
 
-An diesem Punkt mag man sich fragen, weshalb all diese Anstrengungen unternommen werden, wenn fortschrittliche Sprachmodelle wie ChatGPT bereits über umfangreiches Wissen verfügen. Aber auch ChatGPT wurde mit Informationen trainiert, die heute schon wieder veraltet sind. Wie ein Projekt aus Zürich zeigt, ist ChatGPT aber durchaus in der Lage, aktuelle Information aus einem Linked Open Data auszulesen und in Kontext zu setzen. Darüber hinaus eröffnet ein gut strukturierter Wissensgraph eine Fülle neuer Fragestellungen und Erkenntnisse. Diese sind nicht nur für spezialisierte digitale Chat-Assistenten wie Bobbi relevant, um stets aktuell zu bleiben, sondern bilden auch eine wichtige Grundlage für andere digitale Anwendungen und Prozesse. Sie sind essentiell für die Digitalisierung der Verwaltung, die Beantwortung wissenschaftlicher Fragen oder das Training von Machine-Learning-Modellen.
+An diesem Punkt mag man sich fragen, weshalb all diese Anstrengungen unternommen werden, wenn fortschrittliche Sprachmodelle wie ChatGPT bereits über umfangreiches Wissen verfügen. 
+Aber auch ChatGPT wurde mit Informationen trainiert, die heute schon wieder veraltet sind. 
+Wie ein [Projekt aus Zürich](https://ld.gpt.liip.ch/?q=Wie+hat+sich+die+ständige+Wohnbevölkerung+der+Stadt+Zürich+entwickelt+die+letzten+100+Jahre+gruppiere+nach+Zeit%3F+) zeigt, ist ChatGPT aber durchaus in der Lage, aktuelle Information aus Linked Open Data auszulesen und in Kontext zu setzen. Darüber hinaus eröffnet ein gut strukturierter Wissensgraph eine Fülle neuer Fragestellungen und Erkenntnisse. Diese sind nicht nur für spezialisierte digitale Chat-Assistenten wie Bobbi relevant, um stets aktuell zu bleiben, sondern bilden eine wichtige Grundlage für verschiedenste digitale Anwendungen und Prozesse. Sie sind essentiell für die Digitalisierung der Verwaltung, die Beantwortung wissenschaftlicher Fragen oder das Training von Machine-Learning-Modellen.
 
-Inmitten der Revolution durch Large Language Models (LLMs) wird also deutlich, dass wir für innovative Entwicklungen nicht nur maschinenlesbare Daten bereitstellen müssen. Es ist ebenso entscheidend, dass Informationen aktuell, miteinander verknüpft und von Computern semantisch korrekt interpretiert werden können.
+Inmitten der KI-Revolution wird also deutlich, dass wir für innovative Entwicklungen nicht nur maschinenlesbare Daten bereitstellen müssen. Es ist ebenso entscheidend, dass Informationen aktuell, miteinander verknüpft und von Computern semantisch korrekt interpretiert werden können.
 
-import image5 from "./images/bobby_aha.png";
+import image5 from "./images/Bobby_aha.png";
 
 <ImageSection
   src={image5}
-  caption="Einen Linked Open Data Knowldge Graph kann auch Bobby problemlos verstehen und so Wissen korrrekt und aktuell weitergeben."
+  caption="Linked Open Data kann helfen Informationen für Programme wie Bobbi zugänglicher zu machen und Daten besser zu nutzen und interpretieren."
 />
 
 ## Fallstudie
 
 ### Ein prototypisches Tool zur Erstellung maschinenlesbarer Organigramme
 
-Mit dem Organigramm-Tool arbeiten wir derzeit an einer praxisnahen Fallstudie, um zu lernen, wie wichtige Basis-Informationen die Grundlage für einen Knowledge-Graph in Berlin legen können.
+Mit dem Organigramm-Tool arbeiten wir derzeit an einer praxisnahen Fallstudie, um zu lernen, wie wichtige Basis-Daten die Grundlage für einen Knowledge-Graph in Berlin legen können.
 
-Wie bereits beschrieben, stellen Organigramme als Quelle von Informationen über die verschiedenen Verwaltungseinheiten der öffentlichen Verwaltung, eine wichtige Datenquelle dar, die vielfältig Verwendung findet. Um Organigramme zukünftig als maschinenlesbare Dateien zu veröffentlichen, haben wir als ODIS bereits 2022 ein Tool gebaut, das Mitarbeitende die Organigramme ihrer jeweiligen Häuser bzw. Organisationen in einem offenen, maschinenlesbaren Format erstellen lässt. Das im Browser verwendbare [Open-Source Organigramm-Tool](https://organigramme.odis-berlin.de/) lässt Nutzer:innen die Struktur diverser Organisationen mitsamt Mitarbeitenden, Abteilungen und ihren Beziehungen zueinander abbilden. Damit können Organigramme nicht nur einheitlicher erstellt werden, sondern auch die Informationen, die in den Organigrammen stecken, lassen sich nun beispielsweise als maschinenlesbare Daten exportieren und leichter nachnutzen.
+Wie bereits beschrieben, stellen Organigramme als Quelle von Informationen über die verschiedenen Verwaltungseinheiten der öffentlichen Verwaltung, eine wichtige Datenquelle dar, die vielfältig Verwendung findet.
+Um Organigramme zukünftig in Form von Daten zu veröffentlichen, haben wir als ODIS bereits 2022 ein browserbasiertes [Open-Source Organigramm-Tool](https://organigramme.odis-berlin.de/) gebaut, das Mitarbeitende die Organigramme ihrer jeweiligen Häuser bzw. Organisationen in einem offenen, maschinenlesbaren Format (JSON-Datei) erstellen lässt. 
 
 ### Zielstellungen der Fallstudie
 
 Aufgrund ihrer Fülle an Informationen über Aufbau und Struktur der Berliner Verwaltung und ihre hierarchischen Strukturen sind maschinenlesbare Organigramme ein idealer Anwendungsfall für Linked Open Data. Deshalb hat die ODIS das Organigramm-Tool in 2023 so weiterentwickelt, dass die Informationen des Organigramms jetzt auch als Linked Open Data veröffentlicht werden können. Mit dem Tool und dem begleitenden Entwicklungsprozess möchten wir folgende Ziele erreichen:
 
-1. Erweiterung des Linked Open Data Angebots in Deutschland: Durch die Bereitstellung von maschinenlesbaren Organigrammen als LOD trägt ODIS zur Erweiterung des bisher begrenzten LOD-Angebots in Deutschland bei.
 
-2. Schaffung einer Experimentiergrundlage: Das Tool ermöglicht es interessierten Personen und Forschenden, mit diesen Daten zu experimentieren und sie mit anderen Datensätzen zu verknüpfen, wodurch neue Möglichkeiten und Erkenntnisse im Bereich LOD entstehen.
+1. Praktische Umsetzbarkeit von LOD erforschen: Das Projekt zielt darauf ab, konkret zu erforschen und zu demonstrieren, wie LOD in der Verwaltungspraxis umgesetzt werden kann und welche Herausforderungen dabei auftreten. Es ermöglicht auch anderen Personen und Forschenden, mit diesen Daten zu experimentieren und sie mit anderen Datensätzen zu verknüpfen, wodurch neue Möglichkeiten und Erkenntnisse im Bereich LOD entstehen.
+2. Basisdaten als LOD bereitstellen: Durch die Bereitstellung von maschinenlesbaren Organigrammen als LOD trägt ODIS zur Erweiterung des bisher begrenzten LOD-Angebots in Deutschland bei.  Linked Open Data wird sein Potential erst entfalten, wenn eine kritische Masse an Wissen entsteht.
+3. Förderung und Entwicklung von LOD-Standards: Mit der neuen Open Data Strategie des Landes wird Linked Open Data als Entwicklungsziel ausgerufen. Wir wollen weitere Akteure im Land ermutigen, Linked Open Data voranzutreiben und ihnen die Möglichkeit geben, sich an ersten Standards zu orientieren bzw. gemeinsam mit uns Standards weiterzuentwickeln und zu lernen.
 
-3. Praktische Umsetzbarkeit von LOD erforschen: Das Projekt zielt darauf ab, konkret zu erforschen und zu demonstrieren, wie LOD in der Praxis umgesetzt werden kann und welche Herausforderungen dabei auftreten.
-
-4. Förderung und Entwicklung von LOD-Standards: Mit der neuen Open Data Strategie des Landes wird Linked Open Data als Entwicklungsziel ausgerufen. Linked Open Data wird seine Magie erst entfachen, wenn eine kritische Masse an Wissen entsteht. Wir wollen weitere Akteure im Land ermutigen, Linked Open Data voranzutreiben und ihnen die Möglichkeit geben, sich an unseren Standards zu orientieren bzw. gemeinsam mit uns Standards weiterzuentwickeln und zu lernen.
-
-Im nächsten Abschnitt erklären wir am Beispiel der Organigramme, wie Linked Open Data eigentlich funktioniert.
+Im nächsten Abschnitt erklären wir die wichtigstne Prinzipien von Linked Data und wie wir diese am Beispiel der Organigramme umgesetzt haben.
 
 ### Prinzipien von Linked Data am Beispiel der Organigramme
 
@@ -238,23 +273,22 @@ Konkrete Pläne für weitere Datensätze gibt es ebenfalls bereits: Im Rahmen de
 
 Durch die standardisierte Bereitstellung von Daten im RDF-Format könnte ebenfalls eine Verbindung zwischen maschinenlesbaren Organigrammen, den LOR und den Haushaltsdaten hergestellt werden. Ohne mühsames manuelles Zusammentragen von Daten können so Erkenntnisse über die Berliner Verwaltung, ihre Organisation und ihre Finanzen gewonnen werden. Eine Anwendung, die auf Linked Data basiert, könnte so beispielsweise die Etats mit jeweiligen Senatsverwaltungen vergleichen. Hier bietet es sich an, auf unserer Ontologie aufzubauen und diese gemeinsam weiterzuentwickeln, damit eine einheitliche Sprache gesprochen wird.
 
-Wir sind mindestens so gespannt wie Chatbot Bobby auf die weiteren Entwicklungen im Land in Richtung Fünf-Sterne Open Data. 
+Wir sind mindestens so gespannt wie Chatbot Bobbi auf die weiteren Entwicklungen im Land in Richtung Fünf-Sterne Open Data. 
 
 ## Bringt euch ein!
 
 Wenn ihr Fragen zu unserem Tool oder Vorgehen habt, freuen wir uns über Feedback genauso wie über Ideen für mögliche Linked-Open-Data Anwendungen oder konkrete Projektideen. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden euch ein auf der Erkundungsreise mit uns zu experimentieren, neue Pfade zu erkunden und Wissensschätze zu sammeln.
 
-import image6 from "./images/bobby_ciao_2.png";
+import image6 from "./images/Bobby_ciao_2.png";
 
 <ImageSection
   src={image6}
-  caption="Bobby ist ein Linked Open Data (LOD) Fan."
+  caption=""
 />
 
 ## Weiterführende Infos und Quellen
 
 - [Berliner _Open Data Strategie_ 2023 (Seite 10 ff.)](https://www.berlin.de/moderne-verwaltung/e-government/open-data/strategieprozess/artikel.1257333.php#:~:text=Linked%20Open%20Data%3A%20Ein%20wichtiges,im%20Web%20verkn%C3%BCpft%20werden%20k%C3%B6nnen)
-- [_Open Knowledge Hub_ der _Open Knowledge Foundation_ (OKF)](https://opendata.okfn.de/)
 - ["What is Linked Data" YouTube-Video von Manu Sporny](https://www.youtube.com/watch?v=4x_xzT5eF5Q)
 - ["Linking Data. What does it mean?" Beitrag auf data.europa.eu](https://data.europa.eu/en/publications/datastories/linking-data-what-does-it-mean)
 - [ZüriLinkedGPT](https://ld.gpt.liip.ch/)
