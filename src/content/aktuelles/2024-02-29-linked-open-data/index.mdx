@@ -50,7 +50,7 @@ Im Folgenden erklären wir, welche Potentiale in Linked Open Data stecken und wi
 
 ## Hintergrund
 
-### Die Ausgangslage: Informationssilos und PDF-Dateien
+### Die Ausgangslage: Informationssilos
 
 Die Themenbereiche und Aufgaben der Berliner Verwaltung sind zahlreich. Ebenso vielfältig ist die Art und Weise wie Informationen in der Verwaltung erhoben, gesammelt, verarbeitet und geteilt werden. Da gibt es Bereiche, in denen mit standardisierten und maschinenlesbaren Daten gearbeitet wird – im Finanzsektor z.B., wo Daten behördenübergreifend für Berechnungen und Planungen essenziell sind und in speziellen Fachverfahren verarbeitet werden. 
 {/* Viele dieser Daten werden auch veröffentlicht. Die Daten zum Berliner Haushalt z.B. stehen als strukturierter, tabellarischer Datensatz im Berliner Open Data Portal der Allgemeinheit zur Verfügung. */}
@@ -182,8 +182,11 @@ Eine grundlegende Voraussetzung für Linked Open Data: Die eindeutige Identifizi
 Ebenso funktionieren URIs im Internet: Sie stellen abstrakte oder konkrete Dinge dar und bilden die Basis für Linked Data. Für die Zugänglichkeit dieser Identifikatoren verwendet Linked Data öffentliche, über HTTP abrufbare URIs. Diese gelten allerdings nicht für ganze Webressourcen wie Webseiten, Artikel, oder PDF-Dateien, sondern beschreiben individuelle Objekte innerhalb von Datensätzen. Im Falle eines Organigramms reicht es zum Bespiel nicht aus, einem gesamten Organigramm einen Link zuzuweisen, wie die fiktive URL: organigramm-senatskanzlei-berlin.de. Vielmehr werden den verschiedenen Einzelelementen des Organigrammes beim Erstellen bereits URI's zugewiesen. 
 So erhält jede:r Senator:in, Abteilung, Referatsleiter:in, oder eine Organisation eine einzigartige URI. 
 
-** hier Screenshot einfügen **
+import image9 from "./images/URI_Screenshot.png";
 
+<ContentSection class="sm:px-6">
+<ImageSection class="sm:container sm:mx-auto" src={image9} caption="Anlegen einer URI im Organigramm-Tool für Franziska Giffey und Verknüpfung mit der existierenden Wikidata-URI." />
+</ContentSection>
 Wenn ein Organigramm im Tool angelegt wird, wird für jedes Objekt bzw. Person eine URI automatisch generiert. Die URI's können aber auch per Hand angelegt und bearbeitet werden. Weiterhin bietet das Tool die Möglichkeit, bereits existierende URI's von der bestehenden, offenen Datenbank Wikidata zu verknüpfen. Warum das relevant ist, wird später deutlich.
 
 
@@ -197,7 +200,7 @@ Das Prädikat ist ebenfalls durch eine URI dargestellt; diese werden in einer so
 Eine Information die als Triple und codiert in URI's vorliegt könnte zum Beispiel so aussehen:
 
 ```RDF
-organigram-20c5cdb22c
+https://berlin.github.io/lod-organigram/organigram-20c5cdb22c
 ```
 (**Subjekt:** URI für die Organisationseinheit SenWEB)
 
@@ -207,7 +210,7 @@ https://berlin.github.io/lod-vocabulary/berorgs#SenatorIn
 (**Prädikat:** URI für die Rolle "Senator:in")
 
 ```RDF
-person-f60db6579cc
+https://berlin.github.io/lod-organigram/person-ebfc6412ec
 ```
 (**Objekt:** URI für die Person Franziska Giffey)
 
@@ -218,66 +221,94 @@ So könnte zum Beispiel die Person Franziska Giffey aus dem Organigramm der Sena
 
 Ein Datensatz besteht aus sehr vielen Triples. Diese werden in einem speziellem Dateiformat, einer RDF-Datei abgespeichert. Ein im Organigramm-Tool erstelltes Organigramm kann einfach als RDF heruntergeladen werden.
 
-** hier Screenshot einfügen **
+import image10 from "./images/rdf.png";
+
+<ImageSection src={image10} caption="Ausschnitt aus einer RDF-Datei, die Informationen zu Franziska Giffey als Senatorin enthält." />
 
 #### 3. Eine Ontologie speziell für Berliner Organigramme 
 
 Eine weitere Voraussetzung für Linked Data ist de Verwendung von standardisierten Ontologien, also eine Art spezialisierter Vokabulare. Sie bieten eine formalisierte Darstellung von Begriffen und deren Beziehungen in einem bestimmten Wissensbereich. 
 Ontologien können als Schemas verstanden werden, die Struktur und Bedeutung von Daten in einem bestimmten Kontext festlegen. Sie ermöglichen, dass Computerprogramme die Bedeutung von Daten "verstehen".
 
-Ein Beispiel für eine existierende Ontologie die häufig zur Beschreibung von Personen verwendet wird, heißt “Friend of a Friend” (kurz: *foaf*).
+Ein Beispiel für eine existierende Ontologie die häufig zur Beschreibung von Personen verwendet wird, heißt vCard.
 
-Ein [Webeintrag](http://xmlns.com/foaf/spec/) beschreibt, wie die Ontologie benutzt wird und bietet einen Überblick über ihre Begriffe, also Beziehungen und Informationen, die mit ihrem Vokabular abgebildet werden können. Bei *foaf* sind das zum Beispiel die Namen, Anschrift, Kontaktmöglichkeiten oder innegehaltenen Positionen einer jeweiligen Person. Die Ontologie stellt somit URIs bereit, die benötigt werden, um Informationen als Triples auszudrücken.
+Ein [Webeintrag](https://www.w3.org/TR/vcard-rdf/) beschreibt, wie die Ontologie benutzt wird und bietet einen Überblick über ihre Begriffe, also Beziehungen und Informationen, die mit ihrem Vokabular abgebildet werden können. Bei vCard sind das zum Beispiel die Namen, Anschrift und Kontaktmöglichkeiten einer jeweiligen Person. Die Ontologie stellt somit URIs bereit, die benötigt werden, um Informationen als Triples auszudrücken.
 
 Diesem Prinzip folgend, bedient sich das Organigramm-Tool sowohl bestehender Vokabulare als auch eines von uns speziell für Berlin verfasstes.
 Um die Beziehungen verschiedener Abteilungen und Mitarbeitenden akkurat abzubilden, entwickelte die ODIS für die Organigramme auch ein eigenes Vokabular. 
-Unser Webeintrag in Form eines [GitHub-Repositories](https://github.com/berlin/lod-vocabulary) definiert Berlin-spezifische Einrichtungen und Positionen und stellt die URIs dafür bereit, zum Beispiel für die Rolle SenatorIn (https://berlin.github.io/lod-vocabulary/berorgs/SenatorIn).
+Unser Webeintrag in Form eines [GitHub-Repositories](https://github.com/berlin/lod-vocabulary) definiert Berlin-spezifische Einrichtungen und Positionen und stellt die URIs dafür bereit, zum Beispiel für die Rolle "SenatorIn" (https://berlin.github.io/lod-vocabulary/berorgs/SenatorIn).
 
 
 #### 4. Wissen unbegrenzt verlinken
 
-Das Organigramm-Tool ermöglicht es also Daten im RDF-Format und Verwendung von Standards zu erstellen und herunterzuladen. Um zu echten Linked Open Data zu kommen, gilt es noch einen Schritt weitergehen, nämlich die Daten im Internet verfügbar machen, so dass sie abgefragt und mit externen Daten verlinkt werden können. 
+Das Organigramm-Tool ermöglicht es also Daten im RDF-Format und Verwendung von Standards zu erstellen und herunterzuladen. Um zu echten Linked Open Data zu kommen, gilt es noch einen Schritt weiterzugehen, nämlich die Daten im Internet verfügbar zu machen, so dass sie abgefragt und mit externen Daten verlinkt werden können. 
 Dafür ist eine besondere Art von Datenbank erforderlich, ein sogenannter Triple Store. Der Triple Store ermöglicht effiziente Verwaltung und Abfrage von Linked Data, indem er die Triples und somit die Beziehungen zwischen verschiedenen Datenpunkten speichert. 
-Um die Informationen eines Triple Stores abzufragen, gibt es die Abfragesprache: SPARQL ermöglicht es, komplexe Abfragen über die gespeicherten Informationen im Triple Store auszuführen.
+Um die Informationen eines Triple Stores abzufragen, gibt es die Abfragesprache SPARQL.
+Das Ergebnis einer Abfrage kann in Form einer Tabelle ausgegeben werden, die eine Reihe von Triples widerspiegelt, die Informationen zu dieser bestimmten Person abbildet.
 
-### TBD/Review ab hier
-
-Ein SPARQL-Code zur Abfrage von Informationen über eine Person, z.B. den Bürgermeister Kai Wegener könnte wie folgt aussehen:
+Eine Abfrage, die uns eine Liste von allen Senator:innen von Berlin zurückgeben soll, könnte beispielweise so aussehen:
 
 ```sparql
-  PREFIX foaf:<http://xmlns.com/foaf/0.1/>
-  SELECT ?person ?name ?birthdate ?email
-  WHERE {
-    ?person foaf:name "Kai Wegener" .
-    ?person foaf:birthdate ?birthdate .
-    OPTIONAL { ?person foaf:email ?email }
-  }
+SELECT ?givenName ?familyName ?position
+WHERE {
+    ?person org:holds ?position ;
+            vcard:given-name ?givenName ;
+            vcard:family-name ?familyName
+            owl:sameAs ?wikidataID .
+    ?position org:role berorgs:SenatorIn ;
+    
+    SERVICE <https://query.wikidata.org/sparql> {
+      ?wikidataID wdt:P18 ?image .
+    }
+}
 ```
 
-** Screenshot, Link zum SPARQL-Endpunkt **
+Die Abfrage sucht nach Entitäten (*?person*) und ruft die gespeicherten Informationen zu Vornamen, Nachnamen, Position und die Wikidata-URI ab. Dann filtert sie die Personen nach der in unserer Ontologie definierte Position "SenatorIn".
+Im zweiten Teil der Abfrage zeigt sich das eigentliche Potential von Linked Data. Hier wird eine Verlinkung zur Wikidata-Datenbank hergestellt und ein Bild (*?image*) der jeweiligen Senator:innen abgerufen.
 
-In diesem Beispiel wird die FOAF-Ontologie (Friend of a Friend) verwendet. Die Abfrage sucht nach einer Ressource (?person), die den Namen "Kai Wegener" hat, und ruft dann Informationen wie Geburtsdatum und optional die E-Mail-Adresse ab.
+Sprachmodelle könnten ChatGPT eine zusätzliche Rolle bei der Zugänglichkeit der Daten spielen. Sie sind in der Lage, Code zu schreiben und zu interpretieren, was bedeutet, dass sie natürliche Sprache in SPARQL-Abfragen umwandeln und die Ergebnisse verarbeiten können. Dies erweitert die Zugänglichkeit und Nutzbarkeit von Linked Open Data erheblich, da Benutzer nicht mehr direkt mit komplexen Abfragesprachen interagieren müssen. Ein praktisches Beispiel hierfür ist das schon erwähnte [ZüriLinkedGPT](https://ld.gpt.liip.ch/), dass den [Linked Data Triple Store der Stadt Zürich](https://ld.stadt-zuerich.ch/sparql/) in natürlicher Sprache abfragbar macht.
+Weiterhin können sie auch helfen, die neu generierten Daten zu verarbeiten, zum Beispiel für die schnelle Erstellung von Anwendungen oder Analysen, wie der folgende Screencast zeigt.
 
-Das Ergebnis dieser Abfrage könnte in Form einer Tabelle ausgegeben werden, die eine Reihe von Triples widerspiegelt, die Informationen zu dieser bestimmten Person abbildet.
+<VideoEmbed
+  fullWidth={false}
+  url="https://www.youtube.com/embed/v4sS_yGK_6U?start=4227"
+  caption="Beispiel einer SPARQL-Abfrage und exemplarisches Weiterarbeiten mit dem durch die Verlinkung erstellten, neuen Datensatz."
+/>
 
-Sprachmodelle wie ChatGPT können hier eine zusätzliche Rolle spielen. Sie sind in der Lage, Code zu schreiben und zu interpretieren, was bedeutet, dass sie natürliche Sprache in SPARQL-Abfragen umwandeln und die Ergebnisse verarbeiten können. Dies erweitert die Zugänglichkeit und Nutzbarkeit von Linked Open Data erheblich, da Benutzer nicht mehr direkt mit komplexen Abfragesprachen interagieren müssen. Ein praktisches Beispiel hierfür ist das schon erwähnte [ZüriLinkedGPT](https://ld.gpt.liip.ch/), dass den [Linked Open Data Triple Store von Zürich](https://ld.stadt-zuerich.ch/sparql/) in natürlicher Sprache abfragbar macht.
+## Zusammenfassung und Ausblick
 
-## TBD: Zusammenfassung und Ausblick
+### Wie geht's weiter
 
-In dieser Fallstudie haben wir aufgezeigt, welchen Wissensvorsprung Linked Data durch offene, maschinenlesbare und strukturierte Daten bietet. Am Beispiel des Organigramm-Tools haben wir die technische Umsetzbarkeit und den Mehrwert gezeigt, den Linked Open Data besonders für Daten der öffentlichen Verwaltung bereithält. Damit perspektivisch eine kritische Masse an Datensätzen verknüpft werden und darüber neue Einsichten gewonnen und innovative Lösungen für komplexe Probleme entwickelt werden können, bedarf es einem Pool an Linked Open Data. Um diesen aufzubauen, hilft das Organigramm-Tool der ODIS die Organigramme aktuell zu halten und im RDF-Format bereitzustellen. Darüber hinaus können natürlich auch weitere Behörden über Berlin hinaus das Organigramm-Tool nutzen und das Angebot an strukturierten Informationen über Verwaltungseinheiten erweitern.
+Mit dieser Fallstudie wollten wir an einem Praxisbeispiel die Potentiale und Herrausforderungen bei der Umsetzung von Linked Open Data in Berlin erkunden. 
+Das Organigramm-Tool hat dabei geholfen Umsetzungskompetenzen aufzubauen, soll aber auch als Pilotprojekt fungieren. 
+Bisher wurden für die Fallstudie mit dem prototypischen Tool Organigramme für vier verschiedene Senatsverwaltungen erstellt und im Triple Store für Test- und Demonstrationszwecke zur Verfügung gestellt.
+Ziel ist es, für und gemeinsam mit allen Senatsverwaltungen Linked Open Data Organigramm bereitzustellen. Dafür wird im nächsten Schritt die Umsetzung in den Verwaltungen angestoßen. Weiterhin soll die Ontologie dabei iterativ verbessert und ausgebaut werden.
+Darüber hinaus können natürlich auch weitere Behörden in und außerhalb Berlins das Tool nutzen.
+Letztendlich handelt es sich um ein lernendes Projekt, dass helfen soll die Thema Datenmanagement, -infrastruktur und -verfügbarkeit voranzubringen!
 
-Trotz ihrer abstrakten Natur sind erste verlinkte offene Daten über Berlin bereits heute verfügbar. Ein konkretes Beispiel liefern die lebensweltlich orientierten Räume (LOR) Berlins, welche das Land Berlin in kleine geografische Untereinheiten gliedern, als Grundlage für Planung, Prognose und Beobachtung demografischer und sozialer Entwicklungen in Berlin. Dieser Datensatz ist sowohl in herkömmlichen Geodaten als auch als Linked Data verfügbar. Über GitHub können sich Nutzer:innen jegliche Unterteilungen anzeigen lassen, von einer [Übersicht aller Bezirke](https://berlinonline.github.io/lod-berlin-lor/berlin) zur kleinsten Untereinheit, wie beispielsweise die “Zwinglistraße” im Bezirk Mitte ([Planungsraum 01022105](https://berlinonline.github.io/lod-berlin-lor-2019/plr_01022105)). Ein weiterer Datensatz in Form von Linked Data verfügt über [Bevölkerungszahlen](https://berlinonline.github.io/lod-berlin-einwohner/obs_202012_01022105) für alle Ebenen der geografischen Einheiten. Durch die Veröffentlichung als Linked Data kann so eine Verbindung zwischen geografischen Einheiten, Bevölkerungszahlen und beliebig vielen weiteren verlinkten Datensätzen hergestellt werden.
+### Fokussetzung
 
-Konkrete Pläne für weitere Datensätze gibt es ebenfalls bereits: Im Rahmen des [Vierten Nationalen Aktionsplanes](https://www.open-government-deutschland.de/resource/blob/1567548/2203222/ceb9c802f7fb0f078c56d012c0f9d204/vorentwurf-nap-4-kommentierung-data.pdf?download=1) hat sich die Berliner Senatsverwaltung für Finanzen verpflichtet, den bereits seit vielen Jahren als offene Daten veröffentlichen [Doppelhaushalt](https://daten.berlin.de/datensaetze/doppelhaushalt-20222023), ebenfalls als Linked Data im RDF-Format zu veröffentlichen. Mit tausenden von Ausgabe- und Einnahmetiteln, also Informationen zur Höhe und Zweck von Einnahmen und Ausgaben, enthält der Haushalt wichtige Informationen mit örtlichem und politischem Bezug. Da Einwohnerzahlen mit ihrem geografischen Bezug bereits vorliegen, könnten Ausgaben der einzelnen Bezirke sofort mit Einwohnerzahlen verbunden werden und machen so Pro-Kopf Analysen von Einnahmen und Ausgaben auf Bezirksebene einfacher und schneller.
+Ursprünglich sollte das Organigramm-Tool auch dazu verwendet werden, die PDF-Organigramme ebenfalls zu ersetzen und zu standardisierten (das Tool ermöglicht einen PDF-Export).
+Es hat sich aber in Tests und Feedbackschleifen mit zuständigen Personen der Senatsverwaltungen gezeigt, dass die Anforderungen in grafische Darstellung der Organigramme sich kaum mit den Anforderungen an eine maschinenlesbare, strukturierte Datei vereinbaren lässt. 
+Die Übertragung der vielen Sonderfälle und darstellerischen Feinheiten, die derzeit mit Tools wie Microsoft PowerPoint umgesetzt werden, lässt sich zum jetzigen Zeitpunkt nicht vollständig technisch umsetzen. 
+Das Organigramm-Tool verfolgt daher in erster Linie den Zweck maschinenlesbare Datensätze zu erstellen und regelmäßig zu aktualisieren.
 
-Durch die standardisierte Bereitstellung von Daten im RDF-Format könnte ebenfalls eine Verbindung zwischen maschinenlesbaren Organigrammen, den LOR und den Haushaltsdaten hergestellt werden. Ohne mühsames manuelles Zusammentragen von Daten können so Erkenntnisse über die Berliner Verwaltung, ihre Organisation und ihre Finanzen gewonnen werden. Eine Anwendung, die auf Linked Data basiert, könnte so beispielsweise die Etats mit jeweiligen Senatsverwaltungen vergleichen. Hier bietet es sich an, auf unserer Ontologie aufzubauen und diese gemeinsam weiterzuentwickeln, damit eine einheitliche Sprache gesprochen wird.
+### Weitere Linked Data Projekte
+Damit perspektivisch eine kritische Masse an Datensätzen verknüpft werden und darüber neue Einsichten gewonnen und innovative Lösungen für komplexe Probleme entwickelt werden können, bedarf es außerdem eines größer werdenden Pool an Linked Open Data. 
+Bisher sind erst wenige verlinkte offene Daten über Berlin verfügbar. Einer davon sind die lebensweltlich orientierten Räume (LOR) Berlins, geografische Untereinheiten, die als Grundlage für Planung, Prognose und Beobachtung demografischer und sozialer Entwicklungen dienen. Über GitHub können sich Nutzer:innen jegliche Unterteilungen anzeigen lassen, von einer [Übersicht aller Bezirke](https://berlinonline.github.io/lod-berlin-lor/berlin) zur kleinsten Untereinheit, wie beispielsweise die “Zwinglistraße” im Bezirk Mitte ([Planungsraum 01022105](https://berlinonline.github.io/lod-berlin-lor-2019/plr_01022105)). 
+Weiterhin als Linked Data verfügt sind die [Bevölkerungszahlen](https://berlinonline.github.io/lod-berlin-einwohner/obs_202012_01022105).
 
-Wir sind mindestens so gespannt wie Chatbot Bobbi auf die weiteren Entwicklungen im Land in Richtung Fünf-Sterne Open Data. 
+Weiterhin hat sich im Rahmen des [Vierten Nationalen Aktionsplanes](https://www.open-government-deutschland.de/resource/blob/1567548/2203222/ceb9c802f7fb0f078c56d012c0f9d204/vorentwurf-nap-4-kommentierung-data.pdf?download=1) die Berliner Senatsverwaltung für Finanzen verpflichtet, den bereits seit vielen Jahren als offene Daten veröffentlichen [Doppelhaushalt](https://daten.berlin.de/datensaetze/doppelhaushalt-20222023), als Linked Data im RDF-Format zu veröffentlichen. 
+Mit tausenden von Ausgabe- und Einnahmetiteln, also Informationen zur Höhe und Zweck von Einnahmen und Ausgaben, enthält der Haushalt wichtige Informationen mit örtlichem und politischem Bezug.
 
+Durch die standardisierte Bereitstellung von Daten im RDF-Format könnte ebenfalls eine Verbindung zwischen maschinenlesbaren Organigrammen, den LOR und den Haushaltsdaten hergestellt werden. Ohne mühsames manuelles Zusammentragen von Daten können so Erkenntnisse über die Berliner Verwaltung, ihre Organisation und ihre Finanzen gewonnen werden.
+Die Umsetzung ist für 24 geplant, und soll auf unserer Ontologie aufbauen, damit eine einheitliche "Sprache" gesprochen wird und Daten letztendlich verlinkt werden können.
 
-## Sparring-Partner gesucht!
+### Sparring-Partner gesucht!
 
-Bei Fragen oder Feedback zum Tool oder Vorgehen, freuen wir uns über einen Austausch, genauso wie über Ideen für mögliche Linked Open Data Anwendungen. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden dazu ein gemeinsame neue Ansätze und Pfade zu erkunden und Wissensschätze zu sammeln, um das Thema Datenmanagement und Dateninfrastruktur in Berlin zielgerichtet voranzubringen!
+Bei Fragen oder Feedback zur Fallstudie oder zum Organigramm-Tool, freuen wir uns über einen Austausch, genauso wie über Ideen für mögliche Linked Open Data Projekte. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden dazu ein gemeinsame neue Ansätze und Pfade zu erkunden und Wissensschätze zu sammeln.
+
+Wir sind mindestens so gespannt wie Chatbot Bobbi auf die weiteren Entwicklungen im Land in Richtung Linked Data und Open Data. 
 
 import image6 from "./images/bobby_ciao_2.png";
 
@@ -288,6 +319,8 @@ import image6 from "./images/bobby_ciao_2.png";
 
 ## Weiterführende Infos und Quellen
 
+- [Das Organigramm-Tool](https://odis-berlin.de/projekte/2023-07-organigramm-tool)
+- [Prototypischer SPARQL-Endpunkt (laden kann einige Sekunden dauern)](https://organigram-triple-store.onrender.com)
 - [Berliner _Open Data Strategie_ 2023 (Seite 10 ff.)](https://www.berlin.de/moderne-verwaltung/e-government/open-data/strategieprozess/artikel.1257333.php#:~:text=Linked%20Open%20Data%3A%20Ein%20wichtiges,im%20Web%20verkn%C3%BCpft%20werden%20k%C3%B6nnen)
 - ["What is Linked Data" YouTube-Video von Manu Sporny](https://www.youtube.com/watch?v=4x_xzT5eF5Q)
 - ["Linking Data. What does it mean?" Beitrag auf data.europa.eu](https://data.europa.eu/en/publications/datastories/linking-data-what-does-it-mean)
