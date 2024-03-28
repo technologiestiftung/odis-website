@@ -90,7 +90,7 @@ import image4 from "./images/verlinkte_tabellen.png";
   caption="Informationen, die eigentlich miteinander in Verbindung stehen sollten, liegen in unterschiedlichen Tabellen."
 />
 
-Um umfassend Auskunft geben zu können, müsste der Bot Zugang zu weiteren Datensätzen haben, in diesem Fall zum maschinenlesbare Organigramm der Senatsverwaltung für Wirtschaft.
+Um umfassend Auskunft geben zu können, müsste der Bot Zugang zu weiteren Datensätzen haben, in diesem Fall zum maschinenlesbaren Organigramm der Senatsverwaltung für Wirtschaft.
 Bei einem Chatbot, der auf eine Vielzahl unterschiedlicher, schwer vorauszusehender Fragen reagieren soll, stößt man hier schnell an Limitierungen.
 
 ### Die Vision: Das Wissensnetzwerk
@@ -117,7 +117,7 @@ import image2 from "./images/knowledge_graph.png";
 
 An diesem Punkt mag man sich fragen, weshalb all diese Anstrengungen unternommen werden, wenn fortschrittliche Sprachmodelle wie ChatGPT bereits über umfangreiches Wissen verfügen. 
 Aber auch ChatGPT wurde mit Informationen trainiert, die heute schon wieder veraltet sind. 
-Wie ein [Projekt aus Zürich](https://ld.gpt.liip.ch/?q=Wie+hat+sich+die+ständige+Wohnbevölkerung+der+Stadt+Zürich+entwickelt+die+letzten+100+Jahre+gruppiere+nach+Zeit%3F+) zeigt, ist ChatGPT aber durchaus in der Lage, aktuelle Information aus Linked Open Data auszulesen und in Kontext zu setzen. Darüber hinaus eröffnet ein gut strukturierter Wissensgraph eine Fülle neuer Fragestellungen und Erkenntnisse. Diese sind nicht nur für spezialisierte digitale Chat-Assistenten wie Bobbi relevant, um stets aktuell zu bleiben, sondern bilden eine wichtige Grundlage für verschiedenste digitale Anwendungen und Prozesse. Sie sind essentiell für die Digitalisierung der Verwaltung, die Beantwortung wissenschaftlicher Fragen oder das Training von Machine-Learning-Modellen.
+Wie ein [Projekt aus Zürich](https://ld.gpt.liip.ch/?q=Wie+hat+sich+die+ständige+Wohnbevölkerung+der+Stadt+Zürich+entwickelt+die+letzten+100+Jahre+gruppiere+nach+Zeit%3F+) zeigt, ist ChatGPT aber durchaus in der Lage, aktuelle Information aus Linked Open Data auszulesen und in Kontext zu setzen. Darüber hinaus eröffnet ein gut strukturierter Wissensgraph eine Fülle neuer Fragestellungen und Erkenntnisse. Diese sind nicht nur für spezialisierte digitale Chat-Assistenten wie Bobbi relevant, um stets aktuell zu bleiben, sondern bilden eine wichtige Grundlage für verschiedenste digitale Anwendungen und Prozesse. Sie sind essenziell für die Digitalisierung der Verwaltung, die Beantwortung wissenschaftlicher Fragen oder das Training von Machine-Learning-Modellen.
 
 Inmitten der KI-Revolution wird also deutlich, dass wir für innovative Entwicklungen nicht nur maschinenlesbare Daten bereitstellen müssen. Es ist ebenso entscheidend, dass Informationen aktuell, miteinander verknüpft und von Computern semantisch korrekt interpretiert werden können.
 
@@ -146,7 +146,7 @@ Aufgrund ihrer Fülle an Informationen über Aufbau und Struktur der Berliner Ve
 2. **Basisdaten als LOD bereitstellen:** Durch die Bereitstellung von maschinenlesbaren Organigrammen als LOD trägt ODIS zur Erweiterung des bisher begrenzten LOD-Angebots in Deutschland bei.  Linked Open Data wird sein Potential erst entfalten, wenn eine kritische Masse an Wissen entsteht.
 3. **Förderung und Entwicklung von LOD-Standards:** Mit der neuen Open Data Strategie des Landes wird Linked Open Data als Entwicklungsziel ausgerufen. Wir wollen weitere Akteure im Land ermutigen, Linked Open Data voranzutreiben und ihnen die Möglichkeit geben, sich an ersten Standards zu orientieren bzw. gemeinsam mit uns Standards weiterzuentwickeln und zu lernen.
 
-Im nächsten Abschnitt erklären wir die wichtigstne Prinzipien von Linked Data und wie wir diese am Beispiel der Organigramme umgesetzt haben.
+Im nächsten Abschnitt erklären wir die wichtigsten Prinzipien von Linked Data und wie wir diese am Beispiel der Organigramme umgesetzt haben.
 
 ### Prinzipien von Linked Data am Beispiel der Organigramme
 
@@ -179,7 +179,7 @@ Durch das Organigramm-Tool werden alle vier Prinzipen adressiert. Wie das genau 
 
 Eine grundlegende Voraussetzung für Linked Open Data: Die eindeutige Identifizierung einer Ressource! Anhand von URIs ("Uniform Resource Identifier") lassen sich abstrakte Ressourcen und Daten im World Wide Web eindeutig identifizieren, wiederfinden und somit auch wiederverwenden.
 
-Ebenso funktionieren URIs im Internet: Sie stellen abstrakte oder konkrete Dinge dar und bilden die Basis für Linked Data. Für die Zugänglichkeit dieser Identifikatoren verwendet Linked Data öffentliche, über HTTP abrufbare URIs. Diese gelten allerdings nicht für ganze Webressourcen wie Webseiten, Artikel, oder PDF-Dateien, sondern beschreiben individuelle Objekte innerhalb von Datensätzen. Im Falle eines Organigramms reicht es zum Bespiel nicht aus, einem gesamten Organigramm einen Link zuzuweisen, wie die fiktive URL: organigramm-senatskanzlei-berlin.de. Vielmehr werden den verschiedenen Einzelelementen des Organigrammes beim Erstellen bereits URI's zugewiesen. 
+Ebenso funktionieren URIs im Internet: Sie stellen abstrakte oder konkrete Dinge dar und bilden die Basis für Linked Data. Für die Zugänglichkeit dieser Identifikatoren verwendet Linked Data öffentliche, über HTTP abrufbare URIs. Diese gelten allerdings nicht für ganze Webressourcen wie Webseiten, Artikel, oder PDF-Dateien, sondern beschreiben individuelle Objekte innerhalb von Datensätzen. Im Falle eines Organigramms reicht es zum Bespiel nicht aus, einem gesamten Organigramm einen Link zuzuweisen, wie die fiktive URL: organigramm-senatskanzlei-berlin.de. Vielmehr werden den verschiedenen Einzelelementen des Organigramms beim Erstellen bereits URI's zugewiesen. 
 So erhält jede:r Senator:in, Abteilung, Referatsleiter:in, oder eine Organisation eine einzigartige URI. 
 
 import image9 from "./images/URI_Screenshot.png";
@@ -192,31 +192,31 @@ Wenn ein Organigramm im Tool angelegt wird, wird für jedes Objekt bzw. Person e
 
 #### 2. Triples im RDF-Format exportieren
 
-Ein weiterer zentraler Aspekt für Linked Data ist die Organisation von Informationen bzw. Aussagen in einer speziellen Struktur, die sich durch eine Dreiteilung auszeichnet. Diese sogenannten Triples bestehen aus einem Subjekt, einem Prädikat und einem Objekt. Das Subjekt repräsentiert die Ressource oder Entität, auf die sich die Aussage bezieht. Dies kann zum Beipsiel eine Person sein.
+Ein weiterer zentraler Aspekt für Linked Data ist die Organisation von Informationen bzw. Aussagen in einer speziellen Struktur, die sich durch eine Dreiteilung auszeichnet. Diese sogenannten Triples bestehen aus einem Subjekt, einem Prädikat und einem Objekt. Das Subjekt repräsentiert die Ressource oder Entität, auf die sich die Aussage bezieht. Dies kann zum Beispiel eine Person sein.
 Das Objekt repräsentiert einen Wert oder eine weitere Ressource, die mit dem Subjekt in Beziehung steht. Das könnte ein Objekt zum Beispiel ein Zahlenwert, wie die Höhe des jährlichen Etats sein, aber auch eine weitere Entität, wie zum Beispiel eine Person sein. 
 Das Objekt wird dann ebenfalls durch eine URI identifiziert. Als Verbindung von Subjekt und Objekt gibt das Prädikat an, welche Art von Beziehung zwischen Subjekt und dem Objekt besteht und welche Informationen sich aus der Verbindung ergeben. 
 Das Prädikat ist ebenfalls durch eine URI dargestellt; diese werden in einer sogenannten Ontologie, bzw. einem Vokabular festgehalten.
 
 Eine Information die als Triple und codiert in URI's vorliegt könnte zum Beispiel so aussehen:
 
-```RDF
+```plaintext
 https://berlin.github.io/lod-organigram/organigram-20c5cdb22c
 ```
 (**Subjekt:** URI für die Organisationseinheit SenWEB)
 
-```RDF
+```plaintext
 https://berlin.github.io/lod-vocabulary/berorgs#SenatorIn
 ```
 (**Prädikat:** URI für die Rolle "Senator:in")
 
-```RDF
+```plaintext
 https://berlin.github.io/lod-organigram/person-ebfc6412ec
 ```
 (**Objekt:** URI für die Person Franziska Giffey)
 
 **Aussage:** Franziska Giffey ist Senatorin für Wirtschaft, Energie und Betriebe.
 
-Da alle in den Datensätzen genannten Enitäten, eine einzigartige URI erhalten und diese URIs so gut wie möglich in allen Datensätzen wiederverwendet werden, lassen sich nicht nur Verknüpfungen innerhalb des einzelnen Datensatzes, sondern darüber hinaus Verbindungen zu anderen Datensätzen herstellen, in denen die gleiche URI verwendet wird. 
+Da alle in den Datensätzen genannten Entitäten, eine einzigartige URI erhalten und diese URIs so gut wie möglich in allen Datensätzen wiederverwendet werden, lassen sich nicht nur Verknüpfungen innerhalb des einzelnen Datensatzes, sondern darüber hinaus Verbindungen zu anderen Datensätzen herstellen, in denen die gleiche URI verwendet wird. 
 So könnte zum Beispiel die Person Franziska Giffey aus dem Organigramm der Senatskanzlei (in ihrer Rolle als stellvertretende Bürgermeisterin) mit ihrer Rolleninformationen aus dem Organigramm der SenWEB verlinkt werden, wenn in diesem die gleiche URI (person-f60db6579cc) für sie verwendet wurde.
 
 Ein Datensatz besteht aus sehr vielen Triples. Diese werden in einem speziellem Dateiformat, einer RDF-Datei abgespeichert. Ein im Organigramm-Tool erstelltes Organigramm kann einfach als RDF heruntergeladen werden.
@@ -271,7 +271,7 @@ Weiterhin können sie auch helfen, die neu generierten Daten zu verarbeiten, zum
 
 <VideoEmbed
   fullWidth={false}
-  url="https://www.youtube.com/embed/v4sS_yGK_6U?start=4227"
+  url="https://youtu.be/OFMZOL-Yctg"
   caption="Beispiel einer SPARQL-Abfrage und exemplarisches Weiterarbeiten mit dem durch die Verlinkung erstellten, neuen Datensatz."
 />
 
@@ -279,11 +279,11 @@ Weiterhin können sie auch helfen, die neu generierten Daten zu verarbeiten, zum
 
 ### Wie geht's weiter
 
-Mit dieser Fallstudie wollten wir an einem Praxisbeispiel die Potentiale und Herrausforderungen bei der Umsetzung von Linked Open Data in Berlin erkunden. 
+Mit dieser Fallstudie wollten wir an einem Praxisbeispiel die Potentiale und Herausforderungen bei der Umsetzung von Linked Open Data in Berlin erkunden. 
 Das Organigramm-Tool hat dabei geholfen Umsetzungskompetenzen aufzubauen, soll aber auch als Pilotprojekt fungieren. 
 Bisher wurden für die Fallstudie mit dem prototypischen Tool Organigramme für vier verschiedene Senatsverwaltungen erstellt und im Triple Store für Test- und Demonstrationszwecke zur Verfügung gestellt.
 Ziel ist es, für und gemeinsam mit allen Senatsverwaltungen Linked Open Data Organigramm bereitzustellen. Dafür wird im nächsten Schritt die Umsetzung in den Verwaltungen angestoßen. Weiterhin soll die Ontologie dabei iterativ verbessert und ausgebaut werden.
-Darüber hinaus können natürlich auch weitere Behörden in und außerhalb Berlins das Tool nutzen.
+Darüber hinaus können natürlich weitere Behörden in und außerhalb Berlins das Tool nutzen.
 Letztendlich handelt es sich um ein lernendes Projekt, dass helfen soll die Thema Datenmanagement, -infrastruktur und -verfügbarkeit voranzubringen!
 
 ### Fokussetzung
@@ -294,9 +294,9 @@ Die Übertragung der vielen Sonderfälle und darstellerischen Feinheiten, die de
 Das Organigramm-Tool verfolgt daher in erster Linie den Zweck maschinenlesbare Datensätze zu erstellen und regelmäßig zu aktualisieren.
 
 ### Weitere Linked Data Projekte
-Damit perspektivisch eine kritische Masse an Datensätzen verknüpft werden und darüber neue Einsichten gewonnen und innovative Lösungen für komplexe Probleme entwickelt werden können, bedarf es außerdem eines größer werdenden Pool an Linked Open Data. 
+Damit perspektivisch eine kritische Masse an Datensätzen verknüpft werden und darüber neue Einsichten gewonnen und innovative Lösungen für komplexe Probleme entwickelt werden können, bedarf es außerdem eines größer werdenden Pools an Linked Open Data. 
 Bisher sind erst wenige verlinkte offene Daten über Berlin verfügbar. Einer davon sind die lebensweltlich orientierten Räume (LOR) Berlins, geografische Untereinheiten, die als Grundlage für Planung, Prognose und Beobachtung demografischer und sozialer Entwicklungen dienen. Über GitHub können sich Nutzer:innen jegliche Unterteilungen anzeigen lassen, von einer [Übersicht aller Bezirke](https://berlinonline.github.io/lod-berlin-lor/berlin) zur kleinsten Untereinheit, wie beispielsweise die “Zwinglistraße” im Bezirk Mitte ([Planungsraum 01022105](https://berlinonline.github.io/lod-berlin-lor-2019/plr_01022105)). 
-Weiterhin als Linked Data verfügt sind die [Bevölkerungszahlen](https://berlinonline.github.io/lod-berlin-einwohner/obs_202012_01022105).
+Weiterhin als Linked Data verfügbar sind die [Bevölkerungszahlen](https://berlinonline.github.io/lod-berlin-einwohner/obs_202012_01022105).
 
 Weiterhin hat sich im Rahmen des [Vierten Nationalen Aktionsplanes](https://www.open-government-deutschland.de/resource/blob/1567548/2203222/ceb9c802f7fb0f078c56d012c0f9d204/vorentwurf-nap-4-kommentierung-data.pdf?download=1) die Berliner Senatsverwaltung für Finanzen verpflichtet, den bereits seit vielen Jahren als offene Daten veröffentlichen [Doppelhaushalt](https://daten.berlin.de/datensaetze/doppelhaushalt-20222023), als Linked Data im RDF-Format zu veröffentlichen. 
 Mit tausenden von Ausgabe- und Einnahmetiteln, also Informationen zur Höhe und Zweck von Einnahmen und Ausgaben, enthält der Haushalt wichtige Informationen mit örtlichem und politischem Bezug.
@@ -306,7 +306,7 @@ Die Umsetzung ist für 24 geplant, und soll auf unserer Ontologie aufbauen, dami
 
 ### Sparring-Partner gesucht!
 
-Bei Fragen oder Feedback zur Fallstudie oder zum Organigramm-Tool, freuen wir uns über einen Austausch, genauso wie über Ideen für mögliche Linked Open Data Projekte. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden dazu ein gemeinsame neue Ansätze und Pfade zu erkunden und Wissensschätze zu sammeln.
+Bei Fragen oder Feedback zur Fallstudie oder zum Organigramm-Tool, freuen wir uns über einen Austausch, genauso wie über Ideen für mögliche Linked Open Data Projekte. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden dazu ein gemeinsam neue Ansätze und Pfade zu erkunden und Wissensschätze zu sammeln.
 
 Wir sind mindestens so gespannt wie Chatbot Bobbi auf die weiteren Entwicklungen im Land in Richtung Linked Data und Open Data. 
 
