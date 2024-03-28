@@ -266,14 +266,20 @@ WHERE {
 Die Abfrage sucht nach Entitäten (*?person*) und ruft die gespeicherten Informationen zu Vornamen, Nachnamen, Position und die Wikidata-URI ab. Dann filtert sie die Personen nach der in unserer Ontologie definierte Position "SenatorIn".
 Im zweiten Teil der Abfrage zeigt sich das eigentliche Potential von Linked Data. Hier wird eine Verlinkung zur Wikidata-Datenbank hergestellt und ein Bild (*?image*) der jeweiligen Senator:innen abgerufen.
 
+import image11 from "./images/LOD_Beispiel_kurz.gif";
+
+<ContentSection class="sm:px-6">
+<ImageSection class="sm:container sm:mx-auto" src={image11} caption="Beispiel einer SPARQL-Abfrage die die Organigramm-Daten mit Informationen von Wikidata verknüpft." />
+</ContentSection>
+
 Sprachmodelle könnten ChatGPT eine zusätzliche Rolle bei der Zugänglichkeit der Daten spielen. Sie sind in der Lage, Code zu schreiben und zu interpretieren, was bedeutet, dass sie natürliche Sprache in SPARQL-Abfragen umwandeln und die Ergebnisse verarbeiten können. Dies erweitert die Zugänglichkeit und Nutzbarkeit von Linked Open Data erheblich, da Benutzer nicht mehr direkt mit komplexen Abfragesprachen interagieren müssen. Ein praktisches Beispiel hierfür ist das schon erwähnte [ZüriLinkedGPT](https://ld.gpt.liip.ch/), dass den [Linked Data Triple Store der Stadt Zürich](https://ld.stadt-zuerich.ch/sparql/) in natürlicher Sprache abfragbar macht.
 Weiterhin können sie auch helfen, die neu generierten Daten zu verarbeiten, zum Beispiel für die schnelle Erstellung von Anwendungen oder Analysen, wie der folgende Screencast zeigt.
 
-<VideoEmbed
-  fullWidth={false}
-  url="https://youtu.be/OFMZOL-Yctg"
-  caption="Beispiel einer SPARQL-Abfrage und exemplarisches Weiterarbeiten mit dem durch die Verlinkung erstellten, neuen Datensatz."
-/>
+import image12 from "./images/LOD_Beispiel2.gif";
+
+
+<ImageSection src={image12} caption="Beispiel von der Nutzung eines Sprachmodells um mit den neuen, durch die Verlinkung erstellten Datensatzes weiterzuarbeiten. Es wird eine Karte mit den Geburtsorten der Senatoren erstellt." />
+
 
 ## Zusammenfassung und Ausblick
 
