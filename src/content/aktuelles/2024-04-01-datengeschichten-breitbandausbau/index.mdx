@@ -8,19 +8,17 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 headerImage:
-  src: ./images/odi_platzhalter.png
+  src: ./images/platzhalter_visual.png
   alt: People sitting on a sofa looking at a presentation
 readingTime: 5
 date: 2024-04-01
 ---
 
-## Titel Dataviz
+## Planen, Begehen, Anschließen
 
-text text text 
+Das Landesprogramm BWAS (Breitband- und WLAN-Ausbau der Berliner Schulen) zielt darauf ab, dass bis 2026 alle öffentlichen Schulen in Berlin einen schnellen Glasfaseranschluss erhalten. Der offene Datensatz ["Breitband-Ausbau der Berliner Schulen"](https://daten.berlin.de/datensaetze/breitband-ausbau-der-berliner-schulen) gibt Auskunft über den Fortschritt des Vorhabens. 
 
-
-datawrapper iframe 
-
+Anhand von Kategorien wie "Anschluss nutzbar", "Aktive Technik in Planung" oder "Begehung durchgeführt" kann man für insgesamt 655 Schulstandorte den Fortschritt des Ausbaus einsehen. Wir haben uns den Fortschritt auf Bezirksebene angeschaut.   
 
 <ContentSection fullWidth={true}>
   <iframe class="sm:container sm:mx-auto"
@@ -31,19 +29,29 @@ datawrapper iframe
     scrolling="no" 
     frameborder="0" 
     width="100%"
-    height="500px"
     data-external="1">
   </iframe>
 </ContentSection>
 
+## zum Datensatz
 
+Der Datensatz ["Breitband-Ausbau der Berliner Schulen"](https://daten.berlin.de/datensaetze/breitband-ausbau-der-berliner-schulen) wird von der [Senatsverwaltung für Bildung, Jugend und Familie (SenBJF)](https://www.berlin.de/sen/bildung/schule/digitale-schule/digitale-infrastruktur/breitband-und-netze/) im Berliner Open Data Portal als Open Data zur Verfügung gestellt. Mit der Unterstützung der ODIS wurde der Datensatz als ein sogenannter [Kerndatensatz](/projekte/2023-02-kerndatensätze) geöffnet.  
 
-import image from "./images/odi_platzhalter.png"
+import image from "./images/logo_senbjf.svg"
 
 <ImageSection
   src={image}
-  caption="Während des Ausklangs konnte auch die Dauerausstellung des CityLAB besichtigt werden."
 />
+
+Der Datensatz wird monatlich aktualisiert. Um die hier präsentierte Datenvisualisierung zu erhalten, müssen die Daten jedoch vorher so aufgearbeitet werden, dass die Datenstruktur von [Datawrapper](https://www.datawrapper.de/) entsaprechend im ["small multiples - doughnut charts" Format](https://academy.datawrapper.de/article/183-how-to-create-a-multiple-donuts-chart) visualisiert werden kann.  
+
+import image1 from "./images/odi_platzhalter.png"
+
+<ImageSection
+  src={image1}
+  caption="Odi, das freundliche ODIS-Maskottchen"
+/>
+
 
 <script
   type="text/javascript"
