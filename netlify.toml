@@ -15,7 +15,7 @@
     immutable
 
 [[headers]]
-  for = "/content/*"
+  for = "/*"
   [headers.values]
     cache-control = "no-cache, no-store, max-age=0, must-revalidate"
     '''
