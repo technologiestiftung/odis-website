@@ -84,10 +84,10 @@ const {
       const id = swiperEl.id;
       const slidesCount = parseInt(swiperEl.dataset.slidescout || "3", 10);
       const prevButton = document.querySelector(
-        `#${id} .items-swiper-button-prev`,
+        `.items-swiper-wrapper  .items-swiper-button-prev`,
       ) as HTMLButtonElement;
       const nextButton = document.querySelector(
-        `#${id} .items-swiper-button-next`,
+        `.items-swiper-wrapper  .items-swiper-button-next`,
       ) as HTMLButtonElement;
       const swiper = new Swiper(`#${id} .items-swiper`, {
         slidesPerView: 1,
