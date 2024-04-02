@@ -13,6 +13,11 @@
     cache-control = '''
     max-age=31536000,
     immutable
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    cache-control = "no-cache, no-store, max-age=0, must-revalidate"
     '''
 
 [[plugins]]
@@ -49,4 +54,4 @@
     path = "ressourcen"
   
   [[plugins.inputs.audits]]
-    path = "ressourcen/01_open_data_in_verwaltung"
+    path = "ressourcen/open_data_in_verwaltung"

@@ -75,6 +75,7 @@ export default defineConfig({
   redirects: {
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
     "/projekte/xml-validator/tool": "/xml-validator-tool",
+    "/projekte/datenportal/": "/projekte/2024-01-daten-neuheiten/",
     "/projekte/organigramme/guide": "/aktuelles/2022-02-18-organigramm-guide",
     "/ressourcen/einstiegopendata": "/ressourcen/open_data_in_verwaltung",
     "/ressourcen/dateninventurprozess": "/ressourcen/dateninventur_prozess",

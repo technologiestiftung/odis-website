@@ -75,63 +75,65 @@ const {
 <script>
   import Swiper from "swiper";
   import "swiper/swiper-bundle.css";
+  document.addEventListener("DOMContentLoaded", () => {
+    const swipers = document.querySelectorAll(
+      ".items-swiper-wrapper",
+    ) as NodeListOf<HTMLDivElement>;
 
-  const swipers = document.querySelectorAll(
-    ".items-swiper-wrapper",
-  ) as NodeListOf<HTMLDivElement>;
-  swipers.forEach((swiperEl) => {
-    const id = swiperEl.id;
-    const slidesCount = parseInt(swiperEl.dataset.slidescout || "3", 10);
-    const prevButton = document.querySelector(
-      `#${id} .items-swiper-button-prev`,
-    ) as HTMLButtonElement;
-    const nextButton = document.querySelector(
-      `#${id} .items-swiper-button-next`,
-    ) as HTMLButtonElement;
-    const swiper = new Swiper(`#${id} .items-swiper`, {
-      slidesPerView: 1,
-      spaceBetween: 32,
-      breakpoints: {
-        640: {
-          slidesPerView: slidesCount > 2 ? 2 : 1,
+    swipers.forEach((swiperEl) => {
+      const id = swiperEl.id;
+      const slidesCount = parseInt(swiperEl.dataset.slidescout || "3", 10);
+      const prevButton = document.querySelector(
+        `#${id} .items-swiper-button-prev`,
+      ) as HTMLButtonElement;
+      const nextButton = document.querySelector(
+        `#${id} .items-swiper-button-next`,
+      ) as HTMLButtonElement;
+      const swiper = new Swiper(`#${id} .items-swiper`, {
+        slidesPerView: 1,
+        spaceBetween: 32,
+        breakpoints: {
+          640: {
+            slidesPerView: slidesCount > 2 ? 2 : 1,
+          },
+          1024: {
+            slidesPerView: slidesCount,
+          },
         },
-        1024: {
-          slidesPerView: slidesCount,
+        navigation: {
+          nextEl: `#${id} .items-swiper-button-next`,
+          prevEl: `#${id} .items-swiper-button-prev`,
         },
-      },
-      navigation: {
-        nextEl: `#${id} .items-swiper-button-next`,
-        prevEl: `#${id} .items-swiper-button-prev`,
-      },
-      a11y: {
-        nextSlideMessage: "Nächste Slide",
-        prevSlideMessage: "Vorherige Slide",
-      },
-    });
-
-    prevButton.addEventListener("click", () => swiper.slidePrev());
-    nextButton.addEventListener("click", () => swiper.slideNext());
-    [prevButton, nextButton].forEach((btn) => {
-      btn.addEventListener("mousedown", (evt) => {
-        evt.preventDefault();
-        evt.stopPropagation();
+        a11y: {
+          nextSlideMessage: "Nächste Slide",
+          prevSlideMessage: "Vorherige Slide",
+        },
       });
+
+      prevButton.addEventListener("click", () => swiper.slidePrev());
+      nextButton.addEventListener("click", () => swiper.slideNext());
+      [prevButton, nextButton].forEach((btn) => {
+        btn.addEventListener("mousedown", (evt) => {
+          evt.preventDefault();
+          evt.stopPropagation();
+        });
+      });
+
+      function updateButtons() {
+        prevButton.classList.remove("items-swiper-button-disabled");
+        nextButton.classList.remove("items-swiper-button-disabled");
+
+        if (swiper.isBeginning) {
+          prevButton.classList.add("items-swiper-button-disabled");
+        }
+        if (swiper.isEnd) {
+          nextButton.classList.add("items-swiper-button-disabled");
+        }
+      }
+
+      swiper.on("slideChange", updateButtons);
+      updateButtons();
     });
-
-    function updateButtons() {
-      prevButton.classList.remove("items-swiper-button-disabled");
-      nextButton.classList.remove("items-swiper-button-disabled");
-
-      if (swiper.isBeginning) {
-        prevButton.classList.add("items-swiper-button-disabled");
-      }
-      if (swiper.isEnd) {
-        nextButton.classList.add("items-swiper-button-disabled");
-      }
-    }
-
-    swiper.on("slideChange", updateButtons);
-    updateButtons();
   });
 </script>
 
