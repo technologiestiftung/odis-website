@@ -17,8 +17,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    cache-control = "no-cache, no-store, max-age=0, must-revalidate"
-    '''
+    cache-control = "no-cache, no-store, must-revalidate"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
