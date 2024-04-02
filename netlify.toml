@@ -13,11 +13,6 @@
     cache-control = '''
     max-age=31536000,
     immutable
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    cache-control = "no-cache, no-store, max-age=0, must-revalidate"
     '''
 
 [[plugins]]

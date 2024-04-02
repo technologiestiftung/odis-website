@@ -43,7 +43,7 @@ window.addEventListener("load", () => {
     },
     onNeedRefresh() {
       pwaToastMessage.innerHTML =
-        'Neuer Inhalt verfügbar, zum Aktualisieren auf die Schaltfläche "Neu laden" klicken.';
+        'Neuer Inhalt verfügbar, zum Aktualisieren auf die Schaltfläche "Neu laden" klicken';
       showPwaToast(false);
     },
     onRegisteredSW(swScriptUrl: string) {
