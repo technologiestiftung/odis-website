@@ -648,27 +648,11 @@ An icon placed in src/assets/images/icons/ui/lock.svg can automatically be refer
 Where the Astro components of the website live.
 **Example:** `/src/components/Header.astro`
 
-| Name                 | Purpose                                           |
-| -------------------- | ------------------------------------------------- |
-| src/components/logos | Where some of the logos live as Astro components. |
-
-DEPRECATED.
-You should rather place your logos in the src/assets/images/icons/logo folder, making sure they are SVGs with currentColor fills and strokes and use the Icon component of the Astro-icon package to display it.
-Example: <Icon name="logos/odis" />
-See the section “Using Icons” below for more information. |
-| src/components/macros | Where Astro components that are made to be used within markdown(X) files live.
-Example: /src/component/macros/ImageSection.astro |
-| src/components/pageSpecific | Where page-specific components live.
-(When they only make sense in one particular page. This makes it easier to know when they can be removed.)
-––
-Example: .../pageSpecific/homepage/JourneySlider.astro |
-| src/components/pwa.ts | A special file that prompts the user to refresh the contents of the PWA when new content is available.
-
-DO NOT REMOVE, unless you wish to remove the Progressive Web App functionality |
-| src/components/ReloadPrompt.astro | The container for the PWA prompt see src/components/pwa.ts above
-
-DO NOT REMOVE, unless you wish to remove the Progressive Web App functionality |
-| | |
+| Name                        | Purpose                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| src/components/logos        | Where some of the logos live as Astro components. DEPRECATED. You should rather place your logos in the src/assets/images/icons/logo folder, making sure they are SVGs with currentColor fills and strokes and use the Icon component of the Astro-icon package to display it. Example: <Icon name="logos/odis" /> See the section “Using Icons” below for more information. |
+| src/components/macros       | Where Astro components that are made to be used within markdown(X) files live. Example: /src/component/macros/ImageSection.astro                                                                                                                                                                                                                                             |
+| src/components/pageSpecific | Where page-specific components live. (When they only make sense in one particular page. This makes it easier to know when they can be removed.) Example: .../pageSpecific/homepage/JourneySlider.astro                                                                                                                                                                       |
 
 ### Contents folder `/src/content`
 
