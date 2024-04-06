@@ -2,23 +2,64 @@
 tags:
   - "home"
   - "post"
-title: "Aktuelle Datenperle – Breitbandausbau an Berliner Schulen"
-description: Unser Maskottchen Odi präsentiert regelmäßig neue Datenschätze aus dem Berliner Open Data Portal, die sich ideal für eine Datenvisualisierung eignen. Diesmal tauchen wir gemeinsam mit Odi in den aktuellen Stand des Glasfaserausbaus an Berliner Schulen ein.
+title: "Aktuelle Datenperle – Kerndatensatz zu Breitbandausbau an Schulen"
+description: Open Data Informant Odi stellt anhand von Datenvisualisierungen regelmäßig neue Datenschätze aus dem Berliner Open Data Portal vor. In dieser ersten Ausgabe entdecken wir den neu geöffneten Kerndatensatz zum Glasfaserausbau an Berliner Schulen.
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 headerImage:
   src: ./images/kachelbild.png
-  alt: People sitting on a sofa looking at a presentation
+  alt: ODI jongliert mit Kreisdiagrammen
 readingTime: 5
 date: 2024-04-01
 ---
 
-## Planen, Begehen, Anschließen
+## Der digitale Sprung in Berlins Schulen
+Berlin ist um ein Stück Informationsfreiheit reicher: Der Stand zum "Breitband-Ausbau der Berliner Schulen" wird seit März 2024 im Rahmen der Maßnahme ["Kerndatensätze"](https://odis-berlin.de/projekte/2023-02-kerndatensätze/) der Berliner Open Data Strategie von der Senatsverwaltung für Bildung, Jugend und Familie und mit Hilfe der ODIS als Open Data bereitgestellt.
 
-Das Landesprogramm BWAS (Breitband- und WLAN-Ausbau der Berliner Schulen) zielt darauf ab, bis 2026 alle öffentliche Schulen in Berlin an ein schnelles Glasfasernetz anzuschließen. Der im März 2024 erstmals veröffentlichte offene Datensatz ["Breitband-Ausbau der Berliner Schulen"](https://daten.berlin.de/datensaetze/breitband-ausbau-der-berliner-schulen) gibt Auskunft über den Fortschritt des Vorhabens. 
+Die Veröffentlichung der Daten ist ein wichtiger Schritt, weil diese Transparenz über den aktuellen Stand und die Fortschritte des digitalen Infrastrukturausbaus an Schulen schaffen. Daten dieser Art ermöglichen eine evidenzbasierte Politikgestaltung und helfen, Investitionen und Bemühungen zu priorisieren, um eine moderne und gerechte Bildungslandschaft zu fördern.
 
-Anhand von Kategorien wie "Anschluss nutzbar", "Aktive Technik in Planung" oder "Begehung durchgeführt" kann man für insgesamt 655 Schulstandorte den Fortschritt des Ausbaus einsehen. Wir haben uns den Fortschritt auf Bezirksebene genauer angeschaut und visualisiert.
+import image3 from "./images/odi_platzhalter.png"
+
+<ImageSection
+  src={image3}
+  caption="Odi Platzhalter"
+/>
+
+## Über den Datensatz
+
+Das Landesprogramm ["Breitband- und WLAN-Ausbau der Berliner Schulen"](https://www.berlin.de/sen/bildung/schule/digitale-schule/digitale-infrastruktur/breitband-und-netze/) (BWAS) zielt darauf ab, bis 2026 alle öffentliche Schulen in Berlin an ein schnelles Glasfasernetz anzuschließen.
+Der [neue Datensatz](https://daten.berlin.de/datensaetze/breitband-ausbau-der-berliner-schulen) gibt Auskunft über den aktuellen Fortschritt des Vorhabens und wird dafür monatlich aktualisiert.
+Anhand von Kategorien wie "Anschluss nutzbar", "Aktive Technik in Planung" oder "Begehung durchgeführt" kann für insgesamt 655 Schulstandorte der Fortschritt des Ausbaus eingesehen werden. 
+
+import image from "./images/datensatz_screenshot.png"
+
+<ContentSection class="sm:px-6">
+<ImageSection class="sm:container sm:mx-auto"
+src={image}
+caption="Ein Ausschnitt aus dem Datensatz."
+/>
+</ContentSection>
+
+Der Datensatz kann als Grundlage für verschiedenste Anwendungsfälle und Fragestellungen dienen. Dazu zählen zum Beispiel:
+- **Öffentliche Diskussion und Engagement:** Inwiefern spiegeln sich die Bemühungen und Investitionen der Stadt in der digitale Bildung wider?
+- **Transparenz und Rechenschaftspflicht:** Werden die geplanten Meilensteine termingerecht erreicht, und welche Schulen sind im Rückstand bezüglich der geplanten digitalen Infrastrukturverbesserungen?
+- **Bildungsforschung und Stadtplanung:** Welche Bezirke in Berlin haben die geringste Breitbandabdeckung in Schulen, und gibt es Faktoren die diese Situation beeinflussen?
+
+import logo from "./images/B_RBm_Skzl_Logo_DE_V_PT_RGB.svg";
+
+<Quote
+  authorName="Karen König"
+  authorRole="Open Data Beauftragte der Senatsverwaltung für Bildung, Jugend und Familie"
+  authorLogo={logo}
+>
+  Platzhalter: Mit dem Landesprogramm BWAS werden alle allgemeinbildenden öffentlichen Berliner Schulen bis 2026 schnelles und zukunftsfähiges Internet bekommen.
+</Quote>
+
+## Über die Visualisierung
+Wir haben uns den aktuellen Stand mittels Datenvisualisierung angeschaut. Der Nutzen und die Art einer Visualisierung hängt stark davon ab, was für den Betrachtenden von Interesse ist. 
+In unserer exemplarischen Aufbereitung haben wir uns darauf konzentriert, eine Überblick über den Fortschritt im Bezirksvergleich zu ermöglichen. Hier ist unter anderem zu erkennen, dass es starke Unterschiede im Ausbaustand zwischen den Bezirken gibt.
+
 
 <ContentSection fullWidth={true}>
   <iframe class="sm:container sm:mx-auto"
@@ -33,30 +74,19 @@ Anhand von Kategorien wie "Anschluss nutzbar", "Aktive Technik in Planung" oder 
   </iframe>
 </ContentSection>
 
-## Über den Datensatz
 
-Der Datensatz ["Breitband-Ausbau der Berliner Schulen"](https://daten.berlin.de/datensaetze/breitband-ausbau-der-berliner-schulen) wird von der [Senatsverwaltung für Bildung, Jugend und Familie (SenBJF)](https://www.berlin.de/sen/bildung/schule/digitale-schule/digitale-infrastruktur/breitband-und-netze/) als Open Data zur Verfügung gestellt. Mit Unterstützung der ODIS und der behördlichen Beauftragten für Open Data wurde der Datensatz als ein sogenannter [Kerndatensatz](/projekte/2023-02-kerndatensätze) geöffnet. Der Datensatz wird monatlich aktualisiert.
 
-import image from "./images/datensatz_screenshot.png"
+Die hier präsentierte Datenvisualisierung haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) erstellt. 
+Wir die Daten zuvor entsprechend aufbereitet, damit sie im Format "small multiples - doughnut charts" visualisiert werden können. Die Visualisierung kann durch Klick auf den Button “Einbetten” unter dem Diagramm auch per iFrame in andere Seiten integriert werden. 
+Wie sich mit Datawrapper Charts und Tabellen unkompliziert aus eigenen Daten erstellen lassen, erklären wir auch in diesen [Videotutorials](https://odis-berlin.de/ressourcen/datenvisualisierung_videos).
 
-<ContentSection class="sm:px-6">
-<ImageSection class="sm:container sm:mx-auto"
-src={image}
-caption="Ein Ausschnitt aus dem Datensatz im .xlsx Format."
-/>
-</ContentSection>
-
-## Über die Visualisierung
-
-Die hier präsentierte Datenvisualisierung haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) erstellt. Um das gewünschte Diagrammformat zu erzielen, haben wir die Daten zuvor entsprechend aufbereitet, damit sie im Format "small multiples - doughnut charts" von Datawrapper visualisiert werden können. Diese Visualisierung kann problemlos durch Einbetten per iFrame in andere Webseiten integriert werden. Durch Klick auf den Button “Einbetten” unter dem Diagramm, kann der iFrame-Code kopiert werden. 
-
-Wie sich mit Datawrapper spannende Charts und Tabellen unkompliziert aus eigenen Daten erstellen lassen, erklären wir leicht verständlich in unseren [Videotutorials] (https://odis-berlin.de/ressourcen/datenvisualisierung_videos).
+Wir sind gespannt welche Schlüsse aus den Daten gezogen werden können. Allemal ist die Freigabe dieses Kerndatensatzes ein signifikanter Schritt hin zu einer inklusiven und informierten Gesellschaft, in der die Weichen für eine digitale Zukunft im Bildungswesen auf der Basis von Transparenz, Gleichheit und Innovation gestellt werden.
 
 import image1 from "./images/odi_ciao.png"
 
 <ImageSection
   src={image1}
-  caption="Odi, das freundliche ODIS-Maskottchen freut sich schon auf das nächste Mal mit euch!"
+  caption="Odi, unser Datenperlen-Maskottchen freut sich schon auf die nächste Datenveröffentlichung!"
 />
 
 <script
