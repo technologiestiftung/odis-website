@@ -241,12 +241,12 @@ Unser Webeintrag in Form eines [GitHub-Repositories](https://github.com/berlin/l
 
 #### 4. Wissen unbegrenzt verlinken
 
-Das Organigramm-Tool ermöglicht es also Daten im RDF-Format und Verwendung von Standards zu erstellen und herunterzuladen. Um zu echten Linked Open Data zu kommen, gilt es noch einen Schritt weiterzugehen, nämlich die Daten im Internet verfügbar zu machen, so dass sie abgefragt und mit externen Daten verlinkt werden können. 
+Das Organigramm-Tool ermöglicht es also Daten im RDF-Format unter Verwendung von Standards zu erstellen und herunterzuladen. Um zu echten Linked Open Data zu kommen, gilt es noch einen Schritt weiterzugehen, nämlich die Daten im Internet verfügbar zu machen, sodass sie abgefragt und mit externen Daten verlinkt werden können. 
 Dafür ist eine besondere Art von Datenbank erforderlich, ein sogenannter Triple Store. Der Triple Store ermöglicht effiziente Verwaltung und Abfrage von Linked Data, indem er die Triples und somit die Beziehungen zwischen verschiedenen Datenpunkten speichert. 
 Um die Informationen eines Triple Stores abzufragen, gibt es die Abfragesprache SPARQL.
 Das Ergebnis einer Abfrage kann in Form einer Tabelle ausgegeben werden, die eine Reihe von Triples widerspiegelt, die Informationen zu dieser bestimmten Person abbildet.
 
-Eine Abfrage, die uns eine Liste von allen Senator:innen von Berlin zurückgeben soll, könnte beispielweise so aussehen:
+Eine Abfrage, die uns eine Liste von allen Senator:innen von Berlin zurückgeben soll, könnte beispielsweise so aussehen:
 
 ```sparql
 SELECT ?givenName ?familyName ?position
@@ -263,7 +263,7 @@ WHERE {
 }
 ```
 
-Die Abfrage sucht nach Entitäten (*?person*) und ruft die gespeicherten Informationen zu Vornamen, Nachnamen, Position und die Wikidata-URI ab. Dann filtert sie die Personen nach der in unserer Ontologie definierte Position "SenatorIn".
+Die Abfrage sucht nach Entitäten (*?person*) und ruft die gespeicherten Informationen zu Vornamen, Nachnamen, Position und die Wikidata-URI ab. Dann filtert sie die Personen nach der in unserer Ontologie definierten Position "SenatorIn".
 Im zweiten Teil der Abfrage zeigt sich das eigentliche Potential von Linked Data. Hier wird eine Verlinkung zur Wikidata-Datenbank hergestellt und ein Bild (*?image*) der jeweiligen Senator:innen abgerufen.
 
 import image11 from "./images/LOD_Beispiel_kurz.gif";
@@ -272,7 +272,7 @@ import image11 from "./images/LOD_Beispiel_kurz.gif";
 <ImageSection class="sm:container sm:mx-auto" src={image11} caption="Beispiel einer SPARQL-Abfrage die die Organigramm-Daten mit Informationen von Wikidata verknüpft." />
 </ContentSection>
 
-Sprachmodelle könnten ChatGPT eine zusätzliche Rolle bei der Zugänglichkeit der Daten spielen. Sie sind in der Lage, Code zu schreiben und zu interpretieren, was bedeutet, dass sie natürliche Sprache in SPARQL-Abfragen umwandeln und die Ergebnisse verarbeiten können. Dies erweitert die Zugänglichkeit und Nutzbarkeit von Linked Open Data erheblich, da Benutzer nicht mehr direkt mit komplexen Abfragesprachen interagieren müssen. Ein praktisches Beispiel hierfür ist das schon erwähnte [ZüriLinkedGPT](https://ld.gpt.liip.ch/), dass den [Linked Data Triple Store der Stadt Zürich](https://ld.stadt-zuerich.ch/sparql/) in natürlicher Sprache abfragbar macht.
+Sprachmodelle wie ChatGPT (das Modell ist eig. GPT-4) könnten eine zusätzliche Rolle bei der Zugänglichkeit der Daten spielen. Sie sind in der Lage, Code zu schreiben und zu interpretieren, was bedeutet, dass sie natürliche Sprache in SPARQL-Abfragen umwandeln und die Ergebnisse verarbeiten können. Dies erweitert die Zugänglichkeit und Nutzbarkeit von Linked Open Data erheblich, da Benutzer nicht mehr direkt mit komplexen Abfragesprachen interagieren müssen. Ein praktisches Beispiel hierfür ist das schon erwähnte [ZüriLinkedGPT](https://ld.gpt.liip.ch/), dass den [Linked Data Triple Store der Stadt Zürich](https://ld.stadt-zuerich.ch/sparql/) in natürlicher Sprache abfragbar macht.
 Weiterhin können sie auch helfen, die neu generierten Daten zu verarbeiten, zum Beispiel für die schnelle Erstellung von Anwendungen oder Analysen, wie der folgende Screencast zeigt.
 
 import image12 from "./images/LOD_Beispiel2.gif";
@@ -288,16 +288,16 @@ import image12 from "./images/LOD_Beispiel2.gif";
 Mit dieser Fallstudie wollten wir an einem Praxisbeispiel die Potentiale und Herausforderungen bei der Umsetzung von Linked Open Data in Berlin erkunden. 
 Das Organigramm-Tool hat dabei geholfen Umsetzungskompetenzen aufzubauen, soll aber auch als Pilotprojekt fungieren. 
 Bisher wurden für die Fallstudie mit dem prototypischen Tool Organigramme für vier verschiedene Senatsverwaltungen erstellt und im Triple Store für Test- und Demonstrationszwecke zur Verfügung gestellt.
-Ziel ist es, für und gemeinsam mit allen Senatsverwaltungen Linked Open Data Organigramm bereitzustellen. Dafür wird im nächsten Schritt die Umsetzung in den Verwaltungen angestoßen. Weiterhin soll die Ontologie dabei iterativ verbessert und ausgebaut werden.
+Ziel ist es, für und gemeinsam mit allen Senatsverwaltungen Linked Open Data Organigramme bereitzustellen. Dafür wird im nächsten Schritt die Umsetzung in den Verwaltungen angestoßen. Weiterhin soll die Ontologie dabei iterativ verbessert und ausgebaut werden.
 Darüber hinaus können natürlich weitere Behörden in und außerhalb Berlins das Tool nutzen.
-Letztendlich handelt es sich um ein lernendes Projekt, dass helfen soll die Thema Datenmanagement, -infrastruktur und -verfügbarkeit voranzubringen!
+Letztendlich handelt es sich um ein lernendes Projekt, das helfen soll, die Themen Datenmanagement, -infrastruktur und -verfügbarkeit voranzubringen!
 
 ### Fokussetzung
 
-Ursprünglich sollte das Organigramm-Tool auch dazu verwendet werden, die PDF-Organigramme ebenfalls zu ersetzen und zu standardisierten (das Tool ermöglicht einen PDF-Export).
-Es hat sich aber in Tests und Feedbackschleifen mit zuständigen Personen der Senatsverwaltungen gezeigt, dass die Anforderungen in grafische Darstellung der Organigramme sich kaum mit den Anforderungen an eine maschinenlesbare, strukturierte Datei vereinbaren lässt. 
+Ursprünglich sollte das Organigramm-Tool auch dazu verwendet werden, die PDF-Organigramme ebenfalls zu ersetzen und zu standardisieren (das Tool ermöglicht einen PDF-Export).
+Es hat sich aber in Tests und Feedbackschleifen mit zuständigen Personen der Senatsverwaltungen gezeigt, dass die Anforderungen an die grafische Darstellung der Organigramme sich kaum mit den Anforderungen an eine maschinenlesbare, strukturierte Datei vereinbaren lässt. 
 Die Übertragung der vielen Sonderfälle und darstellerischen Feinheiten, die derzeit mit Tools wie Microsoft PowerPoint umgesetzt werden, lässt sich zum jetzigen Zeitpunkt nicht vollständig technisch umsetzen. 
-Das Organigramm-Tool verfolgt daher in erster Linie den Zweck maschinenlesbare Datensätze zu erstellen und regelmäßig zu aktualisieren.
+Das Organigramm-Tool verfolgt daher in erster Linie den Zweck, maschinenlesbare Datensätze zu erstellen und regelmäßig zu aktualisieren.
 
 ### Weitere Linked Data Projekte
 Damit perspektivisch eine kritische Masse an Datensätzen verknüpft werden und darüber neue Einsichten gewonnen und innovative Lösungen für komplexe Probleme entwickelt werden können, bedarf es außerdem eines größer werdenden Pools an Linked Open Data. 
@@ -308,13 +308,13 @@ Weiterhin hat sich im Rahmen des [Vierten Nationalen Aktionsplanes](https://www.
 Mit tausenden von Ausgabe- und Einnahmetiteln, also Informationen zur Höhe und Zweck von Einnahmen und Ausgaben, enthält der Haushalt wichtige Informationen mit örtlichem und politischem Bezug.
 
 Durch die standardisierte Bereitstellung von Daten im RDF-Format könnte ebenfalls eine Verbindung zwischen maschinenlesbaren Organigrammen, den LOR und den Haushaltsdaten hergestellt werden. Ohne mühsames manuelles Zusammentragen von Daten können so Erkenntnisse über die Berliner Verwaltung, ihre Organisation und ihre Finanzen gewonnen werden.
-Die Umsetzung ist für 2024 geplant, und soll auf unserer Ontologie aufbauen, damit eine einheitliche "Sprache" gesprochen wird und Daten letztendlich verlinkt werden können.
+Die Umsetzung ist für 2024 geplant und soll auf unserer Ontologie aufbauen, damit eine einheitliche "Sprache" gesprochen wird und Daten letztendlich verlinkt werden können.
 
 ### Sparring-Partner gesucht!
 
-Bei Fragen oder Feedback zur Fallstudie oder zum Organigramm-Tool, freuen wir uns über einen Austausch, genauso wie über Ideen für mögliche Linked Open Data Projekte. Wir wollen den Weg zu den 5* Sternen im Austausch mit der Community und Verwaltung gehen und laden dazu ein gemeinsam neue Ansätze und Pfade zu erkunden und Wissensschätze zu sammeln.
+Bei Fragen oder Feedback zur Fallstudie oder zum Organigramm-Tool, freuen wir uns über einen Austausch, genauso wie über Ideen für mögliche Linked Open Data Projekte. Wir wollen den Weg zu den 5*Sternen im Austausch mit der Community und Verwaltung gehen und laden dazu ein, gemeinsam neue Ansätze und Pfade zu erkunden und Wissensschätze zu sammeln.
 
-Wir sind mindestens so gespannt wie Chatbot Bobbi auf die weiteren Entwicklungen im Land in Richtung Linked Data und Open Data. 
+Wir sind mindestens so gespannt wie Chatbot Bobbi auf die weiteren Entwicklungen im Land in Hinblick auf Linked Data und Open Data. 
 
 import image6 from "./images/bobby_ciao_2.png";
 
