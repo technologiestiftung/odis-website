@@ -31,7 +31,6 @@
     "@types/d3": "4.13.0",
     "@types/react": "18.2.51",
     "@vercel/og": "0.6.2",
-    "@vite-pwa/astro": "0.2.0",
     "all-contributors-cli": "6.26.1",
     "astro-icon": "1.0.2",
     "prettier-plugin-astro": "0.12.3",

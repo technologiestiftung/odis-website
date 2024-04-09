@@ -47,6 +47,7 @@ const news = (
     </div>
   </div>
 </div>
-<ItemsSlider>
+<ItemsSlider
+uniqueId="aktuelles-swiper">
   {news.map((newsEntry) => <NewsCard {...newsEntry} class="swiper-slide" />)}
 </ItemsSlider>
