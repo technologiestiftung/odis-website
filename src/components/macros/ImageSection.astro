@@ -8,6 +8,7 @@ export type Props = {
   withShadow?: boolean;
   fullWidth?: boolean;
   class?: undefined | string;
+  imageClass?: undefined | string;
 };
 
 const {
@@ -17,6 +18,7 @@ const {
   withShadow = false,
   fullWidth = false,
   class: className,
+  imageClass, 
 } = Astro.props;
 ---
 
@@ -36,6 +38,7 @@ const {
           class={cn(
             "my-0 w-full max-w-[1720px] mx-auto",
             withShadow && "shadow-xl",
+            imageClass
           )}
           widths={[600, 1080, 1536, Math.min(2160, src.width)]}
           sizes={`
