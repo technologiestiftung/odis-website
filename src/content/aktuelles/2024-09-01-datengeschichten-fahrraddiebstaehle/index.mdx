@@ -3,22 +3,23 @@ tags:
   - "home"
   - "post"
 title: "Aktuelle Datenperle – Fahrraddiebstähle"
-description: Für die neuesten Ausgabe der Datenperle hat Odi – unser Informant für Open Data - bei der Veröffentlichung eines Datenschatzes aus der Forschung zur Stadtentwicklung unterstützt. Es geht um Dark Stores von Lebensmittellieferdiensten.
+description: Für die neuste Ausgabe der Datenperle hat Odi – unser Informant für Open Data - den Kerndaten-  satz aus dem Berliner Open-Data-Portal zum Thema Fahrraddiebstähle in Berlin unter die Lupe genommen.
+
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 headerImage:
-  src: ./images/odi_kachelbild.png
+  src: ./images/Mann auf Fahrrad_c_GettyImages_Foto_PeopleImages_DL_PPT_0.png
   alt: ODI vor einer Karte
 readingTime: 5-6
-date: 2024-06-01
+date: 2024-09-01
 ---
 
-## Einleitung
+## Wo ist mein Fahrrad sicher?
 
-In den letzten Jahren sind Elektrofahrräder mit sperrigen Taschen und zugeklebte Schaufenster von Ladengeschäften immer häufiger im städtischen Raum anzutreffen. Diese sind sichtbare Teile von On-Demand Lieferplattformen für Lebensmittel. Die Warenlager (sogenannte Dark Stores) dieser Firmen, sind für die Öffentlichkeit unzugänglich und dienen ausschließlich der Erfüllung von Online-Bestellungen. Sie befinden sich meist in der Innenstadt, in ehemaligen Ladengeschäften, und tragen mit neuen Strukturen zu einer Transformation der Städte bei.  
+Durch die polizeiliche Verlaufsstatistik (Data-Warehouse Führungsinformation) werden täglich aktualisierte Daten zu Fahrraddiebstählen inkl. Diebstahlversuche auf Ebene der Planungsräume in Berlin bereitgestellt. Neben Informationen zum Meldedatum und Tatzeitraum gibt der Datensatz Auf-  schluss über den Tatort, die Schadenshöhe, die Art des Fahrrads sowie die Einordnung der Straftat. Die Veröffent-  lichung der Daten hilft einerseits dem Landeskriminalamt Entscheidungen über Sicherheitsmaßnahmen zu treffen und andererseits wird Berliner Fahrradfahrer:innen die Möglichkeit gegeben Sicherheitslücken selbst zu identifizieren. 
 
-import image2 from "./images/odi_themenbild.png"
+import image2 from "./images/127025410_1423607659_v4_3_800.jpeg"
 
 <TextContentSection class="sm:px-6" largeContainer={true}>
   <ImageSection 
@@ -28,67 +29,58 @@ import image2 from "./images/odi_themenbild.png"
   />
 </TextContentSection>
 
-**Fragestellung und Leitfragen**
+**Regionale Unterschiede aufdecken**
 
-Um zu verstehen, wie Dark Stores den städtischen Raum verändern und wie die Unternehmen dahinter agieren, hat Antonia Gergs in ihrer Masterarbeit folgende Fragestellung untersucht: Wie verändern Micro-Fulfillment-Center, betrieben von On-Demand Lieferplattformen für Lebensmittel, den urbanen Raum? Dafür hat sie Handlungsbedarfe im stadtplanerischen Kontext und vorhandene stadtplanerische Instrumente betrachtet. 
+Zur örtlichen Einordnung des Fahrraddiebsthlaufkommens wird eine 8-stellige Kennung des Planungsraums angegeben, die die unterste Beobachtungs- und Planungsebene der lebens-  weltlich orientierten Räumen (LOR) darstellt. Es bietet sich an dies mit Hilfe einer Choroplethenkarten zu veranschaulichen. Durch einen Farbgradienten werden die räumliche Verteilung und Unterschiede zwischen den geografischen Einheiten, hier die Planungsräume, schnell deutlich. Zu beachten ist, dass sich die Choroplethenkarten besonders gut für normierte oder relative Daten, wie Prozentsätze oder Dichten eignet.   
+Die Darstellung absoluter Werte bezogen auf variierende Flächengrößen oder Einwohnerzahlen kann zu einer falschen Interpretation und Verzerrung der Daten führen.
 
-**Erkenntnisse**
+In der vorliegenden Choroplethenkarte kann dies vernach-  lässigt werden, da die 542 Planungsräume (Stand 2021) im Durchschnitt je etwa 7.500 Einwohner umfassen. Die Anzahl der Fahrraddiebstähle je Planungsraum ist somit ein guter Indikator für die regionalen Unterschiede.
 
-Es wurden 57 Warenlager in Berlin ausfindig gemacht. Die Standortdaten der Dark Stores und Überlagerungen mit soziodemografischen Daten zeigen, dass im Gegensatz zum herkömmlichen Einzelhandel, neue Standortfaktoren für das Geschäftsmodell der Plattformunternehmen eine Rolle spielen. Die Plattformen zielen nicht darauf ab, eine Nahversorgungslücke zu schließen, sondern auf die Erfüllung neuer Kund:innenansprüche.
+<ContentSection class="sm:px-20">
+  <iframe title="Fahrraddiebstähle in Berlin -  In welchem Kiez ist besondere Vorsicht geboten?" aria-label="Karte" id="datawrapper-chart-9AJo0" src="https://datawrapper.dwcdn.net/9AJo0/9/" scrolling="no" frameborder="0" style="border: none;" width="778" height="781" data-external="1"></iframe>
+</ContentSection>
 
-<ContentSection fullWidth={true}>
-  <iframe class="sm:container sm:mx-auto"
-    title="Dark Stores" 
-    aria-label="Karte" id="datawrapper-chart-9F00I" 
-    src="https://datawrapper.dwcdn.net/9F00I/1/" 
-    scrolling="no" 
-    frameborder="0" 
-    width="100%"
-    data-external="1">
-  </iframe>
+**Weitere Erkenntnisse**
+
+Die Fahrraddiebstähle in Bezug zu den temporalen sowie kategorialen Informationen wie der Tatzeitpunkt und die Fahrradarten lassen sich anschaulich in Säulen- oder Balken- diagrammen darstellen. Die Differenzen zwischen den Säulen- bzw. Balken können intuitiv besonders gut ins Verhältnis gesetzt werden. So wird zum einen deutlich, dass im Jahr 2023 sehr viele Herrenfahrräder gestohlen wurden und verhältnis-  mäßig wenig Kinderfahrräder. Auch bei Betrachtung der Fahrraddiebstähle im Tagesverlauf ist ein Muster zu erkennen. Es gibt zwei Peaks - einmal am Vormittag gegen 8 Uhr und am Abend gegen 18 Uhr.
+
+<ContentSection fullWidth={false}>
+  <iframe title="Anzahl Fahrraddiebstähle nach Fahrradart" aria-label="Balken" id="datawrapper-chart-gdiia" src="https://datawrapper.dwcdn.net/gdiia/3/" scrolling="no" frameborder="0" style="border: none;" width="600" height="336" data-external="1"></iframe>
+</ContentSection>
+
+<ContentSection fullWidth={false}>
+  <iframe title="Anzahl Fahrraddiebstähle nach Uhrzeit" aria-label="Säulen" id="datawrapper-chart-NPtvd" src="https://datawrapper.dwcdn.net/NPtvd/4/" scrolling="no" frameborder="0" style="border: none;" width="600" height="476" data-external="1"></iframe>
 </ContentSection>
 
 ## Über den Datensatz
 
-Aufgrund fehlender öffentlich zugänglicher und verifizierter Standortdaten wurden die Standorte der Dark Stores durch eine aufwendige Recherche ermittelt, per Fahrrad überprüft und kartiert. Die Untersuchung konzentrierte sich auf die On-Demand Lieferplattformen für Lebensmittel der Firmen FLINK, GETIR und GORILLAS in Berlin. Antonia hat die Daten nun als Open Data veröffentlicht, um sie Interessierten auch für andere Forschungszwecke zu Verfügung zu stellen.
+Beim Einlesen der vorliegenden CSV-Datei ist zunächst zu beachten, dass nicht wie meist üblich die Zeichencodierung UTF-8 vorliegt. Um sicherzustellen, dass alle Zeichen (z.B. auch Umlaute) richtig dargestellt werden, muss eine passende Kodierung gewählt werden.
+Für eine gute Maschinenlesbarkeit ist darüber hinaus grundsätzlich eine Untersuchung der vorliegenden Datentypen ratsam. Die Kennung der Planungs-  räume in der Spalte LOR ist eine 8-stellige Nummer, die zum Teil mit einer Null beginnt. Hier kann es passieren, dass die Nummer als Ganzzahl interpretiert wird und die führende Null somit nicht berücksichtigt wird. Um dies zu verhindern, kann der Datentyp in ein String, also in Textform, umgewandelt werden und schließlich eine Zuordnung der Planungsräume anhand der 8-stelligen Kennung problemlos durchgeführt werden.
 
-import image from "./images/datensatz_ausschnitt.png"
+Bei Bedarf können dem Datensatz Spalten mit Angaben zu weiteren Ebenen der LOR hinzugefügt werden, um zum Bei-  spiel die Planungsräume den Bezirken zuzuordnen. Die Zu-  
+ordnung der LOR-Kennung mit den Ortsbezeichnungen  ist in dem vorliegenden Datensatz jedoch nicht direkt enthalten.  
+Die aktuellen Informationen zu den [lebensweltlich orientierten Räumen (LOR)](https://www.berlin.de/sen/sbw/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/) und der entsprechenden Schlüsselsystematik werden von der Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen zur Verfügung gestellt.
 
-<ContentSection class="sm:px-6">
-<ImageSection class="sm:container sm:mx-auto"
-src={image}
-caption="Ein Ausschnitt aus dem Datensatz"
-/>
+
+
+<ContentSection 
+class="sm:px-6"
+withShadow>
+  <iframe title="" aria-label="Tabelle" id="datawrapper-chart-suSOX" src="https://datawrapper.dwcdn.net/suSOX/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="466" data-external="1"></iframe>
 </ContentSection>
 
-Der Datensatz kann als Grundlage für verschiedene Anwendungsfälle und Fragestellungen dienen. Dazu zählen zum Beispiel:
+Der Datensatz kann als Grundlage für verschiedene Fragestellungen dienen. Dazu zählen zum Beispiel:
 
-- **Entwicklung der Lieferplattformen:** Wie verändern sich die Standortwahl und -faktoren der On-Demand Lieferplattformen über mehreren Monate bzw. Jahre und warum? 
+- **Stand der Dinge:** Wieviele Fahrräder wurden gestohlen? Gibt es einen Anstieg im Vergleich zu den vorangegangenen Jahren?
 
-- **Auswirkungen auf die Gesamtstadt:** Werden durch die Überlagerung mit Standortdaten weiterer Plattformunternehmen Segregationstendenzen oder andere Effekte auf gesamtstädtischer Ebene erkennbar?  
+- **Regionale Unterschiede:** In welchen Planungsräumen in Berlin gab es die meisten Fahrraddiebstähle?
 
-- **Zukunft der Nahversorgung:** In welchem Verhältnis stehen Dark Stores zu Supermärkten und Spätkaufs?  
+- **Sicherheitslücken:** Wie viele der Fahrraddiebstähle werden als einfache Diebstähle deklariert, bei denen das Fahrrad ungesichert war? Wie groß ist der Anteil der Fahrraddiebstähle, die aus einem Keller- oder Bodeneinbruch stammen? 
 
-import logo from "./images/tu-berlin-logo-long-red.svg";
-
-<Quote
-  authorName="Dr. Hans-Hermann Albers"
-  authorRole="Fachgebiet Stadt- und Regionalplanung TU Berlin"
-  authorLogo={logo}
->
-  Selbst wenn die Dark Stores irgendwann wieder verschwinden, haben wir nun einen dokumentierten Ist-Zustand, der für viele Akteure relevant und eine wertvolle Grundlage für künftige Forschungen ist.
-</Quote>
-
-### Datensatz und Masterarbeit zum Downloaden
-
-Der Datensatz steht als Open Data in einem public [GitHub-Repository](https://github.com/search?q=ToniSophie&type=users) für alle frei zugänglich zum Download zur Verfügung. Die [Masterarbeit liegt als PDF-Download](../../../../public/file-download/Antonia-Gergs-Masterarbeit-Dark-Stores.pdf) bereit.
-
-Außerdem wurde die Arbeit im Rahmen der [*ISR Impulse Online* Reihe](https://verlag.tu-berlin.de/reihe/isr-impulse-online-bis-bd-50-isr-graue-reihe/) veröffentlicht und kann unter [folgender DOI](https://doi.org/10.14279/depositonce-20114) (Digital Object Identifier) aufgerufen und heruntergeladen werden.
+- **Diebesgut:** Welche Fahrradarten sind als Diebesgut in Berlin besonders im Visier und wie hoch ist die durchschnittliche Schadenshöhe? 
 
 
 ## Über die Visualisierung 
-
-Auf einer Symbolkarte können mehrere spezifische Orte visualisiert werden. Entsprechend der einzelnen Datenpunkte variieren die Symbole in Größe und/oder Farbe. In unserem Fall werden die unterschiedlichen Lieferdienste (FLINK, GORILLAS und GETIR) mit unterschiedlichen Farben kodiert (Pink, Grün und Lila).
 
 Die hier präsentierte Datenvisualisierung haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) erstellt. 
 Wir haben die Daten zuvor zusammengeführt und mit Fotoaufnahmen der einzelnen Standorte angereichert. Um im Format "Symbolkarte" visualisiert werden zu können, müssen die Daten in einem bestimmten Datenschema vorliegen. 
