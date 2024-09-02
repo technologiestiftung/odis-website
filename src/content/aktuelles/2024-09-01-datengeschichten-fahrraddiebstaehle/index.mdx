@@ -54,11 +54,16 @@ Die Fahrraddiebstähle in Bezug zu den temporalen sowie kategorialen Information
 
 ## Über den Datensatz
 
-Beim Einlesen der vorliegenden CSV-Datei ist zunächst zu beachten, dass nicht wie meist üblich die Zeichencodierung UTF-8 vorliegt. Um sicherzustellen, dass alle Zeichen (z.B. auch Umlaute) richtig dargestellt werden, muss eine passende Kodierung gewählt werden.
-Für eine gute Maschinenlesbarkeit ist darüber hinaus grundsätzlich eine Untersuchung der vorliegenden Datentypen ratsam. Die Kennung der Planungs-  räume in der Spalte LOR ist eine 8-stellige Nummer, die zum Teil mit einer Null beginnt. Hier kann es passieren, dass die Nummer als Ganzzahl interpretiert wird und die führende Null somit nicht berücksichtigt wird. Um dies zu verhindern, kann der Datentyp in ein String, also in Textform, umgewandelt werden und schließlich eine Zuordnung der Planungsräume anhand der 8-stelligen Kennung problemlos durchgeführt werden.
+Beim Einlesen der vorliegenden CSV-Datei ist zunächst zu beachten, dass nicht wie meist üblich die Zeichencodierung UTF-8 vorliegt. 
+Um sicherzustellen, dass alle Zeichen (z.B. auch Umlaute) richtig dargestellt werden, muss eine passende Kodierung gewählt werden.
+Für eine gute Maschinenlesbarkeit ist darüber hinaus grundsätzlich eine Untersuchung der vorliegenden Datentypen ratsam. 
+Die Kennung der Planungs-  räume in der Spalte _LOR_ ist eine 8-stellige Nummer, die zum Teil mit einer Null beginnt. 
+Hier kann es passieren, dass die Nummer als Ganzzahl interpretiert und die führende Null somit nicht berücksichtigt wird. 
+Um dies zu verhindern, kann der Datentyp in ein String, also in Textform, umgewandelt werden und schließlich eine Zuordnung der 
+Planungsräume anhand der 8-stelligen Kennung problemlos durchgeführt werden.
 
-Bei Bedarf können dem Datensatz Spalten mit Angaben zu weiteren Ebenen der LOR hinzugefügt werden, um zum Bei-  spiel die Planungsräume den Bezirken zuzuordnen. Die Zu-  
-ordnung der LOR-Kennung mit den Ortsbezeichnungen  ist in dem vorliegenden Datensatz jedoch nicht direkt enthalten.  
+Bei Bedarf können dem Datensatz Spalten mit Angaben zu weiteren räumlichen Ebenen hinzugefügt werden, um zum Bei-  spiel die Planungsräume den Bezirken zuzuordnen. 
+Die Zu-  ordnung der LOR-Kennung mit den Ortsbezeichnungen  ist in dem vorliegenden Datensatz jedoch nicht direkt enthalten.  
 Die aktuellen Informationen zu den [lebensweltlich orientierten Räumen (LOR)](https://www.berlin.de/sen/sbw/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/) und der entsprechenden Schlüsselsystematik werden von der Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen zur Verfügung gestellt.
 
 
@@ -83,7 +88,6 @@ Der Datensatz kann als Grundlage für verschiedene Fragestellungen dienen. Dazu 
 ## Über die Visualisierung 
 
 Die hier präsentierte Datenvisualisierung haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) erstellt. 
-Wir haben die Daten zuvor zusammengeführt und mit Fotoaufnahmen der einzelnen Standorte angereichert. Um im Format "Symbolkarte" visualisiert werden zu können, müssen die Daten in einem bestimmten Datenschema vorliegen. 
 
 Die Visualisierung kann durch Klick auf “Einbetten” unter dem Diagramm auch per iFrame in andere Seiten integriert werden. 
 Wie sich mit Datawrapper Charts und Tabellen unkompliziert aus eigenen Daten erstellen lassen, erklären wir auch in diesen [Videotutorials](https://odis-berlin.de/ressourcen/datenvisualisierung_videos).
