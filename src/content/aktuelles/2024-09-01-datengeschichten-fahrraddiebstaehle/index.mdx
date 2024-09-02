@@ -3,8 +3,7 @@ tags:
   - "home"
   - "post"
 title: "Aktuelle Datenperle – Fahrraddiebstähle"
-description: Für die neuste Ausgabe der Datenperle hat Odi – unser Informant für Open Data - den Kerndaten-  satz aus dem Berliner Open-Data-Portal zum Thema Fahrraddiebstähle in Berlin unter die Lupe genommen.
-
+description: Für diese Ausgabe der Datenperle hat Odi – unser Informant für Open Data - den Kerndatensatz aus dem Berliner Open-Data-Portal zum Thema Fahrraddiebstähle in Berlin unter die Lupe genommen.
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
@@ -12,12 +11,12 @@ headerImage:
   src: ./images/Mann auf Fahrrad_c_GettyImages_Foto_PeopleImages_DL_PPT_0.png
   alt: ODI vor einer Karte
 readingTime: 5-6
-date: 2024-09-01
+date: 2024-09-11
 ---
 
 ## Wo ist mein Fahrrad sicher?
 
-Durch die polizeiliche Verlaufsstatistik (Data-Warehouse Führungsinformation) werden täglich aktualisierte Daten zu Fahrraddiebstählen inkl. Diebstahlversuche auf Ebene der Planungsräume in Berlin bereitgestellt. Neben Informationen zum Meldedatum und Tatzeitraum gibt der Datensatz Auf-  schluss über den Tatort, die Schadenshöhe, die Art des Fahrrads sowie die Einordnung der Straftat. Die Veröffent-  lichung der Daten hilft einerseits dem Landeskriminalamt Entscheidungen über Sicherheitsmaßnahmen zu treffen und andererseits wird Berliner Fahrradfahrer:innen die Möglichkeit gegeben Sicherheitslücken selbst zu identifizieren. 
+Durch die polizeiliche Verlaufsstatistik (Data-Warehouse Führungsinformation) werden täglich aktualisierte Daten zu Fahrraddiebstählen inkl. Diebstahlversuche auf Ebene der Planungsräume in Berlin bereitgestellt. Neben Informationen zum Meldedatum und Tatzeitraum gibt der Datensatz Aufschluss über den Tatort, die Schadenshöhe, die Art des Fahrrads sowie die Einordnung der Straftat. Die Veröffentlichung der Daten hilft einerseits dem Landeskriminalamt Entscheidungen über Sicherheitsmaßnahmen zu treffen und andererseits wird Berliner Fahrradfahrer:innen die Möglichkeit gegeben sich selbst über Trends und die aktuellen Zahlen zu informieren. 
 
 import image2 from "./images/127025410_1423607659_v4_3_800.jpeg"
 
@@ -31,7 +30,7 @@ import image2 from "./images/127025410_1423607659_v4_3_800.jpeg"
 
 **Regionale Unterschiede aufdecken**
 
-Zur örtlichen Einordnung des Fahrraddiebsthlaufkommens wird eine 8-stellige Kennung des Planungsraums angegeben, die die unterste Beobachtungs- und Planungsebene der lebens-  weltlich orientierten Räumen (LOR) darstellt. Es bietet sich an dies mit Hilfe einer Choroplethenkarten zu veranschaulichen. Durch einen Farbgradienten werden die räumliche Verteilung und Unterschiede zwischen den geografischen Einheiten, hier die Planungsräume, schnell deutlich. Zu beachten ist, dass sich die Choroplethenkarten besonders gut für normierte oder relative Daten, wie Prozentsätze oder Dichten eignet.   
+Zur örtlichen Einordnung des Fahrraddiebstahlaufkommens wird eine 8-stellige Kennung des Planungsraums angegeben, die die unterste Beobachtungs- und Planungsebene der lebens-  weltlich orientierten Räumen (LOR) darstellt. Es bietet sich an dies mit Hilfe einer Choroplethenkarten zu veranschaulichen. Durch einen Farbgradienten werden die räumliche Verteilung und Unterschiede zwischen den geografischen Einheiten, hier die Planungsräume, schnell deutlich. Zu beachten ist, dass sich die Choroplethenkarten besonders gut für normierte oder relative Daten, wie Prozentsätze oder Dichten eignet.   
 Die Darstellung absoluter Werte bezogen auf variierende Flächengrößen oder Einwohnerzahlen kann zu einer falschen Interpretation und Verzerrung der Daten führen.
 
 In der vorliegenden Choroplethenkarte kann dies vernach-  lässigt werden, da die 542 Planungsräume (Stand 2021) im Durchschnitt je etwa 7.500 Einwohner umfassen. Die Anzahl der Fahrraddiebstähle je Planungsraum ist somit ein guter Indikator für die regionalen Unterschiede.
@@ -59,7 +58,7 @@ Um sicherzustellen, dass alle Zeichen (z.B. auch Umlaute) richtig dargestellt we
 Für eine gute Maschinenlesbarkeit ist darüber hinaus grundsätzlich eine Untersuchung der vorliegenden Datentypen ratsam. 
 Die Kennung der Planungs-  räume in der Spalte _LOR_ ist eine 8-stellige Nummer, die zum Teil mit einer Null beginnt. 
 Hier kann es passieren, dass die Nummer als Ganzzahl interpretiert und die führende Null somit nicht berücksichtigt wird. 
-Um dies zu verhindern, kann der Datentyp in ein String, also in Textform, umgewandelt werden und schließlich eine Zuordnung der 
+Um dies zu verhindern, kann der Datentyp in einen String, also in Textform, umgewandelt werden und schließlich eine Zuordnung der 
 Planungsräume anhand der 8-stelligen Kennung problemlos durchgeführt werden.
 
 Bei Bedarf können dem Datensatz Spalten mit Angaben zu weiteren räumlichen Ebenen hinzugefügt werden, um zum Bei-  spiel die Planungsräume den Bezirken zuzuordnen. 
