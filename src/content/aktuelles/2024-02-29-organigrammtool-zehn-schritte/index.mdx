@@ -21,9 +21,9 @@ Das [Organigramm-Tool](/projekte/2023-07-organigramm-tool) hat zum Ziel, die Ers
 
 ### 1. Tool öffnen, Vorlage auswählen, Navigieren 
 
-Das Tool funktioniert direkt im Browser, ein Download oder eine Anmeldung sind nicht nötig. Am besten funktioniert die Anwendung in Firefox und Chrome. Öffnen Sie folgende Internetseite in Ihrem Browser: https://organigramme.odis-berlin.de. Wenn Sie das Tool zum ersten Mal aufrufen, gelangen Sie zum Startfenster und können entweder die Tour starten, um sich mit den Funktionen des Tools vertraut zu machen oder das Tool ausprobieren. Daraufhin öffnet sich ein Beispielorganigramm, mit dem Sie eine Organisation anlegen können. Sie können links oben in der Menüleiste beim Pluszeichen aus drei Vorlagen (Templates) wählen: Senatsverwaltung, Bezirke und Organisation. Die Templates für Senatsverwaltungen und Bezirke wurden gemeinsam mit einigen OD-Beauftragten erarbeitet und sollen den Einstieg in die Organigramm-Erstellung erleichtern. Alternativ können Sie ein eigenes Dokument hochladen und weiterbearbeiten. Die Datei muss dabei in einem JSON-Format vorliegen.  
-Optional können Sie in der Menüleiste mit Klick auf das Rad auch eine Validierung aktivieren. Die “Validierung für die Berliner Verwaltung” gibt Hinweise auf bestimmte Regeln wie zum Beispiel eine einheitliche Eingabe von Telefonnummern. Bei einer falschen Eingabe in den Boxen wird eine Warnmeldung angezeigt. 
-Mit einem Klick auf das Fragezeichen im Menü oben links, können Sie analog zum Startfenster eine Tour durch das Tool starten.  
+Das Tool funktioniert direkt im Browser, ein Download oder eine Anmeldung sind nicht nötig. Am besten funktioniert die Anwendung in Firefox und Chrome. Öffnen Sie folgende Internetseite in Ihrem Browser: https://organigramme.odis-berlin.de. Wenn Sie das Tool zum ersten Mal aufrufen, gelangen Sie zum Startfenster und können entweder die *Tour starten*, um sich mit den Funktionen des Tools vertraut zu machen oder das *Tool ausprobieren*. Daraufhin öffnet sich ein Beispielorganigramm, mit dem Sie eine Organisation anlegen können. Sie können links oben in der Menüleiste beim *Pluszeichen* aus drei Vorlagen (Templates) wählen: Senatsverwaltung, Bezirke und Organisation. Die Templates für Senatsverwaltungen und Bezirke wurden gemeinsam mit einigen OD-Beauftragten erarbeitet und sollen den Einstieg in die Organigramm-Erstellung erleichtern. Alternativ können Sie ein eigenes Dokument hochladen und weiterbearbeiten. Die Datei muss dabei in einem JSON-Format vorliegen.  
+Optional können Sie in der Menüleiste mit Klick auf das *Rad* auch eine Validierung aktivieren. Die *Validierung für die Berliner Verwaltung* gibt Hinweise auf bestimmte Regeln wie zum Beispiel eine einheitliche Eingabe von Telefonnummern. Bei einer falschen Eingabe in den Boxen wird eine Warnmeldung angezeigt. 
+Mit einem Klick auf das *Fragezeichen* im Menü oben links, können Sie analog zum Startfenster eine Tour durch das Tool starten.  
 
 Um sich an eine andere Stelle im Dokument zu bewegen, halten Sie die Maustaste gedrückt und ziehen Sie das Dokument. Unten rechts können Sie rein- und rauszoomen sowie die Ansicht auf das ganze Dokument aktivieren, alternativ können Sie dafür auch das Scrollrad der Maus benutzen. In der Leiste oben rechts gibt es Pfeile um Schritte rückgängig zu machen bzw. zu wiederholen.  
 
@@ -33,7 +33,7 @@ import image from "./images/step1.png"
 
   <ImageSection class="sm:container sm:mx-auto"
     src={image}
-    caption="Erster Schritt - Tool öffnen und navigieren"
+    caption="Erster Schritt - Tool öffnen, Vorlage laden und navigieren"
   />
 </ContentSection>
 
@@ -41,11 +41,11 @@ import image from "./images/step1.png"
 
 **Art der Organisationseinheit wählen**
 
-Jede der Boxen, die Sie sehen, stellt eine Organisationseinheit dar. Klicken Sie jetzt einmal auf eine der Boxen öffnet sich links das Bearbeitungsfenster. Geben Sie dort die Daten ein, die in der Kopfzeile der Box angezeigt werden sollen. Tragen Sie ein, um welche Art von Organisationseinheit es sich handelt, also zum Beispiel um eine Abteilung oder um ein Referat. (Diese Info erscheint nicht in der Box, sie ist aber für die JSON-Datei also die Maschinenlesbarkeit wichtig). Mit Klick in das Textfeld macht Ihnen das Tool Vorschläge, Sie können aber auch Freitext eingeben. Tragen Sie als nächstes eine konkrete Bezeichnung ein, die als Titel der Box erscheinen soll, z.B. “Abteilung IV - Landespersonal”. Sie können zudem eine alternative Bezeichnung angeben, z.B. “Abt. IV”.  
+Jede der Boxen, die Sie sehen, stellt eine Organisationseinheit dar. Klicken Sie jetzt einmal auf eine der Boxen öffnet sich links das Bearbeitungsfenster. Geben Sie dort die Daten ein, die in der Kopfzeile der Box angezeigt werden sollen. Tragen Sie ein, um welche Art von Organisationseinheit es sich handelt, also zum Beispiel um eine Abteilung oder um ein Referat. (Diese Info erscheint nicht in der Box, sie ist aber für die JSON-Datei also die Maschinenlesbarkeit wichtig). Mit Klick in das Textfeld macht Ihnen das Tool Vorschläge, Sie können aber auch Freitext eingeben. Tragen Sie als nächstes eine konkrete Bezeichnung ein, die als Titel der Box erscheinen soll, z.B. “Abteilung IV - Landespersonal”. Sie können zudem ein Kürzel angeben, z.B. “Abt. IV”.  
 
 **Gestaltung der Box**
 
-Unter dem Reiter Gestaltung können Sie die Darstellungsform der Box verändern. Die Darstellungsformen sind rein kosmetischer Natur. Wählen Sie “Hervorgehoben”, um wichtige Einheiten wie einen Senator optisch hervorzuheben oder “Zurückgenommen” für Einheiten, die eine nachgeordnete Sonderrolle einnehmen, wie z. B. nachgeordnete Behörden. Der Stil “Verbindungspunkt” lässt die Box verschwinden und ersetzt sie durch einen reinen Knotenpunkt. Hintergrundfarbe und Füllung der Organisationseinheit können manuell ebenso geändert werden wie die Anordnung von Text: Untereinander (Standard) oder in zwei Spalten. Wir empfehlen, die Gestaltungsmittel nur zu benutzen, wenn sie unbedingt benötigt werden, da diese Informationen nicht im maschinenlesbaren Organigramm hinterlegt werden können und für Datennutzende gegebenenfalls verloren gehen. 
+Unter dem Reiter *Gestaltung* können Sie die Darstellungsform der Box verändern. Die Darstellungsformen sind rein kosmetischer Natur. Wählen Sie *Hervorgehoben*, um wichtige Einheiten wie einen Senator optisch hervorzuheben oder *Zurückgenommen* für Einheiten, die eine nachgeordnete Sonderrolle einnehmen, wie z. B. nachgeordnete Behörden. Der Stil *Verbindungspunkt* lässt die Box verschwinden und ersetzt sie durch einen reinen Knotenpunkt. Hintergrundfarbe und Füllung der Organisationseinheit können manuell ebenso geändert werden wie die Anordnung von Text: Untereinander (Standard) oder in zwei Spalten. Wir empfehlen, die Gestaltungsmittel nur zu benutzen, wenn sie unbedingt benötigt werden, da diese Informationen nicht im maschinenlesbaren Organigramm hinterlegt werden können und für Datennutzende gegebenenfalls verloren gehen. 
 
 import image2 from "./images/step2.png"
 
@@ -63,14 +63,14 @@ Nun kommen wir zum Inhalt der Box. In den nachfolgenden Feldern der Eingabemaske
 
 **URIs anlegen**
 
-Unter dem Reiter Verknüpfung verbirgt sich die Linked Data Funktionalität des Tools. Nutzer:innen müssen hier keine eigenen Eingaben vornehmen, da alle angelegten Organisationseinheiten und Personen automatisch eine vom Tool generierte URI erhalten. Diese hilft in Zukunft, Informationen aus dem Organigramm mit anderen Datensätzen zu verbinden. Handelt es sich bei der angelegten Organisation um die übergeordnete Senatsverwaltung gibt es die Möglichkeit über einen Klick auf den Reiter eine externe Verknüpfung anzulegen. Über das Textfeld kann die Datenbank von Wikidata durchsucht werden, z.B. nach “Senatsverwaltung für Finanzen”, und das Organigramm wird mit externen Informationen angereichert.
+Unter dem Reiter *Verknüpfung* verbirgt sich die Linked Data Funktionalität des Tools. Nutzer:innen müssen hier keine eigenen Eingaben vornehmen, da alle angelegten Organisationseinheiten und Personen automatisch eine vom Tool generierte URI erhalten. Diese hilft in Zukunft, Informationen aus dem Organigramm mit anderen Datensätzen zu verbinden. Handelt es sich bei der angelegten Organisation um die übergeordnete Senatsverwaltung gibt es die Möglichkeit über einen Klick eine *Externe Verknüpfung* anzulegen. Über das Textfeld kann die Datenbank von Wikidata durchsucht werden, z.B. nach *Senatsverwaltung für Finanzen*, und das Organigramm wird mit externen Informationen angereichert.
 
 *Exkurs Linked Data:  
 Auf dem Weg hin zu Fünf-Sterne-Open Data haben wir uns mit Linked Data in der öffentlichen Verwaltung auseinandergesetzt und das Tool so weiterentwickelt, dass Organigramme nun auch im verlinkten offenen Datenformat (RDF) exportiert werden können. In unserem Blogbeitrag [Vom Informationssilo zum Wissensnetzwerk](https://odis-berlin.de/aktuelles/2024-03-28-linked-open-data/) haben wir mehr Informationen über Linked Data zusammengefasst.*
 
 ### 3. Einheiten innerhalb einer Organisationseinheit anlegen
 
-Nicht nur Personen können Teil einer Organisationseinheit sein, sondern auch weitere zugehörige Abteilungen oder Stellen. Klicken Sie auf das Plus-Symbol neben Zugehörige Organisationseinheit um diese hinzuzufügen und tragen Sie eine Bezeichnung ein. Klicken Sie anschließend auf das Plus-Symbol neben Positionen, um wiederum Mitarbeitende anzulegen, die Teil dieser Organisationseinheit sind und ergänzen Sie Daten zu dieser Person in der neu erschienenen Maske. Durch Klick auf das rote Minus-Symbol werden Organisationseinheiten und Personen wieder gelöscht. 
+Nicht nur Personen können Teil einer Organisationseinheit sein, sondern auch weitere zugehörige Abteilungen oder Stellen. Klicken Sie auf das *Plus-Symbol* neben *Zugehörige Organisationseinheit* um diese hinzuzufügen und tragen Sie eine Bezeichnung ein. Klicken Sie anschließend auf das Plus-Symbol neben *Positionen*, um wiederum Mitarbeitende anzulegen, die Teil dieser Organisationseinheit sind und ergänzen Sie Daten zu dieser Person in der neu erschienenen Maske. Durch Klick auf das *rote Minus-Symbol* werden Organisationseinheiten und Personen wieder gelöscht. 
 
 *Hinweis:* Personen und Organisationseinheiten können über das Minus-Symbol nur gelöscht werden, wenn vorher in den jeweiligen Textfeldern alle Texte entfernt wurden.
 
@@ -86,7 +86,7 @@ import image3 from "./images/step3.png"
 
 ### 4. Neue Organisationseinheiten anlegen, entfernen und umsortieren
 
-Scrollen Sie im Bearbeitungsfenster der Organisation nach ganz unten. Klicken Sie dort auf die Buttons, um eine neue Nebenorganisation oder eine neue Suborganisation von Ihrer aktuell bearbeiteten Box einzufügen. Klicken Sie auf eine der neu erstellten Boxen und dann auf die Schaltfläche Entfernen, um die Box wieder zu löschen. Sie können die Organisationseinheiten auch kopieren, ausschneiden, einfügen oder entfernen, wenn Sie mit einem Rechtsklick auf die Box klicken. Sie können eine Box auch mit links anklicken, gedrückt halten und die Maus bewegen, um Boxen umzusortieren.
+Scrollen Sie im Bearbeitungsfenster der Organisation nach ganz unten. Klicken Sie dort auf die Buttons, um eine neue Nebenorganisation oder eine neue Suborganisation von Ihrer aktuell bearbeiteten Box einzufügen. Klicken Sie auf eine der neu erstellten Boxen und dann auf die Schaltfläche *Entfernen*, um die Box wieder zu löschen. Sie können die Organisationseinheiten auch kopieren, ausschneiden, einfügen oder entfernen, wenn Sie mit einem Rechtsklick auf die Box klicken. Sie können eine Box auch mit links anklicken, gedrückt halten und die Maus bewegen, um Boxen umzusortieren.
 
 *Hinweis:* Achtung, wenn Sie eine Organisationseinheit entfernen, löschen Sie auch alle Suborganisationen.
 
@@ -102,7 +102,7 @@ import image4 from "./images/step4.png"
 
 ### 5. Dokumentinformationen bearbeiten
 
-Neben dem eigentlichen Organigramm müssen Sie auch Informationen über das Dokument an sich angeben. Klicken Sie in der kleinen Menüleiste oben links auf das Symbol Dokumentinformationen. Es öffnet sich wieder eine Eingabemaske links. Tragen Sie über die Maske den Namen Ihrer Behörde als Dokumenttitel ein. Zudem lässt sich die Ausrichtung des Dokuments (Hoch- oder Querformat) und die Ausgabegröße von A5 bis A0 einstellen. In den Dokumentinformationen können Sie ebenfalls ein Logo einbinden. Dafür stehen Ihnen die Logos der Bezirksverwaltungen zur Verfügung oder Sie laden ganz einfach selbst eine Bilddatei mit einem Logo hoch. Neben Datum und Name der Verfasser:in kann hier auch die Fußzeile bearbeitet werden. 
+Neben dem eigentlichen Organigramm müssen Sie auch Informationen über das Dokument an sich angeben. Klicken Sie in der kleinen Menüleiste oben links auf das Symbol *Dokumentinformationen*. Es öffnet sich wieder eine Eingabemaske links. Tragen Sie über die Maske den Namen Ihrer Behörde als Dokumenttitel ein. Zudem lässt sich die Ausrichtung des Dokuments (Hoch- oder Querformat) und die Ausgabegröße von A5 bis A0 einstellen. In den Dokumentinformationen können Sie ebenfalls ein Logo einbinden. Dafür stehen Ihnen die Logos der Bezirksverwaltungen zur Verfügung oder Sie laden ganz einfach selbst eine Bilddatei mit einem Logo hoch. Neben Datum und Name der Verfasser:in kann hier auch die Fußzeile bearbeitet werden. 
 
 *Hinweis:* Die Ausgabegröße können Sie auch später bei Bedarf anpassen, wenn Ihr Organigramm größer wird und die aktuelle Ausgabegröße nicht ausreicht.
 
@@ -148,7 +148,7 @@ import image7 from "./images/step7.png"
 
 ### 8. Bestehendes Dokument einladen
 
-Ein Organigramm, das mit unserem Tool erstellt wurde, kann einfach wieder in der Anwendung geladen werden. Probieren Sie dies einmal exemplarisch aus. Laden Sie sich hier eine Beispiel-JSON-Datei herunter, in der das Organigramm für die Senatsverwaltung für Wissenschaft, Gesundheit und Pflege gespeichert ist. Gehen Sie nun zurück in das Organigramm-Tool und klicken Sie in der Menüleiste oben links auf das Symbol für Neues Dokument erstellen oder öffnen. Klicken Sie auf Datei auswählen und laden Sie die gerade heruntergeladene Datei aus ihrem Speicherort hoch. Wählen Sie im erscheinenden Fenster Änderungen verwerfen aus. Sie sollten nun das Organigramm der SenWGP sehen.  
+Ein Organigramm, das mit unserem Tool erstellt wurde, kann einfach wieder in der Anwendung geladen werden. Probieren Sie dies einmal exemplarisch aus. Laden Sie sich [hier](src/assets/data/Organigramm_SenWGP_neu.json) eine Beispiel-JSON-Datei herunter, in der das Organigramm für die Senatsverwaltung für Wissenschaft, Gesundheit und Pflege gespeichert ist. Gehen Sie nun zurück in das Organigramm-Tool und klicken Sie in der Menüleiste oben links auf das Symbol für *Bestehendes Dokument öffnen oder Datei auf die Anwendung ziehen*. Klicken Sie auf *Datei auswählen* und laden Sie die gerade heruntergeladene Datei aus ihrem Speicherort hoch. Wählen Sie im erscheinenden Fenster *Änderungen verwerfen* aus. Sie sollten nun das Organigramm der SenWGP sehen.  
 
 import image8 from "./images/step8.png"
 
@@ -177,6 +177,7 @@ import image9 from "./images/step9.png"
 ### 10. Mit einem neuen Dokument starten
 
 Um wieder mit einem frischen Beispiel-Dokument zu starten, klicken Sie wieder links oben in der Menüleiste auf das Symbol für Neues Dokument erstellen oder öffnen. Klicken Sie diesmal anschließend auf Neues Dokument erstellen und dann auf Verwerfen. Sie sehen ein leeres Dokument und können eine neue Organisation anlegen.
+
 import image10 from "./images/step10.png"
 
 <ContentSection class="sm:px-6">
