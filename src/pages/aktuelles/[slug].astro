@@ -5,6 +5,9 @@ import Paragraph from "../../components/Paragraph.astro";
 import PageHeaderWithPhoto from "../../components/PageHeaderWithPhoto.astro";
 import { components } from "@/components/macros/index.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
+import ItemsSlider from "@/components/ItemsSlider.astro";
+import NewsCard from "@/components/NewsCard.astro";
+import Heading from "@/components/Heading.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("aktuelles");
@@ -19,20 +22,31 @@ const post = Astro.props;
 const { date, title, author, readingTime, description, headerImage } =
   post.data;
 const { Content } = await post.render();
+
+const aktuelles = await getCollection("aktuelles");
+// const projects = await getCollection("projekte");
+// const blogposts = await getCollection("resources");
+
+const allEntries = [...aktuelles].filter((entry) =>
+  // const allEntries = [...aktuelles, ...projects, ...blogposts].filter((entry) =>
+  entry.data.tags.includes(title)
+);
+
+const news = allEntries.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
 ---
 
 <DefaultLayout
   metaDescription={post.data.metaDescription || post.data.description}
   metaTitle={post.data.metaTitle || post.data.title}
-  ogImage={post.data.ogImage?.src || `/aktuelles/og/${post.slug}.png`}
->
+  ogImage={post.data.ogImage?.src || `/aktuelles/og/${post.slug}.png`}>
   <PageHeaderWithPhoto
     title={title}
     description={description}
     basePath="aktuelles"
     image={headerImage}
-    date={date}
-  >
+    date={date}>
     {
       (author || readingTime) && (
         <Paragraph class="opacity-70 flex gap-x-3 flex-wrap">
@@ -52,10 +66,23 @@ const { Content } = await post.render();
     <div class="grid-container">
       <TableOfContents />
       <div
-        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10"
-      >
+        class="toc-content lg:col-span-6 lg:col-start-2 xl:col-span-5 xl:col-start-2 prose prose-a:focusable pt-16 pb-48 relative z-10">
         <Content components={components} />
       </div>
     </div>
+    {
+      title && news.length > 0 && (
+        <div class="pb-64 grid-container">
+          <div class="md:col-span-6 md:col-start-2 prose relative z-10">
+            <Heading size="lg">Verwandte Artikel</Heading>
+          </div>
+          <ItemsSlider slidesCount={2}>
+            {news.map((newsEntry) => (
+              <NewsCard {...newsEntry} class="swiper-slide" />
+            ))}
+          </ItemsSlider>
+        </div>
+      )
+    }
   </section>
 </DefaultLayout>
