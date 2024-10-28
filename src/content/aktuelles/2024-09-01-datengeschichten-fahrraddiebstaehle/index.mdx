@@ -1,0 +1,99 @@
+---
+tags:
+  - "home"
+  - "post"
+title: "Aktuelle Datenperle – Fahrraddiebstähle"
+description: Für diese Ausgabe der Datenperle hat Odi – unser Informant für Open Data - den Kerndatensatz aus dem Berliner Open-Data-Portal zum Thema Fahrraddiebstähle in Berlin unter die Lupe genommen.
+categories: aktuelles
+visible: true
+urlText: Zum Blogbeitrag
+headerImage:
+  src: ./images/odi_kachelbild.png
+  alt: ODI auf einem Fahrrad, der ein Balkendiagramm herunterfährt.
+readingTime: 5-6
+date: 2024-09-11
+---
+
+## Wo ist mein Fahrrad sicher?
+
+Die polizeiliche Verlaufsstatistik zu Fahrraddiebstählen in Berlin bietet wertvolle Einblicke, die zur umfassenden Analyse dieses Problems genutzt werden können. Die Daten ermöglichen es u.a., die Anzahl der in den letzten Jahren gestohlenen Fahrräder zu ermitteln, regionale Unterschiede und zeitliche Muster zu identifizieren und die Häufigkeit ungesicherter Fahrräder oder Diebstähle aus Keller- und Dachbodeneinbrüchen zu untersuchen. Zur schnelleren Erfassung der Lage und Beantwortung bestimmter Fragestellungen bietet es sich an die Informationen zu visualisieren.
+
+import image2 from "./images/odi_fahrrad_keller.png"
+
+<TextContentSection class="sm:px-6" largeContainer={true}>
+  <ImageSection 
+    src={image2}
+    alt="Odi schließt ein Rad im Keller ab."
+    caption="Fahrraddiebstähle sind in Berlin Alltag. Im Keller abgeschlossene Fahrräder sind vor Dieben wesentlich sicherer."
+  />
+</TextContentSection>
+
+**Regionale Unterschiede aufdecken**
+
+Die örtliche Einordnung des Fahrraddiebstahlaufkommens lässt sich zum Beispiel mit Hilfe einer Choroplethenkarten veranschaulichen. Durch einen Farbgradienten werden die räumliche Verteilung und Unterschiede zwischen den geografischen Einheiten, hier die Planungsräume, schnell deutlich. Zu beachten ist, dass sich die Choroplethenkarte besonders gut für normierte oder relative Daten, wie Prozentsätze oder Dichten, eignet. Die Darstellung absoluter Werte bezogen auf variierende Flächengrößen oder Einwohnerzahlen kann zu einer falschen Interpretation und Verzerrung der Daten führen. 
+
+In der vorliegenden Choroplethenkarte kann dies vernachlässigt werden, da die 542 Planungsräume (Stand 2021) im Durchschnitt je etwa 7.500 Einwohner:innen umfassen. Die Anzahl der Fahrraddiebstähle je Planungsraum ist somit ein guter Indikator für die regionalen Unterschiede.
+
+<ContentSection class="sm:px-20">
+  <iframe title="Fahrraddiebstähle in Berlin -  In welchem Kiez ist besondere Vorsicht geboten?" aria-label="Karte" id="datawrapper-chart-9AJo0" src="https://datawrapper.dwcdn.net/9AJo0/12/" scrolling="no" frameborder="0" style="border: none;" width="778" height="781" data-external="1"></iframe>
+</ContentSection>
+
+**Weitere Erkenntnisse**
+
+Die Fahrraddiebstähle in Bezug zu den temporalen sowie kategorialen Informationen wie der Tatzeitpunkt und die Fahrradarten lassen sich anschaulich in Säulen- oder Balkendiagrammen darstellen. Die Differenzen zwischen den Säulen- bzw. Balken können intuitiv besonders gut ins Verhältnis gesetzt werden. So wird zum einen deutlich, dass im Jahr 2023 sehr viele Herrenfahrräder gestohlen wurden und verhältnismäßig wenig Kinderfahrräder. Auch bei Betrachtung der Fahrraddiebstähle im Tagesverlauf ist ein Muster zu erkennen. Es gibt zwei Peaks - einmal am Vormittag gegen 8 Uhr und am Abend gegen 18 Uhr.
+
+<ContentSection fullWidth={false}>
+  <iframe title="Anzahl Fahrraddiebstähle nach Fahrradart" aria-label="Balken" id="datawrapper-chart-gdiia" src="https://datawrapper.dwcdn.net/gdiia/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="348" data-external="1"></iframe>
+</ContentSection>
+
+<ContentSection fullWidth={false}>
+  <iframe title="Anzahl Fahrraddiebstähle nach Uhrzeit" aria-label="Säulen" id="datawrapper-chart-NPtvd" src="https://datawrapper.dwcdn.net/NPtvd/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="489" data-external="1"></iframe>
+</ContentSection>
+
+## Über den Datensatz
+
+Neben Informationen zum Meldedatum und Tatzeitraum gibt der Datensatz Aufschluss über den Tatort, die Schadenshöhe, die Art des Fahrrads sowie die Einordnung der Straftat. Beim Einlesen der vorliegenden CSV-Datei ist zunächst zu beachten, dass nicht wie meist üblich die Zeichenkodierung UTF-8 vorliegt. Um sicherzustellen, dass alle Zeichen (z.B. auch Umlaute) richtig dargestellt werden, muss eine passende Kodierung gewählt werden. Für eine gute Maschinenlesbarkeit ist darüber hinaus grundsätzlich eine Untersuchung der vorliegenden Datentypen ratsam. 
+<br></br><br></br>Die Kennung der Planungsräume in der Spalte _LOR_ ist eine 8-stellige Nummer, die zum Teil mit einer Null beginnt. Hier kann es passieren, dass die Nummer als Ganzzahl interpretiert und die führende Null somit nicht berücksichtigt wird. Um dies zu verhindern, kann der Datentyp in einen String, also in Textform, umgewandelt werden und schließlich eine Zuordnung der Planungsräume anhand der 8-stelligen Kennung problemlos erfolgen. Bei Bedarf lassen sich dem Datensatz zusätzliche Spalten mit Angaben zu weiteren räumlichen Ebenen hinzufügen, um etwa eine Zuordnung der Planungsräume zu den Bezirken zu ermöglichen. Die Zuordnung der LOR-Kennung mit den Ortsbezeichnungen ist in dem vorliegenden Datensatz jedoch nicht direkt enthalten. Die aktuellen Informationen zu den [lebensweltlich orientierten Räumen (LOR)](https://www.berlin.de/sen/sbw/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/) und der entsprechenden Schlüsselsystematik werden von der Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen zur Verfügung gestellt.
+
+
+
+<ContentSection 
+class="sm:px-6"
+withShadow>
+  <iframe title="" aria-label="Tabelle" id="datawrapper-chart-suSOX" src="https://datawrapper.dwcdn.net/suSOX/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="466" data-external="1"></iframe>
+</ContentSection>
+
+### Datenverwertung
+
+Der Datensatz kann unterschiedlichen Akteur:innen im Stadtraum dienen, um die Situation rund um die Fahrraddiebstähle zu verbessern. Dazu zählen zum Beispiel:
+
+- **Stadtgesellschaft:** Die Daten geben der Berliner Stadtgesellschaft mehr Transparenz über die Sicherheitslage und befähigen diese dadurch, Risiken zu berücksichtigen.
+
+- **Forschung und Stadtplanung:** Auch Stadtplaner:innen und Forscher:innen wird durch die Veröffentlichung der Daten die Möglichkeit gegeben, besonders betroffene Gebiete zu analysieren, Ursachen zu identifizieren und Gegenmaßnahmen vorzuschlagen.
+
+- **Sicherheitsbehörden:** Die Polizei und andere Sicherheitsbehörden können Diebstahlprognosen erstellen und präventive Maßnahmen zur Verbesserung der Sicherheit einleiten.
+ 
+
+
+## Über die Visualisierungen
+
+Die hier präsentierten Datenvisualisierungen haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) erstellt. 
+
+Die Visualisierungen können durch Klick auf “Einbetten” unter den Diagrammen auch per iFrame in andere Seiten integriert werden. 
+Wie sich mit Datawrapper Charts und Tabellen unkompliziert aus eigenen Daten erstellen lassen, erklären wir auch in diesen [Videotutorials](https://odis-berlin.de/ressourcen/datenvisualisierung_videos).
+
+## Auf die Daten, fertig, los!
+
+Die Erhebung von Daten und die Bereitstellung durch die Berliner Verwaltung ist eine Bereicherung des Datenangebots über unsere Stadt. Wir sind gespannt, welche weiteren Schlüsse aus den Daten gezogen werden können.
+
+import image1 from "./images/odi_ciao.png"
+
+<ImageSection
+  src={image1}
+  caption="Odi freut sich schon auf die nächste Datenveröffentlichung!"
+/>
+
+<script
+  type="text/javascript"
+  set:html={`!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();`}
+/>
