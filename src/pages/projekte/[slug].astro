@@ -7,6 +7,8 @@ import TextLink from "@/components/TextLink.astro";
 import ProjectHeader from "@/components/ProjectHeader.astro";
 import { Image } from "astro:assets";
 import { components } from "@/components/macros/index.astro";
+import ItemsSlider from "@/components/ItemsSlider.astro";
+import NewsCard from "@/components/NewsCard.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("projekte");
@@ -30,14 +32,27 @@ const {
   gitHubLink,
   partners,
 } = post.data;
+
 const { Content } = await post.render();
+
+const aktuelles = await getCollection("aktuelles");
+// const projects = await getCollection("projekte");
+// const blogposts = await getCollection("resources");
+
+const allEntries = [...aktuelles].filter((entry) =>
+  // const allEntries = [...aktuelles, ...projects, ...blogposts].filter((entry) =>
+  entry.data.tags.includes(title)
+);
+
+const news = allEntries.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
 ---
 
 <DefaultLayout
   metaTitle={metaTitle || title}
   metaDescription={metaDescription || description}
-  ogImage={post.data.ogImage?.src || `/projekte/og/${post.slug}.png`}
->
+  ogImage={post.data.ogImage?.src || `/projekte/og/${post.slug}.png`}>
   <ProjectHeader {...Astro.props} />
   <section class="pb-64">
     <div class="grid-container">
@@ -97,8 +112,7 @@ const { Content } = await post.render();
                           href={dataset.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          title={dataset.linkText}
-                        >
+                          title={dataset.linkText}>
                           {dataset.linkText}
                         </TextLink>
                       </li>
@@ -149,8 +163,7 @@ const { Content } = await post.render();
                               href={partner.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              title={`Partner Webseite: ${partner.name}`}
-                            >
+                              title={`Partner Webseite: ${partner.name}`}>
                               <ImageTag
                                 src={logo}
                                 alt={`Logo von ${partner.name}`}
@@ -168,6 +181,20 @@ const { Content } = await post.render();
           }
         </dl>
       </aside>
+      {
+        title && news.length > 0 && (
+          <div class="mt-4">
+            <div class="md:col-span-6 md:col-start-2 prose relative z-10">
+              <Heading size="lg">Verwandte Artikel</Heading>
+            </div>
+            <ItemsSlider slidesCount={2}>
+              {news.map((newsEntry) => (
+                <NewsCard {...newsEntry} class="swiper-slide" />
+              ))}
+            </ItemsSlider>
+          </div>
+        )
+      }
     </div>
   </section>
 </DefaultLayout>
