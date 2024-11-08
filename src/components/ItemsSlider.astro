@@ -22,17 +22,15 @@ const {
 <div
   class={cn(`items-swiper-wrapper`, wrapperClass)}
   id={uniqueId}
-  data-slidescout={slidesCount}
->
+  data-slidescout={slidesCount}>
   <div class="grid-container">
     <div class="grid col-span-12 grid-cols-12 gap-4 @sm:gap-6">
       <div
         class={cn(
           `col-span-12 sm:col-span-10 sm:col-start-2 lg:col-span-12 lg:col-start-1`,
           `items-swiper relative`,
-          swiperClass,
-        )}
-      >
+          swiperClass
+        )}>
         <div class="swiper-wrapper">
           <slot />
         </div>
@@ -41,18 +39,16 @@ const {
             `absolute z-10 top-[calc(100%+1rem)] xs:top-0 pointer-events-none`,
             `left-0 xs:-left-10 sm:-left-20`,
             `w-full xs:w-[calc(100%+80px)] sm:w-[calc(100%+160px)]`,
-            `xs:h-full flex justify-center xs:justify-between gap-8 items-center`,
-          )}
-        >
+            `xs:h-full flex justify-center xs:justify-between gap-8 items-center`
+          )}>
           <Button
             tag="button"
             class={cn(
               `items-swiper-button items-swiper-button-prev`,
               `p-1 sm:p-2`,
-              `pointer-events-auto`,
+              `pointer-events-auto`
             )}
-            aria-label="Vorherige Slide"
-          >
+            aria-label="Vorherige Slide">
             <Icon size={32} name="ui/chevron-left" />
           </Button>
           <Button
@@ -60,10 +56,9 @@ const {
             class={cn(
               `items-swiper-button items-swiper-button-next`,
               `p-1 sm:p-2`,
-              `pointer-events-auto`,
+              `pointer-events-auto`
             )}
-            aria-label="Nächste Slide"
-          >
+            aria-label="Nächste Slide">
             <Icon size={32} name="ui/chevron-right" />
           </Button>
         </nav>
@@ -77,19 +72,19 @@ const {
   import "swiper/swiper-bundle.css";
   document.addEventListener("DOMContentLoaded", () => {
     const swipers = document.querySelectorAll(
-      ".items-swiper-wrapper",
+      ".items-swiper-wrapper"
     ) as NodeListOf<HTMLDivElement>;
 
     swipers.forEach((swiperEl) => {
       const id = swiperEl.id;
       const slidesCount = parseInt(swiperEl.dataset.slidescout || "3", 10);
-      const prevButton = document.querySelector(
-        `#${id} .items-swiper-button-prev`,
+      const prevButton = swiperEl.querySelector(
+        `.items-swiper-button-prev`
       ) as HTMLButtonElement;
-      const nextButton = document.querySelector(
-        `#${id} .items-swiper-button-next`,
+      const nextButton = swiperEl.querySelector(
+        `.items-swiper-button-next`
       ) as HTMLButtonElement;
-      const swiper = new Swiper(`#${id} .items-swiper`, {
+      const swiper = new Swiper(swiperEl.querySelector(`.items-swiper`), {
         slidesPerView: 1,
         spaceBetween: 32,
         breakpoints: {
@@ -101,8 +96,8 @@ const {
           },
         },
         navigation: {
-          nextEl: `#${id} .items-swiper-button-next`,
-          prevEl: `#${id} .items-swiper-button-prev`,
+          nextEl: nextButton,
+          prevEl: prevButton,
         },
         a11y: {
           nextSlideMessage: "Nächste Slide",
