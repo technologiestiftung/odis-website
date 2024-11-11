@@ -1,32 +1,29 @@
 ---
+---
 tags:
   - "home"
   - "project"
   - "post"
-title: ODIS-Supertrumpf
-description: Entdecke Berlin mit dem Supertrumpf-Kartenspiel. Analog und mit offenen Daten.
-date: 2024-12-01
-period: Dezember 2024
-status: abgeschlossen
+title: BranchenPuls
+blogLinkTitle: "Hier geht's zur Anwendung"
+blogLink: https://branchenpuls.odis-berlin.de
+description: Exploriere Berlins Gewerbelandschaft auf einer interaktiven Karte vom Bezirk bis zum Kiez
+date: 2023-03-22
+period: September 2023
+status: abgeschlossen, Weiterentwicklung geplant
 visible: true
 heroImage: ./images/branchenpuls_desktop_visual.png
 mobileImage: ./images/branchenpuls_mobile_visual.png
 projectUrlWithoutProtocol: "branchenpuls.odis-berlin.de"
 showImageInMockup: true
 datasets:
-  - linkText: Straßen mit Frauennamen
-    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
-  - linkText: Solarpotential auf Dächern
-    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
-  - linkText: Luftqualität (NO2)
-    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
-  - linkText: Versiegelungsgrad
-    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
-  - linkText: Schnellimbiss-Anzahl
-    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
-  - linkText: Rettungsdienst-Anfahrt
+  - linkText: Gewerbedaten der IHK
     link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
 gitHubLink: https://github.com/technologiestiftung/branchenpuls
+partners:
+  - name: IHK Berlin
+    url: https://www.ihk.de/berlin/
+    logoPath: ./images/logo_IHK_Berlin.svg
 category: Datenvisualisierung
 ---
 
@@ -80,3 +77,9 @@ import image6 from "./images/joyride_4.png";
 Die dem Branchenpuls zugrundeliegenden Daten werden von der IHK Berlin seit Juli 2023 als offene Daten veröffentlicht. Die Daten können über das zentrale [Berliner Datenportal](https://daten.berlin.de/datensaetze/gewerbedaten-der-ihk-berlin) heruntergeladen werden. Die IHK Berlin fragt die Informationen von ihren Mitgliedsunternehmen ab und aktualisiert die Daten monatlich. Bei Fragen zu den Daten wende dich an den Bereich [Datenmanagement](https://www.ihk.de/berlin/service-und-beratung/digitalisierung/opendata-branchenpuls?shortUrl=%2Fbranchenpuls) bei der IHK Berlin.
 
 Die verarbeiteten Daten und die Skripte zur Datenprozessierung sind in [diesem](https://github.com/technologiestiftung/branchenpuls) Repository zu finden.
+
+### Hinweis zur eingeschränkten Aussagekraft der Gewerbedaten
+
+Der Datensatz beinhaltet Standort- und Strukturinformationen von den über 350.000 Mitgliedsunternehmen inklusive deren Betriebsstätten der IHK Berlin. Darin enthalten sind neben den Geokoordinaten, auch Angaben zur Branche, Beschäftigtengröße und Alter des Unternehmens, wie sie der IHK bei der Anmeldung der Unternehmens gemeldet wurden. Aufgrund unregelmäßiger Aktualisierungsintervalle einzelner Daten, können Informationen vereinzelt nicht mehr aktuell oder veraltet sein. Die IHK Berlin verweist auf ein [FAQ](https://www.ihk.de/berlin/service-und-beratung/digitalisierung/faqs-gewerbedatensatz-5927056), in dem detaillierter auf die Datenqualität eingegangen wird.
+
+
