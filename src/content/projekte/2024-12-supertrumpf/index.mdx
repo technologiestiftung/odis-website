@@ -14,31 +14,65 @@ mobileImage: ./images/branchenpuls_mobile_visual.png
 showImageInMockup: true
 datasets:
   - linkText: Straßen mit Frauennamen
-    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
+    link: https://github.com/EqualStreetNames/equalstreetnames-berlin/tree/eb08375e8c8f1828659321a2f07df6d4db998006?tab=readme-ov-file
   - linkText: Solarpotential auf Dächern
-    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
+    link: https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/dfb86f73-9d41-39f2-a807-c80daf2eaf21
   - linkText: Luftqualität (NO2)
     link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
   - linkText: Versiegelungsgrad
     link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
   - linkText: Schnellimbiss-Anzahl
-    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
+    link: https://daten.berlin.de/datensaetze/gewerbedaten-ihkberlin
   - linkText: Rettungsdienst-Anfahrt
-    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_gewerbedaten@senstadt&bbox=387334,5818371,395957,5822689
+    link: https://daten.berlin.de/datensaetze/regionale-einsatzkennzahlen-der-berliner-feuerwehr
 gitHubLink: https://github.com/technologiestiftung/branchenpuls
 category: Datenvisualisierung
 ---
 
 ## Hintergrund
 
-In welchem Kiez ist die Dichte an Imbissbuden am Höchsten? Wo liegen die Dächer mit dem größten Potential für Solarenergie? Und in welchen Stadtteilen sind Frauen in Straßennamen stärker unterrepräsentiert als in Anderen? Mit unserem Supertrumpf-Spiel laden wir auf eine spielerische Entdeckungsreise durch Berlins Planungsräume ein. Die Daten der ausgewählten sechs Kategorien sind natürlich sind offene Daten im Land Berlin.
+In welche Ecke Berlins sind wahrscheinlich die meisten Döner- und Currywurst-Optionen? Auf welchen Kiez-Dächern befindet sich das größte Potential für Solarenergie? Und in welchen Stadtteilen sind weibliche Straßennamen stärker anwesend oder unterrepräsentiert? Mit unserem Supertrumpf-Spiel laden wir zu einer spielerischen Entdeckungsreise durch Berlins Planungsräume mit offenen Daten ein. 
 
-## Was zeigen die Karten?
+## Was zeigen die Supertrumpf-Karten?
 
-## Ran an die Karten, fertig los
+Jede Karte im Supertrumpfspiel zeigt einen Berliner Prognoseraum. Das ist eine Raumeinheit der sogenannten lebensweltlich orientierten Räume, die zur Planung und Analyse der städtischen Entwicklung verwendet werden. In Berlin gibt es 58 Prognoseräume.
+
+Auf den Karten ist nicht nur die Fläche des jeweiligen Prognoseraums zu sehen, sondern außerdem sechs Datensätze visualisiert:
+
+- **Straßen mit Frauennamen:** Dieser Datensatz zeigt den Prozentanteil der Straßen mit Frauennamen, bemessen an der Gesamtanzahl der Straßen im Planungsraum, die nach Personen benannt sind.
+
+- **Solarpotential auf Dächern:** Diese Daten aus dem Energieatlas zeigen, wie viel Solarenergie pro Jahr erzeugt werden könnte, wenn alle geeigneten Dächer (basierend auf Neigung, Verschattung etc.) mit Photovoltaik ausgestattet wären. Gesamter Energiebedarf der Berliner Haushalte liegt bei ca. 4.000 GWh/a.
+
+- **Luftqualität (NO₂):** Der Stickstoffdioxid-Gehalt wird als Durchschnittswert im Jahr 2023 angegeben. Die Daten stammen von der SenMVKU. Der Straßenverkehr ist eine bedeutende NO₂-Quelle. Der zulässige WHO-Grenzwert liegt bei 10 μg/m³.
+
+- **Versiegelungsgrad:** Diese Umweltatlas-Daten zeigen, wie stark der Prognoseraum im Durchschnitt im Jahr 2021 durch Straßen und Bebauung versiegelt war. Straßen etwa haben einen hohen Grad nahe 100%, teilversiegelte Flächen, wie Pflaster, etwa 50%.
+
+- **Schnellimbiss-Anzahl:** Die Anzahl der Imbisse pro Kiez basiert auf den offenen Gewerbedaten der IHK Berlin. Sie zeigen, wie viele angemeldete Imbisse es im jeweiligen Prognoseraum gibt und wo sie sich befinden.
+
+- **Rettungsdienst-Anfahrt:** Diese Daten stammen von der Berliner Feuerwehr und zeigen die durchschnittlichen Anfahrtszeiten im Fall von kritischen Rettungsdiensteinsätzen, bei denen eine Hilfsfrist von max. 10 Min. das Ziel ist.
 
 ## Datengrundlage und Methode
 
-Die dem Branchenpuls zugrundeliegenden Daten werden von der IHK Berlin seit Juli 2023 als offene Daten veröffentlicht. Die Daten können über das zentrale [Berliner Datenportal](https://daten.berlin.de/datensaetze/gewerbedaten-der-ihk-berlin) heruntergeladen werden. Die IHK Berlin fragt die Informationen von ihren Mitgliedsunternehmen ab und aktualisiert die Daten monatlich. Bei Fragen zu den Daten wende dich an den Bereich [Datenmanagement](https://www.ihk.de/berlin/service-und-beratung/digitalisierung/opendata-branchenpuls?shortUrl=%2Fbranchenpuls) bei der IHK Berlin.
+Die in Supertrumpf verwendeteten Daten basieren auf offenen Daten aus verschiedenen Datenquellen. Für die Verarbeitung der Daten haben wir verschiedene Python-Skripte entwickelt und durchgeführt. 
 
-Die verarbeiteten Daten und die Skripte zur Datenprozessierung sind in [diesem](https://github.com/technologiestiftung/branchenpuls) Repository zu finden.
+Die verarbeiteten Daten und die Skripte zur Datenprozessierung sind in [diesem](https://github.com/technologiestiftung/odis-cardgame) Repository zu finden.
+
+## Ran an die Karten, fertig, Los!
+
+Das Supertrumpf Kartenspiel gibt es tatsächlich nur analog und kann von zwei bis fünf Datenfreund:innen gespielt werden. Gespielt wird nach den klassischen Quartett-Regeln. Zur Erinnerung:
+
+1. Vorbereitung: Verteile die Karten gleichmäßig auf die Mitspieler:innen und lege sie verdeckt als Stapel ab.
+
+2. Zieh deine oberste Karte und wäge ab, worin dein Planungsraum die Nr. 1 ist (z.B. die meisten Schnellimbisse – wer liebt keine Pommes?).
+
+3. Alle anderen ziehen ihre oberste Karte und prüfen, wessen Planungsraum in der gewählten Kategorie wirklich glänzt.
+
+4. Ein Champion mit dem besten Wert räumt alle Karten ab und darf die nächste Runde einläuten.
+
+5. Bei Gleichstand: Jetzt wirdʼs ernst! Der oder die Gewinner:in holt sich die Karten beider Runden.
+
+Spielende: Das Spiel endet, wenn du alle Planungsräume besitzt.
+
+Die Anzahl an Supertrumpf-Spielen ist limitiert. Solltest du Interesse an einem Kartenspiel zum Beispiel zu Demonstrationszwecken haben, melde dich gerne bei odis@ts.berlin 
+
+Wir wünschen ein gutes Blatt!
