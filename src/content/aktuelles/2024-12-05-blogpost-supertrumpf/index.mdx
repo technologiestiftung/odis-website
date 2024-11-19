@@ -1,0 +1,57 @@
+---
+tags:
+  - "post"
+  - "home"
+title: "ODIS-Supertrumpf – Mit offenen Daten Berlin erkunden"
+description: "Mit unserem Supertrumpf-Spiel laden wir zu einer spielerischen Entdeckungsreise durch Berlins Prognoseräume mit offenen Daten ein."
+categories: aktuelles
+visible: true
+urlText: Zum Blogbeitrag
+headerImage:
+  src: ./images/weihnachtsmarktfinder2024.png
+  alt: Screenshot vom Weihnachtsmarktfinder
+readingTime: 5-9
+date: 2024-12-05
+---
+
+
+## Einleitung
+
+### xyz
+
+
+## ODIS-Supertrumpf
+
+Das Kartenspiel ODIS-Supertrumpf lädt dazu ein Eckdaten über Berlin spielerisch und von einem beliebigen Ort aus zu erkunden. Erfahre was die Prognoseräume (eine Raumeinheit der Lebensweltlich orientierten Räume [LOR](https://www.berlin.de/sen/sbw/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/)) in den Kategorien **Solarpotential**, **Imbissbuden**, **Straßennamen**, **Rettungsdienste**, **Versiegelungsgrad** und **Luftqualität** zu bieten haben und wie sie im Vergleich zu anderen abschneiden.
+Anders als beim klassischen "Supertrumpf", bei dem es häufig um Eigenschaften von Autos geht, gibt es beim ODIS-Supertrumpf 58 Karten für die 58 Prognoseräume in Berlin. Die Karten werden unter den Spielenden verteilt und ein Spieler beginnt, indem er oder sie eine der sechs Kategorien von der obersten Karte des eigenen Stapels auswählt. Es sollte eine Kategorie sein, in der der vorliegende Prognoseraum besonders glänzt. Je nach Wertung der Daten wird mit dem höchsten oder niedrigsten Wert getrumpft. 
+Der Spieler mit dem besten Wert gewinnt die Runde und erhält die ausgespielten Karten der Mitspieler. Wer am Ende alle (oder die meisten) Karten hat, gewinnt.
+
+Spieler, die die Stärken der eigenen Karten bzw. der Prognoseräume gut kennen, haben einen strategischen Vorteil. Etwas Glück gehört aber natürlich auch dazu.
+
+
+## Datensätze
+
+Die im ODIS-Supertrumpf verwendeten Daten basieren auf offenen Daten aus verschiedenen Datenquellen und behandeln folgende Themen:
+
+•	Straßen mit Frauennamen: 
+Dieser Datensatz zeigt den Prozentanteil der Straßen mit Frauennamen, bemessen an der Gesamtanzahl der Straßen im Planungsraum, die nach Personen benannt sind.
+•	Solarpotential auf Dächern: 
+Diese Daten aus dem Energieatlas zeigen, wie viel Solarenergie pro Jahr erzeugt werden könnte, wenn alle geeigneten Dächer (basierend auf Neigung, Verschattung etc.) mit Photovoltaik ausgestattet wären. Gesamter Energiebedarf der Berliner Haushalte liegt bei ca. 4.000 GWh/a.
+•	Luftqualität (NO₂): 
+Der Stickstoffdioxid-Gehalt wird als Durchschnittswert im Jahr 2023 angegeben. Die Daten stammen von der SenMVKU. Der Straßenverkehr ist eine bedeutende NO₂-Quelle. Der zulässige WHO-Grenzwert liegt bei 10 μg/m³.
+•	Versiegelungsgrad: 
+Diese Umweltatlas-Daten zeigen, wie stark der Prognoseraum im Durchschnitt im Jahr 2021 durch Straßen und Bebauung versiegelt war. Straßen etwa haben einen hohen Grad nahe 100%, teilversiegelte Flächen, wie Pflaster, etwa 50%.
+•	Schnellimbiss-Anzahl: 
+Die Anzahl der Imbisse pro Kiez basiert auf den offenen Gewerbedaten der IHK Berlin. Sie zeigen, wie viele angemeldete Imbisse es im jeweiligen Prognoseraum gibt und wo sie sich befinden.
+•	Rettungsdienst-Anfahrt: 
+Diese Daten stammen von der Berliner Feuerwehr und zeigen die durchschnittlichen Anfahrtszeiten im Fall von kritischen Rettungsdiensteinsätzen, bei denen eine Hilfsfrist von max. 10 Min. das Ziel ist.
+
+## Methode
+Um die Informationen aus den Datensätzen in Berlin verorten zu können, wurden die darin enthaltenen Ortsangaben zunächst georeferenziert und schließlich mit einem Datensatz zu den Prognoseräumen verschnitten. Die Geodaten zu den Prognoseräumen stehen im Geoportal Berlin zur Verfügung. Nachdem die Überschneidungen der einzelnen Datenpunkte aus dem offenen Datensatz mit den Prognoseräumen identifiziert wurden, konnten die Werte für jeden Prognoseraum aggregiert werden. Mal wurde die Summe berechnet, mal der Durchschnitt oder Prozentanteil.
+
+### Erstellung der Locator-Karten
+Auf den Spielkarten sind, neben der aggregierten Werte zu den sechs Kategorien, die Kartenansichten der einzelnen Prognoseräume sowie allgemeine Informationen zu Fläche und Bevölkerunhgszahl (Stand 2024) abgebildet. Zusätzlich sind die Liniengeometrien der Straßen mit weiblicher Namensgebung und die Standorte der Imbissbuden auf den Karten visualisiert. Die 12 verschiedenen Farben der Prognoseraumflächen stehen für die 12 Bezirke in Berlin.
+Die hier präsentierten Kartenansichten zu den Prognoseräumen haben wir mit dem kostenlosen Online-Tool Datawrapper und deren API-Schnittstelle erstellt. Die Verwendung der Datawrapper-API erlaubt das Vordefinieren der Einstellungen und das Erstellen der 58 Locator-Karten auf einem Schlag.
+Um die API nutzen zu können, muss zunächst ein Token auf der Webseite als Schlüssel generiert werden. Die verarbeiteten Daten und die dazugehörigen Skripte stehen auf Github zur freien Nachnutzung zur Verfügung.
+
+
