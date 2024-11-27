@@ -24,14 +24,30 @@ Das Kartenspiel **ODIS-Supertrumpf** der Open Data Informationsstelle lädt dazu
 ## ODIS-Supertrumpf
 
 Anders als beim klassischen "Supertrumpf", bei dem es häufig um Eigenschaften von Autos geht, gibt es beim ODIS-Supertrumpf 58 Karten für die 58 Prognoseräume, eine Raumeinheit der Lebensweltlich orientierten Räume [LOR](https://www.berlin.de/sen/sbw/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/) in Berlin. 
-Erfahre was die Prognoseräume in den Kategorien **Straßen mit Frauennamen**, **Solarpotential**, **Luftqualität**, **Versiegelung**, **Schnellimbiss-Anzahl** und **Rettungsdienst-Anfahrt** zu bieten haben und wie sie im Vergleich zu anderen abschneiden.
+Erfahre was die Prognoseräume in den Kategorien _Straßen mit Frauennamen_, _Solarpotential_, _Luftqualität_, _Versiegelung_, _Schnellimbiss-Anzahl_ und _Rettungsdienst-Anfahrt_ zu bieten haben und wie sie im Vergleich zu anderen abschneiden.
 Die Karten werden unter den Spielenden verteilt und ein Spieler beginnt, indem er oder sie eine der sechs Kategorien von der obersten Karte des eigenen Stapels auswählt. Es sollte eine Kategorie sein, in der der vorliegende Prognoseraum besonders glänzt. Je nach Wertung der Daten wird mit dem höchsten oder niedrigsten Wert getrumpft. 
 Der Spieler mit dem besten Wert gewinnt die Runde und erhält die ausgespielten Karten der Mitspieler. Wer am Ende alle (oder die meisten) Karten hat, gewinnt.
 
 Spieler, die die Stärken der eigenen Karten bzw. der Prognoseräume gut kennen, haben einen strategischen Vorteil. Etwas Glück gehört aber natürlich auch dazu.
 
+### Datensätze
 
-## Methoden zur Datenaufbereitung
+Die im ODIS-Supertrumpf verwendeten Daten basieren auf offenen Daten aus verschiedenen Quellen und behandeln folgende Themen:
+
+- **Straßen mit Frauennamen:** Dieser Datensatz zeigt den Prozentanteil der Straßen mit Frauennamen, bemessen an der Gesamtanzahl der Straßen im Prognoseraum, die nach Personen benannt sind.
+
+- **Solarpotential auf Dächern:** Diese Daten aus dem Energieatlas zeigen, wie viel Solarenergie pro Jahr theoretisch erzeugt werden könnte, wenn alle geeigneten Dächer (basierend auf Neigung, Verschattung etc.) mit Photovoltaik ausgestattet wären. Der gesamte Energiebedarf der Berliner Haushalte liegt bei ca. 4.000 GWh/a.
+
+- **Luftqualität (NO₂):** Der Stickstoffdioxid-Gehalt wird als Durchschnittswert im Jahr 2023 angegeben. Die Daten stammen von der SenMVKU. Der Straßenverkehr ist eine bedeutende NO₂-Quelle. Der zulässige WHO-Grenzwert liegt bei 10 μg/m³.
+
+- **Versiegelungsgrad:** Diese Umweltatlas-Daten zeigen, wie stark der Prognoseraum im Durchschnitt im Jahr 2021 durch Straßen und Bebauung versiegelt war. Straßen etwa haben einen hohen Grad nahe 100%, teilversiegelte Flächen, wie Pflaster, etwa 50%.
+
+- **Anzahl Schnellimbisse:** Die Anzahl der Imbisse pro Kiez basiert auf den offenen Gewerbedaten der IHK Berlin. Sie zeigen, wie viele angemeldete Imbisse es im jeweiligen Prognoseraum gibt und wo sie sich befinden.
+
+- **Anfahrtszeit Rettungsdienst:** Diese Daten stammen von der Berliner Feuerwehr und zeigen die durchschnittlichen Anfahrtszeiten im Fall von kritischen Rettungsdiensteinsätzen. Eine Hilfsfrist von max. 10 Min. ist das Ziel.
+
+
+## Datenaufbereitung
 Die Bearbeitung der Daten folgte bei allen Themen in etwa dem gleichen Ansatz: Erst die Georeferenzierung, dann die Identifizierung der Schnittmenge zwischen den Geodaten aus den offenen Datensätzen und den Prognoseräumen und schließlich die Aggregierung der Werte. Mal wurde die Summe berechnet, mal der Durchschnitt oder der Prozentanteil.
 Je nach Fall, gibt es einzelne Details zu beachten. 
 
@@ -39,27 +55,32 @@ Der Datensatz zu den Prognoseräumen, der bei allen Kategorien zum Einsatz kam, 
 WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Dienste. Ein WFS-Dienst (Web Feature Service) stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die häufig in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umriss-Geometrien der Prognoseräume.
 Auch mit Hilfe einer GIS-Software (wie z.B. QGIS) können die Geodaten weiter bearbeitet und exportiert werden. Für die Datenauswertungen im ODIS-Supertrumpf wurde das Geodatenformat GeoJSON verwendet. 
 
-1. Georeferenzierung
+1. **Georeferenzierung**
+
 Ist eine Zuordnung der Werte nach einer Raumeinheit entsprechend der LOR bereits im offenen Datensatz gegeben, kann eine Datenauswertung nach Prognoseraum einfach durch Aggregierung der Werte direkt erfolgen (Beispiel IHK Gewerbedaten). Eine Georeferenzierung der Daten mit Hilfe der _Prognoseräume.json_ ist dann lediglich für die Darstellung der Datenpunkte in einer Karte nötig.  
 Liegt der offene Datensatz dagegen ohne direkte Benennung der Prognoseräume als Geodatensatz im GeoJSON-Format vor, können beide Datensätze u.a. mit Hilfe der Bibliothek _geopandas_ in Python geladen und bearbeitet werden (Beispiel Straßen mit Frauennamen).
 Sofern einzelne wenige Einträge leere oder ungültige Geometrien enthalten, besteht die Möglichkeit, diese entweder zu korrigieren oder auszuschließen.
 Es kann auch vorkommen, dass weder eine driekte Zuordnung der Prognoseräume und auch keine Geometrien im Datensatz vorliegen. Im Datensatz zur Luftqualität sind z.B. Angaben zu Breiten- und Längengrad gegeben. Diese können jedoch verwendet werden, um ein Geodatensatz mit neuer Geometrie-Spalte zu definieren.
 
-2. Auswahl des passenden CRS
+2. **Auswahl des passenden CRS**
+
 Bei der Arbeit mit Geodaten ist das Koordinatensystem von entscheidender Bedeutung. Ein Koordinatensystem definiert, wie geografische Positionen auf einer Karte dargestellt und interpretiert werden. Um eine korrekte und aussagekräftige Analyse der geografischen Daten sicherzustellen, müssen beide Geodatensätze (Prognoseräume und offener Datensatz) dasselbe Koordinatensystem verwenden. Stimmen die Koordinatensysteme nicht überein, müssen die Daten eines Datensatzes in das Koordinatensystem des anderen umgerechnet werden.
 Die Wahl des geeigneten Koordinatenreferenzsystems (CRS) hängt vom jeweiligen Anwendungsfall ab. Häufig wird das globale geodätische Referenzsystem WGS 84 verwendet, das als Grundlage für viele geografische und projizierte CRS dient. Solche Koordinatenreferenzsysteme sind durch einen EPSG-Code (European Petroleum Survey Group Code) eindeutig identifizierbar. Sie unterscheiden sich unter anderem darin, dass geografische CRS Koordinaten in Grad (Breiten- und Längengrade) angeben, während projizierte CRS diese in linearen Einheiten wie Metern oder Fuß darstellen.
 Bei den Datenauswertungen für den ODIS-Supertrumpf konnte meist EPSG:4326 verwendet werden. Nur in Fällen, in denen es um eine Flächenberechnung geht, wurde auf ein projiziertes Koordinatenreferenzsystem zurückgegriffen (Beispiel Versiegelungsgrad).
 
-3. Datenschnittmenge identifizieren
+3. **Datenschnittmenge identifizieren**
+
 Nachdem die Koordinatenreferenzsysteme geprüft und ggf. angeglichen wurden, konnte die Schnittmenge zwischen den Geometrien des offenen Datensatzes mit denen der Prognoseräume untersucht werden.
 Es gibt verschiedene Wege, um die Schnittmenge in Python zu identifizieren. Eine Möglichkeit besteht darin, die Methode _intersects_ zu verwenden, um zu überprüfen, ob sich zwei Geometrien schneiden.
 
-4. Aggregierung der Werte nach Prognoseraum
+4. **Aggregierung der Werte nach Prognoseraum**
+
 Die Aggregierung der Werte erfolgt bei fast allen Kategorien im ODIS-Supertrumpf mit Hilfe einer Funktion. Das Verfahren ermöglicht es, basierend auf der Geometrie eines Prognoseraums, die offenen Daten zu filtern und eine Aggregierung durchzuführen. 
 Die Funktion wird anschließend auf jede Zeile im Geodatensatz der Prognoseräume angewendet.
 Zum Schluss werden die aggregierten Werte für jeden Prognoseraum in einem _Data Frame_ gespeichert.
 
 ### Erstellung der Locator-Karten mit Datawrapper
+
 Auf den Spielkarten sind, neben der aggregierten Werte zu den sechs Kategorien, die Kartenansichten der einzelnen Prognoseräume sowie allgemeine Informationen zu Fläche und Bevölkerunhgszahl (Stand 2024) abgebildet. Zusätzlich sind die Liniengeometrien der Straßen mit Frauennamen und die Standorte der Schnellimbisse auf den Karten visualisiert. Die 12 verschiedenen Farben der Prognoseraumflächen stehen für die 12 Bezirke in Berlin.
 Die hier präsentierten Kartenansichten zu den Prognoseräumen haben wir mit dem kostenlosen Online-Tool Datawrapper und der Datawrapper-API erstellt. Die Verwendung der API-Schnittstelle erlaubt das Vordefinieren der Einstellungen und das Erstellen der 58 Locator-Karten auf einem Schlag.
 Um Flächen-, Linien- oder Punktgeometrien als Marker in eine Locator-Karte in Datawrapper einbinden zu können, müssen die Geodaten zunächst als GeoJSON-Datei mit CRS = EPSG:4326 vorliegen. Zudem sollten die Dateien insgesamt nicht größer als 2MB sein und die Anzahl der Punktmarker ist auf max. 100 limitiert. [Weitere Informationen](https://academy.datawrapper.de/article/176-how-to-import-area-line-markers). 
