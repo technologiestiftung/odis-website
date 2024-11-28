@@ -59,21 +59,20 @@ Die Bearbeitung der Daten folgte bei allen Themen in etwa dem gleichen Ansatz: E
 Je nach Fall, gibt es einzelne Details zu beachten. 
 
 Der Datensatz zu den Prognoseräumen, der bei allen Kategorien zum Einsatz kam, ist über das [Geoportal Berlin](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/5e05b70b-50d6-4164-b0fd-9cdef4e43559) als WFS- und WMS-Dienst erhältlich. 
-WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Dienste. Ein WFS-Dienst (Web Feature Service) stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die häufig in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umriss-Geometrien der Prognoseräume.
+WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Dienste. Ein WFS-Dienst stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die häufig in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umriss-Geometrien der Prognoseräume.
 Auch mit Hilfe einer GIS-Software (wie z.B. QGIS) können die Geodaten weiter bearbeitet und exportiert werden. Für die Datenauswertungen im ODIS-Supertrumpf wurde das Geodatenformat GeoJSON verwendet. 
 
 1. **Georeferenzierung**
 
-Ist eine Zuordnung der Werte nach einer Raumeinheit entsprechend der LOR bereits im offenen Datensatz gegeben, kann eine Datenauswertung nach Prognoseraum einfach durch Aggregierung der Werte direkt erfolgen (Beispiel IHK Gewerbedaten). Eine Georeferenzierung der Daten mit Hilfe der _Prognoseräume.json_ ist dann lediglich für die Darstellung der Datenpunkte in einer Karte nötig.  
-Liegt der offene Datensatz dagegen ohne direkte Benennung der Prognoseräume als Geodatensatz im GeoJSON-Format vor, können beide Datensätze u.a. mit Hilfe der Bibliothek _geopandas_ in Python geladen und bearbeitet werden (Beispiel Straßen mit Frauennamen).
-Sofern einzelne wenige Einträge leere oder ungültige Geometrien enthalten, besteht die Möglichkeit, diese entweder zu korrigieren oder auszuschließen.
-Es kann auch vorkommen, dass weder eine driekte Zuordnung der Prognoseräume und auch keine Geometrien im Datensatz vorliegen. Im Datensatz zur Luftqualität sind z.B. Angaben zu Breiten- und Längengrad gegeben. Diese können jedoch verwendet werden, um ein Geodatensatz mit neuer Geometrie-Spalte zu definieren.
+Georeferenzierung meint die Zuweisung von Rauminformationen an einen Datensatz. Ist eine Zuordnung der Werte nach einer Raumeinheit entsprechend der LOR bereits im offenen Datensatz gegeben, kann eine Datenauswertung nach Prognoseraum einfach durch Aggregierung der Werte direkt erfolgen. Eine Georeferenzierung der Daten mit Hilfe der _Prognoseräume.json_ ist dann lediglich für die Darstellung der Datenpunkte in einer Karte nötig.  
+Enthält der offene Datensatz Rauminformationen (z.B. Koordinaten) und keine direkte Benennung der Prognoseräume, kann dieser als Geodatensatz bearbeitet werden. Die Python-Bibliothek GeoPandas ist für die Arbeit mit geographischen Daten und die Georeferenzierung sehr nützlich.
+Sofern einzelne wenige Einträge leere oder ungültige Geometrien enthalten, besteht die Möglichkeit, diese entweder zu korrigieren oder auszuschließen. Anhand der Überschneidungen der Geometrien beider Datensätze kann schließlich eine Georeferenzierung erfolgen.
 
 2. **Auswahl des passenden CRS**
 
 Bei der Arbeit mit Geodaten ist das Koordinatensystem von entscheidender Bedeutung. Ein Koordinatensystem definiert, wie geografische Positionen auf einer Karte dargestellt und interpretiert werden. Um eine korrekte und aussagekräftige Analyse der geografischen Daten sicherzustellen, müssen beide Geodatensätze (Prognoseräume und offener Datensatz) dasselbe Koordinatensystem verwenden. Stimmen die Koordinatensysteme nicht überein, müssen die Daten eines Datensatzes in das Koordinatensystem des anderen umgerechnet werden.
 Die Wahl des geeigneten Koordinatenreferenzsystems (CRS) hängt vom jeweiligen Anwendungsfall ab. Häufig wird das globale geodätische Referenzsystem WGS 84 verwendet, das als Grundlage für viele geografische und projizierte CRS dient. Solche Koordinatenreferenzsysteme sind durch einen EPSG-Code (European Petroleum Survey Group Code) eindeutig identifizierbar. Sie unterscheiden sich unter anderem darin, dass geografische CRS Koordinaten in Grad (Breiten- und Längengrade) angeben, während projizierte CRS diese in linearen Einheiten wie Metern oder Fuß darstellen.
-Bei den Datenauswertungen für den ODIS-Supertrumpf konnte meist EPSG:4326 verwendet werden. Nur in Fällen, in denen es um eine Flächenberechnung geht, wurde auf ein projiziertes Koordinatenreferenzsystem zurückgegriffen (Beispiel Versiegelungsgrad).
+Bei den Datenauswertungen für den ODIS-Supertrumpf konnte meist EPSG:4326 verwendet werden. Nur in Fällen, in denen es um eine Flächenberechnung geht, wurde auf ein projiziertes Koordinatenreferenzsystem zurückgegriffen.
 
 3. **Datenschnittmenge identifizieren**
 
