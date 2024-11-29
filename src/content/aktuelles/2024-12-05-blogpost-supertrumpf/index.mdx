@@ -54,18 +54,20 @@ Die im ODIS-Supertrumpf verwendeten Daten basieren auf offenen Daten aus verschi
   <iframe title="Standorte von Schnellimbissen in Berlin " aria-label="Locator-Karte" id="datawrapper-chart-wKqEk" src="https://datawrapper.dwcdn.net/wKqEk/3/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="1200" data-external="1"></iframe>
 </ContentSection>
 
-## Datenaufbereitung
-Die Bearbeitung der Daten folgte bei fast allen Themen in etwa dem gleichen Ansatz: Erst die Vorbereitung der Datensätze für eine räumliche Analyse, dann die Identifizierung der Schnittmenge zwischen den Geodaten aus den offenen Datensätzen und den Prognoseräumen und schließlich die Aggregierung der Werte nach Prognoseraum. Mal wurde die Summe berechnet, mal der Durchschnitt oder der Prozentanteil.
-Je nach Fall, gibt es einzelne Details zu beachten. 
+## Räumlichen Datenanalyse für ODIS-Supertrumpf
 
-Der Datensatz zu den Prognoseräumen, der bei den meisten Kategorien zum Einsatz kam, ist über das [Geoportal Berlin](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/5e05b70b-50d6-4164-b0fd-9cdef4e43559) als WFS- und WMS-Dienst erhältlich. 
-WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Dienste. Ein WFS-Dienst stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die häufig in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umriss-Geometrien der Prognoseräume.
-Auch mit Hilfe einer GIS-Software (wie z.B. QGIS) können die Geodaten weiter bearbeitet und exportiert werden. Für die Datenauswertungen im ODIS-Supertrumpf wurde das Geodatenformat GeoJSON verwendet. 
+Eine Georeferenzierung bezeichnet die Zuweisung raumbezogener Informationen zu einem Datensatz und ist die Voraussetzung für eine räumliche Datenanalyse. 
+Unter den für das Kartenspiel analysierten offenen Datensätzen gab es einige wenige, die bereits eine Zuordnung der Werte zu einer spezifischen Raumeinheit (z.B. LOR) enthielten. In diesen Fällen konnte eine Datenauswertung nach Prognoseraum durch direkte Aggregierung der Werte erfolgen.
+Enthielt der offene Datensatz Rauminformationen (z.B. Koordinaten), aber keine direkte Zuordnung nach Prognoseraum, konnte eine räumliche Verschneidung mit den Geometrien der Prognoseräume durchgeführt werden. Dies ermöglichte sowohl die Aggregierung der Werte nach Prognoseraum als auch die kartografische Darstellung.
 
-**Räumlichen Datenanalyse für ODIS-Supertrumpf**
+Der Datensatz zu den Prognoseräumen, der für die Untersuchung der räumlichen Überschneidungen zum Einsatz kam, ist über das [Geoportal Berlin](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/5e05b70b-50d6-4164-b0fd-9cdef4e43559) als WFS- und WMS-Dienst erhältlich. 
+WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Dienste. Ein WFS-Dienst stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die häufig in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umrisspolygone der Prognoseräume.
+Auch mit Hilfe einer GIS-Software (wie z.B. QGIS) können die Geodaten weiter bearbeitet und exploriert werden.
 
-Eine Georeferenzierung bezeichnet die Zuweisung raumbezogener Informationen zu einem Datensatz und ermöglicht somit das räumliche Analysieren von Daten. Unter den für das Kartenspiel analysierten offenen Datensätzen gab es einige wenige, die bereits eine Zuordnung der Werte zu einer spezifischen Raumeinheit (z.B. LOR) enthielten. In diesen Fällen konnte eine Datenauswertung nach Prognoseraum durch direkte Aggregierung der Werte ohne vorherige Georeferenzierung erfolgen.
-Enthielt der offene Datensatz Rauminformationen (z.B. Koordinaten), aber keine direkte Zuordnung nach Prognoseraum, konnte eine räumliche Verschneidung mit den Geometrien der Prognoseräume durchgeführt werden. Dies ermöglichte sowohl die Aggregierung der Werte nach Prognoseraum als auch die kartografische Darstellung. Es kann vorkommen, dass einzelne wenige Einträge leere oder ungültige Geometrien enthalten. Hier besteht die Möglichkeit, diese entweder zu korrigieren oder auszuschließen. Die Python-Bibliotheken _geopandas_ und _shapely_ sind im Kontext räumlicher Datenanalyse mit Python besonders erwähnenswert und kamen bei der Datenverarbeitung für das Kartenspiel häufig zum Einsatz.
+Die Python-Bibliotheken _geopandas_ und _shapely_ sind im Kontext räumlicher Datenanalyse mit Python besonders erwähnenswert und kamen bei der Datenverarbeitung für das Kartenspiel häufig zum Einsatz. Das gewählte Geodatenformat war GeoJSON. 
+
+Die Bearbeitung der offenen Daten für ODIS-Supertrumpf folgte meist in etwa dem gleichen Ansatz: Erst die Vorbereitung der Datensätze für eine räumliche Analyse, dann die Identifizierung der Schnittmenge zwischen den Geodaten aus den offenen Datensätzen und den Prognoseräumen und schließlich die Aggregierung der Werte nach Prognoseraum. Mal wurde die Summe berechnet, mal der Durchschnitt oder der Prozentanteil.
+Je nach Fall, gab es einzelne Details zu beachten. 
 
 1. **Auswahl des Koordinatenreferenzsystems (CRS)**
 
@@ -75,8 +77,8 @@ Bei den Datenauswertungen für den ODIS-Supertrumpf konnte meist EPSG:4326 verwe
 
 2. **Datenschnittmenge identifizieren**
 
-Nachdem die Koordinatenreferenzsysteme geprüft und ggf. angeglichen wurden, konnte die Schnittmenge zwischen den Geometrien des offenen Datensatzes mit denen der Prognoseräume untersucht werden.
-Es gibt verschiedene Wege, um die Schnittmenge in Python zu identifizieren. Eine Möglichkeit besteht darin, die Methode _intersects_ zu verwenden. Anhand der Überschneidungen der Geometrien beider Datensätze kann schließlich eine Georeferenzierung erfolgen.
+Nachdem die Koordinatenreferenzsysteme geprüft und ggf. angeglichen wurden, konnte die Überschneidung der Geometrien des offenen Datensatzes mit den Prognoseräumen untersucht werden.
+Es gibt verschiedene Wege, um die Schnittmenge in Python zu identifizieren. Eine Möglichkeit besteht darin, die Methode _intersects_ zu verwenden.
 
 3. **Aggregierung der Werte nach Prognoseraum**
 
@@ -87,13 +89,13 @@ Die Funktion wird anschließend auf jede Zeile im Geodatensatz der Prognoseräum
 
 Auf den Spielkarten sind, neben der aggregierten Werte zu den sechs Kategorien, die Kartenansichten der einzelnen Prognoseräume sowie allgemeine Informationen zu Fläche und Bevölkerunhgszahl (Stand 2024) abgebildet. Zusätzlich sind die Liniengeometrien der Straßen mit Frauennamen und die Standorte der Schnellimbisse auf den Karten visualisiert. Die 12 verschiedenen Farben der Prognoseraumflächen stehen für die 12 Bezirke in Berlin.
 Die hier präsentierten Kartenansichten zu den Prognoseräumen haben wir mit dem kostenlosen Online-Tool Datawrapper und der Datawrapper-API erstellt. Die Verwendung der API-Schnittstelle erlaubt das Vordefinieren der Einstellungen und das Erstellen der 58 Locator-Karten auf einem Schlag.
-Um Flächen-, Linien- oder Punktgeometrien als Marker in eine Locator-Karte in Datawrapper einbinden zu können, müssen die Geodaten zunächst als GeoJSON-Datei mit CRS = EPSG:4326 vorliegen. Zudem sollten die Dateien insgesamt nicht größer als 2MB sein und die Anzahl der Punktmarker ist auf max. 100 limitiert. [Weitere Informationen](https://academy.datawrapper.de/article/176-how-to-import-area-line-markers). 
+Um Flächen-, Linien- oder Punktgeometrien als Marker in eine Locator-Karte in Datawrapper einbinden zu können, müssen die Geodaten zunächst als GeoJSON-Datei mit CRS = EPSG:4326 vorliegen. Zudem sollten die Dateien insgesamt nicht größer als 2MB sein und die Anzahl der Punktmarker ist auf max. 100 limitiert [Weitere Informationen](https://academy.datawrapper.de/article/176-how-to-import-area-line-markers). 
 Da es bei den Standorten der Schnellimbisse mehr als 100 Punktgeometrien gab, haben wir uns hier mit einem Workaround beholfen und die Punkte in Flächen umgewandelt.
 
-Zur Nutzung der API muss zunächst ein API-Token auf der Webseite als Authentifizierungsschlüssel generiert und die Bibliothek _Datawrapper_ im Skript heruntergeladen werden.
+Zur Nutzung der API muss zunächst ein API-Token auf der Datawrapper-Webseite als Authentifizierungsschlüssel generiert und die Bibliothek _Datawrapper_ im Skript heruntergeladen werden.
 Ein wichtiger Schritt bei der Erstellung der Karten ist die Definition der Karteneinstellungen sowie der einzubindenden Marker. Nach der Erstellung der Locator-Karten mit den Metadaten in einem Zielordner wurden die Marker als Python-Dictionary-Objekte angelegt und als JSON-Format übergeben.
 
-Zum Nachvollziehen der Datenaufbereitung für das Kartenspiel ODIS-Supertrimpf stehen die verarbeiteten Daten und die dazugehörigen Skripte sowie die Datenquellen auf [Github](https://github.com/technologiestiftung/odis-cardgame) zur Verfügung.
+Zum Nachvollziehen der Datenaufbereitung für das Kartenspiel ODIS-Supertrumpf stehen die verarbeiteten Daten und die dazugehörigen Skripte sowie die Datenquellen auf [Github](https://github.com/technologiestiftung/odis-cardgame) zur Verfügung.
 
 
 
