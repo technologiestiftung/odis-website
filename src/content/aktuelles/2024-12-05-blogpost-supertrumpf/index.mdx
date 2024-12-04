@@ -34,7 +34,7 @@ Spieler, die die Stärken der eigenen Karten bzw. der Prognoseräume gut kennen,
 
 Die im ODIS-Supertrumpf verwendeten Daten basieren auf offenen Daten aus verschiedenen Quellen und behandeln folgende Themen:
 
-- **Straßen mit Frauennamen:** Dieser Datensatz zeigt den Prozentanteil der Straßen mit Frauennamen, bemessen an der Gesamtanzahl der Straßen im Prognoseraum, die nach Personen benannt sind.
+- **Straßen mit Frauennamen:** Der Prozentsatz der Straßen mit Frauennamen, bemessen an der Gesamtzahl der nach Personen benannten Straßen im jeweiligen Prognoseraum, basiert auf offenen Daten von OpenStreetMap und Wikidata. Der Datensatz ist in einem öffentlichen GitHub-Repository verfügbar. 
 
 - **Solarpotential auf Dächern:** Diese Daten aus dem Energieatlas zeigen, wie viel Solarenergie pro Jahr theoretisch erzeugt werden könnte, wenn alle geeigneten Dächer (basierend auf Neigung, Verschattung etc.) mit Photovoltaik ausgestattet wären. Der gesamte Energiebedarf der Berliner Haushalte liegt bei ca. 4.000 GWh/a.
 
@@ -54,7 +54,7 @@ Die im ODIS-Supertrumpf verwendeten Daten basieren auf offenen Daten aus verschi
   <iframe title="Standorte von Schnellimbissen in Berlin " aria-label="Locator-Karte" id="datawrapper-chart-wKqEk" src="https://datawrapper.dwcdn.net/wKqEk/3/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="1200" data-external="1"></iframe>
 </ContentSection>
 
-## Räumlichen Datenanalyse für ODIS-Supertrumpf
+## Räumliche Datenanalyse
 
 Eine Georeferenzierung bezeichnet die Zuweisung raumbezogener Informationen zu einem Datensatz und ist die Voraussetzung für eine räumliche Datenanalyse. 
 Unter den für das Kartenspiel analysierten offenen Datensätzen gab es einige wenige, die bereits eine Zuordnung der Werte zu einer spezifischen Raumeinheit (z.B. LOR) enthielten. In diesen Fällen konnte eine Datenauswertung nach Prognoseraum durch direkte Aggregierung der Werte erfolgen.
@@ -71,19 +71,19 @@ Je nach Fall, gab es einzelne Details zu beachten.
 
 1. **Auswahl des Koordinatenreferenzsystems (CRS)**
 
-Bei der Arbeit mit Geodaten ist das Koordinatensystem von entscheidender Bedeutung. Ein Koordinatensystem definiert, wie geografische Positionen auf einer Karte dargestellt und interpretiert werden. Um eine korrekte und aussagekräftige Analyse der geografischen Daten sicherzustellen, müssen beide Geodatensätze (Prognoseräume und offener Datensatz) dasselbe Koordinatensystem verwenden. Stimmen die Koordinatensysteme nicht überein, müssen die Daten eines Datensatzes in das Koordinatensystem des anderen umgerechnet werden.
-Die Wahl des geeigneten Koordinatenreferenzsystems (CRS) hängt vom jeweiligen Anwendungsfall ab. Häufig wird das globale geodätische Referenzsystem WGS 84 verwendet, das als Grundlage für viele geografische und projizierte CRS dient. Solche Koordinatenreferenzsysteme sind durch einen EPSG-Code (European Petroleum Survey Group Code) eindeutig identifizierbar. Sie unterscheiden sich unter anderem darin, dass geografische CRS Koordinaten in Grad (Breiten- und Längengrade) angeben, während projizierte CRS diese in linearen Einheiten wie Metern oder Fuß darstellen.
-Bei den Datenauswertungen für den ODIS-Supertrumpf konnte meist EPSG:4326 verwendet werden. Nur in Fällen, in denen es um eine Flächenberechnung geht, wurde auf ein projiziertes Koordinatenreferenzsystem zurückgegriffen.
+Bei der Arbeit mit Geodaten ist das Koordinatenreferenzsystem (CRS) von entscheidender Bedeutung. Ein CRS definiert, wie geografische Positionen auf einer Karte dargestellt und interpretiert werden. Um eine korrekte und aussagekräftige Analyse der geografischen Daten sicherzustellen, müssen beide Geodatensätze (z.B. Prognoseräume und offener Datensatz) dasselbe CRS verwenden. Stimmen dieses nicht überein, müssen die Daten eines Datensatzes in das CRS des anderen umgerechnet werden.
+Die Wahl des geeigneten CRS hängt vom jeweiligen Anwendungsfall ab. Häufig wird das globale geodätische Referenzsystem WGS 84 verwendet, das als Grundlage für viele geografische und projizierte CRS dient. Solche CRS sind durch einen EPSG-Code (European Petroleum Survey Group Code) eindeutig identifizierbar. Sie unterscheiden sich unter anderem darin, dass geografische CRS Koordinaten in Grad (Breiten- und Längengrade) angeben, während projizierte CRS diese in linearen Einheiten wie Metern oder Fuß darstellen.
+Bei den Datenauswertungen für den ODIS-Supertrumpf konnte meist EPSG:4326 verwendet werden. Nur in Fällen, in denen es um eine Flächenberechnung geht, wurde auf ein projiziertes CRS zurückgegriffen.
 
 2. **Datenschnittmenge identifizieren**
 
-Nachdem die Koordinatenreferenzsysteme geprüft und ggf. angeglichen wurden, konnte die Überschneidung der Geometrien des offenen Datensatzes mit den Prognoseräumen untersucht werden.
+Nachdem die Koordinatenreferenzsysteme der Datensätze im ODIS-Supertrumpf geprüft und ggf. angeglichen wurden, konnte die Überschneidung der Geometrien des offenen Datensatzes mit den Prognoseräumen untersucht werden.
 Es gibt verschiedene Wege, um die Schnittmenge in Python zu identifizieren. Eine Möglichkeit besteht darin, die Methode _intersects_ zu verwenden.
 
 3. **Aggregierung der Werte nach Prognoseraum**
 
-Die Aggregierung der Werte erfolgt bei fast allen Kategorien im ODIS-Supertrumpf mit Hilfe einer Funktion. Das Verfahren ermöglicht es, basierend auf der Geometrie eines Prognoseraums, die offenen Daten zu filtern und eine Aggregierung durchzuführen. 
-Die Funktion wird anschließend auf jede Zeile im Geodatensatz der Prognoseräume angewendet. Zum Schluss werden die aggregierten Werte für jeden Prognoseraum in einem _Data Frame_ gespeichert.
+Die Aggregierung der Werte erfolgte bei fast allen Kategorien im Kartenspiel mit Hilfe einer Funktion. Das Verfahren ermöglichte es, basierend auf der Geometrie eines Prognoseraums, die offenen Daten zu filtern und eine Aggregierung durchzuführen. 
+Die Funktion wurde anschließend auf jede Zeile im Geodatensatz der Prognoseräume angewendet. Zum Schluss wurden die aggregierten Werte für jeden Prognoseraum in einem _Data Frame_ gespeichert.
 
 ### Erstellung der Locator-Karten mit Datawrapper
 
