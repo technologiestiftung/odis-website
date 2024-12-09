@@ -43,7 +43,7 @@ Die im ODIS-Supertrumpf verwendeten Daten basieren auf offenen Daten aus verschi
 - **[Anfahrtszeit Rettungsdienst](https://www.berliner-feuerwehr.de/service/open-data/#c15579):** Diese Daten stammen von der Berliner Feuerwehr und zeigen die durchschnittlichen Anfahrtszeiten im Fall von kritischen Rettungsdiensteinsätzen. Eine Hilfsfrist von max. 10 Min. ist das Ziel.
 
 
-Besonders anschaulich lassen sich die Daten zu den Straßen mit Frauennamen und die Anzahl der Schnellimbisse auf einer Karte darstellen. Im Datensatz zu den Straßen mit den Frauennamen helfen die im Datensatz enthaltenden Liniengeometrien bei der genauen Verortung der Straßen in den jeweiligen Prognoseräumen. Es wird schnell deutlich, dass vor allem im Zentrum Berlins viele bedeutende Frauen geehrt werden. Im Südwesten Berlins ist der "Kronprinzessinenweg" in Zehlendorf Nord, angrenzend an den Forst Düppel, besonders prägnant zu erkennen. Im Bereich des Grunewalds geht dieser Weg in den "Königsweg" über. 
+Besonders anschaulich lassen sich die Daten zu den Straßen mit Frauennamen und die Anzahl der Schnellimbisse auf einer Karte darstellen. Im Datensatz zu den Straßen mit den Frauennamen helfen die im Datensatz enthaltenden Liniengeometrien bei der genauen Verortung der Straßen in den jeweiligen Prognoseräumen. Es wird schnell deutlich, dass vor allem im Zentrum Berlins viele bedeutende Frauen geehrt werden. Im Südwesten Berlins ist der "Kronprinzessinenweg" in Zehlendorf Nord, angrenzend an den Forst Düppel, besonders prägnant auf der Karte zu erkennen. Im Bereich des Grunewalds geht dieser Weg in den "Königsweg" über. 
 Die Visualisierung der Schnellimbisse basiert auf den Punktgeometrien im Datensatz. Hier zeigt sich, dass das Angebot in den äußeren Bezirken mit zunehmender Entfernung zum S-Bahn-Ring abnimmt und sich besonders viele Schnellimbisse in Neukölln tummeln. 
 
 <ContentSection class="sm:px-20 w-full h-auto">
@@ -62,7 +62,9 @@ Eine Georeferenzierung bezeichnet die Zuweisung raumbezogener Informationen zu e
 Unter den für das Kartenspiel analysierten offenen Datensätzen gab es einige wenige, die bereits eine Zuordnung der Werte zu einer spezifischen Raumeinheit (z.B. LOR) enthielten. In diesen Fällen konnte eine Datenauswertung nach Prognoseraum durch direkte Aggregierung der Werte erfolgen.
 Enthielt der offene Datensatz Rauminformationen (z.B. Koordinaten), aber keine direkte Benennung des Prognoseraums, konnte die räumliche Überschneidung der Koordinaten mit den Geometrien der Prognoseräume untersucht werden. Dies ermöglichte sowohl die Aggregierung der Werte nach Prognoseraum als auch die kartografische Darstellung.
 
-##***"Eine Georeferenzierung bezeichnet die Zuweisung raumbezogener Informationen zu einem Datensatz und ist die Voraussetzung für eine räumliche Datenanalyse."***
+<Quote>
+  Eine Georeferenzierung bezeichnet die Zuweisung raumbezogener Informationen zu einem Datensatz und ist die Voraussetzung für eine räumliche Datenanalyse.
+</Quote>
 
 Der Datensatz zu den Prognoseräumen, der für die Untersuchung der räumlichen Überschneidungen zum Einsatz kam, ist über das [Geoportal Berlin](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/5e05b70b-50d6-4164-b0fd-9cdef4e43559) als WFS- und WMS-Dienst erhältlich. 
 WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Dienste. Ein WFS-Dienst stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die in der Regel in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umrisspolygone der Prognoseräume.
