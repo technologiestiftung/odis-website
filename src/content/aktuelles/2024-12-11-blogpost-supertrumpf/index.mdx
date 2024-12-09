@@ -77,7 +77,7 @@ Je nach Fall, gab es einzelne Details zu beachten.
 
 1. **Auswahl des Koordinatenreferenzsystems (CRS)**
 
-Bei der Arbeit mit Geodaten ist das Koordinatenreferenzsystem (CRS) von entscheidender Bedeutung. Ein CRS definiert, wie geografische Positionen auf einer Karte dargestellt und interpretiert werden. Um eine korrekte und aussagekräftige Analyse der geografischen Daten sicherzustellen, müssen beide Geodatensätze (z.B. Prognoseräume und offener Datensatz) dasselbe CRS verwenden. Stimmen dieses nicht überein, müssen die Daten eines Datensatzes in das CRS des anderen umgerechnet werden.
+Bei der Arbeit mit Geodaten ist das Koordinatenreferenzsystem (CRS) von entscheidender Bedeutung. Ein CRS definiert, wie geografische Positionen auf einer Karte dargestellt und interpretiert werden. Um eine korrekte und aussagekräftige Analyse der geografischen Daten sicherzustellen, müssen beide Geodatensätze (hier Prognoseräume und offener Datensatz) dasselbe CRS verwenden. Stimmen dieses nicht überein, müssen die Daten eines Datensatzes in das CRS des anderen umgerechnet werden.
 Die Wahl des geeigneten CRS hängt vom jeweiligen Anwendungsfall ab. Häufig wird das globale geodätische Referenzsystem WGS 84 verwendet, das als Grundlage für viele geografische und projizierte CRS dient. Solche CRS sind durch einen EPSG-Code (European Petroleum Survey Group Code) eindeutig identifizierbar. Sie unterscheiden sich unter anderem darin, dass geografische CRS Koordinaten in Grad (Breiten- und Längengrade) angeben, während projizierte CRS diese in linearen Einheiten wie Metern oder Fuß darstellen.
 Bei den Datenauswertungen für den ODIS-Supertrumpf konnte meist EPSG:4326 verwendet werden. Nur in Fällen, in denen es um eine Flächenberechnung geht, wurde auf ein projiziertes CRS zurückgegriffen.
 
@@ -96,7 +96,7 @@ Die Funktion wurde auf jede Zeile im Geodatensatz der Prognoseräume angewendet.
 Auf den Spielkarten sind, neben der aggregierten Werte zu den sechs Kategorien, die Kartenansichten der einzelnen Prognoseräume abgebildet. Zusätzlich sind die Liniengeometrien der Straßen mit Frauennamen und die Standorte der Schnellimbisse auf den Karten visualisiert. Die 12 verschiedenen Farben der Prognoseraumflächen stehen für die 12 Bezirke in Berlin.
 
 ### Automatisierte Locator-Karten mit Datawrapper-API
-Die auf den Spielkarten präsentierten Kartenansichten zu den Prognoseräumen haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) und der Datawrapper-API erstellt. Die Verwendung der API-Schnittstelle erlaubt das Vordefinieren der Einstellungen und das Erstellen der 58 Locator-Karten auf einem Schlag.
+Die auf den Spielkarten präsentierten Kartenansichten zu den Prognoseräumen haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) und der Datawrapper-API erstellt. Die Verwendung der API-Schnittstelle erlaubte das Vordefinieren der Einstellungen und das Erstellen der 58 Locator-Karten auf einem Schlag.
 Um Flächen-, Linien- oder Punktgeometrien als Marker in eine Locator-Karte in Datawrapper einbinden zu können, müssen die Geodaten zunächst als GeoJSON-Datei mit CRS = EPSG:4326 vorliegen. Zudem sollten die Dateien insgesamt nicht größer als 2MB sein und die Anzahl der Punktmarker ist auf max. 100 limitiert ([Weitere Informationen](https://academy.datawrapper.de/article/176-how-to-import-area-line-markers)). 
 Da es bei den Standorten der Schnellimbisse mehr als 100 Punktgeometrien gab, haben wir uns hier mit einem Workaround beholfen und die Punkte in Flächen umgewandelt.
 
