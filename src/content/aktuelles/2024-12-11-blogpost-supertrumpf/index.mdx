@@ -77,12 +77,6 @@ Der Datensatz zu den Prognoseräumen, der für die Untersuchung der räumlichen 
 WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Geodienste. Ein WFS-Dienst stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die in der Regel in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umrisspolygone der Prognoseräume.
 Auch mit Hilfe einer GIS-Software wie etwa QGIS können die Geodaten weiter bearbeitet und exploriert werden. 
 
-<ContentSection 
-class="sm:px-6"
-withShadow>
-  <iframe title="Ausschnitt aus dem Datensatz zu den Prognoseräumen" aria-label="Tabelle" id="datawrapper-chart-NsxDt" src="https://datawrapper.dwcdn.net/NsxDt/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="54078" data-external="1"></iframe>
-</ContentSection>
-
 Die Python-Bibliotheken _geopandas_ und _shapely_ sind im Kontext räumlicher Datenanalyse mit Python besonders erwähnenswert und kamen bei der Datenverarbeitung für das Kartenspiel häufig zum Einsatz. Das gewählte Geodatenformat war GeoJSON. 
 
 Die Bearbeitung der offenen Daten für Open Data Supertrumpf folgte meistens dem gleichen Ansatz: Erst wurden die die Datensätze für eine räumliche Analyse vorbereitet, dann wurde die Schnittmenge zwischen den Geodaten aus den offenen Datensätzen und den Prognoseräumen identifiziert und schließlich die Werte nach Prognoseraum aggregiert. Je nach Kategorie wurde die Summe berechnet, der Durchschnitt oder der Prozentanteil.
