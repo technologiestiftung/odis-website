@@ -47,6 +47,12 @@ Die im Open Data Supertrumpf verwendeten Daten basieren auf offenen Daten aus ve
 Besonders anschaulich lassen sich die Daten zu den Straßen mit Frauennamen und die Anzahl der Schnellimbisse auf einer Karte darstellen. Im Datensatz zu den Straßen mit den Frauennamen helfen die im Datensatz enthaltenden Liniengeometrien bei der genauen Verortung der Straßen in den jeweiligen Prognoseräumen. Es wird schnell deutlich, dass vor allem im Zentrum Berlins viele bedeutende Frauen geehrt werden. Im Südwesten Berlins ist der "Kronprinzessinenweg" in Zehlendorf Nord, angrenzend an den Forst Düppel, besonders prägnant auf der Karte zu erkennen. Im Bereich des Grunewalds geht dieser Weg in den "Königsweg" über. 
 Die Visualisierung der Schnellimbisse basiert auf den Punktgeometrien im Datensatz. Hier zeigt sich, dass das Angebot in den äußeren Bezirken mit zunehmender Entfernung zum S-Bahn-Ring abnimmt und sich besonders viele Schnellimbisse in Neukölln tummeln. 
 
+<ContentSection 
+class="sm:px-6"
+withShadow>
+  <iframe title="Ausschnitt aus dem Datensatz zum Thema Straßennamen" aria-label="Tabelle" id="datawrapper-chart-xe2ls" src="https://datawrapper.dwcdn.net/xe2ls/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="1590" data-external="1"></iframe>
+</ContentSection>
+
 <ContentSection class="sm:px-20 w-full h-auto">
   <iframe title="Berliner Straßen mit Frauennamen" aria-label="Locator-Karte" id="datawrapper-chart-ouXj9" src="https://datawrapper.dwcdn.net/ouXj9/1/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="1100" data-external="1"></iframe>
 </ContentSection>
@@ -70,6 +76,12 @@ Enthielt der offene Datensatz Rauminformationen wie zum Beispiel Koordinaten, ab
 Der Datensatz zu den Prognoseräumen, der für die Untersuchung der räumlichen Überschneidungen zum Einsatz kam, ist über das [Geoportal Berlin](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/5e05b70b-50d6-4164-b0fd-9cdef4e43559) als WFS- und WMS-Dienst erhältlich. 
 WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Geodienste. Ein WFS-Dienst stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die in der Regel in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umrisspolygone der Prognoseräume.
 Auch mit Hilfe einer GIS-Software wie etwa QGIS können die Geodaten weiter bearbeitet und exploriert werden. 
+
+<ContentSection 
+class="sm:px-6"
+withShadow>
+  <iframe title="Ausschnitt aus dem Datensatz zu den Prognoseräumen" aria-label="Tabelle" id="datawrapper-chart-NsxDt" src="https://datawrapper.dwcdn.net/NsxDt/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="54078" data-external="1"></iframe>
+</ContentSection>
 
 Die Python-Bibliotheken _geopandas_ und _shapely_ sind im Kontext räumlicher Datenanalyse mit Python besonders erwähnenswert und kamen bei der Datenverarbeitung für das Kartenspiel häufig zum Einsatz. Das gewählte Geodatenformat war GeoJSON. 
 
