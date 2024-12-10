@@ -56,8 +56,6 @@ import image2 from "./images/2_supertrumpf_visual.png"
   caption="Karte zum PRG Zehlendorf Nord."
 />
 
-Die Visualisierung der Schnellimbisse basiert auf den Punktgeometrien im Datensatz. Hier zeigt sich, dass das Angebot in den äußeren Bezirken mit zunehmender Entfernung zum S-Bahn-Ring abnimmt und sich besonders viele Schnellimbisse in Neukölln tummeln. 
-
 <ContentSection 
 class="sm:px-20 w-full h-auto"
 withShadow>
@@ -68,6 +66,7 @@ withShadow>
   <iframe title="Berliner Straßen mit Frauennamen" aria-label="Locator-Karte" id="datawrapper-chart-ouXj9" src="https://datawrapper.dwcdn.net/ouXj9/1/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="1100" data-external="1"></iframe>
 </ContentSection>
 
+Die Visualisierung der Schnellimbisse basiert auf den Punktgeometrien im Datensatz. Hier zeigt sich, dass das Angebot in den äußeren Bezirken mit zunehmender Entfernung zum S-Bahn-Ring abnimmt und sich besonders viele Schnellimbisse in Neukölln tummeln. 
 
 <ContentSection class="sm:px-20 w-full h-auto">
   <iframe title="Standorte von Schnellimbissen in Berlin " aria-label="Locator-Karte" id="datawrapper-chart-wKqEk" src="https://datawrapper.dwcdn.net/wKqEk/3/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="1100" data-external="1"></iframe>
@@ -88,7 +87,7 @@ Der Datensatz zu den Prognoseräumen, der für die Untersuchung der räumlichen 
 WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Geodienste. Ein WFS-Dienst stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die in der Regel in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umrisspolygone der Prognoseräume.
 Auch mit Hilfe einer GIS-Software wie etwa QGIS können die Geodaten weiter bearbeitet und exploriert werden. 
 
-Die Python-Bibliotheken _geopandas_ und _shapely_ sind im Kontext räumlicher Datenanalyse mit Python besonders erwähnenswert und kamen bei der Datenverarbeitung für das Kartenspiel häufig zum Einsatz. Das gewählte Geodatenformat war GeoJSON. 
+Die Python-Bibliotheken [geopandas](https://geopandas.org/en/stable/getting_started/introduction.html) und [shapely](https://shapely.readthedocs.io/en/stable/manual.html) sind im Kontext räumlicher Datenanalyse mit Python besonders erwähnenswert und kamen bei der Datenverarbeitung für das Kartenspiel häufig zum Einsatz. Das gewählte Geodatenformat war GeoJSON. 
 
 Die Bearbeitung der offenen Daten für Open Data Supertrumpf folgte meistens dem gleichen Ansatz: Erst wurden die die Datensätze für eine räumliche Analyse vorbereitet, dann wurde die Schnittmenge zwischen den Geodaten aus den offenen Datensätzen und den Prognoseräumen identifiziert und schließlich die Werte nach Prognoseraum aggregiert. Je nach Kategorie wurde die Summe berechnet, der Durchschnitt oder der Prozentanteil.
 Je nach Datensatz, gab es einzelne Details zu beachten. 
@@ -122,13 +121,13 @@ caption="ODIS Supertrumpf – Übersicht der 58 Karten."
 />
 </ContentSection>
 
-
 ### Automatisierte Locator-Karten mit Datawrapper-API
 Die auf den Spielkarten präsentierten Kartenansichten zu den Prognoseräumen haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) und der Datawrapper-API erstellt. Die Verwendung der API-Schnittstelle erlaubte das Vordefinieren der Einstellungen und das Erstellen der 58 Locator-Karten auf einen Schlag.
 Um Flächen-, Linien- oder Punktgeometrien als Marker in eine Locator-Karte in Datawrapper einbinden zu können, müssen die Geodaten zunächst als GeoJSON-Datei mit CRS = EPSG:4326 vorliegen. Zudem sollten die Dateien insgesamt nicht größer als 2MB sein und die Anzahl der Punktmarker ist auf max. 100 limitiert ([Weitere Informationen](https://academy.datawrapper.de/article/176-how-to-import-area-line-markers)). 
-Da es bei den Standorten der Schnellimbisse mehr als 100 Punktgeometrien gab, haben wir uns hier mit einem Workaround beholfen und die Punkte in Flächen umgewandelt.
-
-Zur Nutzung der API muss zunächst ein API-Token auf der Datawrapper-Webseite als Authentifizierungsschlüssel generiert und die Bibliothek _Datawrapper_ im Skript heruntergeladen werden.
+Da es bei den Standorten der Schnellimbisse mehr als 100 Punktgeometrien gab, haben wir uns hier mit einem Workaround beholfen und die Punkte in Flächen umgewandelt. Zur Nutzung der API muss zunächst ein API-Token auf der Datawrapper-Webseite als Authentifizierungsschlüssel generiert und die Bibliothek _Datawrapper_ im Skript heruntergeladen werden.
 Ein wichtiger Schritt bei der Erstellung der Karten ist die Definition der Karteneinstellungen sowie der einzubindenden Marker. Nach der Erstellung der Locator-Karten mit den Metadaten in einem Zielordner wurden die Marker als Python-Dictionary-Objekte angelegt und als JSON-Format übergeben.
 
 Zum Nachvollziehen der Datenaufbereitung für das Kartenspiel Open Data Supertrumpf stehen die verarbeiteten Daten und die dazugehörigen Skripte sowie die Datenquellen auf [Github](https://github.com/technologiestiftung/odis-cardgame) zur Verfügung.
+Solltest du Interesse an einem Kartenspiel zum Beispiel zu Demonstrationszwecken haben, melde dich gerne bei odis@ts.berlin oder schau einfach mal bei ODIS vorbei, vielleicht läuft gerade eine Partie...
+
+Wir wünschen ein gutes Blatt!
