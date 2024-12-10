@@ -48,6 +48,14 @@ Die im Open Data Supertrumpf verwendeten Daten basieren auf offenen Daten aus ve
 
 
 Besonders anschaulich lassen sich die Daten zu den Straßen mit Frauennamen und die Anzahl der Schnellimbisse auf einer Karte darstellen. Im Datensatz zu den Straßen mit den Frauennamen helfen die im Datensatz enthaltenden Liniengeometrien bei der genauen Verortung der Straßen in den jeweiligen Prognoseräumen. Es wird schnell deutlich, dass vor allem im Zentrum Berlins viele bedeutende Frauen geehrt werden. Im Südwesten Berlins ist der "Kronprinzessinenweg" in Zehlendorf Nord, angrenzend an den Forst Düppel, besonders prägnant auf der Karte zu erkennen. Im Bereich des Grunewalds geht dieser Weg in den "Königsweg" über. 
+
+import image2 from "./images/2_supertrumpf_visual.png"
+
+<ImageSection
+  src={image2}
+  caption="Karte zum PRG Zehlendorf Nord."
+/>
+
 Die Visualisierung der Schnellimbisse basiert auf den Punktgeometrien im Datensatz. Hier zeigt sich, dass das Angebot in den äußeren Bezirken mit zunehmender Entfernung zum S-Bahn-Ring abnimmt und sich besonders viele Schnellimbisse in Neukölln tummeln. 
 
 <ContentSection 
@@ -103,7 +111,17 @@ Die Funktion wurde auf jede Zeile im Geodatensatz der Prognoseräume angewendet.
 
 ### Daten und Design
 
-Auf den Spielkarten sind, neben der aggregierten Werte zu den sechs Kategorien, die Kartenansichten der einzelnen Prognoseräume abgebildet. Zusätzlich sind die Liniengeometrien der Straßen mit Frauennamen und die Standorte der Schnellimbisse auf den Karten visualisiert. Die 12 verschiedenen Farben der Prognoseraumflächen stehen für die 12 Bezirke in Berlin.
+Auf den 58 Spielkarten sind, neben der aggregierten Werte zu den sechs Kategorien, die Kartenansichten der einzelnen Prognoseräume abgebildet. Zusätzlich sind die Liniengeometrien der Straßen mit Frauennamen und die Standorte der Schnellimbisse auf den Karten visualisiert. Die 12 verschiedenen Farben der Prognoseraumflächen stehen für die 12 Bezirke in Berlin.
+
+import image3 from "./images/3_supertrumpf_visual.png"
+
+<ContentSection class="sm:px-6">
+<ImageSection class="sm:container sm:mx-auto"
+src={image3}
+caption="ODIS Supertrumpf – Übersicht der 58 Karten."
+/>
+</ContentSection>
+
 
 ### Automatisierte Locator-Karten mit Datawrapper-API
 Die auf den Spielkarten präsentierten Kartenansichten zu den Prognoseräumen haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) und der Datawrapper-API erstellt. Die Verwendung der API-Schnittstelle erlaubte das Vordefinieren der Einstellungen und das Erstellen der 58 Locator-Karten auf einen Schlag.
