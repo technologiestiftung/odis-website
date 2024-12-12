@@ -1,0 +1,84 @@
+---
+tags:
+  - "home"
+  - "project"
+  - "Open Data Supertrumpf – The Making Of"
+title: Open Data Supertrumpf – Mit offenen Daten Berlin erkunden
+description: Mit unserem Kartenspiel Open Data Supertrumpf laden wir zu einer spielerischen Entdeckungsreise durch Berlins Prognoseräume mit offenen Daten ein.
+slug: "supertrumpf"
+date: 2024-12-11
+period: Dezember 2024
+status: abgeschlossen
+visible: true
+heroImage: ./images/ODIS-Supertrumpf-MockUp-20241115-rot.png
+showImageInMockup: true
+datasets:
+  - linkText: Straßen mit Frauennamen
+    link: https://github.com/EqualStreetNames/equalstreetnames-berlin/tree/eb08375e8c8f1828659321a2f07df6d4db998006?tab=readme-ov-file
+  - linkText: Solarpotential auf Dächern
+    link: https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/dfb86f73-9d41-39f2-a807-c80daf2eaf21
+  - linkText: Luftqualität (NO2)
+    link: https://fbinter.stadt-berlin.de/fb/wfs/data/senstadt/s_messpunkte
+  - linkText: Versiegelungsgrad
+    link: https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=showMap&mapId=k01_02versieg2021@senstadt
+  - linkText: Schnellimbiss-Anzahl
+    link: https://github.com/IHKBerlin/IHKBerlin_Gewerbedaten/tree/master
+  - linkText: Rettungsdienst-Anfahrt
+    link: https://www.berliner-feuerwehr.de/service/open-data/#c15579
+gitHubLink: https://github.com/technologiestiftung/odis-cardgame
+category: Datenvisualisierung
+---
+
+
+## Hintergrund
+
+In welchen Prognoseräumen Berlins sind wahrscheinlich die meisten Döner- und Currywurst- Optionen zu finden? Auf welchen Dächern befindet sich das größte Potential für Solarenergie? Und wo sind Straßen mit Frauennamen stärker vertreten oder unterrepräsentiert? Mit unserem Kartenspiel Open Data Supertrumpf laden wir zu einer spielerischen Entdeckungsreise durch Berlins Prognoseräume mit offenen Daten ein.  
+
+
+## Was zeigen die Supertrumpf-Karten?
+
+Jede Karte im Open Data Supertrumpf zeigt einen der 58 Berliner Prognoseräume. Das ist eine Raumeinheit der sogenannten lebensweltlich orientierten Räume [LOR](https://www.berlin.de/sen/sbw/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/), die zur Planung und Analyse der städtischen Entwicklung verwendet werden. 
+
+Die im Open Data Supertrumpf verwendeten Daten basieren auf offenen Daten aus verschiedenen Quellen und behandeln folgende Themen:
+
+- **Straßen mit Frauennamen:** Der Prozentsatz der Straßen mit Frauennamen, bemessen an der Gesamtzahl der nach Personen benannten Straßen im jeweiligen Prognoseraum, basiert auf offenen Daten von OpenStreetMap und Wikidata. Der Datensatz ist in einem öffentlichen GitHub-Repository verfügbar. 
+
+- **Solarpotential auf Dächern:** Diese Daten aus dem Energieatlas zeigen, wie viel Solarenergie pro Jahr erzeugt werden könnte, wenn alle geeigneten Dächer (basierend auf Neigung, Verschattung etc.) mit Photovoltaik ausgestattet wären. Der gesamte Energiebedarf der Berliner Haushalte liegt bei ca. 4.000 GWh/a.
+
+- **Luftqualität (NO₂):** Der Stickstoffdioxid-Gehalt wird als Durchschnittswert im Jahr 2023 angegeben. Die Daten stammen von der Senatsverwaltung für Mobiltität, Verkehr, Klimaschutz und Umwelt. Der Straßenverkehr ist eine bedeutende NO₂-Quelle. Der zulässige WHO-Grenzwert liegt bei 10 μg/m³.
+
+- **Versiegelungsgrad:** Diese Umweltatlas-Daten zeigen, wie stark der Prognoseraum im Durchschnitt im Jahr 2021 durch Straßen und Bebauung versiegelt war. Straßen etwa haben einen hohen Grad nahe 100%, teilversiegelte Flächen wie Pflaster, etwa 50%.
+
+- **Anzahl Schnellimbisse:** Die Anzahl der Imbisse pro Kiez basiert auf den offenen Gewerbedaten der IHK Berlin. Sie zeigen, wie viele angemeldete Imbisse es im jeweiligen Prognoseraum gibt und wo sie sich befinden.
+
+- **Anfahrtszeit Rettungsdienst:** Diese Daten stammen von der Berliner Feuerwehr und zeigen die durchschnittlichen Anfahrtszeiten im Fall von kritischen Rettungsdiensteinsätzen. Eine Hilfsfrist von max. 10 Min. ist das Ziel.
+
+
+## Datengrundlage und Methode
+
+Die dem Kartenspiel zugrunde liegenden Daten stammen z.B. von der GDI Berlin, von der Berliner Feuerwehr und von der IHK. Zur Datenverarbeitung haben wir Python-Skripte entwickelt und für die Erstellung der Kartenansichten kamen das Online-Tool [Datawrapper](https://www.datawrapper.de/) und die zugehörige API-Schnittstelle zum Einsatz.
+Zu den wichtigen Schritten der Datenaufbereitung gehörten unter anderem die Vorbereitung der Datensätze für eine räumliche Analyse, die Identifizierung der Schnittmenge zwischen den Geodaten aus den offenen Datensätzen und den Prognoseräumen sowie die Aggregierung der Werte nach Prognoseraum.  
+
+Die verarbeiteten Daten und die Skripte zur Datenprozessierung sind in diesem [GitHub-Repository](https://github.com/technologiestiftung/odis-cardgame) zu finden.
+
+## Ran an die Karten, fertig, Los!
+
+Das Supertrumpf Kartenspiel gibt es tatsächlich nur analog und kann von zwei bis fünf Datenfreund:innen gespielt werden. Gespielt wird nach den klassischen Quartett-Regeln. Zur Erinnerung:
+
+1. Vorbereitung: Teile die Karten gleichmäßig unter den Mitspieler:innen auf und lege sie verdeckt als Stapel ab. Alternativ kann eine bestimmte Anzahl an Karten an jede Person verteilt werden, um das Spiel zu verkürzen.
+
+2. Zieh deine oberste Karte und wäge ab, worin dein Prognoseraum die Nr. 1 ist (z.B. die meisten Schnellimbisse – wer liebt keine Pommes?).
+
+3. Alle anderen ziehen ihre oberste Karte und prüfen, wessen Prognoseraum in der gewählten Kategorie wirklich glänzt. Je nach Wertung der Daten wird mit dem höchsten oder niedrigsten Wert getrumpft.
+
+4. Ein Champion mit dem besten Wert räumt alle Karten ab und darf die nächste Runde einläuten.
+
+5. Bei Gleichstand: Jetzt wirdʼs ernst! Die Karten der aktuellen Runde werden in die Mitte gelegt, und die nächste Runde entscheidet über deren Gewinner. Die Kategorie wird beibehalten. Wer die nächste Runde gewinnt, erhält die Karten beider Runden.
+
+Spiel-Ende: Das Spiel endet, wenn eine Person alle Prognoseräume besitzt. 
+Alternativ endet das Spiel nach einer festgelegten Rundenzahl, wobei die Person mit den meisten Karten gewinnt.
+
+Open Data Supertrumpf ist nur in begrenzter Stückzahl erhältlich. Solltest du Interesse an einem Kartenspiel zum Beispiel zu Demonstrationszwecken haben, melde dich gerne bei odis@ts.berlin.
+
+Wir wünschen ein gutes Blatt!
+
