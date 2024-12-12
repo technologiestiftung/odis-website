@@ -30,7 +30,7 @@ import image1 from "./images/1_supertrumpf_visual.png"
 
 Welche Datengrundlage für Open Data Supertrumpf zur Verfügung steht und wie die Daten verarbeitet und visualisiert wurden, erfährst du im Folgenden.
 
-### Offene Daten im Einsatz: Berlins Prognoseräume im Fokus
+## Offene Daten im Einsatz: Berlins Prognoseräume im Fokus
 
 Die im Open Data Supertrumpf verwendeten Daten basieren auf offenen Daten aus verschiedenen Quellen und behandeln folgende Themen:
 
@@ -47,7 +47,7 @@ Die im Open Data Supertrumpf verwendeten Daten basieren auf offenen Daten aus ve
 - **[Anfahrtszeit Rettungsdienst](https://www.berliner-feuerwehr.de/service/open-data/#c15579):** Diese Daten stammen von der Berliner Feuerwehr und zeigen die durchschnittlichen Anfahrtszeiten im Fall von kritischen Rettungsdiensteinsätzen. Eine Hilfsfrist von max. 10 Min. ist das Ziel.
 
 
-Besonders anschaulich lassen sich die Daten zu den Straßen mit Frauennamen und die Anzahl der Schnellimbisse auf einer Karte darstellen. Im Datensatz zu den Straßen mit den Frauennamen helfen die enthaltenden Liniengeometrien bei der genauen Verortung der Straßen in den jeweiligen Prognoseräumen. Es wird schnell deutlich, dass vor allem im Zentrum Berlins viele bedeutende Frauen geehrt werden. Im Südwesten Berlins ist der "Kronprinzessinenweg" in Zehlendorf Nord, angrenzend an den Forst Düppel, besonders prägnant auf der Karte zu erkennen. Im Bereich des Grunewalds geht dieser Weg in den "Königsweg" über. 
+Besonders anschaulich lassen sich die Daten zu den Straßen mit Frauennamen und die Anzahl der Schnellimbisse auf einer Karte darstellen. Die Liniengeometrien der Straßen mit Frauennamen ermöglichen eine präzise Verortung innerhalb der jeweiligen Prognoseräume. Es wird schnell deutlich, dass vor allem im Zentrum Berlins viele bedeutende Frauen geehrt werden. Im Südwesten Berlins ist der "Kronprinzessinenweg" in Zehlendorf Nord, angrenzend an den Forst Düppel, besonders prägnant auf der Karte zu erkennen. Im Bereich des Grunewalds geht dieser Weg in den "Königsweg" über. 
 
 import image2 from "./images/2_supertrumpf_visual.png"
 
@@ -116,7 +116,7 @@ Es gibt verschiedene Wege, um die Schnittmenge in Python zu identifizieren. Eine
 Die Aggregierung der Werte erfolgte bei fast allen Kategorien im Kartenspiel mit Hilfe einer Funktion. Das Verfahren ermöglichte es, basierend auf der Geometrie eines Prognoseraums, die offenen Daten zu filtern und eine Aggregierung durchzuführen. 
 Die Funktion wurde auf jede Zeile im Geodatensatz der Prognoseräume angewendet. Zum Schluss wurden die aggregierten Werte für jeden Prognoseraum in einem _Data Frame_ gespeichert.
 
-### Daten und Design
+## Daten, Karten und Design
 
 Auf den 58 Spielkarten sind, neben der aggregierten Werte zu den sechs Kategorien, die Kartenansichten der einzelnen Prognoseräume abgebildet. Zusätzlich sind die Liniengeometrien der Straßen mit Frauennamen und die Standorte der Schnellimbisse auf den Karten visualisiert. Die 12 verschiedenen Farben der Prognoseraumflächen stehen für die 12 Bezirke in Berlin.
 
@@ -131,7 +131,7 @@ caption="ODIS Supertrumpf – Übersicht der 58 Karten."
 
 ### Automatisierte Locator-Karten mit Datawrapper-API
 Die auf den Spielkarten präsentierten Kartenansichten zu den Prognoseräumen haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) und der Datawrapper-API erstellt. Die Verwendung der API-Schnittstelle erlaubte das Vordefinieren der Einstellungen und das Erstellen der 58 Locator-Karten auf einen Schlag.
-Um Flächen-, Linien- oder Punktgeometrien als Marker in eine Locator-Karte in Datawrapper einbinden zu können, müssen die Geodaten zunächst als GeoJSON-Datei mit CRS = EPSG:4326 vorliegen. Zudem sollten die Dateien insgesamt nicht größer als 2MB sein und die Anzahl der Punktmarker ist auf max. 100 limitiert ([Weitere Informationen](https://academy.datawrapper.de/article/176-how-to-import-area-line-markers)). 
+Um Flächen-, Linien- oder Punktgeometrien als Marker in eine Locator-Karte in Datawrapper einbinden zu können, müssen die Geodaten zunächst als GeoJSON-Datei mit CRS = EPSG:4326 vorliegen. Zudem sollten die Dateien insgesamt nicht größer als 2MB sein und die Anzahl der Punktmarker ist auf max. 100 limitiert ([weitere Informationen](https://academy.datawrapper.de/article/176-how-to-import-area-line-markers)). 
 Da es bei den Standorten der Schnellimbisse mehr als 100 Punktgeometrien gab, haben wir uns hier mit einem Workaround beholfen und die Punkte in Flächen umgewandelt. Zur Nutzung der API muss zunächst ein API-Token auf der Datawrapper-Webseite als Authentifizierungsschlüssel generiert und die Bibliothek _Datawrapper_ im Skript heruntergeladen werden.
 Ein wichtiger Schritt bei der Erstellung der Karten ist die Definition der Karteneinstellungen sowie der einzubindenden Marker. Nach der Erstellung der Locator-Karten mit den Metadaten in einem Zielordner wurden die Marker als Python-Dictionary-Objekte angelegt und als JSON-Format übergeben.
 
