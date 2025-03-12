@@ -3,7 +3,7 @@ tags:
   - "home"
   - "post"
   - "Berlin Open Data – eine Analyse der Metadatenqualität mithilfe von KI"
-title: "Metadatenqualität-Analyse mit KI"
+title: "Metadaten auf die 1 - Mithilfe von KI?"
 description: Metadaten sind das A und O beim Bereitstellen von offenen Daten. Wie gut sind diese im Berliner Open Data Portal? Wir haben mithilfe von KI nachgeschaut.
 categories: aktuelles
 visible: true
@@ -15,25 +15,35 @@ readingTime: 5-6
 date: 2025-03-09
 ---
 
-## Metadaten im Schatten der Datenqualität
+## Warum brauchen wir Metadaten in guter Qualität?
 
-Wenn über die Qualität von Daten gesprochen wird, sind in der Regel die Informationen in einem Datensatz selbst gemeint. Nachvollziehbar, denn für die Weiterverwendung von Daten ist entscheidend, dass Daten gut strukturiert und vollständig sind und leicht durch Maschinen und Softwareprogramme interpretiert werden können. 
+Endlich Feierabend und man freut sich auf einen schönen Filmabend. Man könnte ja endlich mal wieder den absoluten Lieblingsfilm aus der Jugendzeit schauen, doch der genaue Titel will einfach nicht mehr einfallen. Aber du erinnerst dich, dass es etwas mit „Zeitreisen“ zu tun hatte. Dank der vielen Informationen über einen Film wie Genre, Schlagwörter oder Darsteller:innen findet du den Film dann doch schnell, schonst deine Nerven und dem entspannten Filmabend steht nichts mehr im Weg. 
 
-Weniger Beachtung findet hingegen meist die Qualität der Metadaten, also die Informationen über den Datensatz. Dabei spielt die Qualität von Metadaten eine entscheidende Rolle. Sie entscheidet darüber, ob Datensätze schnell aufzufinden sind und helfen maßgeblich den Kontext der Daten zu verstehen, unerlässlich, um Daten richtig und im Sinne der Datenbereitstellenden weiterzuverarbeiten.
+Was für die Suche von Filmen oder Büchern gilt, ist für offene Daten nicht anders.
+
+Metadaten sind notwendig, um:
+- Daten im Open Data Portal und in Dateninventurkatalogen finden können
+- zu verstehen was Daten beinhalten und wie sie zu interpretieren sind
+- die Qualität und Nutzungsmöglichkeiten für Daten besser einschätzen können
+- die automatisierte Nachnutzung durch Software und Maschinen zu ermöglichen
 
 ## Was wissen wir über die Qualität von Metadaten?
 
-Doch wie steht es um die Metadatenqualität der über 3.000 Datensätze im Berliner Datenportal und damit verbunden: Verspielen offene Daten aufgrund ihrer mangelhaften Metadatenqualität bereits ihr Potenzial? Die ODIS ist dieser Frage in einem kleinen Werkstattprojekt nachgegangen und in die Welt der Berliner Metadaten eingetaucht.
+Was in unserem Alltag in vielen Bereichen schon selbstverständlich ist, muss nicht für Datenportale gelten. 
+
+Wir haben uns daher gefragt: Wie steht es um die Metadatenqualität der über 3.000 Datensätze im Berliner Datenportal und damit verbunden: Stimmt der erste subjektive Eindruck, dass die Qualität von Metadaten bislang eine Schwachstelle darstellen?
+
+Die ODIS ist dieser Frage in einem kleinen Werkstattprojekt nachgegangen und hat mithilfe eines KI-Assistenten die Qualität von Metadaten untersucht.
 
 ### Wir betrachten die Metadaten anhand von 6 Kategorien
 
 In Datenportalen wie dem Berliner Open Data Portal werden Metadaten standardisiert abgefragt. Für jeden Datensatz ist die datenhaltende Stelle angehalten beispielsweise einen Titel oder eine Beschreibung des Datensatzes zu formulieren. Abgefragt werden aber auch Angaben zur geographischen Granularität, also ob die Daten zum Beispiel auf Adress- oder Bezirksebene vorliegen, oder Informationen und Kontaktmöglichkeiten zur bereitstellenden Behörde, damit sich Datennutzende bei Rückfragen an die verantwortliche Stelle wenden können. 
 
-import image1 from "./images/unsplash_IBGaAVOWhPk.png"
+import image1 from "./images/Vorlage_Kategorien.png"
 
 <ImageSection
   src={image1}
-  caption="beispiel Metadateneintrag"
+  caption="Der Metadateneintrag Berliner Weihnachtsmärkte zeigt beispielhaft für welche Kategorien Informationen über den Datensatz angegeben werden müssen. Wir haben uns 6 Kategorien genauer angeschaut, die wir für die Bewertung der Metdatenqualtiät als zentral ansehen"
 />
 
 Dementsprechend haben wir uns die bestehenden Kategorien genauer angeschaut und die Metadatenqualität anhand von sechs Kategorien untersucht:
@@ -68,6 +78,21 @@ Jede Kategorie wird anhand einer Bewertungsskala in 3 Abstufungsstufen eingeordn
 ......
 
 ......
+<ContentSection 
+  class="sm:px-20 w-full h-auto"
+  withShadow>
+    <iframe 
+      title="KI-Analyse der Metadatenqualität im Berlin Open Data Portal" 
+      aria-label="Mehrere Torten" 
+      id="datawrapper-chart-yys72" 
+      src="https://www.datawrapper.de/_/dvP2j/" 
+      scrolling="no" 
+      frameborder="0" 
+      style="width: 0; min-width: 100% !important; border: none;" 
+      height="611" 
+      data-external="1">
+    </iframe>
+</ContentSection>
 
 .....
 
@@ -91,7 +116,7 @@ data-external="1">
 
 ....
 
-## Ein Blick in die Methodik
+## Vorgehen und Methodik
 
 Bei der Menge an Datensätzen war schnell klar, dass eine händische Überprüfung praktisch nicht umzusetzen ist. Inspiriert von Tim Fangmeyer etc….Projekt haben wir uns daher ebenfalls einem KI-Assistenten bedient. Denn Metadaten sind Informationen in Textform und somit geeignet, ein KI-Sprachmodell zu füttern. Wir haben uns für ChatGPT entschieden und sind Schritt für Schritt vorgegangen:
 
@@ -103,13 +128,8 @@ Die Ergebnisse wurden in der AG Open Data vorgestellt.
 
 Link zum Handout!
 
-....
 
-<Quote>
-  Hoffentlich ist ChatGPT nett zu mir wenn die Roboter die Welt übernehmen. – Anna Meide 
-</Quote>
 
-Ciao ODIS-Fans
 
 <script
   type="text/javascript"
