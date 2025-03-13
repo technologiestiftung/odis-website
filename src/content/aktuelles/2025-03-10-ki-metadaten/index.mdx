@@ -118,13 +118,13 @@ data-external="1">
 
 ## Vorgehen und Methodik
 
-Bei der Menge an Datensätzen war schnell klar, dass eine händische Überprüfung praktisch nicht umzusetzen ist. Inspiriert von Tim Fangmeyer's Projekt (DCATAP_DE AI Analyzer)[https://github.com/tifa365/dcatapde_ai_analyzer] haben wir uns daher ebenfalls einem KI-Assistenten bedient. Denn Metadaten sind Informationen in Textform und somit geeignet, ein KI-Sprachmodell zu füttern. Wir haben uns für GPT4o-mini von OpenAI entschieden, haben aber auch eine Implementierung mit dem Modell Mistrall Small von der eruopäischen KI-Firma Mistral implementiert. In der Folge sind wir Schritt für Schritt vorgegangen:
+Bei der Menge an Datensätzen war schnell klar, dass eine händische Überprüfung praktisch nicht umzusetzen ist. Inspiriert von Tim Fangmeyer's Projekt [DCATAP_DE AI Analyzer](https://github.com/tifa365/dcatapde_ai_analyzer) haben wir uns daher ebenfalls einem KI-Assistenten bedient. Denn Metadaten sind Informationen in Textform und somit geeignet, ein KI-Sprachmodell zu füttern. Wir haben uns für GPT4o-mini von OpenAI entschieden, haben aber auch eine Implementierung mit dem Modell Mistrall Small von der eruopäischen KI-Firma Mistral implementiert. In der Folge sind wir Schritt für Schritt vorgegangen:
 
-1. Zuerst haben wir die Metadaten vom (Berliner Datenregister)[https://datenregister.berlin.de/user/login] und dessen (CKAN)[https://ckan.org/] API heruntergelden. 
+1. Zuerst haben wir die Metadaten vom [Berliner Datenregister](https://datenregister.berlin.de/user/login) und dessen [CKAN](https://ckan.org/) API heruntergelden. 
 2. Anschließend erstellten wir einen sogenannten Few-Shot Datensatz. In diesem haben wir Beispiele von Metadaten des Berliner Open Data Portals verwendet und selbst pro Kategorie bewertet. Dabei haben wir pro Kategorie jeweils mindestens 3 Beispiele pro möglicher Bewertung heraus gesucht, sofern möglich. 
 3. Dieser Datensatz wurde nun dem KI-Modell als Teil des Prompts mitgegeben, damit es Anhaltspunkte erhält, in welchen Beispielfällen, welche Bewertung samt Begründung in unseren Augen sinnvoll wäre.
 4. Von den heruntergeladenen Metadaten haben wir nicht alle möglichen Felder dem Modell als Eingabe zur Überprüfung gegeben, sondern ledignlich die folgenden: Titel, Beschreibung, geographischer Bezug, geographische Granularität, Tags sowie die zuständige, datenhaltende Stelle.
-5. Um sicherzugehen, dass das KI-Modell auch immer unsere 6 Kategorien samt Begründung ausgibt, haben wir die (Instructor Bibliothek)[https://python.useinstructor.com/] verwendet, welche sicher stellt, dass das Ausgabeformat der KI immer konsistent ist.
+5. Um sicherzugehen, dass das KI-Modell auch immer unsere 6 Kategorien samt Begründung ausgibt, haben wir die [Instructor Bibliothek](https://python.useinstructor.com/) verwendet, welche sicher stellt, dass das Ausgabeformat der KI immer konsistent ist.
 6. Schließlich haben wir dann mit den Ausgaben der KI eine Excel-Datei erstellt, welche die Metadaten samt ihrer Bewertungen und der Begründungen dieser enthält.
 
 
