@@ -3,6 +3,7 @@ tags:
   - "home"
   - "post"
   - "Berlin Open Data – eine Analyse der Metadatenqualität mithilfe von KI"
+  - "Aktuelle Datenperle – Dark Stores"
 title: "Metadaten auf die 1 - Mithilfe von KI?"
 description: Metadaten sind das A und O beim Bereitstellen von offenen Daten. Wie gut sind diese im Berliner Open Data Portal? Wir haben mithilfe von KI nachgeschaut.
 categories: aktuelles
@@ -35,16 +36,19 @@ Wir haben uns daher gefragt: Wie steht es um die Metadatenqualität der über 3.
 
 Die ODIS ist dieser Frage in einem kleinen Werkstattprojekt nachgegangen und hat mithilfe eines KI-Assistenten die Qualität von Metadaten untersucht.
 
-### Wir betrachten die Metadaten anhand von 6 Kategorien
+### Wir betrachten die Metadaten anhand von sechs Kategorien
 
 In Datenportalen wie dem Berliner Open Data Portal werden Metadaten standardisiert abgefragt. Für jeden Datensatz ist die datenhaltende Stelle angehalten beispielsweise einen Titel oder eine Beschreibung des Datensatzes zu formulieren. Abgefragt werden aber auch Angaben zur geographischen Granularität, also ob die Daten zum Beispiel auf Adress- oder Bezirksebene vorliegen, oder Informationen und Kontaktmöglichkeiten zur bereitstellenden Behörde, damit sich Datennutzende bei Rückfragen an die verantwortliche Stelle wenden können. 
 
-import image1 from "./images/Vorlage_Kategorien.png"
+import image1 from "./images/metadaten.png"
 
-<ImageSection
-  src={image1}
-  caption="Der Metadateneintrag Berliner Weihnachtsmärkte zeigt beispielhaft für welche Kategorien Informationen über den Datensatz angegeben werden müssen. Wir haben uns 6 Kategorien genauer angeschaut, die wir für die Bewertung der Metdatenqualtiät als zentral ansehen"
+<ContentSection class="sm:px-8">
+<ImageSection class="sm:container sm:mx-auto"
+src={image1}
+caption="Der Metadateneintrag Berliner Weihnachtsmärkte zeigt beispielhaft für welche Kategorien Informationen über den Datensatz angegeben werden müssen. Wir haben uns 6 Kategorien genauer angeschaut, die wir für die Bewertung der Metdatenqualtiät als zentral ansehen"
 />
+</ContentSection>
+
 
 Dementsprechend haben wir uns die bestehenden Kategorien genauer angeschaut und die Metadatenqualität anhand von sechs Kategorien untersucht:
 -	Dateninhalt
@@ -54,10 +58,12 @@ Dementsprechend haben wir uns die bestehenden Kategorien genauer angeschaut und 
 -	Qualität der angegebenen Tags
 -	Angaben zur datenhaltenden Stelle
 
-Jede Kategorie wird anhand einer Bewertungsskala in 3 Abstufungsstufen eingeordnet: Exzellent, Mittelmäßig und Unzureichend
+Jede Kategorie wird anhand einer Bewertungsskala in drei Abstufungsstufen eingeordnet: exzellent, mittelmäßig und unzureichend.
 
 
 ### Das Ergebnis: In den meisten Kategorien besteht Nachholbedarf
+
+Anhand der untenstehenden Datenvisualisierungen kann man sich schnell einen Überblick über die Verteilung der einzelnen Kategorien verschaffen. 
 
 <ContentSection 
   class="sm:px-20 w-full h-auto"
@@ -75,46 +81,18 @@ Jede Kategorie wird anhand einer Bewertungsskala in 3 Abstufungsstufen eingeordn
     </iframe>
 </ContentSection>
 
-......
+Die Daten lassen sich auch in einem Ranking darstellen, das aufzeigt, wie gut einezelne Berliner Institutionen Metadaten einpflegen.   
 
-......
-<ContentSection 
-  class="sm:px-20 w-full h-auto"
-  withShadow>
-    <iframe 
-      title="KI-Analyse der Metadatenqualität im Berlin Open Data Portal" 
-      aria-label="Mehrere Torten" 
-      id="datawrapper-chart-yys72" 
-      src="https://www.datawrapper.de/_/dvP2j/" 
-      scrolling="yes" 
-      frameborder="0" 
-      style="width: 0; min-width: 100% !important; border: none;" 
-      height="611" 
-      data-external="1">
-    </iframe>
-</ContentSection>
-
-.....
-
-
-
-<iframe 
-title="KI-Analyse der Metadatenqualität Berliner Institutionen im Vergleich" 
+<iframe title="Ranking: Metadatenqualität der Berliner Behörden" 
 aria-label="Balken" 
 id="datawrapper-chart-dvP2j" 
-src="https://www.datawrapper.de/_/dvP2j/" 
+src="https://datawrapper.dwcdn.net/dvP2j/8/" 
 scrolling="no" 
 frameborder="0" 
 style="width: 0; min-width: 100% !important; border: none;" 
-height="1062" 
-data-external="1">
+height="1049" data-external="1">
 </iframe>
 
-...
-
-....
-
-....
 
 ## Vorgehen und Methodik
 
