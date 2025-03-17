@@ -1,0 +1,123 @@
+---
+tags:
+  - "home"
+  - "post"
+  - "Metadaten-Tags"
+title: "Metadaten im KI-Check: Wie schneiden Berlins offene Daten ab?"
+description: Metadaten sind das A und O beim Bereitstellen von offenen Daten. Wie gut sind diese im Berliner Open Data Portal? Wir haben mithilfe von KI nachgeschaut.
+categories: aktuelles
+visible: true
+urlText: Zum Blogbeitrag
+headerImage:
+  src: ./images/metadata_detective.png
+  alt: Metadaten, eine abstrakte Darstellung
+readingTime: 5-6
+date: 2025-03-14
+---
+
+## Warum brauchen wir Metadaten in guter Qualität?
+
+Endlich Feierabend und man freut sich auf einen schönen Filmabend. Man könnte ja endlich mal wieder den absoluten Lieblingsfilm aus der Jugendzeit schauen, doch der genaue Titel will einfach nicht mehr einfallen. Aber du erinnerst dich, dass es etwas mit „Zeitreisen“ zu tun hatte. Dank der vielen Informationen über einen Film wie Genre, Schlagwörter oder Darsteller:innen findet du den Film dann doch schnell, schonst deine Nerven und dem entspannten Filmabend steht nichts mehr im Weg. 
+
+Was für die Suche von Filmen oder Büchern gilt, ist für offene Daten nicht anders.
+
+Metadaten sind notwendig, um:
+- Daten im Open Data Portal und in Dateninventurkatalogen finden können,
+- zu verstehen was Daten beinhalten und wie sie zu interpretieren sind,
+- die Qualität und Nutzungsmöglichkeiten für Daten besser einschätzen können,
+- die automatisierte Nachnutzung durch Software und Maschinen zu ermöglichen.
+
+## Wie steht es um die Metadaten im Berliner Datenportal?
+
+Metadaten müssen vollständig und korrekt vorliegen. Was in unserem Alltag in vielen Bereichen selbstverständlich ist, findet in der Open Data Welt bisher nur bedingt Berücksichtigung. 
+
+Wir haben uns daher gefragt: Wie steht es um die Metadatenqualität der über 3.000 Datensätze im Berliner Datenportal und damit verbunden: Stimmt der erste subjektive Eindruck, dass die Qualität von Metadaten bislang eine Schwachstelle darstellen?
+
+Die ODIS ist dieser Frage in einem kleinen Werkstattprojekt nachgegangen und hat mithilfe eines KI-Assistenten die Qualität von Metadaten untersucht.
+
+### Wir betrachten die Metadaten anhand von sechs Kategorien
+
+In Datenportalen wie dem Berliner Open Data Portal werden Metadaten standardisiert abgefragt. Für jeden Datensatz ist die datenhaltende Stelle angehalten beispielsweise einen Titel oder eine Beschreibung des Datensatzes zu formulieren. Abgefragt werden aber auch Angaben zur geographischen Granularität, also ob die Daten zum Beispiel auf Adress- oder Bezirksebene vorliegen, oder Informationen und Kontaktmöglichkeiten zur bereitstellenden Behörde, damit sich Datennutzende bei Rückfragen an die verantwortliche Stelle wenden können. 
+
+import image1 from "./images/metadaten.png"
+
+<ContentSection class="sm:px-8">
+<ImageSection class="sm:container sm:mx-auto"
+src={image1}
+caption="Der Metadateneintrag Berliner Weihnachtsmärkte zeigt beispielhaft für welche Kategorien Informationen über den Datensatz angegeben werden müssen. Wir haben uns 6 Kategorien genauer angeschaut, die wir für die Bewertung der Metdatenqualtiät als zentral ansehen."
+/>
+</ContentSection>
+
+
+Dementsprechend haben wir uns die bestehenden Kategorien genauer angeschaut und die Metadatenqualität anhand der folgenden sechs Kategorien untersucht:
+-	Dateninhalt
+-	Beschreibung der Methodik
+-	Angaben zur Datenqualität
+-	Geographische Genauigkeit
+-	Qualität der angegebenen Tags
+-	Angaben zur datenhaltenden Stelle
+
+Jede Kategorie wird anhand einer Bewertungsskala in drei Abstufungsstufen eingeordnet: exzellent, mittelmäßig und unzureichend.
+
+
+### Das Ergebnis: In den meisten Kategorien besteht Nachholbedarf
+
+Anhand der untenstehenden Datenvisualisierungen kann man sich schnell einen Überblick über die Verteilung der einzelnen Kategorien verschaffen. Demnach besteht insbesondere bei der (doch eigentlich so essentiellen) Beschreibung der Datensätze noch deutlich Luft nach oben.
+
+<ContentSection 
+  class="sm:px-20 w-full h-auto"
+  withShadow>
+    <iframe 
+      title="KI-Analyse der Metadatenqualität im Berlin Open Data Portal" 
+      aria-label="Mehrere Torten" 
+      id="datawrapper-chart-yys72" 
+      src="https://datawrapper.dwcdn.net/yys72/2/" 
+      scrolling="no" 
+      frameborder="0" 
+      style="width: 0; min-width: 100% !important; border: none;" 
+      height="611" 
+      data-external="1">
+    </iframe>
+</ContentSection>
+
+
+Die Daten lassen sich auch in einem Ranking darstellen, das aufzeigt, wie hochwertig einzelne Berliner Institutionen ihre Metadaten eintragen. 
+
+<iframe title="Ranking: Metadatenqualität der Berliner Behörden" 
+aria-label="Balken" 
+id="datawrapper-chart-dvP2j" 
+src="https://datawrapper.dwcdn.net/dvP2j/8/" 
+scrolling="no" 
+frameborder="0" 
+style="width: 0; min-width: 100% !important; border: none;" 
+height="1049" data-external="1">
+</iframe>
+
+
+### Vorgehen und Methodik
+
+Bei der Menge an Datensätzen war schnell klar, dass eine händische Überprüfung praktisch nicht umzusetzen ist. Inspiriert von Tim Fangmeyer's Projekt [DCATAP_DE AI Analyzer](https://github.com/tifa365/dcatapde_ai_analyzer) haben wir uns daher ebenfalls einem KI-Assistenten bedient. Denn Metadaten sind Informationen in Textform und somit geeignet, ein KI-Sprachmodell zu füttern. Wir haben für diese Auswertung GPT4o-mini von OpenAI verwendet, haben aber auch eine Implementierung mit dem Modell Mistrall Small von der eruopäischen KI-Firma Mistral implementiert. So sind wir Schritt für Schritt vorgegangen:
+
+1. Zuerst haben wir die Metadaten vom [Berliner Datenportal](https://daten.berlin.de) und dessen [CKAN](https://ckan.org/) API heruntergelden. 
+2. Anschließend erstellten wir einen sogenannten Few-Shot Datensatz. In diesem haben wir Beispiele von Metadaten des Berliner Open Data Portals verwendet und selbst pro Kategorie bewertet. Dabei haben wir pro Kategorie jeweils mindestens 3 Beispiele pro möglicher Bewertung heraus gesucht, sofern möglich. 
+3. Dieser Datensatz wurde nun dem KI-Modell als Teil des Prompts mitgegeben, damit es Anhaltspunkte erhält, in welchen Beispielfällen, welche Bewertung samt Begründung in unseren Augen sinnvoll wäre.
+4. Von den heruntergeladenen Metadaten haben wir nicht alle möglichen Felder dem Modell als Eingabe zur Überprüfung gegeben, sondern lediglich die folgenden: Titel, Beschreibung, geographischer Bezug, geographische Granularität, Tags sowie die zuständige, datenhaltende Stelle.
+5. Um sicherzugehen, dass das KI-Modell auch immer unsere 6 Kategorien samt Begründung ausgibt, haben wir die [Instructor Bibliothek](https://python.useinstructor.com/) verwendet, welche sicher stellt, dass das Ausgabeformat der KI immer konsistent ist.
+6. Schließlich haben wir dann mit den Ausgaben der KI eine Excel-Datei erstellt, welche die Metadaten samt ihrer Bewertungen und der Begründungen dieser enthält.
+
+Den Quellcode zu dieser Auswertung haben wir über [GitHub](https://github.com/technologiestiftung/dcatap_ai_analyzer) veröffentlicht.
+
+## Gemeinsam erhöhen wir die Metadatenqualität
+
+Die Ergebnisse der KI Untersuchung haben wir in der AG Open Data vom 06. März den behördlichen Beauftragten für Open Data präsentiert und festgestellt: Das Anlegen von Metadaten ist nicht trivial und es besteht deutliches Verbesserungspotenzial. 
+
+Im nächsten Schritt geben wir den behördlichen Beauftragten für Open Data die vorgefilterten Ergebnisse der Metadatenqualitäts-Bewertung und der KI-Begründung (die auch als Verbesserungsvorschläge funktionieren) der Datensätze im Open Data Portal sowie ein [Handout](https://odis-berlin.de/ressourcen/metadaten_ki/) als Hilfestellung zur Verbesserung der Metadaten mit. So können die Beauftragten "ihre" Metadateneinträge sichten und verbessern. 
+
+Wir sind gespannt, ob sich die Metadatenqualität im Datenportal perspektivisch verbessert. Damit die Suche und Nutzung von Daten die Nerven schont und Zeit bleibt für einen gemütlichen Feierabend mit dem wieder gewonnenen Lieblingsfilm. 
+
+
+
+<script
+  type="text/javascript"
+  set:html={`!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();`}
+/>
