@@ -1,0 +1,66 @@
+---
+tags:
+  - "home"
+  - "project"
+  - "post"
+  - "Verständliche Organigramme für alle"
+  - "Organigramm-Tool"
+title: Linked Open Data in der Praxis
+blogLinkTitle: "Hier geht's zur Publikation"
+blogLink: /file-download/ODIS_Kerndatensaetze.pdf
+description: Eine Fallstudie über vernetze Verwaltungsdaten am Beispiel Berliner Organigramme
+date: 2025-04-17
+period: März 2025 (Publikation)
+status: abgeschlossen
+visible: true
+heroImage: ./images/ODIS_LOD_Studie_Mockup.png
+projectUrlWithoutProtocol: ""
+showImageInMockup: true
+category: Research
+---
+
+## Hintergrund
+
+Organigramme gehören zum Alltag jeder größeren Organisation – auch in der öffentlichen Verwaltung. Doch was, wenn diese strukturellen Informationen nicht nur als unstrukturierte statische PDFs existieren, sondern als **vernetzte, maschinenlesbare Daten**? Welches Potenzial sich daraus ergeben kann und wie Linked Open Data in der Praxis umgesetzt werden kann, hat die Open Data Informationsstelle Berlin (ODIS) in einem Pilotprojekt erprobt – mit **Linked Open Data (LOD)** am Beispiel der Berliner Verwaltungsorganigramme.
+
+## Unser Lösungsansatz: Organigramme als Linked Open Data
+
+In der Berliner Verwaltung werden Organigramme bislang dezentral erstellt, meist mit PowerPoint oder Word, und als PDFs auf den Websites der Behörden veröffentlicht. Das bedeutet: Sie sind für Menschen lesbar, für Maschinen jedoch kaum auswertbar. Informationen wie „Wer ist wofür zuständig?“ oder „Welche Abteilung gehört zu welcher Organisationseinheit?“ lassen sich nicht automatisch herauslesen oder weiterverwenden.
+
+Wir haben mit einem eigens entwickelten [**Organigramm-Tool**](https://odis-berlin.de/projekte/2023-07-organigramm-tool/) einen neuen Ansatz getestet: Verwaltungsorganigramme werden dort nicht nur digital erfasst, sondern so aufbereitet, dass sie als **5-Sterne-Linked-Open-Data** bereitgestellt werden können. Das bedeutet:
+
+- Jede Organisation, Rolle und Person bekommt eine **eindeutige URI**
+- Die Daten liegen im **RDF-Format** vor – als sogenannte **Triples** (Subjekt-Prädikat-Objekt)
+- Sie sind **verlinkbar** mit anderen offenen Datenquellen, z. B. Wikidata
+- Sie können automatisiert abgefragt und analysiert werden – etwa mit der Abfragesprache SPARQL
+
+In der Studie zeigen wir auf, welches Potenzial sich mit Linked Open Data entfalten kann, wenn Wissen miteinander verknüpft wird. So haben wir beispielsweise mit einer SPARQL-Abfrage die Organigramme befragt, welche Positionen in welchen Behörden aktuell vakant sind – eine wertvolle Information im Kontext von Fachkräftemangel und Personalplanung.
+
+Noch mehr Potenzial steckt in der Verknüpung mt weiteren Datenbanken. Hier haben wir mit Wikidata beispielhaft herausgefunden, welche weiteren Informationen zu den Leitungspositionen verschiedener Senatsverwaltungen im World Wide Web auffindbar sind.
+
+*Einfügen Grafik*
+
+## Bei Organigrammen sollte es nicht bleiben: Was Berlin jetzt tun sollte
+
+Die Studie hat gezeigt: LOD funktioniert – aber es braucht gezielte Maßnahmen, die wir in der Studie herausgearbeitet haben, um das Potenzial zu heben, die 
+
+- **Datenkompetenz fördern**: Verwaltungsmitarbeitende müssen verstehen, was maschinenlesbare Daten bedeuten – und warum sie wichtig sind. LOD muss zur Basiskompetenz werden.
+- **Standards etablieren**: Gemeinsam mit Behörden wurden im Projekt Vorlagen, Rollenmodelle und Ontologien für Organigramme entwickelt. Solche Standards sollten verbindlich gemacht werden.
+- **Technische Infrastruktur bereitstellen**: Prototypen sind wichtig – aber es braucht dauerhafte Triple Stores, offene Schnittstellen und Pflegekonzepte, um LOD nachhaltig in der Verwaltung zu verankern.
+- **Verknüpfung statt Einzellösungen**: LOD lebt von Verbindung. Einzelne Datensätze (wie Organigramme, Haushaltsdaten oder Zuständigkeiten) müssen untereinander verlinkt und in einem gemeinsamen Datenraum verfügbar gemacht werden.
+
+import logo from "./images/B_RBm_Skzl_Logo_DE_V_PT_RGB.svg";
+
+<Quote
+  authorName="Betül Özdemir"
+  authorRole="Zentrale Verantwortliche für Open Data im Land Berlin"
+  authorLogo={logo}
+>
+  Durch die Veröffentlichung von Kerndatensätzen wird Berlin zu einer offeneren
+  und innovativeren Stadt, in der Daten zur Lösung verschiedener
+  Herausforderungen der Stadtgesellschaft beitragen können.
+</Quote>
+
+## Fazit: 
+
+Unsere Fallstudie zeigt  exemplarisch, wie aus alltäglichen Verwaltungsdokumenten echte digitale Wissensressourcen werden können. Die technischen Möglichkeiten sind da – jetzt braucht es den politischen Willen und den Aufbau einer vernetzten, zukunftsorientierten Dateninfrastruktur. 
