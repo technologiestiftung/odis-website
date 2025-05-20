@@ -6,7 +6,8 @@ tags:
 title: WFSExplorer
 blogLinkTitle: "Hier geht's zum Tool"
 blogLink: https://wfsexplorer.netlify.app/
-description: Ein Tool, um WFS-Daten mit leistungsstarken Funktionen zu erkunden
+description: Ein Tool, um WFS-Daten mit leistungsstarken Werkzeugen zu erkunden
+date: 2025-06-01
 period: Juni 2025
 status: abgeschlossen
 visible: true
@@ -29,17 +30,38 @@ Doch obwohl WFS-Dienste technisch leistungsfähig sind, ist die Arbeit damit oft
 Genau hier setzt unser WFSExplorer an. Dieses Tool lädt zum Erkunden ein und schafft eine Brücke zwischen der Komplexität der Geodienste und der praktischen Anwendung durch Menschen mit unterschiedlichem Kenntnisstand und kann auch in englischer Sprachausgabe bedient werden.
 
 
+
 ## WFSExplorer: Geoinformationen auf einem Blick
 
 Mit dem WFSExplorer ist es möglich, einzelne WFS-Datensätze zu exlorieren. Dazu kann entweder im Freifeld eine beliebige WFS-URL eingegeben oder alternativ aus einem Beispieldatensatz des Geoportals Berlin gewählt werden.
 
+import image1 from "./images/Kartenvorschau.png";
+
+<ContentSection class="sm:px-6">
+
+  <ImageSection class="sm:container sm:mx-auto"
+    src={image1}
+    caption="Die Karte gibt einen ersten Überblick über die räumlichen Ausprägungen des Datensatzes."
+  />
+</ContentSection>
+
 Sobald ein WFS-Datensatz geladen wurde, steht eine Vielzahl an Hilfestellungen und Werkzeugen zur Verfügung. 
 - Weiterführende Informationen also Metadaten über den Datensatz wie Kontaktdaten, Projektionsangaben oder Nutzungsbedingungen
 -	Kartenvorschau des Datensatzes zur ersten Einordnung der räumlichen Ausprägung der Daten 
-- Filteroptionen, um die Datenattribute zu erkunden und zu analysieren. So wird schnell klar, welche Informationen im Datensatz stecken.
+- Explorationsmöglichkeiten, um nach Attributen zu filtern und die Daten zu erkunden und zu analysieren. So wird schnell klar, welche Informationen im Datensatz stecken.
 - Eine GeoJSON-Downloadmöglichkeit in einer weit verbreiteten Projektion (WGS84), zur Weiterverwendung der Daten.
 
 Zusätzlich kann der Link zum WFS-Dienst und den Explorationsergebnissen schnell geteilt werden. 
+
+import image2 from "./images/datenexplorer.png";
+
+<ContentSection class="sm:px-6">
+
+  <ImageSection class="sm:container sm:mx-auto"
+    src={image2}
+    caption="Die Explore-Funktion erlaubt einen ersten Einblick in die Daten selbst. So können schnell erste Erkenntnise aus den Daten gewonnen werden." 
+  />
+</ContentSection>
 
 ## Datengrundlage und Methodik
 
