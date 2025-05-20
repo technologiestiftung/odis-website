@@ -1,0 +1,53 @@
+---
+tags:
+  - "home"
+  - "project"
+  - "post"
+title: WFSExplorer
+blogLinkTitle: "Hier geht's zum Tool"
+blogLink: https://wfsexplorer.netlify.app/
+description: Ein Tool, um WFS-Daten mit leistungsstarken Funktionen zu erkunden
+period: Juni 2025
+status: abgeschlossen
+visible: true
+heroImage: ./images/geoexplorer-visual.png
+projectUrlWithoutProtocol: "wfsexplorer.netlify.app"
+showImageInMockup: true
+datasets:
+  - linkText: Geodatenportal des Landes Berlin
+    link: https://www.berlin.de/sen/sbw/stadtdaten/geoportal/
+gitHubLink: https://github.com/technologiestiftung/
+category: Tool
+---
+
+## Hintergrund
+
+Eine der wichtigsten Quellen für (offene) Geodaten sind sogenannte WFS-Geodienste (Web Feature Services). Diese stellen geografische Objekte wie Punkte, Linien oder Flächen samt zugehöriger Sachdaten über das Internet standardisiert zur Verfügung. Sie ermöglichen es, präzise, aktuelle und maschinenlesbare Informationen direkt aus offiziellen Datenquellen zu beziehen.
+
+Doch obwohl WFS-Dienste technisch leistungsfähig sind, ist ihr direkter Zugang oft wenig intuitiv. Ohne spezielles Fachwissen oder geeignete Software wie Geographische Informationssystemen (GIS) ist es für viele Nutzer:innen schwer, die Informationen zu verstehen und für sich zu nutzen.
+
+Genau hier setzt unser WFSExplorer an. Dieses Tool lädt zum Erkunden ein und schafft eine Brücke zwischen der Komplexität der Geodienste und der praktischen Anwendung durch Menschen mit unterschiedlichem Kenntnisstand und kann auch in englischer Sprachausgabe bedient werden.
+
+
+## WFSExplorer: Geodaten auf einem Blick
+
+Mit dem WFSExplorer ist es möglich, einzelne WFS-Datensätze zu exlorieren. Dazu kann entweder im Freifeld eine beliebige WFS-URL eingegeben oder alternativ aus einem Beispieldatensatz des Geoportals Berlin gewählt werden.
+
+Sobald ein WFS-Datensatz geladen wurde, steht eine Vielzahl an Hilfestellungen und Werkzeugen zur Verfügung. 
+- Weiterführende Informationen also Metadaten über den Datensatz wie Kontaktdaten, Projektionsangaben oder Nutzungsbedingungen
+-	Kartenvorschau des Datensatzes zur ersten Einordnung der räumlichen Ausprägung der Daten 
+- Filteroptionen, um die Datenattribute zu erkunden und zu analysieren. So wird schnell klar, welche Informationen im Datensatz stecken.
+- Eine GeoJSON-Downloadmöglichkeit in einer weit verbreiteten Projektion (WGS84), zur Weiterverwendung der Daten.
+
+Zusätzlich kann der Link zum WFS-Dienst mit den Explorationsergebnissen schnell geteilt werden. 
+
+## Datengrundlage und Methodik
+
+Für jeden Datensatz wurden sogenannte Metadaten aus dem [Berliner Open Data Portal](https://daten.berlin.de) und [Berlins Geodatenportal](https://www.berlin.de/sen/sbw/stadtdaten/geoportal/) automatisiert gescraped (gesammelt). Die offenen Geodaten liegen in der Berliner Geodateninfrastruktur, die von der [Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen (SenSBW)](https://www.berlin.de/sen/sbw/) betrieben wird. Als Metadaten werden Daten bezeichnet, die einen Datensatz beschreiben, z.B. die Attribute, die ein Datensatz hat, oder der von einem Menschen geschriebene Beschreibungstext. Das Script zum Scrapen der Daten findet sich in unserem Github-Repository. 
+
+Anschließend wurde für jeden einzelnen Metadatensatz ein sogenanntes Embedding erstellt und in eine Datenbank geschrieben. Jedes Embedding enthält einen speziellen Vektor, der auf dem Inhalt der Metadaten basiert. Dieser Vektor ist wie eine Art multidimensionale Koordinate, die den Inhalt der Metadaten in der Logik der KI verortet. Beispiel: Die möglichen Vektoren für die Begriffe "Hund" und "Katze" liegen näher beieinander als der Begriff "Auto", bei dem es sich nicht um die gemeinsame Kategorie "Tier" handelt.
+
+Bei der Suchanfrage wird daraufhin ein Vektor erstellt und mit den vorhandenen Vektoren in der Datenbank verglichen. Falls die Vektoren eine gewisse Nähe zueinander aufweisen, werden die jeweiligen Embeddings im Suchergebnis angezeigt. Der GeoExplorer wird derzeit (noch) unregelmäßig aktualisiert.
+
+Die verarbeiteten Daten und die Skripte zur Datenprozessierung sind in diesem [GitHub-Repository](https://github.com/technologiestiftung/odis-geoexplorer) zu finden.
+
