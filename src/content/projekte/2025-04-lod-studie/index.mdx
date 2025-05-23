@@ -1,0 +1,90 @@
+---
+tags:
+  - "home"
+  - "project"
+  - "post"
+  - "Verständliche Organigramme für alle"
+  - "Organigramm-Tool"
+title: Linked Open Data in der Praxis
+blogLinkTitle: "Hier geht's zur Publikation"
+blogLink: /file-download/ODIS_LOD_Studie.pdf
+description: Eine praxisnahe Fallstudie zur Umsetzung von Linked Open Data am Beispiel Berliner Organigramme
+date: 2025-04-17
+period: Mai 2025 (Veröffentlichung)
+status: abgeschlossen
+visible: true
+heroImage: ./images/ODIS_LOD_Studie_Mockup.png
+projectUrlWithoutProtocol: ""
+showImageInMockup: true
+category: Research
+---
+
+## Hintergrund
+
+Anfang der 2000er entwickelte Tim Berners-Lee das Konzept von Linked Data und ein 5-Sterne-Modell, um Daten maschinenlesbar und besser auswertbar zu machen. Heute ermöglichen Technologien wie Künstliche Intelligenz ganz neue Möglichkeiten, Daten zu analysieren – vorausgesetzt, diese liegen in hoher Qualität vor. In der Berliner Verwaltung ist das jedoch oft nicht der Fall: Daten sind meist nur für Menschen lesbar aufbereitet. Dadurch bleiben viele Potenziale ungenutzt.
+
+[Unsere Studie](/file-download/ODIS_LOD_Studie.pdf) zeigt: Linked Open Data (LOD) kann dieses Potenzial heben, erfordert aber gezielte Anstrengungen und ein technisches und organisatorisches Fundament. In einem über zwei Jahre andauerndem Projekt der Open Data Informationsstelle Berlin haben wir untersucht, wie LOD in der Verwaltung angewendet werden kann. Unser Ziel war es, den Schritt von der Theorie in die Praxis zu machen und Herausforderungen auf dem Weg zum höchsten Reifegrad von Verwaltungsdaten zu identifizieren. Wir wollten außerdem verstehen, welche Anwendungsfälle sich aus LOD ergeben.
+
+
+
+<Quote
+  authorName="Nico Zimmer"
+  authorRole="Vorstandsvorsitzender der Technologiestiftung Berlin"
+>
+  "Wenn Daten so bereitgestellt werden, dass Maschinen sie optimal verarbeiten können, entsteht die Grundlage für Anwendungen, die den Menschen tatsächlich dienen – mit größerer Zuverlässigkeit, Transparenz und Zugänglichkeit.
+Die vorliegende Studie markiert einen Schritt auf diesem Weg. Ich wünsche eine anregende Lektüre und viele gewinnbringende Erkenntnisse."
+</Quote>
+
+
+## Unser Praxisansatz: Organigramme als Linked Open Data
+
+In der Berliner Verwaltung werden Organigramme bislang dezentral erstellt, meist mit PowerPoint oder Word, und als PDFs auf den Websites der Behörden veröffentlicht. Das bedeutet: Sie sind für Menschen lesbar, für Maschinen jedoch kaum auswertbar. Informationen wie „Wer ist wofür zuständig?“ oder „Welche Abteilung gehört zu welcher Organisationseinheit?“ lassen sich nicht automatisch herauslesen oder weiterverwenden.
+
+Wir haben mit einem eigens entwickelten [**Organigramm-Tool**](https://odis-berlin.de/projekte/2023-07-organigramm-tool/) einen neuen Ansatz getestet: Verwaltungsorganigramme werden dort nicht nur digital erfasst, sondern so aufbereitet, dass sie als **5-Sterne-Linked-Open-Data** bereitgestellt werden können. Das bedeutet:
+
+- Jede Organisation, Rolle und Person bekommt eine **eindeutige URI**
+- Die Daten liegen im **RDF-Format** vor – als sogenannte **Triples** (Subjekt-Prädikat-Objekt)
+- Sie sind **verlinkbar** mit anderen offenen Datenquellen, z. B. Wikidata
+- Sie können automatisiert abgefragt und analysiert werden – etwa mit der Abfragesprache **SPARQL**
+
+In unserer Studie zeigen wir auf, welches Potenzial sich mit Linked Open Data entfalten kann, wenn Wissen miteinander verknüpft wird. So haben wir beispielsweise mit einer SPARQL-Abfrage die Organigramme befragt, welche Positionen in welchen Behörden aktuell vakant sind – eine wertvolle Information im Kontext von Fachkräftemangel und Personalplanung. Noch mehr Potenzial steckt in der Verknüpfung mt weiteren Datenbanken. Hier haben wir mit Wikidata beispielhaft herausgefunden, welche weiteren Informationen zu den Leitungspositionen verschiedener Senatsverwaltungen im Internet auffindbar sind.
+
+Perspektivisch kann sich mit Linked Open Data ein unbegrenzter Wissensgraph bilden. 
+
+
+
+import image1 from "./images/LOD_Studie_Hauptgrafik.png";
+
+<ContentSection class="sm:px-6">
+
+  <ImageSection class="sm:container sm:mx-auto"
+    src={image1}
+    caption="Schematische Darstellung eines Knowledge Graphs (Wissensgraph). Mit einer Vielzahl an verknüpften Daten entstehen leistungsstarke Wissensnetze."
+    withShadow
+  />
+</ContentSection>
+
+
+## Bei Organigrammen sollte es nicht bleiben: Was Berlin jetzt tun sollte
+
+Die Studie hat gezeigt: LOD funktioniert – aber es braucht gezielte Maßnahmen, die wir in der Studie herausgearbeitet haben, um das Potenzial zu heben:
+
+- **Datenkompetenz fördern**: Es bedarf in der Verwaltung einer Perspektivänderung dahin, Daten für Maschinen und nicht allein für Menschen lesbar aufzubereiten. Dieser Perspektivwechsel sollte mit Schulungen und Wissensvermittelung gezielt begleitet werden.  
+- **Standards etablieren**: Gemeinsam mit Behörden wurden im Projekt Vorlagen, Rollenmodelle und Ontologien für Organigramme entwickelt. Für Berlin wäre es sinnvoll, eine zentrale Zuständigkeit zu schaffen, die die Entwicklung von Ontologien für spezifische Anforderungen koordiniert und anstößt und gleichzeitig die Einhaltung internationaler Standards sicherstellt.
+- **Technische Infrastruktur bereitstellen**: Prototypen sind wichtig – aber es braucht dauerhafte Triple Stores, offene Schnittstellen und Pflegekonzepte, um LOD nachhaltig in der Verwaltung zu verankern. Der geplante Data Hub im Land Berlin sollte hier perspektivisch die benötigte technische Infrastruktur anbieten.
+- **Verknüpfung statt Einzellösungen**: Damit Linked Open Data (LOD) in der Berliner Verwaltung seine volle Wirkung entfalten kann, ist es entscheidend, dass eine Vielzahl relevanter, verknüpfbaren Datensätze zur Verfügung steht.
+
+import logo from "./images/B_SEN_WiGeP_Logo_DE_V_PT_RGB.svg";
+
+<Quote
+  authorName="William Treherne"
+  authorRole="Open Data Beauftragter der Senatsverwaltung für Wissenschaft, Gesundheit und Pflege"
+  authorLogo={logo}
+>
+  "Die Linked Open Data-Studie zeigt eindrucksvoll, welches Potenzial in der strukturierten, offenen Bereitstellung von Daten liegt. 
+  Durch die fallbezogene Umsetzung, die ich als Open Data Beauftragter begleiten und unterstützen konnte, und die klaren Handlungsempfehlungen bietet die Studie einen Kompass, um Linked Open Data im Land Berlin zu etablieren."
+</Quote>
+
+## Fazit
+
+Unsere Fallstudie zeigt exemplarisch, wie aus alltäglichen Verwaltungsdokumenten echte digitale Wissensressourcen werden können. Damit wird deutlich: LOD bietet eine enorme Chance, Verwaltungsdaten neu zu nutzen und aus den bisherigen Informationssilos ein dynamisches Wissensnetzwerk zu schaffen. Unsere Studie soll dabei ein Wegbegleiter für den Aufbau einer vernetzten, zukunftsorientierten Dateninfrastruktur im Land sein.
