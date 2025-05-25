@@ -23,17 +23,17 @@ category: Tool
 
 ## Hintergrund
 
-Eine der wichtigsten Quellen für (offene) Geodaten sind sogenannte WFS-Geodienste (Web Feature Services). Diese stellen geografische Objekte wie Punkte, Linien oder Flächen samt zugehöriger Sachdaten über das Internet standardisiert zur Verfügung. Sie ermöglichen es, präzise, aktuelle und maschinenlesbare Informationen direkt aus offiziellen Datenquellen zu beziehen.
+Eine der wichtigsten Quellen für (offene) Geodaten sind sogenannte WFS-Geodienste (Web Feature Services). Diese stellen geografische Objekte wie Punkte, Linien oder Flächen samt zugehöriger Sachdaten über das Internet standardisiert zur Verfügung. Sie ermöglichen es, präzise, aktuelle und maschinenlesbare Informationen zu beziehen.
 
-Doch obwohl WFS-Dienste technisch leistungsfähig sind, ist die Arbeit damit oft wenig intuitiv. Ohne spezielles Fachwissen oder geeignete Software wie Geographische Informationssystemen (GIS) ist es für viele Nutzer:innen schwer, die Informationen zu verstehen und für sich zu nutzen.
+Doch obwohl WFS-Dienste technisch leistungsfähig sind, bleibt ihr Nutzung hinter den Potentialen zurück. Der Grund: Ohne spezielles Fachwissen oder geeignete Software wie Geographische Informationssystemen (GIS) ist es für viele potenielle Datennutzer:innen schwer, die Informationen anzuzapfen und die Daten für ihre Zwecke zu verarbeiten.
 
-Genau hier setzt unser WFSExplorer an. Dieses Tool lädt zum Erkunden ein und schafft eine Brücke zwischen der Komplexität der Geodienste und der praktischen Anwendung durch Menschen mit unterschiedlichem Kenntnisstand und kann auch in englischer Sprachausgabe bedient werden.
+Hier setzt der WFSExplorer an. Dieses Tool fungiert als übersichtliche Web-Oberfläche, die es auch unerfahrenen Geodaten-Nutzenden leicht machen soll, vorhandene WFS Daten zu explorieren und für ihre Bedürfnisse zu filtern. Das Tool schafft somit eine Brücke zwischen der Komplexität der Geodienste und der praktischen Anwendung durch Menschen mit unterschiedlichem Kenntnisstand. Es kann außerdem auch in englischer Sprachausgabe bedient werden.
 
 
 
 ## WFSExplorer: Geoinformationen auf einem Blick
 
-Mit dem WFSExplorer ist es möglich, einzelne WFS-Datensätze zu explorieren. Dazu kann entweder im Freifeld eine beliebige WFS-URL eingegeben oder alternativ aus einem Beispieldatensatz des Geoportals Berlin gewählt werden.
+Mit dem WFSExplorer ist es möglich, WFS-Datensätze einzeln zu explorieren. Dazu kann entweder im Freifeld eine beliebige WFS-URL eingegeben oder alternativ aus einem Beispieldatensatz des Geoportals Berlin gewählt werden.
 
 import image1 from "./images/kartenvorschau.png";
 
@@ -49,7 +49,7 @@ Sobald ein WFS-Datensatz geladen wurde, steht eine Vielzahl an Hilfestellungen u
 - Weiterführende Informationen also Metadaten über den Datensatz wie Kontaktdaten, Projektionsangaben oder Nutzungsbedingungen
 -	Kartenvorschau des Datensatzes zur ersten Einordnung der räumlichen Ausprägung der Daten 
 - Explorationsmöglichkeiten, um nach Attributen zu filtern und die Daten zu erkunden und zu analysieren. So wird schnell klar, welche Informationen im Datensatz stecken.
-- Eine GeoJSON-Downloadmöglichkeit in einer weit verbreiteten Projektion (WGS84), zur Weiterverwendung der Daten.
+- Eine GeoJSON-Downloadmöglichkeit in einer weit verbreiteten Projektion (WGS84), zur Weiterverwendung der Daten in anderen Kontexten und Programmen.
 
 Zusätzlich kann der Link zum WFS-Dienst und den Explorationsergebnissen schnell geteilt werden. 
 
@@ -59,7 +59,7 @@ import image2 from "./images/datenexplorer.png";
 
   <ImageSection class="sm:container sm:mx-auto"
     src={image2}
-    caption="Die Explore-Funktion erlaubt einen ersten Einblick in die Daten selbst. So können schnell erste Erkenntnise aus den Daten gewonnen werden." 
+    caption="Die Explore-Funktion erlaubt einen ersten Einblick in die Daten selbst. So können schnell erste Erkenntnisse aus den Daten gewonnen werden." 
   />
 </ContentSection>
 
