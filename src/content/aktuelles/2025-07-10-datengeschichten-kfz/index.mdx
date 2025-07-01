@@ -22,26 +22,22 @@ date: 2025-07-10
 
 ## ...
 
-Alle zwei Jahre legt sich das Land Berlin einen Finanzierungsplan auf, den sogenannten Doppelhaushalt. Dieser regelt, was Land und Bezirke an Ausgaben zur Verfügung steht. Mit unserem [interaktiven Tool zu den Berliner Haushaltsdaten](https://haushaltsdaten.odis-berlin.de/) haben wir den aktuellen Datensatz zum Doppelhaushalt bereits veranschaulicht und laden zum Explorieren ein.
+Alle zwei Jahre ... 
 
-Trotz gründlicher Planung lassen sich jedoch nicht alle finanziellen Entwicklungen in einer Metropole wie Berlin exakt vorhersehen. Ungeplante Reparaturmaßnahmen, wie der [Abriss einer Brücke](https://www.tagesschau.de/inland/regional/berlin/rbb-berliner-a100-bruecke-wird-abgerissen-ringbahn-noch-wochenlang-unterbrochen-102.html), aber auch politische Ereignisse aus deren Folge zum Beispiel mehr Menschen nach Berlin kommen, um Schutz zu suchen, können in einem Doppelhaushalt sicher nur schwer geschätzt und eingeplant werden. Wenn plötzlich mehr Steuergeld ausgegeben werden muss, sollten Bürger:innen nachvollziehen können, wohin das Geld fließt – und ob die politischen Prioritäten dabei nicht aus dem Blick geraten.
+import image5 from "./images/odi_auto_weg.png"
 
-Deshalb ist es ein wichtiger Schritt, dass das Land Berlin im [Berliner Open Data Portal](https://daten.berlin.de/?page=165) seit Kurzem transparent macht, welche Ausgaben über den Doppelhaushalt hinaus gestemmt werden müssen. Wo bröckelt die Infrastruktur? Mit welchen Krisen ist die Kommune derzeit konfrontiert? Welche Investitionen waren eigentlich gar nicht vorgesehen? All das sind Fragen, bei deren Beantwortung uns der Kerndatensatz [„Über- und außerplanmäßige Ausgaben und Verpflichtungsermächtigungen Berlin 2023“](https://daten.berlin.de/datensaetze/ueber-und-ausserplanmaessige-ausgaben-und-verpflichtungsermaechtigungen-berlin-2023-1492926) weiterhelfen kann. 
+<TextContentSection class="sm:px-6" largeContainer={true}>
+  <ImageSection 
+    src={image5}
+    alt="Odis Auto ist weg!"
+    caption="Odis Auto wurde unter der Woche geklaut und er merkt es erst am nächsten Morgen, als er zur Arbeit damit fahren will."
+  />
+</TextContentSection>
 
-Bevor wir jedoch genauer in den Datensatz schauen, ist eine kleine Einführung in die Begrifflichkeiten der Haushaltsplanung notwendig.
 
--	Als **überplanmäßig** bezeichnet man Posten, die zwar in der Haushaltsplanung vorgesehen sind, jedoch höher ausfallen als gedacht. Wenn bei regulären Sanierungsarbeiten an einer Brücke ein erhöhter Reparaturbedarf festgestellt wird, werden diese Mehrkosten also als überplanmäßige Ausgaben bezeichnet.  
--	Im Unterschied dazu waren **außerplanmäßige Kosten** nicht mal ursprünglich vorgesehen. Wird beispielsweise die Brücke bei einem Unwetter stark beschädigt, fallen diese Kosten unter außerplanmäßige Ausgaben. 
--	**Verpflichtungsermächtigungen** sind spezielle Ausgaben, die auch über das jeweilige Haushaltsjahr hinausgehen. Sie sorgen dafür, dass jeweils im aktuellen Haushaltsjahr ausreichend Finanzmittel auch für langfristige Posten zur Verfügung stehen. In den nächsten Jahren soll eine neue Brücke gebaut werden. Es handelt sich hierbei um ein langfristiges Projekt, wofür jedoch schon frühzeitig Verträge mit Baufirmen abgeschlossen werden müssen. Diese Kosten müssen auch im Haushaltsplan vertreten sein und können natürlich auch außer- oder überplanmäßig sein, wenn sie nicht oder nicht in der veranschlagten Höhe vorgesehen waren.
+## ...
 
-Nun können wir aber wirklich starten und uns einige spannende Posten aus dem Datensatz ansehen. <br></br>
-
-*Mal sehen, wie viele Brückensanierungen wir finden…* <br></br>
-
-<br></br>
-## Auf die Daten, fertig, los: Welche Mehrkosten muss das Land aufbringen?
-
-Insgesamt hat das Land Berlin im Jahr 2023 <br></br> **2.229.408.218,20 €** mehr ausgegeben, als geplant, wenn wir überplanmäßige, außerplanmäßigen Ausgaben sowie die Verpflichtungsermächtigungen zusammenrechnen. Schauen wir zunächst auf die größten außerplanmäßigen Ausgaben im Jahr 2023: Auffällig ist, dass viele dieser Ausgaben im Bereich Bau und Infrastruktur anfallen. Einige dieser Posten sind eher allgemein gehalten und wenig aussagekräftig, wie der „Kommunale Anteil an Infrastrukturmaßnahmen im Rahmen der Europäischen Förderung“. Andere beschreiben hingegen konkrete Bauvorhaben, zum Beispiel „09G06, Melli-Beese-Schule: Erweiterungsbau, Komplettsanierung Bestand, Sanierung Schul- u. Freiflächen, Errichtung Interimsstandort als ZF und AF; 12487, Engelhardstraße 18“. 
+Insgesamt hat ...
 
 <ContentSection fullWidth={false}>
 <iframe title="Die TOP 10 der außerplanmäßigen Ausgaben" aria-label="Balken" id="datawrapper-chart-mjgxS" src="https://datawrapper.dwcdn.net/mjgxS/4/" scrolling="no" frameborder="0" style="border: none;" width="1000" height="750" data-external="1"></iframe>
@@ -59,15 +55,6 @@ Ebenfalls ins Auge fallen die Ausgaben im Zusammenhang mit der Fußball-EM 2024.
 <iframe title="Die TOP 10 der überplanmäßigen VE" aria-label="Balken" id="datawrapper-chart-FwTWM" src="https://datawrapper.dwcdn.net/FwTWM/4/" scrolling="no" frameborder="0" style="border: none;" width="1000" height="650" data-external="1"></iframe>
 </ContentSection>
 
-import image5 from "./images/odi_rote_karte.png"
-
-<TextContentSection class="sm:px-6" largeContainer={true}>
-  <ImageSection 
-    src={image5}
-    alt="Odi entgeht kein Foul."
-    caption="Odi entgeht kein Foul!"
-  />
-</TextContentSection>
 
 
 Ihr seht also, dass selbst Haushaltsdaten, die auf den ersten Blick etwas kryptisch und unverständlich erscheinen mögen, eine Exploration verdienen und viel darüber aussagen können, welche Themen, Krisen oder Projekte eine Stadt gerade beschäftigen. Offenheit ist hier zentral: Wo fließen Steuergelder hin? Wo wird umgeplant? Und wo entstehen unerwartete Mehrkosten? 
