@@ -1,0 +1,141 @@
+---
+tags:
+  - "home"
+  - "post"
+  - "Open Data Supertrumpf – Mit offenen Daten Berlin erkunden"
+title: "Open Data Supertrumpf – The Making Of"
+description: Tauche ein in die Entstehungsgeschichte des Kartenspiels Open Data Supertrumpf und erfahre, wie aus offenen Daten ein spielerischer Einblick in Berlins Prognoseräume wurde.
+categories: aktuelles
+visible: true
+urlText: Zum Blogbeitrag
+headerImage:
+  src: ./images/ODIS-Supertrumpf-MockUp-20241115-rot.png
+  alt: Kartenspiel Mockup
+readingTime: 9-12
+date: 2024-12-11
+---
+
+## Einleitung
+
+Wie funktioniert eigentlich "Berlin"? Was passiert hinter den Kulissen und beeinflusst unser alltägliches Zusammenleben, die Lebensqualität, das Zusammenspiel von bebauter und natürlicher Umwelt? Birgt die städtische Umgebung auch Risiken und Nebenwirkungen? Gibt es unentdeckte Potentiale? Und wie spiegelt sich die Geschichte einer Stadt in ihrem heutigen Erscheinungsbild wider? Wer durch die Stadt spaziert, kann vieles entdecken. Hinter den sichtbaren Eindrücken verbergen sich jedoch oft unsichtbare Geschichten. Offene Daten können dabei helfen, städtische Phänomene zu entschlüsseln und in einen größeren Zusammenhang zu stellen. Ob es um das Solarpotential auf Dächern geht, die Anfahrtszeit der Rettungsdienste, das kulinarische Angebot, die Straßen oder die Luft - jedes Detail ist Teil des komplexen Gefüges einer Stadt.
+
+Das Kartenspiel **Open Data Supertrumpf** der Open Data Informationsstelle lädt dazu ein, Berlin spielerisch und weit über das Offensichtliche hinaus mit Hilfe von offenen Daten zu erkunden. Anders als beim klassischen Supertrumpf, bei dem es häufig um Pferdestärken und andere Fahrzeugeigenschaften geht, gibt es beim Open Data Supertrumpf 58 Karten für die 58 Prognoseräume (eine Raumeinheit der Lebensweltlich orientierten Räume [LOR](https://www.berlin.de/sen/sbw/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/)) in Berlin. Getrumpft wird in den Kategorien _Straßen mit Frauennamen_, _Solarpotential_, _Luftqualität_, _Versiegelung_, _Schnellimbiss-Anzahl_ und _Rettungsdienst-Anfahrt_. Allgemeine Informationen zu Fläche und Bevölkerunhgszahl (Stand 2024) der Prognoseräume sind ebenfalls der Karte zu entnehmen und können nach Belieben als zusätzliche Kategorien dienen.
+
+import image1 from "./images/1_supertrumpf_visual.png"
+
+<ImageSection
+  src={image1}
+  caption="Beispiel zum Prognoseraum Kreuzberg Nord."
+/>
+
+Welche Datengrundlage für Open Data Supertrumpf zur Verfügung steht und wie die Daten verarbeitet und visualisiert wurden, erfährst du im Folgenden.
+
+## Offene Daten im Einsatz: Berlins Prognoseräume im Fokus
+
+Die im Open Data Supertrumpf verwendeten Daten basieren auf offenen Daten aus verschiedenen Quellen und behandeln folgende Themen:
+
+- **[Straßen mit Frauennamen](https://github.com/EqualStreetNames/equalstreetnames-berlin/tree/eb08375e8c8f1828659321a2f07df6d4db998006?tab=readme-ov-file):** Der Prozentsatz der Straßen mit Frauennamen, bemessen an der Gesamtzahl der nach Personen benannten Straßen im jeweiligen Prognoseraum, basiert auf offenen Daten von OpenStreetMap und Wikidata. Der Datensatz ist in einem öffentlichen GitHub-Repository verfügbar. 
+
+- **[Solarpotential auf Dächern](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/dfb86f73-9d41-39f2-a807-c80daf2eaf21):** Diese Daten aus dem Energieatlas zeigen, wie viel Solarenergie pro Jahr erzeugt werden könnte, wenn alle geeigneten Dächer (basierend auf Neigung, Verschattung etc.) mit Photovoltaik ausgestattet wären. Der gesamte Energiebedarf der Berliner Haushalte liegt bei ca. 4.000 GWh/a.
+
+- **[Luftqualität (NO₂)](https://fbinter.stadt-berlin.de/fb/wfs/data/senstadt/s_messpunkte):** Der Stickstoffdioxid-Gehalt wird als Durchschnittswert im Jahr 2023 angegeben. Die Daten stammen von der Senatsverwaltung für Mobiltität, Verkehr, Klimaschutz und Umwelt. Der Straßenverkehr ist eine bedeutende NO₂-Quelle. Der zulässige WHO-Grenzwert liegt bei 10 μg/m³.
+
+- **[Versiegelungsgrad](https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=showMap&mapId=k01_02versieg2021@senstadt):** Diese Umweltatlas-Daten zeigen, wie stark der Prognoseraum im Durchschnitt im Jahr 2021 durch Straßen und Bebauung versiegelt war. Straßen etwa haben einen hohen Grad nahe 100%, teilversiegelte Flächen wie Pflaster, etwa 50%.
+
+- **[Anzahl Schnellimbisse](https://github.com/IHKBerlin/IHKBerlin_Gewerbedaten/tree/master):** Die Anzahl der Imbisse pro Kiez basiert auf den offenen Gewerbedaten der IHK Berlin. Sie zeigen, wie viele angemeldete Imbisse es im jeweiligen Prognoseraum gibt und wo sie sich befinden.
+
+- **[Anfahrtszeit Rettungsdienst](https://www.berliner-feuerwehr.de/service/open-data/#c15579):** Diese Daten stammen von der Berliner Feuerwehr und zeigen die durchschnittlichen Anfahrtszeiten im Fall von kritischen Rettungsdiensteinsätzen. Eine Hilfsfrist von max. 10 Min. ist das Ziel.
+
+
+Besonders anschaulich lassen sich die Daten zu den Straßen mit Frauennamen und die Anzahl der Schnellimbisse auf einer Karte darstellen. Die Liniengeometrien der Straßen mit Frauennamen ermöglichen eine präzise Verortung innerhalb der jeweiligen Prognoseräume. Es wird schnell deutlich, dass vor allem im Zentrum Berlins viele bedeutende Frauen geehrt werden. Im Südwesten Berlins ist der "Kronprinzessinenweg" in Zehlendorf Nord, angrenzend an den Forst Düppel, besonders prägnant auf der Karte zu erkennen. Im Bereich des Grunewalds geht dieser Weg in den "Königsweg" über. 
+
+import image2 from "./images/2_supertrumpf_visual.png"
+
+<ImageSection
+  src={image2}
+  caption="Karte zum PRG Zehlendorf Nord."
+/>
+
+<ContentSection 
+class="sm:px-20 w-full h-auto"
+withShadow>
+  <iframe title="Ausschnitt aus den Rohdaten: Personenbezogene Straßennamen in Berlin" aria-label="Tabelle" id="datawrapper-chart-xe2ls" src="https://datawrapper.dwcdn.net/xe2ls/4/" scrolling="no" frameborder="0" style="border: none;" width="600" height="476" data-external="1"></iframe>
+</ContentSection>
+
+import image4 from "./images/ouXj9-berliner-stra-en-mit-frauennamen.png"
+
+<ContentSection class="sm:px-20">
+<ImageSection class="sm:container sm:mx-auto"
+src={image4}
+/>
+</ContentSection>
+
+Die Visualisierung der Schnellimbisse basiert auf den Punktgeometrien im Datensatz. Hier zeigt sich, dass das Angebot in den äußeren Bezirken mit zunehmender Entfernung zum S-Bahn-Ring abnimmt und sich besonders viele Schnellimbisse in Neukölln tummeln. 
+
+import image5 from "./images/wKqEk-standorte-von-schnellimbissen-in-berlin.png"
+
+<ContentSection class="sm:px-20">
+<ImageSection class="sm:container sm:mx-auto"
+src={image5}
+/>
+</ContentSection>
+
+## Von Rohdaten zum Raumverständnis
+
+Um die örtlichen Unterschiede in Berlin bezüglich der verschiedenen Kategorien zu verstehen, haben wir uns für die Aggregierung der Werte auf Prognoseraumebene entschieden. Alle Datensätze enthalten raumbezogene Informationen, die Daten sind also georeferenziert. 
+Eine Georeferenzierung bezeichnet die Zuweisung raumbezogener Informationen zu einem Datensatz und ist die Voraussetzung für eine räumliche Datenanalyse.
+Unter den für das Kartenspiel analysierten offenen Datensätzen gab es einige wenige, die bereits eine Zuordnung der Werte zu einer spezifischen Raumeinheit (z.B. LOR) enthielten. In diesen Fällen konnte eine Datenauswertung nach Prognoseraum durch direkte Aggregierung der Werte erfolgen.
+Enthielt der offene Datensatz Rauminformationen wie zum Beispiel Koordinaten, aber keine direkte Benennung des Prognoseraums, konnte die räumliche Überschneidung der Koordinaten mit den Geometrien der Prognoseräume untersucht werden. Dies ermöglichte sowohl die Aggregierung der Werte nach Prognoseraum als auch die kartografische Darstellung.
+
+<Quote>
+  Eine Georeferenzierung bezeichnet die Zuweisung raumbezogener Informationen zu einem Datensatz und ist die Voraussetzung für eine räumliche Datenanalyse.
+</Quote>
+
+Der Datensatz zu den Prognoseräumen, der für die Untersuchung der räumlichen Überschneidungen zum Einsatz kam, ist über das [Geoportal Berlin](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/5e05b70b-50d6-4164-b0fd-9cdef4e43559) als WFS- und WMS-Dienst erhältlich. 
+WFS (Web Feature Service) und WMS (Web Map Service) sind zwei standardisierte Geodienste. Ein WFS-Dienst stellt geografische Daten in Form von Features bereit, die heruntergeladen und weiterverarbeitet werden können. Diese Features enthalten sowohl Attributdaten als auch die zugehörigen Geometrien (z. B. Punkte, Linien oder Polygone), die in der Regel in einer Spalte namens "geometry" gespeichert sind. Im Fall der Prognoseräume handelt es sich um die Umrisspolygone der Prognoseräume.
+Auch mit Hilfe einer GIS-Software wie etwa QGIS können die Geodaten weiter bearbeitet und exploriert werden. 
+
+Die Python-Bibliotheken [geopandas](https://geopandas.org/en/stable/getting_started/introduction.html) und [shapely](https://shapely.readthedocs.io/en/stable/manual.html) sind im Kontext räumlicher Datenanalyse mit Python besonders erwähnenswert und kamen bei der Datenverarbeitung für das Kartenspiel häufig zum Einsatz. Das gewählte Geodatenformat war GeoJSON. 
+
+Die Bearbeitung der offenen Daten für Open Data Supertrumpf folgte meistens dem gleichen Ansatz: Erst wurden die die Datensätze für eine räumliche Analyse vorbereitet, dann wurde die Schnittmenge zwischen den Geodaten aus den offenen Datensätzen und den Prognoseräumen identifiziert und schließlich die Werte nach Prognoseraum aggregiert. Je nach Kategorie wurde die Summe berechnet, der Durchschnitt oder der Prozentanteil.
+Je nach Datensatz, gab es einzelne Details zu beachten. 
+
+1. **Ein Koordinatenreferenzsystems (CRS) auswählen**
+
+Bei der Arbeit mit Geodaten ist das Koordinatenreferenzsystem (CRS) von entscheidender Bedeutung. Ein CRS definiert wie geografische Positionen auf einer Karte dargestellt und interpretiert werden. Um eine korrekte und aussagekräftige Analyse der geografischen Daten sicherzustellen, müssen beide Geodatensätze (hier Prognoseräume und offener Datensatz) im gleichen Koordinatenreferenzssystem vorliegen. Stimmen dieses nicht überein, müssen die Daten eines Datensatzes in das CRS des anderen Datensatzes umgerechnet werden.
+Die Wahl des geeigneten CRS hängt vom jeweiligen Anwendungsfall ab. Häufig wird das globale geodätische Referenzsystem WGS 84 verwendet, das als Grundlage für viele geografische und projizierte CRS dient. Solche CRS sind durch einen EPSG-Code (European Petroleum Survey Group Code) eindeutig identifizierbar. Sie unterscheiden sich unter anderem darin, dass geografische CRS Koordinaten in Grad (Breiten- und Längengrade) angeben, während projizierte CRS diese in linearen Einheiten wie Metern oder Fuß darstellen.
+Bei den Datenauswertungen für den Open Data Supertrumpf konnte meist EPSG:4326 verwendet werden. Nur in Fällen, in denen es um eine Flächenberechnung geht, wurde auf ein projiziertes CRS zurückgegriffen.
+
+2. **Datenschnittmenge identifizieren**
+
+Nachdem die Koordinatenreferenzsysteme der Datensätze im Open Data Supertrumpf geprüft und ggf. angeglichen wurden, konnte die Überschneidung der Geometrien des offenen Datensatzes mit denen der Prognoseräume untersucht werden.
+Es gibt verschiedene Wege, um die Schnittmenge in Python zu identifizieren. Eine Möglichkeit besteht darin, die Methode _intersects_ zu verwenden.
+
+3. **Werte nach Prognoseraum aggregieren**
+
+Die Aggregierung der Werte erfolgte bei fast allen Kategorien im Kartenspiel mit Hilfe einer Funktion. Das Verfahren ermöglichte es, basierend auf der Geometrie eines Prognoseraums, die offenen Daten zu filtern und eine Aggregierung durchzuführen. 
+Die Funktion wurde auf jede Zeile im Geodatensatz der Prognoseräume angewendet. Zum Schluss wurden die aggregierten Werte für jeden Prognoseraum in einem _Data Frame_ gespeichert.
+
+## Daten, Karten und Design
+
+Auf den 58 Spielkarten sind, neben der aggregierten Werte zu den sechs Kategorien, die Kartenansichten der einzelnen Prognoseräume abgebildet. Zusätzlich sind die Liniengeometrien der Straßen mit Frauennamen und die Standorte der Schnellimbisse auf den Karten visualisiert. Die 12 verschiedenen Farben der Prognoseraumflächen stehen für die 12 Bezirke in Berlin.
+
+import image3 from "./images/3_supertrumpf_visual.png"
+
+<ContentSection class="sm:px-6">
+<ImageSection class="sm:container sm:mx-auto"
+src={image3}
+caption="ODIS Supertrumpf – Übersicht der 58 Karten."
+/>
+</ContentSection>
+
+### Automatisierte Locator-Karten mit Datawrapper-API
+Die auf den Spielkarten präsentierten Kartenansichten zu den Prognoseräumen haben wir mit dem kostenlosen Online-Tool [Datawrapper](https://www.datawrapper.de/) und der Datawrapper-API erstellt. Die Verwendung der API-Schnittstelle erlaubte das Vordefinieren der Einstellungen und das Erstellen der 58 Locator-Karten auf einen Schlag.
+Um Flächen-, Linien- oder Punktgeometrien als Marker in eine Locator-Karte in Datawrapper einbinden zu können, müssen die Geodaten zunächst als GeoJSON-Datei mit CRS = EPSG:4326 vorliegen. Zudem sollten die Dateien insgesamt nicht größer als 2MB sein und die Anzahl der Punktmarker ist auf max. 100 limitiert ([weitere Informationen](https://academy.datawrapper.de/article/176-how-to-import-area-line-markers)). 
+Da es bei den Standorten der Schnellimbisse mehr als 100 Punktgeometrien gab, haben wir uns hier mit einem Workaround beholfen und die Punkte in Flächen umgewandelt. Zur Nutzung der API muss zunächst ein API-Token auf der Datawrapper-Webseite als Authentifizierungsschlüssel generiert und die Bibliothek _Datawrapper_ im Skript heruntergeladen werden.
+Ein wichtiger Schritt bei der Erstellung der Karten ist die Definition der Karteneinstellungen sowie der einzubindenden Marker. Nach der Erstellung der Locator-Karten mit den Metadaten in einem Zielordner wurden die Marker als Python-Dictionary-Objekte angelegt und als JSON-Format übergeben.
+
+Zum Nachvollziehen der Datenaufbereitung für das Kartenspiel Open Data Supertrumpf stehen die verarbeiteten Daten und die dazugehörigen Skripte sowie die Datenquellen auf [Github](https://github.com/technologiestiftung/odis-cardgame) zur Verfügung.
+Solltest du Interesse an einem Kartenspiel zum Beispiel zu Demonstrationszwecken haben, melde dich gerne bei odis@ts.berlin oder schau einfach mal bei ODIS vorbei, vielleicht läuft gerade eine Partie...
+
+Wir wünschen ein gutes Blatt!

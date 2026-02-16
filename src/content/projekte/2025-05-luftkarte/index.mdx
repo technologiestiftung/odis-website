@@ -1,0 +1,63 @@
+---
+tags:
+  - "home"
+  - "project"
+  - "Luftqualität"
+title: Digitale Berliner Luftkarte
+blogLinkTitle: "Hier geht's zur Anwendung"
+blogLink: https://www.berlin.de/sen/uvk/umwelt/luft/luftqualitaet/digitale-berliner-luftkarte/
+description: Daten zur Luftqualität transparent teilen und verständlich machen – entwickelt für eine breite Öffentlichkeit.
+slug: "luftkarte"
+date: 2025-04-30
+period: April 2025
+status: abgeschlossen
+visible: true
+indexImage: ./images/luftkarte_kachel.png
+heroImage: ./images/luftkarte_kachel.png
+mobileImage: ./images/luftqualitaet_mobile.png
+showImageInMockup: true
+datasets:
+  - linkText: Durchschnittliche jährliche Luftschadstoffbelastung
+    link: https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/61b1e3bd-938d-4261-a770-1a60f4717292
+  - linkText: Berliner Luftgütemessnetz - Standorte und Messdaten
+    link: https://daten.berlin.de/datensaetze/langjahrige-entwicklung-der-luftqualitat-berliner-luftgutemessnetz-standorte-und-messdaten-63b6c803
+  - linkText: Verkehrslagekarte Berlin
+    link: https://viz.berlin.de/verkehr-in-berlin/verkehrslage/
+  - linkText: Wetterdaten
+    link: https://www.dwd.de/DE/leistungen/opendata/opendata.html
+  - linkText: Schadstoffprognosen aus dem europäischen COPERNICUS-Programm
+    link: https://atmosphere.copernicus.eu/european-air-quality-forecast-plots
+gitHubLink: https://github.com/technologiestiftung/odis-luftqualitaet
+category: Datenvisualisierung
+---
+
+## Hintergrund
+
+Die digitale Berliner Luftkarte wurde in Zusammenarbeit mit der Abteilung I (Umweltpolitik, Abfallwirtschaft, Immissionsschutz) der Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt entwickelt.
+Als zentrale Stelle zur Förderung offener Verwaltungsdaten in Berlin unterstützt ODIS Projekte, die öffentliche Daten zugänglich, nutzbar und wirksam machen.
+Die Luftkarte ist ein Beispiel dafür, wie offene Daten für die breite Öffentlichkeit verständlich und visuell aufbereitet werden können.
+
+Ziel des Projekts war es, das abstrakte Thema Luftschadstoffe greifbarer zu machen, die Relevanz sauberer Luft im Alltag zu verdeutlichen und datenbasierte Diskussionen zu ermöglichen.
+Indem die Anwendung als Open-Data-basierter Service bereitgestellt wird, leistet sie einen Beitrag zur transparenten Stadtverwaltung und stärkt die digitale Teilhabe.
+
+Ergänzend wird die Karte durch textliche Erläuterungen auf dem Internetauftritt der SenMVKU auf Berlin.de begleitet. Diese zusätzlichen Informationen richten sich insbesondere an die breite Öffentlichkeit und sollen den Zugang und das Verständnis weiter erleichtern.
+
+## Was zeigt die Luftkarte?
+
+Die Berliner Luftkarte bildet die Luftqualität für das Jahr 2024 flächendeckend im Stadtgebiet ab.
+Auf einem Raster von 50 × 50 Metern werden die durchschnittlichen Jahreswerte der drei wichtigsten Luftschadstoffe – Stickstoffdioxid (NO₂), Feinstaub PM10 und PM2.5 – dargestellt.
+Jeder Kartenzelle wird eine von fünf Kategorien zugewiesen, die den Bedarf an Luftverbesserungsmaßnahmen anzeigen: von "niedrig" bis "hoch".
+Die Einstufung basiert auf dem jeweils höchsten Belastungswert im Vergleich zu den Grenz- und Zielwerten der Weltgesundheitsorganisation (WHO). Durch Eingabe einer Adresse oder Anklicken eines Kartenausschnitts lässt sich die Belastung an jedem Ort in Berlin einsehen.
+
+## Datengrundlage und Methode
+
+Die Karte basiert auf Berechnungen des Modells „FAirQ“ der INWT Statistics GmbH.
+Das Modell kombiniert:
+
+- Messdaten der Berliner Luftgütemessstationen (BLUME)
+- Verkehrsdaten von über 200 Punkten
+- Wetterdaten des Deutschen Wetterdienstes (DWD) sowie
+- Schadstoffprognosen aus dem europäischen COPERNICUS-Programm (CAMS).
+
+Mithilfe von Big Data-Methoden und Künstlicher Intelligenz werden stündliche Belastungswerte ermittelt und auf Jahresmittelwerte heruntergerechnet.
+Diese Werte werden anschließend auf das 50 × 50 Meter Raster übertragen.

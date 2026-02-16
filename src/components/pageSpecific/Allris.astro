@@ -106,7 +106,7 @@
       })
       .attr("transform", function (d) {
         const xWord = x(d.Word)
-        if (!xWord) return "start";
+       // if (!xWord) return "start";
         return (
           "rotate(" +
           (((xWord + x.bandwidth() / 2) * 180) / Math.PI - 90) +
