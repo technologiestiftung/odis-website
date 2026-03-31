@@ -39,5 +39,8 @@
     "tailwind-merge": "2.2.1",
     "tailwindcss": "3.4.1",
     "tailwindcss-touch": "1.0.1"
+  },
+  "engines": {
+    "node": "24.14.1"
   }
 }
