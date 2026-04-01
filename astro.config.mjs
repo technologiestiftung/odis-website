@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 
 // Core plugins
 import mdx from "@astrojs/mdx";
-import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
@@ -18,6 +17,7 @@ if (!hasMatomo) {
 
 // https://astro.build/config
 export default defineConfig({
+  prefetch: true,
   site:
     process.env.NODE_ENV !== "development"
       ? "https://odis-berlin.de"
@@ -27,7 +27,6 @@ export default defineConfig({
       iconDir: "src/assets/images/icons",
     }),
     mdx(),
-    prefetch(),
     sitemap(),
     tailwind(),
   ],
