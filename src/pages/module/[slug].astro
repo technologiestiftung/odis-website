@@ -243,9 +243,11 @@ const { Content } = await post.render();
 
 <script>
   import Swiper from "swiper";
-  import "swiper/swiper-bundle.css";
+  import { Navigation, A11y } from "swiper/modules";
+  import "swiper/css/bundle";
 
   const swiper = new Swiper(".resources-swiper", {
+    modules: [Navigation, A11y],
     slidesPerView: 1,
     spaceBetween: 32,
     breakpoints: {
