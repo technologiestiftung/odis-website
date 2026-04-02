@@ -47,7 +47,19 @@ const news = (
     </div>
   </div>
 </div>
-<ItemsSlider
-uniqueId="aktuelles-swiper">
+
+<ItemsSlider uniqueId="aktuelles-swiper">
   {news.map((newsEntry) => <NewsCard {...newsEntry} class="swiper-slide" />)}
 </ItemsSlider>
+
+<style is:global>
+  #aktuelles-swiper .items-swiper,
+  #aktuelles-swiper .swiper-wrapper,
+  #aktuelles-swiper .swiper-slide {
+    height: auto;
+  }
+
+  #aktuelles-swiper .swiper-wrapper {
+    align-items: stretch;
+  }
+</style>

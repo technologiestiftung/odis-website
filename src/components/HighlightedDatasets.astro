@@ -115,9 +115,8 @@ const focusStyles =
 <script>
   import tippy from "tippy.js";
   import "tippy.js/dist/tippy.css";
-
-  import Swiper from "swiper";
-  import "swiper/swiper-bundle.css";
+  import Swiper from "swiper/bundle";
+  import "swiper/css/bundle";
 
   const highlightedDatasetsList = (document
     .getElementById("highlighted-datasets")
@@ -128,7 +127,7 @@ const focusStyles =
     ------------------------------------------------------------
     SLIDER (mobile screen sizes)
     ------------------------------------------------------------
-    */
+  */
   const INITIAL_SLIDE_INDEX = 1;
 
   const swiper = new Swiper(".wimmelbild-swiper", {
@@ -156,12 +155,6 @@ const focusStyles =
     },
   });
 
-  const nextButton = document.querySelector(".wimmelbild-button-next");
-  const prevButton = document.querySelector(".wimmelbild-button-prev");
-
-  nextButton?.addEventListener("click", () => swiper.slideNext());
-  prevButton?.addEventListener("click", () => swiper.slidePrev());
-
   const initialInfoElement = [...highlightedDatasetsList][INITIAL_SLIDE_INDEX];
   const initialSlide = swiper.slides[INITIAL_SLIDE_INDEX];
 
@@ -169,12 +162,11 @@ const focusStyles =
     initialInfoElement.classList.remove("hidden");
   }
 
-  swiper.on("transitionEnd", function (swiper) {
+  swiper.on("slideChange", function () {
+    const activeIndex = Math.round(swiper.activeIndex);
     [...highlightedDatasetsList].forEach((element) => {
       const isActive =
-        element.dataset.highlightedDatasetIndex ===
-        `${Number(swiper.activeIndex)}`;
-
+        element.dataset.highlightedDatasetIndex === `${activeIndex}`;
       element.classList.toggle("hidden", !isActive);
     });
   });
@@ -240,6 +232,25 @@ const focusStyles =
 </script>
 
 <style is:global>
+  .wimmelbild-swiper {
+    max-width: 100vw;
+    overflow: visible !important;
+  }
+
+  .wimmelbild-swiper .swiper-wrapper {
+    align-items: flex-end;
+  }
+
+  .wimmelbild-swiper .swiper-slide {
+    height: auto;
+  }
+
+  @media (min-width: 1024px) {
+    .wimmelbild-swiper {
+      display: none !important;
+    }
+  }
+
   .wimmelbild-swiper .swiper-slide path,
   .wimmelbild-swiper .swiper-slide circle,
   .wimmelbild-swiper .swiper-slide rect {

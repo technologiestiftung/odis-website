@@ -2,7 +2,6 @@
 import NewsCardContent from "./NewsCardContent.astro";
 import Button from "./Button.astro";
 import TextLink from "./TextLink.astro";
-import NewsCardGradient from "./NewsCardGradient.astro";
 import { cn } from "../utils/classNames";
 import { Icon } from "astro-icon/components";
 import type { CollectionEntry } from "astro:content";
@@ -33,12 +32,14 @@ const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
 
 <article
   class={cn(
-    `@container relative grid grid-items-start`,
-    `grid-rows-[306px,minmax(auto,1fr)] border`,
-    !isInverted && `bg-bg-alt dark:bg-bg text-text border-bg-alt`,
-    headerImage?.src ? `p-0` : paddingClasses,
-    isInverted && `text-text-inv bg-bg-inv bg-top`,
-    isInverted && `border-bg-inv bg-no-repeat bg-cover @md:bg-contain`,
+    "@container relative grid w-full",
+    "grid-cols-1",
+    "grid-rows-[306px_auto]",
+    "items-start",
+    !isInverted && "bg-bg-alt dark:bg-bg text-text border-bg-alt border",
+    headerImage?.src ? "p-0" : `${paddingClasses} border`,
+    isInverted && "text-text-inv bg-bg-inv bg-top",
+    isInverted && "border border-bg-inv bg-no-repeat bg-cover @md:bg-contain",
     className,
   )}
 >
@@ -49,8 +50,8 @@ const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
         target={linkIsExternal ? "_blank" : "_self"}
         rel={linkIsExternal ? "noopener noreferrer" : undefined}
         class={cn(
-          `w-full h-[306px] overflow-hidden outline-none relative`,
-          `hover:opacity-50 transition-opacity duration-300 ease-in-out`,
+          "row-start-1 block w-full h-[306px] overflow-hidden outline-none relative",
+          "hover:opacity-50 transition-opacity duration-300 ease-in-out",
         )}
       >
         <Image
@@ -58,27 +59,31 @@ const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
           alt={headerImage.alt}
           loading={imageLoading}
           widths={[360, 740]}
-          sizes={`(max-width: 360px) 360px, 740px`}
-          class={cn("w-full h-full object-cover")}
+          sizes="(max-width: 360px) 360px, 740px"
+          class="block w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-bg-inv mix-blend-screen opacity-50" />
       </a>
     )
   }
+
   <div
     class={cn(
-      "row-start-2 h-full grid grid-rows-[auto,1fr] gap-6 z-10",
+      "row-start-2 w-full min-w-0",
+      "grid grid-cols-1 grid-rows-[auto_1fr]",
+      "gap-6 z-10",
       contentAreaWrapperClasses,
     )}
   >
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-2 min-w-0">
       <NewsCardContent
         {...Astro.props.data}
         postLink={postLink}
         theme={theme}
       />
     </div>
-    <div class="flex flex-col justify-end items-start">
+
+    <div class="flex flex-col justify-end items-start min-w-0">
       {
         !isInverted && (
           <Button tag="a" href={postLink} variant="secondary">
@@ -99,6 +104,7 @@ const contentAreaWrapperClasses = headerImage ? paddingClasses : "";
       }
     </div>
   </div>
+
   {
     isInverted && (
       <>

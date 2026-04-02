@@ -227,6 +227,7 @@
   html {
     @apply font-sans text-text bg-bg min-h-screen;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   /*! purgecss end ignore */
 }
