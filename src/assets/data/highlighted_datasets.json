@@ -4,7 +4,7 @@
     "category": "Haushalt und Steuern",
     "title": "Berliner Haushalt",
     "description": "Pro Jahr stehen der Berliner Verwaltung über 35 Milliarden Euro zur Verfügung. Die Veröffentlichung der Haushaltsdaten als Open Data und deren Visualisierung machen transparent, für welche Vorhaben welche Summen an Steuergeldern eingesetzt werden.",
-    "url": "https://odis-berlin.de/projekte/haushaltsdaten/",
+    "url": "https://odis-berlin.de/projekte/2022-09-haushaltsdaten/",
     "example_usage": "/projekte/haushaltsdaten",
     "icon": "money"
   },
@@ -76,6 +76,6 @@
     "category": "Energie",
     "title": "Energieverbräuche",
     "description": "Bis spätestens 2045 will Berlin klimaneutral werden. Dafür müssen auch Gebäude Energie einsparen und umfassend saniert werden. Offene Daten zu Energieverbrauch und Energieeinsparungen öffentlicher Gebäude können dabei zum Beispiel eine Grundlage für ein datengestütztes Monitoring bilden.",
-    "url": "https://odis-berlin.de/projekte/energiecheckpoint"
+    "url": "https://odis-berlin.de/projekte/2023-03-energiecheckpoint/"
   }
 ]

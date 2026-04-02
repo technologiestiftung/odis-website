@@ -6,7 +6,7 @@ Repository for the website of Berlins Open Data Informationsstelle (ODIS).
 
 ## Setup
 
-This site is build with Astro. Make sure Node.js >+ 24 is installed on your system. Best way to do this is using [nvm](https://github.com/nvm-sh/nvm).
+This site is build with Astro. Make sure Node.js 24 is installed on your system. Best way to do this is using [nvm](https://github.com/nvm-sh/nvm).
 
 ### Installation of Node.js, npm and Astro dependencies (once)
 
@@ -22,18 +22,19 @@ After that you can install the needed Node.js version.
 
 ```bash
 # move into the repo
-cd path/to/ods-website
+cd path/to/odis-website
 # update your local version to the latest state
-git pull origin master
+git pull origin main
 # intall the used Node.js version using nvm
 nvm install
+nvm use
 ```
 
 When everything went smoothly you can go ahead and install eleventy's dependencies.
 
 ```bash
 # move into the repo
-cd path/to/ods-website
+cd path/to/odis-website
 # install eleventy's dependencies
 npm ci
 ```
@@ -70,7 +71,7 @@ This section describes what technologies are used and gives advice on the fundam
 
 ## Tech Overview
 
-The website is build with:
+The website is built with:
 
 - **[Astro](https://docs.astro.build/en/getting-started/):** A content-focused web framework for static and server-side rendered pages (in this case mostly static pages)
 - Vanilla (regular) [TypeScript](https://www.typescriptlang.org/): In the context of Astro, simple script tags can be included to add JS sprinkles on the pages. Those are either inlined as-is or bundled automatically by Astro. [Read more here](https://docs.astro.build/en/guides/client-side-scripts/#_top). In the case of ODIS, we use inline scripts for legacy code that was brought over from the old page, and Astro-bundled scripts for new components.
