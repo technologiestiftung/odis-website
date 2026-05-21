@@ -1,0 +1,151 @@
+---
+tags:
+  - "home"
+  - "post"
+  - "Mit Datawrapper Daten veranschaulichen und begreifbar machen"
+  - "Aktuelle Datenperle – Kfz-Einbrüche"
+  - Berlins Kerndatensätze
+  - "Aktuelle Datenperle – Fahrraddiebstähle"
+title: "Daten-Deepdive: Offene und weniger offene Daten zu Kriminalität in Berlin"
+description: Anfang 2026 veröffentlichte die Polizei Berlin erstmals die genauen Lagekarten der sogenannten kriminalitätsbelasteten Orte (kbO). Wir haben uns diese Karten und die offenen Daten zum Thema Kriminalität in Berlin genauer angeschaut. Dabei hat uns interessiert, wie die öffentlich verfügbaren Datensätze rund um die betroffenen Stadtgebiete für Bürger:innen nutzbar sind, und welche Erkenntnisse sie bieten. 
+categories: aktuelles
+visible: true
+urlText: Zum Blogbeitrag
+headerImage:
+  src: ./images/kbos_blueKotti.png
+  alt: Fotocollage, zwei Polizeibeamte im Vordergrund blicken über Strassenszene und Stadtkarte vom Kottbusser Tor
+readingTime: 5-6
+date: 2026-05-13
+---
+
+## Welche Orte gelten als "kriminalitätsbelastet" und welche (offene) Datengrundlage gibt es hierfür?
+
+Die Kategorie „kriminalitätsbelastete Orte“ (kbO) gibt es in Berlin seit Mitte der 1990er Jahre, seitdem hat sich die Liste immer wieder verändert. Aktuell sind diese sieben Zonen in den Bezirken Mitte, Friedrichshain-Kreuzberg und Neukölln von der Berliner Polizei als kbOs eingestuft:
+
+* Alexanderplatz
+* Kottbusser Tor
+* Görlitzer Park/Wrangelkiez
+* Warschauer Brücke
+* Rigaer Straße
+* Hermannplatz/Donaukiez
+* Hermannstraße/Bahnhof Neukölln
+
+KbOs sind genau umrissene Gebiete (siehe Karte), deren Grenzen nur die Polizei aufgrund des Geschehens vor Ort erklären kann. Wie genau diese Umrisse zustande kommen, lässt sich schwer ermitteln. Laut [Polizei Berlin](https://www.berlin.de/polizei/polizeimeldungen/fakten-hintergruende/artikel.1078268.php) werden an kbOs "Straftaten von erheblicher Bedeutung, also zum Beispiel Raubtaten, Brandstiftungen, gefährliche Körperverletzungen, gewerbs- oder bandenmäßiger Taschendiebstahl oder Rauschgifthandel verabredet, vorbereitet oder verübt."
+
+import image1 from "./images/kbos-in-berlin-karte.png"
+
+<TextContentSection class="sm:px-6 py-3" largeContainer={true}>
+  <ImageSection 
+    src={image1}
+    alt="Karte der kriminalitätsbelasten Orte"
+  />
+</TextContentSection>
+
+
+## Was bedeutet das in der Praxis?
+
+Die Einstufung als "kriminalitätsbelasteter Ort" bedeutet mehr Kontrolle: Beamt:innen haben innerhalb der kbOs besondere Handlungsmöglichkeiten, die im Berliner Polizeigesetz (ASOG) festgelegt sind. Dazu gehören:
+- verdachtsunabhängige Identitätsfeststellung
+- verdachtsunabhängige Durchsuchung von Personen und Sachen
+- Videoüberwachung
+
+Kritiker:innen bezeichnen dies als anlasslose Personenkontrolle, die einem sogennanten "Racial Profiling" Vorschub leistet. Die Befürchtung ist, dass es zu vermehrter polizeilicher Kontrolle von Personen aufgrund ihrer Hautfarbe, Herkunft oder anderer äußerer Merkmale kommt. Die Daten zeigen lediglich, dass am größten kbO (Alexanderplatz) und auch am kleinsten (Kottbusser Tor) besonders häufig Identitätsfeststellungen und Durchsuchungen stattfinden. Aufsehen erregte ein Vorfall, bei dem der ehemalige Kultursenator Joe Chialo (CDU) bei einem Ortstermin im Görlitzer Park aufgefordert wurde, sich auszuweisen.
+
+Ein Blick ins [Geoportal Berlin](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/e6ad2caf-3a35-3be9-84cc-501387ce93ee) zeigt: Alle aktuellen kbOs befinden sich in der Polizeidirektion City (5). Seit 2020 gibt es hier die "Brennpunkt- und Präsenzeinheit" mit mittlerweile 125 Beamt:innen aus ganz Berlin. Das ist eine spezielle Einheit, die nur in den kbOs aktiv ist. Doch wie erfolgreich ist diese Art der Polizeiarbeit?
+
+<ContentSection fullWidth={false}>
+  <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%'}}>
+  <iframe title="Gesamtfallzahlen 'kriminalitätsbelastete Orte' in Berlin" aria-label="Liniendiagramm" id="datawrapper-chart-lNmvm" src="https://datawrapper.dwcdn.net/lNmvm/1/" scrolling="yes" frameborder="0" style="border: none;" width="603" height="500" data-external="1"></iframe>
+  </div>
+ </ContentSection>
+
+<ContentSection fullWidth={false}>
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', width: '100%'}}>
+  <iframe title="Straftaten und Polizeikontrollen an Berlins 'kriminalitätsbelasteten Orten'*" aria-label="Split Bars" id="datawrapper-chart-K6KvQ" src="https://datawrapper.dwcdn.net/K6KvQ/1/" scrolling="yes" frameborder="0" style="border: none;" width="600" height="450" data-external="1"></iframe>
+  </div>
+</ContentSection>
+
+## Grenzen der Datenanalyse und statistische Fettnäpfchen
+
+Um den Erfolg oder auch die negativen Seiten des verstärkten Polizeieinsatzes wirklich bewerten zu können, wäre eine vertiefte Recherche vor Ort notwendig. Zudem sind Vergleichswerte für ähnliche Orte mit erhöhten Kriminalitätsraten, zum Beispiel von ehemaligen kbOs, nicht öffentlich verfügbar. In diesem Beitrag beschränken wir uns nur auf die veröffentlichten Daten und Zahlen. Die hier gezeigten Infografiken basieren auf detaillierten Fallzahlen für die aktuellen kbOs, die in einer [Antwort auf eine Anfrage](https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-24404.pdf) des Abgeordneten Niklas Schrader (Linke) veröffentlicht wurden. Das Dokument konnten wir übrigens recht schnell mithilfe des KI-Tools [Parla](https://www.parla.berlin/) finden, das gezielt die Dokumente des Berliner Abgeordnetenhauses im Portal [PARDOK](https://pardok.parlament-berlin.de/portala/browse.tt.html) durchsucht. Die Karten der kbOs wurden von der Polizei Berlin als [PDF](https://www.berlin.de/polizei/polizeimeldungen/fakten-hintergruende/artikel.1078268.php) bereitgestellt, nicht aber in maschinenlesbarer Form, weshalb sie manuell aufbereitet werden mussten. Die Grafik zeigt, dass die Fallzahlen an den kbOs insgesamt rückläufig sind. Besonders deutlich ist dies am Alexanderplatz und am Görlitzer Park zu erkennen. Dabei ist es wichtig, auch mal über den Daten-Tellerrand zu schauen: so war die Anzahl der Drogendelikte am kbO Görlitzer Park im Jahr 2023 noch vergleichsweise hoch, seitdem sind sie laut Datensatz um fast zwei Drittel zurückgegangen. Dies hängt vor allem mit der Cannabis-Legalisierung seit dem 1. April 2024 zusammen. An der tatsächlichen Situation vor Ort hat sich also wenig geändert, nur wird es in der Fallzahlen nicht mehr sichtbar.
+
+<ContentSection fullWidth={false}>
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', width: '100%'}}>
+  <iframe title="Fallzahlen signifikanter Delikte an 'kriminalitätsbelasteten Orten' in Berlin 2023-2025" aria-label="Stacked Bars" id="datawrapper-chart-FVePS" src="https://datawrapper.dwcdn.net/FVePS/3/" scrolling="yes" frameborder="0" style="border: none;" width="600" height="1050" data-external="1"></iframe>
+  </div>
+</ContentSection>
+
+Die Daten zeigen, dass es am kbO Alexanderplatz mit Abstand die meisten Straftaten gibt. Der größte Teil davon sind wohlgemerkt keine Messerangriffe von Jugendlichen, sondern Ladendiebstähle. Deren Anzahl sank von 2349 Fällen (2024) auf 1123 (Fallzahlen 01.01.-19.11.2025). Schwere Körperverletzungen sind am Alex und auch am Görlitzer Park jedoch tatsächlich häufiger als an anderen kbOs. 
+
+Das Gebiet Rigaer Straße liegt mit Abstand am weitesten hinten in der Fallzahlstatistik. Warum dieser Kiez als kbO eingestuft wird, lässt sich mithilfe der öffentlich verfügbaren Daten nicht erklären. Hier stellt sich die Frage, wie evidenzbasiert die Zuordnung als kbO ist. Welche Stadtteile werden als "kriminalitätsbelastet" eingestuft, welche nicht, und warum?
+
+Mit dieser Frage stößt man auf ein Problem der Datenanalyse: die Vergleichbarkeit verschiedener Datensätze. Mit den Daten des [Berliner Kriminalitätsatlas](https://www.kriminalitaetsatlas.berlin.de/K-Atlas/atlas.html) lassen sich die Fallzahlen aus anderen Stadtteilen erkunden. Allerdings basiert die stadtweite Kriminalitätsstatistik auf Bezirksregionen. Das heißt, die Fallzahlen werden auf eine größere Raumeinheit aggregiert veröffentlicht. Dadurch, dass die kbOs kleinteiliger strukturiert sind, ist es schwierig, deren Kriminalitätsdaten mit denen anderer Berliner Stadtteile direkt zu vergleichen. Die Statistik zeigt jedoch: es gibt auch in einigen anderen Bezirksregionen erhöhte Deliktzahlen, z.B. im Gebiet Lietzenburger Straße. Hier ist genaueres Hinschauen wichtig – am besten ist es, die [Tabelle](https://www.kriminalitaetsatlas.berlin.de/K-Atlas/bezirke/Fallzahlen&HZ%202016-2025.xlsx) herunterzuladen, um zu verstehen, wie sie aufgebaut ist.
+
+import image2 from "./images/Kriminalitaetsatlas.png"
+
+<TextContentSection class="sm:px-6" largeContainer={true}>
+  <ImageSection 
+    src={image2}
+    alt="Screenshot Kriminalitätsatlas Berlin"
+    caption="Kriminalitätsatlas Berlin"
+  />
+</TextContentSection>
+
+Der Online-Viewer des Kriminalitätsatlas zeigt unter anderem die Bezirksregionen im Berliner Stadtzentrum als dunkelrot (= gefährlich!). Die Bezirksregion Alexanderplatz ist tatsächlich die mit den höchsten Fallzahlen. Aber wenn man die Maus über das Regierungsviertel direkt daneben zieht, zeigt sich noch ein besonders hoher Wert – Straftaten insgesamt: 46.179 (Häufigkeitszahl). Die Bezirksregion mit Bundestag, Kanzleramt & Co. als kriminellster Ort in Berlin? Wow.
+
+Das Problem liegt in der statistischen Aufbereitung. Zur Ermittlung der sogennanten Häufigkeitszahl (HZ) werden die Straftaten pro 100.000 Einwohner aufgerechnet. Damit soll eine bessere Vergleichbarkeit, gemessen an der Einwohnerdichte der jeweiligen Stadtteile entstehen. Dadurch ergibt sich jedoch eine auffällig verzerrte Darstellung: im Regierungsviertel leben vergleichsweise sehr wenig Menschen. Zugleich ziehen die Stadtteile im Zentrum viele Besucher:innen an – darunter auch Menschen, die Straftaten begehen. Dieses Missverhältnis wird statistisch nicht berücksichtigt. Betrachtet man stattdessen die absoluten Fallzahlen, ergibt sich ein etwas anderes Bild.
+
+## Jenseits des Labels „kriminalitätsbelasteter Ort“
+
+Statistik beiseite: Was macht diese Orte, die aktuell als "kriminalitätsbelastet" gelten, wirklich aus? Besonders häufig steigt man hier ein oder um: alle kbOs liegen entlang zentraler U- und S-Bahnlinien. Sie sind stark genutzte Transiträume. In der alltäglichen Wahrnehmung sind viele kbOs nicht nur soziale Brennpunkte, sondern zugleich Orte der Zusammenkunft, des Tourismus, des Nachtlebens, Orte mit besonderer kultureller Vielfalt, die häufig sowohl von Besucher:innen als auch Anwohner:innen der ganzen Stadt genutzt werden. Hier feiern viele Menschen, gehen tanzen, machen Sightseeing, treffen Freund:innen oder gehen shoppen. Sehr viele Menschen leben und arbeiten innerhalb der kbOs: einzelne Blöcke in den Zonen entlang der Hermannstraße und am Kottbusser Tor zählen zu den [am dichtesten bewohnten Gebieten der Stadt](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/f2fc9f93-b689-4135-a5e1-e63a0b8204de). Einige kbOs sind migrantisch geprägt, andere weniger. Hier gibt es viele [Kitas](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/9d60f82f-7a3d-441e-8ffa-89ba87995196), [Schulen](https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/2656f411-e4e9-3e57-8dc7-b4533426e048) und viele [Familien mit Kindern](https://daten.berlin.de/datensaetze/einwohnerinnen-und-einwohner-in-berlin-in-lor-planungsraumen-am-31-12-2025). Gleichzeitig gibt es hier auch Orte, die Nischen für Drogenkonsument:innen, Dealer oder wohnungslose Menschen bieten. Diese werden nun zunehmend eingeschränkt. Die Szenen verschwinden jedoch nicht, sondern verlagern sich räumlich. An einigen der kbOs ist die Polizei mit der Bekämpfung der sogenannten Clankriminalität beschäftigt; die betroffenen Stadtteile wurden durch klischeehafte und oft rassistische Darstellungen in Medien und Öffentlichkeit berühmt-berüchtigt. Unterschiedlichste Lebenswelten treffen hier zusammen. Einige Aspekte dieser Vielfalt lassen sich mithilfe der offenen Datensätze zur Sozialstruktur der Stadt darstellen. Und einige Fragen bleiben offen.
+
+
+<div style={{
+  backgroundColor: '#b8c6fa',
+  padding: '10px',
+  borderRadius: '5px',
+  display: 'inline-block'
+}}>
+
+
+## Tips zum eigenständigen Recherchieren
+
+Das Berliner Geoportal stellt eine Vielzahl städtischer Kartendaten zur Verfügung. Dort kann man auch eigene Geodaten hochladen und zusammen mit den öffentlichen Karten im Viewer betrachten.
+Für die eigene Recherche gibt es [hier die Umrisse der kriminalitätsbelasteten Orte](/file-download/kbOs.geojson) (Stand Anfang 2026) im geojson Format zum Download. Im [Geoportal](https://gdi.berlin.de/viewer/main/) befindet sich oben links im Menü der Reiter "Werkzeuge“. Über "Datei Import" im Dropdown Menü lässt sich die geojson-Datei hochladen. Die kbOs (rot) werden sofort im Viewer sichtbar. So kann man die Umrisse der kbOs mit anderen Fachkarten zusammen betrachten und nach interessanten Korrellationen suchen.
+Das gleiche lässt sich auch mit dem kürzlich veröffentlichten [Umweltatlas](https://www.berlin.de/umweltatlas/) ausprobieren. (Hier befindet sich das Werkzeug-Menü mit Importoption oben rechts.) 
+Weitere Geodaten, z.B. die Umrisse der [Bezirksregionen](https://daten.odis-berlin.de/de/dataset/lor_bezirksregionen_2021/) sind als Teil der [ODIS Basisdatensätze für Berlin](https://daten.odis-berlin.de/) verfügbar.
+
+Viel Spass!
+
+</div>
+
+import image3 from "./images/geoportal_recherche.png"
+
+<TextContentSection class="sm:px-6 py-3" largeContainer={true}>
+  <ImageSection 
+    src={image3}
+    alt="Screenshot: Karte aus dem Monitoring Gewaltdelinquenz im Geoportal Berlin, kbOs in rot"
+    caption="Screenshot aus dem Monitoring Gewaltdelinquenz im Geoportal Berlin, kbOs in rot"
+  />
+</TextContentSection>
+
+
+## Datenquellen
+
+Senat Berlin, [Drucksache 19/2664](https://www.parlament-berlin.de/ados/19/IIIPlen/vorgang/d19-2664.pdf)
+Bericht des Senats gemäß § 21 Absatz 4 Allgemeines Sicherheits- und Ordnungsgesetz –
+ASOG Bln für das Jahr 2024
+
+Senat Berlin, [Drucksache 19 / 24 404](https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-24404.pdf)
+Antwort auf die Schriftliche Anfrage Nr. 19/24 404 vom 18. November 2025 über Kriminalitätsbelastete Orte in Berlin – Stand 2025
+
+[Polizeimeldung Kriminalitätsbelastete Orte in Berlin](https://www.berlin.de/polizei/polizeimeldungen/fakten-hintergruende/artikel.1078268.php)
+
+[Kriminalitätsatlas Berlin](https://www.kriminalitaetsatlas.berlin.de)
+
+[Polizeiliche Kriminalstatistik Berlin 2025](https://www.berlin.de/polizei/verschiedenes/polizeiliche-kriminalstatistik/)
+
+[Geoportal Berlin](https://gdi.berlin.de/viewer/main/)
+
+
+
