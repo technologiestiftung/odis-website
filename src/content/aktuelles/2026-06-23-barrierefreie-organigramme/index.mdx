@@ -1,0 +1,161 @@
+---
+tags:
+  - "home"
+  - "post"
+  - "Organigramm-Tool"
+  - "Barrierefreiheit"
+  - "Organigramm"
+  - "PDF"
+title: "Organigramme jetzt standardmäßig barrierefrei"
+description: Wie wir das Organigramm-Tool um eine barrierefreie Ansicht und einen barrierefreien Export erweitert haben.
+categories: aktuelles
+visible: true
+urlText: Zum Blogbeitrag
+headerImage:
+  src: ./images/testing.png
+  alt: Blinde Testerin am PC beim testen des barrierefreien Organigramms
+readingTime: 4-8
+date: 2026-06-23
+---
+
+## Wie es zu dem Projekt kam
+
+Seit mehreren Jahren beschäftigen wir uns als ODIS mit der Frage, wie Organigramme nicht nur visuell, sondern auch maschinenlesbar bereitgestellt werden können. In diesem Zusammenhang haben wir ein [Organigramm-Tool|](https://odis-berlin.de/projekte/2023-07-organigramm-tool/) entwickelt, das inzwischen von mehreren Berliner Verwaltungen genutzt wird, um Organisationsstrukturen strukturiert zu erfassen und zu veröffentlichen. Das Projekt war dabei von Anfang an mehr als nur die Entwicklung eines einzelnen Werkzeugs. Es diente als Lern- und Erprobungsprojekt, um [neue technologische Ansätze](https://odis-berlin.de/projekte/2025-04-lod-studie/) für die öffentliche Verwaltung zu testen.
+
+Vor diesem Hintergrund erreichen uns immer wieder Fragen zur Weiterentwicklung des Organigramm-Tools. Darunter auch folgende Anfrage einer Mitarbeiterin der Berliner Verwaltung, in der auf ein bisher noch unbeachtetes Problem aufmerksam gemacht wurde: 
+
+> [Das Organigramm-Tool] Es ist ein tolles Tool. Allerdings müssen wir die Dokumente barrierefrei veröffentlichen. Gerade das Organigramm stellt da noch ein großes Problem dar. Ist seitens ODIS irgendetwas geplant in diese Richtung?
+> 
+
+Geplant war bis dahin noch nichts, doch das Problem ließ uns nicht los und so machten wir uns auf den Weg zu verstehen, wie wir barrierefreie Organigramme erstellen können. 
+
+## Das Problem mit den Organigrammen
+
+Organigramme sind visuell gedacht. Sie zeigen, wie eine Organisation aufgebaut ist und wer für welche Aufgaben zuständig ist. Meist werden sie als visuelle Diagramme mit Kästen, Linien und Hierarchien dargestellt. Für viele sehende Menschen funktioniert das gut, für Screenreader und andere assistive Technologien oft nicht.
+
+import image1 from "./images/screenshot_org.png"
+
+<ContentSection class="sm:px-20">
+  <ImageSection 
+    src={image1}
+    alt="Organisationsstruktur als Baumdiagramm dargestellt"
+    caption="Organisationsstruktur als Baumdiagramm dargestellt"
+
+  />
+</ContentSection>
+
+Wenn Organigramme barrierefrei veröffentlicht werden sollen, entsteht daher häufig ein zusätzlicher Aufwand: Neben dem klassischen Organigramm als Baumdiagramm, muss eine zweite Version erstellt und gepflegt werden.
+
+Für uns war die Ausgangslage jedoch etwas anders. Unser Organigramm-Tool basiert nicht auf Grafiken, sondern auf maschinenlesbaren JSON-Daten. Die Informationen lagen also bereits strukturiert vor. Die Herausforderung bestand nicht darin, sie neu zu erfassen, sondern sie so aufzubereiten, dass sie auch ohne visuelle Darstellung verständlich und nutzbar werden.
+
+## Was ist ein barrierefreies Organigramm?
+
+Zu Beginn mussten wir verstehen, was Barrierefreiheit für Organigramme überhaupt bedeutet.
+
+Schnell wurde klar: Es reicht nicht, ein bestehendes Diagramm technisch aufzubereiten oder mit Alternativtext zu versehen, der das Diagramm beschreiben würden. Die Informationen hinter dem Diagramm müssen in eine Form übersetzt werden, die auch ohne visuelle Darstellung funktioniert.
+
+Außerdem wollten wir die Lösung nicht nur technisch prüfen, sondern auch an das tatsächliche Nutzungsverhalten der Menschen anpassen, die solche Angebote wahrnehmen. Es war daher bei der Entwicklung besonders wichtig, direkt mit betroffenen Menschen zu testen und zu iterieren. 
+
+## Von zwei- zu eindimensional: Ein Diagramm wird zur Liste
+
+Unsere wichtigste Erkenntnis war, dass die klassische Baumdarstellung nicht der richtige Ausgangspunkt ist.
+
+Aus unserer Recherche entstand die Vermutung, dass eine lineare Struktur für Screenreader-Nutzer:innen besser geeignet sein könnte. Diese Annahme wurde später im User-Testing bestätigt. Eine blinde Testerin formulierte es so:
+
+> Für mich ist alles eine lange Liste.
+> 
+
+Die Aussage bestätigte unsere anfängliche Vermutung und brachte sie gleichzeitig sehr treffend auf den Punkt: Organigramme sind visuell zweidimensional, ein Screenreader liest jedoch eindimensional. Statt das visuelle Baumdiagramm nachzubilden, haben wir daher die Organigramm-Daten in eine hierarchische Listenstruktur übersetzt. Verwaltungseinheiten, Untereinheiten und Personen werden über Überschriften, Listen und Links dargestellt.
+
+Als Ausgabeformate haben wir HTML und PDF gewählt. HTML eignet sich gut für die Nutzung mit Screenreadern, wenn Inhalte semantisch korrekt strukturiert sind. Für PDF haben wir zusätzlich sogenannte Tags erzeugt – unsichtbare Markierungen, die assistiven Technologien zeigen, ob ein Element zum Beispiel eine Überschrift, eine Liste oder ein Link ist.
+
+Neben der technischen Struktur haben wir auch die Verständlichkeit verbessert: mit einem klaren Aufbau, kurzen Einleitungstexten, verständlicheren Begriffen und einem Glossar für Verwaltungsbegriffe. Dieses Glossar hatten wir bereits im Kontext eines anderen Exports als [Linked Data](https://odis-berlin.de/aktuelles/2024-03-28-linked-open-data/) angelegt.
+
+Die technische Umsetzung wurde teilweise durch KI-Tools unterstützt. Entscheidend waren jedoch die konzeptionellen Fragen: Welche Informationen sind wichtig? In welcher Reihenfolge sollten sie erscheinen? Und wie finden sich Nutzer:innen möglichst einfach zurecht?
+
+## Technik allein reicht nicht
+
+Technische Prüfungen mit Tools wie Adobe Acrobat Reader Pro und VeraPDF (open source) waren wichtig, aber nicht ausreichend, um zu verstehen, wie unsere barrierefreie Ansicht tatsächlich genutzt wird. Deshalb haben wir zusätzlich mit sehbehinderten und blinden Nutzer:innen getestet.
+
+Dabei zeigte sich, dass Menschen sehr unterschiedlich navigieren: über Überschriften, Links, direkt über die Suchfunktion oder Schritt für Schritt durch die Seite. Genau wie bei sehenden Nutzern gibt es auch hier nicht den einen richtigen Weg zum Ziel.
+
+Daraus entstand für uns ein wichtiges Prinzip: Barrierefreiheit bedeutet auch, mehrere Wege zur selben Information anzubieten.
+
+## Ein neuer Export aus denselben Daten
+
+Das Ergebnis ist ein barrierefreier Export, der direkt aus den vorhandenen Organigramm-Daten erzeugt wird. Nutzende, wie beispielsweise die Verwaltung, müssen ihre Organigramme dadurch nicht doppelt pflegen oder parallel verschiedene Versionen aktuell halten.
+
+import image2 from "./images/export.png"
+
+<ImageSection 
+  src={image2}
+  alt="Screenshot der export Funktion"
+  caption="Export-Funktion"
+/>
+
+Aus einer einzigen Datenquelle entstehen nun unterschiedliche Darstellungen für unterschiedliche Bedürfnisse: das klassische visuelle Organigramm und eine barrierefreie Alternative für Screenreader und andere assistive Technologien.
+
+Die neue Ansicht bietet:
+
+- eine lineare Listenstruktur für Screenreader,
+- klare Überschriften und Abschnitte,
+- verständlichere Begriffe,
+- Erklärtexte zu Positionen und Organisationstypen,
+- eine strukturierte HTML-Version,
+- einen getaggten PDF-Export,
+- und eine direkt aufrufbare barrierefreie Ansicht.
+
+Eine weitere Erkenntnis aus dem Testing: Viele blinde Nutzer:innen bevorzugen HTML gegenüber PDF. Deshalb sehen wir die Webansicht nicht als Ergänzung, sondern als zentralen Bestandteil der Lösung.
+
+
+import image3 from "./images/org_barr4.png"
+
+<ContentSection class="sm:px-20">
+  <ImageSection 
+      class="border"
+      src={image3}
+      caption="Screenshot eines Beispiel Organigramms in der barrierefreien HTML Ansicht"
+    />
+</ContentSection>
+
+Damit die barrierefreie Version leichter gefunden und genutzt werden kann, haben wir außerdem ein neues Feature eingebaut: Über einen Parameter in der URL kann die barrierefreie Ansicht direkt im Organigramm-Tool über den Browser aufgerufen werden. So lassen sich Organigramme gezielt in ihrer zugänglichen Darstellung verlinken. Im Berliner Open Data Portal wird inzwischen automatisch ein Link zu dieser barrierefreien Ansicht angezeigt, wenn ein entsprechendes JSON hochgeladen und als Organigramm gekennzeichnet wurde.
+Hier zwei Beispiele aus im Open Data Portal:
+
+- [Organigramm der Berliner Senatsverwaltung für Wissenschaft, Gesundheit und Pflege](https://daten.berlin.de/datensaetze/organigramm-der-senatsverwaltung-fur-wissenschaft-gesundheit-und-pflege)
+
+- [Organigramme der Berliner Senatsverwaltung für Finanzen](https://daten.berlin.de/datensaetze/organigramme-der-senatsverwaltung-fuer-finanzen-2026-1643360)
+
+<br/>
+
+## Was wir gelernt haben
+
+Ein barrierefreies Organigramm ist nicht einfach ein klassisches Organigramm mit Alternativtext.
+
+Die eigentliche Aufgabe besteht darin, Hierarchien und Beziehungen so zu strukturieren, dass sie auch ohne visuelle Darstellung verständlich und navigierbar sind.
+
+Gleichzeitig hat sich gezeigt, wie wertvoll strukturierte Daten sind. Weil die Informationen bereits maschinenlesbar vorlagen, konnten wir eine barrierefreie Alternative erzeugen, ohne ein zweites Organigramm manuell erstellen zu müssen.
+
+Wir freuen uns daher, dass unser Organigramm-Tool ab sofort die Möglichkeit anbietet, barrierefreie Organigramme quasi als Nebenprodukt mit einem Klick zu erstellen. 
+
+Aber auch abseits des Organigramm-Themas ist dieses Projekt ein guter Demonstrator dafür, dass Barrierefreiheit dort beginnt, wo Informationen unabhängig von ihrer Darstellung zugänglich werden.
+
+Wir sagen vielen Dank die Landesbeauftragte für Open Data Betül Özdemir und Knud Möller von BerlinOnline, die uns ermöglicht haben, das Organigramm-Tool mit dem Berliner Open Data Portal zu verlinken. Und ein großes Dankeschön geht natürlich auch an unsere Test:innen für ihre Zeit und ihr Feedback!
+
+<br/>
+<br/>
+
+<div style={{
+  backgroundColor: '#b8c6fa',
+  padding: '10px',
+  borderRadius: '5px',
+  display: 'inline-block'
+}}>
+
+
+#### Tipps zum Veröffentlichen eines Organigramms im Open Data Portal Berlin
+
+Sie arbeiten für die Berliner Verwaltung und möchten ein Organigramm im Open Data Portal veröffentlichen?
+
+Exportieren Sie das Organigramm in unserem Tool als JSON-Datei und laden Sie die Datei wie gewohnt ins Open Data Portal hoch, z. B. über die Datenrubrik. Mehr zu den Veröffentlichungswegen finden Sie [hier](https://berlinonline.github.io/open-data-handbuch/). Fügen Sie das Stichwort *_organigramm* hinzu, damit der Link zum Organigramm-Tool im Portal erscheint. Fertig!
+
+</div>
