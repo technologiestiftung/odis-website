@@ -1,0 +1,67 @@
+---
+tags:
+  - "home"
+  - "project"
+  - "post"
+title: MCP-Server im Praxistest
+blogLinkTitle: "Hier geht's zum Blogpost"
+blogLink: /file-download/ODIS_LOD_Studie.pdf
+description: Eine praxisnahe Erprobung von MCP-Servern um Berlins offene Daten noch besser zu finden, analysieren und visualiseren zu können
+date: 2026-07-05
+period: Juli 2026 (Veröffentlichung)
+status: abgeschlossen
+visible: true
+heroImage: ./images/mcp_skizze_portal3.png
+projectUrlWithoutProtocol: ""
+showImageInMockup: true
+category: Research
+---
+
+## Hintergrund
+
+Offene Daten sind ein zentraler Baustein für Transparenz und datenbasierte Entscheidungen. Doch ihre Nutzung scheitert oft an Unübersichtlichkeit, technischen Hürden oder fehlender Transparenz über die verwendeten Datenquellen. 
+
+Gleichzeitig entwickeln sich KI-Assistenten stetig weiter und unterstützen schon heute bei der Arbeit mit Daten, wie wir zum Beispiel in diesem [Blogpost](https://www.technologiestiftung-berlin.de/profil/blog/offene-daten-besser-nutzen-wie-ki-das-data-handling-vereinfacht) ausführen.
+
+In diesem Projekt wollen wir das Potenzial von MCP-Servern, einem offenen Standard zur Verbindung von Sprachmodellen mit externen Datenquellen - erproben. Wie funktionieren MCP-Server genau und sind sie in der Lage Nutzer:innen ohne technisches Vorwissen die Suche, Analyse und Visualisierung der offenen Daten Berlins zu erleichtern?
+
+Unsere Erkenntnisse zu den MCP-Servern, insbesondere auch zu den technischen Limitationen und Herausforderungen haben wir in einem Blogpost ausführlich zusammengetragen.
+
+
+## Unser Praxisansatz: Zwei MCP-Server für Berlins offene Daten
+
+In diesem Projekt haben wir zwei MCP-Server für Berlin entwickelt und getestet:
+
+Der **Open Data Portal MCP-Server** ermöglicht den direkten, KI-gestützten Zugriff auf das Berliner Datenportal. Nutzer:innen können in natürlicher Sprache nach Datensätzen suchen, Metadaten abrufen, Datenvorschauen anzeigen lassen oder Aggregationen und Analysen durchführen. 
+
+Beispielsweise können Fragen wie „In welchen Bezirken gibt es die meisten Fahrraddiebstähle pro Jahr?“ oder „Wo finde ich den nächsten Trinkbrunnen?“ direkt beantwortet werden.
+
+Der **Datawrapper MCP-Server** geht einen Schritt weiter und ermöglicht die Erstellung von Visualisierungen ohne Programmierkenntnisse. Nutzer:innen können per Sprachbefehl Diagramme, Karten oder Tabellen erstellen und veröffentlichen. 
+
+Ein Beispiel: „Erstelle mir ein Balkendiagramm, das die Anzahl der Kitas in Berlin pro Bezirk zeigt.“
+
+
+## Fazit: Auf die Datenqualität kommt es an!
+
+Die MCP-Server bieten einen **schnellen Überblick über verfügbare Datensätze** und unterstützen Nutzer:innen bei der Exploration und ersten Analysen. Besonders für Nutzer:innen ohne technisches Vorwissen erleichtern sie den Einstieg in die Arbeit mit offenen Daten. 
+
+Gleichzeitig zeigte sich, dass MCP-Server **kein Ersatz für Fachwissen** sind. Die Einordnung von Ergebnissen, die Bewertung der Datenqualität und komplexere Analysen erfordern weiterhin Hintergrundwissen. Auch bei der Erstellung von Visualisierungen sind spezialisierte Tools wie Datawrapper für präzise Anpassungen besser geeignet.
+
+Ein weiteres wichtiges Ergebnis ist, dass die **Qualität der Daten und Metadaten** der entscheidende Faktor für die Leistungsfähigkeit der MCP-Server ist. Gut strukturierte und dokumentierte Datensätze ermöglichen deutlich bessere Ergebnisse als unstrukturierte oder schlecht dokumentierte Daten.
+
+
+## Weitere Informationen und Ausblick 
+
+Perspektivisch lassen sich solche MCP-Ansätze weiterdenken. Es könnten weitere MCP-Server entwickelt werden, die auf spezifische, qualitativ hochwertige Datenquellen oder Fachsysteme zugeschnitten sind. Ein Beispiel wäre eine Anbindung an den [Data Hub Berlin](https://data-hub.berlin/). 
+
+Aktuell wird zudem evaluiert, ob unsere MCP-Server für das Berliner Datenportal und das Datawrapper-Tool in den KI-Assistenten [BärGPT](https://www.baergpt.berlin/) der Berliner Senatskanzlei integriert werden sollten. Damit könnten Mitarbeitenden der Berliner Verwaltung eine souveräne und einfachere Nutzung offener Daten ermöglicht werden. 
+
+Der zugrundeliegende Code unserer MCP-Server liegt auf GitHub offen zugänglich. Wir freuen uns über Feedback und Anmerkungen. 
+
+- [Open Data MCP-Server](https://github.com/technologiestiftung/open-data-mcps/blob/main/berlin-open-data-mcp/README.md)
+
+- [Datawrapper MCP-Server](https://github.com/technologiestiftung/open-data-mcps/tree/main/datawrapper-mcp#readme)
+
+- [Getting started – Mit MCP-Server verbinden](https://github.com/technologiestiftung/open-data-mcps/tree/main#getting-started--set-up)
+
+
