@@ -3,7 +3,7 @@ tags:
   - "home"
   - "post"
 title: "MCP-Server im Praxistest mit Berlins offenen Daten"
-description: Generative KI hat das Potential den Zugang zu offenen Daten vereinfachen. Wir haben zwei MCP-Server entwickelt, damit Berlins offene Daten mithilfe von KI-gestützten Schnittstellen noch besser gefunden, analysiert und visualisiert werden können. In diesem Praxisartikel erklären wir, wie MCP-Server funktionieren und was wir bei der Entwicklung gelernt haben.
+description: Generative KI hat das Potenzial, den Zugang zu offenen Daten zu vereinfachen. Wir haben zwei MCP-Server entwickelt, damit Berlins offene Daten mithilfe von KI-gestützten Schnittstellen noch besser gefunden, analysiert und visualisiert werden können. In diesem Praxisartikel erklären wir, wie MCP-Server funktionieren und was wir bei der Entwicklung gelernt haben.
 categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
@@ -44,7 +44,7 @@ Bei einem Model Context Protocol (MCP) oder Modell-Kontext-Protokoll handelt es 
 
 Was kann man jetzt mit MCP als Standard machen? MCP wird oft als eine Art universelles Verbindungsstück zwischen KI-Sprachmodellen also LLMs und externen Systemen, wie Datenquellen oder Tools, beschrieben. Hierzu wird auch oft der [Vergleich mit einem USB-C-Stecker](https://modelcontextprotocol.io/docs/getting-started/intro) verwendet, der vielfältig einsetzbar ist. 
 
-In der Praxis kommt als **Quelle für einen MCP** nahezu jede Programmierschnittstelle (API) infrage, durch MCP mit einem **KI-Sprachmodell** der Wahl ansteuerbar gemacht werden kann. Entwicklungsseitig muss dafür **ein sogenannter MCP-Server** aufgesetzt werden. Der MCP-Server stellt dem Sprachmodell eine Reihe von **Werkzeugen (Tools)** zur Verfügung. Diese können beispielsweise das Durchsuchen eines Datenportals, das Abrufen von Metadaten oder die Erstellung einer Visualisierung umfassen. Der MCP-Server beschreibt dem Sprachmodell in Form einer strukturierter JSON, welche Tools verfügbar sind, welche Parameter sie erwarten und welche Ergebnisse sie zurückliefern. 
+In der Praxis kommt als **Quelle für einen MCP** nahezu jede Programmierschnittstelle (API) infrage, die durch MCP mit einem **KI-Sprachmodell** der Wahl ansteuerbar gemacht werden kann. Entwicklungsseitig muss dafür **ein sogenannter MCP-Server** aufgesetzt werden. Der MCP-Server stellt dem Sprachmodell eine Reihe von **Werkzeugen (Tools)** zur Verfügung. Diese können beispielsweise das Durchsuchen eines Datenportals, das Abrufen von Metadaten oder die Erstellung einer Visualisierung umfassen. Der MCP-Server beschreibt dem Sprachmodell in Form einer strukturierten JSON, welche Tools verfügbar sind, welche Parameter sie erwarten und welche Ergebnisse sie zurückliefern. 
 
 ### Wie daraus ein Gespräch mit der Datenquelle möglich wird
 Das Sprachmodell entscheidet anhand der **Anfrage (des Prompts des Nutzenden)**, ob es eine der verfügbaren Funktionen aufruft, mehrere kombiniert oder direkt ohne Funktionsaufruf antwortet. Die Antworten, die der MCP-Server von der jeweiligen API erhält, können dann der Antwort des LLM als zusätzlicher Kontext geliefert werden.
@@ -74,11 +74,11 @@ Doch welche Funktionen stellen diese von uns entwickelten Server bereit? Genau d
 ### Was kann der Open Data MCP-Server?
 Im Fall unseres Open Data MCP-Servers ist die Datenquelle das Berliner Datenportal. Hinter der Website daten.berlin.de verbirgt sich eine Programmierschnittstelle (API), die auf dem weit verbreiteten CKAN-Standard basiert. Über diese API lassen sich beispielsweise Metadaten zu Datensätzen, etwa Titel, Beschreibungen oder Schlagwörter, sowie die Verweise auf die eigentlichen Datenquellen abrufen.
 
-Damit ein Sprachmodell diese Informationen sinnvoll nutzen kann, müssen die verfügbaren Werkzeuge über den MCP-Server beschrieben werden. Diese Tools übersetzen die technischen Möglichkeiten der API in konkrete Aktionen, die das Sprachmodell ausführen kann, wenn ein passender Prompt vom Nutzenden eingeben wird.
+Damit ein Sprachmodell diese Informationen sinnvoll nutzen kann, müssen die verfügbaren Werkzeuge über den MCP-Server beschrieben werden. Diese Tools übersetzen die technischen Möglichkeiten der API in konkrete Aktionen, die das Sprachmodell ausführen kann, wenn ein passender Prompt vom Nutzenden eingegeben wird.
 
 Für unseren Open Data MCP-Server haben wir dafür eine Reihe von Tools definiert. Sie ermöglichen dem Sprachmodell unter anderem:
 <ContentSection class="sm:px-40">
-
+<div class="w-full overflow-x-auto [&_table]:min-w-[900px] [&_table]:w-full">
 
 | Tool | Beschreibung | Beispiel-Prompt |
 | --- | --- | --- |
@@ -90,13 +90,14 @@ Für unseren Open Data MCP-Server haben wir dafür eine Reihe von Tools definier
 | download_dataset | Gibt eine direkte Download-URL für einen Datensatz zurück. | "Gib mir den Download-Link für den Datensatz simra als CSV." |
 | fetch_geo_features | Lädt Geo-Daten (z. B. WFS) als GeoJSON herunter (mit CQL-Filtern). | "Lade alle Fahrradstraßen im Bezirk Pankow als GeoJSON herunter." |
 | code_interpreter | Führt Python-Code aus (z. B. für Datenanalyse oder Visualisierungen). | "Erstelle ein Balkendiagramm der Radzähldaten pro Bezirk aus der Datei radzahldaten-in-berlin.xlsx." |
+</div>
 </ContentSection>
 
 Die vollständige Liste an Tools findet sich in der [technischen Dokumentation des Open-Data-MCP-Servers auf GitHub](https://github.com/technologiestiftung/open-data-mcps/tree/main/berlin-open-data-mcp#usage).
-Das LLM entscheidet auf Grundlage des Prompts, welche Tools verwendet werden. Je nach Prompt, kann das LLM auch direkt mehrere Tools direkt hintereinander ausführen.
+Das LLM entscheidet auf Grundlage des Prompts, welche Tools verwendet werden. Je nach Prompt kann das LLM auch direkt mehrere Tools direkt hintereinander ausführen.
 
 ### Beispiele zur Nutzung
-Here möchten wir anhand eines Beispiels illustrieren, wie der Zugang und eine Übersicht zu den Daten mittels des MCP-Servers schnell erfolgen kann. Wir nutzen den MCP in der Weboberfläche von Mistral und fragen: "In welchem Bezirk in Berlin werden die meisten Fahrräder gestohlen?"
+Hier möchten wir anhand eines Beispiels illustrieren, wie der Zugang und eine Übersicht zu den Daten mittels des MCP-Servers schnell erfolgen kann. Wir nutzen den MCP in der Weboberfläche von Mistral und fragen: "In welchem Bezirk in Berlin werden die meisten Fahrräder gestohlen?"
 
 import image1 from "./images/opendatamcp1.png"
 import image2 from "./images/opendatamcp2.png"
@@ -115,13 +116,13 @@ src={image2}
 </ContentSection>
 
 Das Sprachmodell nutzt mehrere Tools, um die komplexe Anfrage beantworten zu können. In diesem Fall werden Tools wie “Search Berlin Datasets”, “Get Dataset Details” oder “Aggregate Datasets” aufgerufen.
-Das Beispiel ist besonders komplex weil es sich bei den Daten zu Fahrradständern um Geodaten handelt. Aus diesem Grund kommen zusätzlich Tools wie “List Geo Layers” und “Fetch Geo Features” zum Einsatz. 
+Das Beispiel ist besonders komplex, weil es sich bei den Daten zu Fahrradständern um Geodaten handelt. Aus diesem Grund kommen zusätzlich Tools wie “List Geo Layers” und “Fetch Geo Features” zum Einsatz. 
 
 ## Wozu braucht es einen MCP-Server für das Berliner Open Data Portal?
-Das Berliner Datenportal bietet mit über 2.500 Einträgen einen enormen Wissensschatz über die Stadt, von Busplänen über Baumbestände bis zu Kita-Standorten. Wirklich Wirkung entfalten diese Daten aber natürlich erst wenn sie auch genutzt werden. Datennutzung kann jedoch aus unterschiedlichen Gründen scheitern.
+Das Berliner Datenportal bietet mit über 2.500 Einträgen einen enormen Wissensschatz über die Stadt, von Busplänen über Baumbestände bis zu Kita-Standorten. Wirklich Wirkung entfalten diese Daten aber natürlich erst, wenn sie auch genutzt werden. Datennutzung kann jedoch aus unterschiedlichen Gründen scheitern.
 
-1. Viele Datennutzende wissen entweder gar nicht, dass diese Informationen frei zur Verfügung stehen, bzw. finden sie nicht, wenn sie danach suchen. Die Suche im Berliner Datenportal offenbart: Exakte Schlagworttreffer (z. B. „Miete“: 4 Treffer, „Mietspiegel“: 36 Treffer) oder inkonsistente Filterergebnisse (z. B. „Gesundheit“: 51 Datensätze über die Kategorie, aber über 100 über die Schlagwortsuche) machen es schwer, das Gesuchte zu entdecken und schnell mit den eigenen Bedarfen abzugleichen. Wir gehen daher davon aus, dass es für viele Menschen aktuell nicht selbsterklärend ist, wie sie relevante Datensätze finden. 
-2. Menschen bringen unterschiedliche Erfahrungen und Expertise im Umgang mit Daten mit. Je nach Kompetenzgrad können potenzielle Datennutzende große oder komplexe Datensätze verarbeiten, während andere daran scheitern ein spezifisches Datenformat wie WFS herunterzuladen oder zu interpretieren. 
+1. Viele Datennutzende wissen entweder gar nicht, dass diese Informationen frei zur Verfügung stehen oder finden sie nicht, wenn sie danach suchen. Die Suche im Berliner Datenportal offenbart: Exakte Schlagworttreffer (z. B. „Miete“: 4 Treffer, „Mietspiegel“: 36 Treffer) oder inkonsistente Filterergebnisse (z. B. „Gesundheit“: 51 Datensätze über die Kategorie, aber über 100 über die Schlagwortsuche) machen es schwer, das Gesuchte zu entdecken und schnell mit den eigenen Bedarfen abzugleichen. Wir gehen daher davon aus, dass es für viele Menschen aktuell nicht selbsterklärend ist, wie sie relevante Datensätze finden. 
+2. Menschen bringen unterschiedliche Erfahrungen und Expertise im Umgang mit Daten mit. Je nach Kompetenzgrad können potenzielle Datennutzende große oder komplexe Datensätze verarbeiten, während andere daran scheitern, ein spezifisches Datenformat wie WFS herunterzuladen oder zu interpretieren. 
 
 
 Was könnte sich mit dem MCP-Server für Open Data ändern? Spezifisches Vorwissen (etwa zur Filterlogik im Open Data Portal) oder tiefgehende technische Kenntnisse zur Verarbeitung von Datensätzen (zum Beispiel das Extrahieren von Daten aus einer WFS-Schnittstelle und die anschließende Aggregation mit einem Python-Skript) könnten an Bedeutung verlieren, da diese Schritte zunehmend von einem Sprachmodell übernommen werden könnten, das über MCP direkten Zugang auf die offenen Daten hat. 
@@ -134,13 +135,16 @@ Nun gehen wir noch einen Schritt weiter und wollen die gewünschten Daten visual
 
 Dem Datawrapper MCP haben wir zwei Tools mitgegeben:
 <ContentSection class="sm:px-40">
+<div class="w-full overflow-x-auto [&_table]:min-w-[900px] [&_table]:w-full">
+
 
 | Tool | Beschreibung | Beispiel-Prompt |
 | --- | --- | --- |
 | create_visualization | Erstellt eine Datenvisualisierung (z. B. Balkendiagramm, Karte, Linienchart) mit Datawrapper. Unterstützt verschiedene Chart-Typen wie bar, column, line, map, scatter, pie, donut sowie GeoJSON-Karten. | "Erstelle ein gestapeltes Balkendiagramm der Radzähldaten pro Bezirk in Berlin mit den Daten und dem Titel 'Radverkehr in Berlin'." |
 | publish_visualization | Veröffentlicht eine zuvor erstellte Datawrapper-Visualisierung mit einer bestimmten Chart-ID. | "Veröffentliche die Visualisierung mit der Chart-ID abc123 und meinem Datawrapper-API-Key." |
+ </div>
 </ContentSection>
-Um diesen MCP zu nutzen, muss man sich zuerst ein Nutzendenkonto bei Datawrapper erstellen und dann einen API-Token generieren. Das geht über die Schaltfläche „Einstellungen und Account“ und den Menüpunkt „API-Token“. Dieser Token muss die Berichtigungen haben, Diagramme zu lesen, zu schreiben und zu veröffentlichen. Nutzt man den Datawrapper MCP-Server über eine Chat-Anwendung wie ChatGPT und ähnliches, wird diese einen nach dem Token fragen, sobald das Tool zum Erstellen einer Visualisierung aufgerufen wird. Der erstellte Chart landet dann in der Chart-Bibliothek des persönlichen Nutzendenkontos und es wird ein Link zum erstellten Diagramm generiert. Das Diagramm kann dann entweder selbst oder durch weitere Anweisungen per Prompt in der Chat-Anwendung oder „per Hand“ über die Datawrapper-Website nach eigenen Wünschen angepasst werden. 
+Um diesen MCP zu nutzen, muss man sich zuerst ein Nutzendenkonto bei Datawrapper erstellen und dann einen API-Token generieren. Das geht über die Schaltfläche „Einstellungen und Account“ und den Menüpunkt „API-Token“. Dieser Token muss die Berechtigungen haben, Diagramme zu lesen, zu schreiben und zu veröffentlichen. Nutzt man den Datawrapper MCP-Server über eine Chat-Anwendung wie ChatGPT und ähnliche Tools, wird diese einen nach dem Token fragen, sobald das Tool zum Erstellen einer Visualisierung aufgerufen wird. Der erstellte Chart landet dann in der Chart-Bibliothek des persönlichen Nutzendenkontos und es wird ein Link zum erstellten Diagramm generiert. Das Diagramm kann dann entweder selbst oder durch weitere Anweisungen per Prompt in der Chat-Anwendung oder „per Hand“ über die Datawrapper-Website nach eigenen Wünschen angepasst werden. 
 
 ## Beispiele zur Nutzung
 Anhand eines Beispiels möchten wir die Erstellung eines Datawrapper-Charts mittels des MCP-Servers illustrieren. Wir nutzen wieder Mistral und tippen den Prompt ein: "Erstelle mir ein Balkendiagramm in Datawrapper, dass die Anzahl der Kitas pro Bezirk zeigt."
@@ -159,6 +163,7 @@ src={image4}
     alt="Screenshot: Ausschnitt aus der Nutzung des Datawrapper MCP-Servers in Mistral"
     caption="Screenshot: Ausschnitt aus der Nutzung des Datawrapper MCP-Servers in Mistral. Der fertige Chart in Datawrapper."
   />
+ 
 </ContentSection>
 
 Für diese Anfrage werden sowohl Tools des Open Data MCP-Servers als auch des Datawrapper MCP-Servers aufgerufen. Zur Erstellung der Visualisierung wird außerdem nach einem API-Token gefragt. Im Ergebnis erhalten wir einen Link zum Datawrapper-Chart, das jetzt weiter angepasst werden kann. 
@@ -168,7 +173,7 @@ Daten zu finden ist oft nur der erste Schritt. Um aus ihnen Erkenntnisse zu gewi
 
 Die Erstellung einer Visualisierung erfordert jedoch weiterhin mehrere manuelle Schritte: Daten müssen aufbereitet, importiert und anschließend in ein passendes Diagramm überführt werden. Mit dem Datawrapper MCP-Server können diese Schritte direkt aus einer Anfrage in natürlicher Sprache, also via Prompt, angestoßen werden.
 
-Die zukünftige Potenziale sind hier ähnlich wie beim Open Data MCP-Server: Technische Kenntnisse über Datenformate, Visualisierungstypen oder die Bedienung spezialisierter Werkzeuge werden weniger wichtig. Stattdessen können sich Nutzende stärker auf ihre eigentliche Fragestellung konzentrieren und schneller Ideen ausprobieren. Dadurch soll die Hürde sinken, aus offenen Daten verständliche und teilbare Erkenntnisse zu gewinnen.
+Die zukünftigen Potenziale sind hier ähnlich wie beim Open Data MCP-Server: Technische Kenntnisse über Datenformate, Visualisierungstypen oder die Bedienung spezialisierter Werkzeuge werden weniger wichtig. Stattdessen können sich Nutzende stärker auf ihre eigentliche Fragestellung konzentrieren und schneller Ideen ausprobieren. Dadurch soll die Hürde sinken, aus offenen Daten verständliche und teilbare Erkenntnisse zu gewinnen.
 
 ## Grenzen unserer MCP-Server: Technische Limitationen und Herausforderungen
 Wie testet man eigentlich einen MCP-Server? Unsere Tests selbst haben uns gezeigt, dass es dafür keine einfache Antwort darauf gibt. Generative KI ist in vielerlei Hinsicht für uns Endnutzende noch immer eine Blackbox. Die Ergebnisse hängen nicht nur von den bereitgestellten Daten und Tools ab, sondern auch vom verwendeten Sprachmodell, der konkreten Formulierung eines Prompts und der jeweiligen Aufgabenstellung. Eine Frage kann mit unterschiedlichen Modellen oder einem leicht modifizierten Prompt zu unterschiedlichen Ergebnissen führen. Gleichzeitig hatten wir von Beginn an die Vermutung, dass manche Datensätze oder Datenformate deutlich einfacher verarbeitet werden als andere.
@@ -181,7 +186,7 @@ Zunächst führten wir automatisierte Tests durch. Dafür entwickelten wir einen
 
 Anschließend folgte ein manueller Praxistest mit verschiedenen Sprachmodellen. Hier lag der Fokus auf komplexeren Aufgabenstellungen, insbesondere bei Analysen und Aggregationen von Daten: Für ausgewählte Datensätze und Fragestellungen wurden die Ergebnisse mit zuvor manuell ermittelten Referenzwerten verglichen. So konnten wir beispielsweise überprüfen, ob ein Modell nicht nur den richtigen Datensatz findet, sondern auch die relevanten Spalten auswählt und darauf aufbauend korrekte Berechnungen durchführt.
 
-Die Erkenntnisse aus beiden Testverfahren haben wir zusammengeführt und ausgewertet. Einige der Probleme konnten wir durch eine weitere Iteration und Verbesserung unserer MCP-Server ausmerzen oder abmildern. Andere konnten wir nicht sofort beheben oder haben sie für mögliche Lösungsansätzen genutzt, mit denen wir unsere MCP-Server zukünftig noch verbessern könnten. Im Folgenden fassen wir die drei wichtigsten Baustellen zusammen.
+Die Erkenntnisse aus beiden Testverfahren haben wir zusammengeführt und ausgewertet. Einige der Probleme konnten wir durch eine weitere Iteration und Verbesserung unserer MCP-Server ausmerzen oder abmildern. Andere konnten wir nicht sofort beheben oder haben sie für mögliche Lösungsansätze genutzt, mit denen wir unsere MCP-Server zukünftig noch verbessern könnten. Im Folgenden fassen wir die drei wichtigsten Baustellen zusammen.
 
 1. **Download-Links führten ins Leere**
 
@@ -203,9 +208,9 @@ Lösung: Diese Funktion ist im bestehenden MCP bislang nur eingeschränkt umgese
 
 4. **Probleme beim Konfigurieren von Charts mit dem Datawrapper MCP-Server**
 
-Problem: Bei Nutzung des Datawrapper MCP-Servers liefert das LLM recht zuverlässig einen Link zu einer Visualisierung auf Datawrapper und Änderungswünsche, wie andere Farben, ein anderer Diagrammtitel oder andere Labelbezeichnungen werden überwiegend umgesetzt. Aber gerade bei komplexeren Visualisierungen wie gruppierten Barcharts treten häufig Probleme auf.
+Problem: Bei Nutzung des Datawrapper MCP-Servers liefert das LLM recht zuverlässig einen Link zu einer Visualisierung auf Datawrapper und Änderungswünsche, wie andere Farben, ein anderer Diagrammtitel oder andere Labelbezeichnungen werden überwiegend umgesetzt. Aber gerade bei komplexeren Visualisierungen wie gruppierten Bar-Charts treten häufig Probleme auf.
 
-Hinzu kommt, dass der Datawrapper als Antwort auf Änderungswünsche durch den MCP aktuell immer ein neues Diagramm mit neuer URL erstellt, anstatt das bestehende zu editieren. Das ist per se nicht problematisch, führt aber dazu, dass die Chart-Bibliothek des Nutzers mit vielen unfertigen Test-diagrammen „zugemüllt“ wird.
+Hinzu kommt, dass der Datawrapper als Antwort auf Änderungswünsche durch den MCP aktuell immer ein neues Diagramm mit neuer URL erstellt, anstatt das bestehende zu editieren. Das ist per se nicht problematisch, führt aber dazu, dass die Chart-Bibliothek des Nutzers mit vielen unfertigen Test-Diagrammen „zugemüllt“ wird.
 
 Auch sind beim Testen vereinzelt Probleme mit den Zugriffsrechten und API-Tokens aufgetreten, deren Ursache uns unbekannt war.
 
@@ -231,12 +236,12 @@ src={image5}
     caption="Screenshot: Datensatztabelle im Excel-Format. Beispiel für einen Datensatz mit unzureichender Maschinenlesbarkeit."
   />
   
-## Fazit: Erster guter Eindruck mit Luft nach oben und Datenqualität als größter limitierende Faktor
+## Fazit: Erster guter Eindruck mit Luft nach oben und Datenqualität als größter limitierender Faktor
 Überraschend war für uns zunächst, dass es deutlich schwieriger war als erwartet, ein geeignetes Testframework für die MCP-Server aufzubauen und daraus belastbare Erkenntnisse abzuleiten. Das liegt vor allem daran, dass sich generative KI-Systeme nur schwer eindeutig evaluieren lassen und Ergebnisse stark vom Modell, vom Prompt und vom jeweiligen Datensatz abhängen.
 
 Im Test mit den Daten des Berliner Datenportals hat sich dennoch ein klarer erster Eindruck ergeben: Innerhalb kurzer Zeit lässt sich ein deutlich besserer Überblick über verfügbare Datensätze gewinnen. Die KI übernimmt dabei einen großen Teil der Orientierung, schlägt passende Datensätze vor, hilft beim Verständnis der Inhalte und liefert erste Ideen für Analysen oder Visualisierungen.
 
-Erinnern wir uns nochmal an die von uns angestrebten Ziele, bzw. die Idee hinter der Erstellung der MCP-Server für Berlins Open Data: Zugang zu offenen Daten zu erleichtern und Hürden zu senken, insbesondere in Bezug auf technisches Vorwissen, Datenverständnis und Kenntnisse über Datenportale. Nutzerinnen und Nutzer sollen schneller von der Suche in die eigentliche Arbeit mit Daten kommen.
+Erinnern wir uns nochmal an die von uns angestrebten Ziele bzw. die Idee hinter der Erstellung der MCP-Server für Berlins Open Data: Zugang zu offenen Daten zu erleichtern und Hürden zu senken, insbesondere in Bezug auf technisches Vorwissen, Datenverständnis und Kenntnisse über Datenportale. Nutzerinnen und Nutzer sollen schneller von der Suche in die eigentliche Arbeit mit Daten kommen.
 
 In der Praxis zeigt sich jedoch, dass dieser Anspruch nur teilweise eingelöst wird. Der MCP-Server beschleunigt vor allem erste Schritte und unterstützt bei der Exploration, ersetzt aber kein fachliches Verständnis. Für die Einordnung von Ergebnissen, die Datenqualität oder komplexere Analysen bleibt Hintergrundwissen weiterhin notwendig. Auch bei Visualisierungen entstehen schnell brauchbare Ergebnisse, während für präzisere Anpassungen weiterhin spezialisierte Tools wie Datawrapper sinnvoller sind.
 
@@ -251,4 +256,4 @@ Der zugrundeliegende Code unserer MCP-Server liegt auf GitHub offen zugänglich.
 
 - Open Data MCP-Server: [GitHub-Repository](https://github.com/technologiestiftung/open-data-mcps/blob/main/berlin-open-data-mcp/README.md)
 - Datawrapper MCP-Server: [GitHub-Repository](https://github.com/technologiestiftung/open-data-mcps/tree/main/datawrapper-mcp#readme)
-- Mit den MCP-Servern verbinden [Anleitung in Englisch auf GitHub](https://github.com/technologiestiftung/open-data-mcps/tree/main#getting-started--set-up)
+- Mit den MCP-Servern verbinden: [Anleitung in Englisch auf GitHub](https://github.com/technologiestiftung/open-data-mcps/tree/main#getting-started--set-up)
