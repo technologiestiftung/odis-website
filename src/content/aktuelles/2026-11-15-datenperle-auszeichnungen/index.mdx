@@ -37,13 +37,13 @@ In einem gestapelten Balkendiagramm lässt sich gut erkennen, wie sich die Anzah
 Seit Anfang des 19. Jahrhunderts ehrt Berlin den Stadtältesten und verleiht die Ehrenbürgerwürde. 
 
 import { Image } from "astro:assets";
-import ribbeck from "./images/ribbeck.png";
+import ribbeck from "./images/ribbeck.jpg";
 
 <ContentSection fullWidth={false} class="bg-bg-alt px-6 py-6 rounded">
   <div class="sm:flex gap-6 items-start">
     <figure class="shrink-0 m-0">
-      <Image src={ribbeck} alt="Porträt von Ribbeck" class="w-40 rounded shrink-0" />
-      <figcaption class="w-40 mt-2 text-xs opacity-70">Konrad Gottlieb Ribbeck, Quelle: …</figcaption>
+      <Image src={ribbeck} alt="Grab von Ribbeck" class="w-40 rounded shrink-0" />
+      <figcaption class="w-40 mt-2 text-xs opacity-70">Grab von Konrad Gottlieb Ribbeck, © OTFW Berlin, wikimedia </figcaption>
     </figure>
     <div class="mt-4 sm:mt-0">
       <p class="mt-0">Die erste Auszeichnung erhielt Konrad Gottlieb Ribbeck am 06.07.1813. Als Oberkonsistorialrat und Propst zu Berlin erhielt er die Ehrenbürgerwürde für seine Tätigkeit als Anwalt während der französischen Besatzung Berlins.</p>
@@ -60,10 +60,10 @@ Im Jahr 1954 kam die Ernst-Reuter-Plakette hinzu, benannt nach dem ersten Regier
 import krosigk from "./images/klaus-krosigk.png";
 
 <ContentSection fullWidth={false} class="bg-bg-alt px-6 py-6 rounded">
-  <figure class="w-52 mx-auto my-0">
+  {/*<figure class="w-52 mx-auto my-0">
     <Image src={krosigk} alt="Kai Wegner und Klaus von Krosigk" class="w-52 rounded" />
     <figcaption class="w-52 mt-2 text-xs opacity-70">Kai Wegner und Klaus von Krosigk, © Landesarchiv Berlin / Wunstorf</figcaption>
-  </figure>
+  </figure>*/}
   <p class="mt-4 mb-0">Zuletzt wurde die Ernst-Reuter-Plakette an Dr. Klaus von Krosigk im Jahr 2024 verliehen. Er ist der ehemalige Gartenbaudirektor des Landesdenkmalamts Berlin und wurde für seinen Beitrag geehrt, Berlin zu einer „lebenswerten und grünen Kulturmetropole” zu machen.</p>
 </ContentSection>
 
@@ -72,10 +72,10 @@ Seit der Einführung des Verdienstordens 1987 ist dieser die am häufigsten verl
 import verdienstorden from "./images/verdienstorden.png";
 
 <ContentSection fullWidth={false} class="bg-bg-alt px-6 py-6 rounded">
-  <figure class="w-64 mx-auto my-0">
+  {/*<figure class="w-64 mx-auto my-0">
     <Image src={verdienstorden} alt="Verdienstorden 2026" class="w-64 rounded" />
     <figcaption class="w-64 mt-2 text-xs opacity-70">Verleihung des Verdienstordens 2026, © Senatskanzlei Berlin/Laura Donath</figcaption>
-  </figure>
+  </figure>*/}
   <p class="mt-4 mb-0">Die letzte Verleihung des Verdienstordens fand am 01.10.2026 statt. Geehrt wurden beispielsweise Sabine Röhm, Leiterin der Seelsorge bei der Berliner Feuerwehr, Jan Eder, ehem. Hauptgeschäftsführer der IHK Berlin oder Elena Semechin, Paralympionikin im Schwimmen. </p>
 </ContentSection>
 
@@ -91,81 +91,81 @@ Vorweg sei gesagt: Die Kategorisierung der Preisträger:innen in verschiedene Th
 Schaut man sich die Gesamtverteilung der Kategorien an, wird klar: Die besten Chancen auf eine Plakette hat man als Politiker:in. Auf der Liste stehen zahlreiche Spitzenpolitiker:innen, darunter viele Bundeskanzler und Regierende Bürgermeister sowie alle Bundespräsidenten außer Horst Köhler und Christian Wulff.
 Auch ausländische Staatsoberhäupter, wie Ronald Reagan (1992), George H. W. Bush (1999), Gorbatschow (1992) und sogar Zar Nikolaus I. von Russland (1837) wurden ausgezeichnet. 
 
-import brandt from "./images/brandt.png";
-import reagan from "./images/reagan.png";
-import zar from "./images/zar.png";
+import brandt from "./images/brandt.jpg";
+import reagan from "./images/reagan.jpg";
+import zar from "./images/zar.jpg";
 
 <PersonenKarussell title="Bekannte Persönlichkeiten aus Politik und Verwaltung" label="Ausgezeichnete Politiker">
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={brandt} alt="Willy Brandt" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Willy Brandt, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Willy Brandt, © Engelbert Reineke, wikimedia </figcaption>
     </figure>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={reagan} alt="Ronald Reagan" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Ronald Reagan, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Ronald Reagan, © Pete Souza, wikimedia</figcaption>
     </figure>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={zar} alt="Zar Nikolaus I. von Russland" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Zar Nikolaus I. von Russland, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Zar Nikolaus I. von Russland, © Johann Stadler, wikimedia</figcaption>
     </figure>
   </div>
 </PersonenKarussell>
 
 Aber auch aus dem Kulturbereich sind viele Preisträger:innen zu finden, darunter die Schauspielerinnen Marlene Dietrich und Hildegard Knef, der Regisseur Wim Wenders oder der Musiker Udo Lindenberg. 
 
-import dietrich from "./images/dietrich.png";
-import lindenberg from "./images/lindenberg.png";
-import wenders from "./images/wenders.png";
+import dietrich from "./images/dietrich.jpg";
+import lindenberg from "./images/lindenberg.jpg";
+import wenders from "./images/wenders.jpg";
 
 <PersonenKarussell title="Bekannte Persönlichkeiten aus dem Kulturbereich" label="Ausgezeichnete Politiker">
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={dietrich} alt="Marlene Dietrich" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Marlene Dietrich, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Marlene Dietrich, © Paramount Pictures, wikimedia</figcaption>
     </figure>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={lindenberg} alt="Udo Lindenberg" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Udo Lindenberg, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Udo Lindenberg, © Raimond Spekking, wikimedia</figcaption>
     </figure>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={wenders} alt="Wim Wenders" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Wim Wenders, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Wim Wenders, © Elena Ternovaja, wikimedia</figcaption>
     </figure>
   </div>
 </PersonenKarussell>
 
 In der dritthäufigsten Kategorie Wirtschaft sind bekannte Namen wie Edzard Reuter (ehem. Vorstandsvorsitzender Daimler-Benz AG) oder Heinz Dürr (Vorstandsvorsitzender der Deutschen Bahn AG) unter den Geehrten. Auch regional bekannte Unternehmer:innen wie Werner Otto (Gründer des Versandhandels Otto), Jörg Woltmann (Gesellschafter der Königlichen Porzellan Manufaktur (KPM)) oder Anita und Norbert Tillmann (Premium Group, Berlin Fashion Week) wurden ausgezeichnet.
 
-import durr from "./images/durr.png";
-import otto from "./images/otto.png";
-import springer from "./images/springer.png";
+import durr from "./images/durr.jpg";
+import reuter from "./images/reuter.jpg";
+import springer from "./images/springer.jpg";
 
 <PersonenKarussell title="Bekannte Persönlichkeiten aus der Wirtschaft" label="Ausgezeichnete Politiker">
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={durr} alt="Heinz Dürr" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Heinz Dürr, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Heinz Dürr, © NataschaDürrAG, wikimedia</figcaption>
     </figure>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
-      <Image src={otto} alt="Werner Otto" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Werner Otto, Quelle: …</figcaption>
+      <Image src={reuter} alt="Edzard Reuter" class="w-48 rounded" />
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Ezdard Reuter, © Regina Kühne, wikimedia</figcaption>
     </figure>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={springer} alt="Friede Springer" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Friede Springer, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Friede Springer, © Michael Thaidigsmann, wikimedia</figcaption>
     </figure>
   </div>
 </PersonenKarussell>
@@ -182,27 +182,27 @@ import odi2 from "./images/odi-2-platzhalter.png"
 
 Doch es gibt weitere nennenswerte Kategorien neben Politik, Kultur und Wirtschaft. In der Kategorie Wissenschaft tauchen etwa Kernphysiker Otto Hahn, Computerpionier Konrad Zuse und zwei DDR-Kosmonauten,Sigmund Jähn und Waleri Bykowski,auf. Sportlich wird es mit  Eisschnellläuferin Claudia Pechstein, Schwimmerin Franziska van Almsick oder Diskuswerfer Robert Harting. Bei Kirche & Religion stehen evangelische und katholische Geistliche neben den Vorsitzenden jüdischer und serbisch-orthodoxer Gemeinden und einem Imam aus Neukölln. Unter Gesundheit & Soziales fallen Ärzt:innen und Pflegekräfte. Medien & Journalismus würdigt unter anderem Journalist:innen oder Verleger wie Axel Springer. In der Kategorie Militär & Polizei wurden beispielsweise Vertreter:innen der Alliierten geehrt.
 
-import pechstein from "./images/pechstein.png";
-import zuse from "./images/zuse.png";
+import pechstein from "./images/pechstein.jpg";
+import zuse from "./images/zuse.jpg";
 import kosmonauten from "./images/kosmonauten.jpg";
 
 <PersonenKarussell title="Weitere spannenden Persönlichkeiten" label="Ausgezeichnete Politiker">
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={pechstein} alt="Claudia Pechstein" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Claudia Pechstein, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Claudia Pechstein, © McSmit, wikimedia</figcaption>
     </figure>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={zuse} alt="Konrad Zuse" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Konrad Zuse, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Konrad Zuse, © Wolfgang Hunscher, wikimedia</figcaption>
     </figure>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={kosmonauten} alt="Bykowski und Jähn" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Bykowski und Jähn, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Bykowski und Jähn, © Klaus Franke, wikimedia</figcaption>
     </figure>
   </div>
 </PersonenKarussell>
@@ -213,84 +213,84 @@ import kosmonauten from "./images/kosmonauten.jpg";
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={brandt} alt="Willy Brandt" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Willy Brandt, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Willy Brandt, © Engelbert Reineke, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Der ehemalige Bürgermeister von Berlin und Bundeskanzler erhielt 1970 die Ehrenbürgerwürde.</p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={reagan} alt="Ronald Reagan" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Ronald Reagan, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Ronald Reagan, © Pete Souza, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">1992 erhielt der ehemalige Präsident der USA die Ehrenbürgerwürde.</p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={zar} alt="Zar Nikolaus I. von Russland" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Zar Nikolaus I. von Russland, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Zar Nikolaus I. von Russland, © Johann Stadler, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Der Kaiser von Russland wurde 1837 Ehrenbürger von Berlin.</p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={dietrich} alt="Marlene Dietrich" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Marlene Dietrich, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Marlene Dietrich, © Paramount Pictures, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">2002 wurde Schauspielerin und Sängerin Marlene Dietricht mit der Ehrenbürgerwürde ausgezeichnet.</p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={durr} alt="Heinz Dürr" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Heinz Dürr, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Heinz Dürr, © NataschaDürrAG, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">2002 erhielt der Vorstandsvorsitzende der Deutschen Bahn AG den Verdienstorden des Landes Berlin. </p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={lindenberg} alt="Udo Lindenberg" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Udo Lindenberg, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Udo Lindenberg, © Raimond Spekking, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Der Rockmusiker wurde 2014 mit dem Verdienstorden des Landes Berlin geehrt.</p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
-      <Image src={otto} alt="Werner Otto" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Werner Otto, Quelle: …</figcaption>
+      <Image src={reuter} alt="Edzard Reuter" class="w-48 aspect-[3/4] object-cover object-top rounded" />
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Edzard Reuter, © Regina Kühne, wikimedia</figcaption>
     </figure>
-    <p class="w-48 mx-auto mt-3 mb-0 text-sm">Der Gründer des Versandhandels Otto erhielt im jahr 2003 die Ernst-Reuter-Plakette.</p>
+    <p class="w-48 mx-auto mt-3 mb-0 text-sm">Der ehemanlige Vorstandsvorsitzende der Daimler-Benz AG erhielt 1998 die Ehrenbürgerwürde.</p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={wenders} alt="Wim Wenders" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Wim Wenders, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Wim Wenders, © Elena Ternovaja, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Der Regisseur und Präsident der Europäischen Filmakademie erhielt 2015 den Verdienstorden.</p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={springer} alt="Friede Springer" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Friede Springer, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Friede Springer, © Michael Thaidigsmann, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Verlegerin und Unternehmerin Friede Springer erhielt 1988 den Verdienstorden und ist seit 2025 Ehrenbürgerin von Berlin.</p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={pechstein} alt="Claudia Pechstein" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Claudia Pechstein, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Claudia Pechstein, © McSmit, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Eisschnellläuferin Claudia Pechstein erhielt 2002 den Verdiensorden des Landes Berlin.</p>
   </div>
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={zuse} alt="Konrad Zuse" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Konrad Zuse, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Konrad Zuse, © Wolfgang Hunscher, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Computerpionier Konrad Zuse erhielt 1985 die Ernst-Reuter-Plakette.</p>
   </div>
     <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={kosmonauten} alt="Kosmonauten" class="w-48 aspect-[3/4] object-cover object-top rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Bykowski und Jähn, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Bykowski und Jähn, © Klaus Franke, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Die Kosmonauten Waleri Bykowski und Sigmund Jähn sind seit 1978 Ehrenbürger der Stadt Berlin. </p>
   </div>
@@ -305,8 +305,8 @@ Spannend wird es, wenn wir uns die zeitliche Entwicklung der häufigsten Kategor
 <iframe title="Zeitliche Entwicklung der Top 5 Kategorien nach Jahrzehnt" aria-label="Liniendiagramm" id="datawrapper-chart-lYTgq" src="https://datawrapper.dwcdn.net/lYTgq/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="459" data-external="1"></iframe>
 </ContentSection>
 
-import maltzan from "./images/maltzan.png";
-import koch from "./images/rene-koch.png";
+import maltzan from "./images/maltzan.JPG";
+import koch from "./images/koch.jpg";
 
 <PersonenKarussell title="Interessante Ehrungen aus der Zivilgesellschaft" label="Ausgezeichnete Politiker">
   <div class="swiper-slide">
@@ -315,7 +315,7 @@ import koch from "./images/rene-koch.png";
   <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={maltzan} alt="Maria Gräfin von Maltzan" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Konrad Zuse, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Gedenktafel für Maria Gräfin von Maltzan, © OTFW, wikimedia </figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Maria Gräfin von Maltzan war Tierärztin und Widerstandskämpferin gegen das NS-Regime. 1989 bekam sie dafür den Verdienstorden des Landes Berlin. </p>
   </div>
@@ -325,7 +325,7 @@ import koch from "./images/rene-koch.png";
     <div class="swiper-slide">
     <figure class="w-fit mx-auto my-0">
       <Image src={koch} alt="Rene Koch" class="w-48 rounded" />
-      <figcaption class="w-48 mt-2 text-xs opacity-70">Rene Koch, Quelle: …</figcaption>
+      <figcaption class="w-48 mt-2 text-xs opacity-70">Rene Koch, © Happy Aging, wikimedia</figcaption>
     </figure>
     <p class="w-48 mx-auto mt-3 mb-0 text-sm">Rene Koch ist Visagist und gründete den Arbeitskreis Camouflage e.V. der sich für Menschen mit Brand- und Unfallnarben engagiert. 2013 erhielt er den Verdiensorden des Landes Berlin. </p>  
   </div>
@@ -359,13 +359,13 @@ Im Zusammenhang mit der Geschlechterverteilung lohnt sich ein Blick auf die zeit
 
 Es mussten erst knapp 150 Jahre vergehen, bis die erste Frau ausgezeichnet wurde: 
 
-import nemitz from "./images/anna-nemitz.png";
+import nemitz from "./images/anna-nemitz.jpg";
 
 <ContentSection fullWidth={false} class="bg-bg-alt px-6 py-6 rounded">
   <div class="sm:flex gap-6 items-start">
     <figure class="shrink-0 m-0">
       <Image src={nemitz} alt="Anna Nemitz" class="w-40 rounded shrink-0" />
-      <figcaption class="w-40 mt-2 text-xs opacity-70">Anna Nemitz, Quelle: ...</figcaption>
+      <figcaption class="w-40 mt-2 text-xs opacity-70">Anna Nemitz, © Abraham Pisarek, wikimedia</figcaption>
     </figure>
     <div class="mt-4 sm:mt-0">
         <p class="mt-4 mb-0">1953 wurde Anna Franziska Nemitz als erste Frau mit der Stadtältestenwürde ausgezeichnet. Sie war Reichstagsabgeordnete und Stadtverordnete und wirkte 1945 an der Wiedergründung der Köpenicker SPD mit.  </p>
@@ -385,7 +385,7 @@ import hindenburg from "./images/hindenburg.png";
   <p class="mt-4 mb-0">Fünf von ihnen trugen Verantwortung im Nationalsozialismus. Adolf Hitler,  Hermann Göring, Josef Goebbels, Wilhelm Frick und Paul von Hindenburg, dessen [Streichung erst 2020 beschlossen wurde](https://www.tagesspiegel.de/berlin/berlin-beschliesst-streichung-hindenburgs-von-der-liste-der-ehrenburger-4140331.html). </p>
   <figure class="w-52 mx-auto my-0">
     <Image src={hindenburg} alt="Paul von Hindenburg" class="w-52 rounded" />
-    <figcaption class="w-52 mt-2 text-xs opacity-70">Paul von Hindenburg, Quelle... </figcaption>
+    <figcaption class="w-52 mt-2 text-xs opacity-70">Paul von Hindenburg, © Ernst Hoenisch, wikimedia </figcaption>
   </figure>
   <p class="mt-4 mb-0">Die sechste Aberkennung betraf Wilhelm Pieck,  erster Präsident der DDR. Er verlor seine Ehrenbürgerwürde wegen seiner Rolle in der SED-Diktatur.</p>
 </ContentSection>
@@ -399,12 +399,12 @@ Zu dieser Gruppen von Geehrten gehören beispielsweise die Schauspielerinnen Kä
 50 Personen haben mehr als eine Auszeichnung erhalten. Die meisten von ihnen wurden zweimal geehrt, darunter der erste Reichstagspräsident der Weimarer Republik Paul Löbe, der Nobelpreisträger Otto Hahn, die ehemalige Bürgermeisterin und Bundesministerin Dr. Christine Bergmann oder die Holocaust-Überlebende Margot Friedländer. 
 
 
-import schütz from "./images/klaus-schütz.png";
+import schütz from "./images/schütz.jpg";
 
 <ContentSection fullWidth={false} class="bg-bg-alt px-6 py-6 rounded">
   <figure class="w-52 mx-auto my-0">
     <Image src={schütz} alt="Klaus Schütz" class="w-52 rounded" />
-    <figcaption class="w-52 mt-2 text-xs opacity-70">Klaus Schütz, Quelle... </figcaption>
+    <figcaption class="w-52 mt-2 text-xs opacity-70">Klaus Schütz, © Renate Patzek, wikimedia </figcaption>
   </figure>
   <p class="mt-4 mb-0">Spitzenreiter ist der ehemalige Bürgermeister von West-Berlin Klaus Schütz mit drei Auszeichnungen: Er wurde als Stadtältester (2000) ausgezeichnet und erhielt die Ernst-Reuter-Plakette (1987) sowie den Verdienstorden des Landes Berlin (2006).  </p>
 </ContentSection>
