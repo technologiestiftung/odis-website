@@ -15,7 +15,8 @@ const { class: className, label = "Personen-Karussell", title } = Astro.props;
 
 <ContentSection
   fullWidth={false}
-  class={cn("bg-bg-alt px-6 py-6 rounded", className)}
+  wrapperClass="mt-8 pt-0 mb-8"
+  class={cn("bg-[#b8c6fa] dark:bg-bg-alt px-6 py-6 rounded", className)}
 >
   <div class="personen-karussell" role="region" aria-label={label}>
     {title && <h3 class="mt-0 mb-4 text-center !text-sm !max-w-none">{title}</h3>}
