@@ -1,0 +1,98 @@
+---
+import { cn } from "@/utils/classNames";
+import Button from "../Button.astro";
+import { Icon } from "astro-icon/components";
+import ContentSection from "./ContentSection.astro";
+
+export type Props = {
+  class?: string | undefined;
+  label?: string | undefined;
+  title?: string | undefined;
+};
+
+const { class: className, label = "Personen-Karussell", title } = Astro.props;
+---
+
+<ContentSection
+  fullWidth={false}
+  wrapperClass="mt-8 pt-0 mb-8"
+  class={cn("bg-[#b8c6fa] dark:bg-bg-alt px-6 py-6 rounded", className)}
+>
+  <div class="personen-karussell" role="region" aria-label={label}>
+    {title && <h3 class="mt-0 mb-4 text-center !text-sm !max-w-none">{title}</h3>}
+    <div class="flex items-center gap-2 sm:gap-4">
+      <Button
+        tag="button"
+        class="personen-karussell-prev not-prose shrink-0 p-1 sm:p-2"
+        aria-label="Vorherige Person"
+      >
+        <Icon size={24} name="ui/chevron-left" />
+      </Button>
+
+      <div class="personen-karussell-swiper swiper overflow-hidden flex-1 min-w-0">
+        <div class="swiper-wrapper">
+          <slot />
+        </div>
+      </div>
+
+      <Button
+        tag="button"
+        class="personen-karussell-next not-prose shrink-0 p-1 sm:p-2"
+        aria-label="Nächste Person"
+      >
+        <Icon size={24} name="ui/chevron-right" />
+      </Button>
+    </div>
+  </div>
+</ContentSection>
+
+<script>
+  import Swiper from "swiper";
+  import { Navigation, A11y } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/a11y";
+
+  document
+    .querySelectorAll<HTMLDivElement>(".personen-karussell")
+    .forEach((wrapper) => {
+      const container = wrapper.querySelector<HTMLDivElement>(
+        ".personen-karussell-swiper",
+      );
+      const prev = wrapper.querySelector<HTMLButtonElement>(
+        ".personen-karussell-prev",
+      );
+      const next = wrapper.querySelector<HTMLButtonElement>(
+        ".personen-karussell-next",
+      );
+      if (!container || !prev || !next) return;
+      if (container.swiper) return;
+
+      const swiper = new Swiper(container, {
+        modules: [Navigation, A11y],
+        slidesPerView: 1,
+        spaceBetween: 32,
+        autoHeight: true,
+        navigation: { prevEl: prev, nextEl: next },
+        a11y: {
+          prevSlideMessage: "Vorherige Person",
+          nextSlideMessage: "Nächste Person",
+        },
+      });
+
+      const update = () => {
+        prev.classList.toggle("personen-karussell-disabled", swiper.isBeginning);
+        next.classList.toggle("personen-karussell-disabled", swiper.isEnd);
+      };
+      swiper.on("slideChange", update);
+      update();
+    });
+</script>
+
+<style is:global>
+  .personen-karussell-disabled {
+    border-color: var(--gray-light);
+    box-shadow: none;
+    color: var(--gray-light);
+    pointer-events: none;
+  }
+</style>

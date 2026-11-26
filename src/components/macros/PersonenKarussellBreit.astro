@@ -1,0 +1,154 @@
+---
+import { cn } from "@/utils/classNames";
+import Button from "../Button.astro";
+import { Icon } from "astro-icon/components";
+import ContentSection from "./ContentSection.astro";
+
+export type Props = {
+  class?: string | undefined;
+  label?: string | undefined;
+  title?: string | undefined;
+  /** Maximale Anzahl gleichzeitig sichtbarer Personen auf großen Bildschirmen */
+  maxPerView?: number | undefined;
+};
+
+const {
+  class: className,
+  label = "Personen-Karussell",
+  title,
+  maxPerView = 4,
+} = Astro.props;
+---
+
+<ContentSection fullWidth wrapperClass="mt-8 pt-0 mb-8" class={cn("bg-[#b8c6fa] dark:bg-bg-alt py-8 sm:py-10", className)}>
+  <div
+    class="personen-karussell-breit mx-auto max-w-7xl px-4 sm:px-6"
+    role="region"
+    aria-label={label}
+    data-max-per-view={maxPerView}
+  >
+    {
+      title && (
+        <h3 class="mt-0 mb-6 text-center !text-sm !max-w-none">{title}</h3>
+      )
+    }
+
+    <div class="flex items-center gap-2 sm:gap-4">
+      <Button
+        tag="button"
+        class="personen-karussell-breit-prev not-prose shrink-0 p-1 sm:p-2"
+        aria-label="Vorherige Personen"
+      >
+        <Icon size={24} name="ui/chevron-left" />
+      </Button>
+
+      <div
+        class="personen-karussell-breit-swiper swiper overflow-hidden flex-1 min-w-0"
+      >
+        <div class="swiper-wrapper">
+          <slot />
+        </div>
+      </div>
+
+      <Button
+        tag="button"
+        class="personen-karussell-breit-next not-prose shrink-0 p-1 sm:p-2"
+        aria-label="Nächste Personen"
+      >
+        <Icon size={24} name="ui/chevron-right" />
+      </Button>
+    </div>
+
+    <div class="personen-karussell-breit-scrollbar mx-auto mt-6 max-w-md"></div>
+  </div>
+</ContentSection>
+
+<script>
+  import Swiper from "swiper";
+  import { Navigation, A11y, Scrollbar } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/a11y";
+  import "swiper/css/scrollbar";
+
+  document
+    .querySelectorAll<HTMLDivElement>(".personen-karussell-breit")
+    .forEach((wrapper) => {
+      const container = wrapper.querySelector<HTMLDivElement>(
+        ".personen-karussell-breit-swiper",
+      );
+      const prev = wrapper.querySelector<HTMLButtonElement>(
+        ".personen-karussell-breit-prev",
+      );
+      const next = wrapper.querySelector<HTMLButtonElement>(
+        ".personen-karussell-breit-next",
+      );
+      const scrollbar = wrapper.querySelector<HTMLDivElement>(
+        ".personen-karussell-breit-scrollbar",
+      );
+      if (!container || !prev || !next || !scrollbar) return;
+      if (container.swiper) return;
+
+      const max = parseInt(wrapper.dataset.maxPerView || "4", 10);
+
+      const swiper = new Swiper(container, {
+        modules: [Navigation, A11y, Scrollbar],
+        scrollbar: { el: scrollbar, draggable: true, hide: false },
+        slidesPerView: 1,
+        spaceBetween: 16,
+        breakpoints: {
+          640: { slidesPerView: Math.min(3, max), spaceBetween: 24 },
+          1024: { slidesPerView: max, spaceBetween: 32 },
+        },
+        navigation: { prevEl: prev, nextEl: next },
+        a11y: {
+          prevSlideMessage: "Vorherige Personen",
+          nextSlideMessage: "Nächste Personen",
+        },
+      });
+
+      const update = () => {
+        prev.classList.toggle(
+          "personen-karussell-breit-disabled",
+          swiper.isBeginning,
+        );
+        next.classList.toggle("personen-karussell-breit-disabled", swiper.isEnd);
+      };
+      swiper.on("slideChange", update);
+      swiper.on("resize", update);
+      update();
+    });
+</script>
+
+<style is:global>
+  .personen-karussell-breit-disabled {
+    border-color: var(--gray-light);
+    box-shadow: none;
+    color: var(--gray-light);
+    pointer-events: none;
+  }
+
+  /* Alle Slides oben ausrichten, damit die Bilder auf einer Höhe beginnen */
+  .personen-karussell-breit .swiper-wrapper {
+    align-items: flex-start;
+  }
+
+  /* Ziehbare Leiste unter den Slides (außerhalb des Swiper-Containers) */
+  .personen-karussell-breit-scrollbar {
+    position: relative;
+    height: 6px;
+    border-radius: 9999px;
+    background: var(--gray-light);
+    cursor: pointer;
+  }
+
+  .personen-karussell-breit-scrollbar .swiper-scrollbar-drag {
+    height: 100%;
+    border-radius: 9999px;
+    background: var(--links);
+    cursor: grab;
+  }
+
+  .personen-karussell-breit-scrollbar.swiper-scrollbar-lock {
+    display: none;
+  }
+</style>
