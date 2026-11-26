@@ -15,7 +15,7 @@ categories: aktuelles
 visible: true
 urlText: Zum Blogbeitrag
 headerImage:
-  src: ./images/odi-intro-platzhalter.png
+  src: ./images/odi-intro.png
   alt: ODI Gallerie
 readingTime: 5-6
 date: 2026-11-15
@@ -30,8 +30,7 @@ In einem gestapelten Balkendiagramm lässt sich gut erkennen, wie sich die Anzah
 
 <ContentSection fullWidth={false} wrapperClass="mt-8 pt-0 mb-8">
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-    <iframe title="Auszeichnungsart nach Jahrzehnt" aria-label="Säulendiagramm (gestapelt)" id="datawrapper-chart-bpzLH" src="https://datawrapper.dwcdn.net/bpzLH/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="406" data-external="1"></iframe>
-    </div>
+    <iframe title="Auszeichnungsart nach Jahrzehnt (Stand 2026)" aria-label="Säulendiagramm (gestapelt)" id="datawrapper-chart-w5xTV" src="https://datawrapper.dwcdn.net/w5xTV/1/" scrolling="no" frameborder="0" style="border: none;" width="700" height="455" data-external="1"></iframe>    </div>
 </ContentSection>
 
 Seit Anfang des 19. Jahrhunderts ehrt Berlin den Stadtältesten und verleiht die Ehrenbürgerwürde. 
@@ -95,82 +94,12 @@ import brandt from "./images/brandt.jpg";
 import reagan from "./images/reagan.jpg";
 import zar from "./images/zar.jpg";
 
-{/*<PersonenKarussell title="Bekannte Persönlichkeiten aus Politik und Verwaltung" label="Ausgezeichnete Politiker">
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={brandt} alt="Willy Brandt" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Willy Brandt, © Engelbert Reineke, wikimedia </figcaption>
-    </figure>
-  </div>
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={reagan} alt="Ronald Reagan" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Ronald Reagan, © Pete Souza, wikimedia</figcaption>
-    </figure>
-  </div>
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={zar} alt="Zar Nikolaus I. von Russland" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Zar Nikolaus I. von Russland, © Johann Stadler, wikimedia</figcaption>
-    </figure>
-  </div>
-</PersonenKarussell>*/}
 
 Aber auch aus dem Kulturbereich sind viele Preisträger:innen zu finden, darunter die Schauspielerinnen Marlene Dietrich und Hildegard Knef, der Regisseur Wim Wenders oder der Musiker Udo Lindenberg. 
 
-import dietrich from "./images/dietrich.jpg";
-import lindenberg from "./images/lindenberg.jpg";
-import wenders from "./images/wenders.jpg";
-
-{/*<PersonenKarussell title="Bekannte Persönlichkeiten aus dem Kulturbereich" label="Ausgezeichnete Politiker">
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={dietrich} alt="Marlene Dietrich" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Marlene Dietrich, © Paramount Pictures, wikimedia</figcaption>
-    </figure>
-  </div>
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={lindenberg} alt="Udo Lindenberg" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Udo Lindenberg, © Raimond Spekking, wikimedia</figcaption>
-    </figure>
-  </div>
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={wenders} alt="Wim Wenders" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Wim Wenders, © Elena Ternovaja, wikimedia</figcaption>
-    </figure>
-  </div>
-</PersonenKarussell>*/}
-
 In der dritthäufigsten Kategorie Wirtschaft sind bekannte Namen wie Edzard Reuter (ehem. Vorstandsvorsitzender Daimler-Benz AG) oder Heinz Dürr (Vorstandsvorsitzender der Deutschen Bahn AG) unter den Geehrten. Auch regional bekannte Unternehmer:innen wie Werner Otto (Gründer des Versandhandels Otto), Jörg Woltmann (Gesellschafter der Königlichen Porzellan Manufaktur (KPM)) oder Anita und Norbert Tillmann (Premium Group, Berlin Fashion Week) wurden ausgezeichnet.
 
-import durr from "./images/durr.jpg";
-import reuter from "./images/reuter.jpg";
-import springer from "./images/springer.jpg";
-
-{/* <PersonenKarussell title="Bekannte Persönlichkeiten aus der Wirtschaft" label="Ausgezeichnete Politiker">
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={durr} alt="Heinz Dürr" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Heinz Dürr, © NataschaDürrAG, wikimedia</figcaption>
-    </figure>
-  </div>
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={reuter} alt="Edzard Reuter" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Ezdard Reuter, © Regina Kühne, wikimedia</figcaption>
-    </figure>
-  </div>
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={springer} alt="Friede Springer" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Friede Springer, © Michael Thaidigsmann, wikimedia</figcaption>
-    </figure>
-  </div>
-</PersonenKarussell>*/}
-
-import odi2 from "./images/odi-2-platzhalter.png"
+import odi2 from "./images/ehrenodi.png"
 
 <TextContentSection class="sm:px-6" largeContainer={true}>
   <ImageSection 
@@ -182,32 +111,15 @@ import odi2 from "./images/odi-2-platzhalter.png"
 
 Doch es gibt weitere nennenswerte Kategorien neben Politik, Kultur und Wirtschaft. In der Kategorie Wissenschaft tauchen etwa Kernphysiker Otto Hahn, Computerpionier Konrad Zuse und zwei DDR-Kosmonauten,Sigmund Jähn und Waleri Bykowski,auf. Sportlich wird es mit  Eisschnellläuferin Claudia Pechstein, Schwimmerin Franziska van Almsick oder Diskuswerfer Robert Harting. Bei Kirche & Religion stehen evangelische und katholische Geistliche neben den Vorsitzenden jüdischer und serbisch-orthodoxer Gemeinden und einem Imam aus Neukölln. Unter Gesundheit & Soziales fallen Ärzt:innen und Pflegekräfte. Medien & Journalismus würdigt unter anderem Journalist:innen oder Verleger wie Axel Springer. In der Kategorie Militär & Polizei wurden beispielsweise Vertreter:innen der Alliierten geehrt.
 
+import dietrich from "./images/dietrich.jpg";
+import lindenberg from "./images/lindenberg.jpg";
+import wenders from "./images/wenders.jpg";
 import pechstein from "./images/pechstein.jpg";
 import zuse from "./images/zuse.jpg";
 import kosmonauten from "./images/kosmonauten.jpg";
-
-{/*<PersonenKarussell title="Weitere spannenden Persönlichkeiten" label="Ausgezeichnete Politiker">
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={pechstein} alt="Claudia Pechstein" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Claudia Pechstein, © McSmit, wikimedia</figcaption>
-    </figure>
-  </div>
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={zuse} alt="Konrad Zuse" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Konrad Zuse, © Wolfgang Hunscher, wikimedia</figcaption>
-    </figure>
-  </div>
-  <div class="swiper-slide">
-    <figure class="w-fit mx-auto my-0">
-      <Image src={kosmonauten} alt="Bykowski und Jähn" class="w-48 rounded" />
-      <figcaption class="text-text w-48 mt-2 text-xs">Bykowski und Jähn, © Klaus Franke, wikimedia</figcaption>
-    </figure>
-  </div>
-</PersonenKarussell>*/}
-
-{/* TEST: breite Alternative zum Karussell oben – eine der beiden Varianten später löschen */}
+import durr from "./images/durr.jpg";
+import reuter from "./images/reuter.jpg";
+import springer from "./images/springer.jpg";
 
 <PersonenKarussellBreit title="Bekannte Persönlichkeiten, die eine Auszeichnung erhalten haben" label="Ausgezeichnete Politiker">
   <div class="swiper-slide">
@@ -299,11 +211,8 @@ import kosmonauten from "./images/kosmonauten.jpg";
 Spannend wird es, wenn wir uns die zeitliche Entwicklung der häufigsten Kategorien anschauen. Lange konnten vor allem Würdenträger:innen aus Politik und Verwaltung einen Preis abstauben. Seit den 1990er Jahren gibt es aber mehr Verleihungen im Bereich Kunst & Kultur und auch die Zivilgesellschaft holt auf. Das Spektrum an gewürdigten Leistungen wird mit der Zeit also immer breiter. 
 
 
-
-
 <ContentSection fullWidth={false} wrapperClass="mt-8 pt-0 mb-8">
-<iframe title="Zeitliche Entwicklung der Top 5 Kategorien nach Jahrzehnt" aria-label="Liniendiagramm" id="datawrapper-chart-lYTgq" src="https://datawrapper.dwcdn.net/lYTgq/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="459" data-external="1"></iframe>
-</ContentSection>
+<iframe title="Zeitliche Entwicklung der Top 5 Kategorien nach Jahrzehnt (Stand 2026)" aria-label="Flächen" id="datawrapper-chart-ZtgR5" src="https://datawrapper.dwcdn.net/ZtgR5/1/" scrolling="no" frameborder="0" style="border: none;" width="1014" height="472" data-external="1"></iframe></ContentSection>
 
 import maltzan from "./images/maltzan.JPG";
 import koch from "./images/koch.jpg";
@@ -339,7 +248,8 @@ import koch from "./images/koch.jpg";
 Auffällig ist in jedem Fall auch die Geschlechterverteilung der verliehenen Auszeichnungen. Nur etwa ein Viertel der Preisträger:innen ist weiblich, wie hier im Tortendiagramm erkennbar ist: 
 
 <ContentSection fullWidth={false} wrapperClass="mt-8 pt-0 mb-8">
-<iframe title="Verteilung der Preisträger:innen nach Geschlecht (Stand 2026)" aria-label="Donut-diagramm" id="datawrapper-chart-WiWsb" src="https://datawrapper.dwcdn.net/WiWsb/1/" scrolling="no" frameborder="0" style="border: none;" width="700" height="632" data-external="1"></iframe></ContentSection>
+<iframe title="Verteilung der Preisträger:innen nach Geschlecht (Stand 2026)" aria-label="Donut-diagramm" id="datawrapper-chart-aMJpi" src="https://datawrapper.dwcdn.net/aMJpi/1/" scrolling="no" frameborder="0" style="border: none;" width="700" height="662" data-external="1"></iframe>
+</ContentSection>
 
 Im Datensatz sind neben der Geschlechterverteilung auch Gruppenehrungen aufgeführt. Diese umfassen die alliierten Militäreinheiten der drei Westmächte 1990 unmittelbar vor der deutschen Wiedervereinigung: 
 
@@ -353,7 +263,7 @@ Im Datensatz sind neben der Geschlechterverteilung auch Gruppenehrungen aufgefü
 Im Zusammenhang mit der Geschlechterverteilung lohnt sich ein Blick auf die zeitliche Entwicklung. 
 
 <ContentSection fullWidth={false} wrapperClass="mt-8 pt-0 mb-8">
-<iframe title="Entwicklung der weiblichen und männlichen Preisträger:innen pro Jahrzehnt" aria-label="Liniendiagramm" id="datawrapper-chart-2eWID" src="https://datawrapper.dwcdn.net/2eWID/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="403" data-external="1"></iframe>
+<iframe title="Entwicklung der weiblichen und männlichen Preisträger:innen pro Jahrzehnt (Stand 2026)" aria-label="Liniendiagramm" id="datawrapper-chart-j8iqU" src="https://datawrapper.dwcdn.net/j8iqU/1/" scrolling="no" frameborder="0" style="border: none;" width="800" height="431" data-external="1"></iframe>
 </ContentSection>
 
 Es mussten erst knapp 150 Jahre vergehen, bis die erste Frau ausgezeichnet wurde: 
