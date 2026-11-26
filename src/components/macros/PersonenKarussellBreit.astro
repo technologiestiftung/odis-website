@@ -93,7 +93,7 @@ const {
       const swiper = new Swiper(container, {
         modules: [Navigation, A11y, Scrollbar],
         scrollbar: { el: scrollbar, draggable: true, hide: false },
-        slidesPerView: Math.min(2, max),
+        slidesPerView: 1,
         spaceBetween: 16,
         breakpoints: {
           640: { slidesPerView: Math.min(3, max), spaceBetween: 24 },
